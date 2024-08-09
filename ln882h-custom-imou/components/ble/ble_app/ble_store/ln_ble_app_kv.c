@@ -216,11 +216,11 @@ int ln_kv_ble_factory_reset(void)
 int ln_kv_ble_app_init(void)
 {
     LOG(LOG_LVL_TRACE,"ln_kv_ble_app_init...\r\n");
-
-    ln_kv_ble_name_load();
-    ln_kv_ble_addr_load();
-    //ln_kv_ble_irk_load();
-    //ln_kv_ble_user_data_load();
+    ln_kv_ble_factory_reset();
+    // ln_kv_ble_name_load();
+    // ln_kv_ble_addr_load();
+    // ln_kv_ble_irk_load();
+    // ln_kv_ble_user_data_load();
 
     return 0;
 }

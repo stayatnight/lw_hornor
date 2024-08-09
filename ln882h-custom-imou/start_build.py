@@ -25,10 +25,10 @@ import subprocess
 user_action     = "config"                  # default action.
 
 # NOTE: read from top CMakeLists.txt.
-user_project    = "wifi_mcu_basic_example"  # default user project.
+user_project    = "combo_mcu_basic_example"  # default user project.
 
 # NOTE: read from top CMakeListx.txt
-build_type      = "debug"
+build_type      = "Release"
 
 # NOTE: set up cmake build directory, build-proj-debug.
 build_path      = "build"
@@ -96,7 +96,7 @@ def read_cmake_config():
     print("Warning: read configuration from top CMakeLists.txt!!!")
     print("     Please check if there are following lines in CMakeLists.txt:")
     print("")
-    print("set(USER_PROJECT  wifi_mcu_basic_example)")
+    print("set(USER_PROJECT  combo_mcu_basic_example)")
     print("")
     return False
 

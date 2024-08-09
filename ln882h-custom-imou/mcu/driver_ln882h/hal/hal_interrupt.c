@@ -3,7 +3,7 @@
 #define CFG_USING_CM_BACKTRACE
 
 #ifdef CFG_USING_CM_BACKTRACE
-#include "utils/debug/CmBackTrace/cm_backtrace.h"
+#include "cm_backtrace.h"
 #endif /* CFG_USING_CM_BACKTRACE */
 
 #include <stdbool.h>
@@ -80,7 +80,7 @@ void switch_global_interrupt(hal_en_t enable)
         #ifdef CFG_USING_CM_BACKTRACE
         IMPORT  cm_backtrace_fault
         #endif
-     
+
         MOV    R0, LR
         MOV    R1, SP
         #ifdef CFG_USING_CM_BACKTRACE
@@ -136,44 +136,44 @@ void DebugMon_Handler (void) {
 #if ((!defined(__MICROLIB)) && defined(__ARMCC_VERSION))
 
   #if (defined(__ARMCC_VERSION) && (__ARMCC_VERSION >= 6010050)) /* ARMCC6 */
-    __ASM (".global __use_no_semihosting");      
+    __ASM (".global __use_no_semihosting");
   #elif (defined(__CC_ARM) && (__ARMCC_VERSION < 6000000)) /* ARMCC5 */
-    #pragma import(__use_no_semihosting)             
-    struct __FILE 
-    { 
-        int handle; 
-    }; 
+    #pragma import(__use_no_semihosting)
+    struct __FILE
+    {
+        int handle;
+    };
   #endif
 
   __asm(".global __ARM_use_no_argv\n\t");
-  
+
   #include <rt_sys.h>
-  
+
   FILEHANDLE _sys_open(const char * name, int openmode) {
-      return 0;  
+      return 0;
   }
   void _ttywrch(int ch) {
       ch = ch;
   }
-  void _sys_exit(int x) { 
-  	x = x; 
-  } 
-  
-  int fputc(int ch, FILE *f) { 
+  void _sys_exit(int x) {
+  	x = x;
+  }
+
+  int fputc(int ch, FILE *f) {
       //TODO: uart send ch
   	return ch;
   }
-  
+
   int _sys_close(FILEHANDLE fh) {
       return 0; //return success
   }
   int _sys_write(FILEHANDLE fh, const unsigned char * buf, unsigned len, int mode) {
-      return 0;   
+      return 0;
   }
   int _sys_read(FILEHANDLE fh, unsigned char * buf, unsigned len, int mode) {
-      return 0;       
+      return 0;
   }
-  
+
   int _sys_istty(FILEHANDLE fh) {
       return 1; // no interactive device present
   }
@@ -186,9 +186,9 @@ void DebugMon_Handler (void) {
   long _sys_flen(FILEHANDLE fh) {
       return 0;
   }
-  
+
   char *_sys_command_string(char *cmd, int len){
       return 0;
   }
-#endif 
+#endif
 

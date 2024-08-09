@@ -222,4 +222,10 @@ target_include_directories(${lwip_static_target}
     ${COMP_KERNEL_DIR}
     ${COMP_KERNEL_DIR}/FreeRTOS/Source/include
     ${COMP_KERNEL_DIR}/FreeRTOS/Source/portable/GCC/ARM_CM4F
+
+    set(MAGICLINK_DIR ${LN_SDK_ROOT}/../)
+
+    ${LN_SDK_ROOT}/../include
+    ${LN_SDK_ROOT}/../opensourcelib/include
+    ${LN_SDK_ROOT}/../opensourcelib/include/coap3
 )

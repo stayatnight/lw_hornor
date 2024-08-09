@@ -16,9 +16,7 @@
 #include "ln_at.h"
 #include "flash_partition_table.h"
 
-#include "ln_ble_app_kv.h"
 #include "usr_app.h"
-#include "ln_ble_app_default_cfg.h"
 
 
 int main (int argc, char* argv[])
@@ -52,13 +50,6 @@ int main (int argc, char* argv[])
         LOG(LOG_LVL_ERROR, "NVDS init filed!\r\n");
     }
 
-    if (KV_ERR_NONE != ln_kv_port_init(KV_SPACE_OFFSET, (KV_SPACE_OFFSET + KV_SPACE_SIZE))) {
-        LOG(LOG_LVL_ERROR, "KV init filed!\r\n");
-    }
-
-    //6.init system parameter
-    sysparam_integrity_check_all();
-
     //7.rf preprocess,img cal
     wifi_rf_calibration();
 
@@ -68,9 +59,7 @@ int main (int argc, char* argv[])
 
     //9.Init lwip stack.
     lwip_tcpip_init();
-    if ( 0 != ota_port_init()) {
-        LOG(LOG_LVL_ERROR, "ota port failed!\r\n");
-    }
+
     //10.Creat usr app task.
     creat_usr_app_task();
 

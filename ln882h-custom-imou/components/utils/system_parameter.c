@@ -4,15 +4,15 @@
 #include "utils/system_parameter.h"
 
 typedef struct {
-    char  ssid[SSID_MAX_LEN]; 
-    char  pwd[PASSWORD_MAX_LEN];  
+    char  ssid[SSID_MAX_LEN];
+    char  pwd[PASSWORD_MAX_LEN];
     char  bssid[BSSID_LEN];
-} sta_conn_param_t; 
+} sta_conn_param_t;
 
 typedef struct {
     char  ssid[SSID_MAX_LEN];
     char  pwd[PASSWORD_MAX_LEN];
-} softap_basic_param_t; 
+} softap_basic_param_t;
 
 __STATIC_INLINE__ int sysparam_store(const char *key, const void *value, size_t value_len)
 {
@@ -29,7 +29,7 @@ __STATIC_INLINE__ int sysparam_load(const char *key, void *value_buf, size_t val
     int ret = ln_kv_get(key, value_buf, value_buf_size, &v_len);
     if (ret != KV_ERR_NONE) {
         return SYSPARAM_ERR_LOAD;
-    } 
+    }
     return SYSPARAM_ERR_NONE;
 }
 
@@ -55,9 +55,9 @@ int sysparam_sta_conn_cfg_factory_reset(void)
 {
     sta_conn_param_t conn;
     memset(&conn, 0, sizeof(sta_conn_param_t));
-    memcpy(&conn.ssid, TARGET_AP_SSID, strlen(TARGET_AP_SSID));
-    memcpy(&conn.pwd, TARGET_AP_PWD, strlen(TARGET_AP_PWD));
-    
+    // memcpy(&conn.ssid, TARGET_AP_SSID, strlen(TARGET_AP_SSID));
+    // memcpy(&conn.pwd, TARGET_AP_PWD, strlen(TARGET_AP_PWD));
+
     return sysparam_store(KV_SYSPARAM_STA_CONN_CFG, (void *)&conn, sizeof(sta_conn_param_t));
 }
 
@@ -128,7 +128,7 @@ int sysparam_sta_ip_info_factory_reset(void)
     tcpip_ip_info_t sta_ip_info;
     if (ip4addr_aton(STA_IP_ADDR,    &sta_ip_info.ip) && \
         ip4addr_aton(STA_IP_NETMASK, &sta_ip_info.netmask) && \
-        ip4addr_aton(STA_IP_GATWAY,  &sta_ip_info.gw)) 
+        ip4addr_aton(STA_IP_GATWAY,  &sta_ip_info.gw))
     {
         return sysparam_store(KV_SYSPARAM_STA_IP_INFO, (void *)&sta_ip_info, sizeof(tcpip_ip_info_t));
     }
@@ -140,7 +140,7 @@ int sysparam_softap_ip_info_factory_reset(void)
     tcpip_ip_info_t softap_ip_info;
     if (ip4addr_aton(SOFTAP_IP_ADDR,    &softap_ip_info.ip) && \
         ip4addr_aton(SOFTAP_IP_NETMASK, &softap_ip_info.netmask) && \
-        ip4addr_aton(SOFTAP_IP_GATWAY,  &softap_ip_info.gw)) 
+        ip4addr_aton(SOFTAP_IP_GATWAY,  &softap_ip_info.gw))
     {
         return sysparam_store(KV_SYSPARAM_SOFTAP_IP_INFO, (void *)&softap_ip_info, sizeof(tcpip_ip_info_t));
     }
@@ -160,7 +160,7 @@ int sysparam_softap_hostname_factory_reset(void)
 {
     uint16_t len = strlen(SOFTAP_NETDEV_HOSTNAME) + 1;
     len = (len > NETDEV_HOSTNAME_LEN_MAX) ? NETDEV_HOSTNAME_LEN_MAX : len;
-    
+
     return sysparam_store(KV_SYSPARAM_SOFTAP_HOSTNAME, (void *)SOFTAP_NETDEV_HOSTNAME, len);
 }
 
@@ -208,7 +208,7 @@ int sysparam_dhcpd_cfg_factory_reset(void)
 
     if (ip4addr_aton(DHCPD_SER_IP,        &dhcpd_cfg.server) && \
         ip4addr_aton(DHCPD_IP_POOL_START, &dhcpd_cfg.ip_start) && \
-        ip4addr_aton(DHCPD_IP_POOL_END,   &dhcpd_cfg.ip_end)) 
+        ip4addr_aton(DHCPD_IP_POOL_END,   &dhcpd_cfg.ip_end))
     {
         return sysparam_store(KV_SYSPARAM_DHCPD_CFG, (void *)&dhcpd_cfg, sizeof(server_config_t));
     }
@@ -336,7 +336,7 @@ int sysparam_integrity_check_all(void)
     if (!sysparam_has_stored(KV_SYSPARAM_DHCPD_CFG)) {
         ret += sysparam_dhcpd_cfg_factory_reset();
     }
-    
+
 #if 0 //TODO:
     sysparam_has_stored(KV_SYSPARAM_MDNS_EN );
     sysparam_has_stored(KV_SYSPARAM_MDNS_CFG);
@@ -446,7 +446,7 @@ int sysparam_softap_hostname_update(const char *hostname)
 {
     uint16_t len = strlen(hostname) + 1;
     len = (len > NETDEV_HOSTNAME_LEN_MAX) ? NETDEV_HOSTNAME_LEN_MAX : len;
-    
+
     return sysparam_store(KV_SYSPARAM_SOFTAP_HOSTNAME, (void *)hostname, len);
 }
 
@@ -493,11 +493,11 @@ int sysparam_dhcpd_cfg_update(const server_config_t *cfg)
   // TODO: mDNS param
   int sysparam_mdns_en_update(int enable);
   int sysparam_mdns_cfg_update(const mdns_config_t *cfg);
-  
+
   // TODO: DNS param
   int sysparam_dns_en_update(int en);
   int sysparam_dns_cfg_update(const dns_config_t *cfg);
-    
+
   // TODO: SNTP server param
   int sysparam_sntp_en_update(int en);
   int sysparam_sntp_cfg_update(const sntp_config_t *cfg);
@@ -654,11 +654,11 @@ int sysparam_dhcpd_cfg_get(server_config_t *cfg)
   // TODO: mDNS param
   int sysparam_mdns_en_get(uint8_t *en);
   int sysparam_mdns_cfg_get(mdns_config_t *cfg);
-  
+
   // TODO: DNS param
   int sysparam_dns_en_get(uint8_t *en);
   int sysparam_dns_cfg_get(dns_config_t *cfg);
-    
+
   // TODO: SNTP server param
   int sysparam_sntp_en_get(uint8_t *en);
   int sysparam_sntp_cfg_get(sntp_config_t *cfg);

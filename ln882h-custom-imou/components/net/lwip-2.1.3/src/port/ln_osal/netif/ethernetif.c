@@ -191,7 +191,7 @@ static void print_netdev_info(struct netif *nif)
     LOG(LOG_LVL_INFO, "|netif ip      = %-16s            |\r\n", ip4addr_ntoa(&nif->ip_addr));
     LOG(LOG_LVL_INFO, "|netif mask    = %-16s            |\r\n", ip4addr_ntoa(&nif->netmask));
     LOG(LOG_LVL_INFO, "|netif gateway = %-16s            |\r\n", ip4addr_ntoa(&nif->gw));
-#endif    
+#endif
     LOG(LOG_LVL_INFO, "|netif mac     : [%02X:%02X:%02X:%02X:%02X:%02X] %-7s |\r\n", mac[0], mac[1], mac[2], mac[3], mac[4], mac[5], "");
     LOG(LOG_LVL_INFO, "+--------------------------------------------+\r\n");
 }
@@ -211,7 +211,7 @@ static void sta_netif_status_changed_cb(struct netif *nif)
         if ((nif->flags & NETIF_FLAG_UP)
 #endif
             && (netif_is_link_up(nif))) {
-            print_netdev_info(nif);
+            // print_netdev_info(nif);
             wifi_set_allow_cpu_sleep_flag(1);
             if (g_get_ip_cb)
             {
@@ -248,9 +248,9 @@ static void tcpip_init_done(void *arg)
 int lwip_tcpip_init(void)
 {
     /**
-     * When powered on, if the tcp task is not the first task to run, 
+     * When powered on, if the tcp task is not the first task to run,
      * synchronous initialization is recommended.
-     * 
+     *
      * sync init:
      *    tcpip_init(NULL, NULL);
      *    tcpip_init_done(NULL);
@@ -308,7 +308,7 @@ int netdev_set_state(netif_idx_t nif_idx, netdev_state_t state)
             netifapi_netif_set_link_up(nif);
             dhcpd_stop();
             dhcpd_start();
-            print_netdev_info(nif);
+            // print_netdev_info(nif);
         }
         else
         {
@@ -336,7 +336,7 @@ netif_idx_t netdev_get_active(void)
 netdev_link_state_t netdev_get_link_state(netif_idx_t nif_idx)
 {
     netdev_t *ndev = ethernetif_get_netdev(nif_idx);
-                
+
     if (netif_is_link_up(&ndev->nif) && (ndev->nif.flags & NETIF_FLAG_UP)) {
         return NETDEV_LINK_UP;
     } else {
@@ -356,13 +356,13 @@ int netdev_got_ip(void)
   #else
     return ((0 != dhcp_supplied_address(nif)) || \
             ((IPADDR_ANY != nif->ip_addr.addr) && (nif->flags & (NETIF_FLAG_LINK_UP | NETIF_FLAG_UP))));
-  #endif    
+  #endif
 #else
   #if LWIP_IPV6
     return ((ip_addr_isany_val(nif->ip_addr)) && (nif->flags & (NETIF_FLAG_LINK_UP | NETIF_FLAG_UP)));
   #else
     return ((IPADDR_ANY != nif->ip_addr.addr) && (nif->flags & (NETIF_FLAG_LINK_UP | NETIF_FLAG_UP)));
-  #endif    
+  #endif
 #endif
 }
 

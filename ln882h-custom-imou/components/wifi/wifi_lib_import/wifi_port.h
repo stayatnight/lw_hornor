@@ -75,7 +75,7 @@ void wlib_hmac_sha1(uint8_t  * k,    /* secret key */
 
 /**
  * @brief wlib_aes_init
- * 
+ *
  * @param key     in param
  * @param keysize in param. Optional 16/24/32, uint byte.
  * @return void*  return NULL: error; others: success.
@@ -84,14 +84,14 @@ void *wlib_aes_init(const uint8_t *key, uint8_t keysize);
 
 /**
  * @brief wlib_aes_deinit
- * 
+ *
  * @param ctx in param, from wlib_aes_init()
  */
 void  wlib_aes_deinit(void *ctx);
 
 /**
  * @brief wlib_aes_setup
- * 
+ *
  * @param ctx in param, from wlib_aes_context_t, defined by lib
  * @param keysize in param. Optional 16/24/32, uint byte.
  * @param key in param
@@ -99,7 +99,7 @@ void  wlib_aes_deinit(void *ctx);
 void wlib_aes_setup(void *ctx, uint8_t keysize, const uint8_t *key);
 /**
  * @brief wlib_aes_encrypt
- * 
+ *
  * @param ctx in param, from wlib_aes_init()
  * @param ptext in  param, plaintext
  * @param ctext out param, ciphertext
@@ -108,7 +108,7 @@ void wlib_aes_encrypt(void *ctx, const uint8_t *ptext, uint8_t *ctext);
 
 /**
  * @brief wlib_aes_decrypt
- * 
+ *
  * @param ctx in param, from wlib_aes_init()
  * @param ctext in  param, ciphertext
  * @param ptext out param, plaintext
@@ -142,7 +142,7 @@ void   wlib_assert(int expr, const char *fun, int line);
 #define WLIB_LOG_LVL_I            (2) //maclib log (necessary) infor output.
 #define WLIB_LOG_LVL_W            (3) //maclib log warning output.
 #define WLIB_LOG_LVL_D            (4) //maclib log debug output.
-#define WLIB_LOG_LEVEL_CFG        WLIB_LOG_LVL_W
+#define WLIB_LOG_LEVEL_CFG        WLIB_LOG_LVL_E
 
 #define WLIB_LOG_E(...)           wlib_log_printf(1, WLIB_LOG_LVL_E, __VA_ARGS__)
 #define WLIB_LOG_I(...)           wlib_log_printf(1, WLIB_LOG_LVL_I, __VA_ARGS__)

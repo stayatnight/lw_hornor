@@ -837,7 +837,7 @@ static int x509_get_crt_ext( unsigned char **p,
  * Parse and fill a single X.509 certificate in DER format
  */
 static int x509_crt_parse_der_core( mbedtls_x509_crt *crt, const unsigned char *buf,
-                                    size_t buflen )
+                                    size_t buflen, int make_copy)
 {
     int ret;
     size_t len;
@@ -882,15 +882,26 @@ static int x509_crt_parse_der_core( mbedtls_x509_crt *crt, const unsigned char *
 
     // Create and populate a new buffer for the raw field
     crt->raw.len = crt_end - buf;
-    crt->raw.p = p = mbedtls_calloc( 1, crt->raw.len );
-    if( p == NULL )
-        return( MBEDTLS_ERR_X509_ALLOC_FAILED );
 
-    memcpy( p, buf, crt->raw.len );
+    if( make_copy != 0 )
+    {
+        /* Create and populate a new buffer for the raw field. */
+        crt->raw.p = p = mbedtls_calloc( 1, crt->raw.len );
+        if( crt->raw.p == NULL )
+            return( MBEDTLS_ERR_X509_ALLOC_FAILED );
 
-    // Direct pointers to the new buffer
-    p += crt->raw.len - len;
-    end = crt_end = p + len;
+        memcpy( crt->raw.p, buf, crt->raw.len );
+        crt->own_buffer = 1;
+
+        // Direct pointers to the new buffer 
+        p += crt->raw.len - len;
+        end = crt_end = p + len;
+    }
+    else
+    {
+        crt->raw.p = (unsigned char*) buf;
+        crt->own_buffer = 0;
+    }
 
     /*
      * TBSCertificate  ::=  SEQUENCE  {
@@ -1089,6 +1100,53 @@ static int x509_crt_parse_der_core( mbedtls_x509_crt *crt, const unsigned char *
     return( 0 );
 }
 
+int mbedtls_x509_crt_parse_der_nocopy( mbedtls_x509_crt *chain, const unsigned char *buf,
+                        size_t buflen )
+{
+    int ret;
+    mbedtls_x509_crt *crt = chain, *prev = NULL;
+
+    /*
+     * Check for valid input
+     */
+    if( crt == NULL || buf == NULL )
+        return( MBEDTLS_ERR_X509_BAD_INPUT_DATA );
+
+    while( crt->version != 0 && crt->next != NULL )
+    {
+        prev = crt;
+        crt = crt->next;
+    }
+
+    /*
+     * Add new certificate on the end of the chain if needed.
+     */
+    if( crt->version != 0 && crt->next == NULL )
+    {
+        crt->next = mbedtls_calloc( 1, sizeof( mbedtls_x509_crt ) );
+
+        if( crt->next == NULL )
+            return( MBEDTLS_ERR_X509_ALLOC_FAILED );
+
+        prev = crt;
+        mbedtls_x509_crt_init( crt->next );
+        crt = crt->next;
+    }
+
+    if( ( ret = x509_crt_parse_der_core( crt, buf, buflen, 0 ) ) != 0 )
+    {
+        if( prev )
+            prev->next = NULL;
+
+        if( crt != chain )
+            mbedtls_free( crt );
+
+        return( ret );
+    }
+
+    return( 0 );
+}
+
 /*
  * Parse one X.509 certificate in DER format from a buffer and add them to a
  * chained list
@@ -1126,7 +1184,7 @@ int mbedtls_x509_crt_parse_der( mbedtls_x509_crt *chain, const unsigned char *bu
         crt = crt->next;
     }
 
-    if( ( ret = x509_crt_parse_der_core( crt, buf, buflen ) ) != 0 )
+    if( ( ret = x509_crt_parse_der_core( crt, buf, buflen, 1 ) ) != 0 )
     {
         if( prev )
             prev->next = NULL;
@@ -2822,7 +2880,7 @@ void mbedtls_x509_crt_free( mbedtls_x509_crt *crt )
             mbedtls_free( seq_prv );
         }
 
-        if( cert_cur->raw.p != NULL )
+        if( cert_cur->raw.p != NULL && cert_cur->own_buffer )
         {
             mbedtls_platform_zeroize( cert_cur->raw.p, cert_cur->raw.len );
             mbedtls_free( cert_cur->raw.p );

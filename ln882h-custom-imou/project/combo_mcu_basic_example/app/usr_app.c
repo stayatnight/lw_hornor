@@ -25,13 +25,15 @@
 #include "ln_ble_gatt.h"
 #include "usr_app.h"
 #include "usr_ble_app.h"
+#include "ln_ble_app_kv.h"
 
+#include "magiclink.h"
+#include "demo.h"
 
 static OS_Thread_t g_usr_app_thread;
-#define USR_APP_TASK_STACK_SIZE   6*256 //Byte
+#define USR_APP_TASK_STACK_SIZE   4800 //Byte
 
-#define WIFI_TEMP_CALIBRATE             1//1
-
+#define WIFI_TEMP_CALIBRATE             0//1
 
 #if WIFI_TEMP_CALIBRATE
 static OS_Thread_t g_temp_cal_thread;
@@ -46,12 +48,15 @@ static void temp_cal_app_task_entry(void *params);
 
 static uint8_t mac_addr[6]        = {0};
 static uint8_t psk_value[40]      = {0x0};
+static uint8_t ssid_value[33]      = {0x0};
+static uint8_t target_sta_bssid[6] = {0x0};
+static uint8_t target_sta_pwd[65] = { 0x0 };
 
 wifi_sta_connect_t connect = {
-    .ssid    = "TL_WR741N_7F84",
-    .pwd     = "12345678901234567890123456",
-    .bssid   = NULL,
-    .psk_value = NULL,
+    .ssid    = ssid_value,
+    .pwd     = target_sta_pwd,
+    .bssid   = target_sta_bssid,
+    .psk_value = psk_value,
 };
 
 wifi_scan_cfg_t scan_cfg = {
@@ -148,7 +153,7 @@ static void wifi_init_sta(void)
     LOG(LOG_LVL_INFO, "IPv6 link-local address: %s\r\n", ipaddr_ntoa(netif_ip_addr6(netif1, 0)));
     netif_set_ip6_autoconfig_enabled(netif1, 1);
 #endif
-    
+
     //2. wifi start
     wifi_manager_reg_event_callback(WIFI_MGR_EVENT_STA_SCAN_COMPLETE, &wifi_scan_complete_cb);
 
@@ -216,6 +221,58 @@ static void wifi_init_ap(void)
     }
 }
 
+static int GetStaInfo()
+{
+    if (sysparam_sta_conn_cfg_get(&connect) != SYSPARAM_ERR_NONE) {
+        printf("get conn cfg fail\r\n");
+        return -1;
+    }
+
+    if (strlen(connect.ssid) == 0 || strlen(connect.pwd) == 0) {
+        printf("no conn info\r\n");
+        return -1;
+    }
+    return 0;
+}
+
+static void WifiConn()
+{
+    //1. sta mac get
+     if (SYSPARAM_ERR_NONE != sysparam_sta_mac_get(mac_addr)) {
+        LOG(LOG_LVL_ERROR, "sta mac get failed!!!\r\n");
+        return;
+    }
+
+    //1. net device(lwip)
+    netdev_set_mac_addr(NETIF_IDX_STA, mac_addr);
+    netdev_set_active(NETIF_IDX_STA);
+    sysparam_sta_mac_update((const uint8_t *)mac_addr);
+
+    //2. wifi start
+    if(WIFI_ERR_NONE != wifi_sta_start(mac_addr, WIFI_NO_POWERSAVE)){
+        LOG(LOG_LVL_ERROR, "[%s]wifi sta start filed!!!\r\n", __func__);
+    }
+    if (strlen(connect.pwd) != 0) {
+        if (0 == ln_psk_calc(connect.ssid, connect.pwd, connect.psk_value, sizeof (psk_value))) {
+            // hexdump(LOG_LVL_INFO, "psk value ", psk_value, sizeof(psk_value));
+        }
+    }
+
+    wifi_sta_connect(&connect, &scan_cfg);
+    return;
+}
+
+static void WifiReconn()
+{
+    /* 获取wifi信息 */
+    if (GetStaInfo() != 0) {
+        printf("no sta info\r\n");
+        return;
+    }
+
+    WifiConn();
+    return;
+}
 
 static void usr_app_task_entry(void *params)
 {
@@ -224,18 +281,13 @@ static void usr_app_task_entry(void *params)
     wifi_manager_init();
 
     chip_mac_gen();
+    sysparam_sta_mac_update((const uint8_t *)g_chip_wifi_mac);
+    sysparam_softap_mac_update((const uint8_t *)g_chip_wifi_mac);
+    ln_kv_ble_app_init();
 
-    wifi_init_sta();
-    // wifi_init_ap();
-
-
-    while (!netdev_got_ip()) {
-        OS_MsDelay(1000);
-    }
-    while(1)
-    {
-        OS_MsDelay(1000);
-    }
+    WifiReconn();
+    MagicLinkSDKRun();
+    OS_ThreadDelete(NULL);
 }
 
 static void temp_cal_app_task_entry(void *params)
@@ -286,7 +338,7 @@ void creat_usr_app_task(void)
         LN_ASSERT(1);
     }
 
-    ble_creat_usr_app_task();
+    // ble_creat_usr_app_task();
 
 #if  WIFI_TEMP_CALIBRATE
     if(OS_OK != OS_ThreadCreate(&g_temp_cal_thread, "TempAPP", temp_cal_app_task_entry, NULL, OS_PRIORITY_BELOW_NORMAL, TEMP_APP_TASK_STACK_SIZE)) {

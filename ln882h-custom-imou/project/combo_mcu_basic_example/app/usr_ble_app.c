@@ -288,7 +288,7 @@ static void app_set_adv_data(void)
     adv_data_param.length = adv_data_len;
     adv_data_param.data = adv_data;
     ln_ble_adv_data_set(&adv_data_param);
-    
+
     hexdump(LOG_LVL_INFO, (const char *)"legacy_adv", adv_data, adv_data_len);
 }
 
@@ -302,7 +302,7 @@ static void app_set_scan_resp_data(void)
 
     ln_bd_addr_t *kv_addr = ln_kv_ble_pub_addr_get();
     memcpy(addr.addr, kv_addr->addr, 6);
-    
+
     /*add item ble_addr*/
     adv_data[0] = BD_ADDR_LEN + 1;
     adv_data[1] = GAP_AD_TYPE_LE_BT_ADDR;
@@ -313,7 +313,7 @@ static void app_set_scan_resp_data(void)
     adv_data_param.length = adv_data_len;
     adv_data_param.data = adv_data;
     ln_ble_adv_scan_rsp_data_set(&adv_data_param);
-    
+
     hexdump(LOG_LVL_INFO, (const char *)"legacy_scan_rsp", adv_data, adv_data_len);
 }
 #else
@@ -348,7 +348,7 @@ static void app_set_ext_adv_data(void)
     adv_data_param.length = adv_data_len;
     adv_data_param.data = ext_adv_data;
     ln_ble_adv_data_set(&adv_data_param);
-    
+
     hexdump(LOG_LVL_INFO, (const char *)"ext_adv", ext_adv_data, adv_data_len);
 }
 
@@ -491,7 +491,7 @@ static void ln_ble_stack_init(void)
 
     //4.stack start
     ln_gap_reset();
-    
+
     uint8_t *mac = bt_addr.addr;
     LOG(LOG_LVL_INFO, "+--------------- ble stack init ok -----------+\r\n");
     LOG(LOG_LVL_INFO, "|ble role : %-22d            |\r\n",  role);
@@ -624,7 +624,7 @@ void ble_app_task_entry(void *params)
 
 void ble_creat_usr_app_task(void)
 {
-    if(OS_OK != OS_ThreadCreate(&ble_g_usr_app_thread, "BleUsrAPP", ble_app_task_entry, NULL, OS_PRIORITY_BELOW_NORMAL, BLE_USR_APP_TASK_STACK_SIZE)) 
+    if(OS_OK != OS_ThreadCreate(&ble_g_usr_app_thread, "BleUsrAPP", ble_app_task_entry, NULL, OS_PRIORITY_BELOW_NORMAL, BLE_USR_APP_TASK_STACK_SIZE))
     {
         LN_ASSERT(1);
     }

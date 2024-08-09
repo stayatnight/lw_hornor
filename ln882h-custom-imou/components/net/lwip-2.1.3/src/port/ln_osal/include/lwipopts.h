@@ -4,6 +4,7 @@
 #include <sys/time.h>
 
 #define LWIP_TIMEVAL_PRIVATE    0
+#define MEMP_USE_CUSTOM_POOLS   1
 
 /* ---------- User options ---------- */
 #define LWIP_USE_LN_USER_CHANGE    1
@@ -210,7 +211,7 @@ a lot of data that needs to be copied, this should be set high. */
 
 /*----------- Core locking -----------*/
 #define LWIP_MPU_COMPATIBLE             0
-#define LWIP_TCPIP_CORE_LOCKING         1
+#define LWIP_TCPIP_CORE_LOCKING         0
 #define LWIP_TCPIP_CORE_LOCKING_INPUT   0
 #define SYS_LIGHTWEIGHT_PROT            (NO_SYS == 0)
 

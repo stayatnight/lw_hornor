@@ -286,7 +286,7 @@ static int ln_gatt_read_req_ind_handler(ke_msg_id_t const msgid,
     struct gattc_read_cfm *p_cfm=KE_MSG_ALLOC_DYN(GATTC_READ_CFM, src_id, dest_id, gattc_read_cfm, p_evt_gatt_read.length);
     p_cfm->handle = param->handle;
     p_cfm->status =GAP_ERR_NO_ERROR;
-    if(!p_evt_gatt_read.length && NULL != p_evt_gatt_read.value)
+    if(p_evt_gatt_read.length && NULL != p_evt_gatt_read.value)
     {
         p_cfm->length = p_evt_gatt_read.length;
         memcpy(p_cfm->value, p_evt_gatt_read.value, p_evt_gatt_read.length);
@@ -453,7 +453,7 @@ struct ke_msg_handler app_gatt_general_msg_tab[] =
 {
     /* gatt common interface*/
     {GATTC_CMP_EVT,                  ln_gatt_cmp_evt_handler },
-    {GATTC_MTU_CHANGED_IND,          ln_gatt_mtu_changed_ind_handler},    
+    // {GATTC_MTU_CHANGED_IND,          ln_gatt_mtu_changed_ind_handler},    
 
     /*gatt server interface*/
     {GATTC_READ_REQ_IND,             ln_gatt_read_req_ind_handler},

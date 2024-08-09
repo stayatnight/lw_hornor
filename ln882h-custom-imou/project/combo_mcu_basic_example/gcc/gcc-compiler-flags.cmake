@@ -1,6 +1,7 @@
 string(TOUPPER ${CHIP_SERIAL}  DEF_CHIP_SERIAL)
 add_compile_definitions(${DEF_CHIP_SERIAL})
 add_compile_definitions(ARM_MATH_CM4)
+add_compile_definitions(MBEDTLS_CONFIG_FILE=<mbedtls_config.h>)
 
 set(CPU         "-mcpu=cortex-m4")
 set(FPU         "-mfpu=fpv4-sp-d16")

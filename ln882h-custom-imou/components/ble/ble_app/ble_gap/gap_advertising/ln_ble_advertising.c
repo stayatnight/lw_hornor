@@ -44,7 +44,7 @@ int ln_ble_adv_actv_creat(adv_param_t *param)
     p_cmd->operation            = GAPM_CREATE_ADV_ACTIVITY;
     p_cmd->own_addr_type        = param->own_addr_type;
     p_cmd->adv_param.type       = param->adv_type;
-    p_cmd->adv_param.disc_mode  = GAPM_ADV_MODE_GEN_DISC;
+    p_cmd->adv_param.disc_mode  = GAPM_ADV_MODE_BEACON;
 
     p_cmd->adv_param.prop = param->adv_prop;
    

@@ -50,10 +50,10 @@ include_directories(${COMP_IPERF_DIR})
 # list(APPEND MODULE_SRC ${IPERF_SRC})
 
 ###################################   kv   #####################################
-# file(GLOB_RECURSE  KV_SRC  ${COMP_KV_DIR}/*.c)
+file(GLOB_RECURSE  KV_SRC  ${COMP_KV_DIR}/*.c)
 include_directories(${COMP_KV_DIR}/kv)
 include_directories(${COMP_KV_DIR}/kv_port)
-# list(APPEND MODULE_SRC ${KV_SRC})
+list(APPEND MODULE_SRC ${KV_SRC})
 
 ###################################  nvds  #####################################
 file(GLOB_RECURSE  NVDS_SRC  ${COMP_NVDS_DIR}/*.c)
@@ -184,3 +184,21 @@ include_directories(${COMP_WIFI_DIR}/wifi_manager)
 include_directories(${COMP_WIFI_DIR}/wifi_lib_import)
 include_directories(${COMP_WIFI_DIR}/wifi_lib_export)
 list(APPEND MODULE_SRC ${MISC_SRC})
+
+###################################  mbedtls    ################################
+file(GLOB_RECURSE  MBEDTLS_SRC  ${COMP_MBEDTLS_DIR}/library/*.c)
+file(GLOB_RECURSE  MBEDTLS_WRAPPER_SRC  ${COMP_MBEDTLS_DIR}/port_ln/library/*.c)
+include_directories(${COMP_MBEDTLS_DIR}/include)
+include_directories(${COMP_MBEDTLS_DIR}/port_ln/include)
+list(APPEND MODULE_SRC ${MBEDTLS_SRC})
+list(APPEND MODULE_SRC ${MBEDTLS_WRAPPER_SRC})
+
+#############################   Partition MGR   ################################
+file(GLOB_RECURSE  PARTMGR_SRC  ${COMP_PARTMGR_DIR}/*.c)
+include_directories(${COMP_PARTMGR_DIR})
+list(APPEND MODULE_SRC ${COMP_PARTMGR_DIR})
+
+###################################  fota   ################################
+file(GLOB_RECURSE  FOTA_SRC  ${COMP_FOTA_DIR}/ota_agent/*.c)
+include_directories(${COMP_FOTA_DIR}/ota_agent)
+list(APPEND MODULE_SRC ${FOTA_SRC})
