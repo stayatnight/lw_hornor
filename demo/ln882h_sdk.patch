@@ -1,0 +1,1317 @@
+diff -urNa ./ln882h-custom-imou/components/ble/ble_app/ble_gap/gap_advertising/ln_ble_advertising.c ./ln882h-custom-imou-patched/components/ble/ble_app/ble_gap/gap_advertising/ln_ble_advertising.c
+--- ./ln882h-custom-imou/components/ble/ble_app/ble_gap/gap_advertising/ln_ble_advertising.c	2024-03-26 18:51:42.000000000 +0800
++++ ./ln882h-custom-imou-patched/components/ble/ble_app/ble_gap/gap_advertising/ln_ble_advertising.c	2024-04-02 20:52:20.000000000 +0800
+@@ -44,7 +44,7 @@
+     p_cmd->operation            = GAPM_CREATE_ADV_ACTIVITY;
+     p_cmd->own_addr_type        = param->own_addr_type;
+     p_cmd->adv_param.type       = param->adv_type;
+-    p_cmd->adv_param.disc_mode  = GAPM_ADV_MODE_GEN_DISC;
++    p_cmd->adv_param.disc_mode  = GAPM_ADV_MODE_BEACON;
+ 
+     p_cmd->adv_param.prop = param->adv_prop;
+    
+diff -urNa ./ln882h-custom-imou/components/ble/ble_app/ble_gatt/gatt_common/ln_ble_gatt_ind_handler.c ./ln882h-custom-imou-patched/components/ble/ble_app/ble_gatt/gatt_common/ln_ble_gatt_ind_handler.c
+--- ./ln882h-custom-imou/components/ble/ble_app/ble_gatt/gatt_common/ln_ble_gatt_ind_handler.c	2024-03-26 18:51:42.000000000 +0800
++++ ./ln882h-custom-imou-patched/components/ble/ble_app/ble_gatt/gatt_common/ln_ble_gatt_ind_handler.c	2024-04-09 11:42:58.170719397 +0800
+@@ -286,7 +286,7 @@
+     struct gattc_read_cfm *p_cfm=KE_MSG_ALLOC_DYN(GATTC_READ_CFM, src_id, dest_id, gattc_read_cfm, p_evt_gatt_read.length);
+     p_cfm->handle = param->handle;
+     p_cfm->status =GAP_ERR_NO_ERROR;
+-    if(!p_evt_gatt_read.length && NULL != p_evt_gatt_read.value)
++    if(p_evt_gatt_read.length && NULL != p_evt_gatt_read.value)
+     {
+         p_cfm->length = p_evt_gatt_read.length;
+         memcpy(p_cfm->value, p_evt_gatt_read.value, p_evt_gatt_read.length);
+@@ -453,7 +453,7 @@
+ {
+     /* gatt common interface*/
+     {GATTC_CMP_EVT,                  ln_gatt_cmp_evt_handler },
+-    {GATTC_MTU_CHANGED_IND,          ln_gatt_mtu_changed_ind_handler},    
++    // {GATTC_MTU_CHANGED_IND,          ln_gatt_mtu_changed_ind_handler},    
+ 
+     /*gatt server interface*/
+     {GATTC_READ_REQ_IND,             ln_gatt_read_req_ind_handler},
+diff -urNa ./ln882h-custom-imou/components/ble/ble_app/ble_store/ln_ble_app_kv.c ./ln882h-custom-imou-patched/components/ble/ble_app/ble_store/ln_ble_app_kv.c
+--- ./ln882h-custom-imou/components/ble/ble_app/ble_store/ln_ble_app_kv.c	2024-03-26 18:51:42.000000000 +0800
++++ ./ln882h-custom-imou-patched/components/ble/ble_app/ble_store/ln_ble_app_kv.c	2024-04-03 14:26:40.000000000 +0800
+@@ -216,11 +216,11 @@
+ int ln_kv_ble_app_init(void)
+ {
+     LOG(LOG_LVL_TRACE,"ln_kv_ble_app_init...\r\n");
+-
+-    ln_kv_ble_name_load();
+-    ln_kv_ble_addr_load();
+-    //ln_kv_ble_irk_load();
+-    //ln_kv_ble_user_data_load();
++    ln_kv_ble_factory_reset();
++    // ln_kv_ble_name_load();
++    // ln_kv_ble_addr_load();
++    // ln_kv_ble_irk_load();
++    // ln_kv_ble_user_data_load();
+ 
+     return 0;
+ }
+diff -urNa ./ln882h-custom-imou/components/net/lwip-2.1.3/src/CMakeLists.txt ./ln882h-custom-imou-patched/components/net/lwip-2.1.3/src/CMakeLists.txt
+--- ./ln882h-custom-imou/components/net/lwip-2.1.3/src/CMakeLists.txt	2024-03-26 18:51:42.000000000 +0800
++++ ./ln882h-custom-imou-patched/components/net/lwip-2.1.3/src/CMakeLists.txt	2024-04-02 20:54:08.000000000 +0800
+@@ -222,4 +222,10 @@
+     ${COMP_KERNEL_DIR}
+     ${COMP_KERNEL_DIR}/FreeRTOS/Source/include
+     ${COMP_KERNEL_DIR}/FreeRTOS/Source/portable/GCC/ARM_CM4F
++
++    set(MAGICLINK_DIR ${LN_SDK_ROOT}/../)
++
++    ${LN_SDK_ROOT}/../include
++    ${LN_SDK_ROOT}/../opensourcelib/include
++    ${LN_SDK_ROOT}/../opensourcelib/include/coap3
+ )
+diff -urNa ./ln882h-custom-imou/components/net/lwip-2.1.3/src/include/netinet/in.h ./ln882h-custom-imou-patched/components/net/lwip-2.1.3/src/include/netinet/in.h
+--- ./ln882h-custom-imou/components/net/lwip-2.1.3/src/include/netinet/in.h	1970-01-01 08:00:00.000000000 +0800
++++ ./ln882h-custom-imou-patched/components/net/lwip-2.1.3/src/include/netinet/in.h	2024-04-02 20:49:13.000000000 +0800
+@@ -0,0 +1,8 @@
++#ifndef IN_H_
++#define IN_H_
++
++#include "lwip/inet.h"
++
++#define IN6_IS_ADDR_MULTICAST(a)    IN_MULTICAST(a)
++
++#endif /* IN_H_ */
+\ No newline at end of file
+diff -urNa ./ln882h-custom-imou/components/net/lwip-2.1.3/src/port/ln_osal/include/lwipopts.h ./ln882h-custom-imou-patched/components/net/lwip-2.1.3/src/port/ln_osal/include/lwipopts.h
+--- ./ln882h-custom-imou/components/net/lwip-2.1.3/src/port/ln_osal/include/lwipopts.h	2024-03-26 18:51:42.000000000 +0800
++++ ./ln882h-custom-imou-patched/components/net/lwip-2.1.3/src/port/ln_osal/include/lwipopts.h	2024-04-02 20:56:39.000000000 +0800
+@@ -4,6 +4,7 @@
+ #include <sys/time.h>
+ 
+ #define LWIP_TIMEVAL_PRIVATE    0
++#define MEMP_USE_CUSTOM_POOLS   1
+ 
+ /* ---------- User options ---------- */
+ #define LWIP_USE_LN_USER_CHANGE    1
+@@ -210,7 +211,7 @@
+ 
+ /*----------- Core locking -----------*/
+ #define LWIP_MPU_COMPATIBLE             0
+-#define LWIP_TCPIP_CORE_LOCKING         1
++#define LWIP_TCPIP_CORE_LOCKING         0
+ #define LWIP_TCPIP_CORE_LOCKING_INPUT   0
+ #define SYS_LIGHTWEIGHT_PROT            (NO_SYS == 0)
+ 
+diff -urNa ./ln882h-custom-imou/components/net/lwip-2.1.3/src/port/ln_osal/include/lwippools.h ./ln882h-custom-imou-patched/components/net/lwip-2.1.3/src/port/ln_osal/include/lwippools.h
+--- ./ln882h-custom-imou/components/net/lwip-2.1.3/src/port/ln_osal/include/lwippools.h	1970-01-01 08:00:00.000000000 +0800
++++ ./ln882h-custom-imou-patched/components/net/lwip-2.1.3/src/port/ln_osal/include/lwippools.h	2024-04-02 20:49:13.000000000 +0800
+@@ -0,0 +1,131 @@
++/*
++ * SPDX-License-Identifier: BSD-2-Clause
++ *
++ * This file is part of the CoAP library libcoap. Please see README for terms
++ * of use.
++ */
++
++/* Memory pool definitions for the libcoap when used with lwIP (which has its
++ * own mechanism for quickly allocating chunks of data with known sizes). Has
++ * to be findable by lwIP (ie. an #include <lwippools.h> must either directly
++ * include this or include something more generic which includes this), and
++ * MEMP_USE_CUSTOM_POOLS has to be set in lwipopts.h. */
++
++#include "coap_internal.h"
++#include "coap_net.h"
++#include "coap_resource.h"
++#include "coap_subscribe.h"
++
++#ifndef MEMP_NUM_COAPCONTEXT
++#define MEMP_NUM_COAPCONTEXT 1
++#endif
++
++#ifndef MEMP_NUM_COAPENDPOINT
++#define MEMP_NUM_COAPENDPOINT 2
++#endif
++
++/* 1 is sufficient as this is very short-lived */
++#ifndef MEMP_NUM_COAPPACKET
++#define MEMP_NUM_COAPPACKET 1
++#endif
++
++#ifndef MEMP_NUM_COAPNODE
++#define MEMP_NUM_COAPNODE 4
++#endif
++
++#ifndef MEMP_NUM_COAPPDU
++#define MEMP_NUM_COAPPDU MEMP_NUM_COAPNODE
++#endif
++
++#ifndef MEMP_NUM_COAPSESSION
++#define MEMP_NUM_COAPSESSION 4
++#endif
++
++#ifndef MEMP_NUM_COAP_SUBSCRIPTION
++#define MEMP_NUM_COAP_SUBSCRIPTION 0
++#endif
++
++#ifndef MEMP_NUM_COAPRESOURCE
++#define MEMP_NUM_COAPRESOURCE 3
++#endif
++
++#ifndef MEMP_NUM_COAPRESOURCEATTR
++#define MEMP_NUM_COAPRESOURCEATTR 0
++#endif
++
++#ifndef MEMP_NUM_COAPOPTLIST
++#define MEMP_NUM_COAPOPTLIST 0
++#endif
++
++#ifndef MEMP_LEN_COAPOPTLIST
++#define MEMP_LEN_COAPOPTLIST 12
++#endif
++
++#ifndef MEMP_NUM_COAPSTRING
++#define MEMP_NUM_COAPSTRING 10
++#endif
++
++#ifndef MEMP_LEN_COAPSTRING
++#define MEMP_LEN_COAPSTRING 32
++#endif
++
++#ifndef MEMP_NUM_COAPCACHE_KEYS
++#define MEMP_NUM_COAPCACHE_KEYS        (0U)
++#endif /* MEMP_NUM_COAPCACHE_KEYS */
++
++#ifndef MEMP_NUM_COAPCACHE_ENTRIES
++#define MEMP_NUM_COAPCACHE_ENTRIES        (0U)
++#endif /* MEMP_NUM_COAPCACHE_ENTRIES */
++
++#ifndef MEMP_NUM_COAPPDUBUF
++#define MEMP_NUM_COAPPDUBUF 2
++#endif
++
++#ifndef MEMP_LEN_COAPPDUBUF
++#define MEMP_LEN_COAPPDUBUF 32
++#endif
++
++#ifndef MEMP_NUM_COAPLGXMIT
++#define MEMP_NUM_COAPLGXMIT 0
++#endif
++
++#ifndef MEMP_NUM_COAPLGCRCV
++#define MEMP_NUM_COAPLGCRCV 0
++#endif
++
++#ifndef MEMP_NUM_COAPLGSRCV
++#define MEMP_NUM_COAPLGSRCV 0
++#endif
++
++#ifndef MEMP_NUM_COAPDIGESTCTX
++#define MEMP_NUM_COAPDIGESTCTX 4
++#endif
++
++LWIP_MEMPOOL(COAP_CONTEXT, MEMP_NUM_COAPCONTEXT, sizeof(coap_context_t), "COAP_CONTEXT")
++#ifdef COAP_SERVER_SUPPORT
++LWIP_MEMPOOL(COAP_ENDPOINT, MEMP_NUM_COAPENDPOINT, sizeof(coap_endpoint_t), "COAP_ENDPOINT")
++#endif /* COAP_SERVER_SUPPORT */
++LWIP_MEMPOOL(COAP_PACKET, MEMP_NUM_COAPPACKET, sizeof(coap_packet_t), "COAP_PACKET")
++LWIP_MEMPOOL(COAP_NODE, MEMP_NUM_COAPNODE, sizeof(coap_queue_t), "COAP_NODE")
++LWIP_MEMPOOL(COAP_PDU, MEMP_NUM_COAPPDU, sizeof(coap_pdu_t), "COAP_PDU")
++LWIP_MEMPOOL(COAP_SESSION, MEMP_NUM_COAPSESSION, sizeof(coap_session_t), "COAP_SESSION")
++#ifdef COAP_SERVER_SUPPORT
++LWIP_MEMPOOL(COAP_SUBSCRIPTION, MEMP_NUM_COAP_SUBSCRIPTION, sizeof(coap_subscription_t), "COAP_SUBSCRIPTION")
++LWIP_MEMPOOL(COAP_RESOURCE, MEMP_NUM_COAPRESOURCE, sizeof(coap_resource_t), "COAP_RESOURCE")
++LWIP_MEMPOOL(COAP_RESOURCEATTR, MEMP_NUM_COAPRESOURCEATTR, sizeof(coap_attr_t), "COAP_RESOURCEATTR")
++#endif /* COAP_SERVER_SUPPORT */
++LWIP_MEMPOOL(COAP_OPTLIST, MEMP_NUM_COAPOPTLIST, sizeof(coap_optlist_t)+MEMP_LEN_COAPOPTLIST, "COAP_OPTLIST")
++LWIP_MEMPOOL(COAP_STRING, MEMP_NUM_COAPSTRING, sizeof(coap_string_t)+MEMP_LEN_COAPSTRING, "COAP_STRING")
++#ifdef COAP_SERVER_SUPPORT
++LWIP_MEMPOOL(COAP_CACHE_KEY, MEMP_NUM_COAPCACHE_KEYS, sizeof(coap_cache_key_t), "COAP_CACHE_KEY")
++LWIP_MEMPOOL(COAP_CACHE_ENTRY, MEMP_NUM_COAPCACHE_ENTRIES, sizeof(coap_cache_entry_t), "COAP_CACHE_ENTRY")
++#endif /* COAP_SERVER_SUPPORT */
++LWIP_MEMPOOL(COAP_PDU_BUF, MEMP_NUM_COAPPDUBUF, MEMP_LEN_COAPPDUBUF, "COAP_PDU_BUF")
++LWIP_MEMPOOL(COAP_LG_XMIT, MEMP_NUM_COAPLGXMIT, sizeof(coap_lg_xmit_t), "COAP_LG_XMIT")
++#ifdef COAP_CLIENT_SUPPORT
++LWIP_MEMPOOL(COAP_LG_CRCV, MEMP_NUM_COAPLGCRCV, sizeof(coap_lg_crcv_t), "COAP_LG_CRCV")
++#endif /* COAP_CLIENT_SUPPORT */
++#ifdef COAP_SERVER_SUPPORT
++LWIP_MEMPOOL(COAP_LG_SRCV, MEMP_NUM_COAPLGSRCV, sizeof(coap_lg_srcv_t), "COAP_LG_SRCV")
++#endif /* COAP_SERVER_SUPPORT */
++LWIP_MEMPOOL(COAP_DIGEST_CTX, MEMP_NUM_COAPDIGESTCTX, sizeof(coap_digest_t) + sizeof(size_t), "COAP_DIGEST_CTX")
+\ No newline at end of file
+diff -urNa ./ln882h-custom-imou/components/net/lwip-2.1.3/src/port/ln_osal/netif/ethernetif.c ./ln882h-custom-imou-patched/components/net/lwip-2.1.3/src/port/ln_osal/netif/ethernetif.c
+--- ./ln882h-custom-imou/components/net/lwip-2.1.3/src/port/ln_osal/netif/ethernetif.c	2024-03-26 18:51:42.000000000 +0800
++++ ./ln882h-custom-imou-patched/components/net/lwip-2.1.3/src/port/ln_osal/netif/ethernetif.c	2024-04-03 15:31:32.000000000 +0800
+@@ -191,7 +191,7 @@
+     LOG(LOG_LVL_INFO, "|netif ip      = %-16s            |\r\n", ip4addr_ntoa(&nif->ip_addr));
+     LOG(LOG_LVL_INFO, "|netif mask    = %-16s            |\r\n", ip4addr_ntoa(&nif->netmask));
+     LOG(LOG_LVL_INFO, "|netif gateway = %-16s            |\r\n", ip4addr_ntoa(&nif->gw));
+-#endif    
++#endif
+     LOG(LOG_LVL_INFO, "|netif mac     : [%02X:%02X:%02X:%02X:%02X:%02X] %-7s |\r\n", mac[0], mac[1], mac[2], mac[3], mac[4], mac[5], "");
+     LOG(LOG_LVL_INFO, "+--------------------------------------------+\r\n");
+ }
+@@ -211,7 +211,7 @@
+         if ((nif->flags & NETIF_FLAG_UP)
+ #endif
+             && (netif_is_link_up(nif))) {
+-            print_netdev_info(nif);
++            // print_netdev_info(nif);
+             wifi_set_allow_cpu_sleep_flag(1);
+             if (g_get_ip_cb)
+             {
+@@ -248,9 +248,9 @@
+ int lwip_tcpip_init(void)
+ {
+     /**
+-     * When powered on, if the tcp task is not the first task to run, 
++     * When powered on, if the tcp task is not the first task to run,
+      * synchronous initialization is recommended.
+-     * 
++     *
+      * sync init:
+      *    tcpip_init(NULL, NULL);
+      *    tcpip_init_done(NULL);
+@@ -308,7 +308,7 @@
+             netifapi_netif_set_link_up(nif);
+             dhcpd_stop();
+             dhcpd_start();
+-            print_netdev_info(nif);
++            // print_netdev_info(nif);
+         }
+         else
+         {
+@@ -336,7 +336,7 @@
+ netdev_link_state_t netdev_get_link_state(netif_idx_t nif_idx)
+ {
+     netdev_t *ndev = ethernetif_get_netdev(nif_idx);
+-                
++
+     if (netif_is_link_up(&ndev->nif) && (ndev->nif.flags & NETIF_FLAG_UP)) {
+         return NETDEV_LINK_UP;
+     } else {
+@@ -356,13 +356,13 @@
+   #else
+     return ((0 != dhcp_supplied_address(nif)) || \
+             ((IPADDR_ANY != nif->ip_addr.addr) && (nif->flags & (NETIF_FLAG_LINK_UP | NETIF_FLAG_UP))));
+-  #endif    
++  #endif
+ #else
+   #if LWIP_IPV6
+     return ((ip_addr_isany_val(nif->ip_addr)) && (nif->flags & (NETIF_FLAG_LINK_UP | NETIF_FLAG_UP)));
+   #else
+     return ((IPADDR_ANY != nif->ip_addr.addr) && (nif->flags & (NETIF_FLAG_LINK_UP | NETIF_FLAG_UP)));
+-  #endif    
++  #endif
+ #endif
+ }
+ 
+diff -urNa ./ln882h-custom-imou/components/net/mbedtls/include/mbedtls/x509_crt.h ./ln882h-custom-imou-patched/components/net/mbedtls/include/mbedtls/x509_crt.h
+--- ./ln882h-custom-imou/components/net/mbedtls/include/mbedtls/x509_crt.h	2024-03-26 18:51:42.000000000 +0800
++++ ./ln882h-custom-imou-patched/components/net/mbedtls/include/mbedtls/x509_crt.h	2024-04-02 20:57:27.000000000 +0800
+@@ -52,6 +52,7 @@
+  */
+ typedef struct mbedtls_x509_crt
+ {
++    int own_buffer;                     /**< Indicates if \c raw is owned by the structure or not. */
+     mbedtls_x509_buf raw;               /**< The raw certificate data (DER). */
+     mbedtls_x509_buf tbs;               /**< The raw certificate body (DER). The part that is To Be Signed. */
+ 
+@@ -228,6 +229,11 @@
+  *
+  * \return         0 if successful, or a specific X509 or PEM error code
+  */
++
++int mbedtls_x509_crt_parse_der_nocopy( mbedtls_x509_crt *chain,
++                                       const unsigned char *buf,
++                                       size_t buflen );
++
+ int mbedtls_x509_crt_parse_der( mbedtls_x509_crt *chain, const unsigned char *buf,
+                         size_t buflen );
+ 
+diff -urNa ./ln882h-custom-imou/components/net/mbedtls/library/x509_crt.c ./ln882h-custom-imou-patched/components/net/mbedtls/library/x509_crt.c
+--- ./ln882h-custom-imou/components/net/mbedtls/library/x509_crt.c	2024-03-26 18:51:42.000000000 +0800
++++ ./ln882h-custom-imou-patched/components/net/mbedtls/library/x509_crt.c	2024-04-02 20:59:18.000000000 +0800
+@@ -837,7 +837,7 @@
+  * Parse and fill a single X.509 certificate in DER format
+  */
+ static int x509_crt_parse_der_core( mbedtls_x509_crt *crt, const unsigned char *buf,
+-                                    size_t buflen )
++                                    size_t buflen, int make_copy)
+ {
+     int ret;
+     size_t len;
+@@ -882,15 +882,26 @@
+ 
+     // Create and populate a new buffer for the raw field
+     crt->raw.len = crt_end - buf;
+-    crt->raw.p = p = mbedtls_calloc( 1, crt->raw.len );
+-    if( p == NULL )
+-        return( MBEDTLS_ERR_X509_ALLOC_FAILED );
+-
+-    memcpy( p, buf, crt->raw.len );
+-
+-    // Direct pointers to the new buffer
+-    p += crt->raw.len - len;
+-    end = crt_end = p + len;
++
++    if( make_copy != 0 )
++    {
++        /* Create and populate a new buffer for the raw field. */
++        crt->raw.p = p = mbedtls_calloc( 1, crt->raw.len );
++        if( crt->raw.p == NULL )
++            return( MBEDTLS_ERR_X509_ALLOC_FAILED );
++
++        memcpy( crt->raw.p, buf, crt->raw.len );
++        crt->own_buffer = 1;
++
++        // Direct pointers to the new buffer 
++        p += crt->raw.len - len;
++        end = crt_end = p + len;
++    }
++    else
++    {
++        crt->raw.p = (unsigned char*) buf;
++        crt->own_buffer = 0;
++    }
+ 
+     /*
+      * TBSCertificate  ::=  SEQUENCE  {
+@@ -1089,6 +1100,53 @@
+     return( 0 );
+ }
+ 
++int mbedtls_x509_crt_parse_der_nocopy( mbedtls_x509_crt *chain, const unsigned char *buf,
++                        size_t buflen )
++{
++    int ret;
++    mbedtls_x509_crt *crt = chain, *prev = NULL;
++
++    /*
++     * Check for valid input
++     */
++    if( crt == NULL || buf == NULL )
++        return( MBEDTLS_ERR_X509_BAD_INPUT_DATA );
++
++    while( crt->version != 0 && crt->next != NULL )
++    {
++        prev = crt;
++        crt = crt->next;
++    }
++
++    /*
++     * Add new certificate on the end of the chain if needed.
++     */
++    if( crt->version != 0 && crt->next == NULL )
++    {
++        crt->next = mbedtls_calloc( 1, sizeof( mbedtls_x509_crt ) );
++
++        if( crt->next == NULL )
++            return( MBEDTLS_ERR_X509_ALLOC_FAILED );
++
++        prev = crt;
++        mbedtls_x509_crt_init( crt->next );
++        crt = crt->next;
++    }
++
++    if( ( ret = x509_crt_parse_der_core( crt, buf, buflen, 0 ) ) != 0 )
++    {
++        if( prev )
++            prev->next = NULL;
++
++        if( crt != chain )
++            mbedtls_free( crt );
++
++        return( ret );
++    }
++
++    return( 0 );
++}
++
+ /*
+  * Parse one X.509 certificate in DER format from a buffer and add them to a
+  * chained list
+@@ -1126,7 +1184,7 @@
+         crt = crt->next;
+     }
+ 
+-    if( ( ret = x509_crt_parse_der_core( crt, buf, buflen ) ) != 0 )
++    if( ( ret = x509_crt_parse_der_core( crt, buf, buflen, 1 ) ) != 0 )
+     {
+         if( prev )
+             prev->next = NULL;
+@@ -2822,7 +2880,7 @@
+             mbedtls_free( seq_prv );
+         }
+ 
+-        if( cert_cur->raw.p != NULL )
++        if( cert_cur->raw.p != NULL && cert_cur->own_buffer )
+         {
+             mbedtls_platform_zeroize( cert_cur->raw.p, cert_cur->raw.len );
+             mbedtls_free( cert_cur->raw.p );
+diff -urNa ./ln882h-custom-imou/components/net/mbedtls/port_ln/include/mbedtls_config.h ./ln882h-custom-imou-patched/components/net/mbedtls/port_ln/include/mbedtls_config.h
+--- ./ln882h-custom-imou/components/net/mbedtls/port_ln/include/mbedtls_config.h	2024-03-26 18:51:42.000000000 +0800
++++ ./ln882h-custom-imou-patched/components/net/mbedtls/port_ln/include/mbedtls_config.h	2024-04-02 21:01:37.000000000 +0800
+@@ -535,7 +535,7 @@
+  * This option is independent of \c MBEDTLS_AES_FEWER_TABLES.
+  *
+  */
+-#define MBEDTLS_AES_ROM_TABLES
++// #define MBEDTLS_AES_ROM_TABLES
+ 
+ /**
+  * \def MBEDTLS_AES_FEWER_TABLES
+@@ -580,14 +580,14 @@
+  *
+  * Enable Cipher Feedback mode (CFB) for symmetric ciphers.
+  */
+-#define MBEDTLS_CIPHER_MODE_CFB
++// #define MBEDTLS_CIPHER_MODE_CFB
+ 
+ /**
+  * \def MBEDTLS_CIPHER_MODE_CTR
+  *
+  * Enable Counter Block Cipher mode (CTR) for symmetric ciphers.
+  */
+-#define MBEDTLS_CIPHER_MODE_CTR
++// #define MBEDTLS_CIPHER_MODE_CTR
+ 
+ /**
+  * \def MBEDTLS_CIPHER_MODE_OFB
+@@ -878,7 +878,7 @@
+  *      MBEDTLS_TLS_RSA_WITH_RC4_128_SHA
+  *      MBEDTLS_TLS_RSA_WITH_RC4_128_MD5
+  */
+-#define MBEDTLS_KEY_EXCHANGE_RSA_ENABLED
++// #define MBEDTLS_KEY_EXCHANGE_RSA_ENABLED
+ 
+ /**
+  * \def MBEDTLS_KEY_EXCHANGE_DHE_RSA_ENABLED
+@@ -1244,7 +1244,7 @@
+  *
+  * Enable sending of all alert messages
+  */
+-#define MBEDTLS_SSL_ALL_ALERT_MESSAGES
++// #define MBEDTLS_SSL_ALL_ALERT_MESSAGES
+ 
+ /**
+  * \def MBEDTLS_SSL_ASYNC_PRIVATE
+@@ -1289,7 +1289,7 @@
+  *
+  * Comment this macro to disable support for Encrypt-then-MAC
+  */
+-#define MBEDTLS_SSL_ENCRYPT_THEN_MAC
++// #define MBEDTLS_SSL_ENCRYPT_THEN_MAC
+ 
+ /** \def MBEDTLS_SSL_EXTENDED_MASTER_SECRET
+  *
+@@ -1346,7 +1346,7 @@
+  *
+  * Comment this macro to disable 1/n-1 record splitting.
+  */
+-#define MBEDTLS_SSL_CBC_RECORD_SPLITTING
++// #define MBEDTLS_SSL_CBC_RECORD_SPLITTING
+ 
+ /**
+  * \def MBEDTLS_SSL_RENEGOTIATION
+@@ -1368,7 +1368,7 @@
+  *          configuration of this extension).
+  *
+  */
+-#define MBEDTLS_SSL_RENEGOTIATION
++// #define MBEDTLS_SSL_RENEGOTIATION
+ 
+ /**
+  * \def MBEDTLS_SSL_SRV_SUPPORT_SSLV2_CLIENT_HELLO
+@@ -1543,7 +1543,7 @@
+  *
+  * Comment this macro to disable support for SSL session tickets
+  */
+-#define MBEDTLS_SSL_SESSION_TICKETS
++// #define MBEDTLS_SSL_SESSION_TICKETS
+ 
+ /**
+  * \def MBEDTLS_SSL_EXPORT_KEYS
+@@ -1553,7 +1553,7 @@
+  *
+  * Comment this macro to disable support for key export
+  */
+-#define MBEDTLS_SSL_EXPORT_KEYS
++// #define MBEDTLS_SSL_EXPORT_KEYS
+ 
+ /**
+  * \def MBEDTLS_SSL_SERVER_NAME_INDICATION
+@@ -1841,7 +1841,7 @@
+  *            it, and considering stronger ciphers instead.
+  *
+  */
+-#define MBEDTLS_ARC4_C
++// #define MBEDTLS_ARC4_C
+ 
+ /**
+  * \def MBEDTLS_ASN1_PARSE_C
+@@ -2115,7 +2115,7 @@
+  *
+  * This module provides debugging functions.
+  */
+-#define MBEDTLS_DEBUG_C
++// #define MBEDTLS_DEBUG_C
+ 
+ /**
+  * \def MBEDTLS_DES_C
+@@ -2255,7 +2255,7 @@
+  *
+  * This module enables mbedtls_strerror().
+  */
+-#define MBEDTLS_ERROR_C
++// #define MBEDTLS_ERROR_C
+ 
+ /**
+  * \def MBEDTLS_GCM_C
+@@ -2747,7 +2747,7 @@
+  *
+  * Requires: MBEDTLS_CIPHER_C
+  */
+-#define MBEDTLS_SSL_TICKET_C
++// #define MBEDTLS_SSL_TICKET_C
+ 
+ /**
+  * \def MBEDTLS_SSL_CLI_C
+@@ -2847,7 +2847,7 @@
+  *
+  * This module provides run-time version information.
+  */
+-#define MBEDTLS_VERSION_C
++// #define MBEDTLS_VERSION_C
+ 
+ /**
+  * \def MBEDTLS_X509_USE_C
+@@ -3097,7 +3097,7 @@
+  * Uncomment to set the maximum plaintext size of both
+  * incoming and outgoing I/O buffers.
+  */
+-#define MBEDTLS_SSL_MAX_CONTENT_LEN                 16384
++#define MBEDTLS_SSL_MAX_CONTENT_LEN                 4096
+ 
+ /** \def MBEDTLS_SSL_IN_CONTENT_LEN
+  *
+@@ -3122,7 +3122,7 @@
+  * Uncomment to set the maximum plaintext size of the incoming I/O buffer
+  * independently of the outgoing I/O buffer.
+  */
+-// #define MBEDTLS_SSL_IN_CONTENT_LEN              (1024 * 4)
++#define MBEDTLS_SSL_IN_CONTENT_LEN              (1024 * 4)
+ 
+ /** \def MBEDTLS_SSL_OUT_CONTENT_LEN
+  *
+diff -urNa ./ln882h-custom-imou/components/utils/system_parameter.c ./ln882h-custom-imou-patched/components/utils/system_parameter.c
+--- ./ln882h-custom-imou/components/utils/system_parameter.c	2024-03-26 18:51:42.000000000 +0800
++++ ./ln882h-custom-imou-patched/components/utils/system_parameter.c	2024-04-03 11:07:25.000000000 +0800
+@@ -4,15 +4,15 @@
+ #include "utils/system_parameter.h"
+ 
+ typedef struct {
+-    char  ssid[SSID_MAX_LEN]; 
+-    char  pwd[PASSWORD_MAX_LEN];  
++    char  ssid[SSID_MAX_LEN];
++    char  pwd[PASSWORD_MAX_LEN];
+     char  bssid[BSSID_LEN];
+-} sta_conn_param_t; 
++} sta_conn_param_t;
+ 
+ typedef struct {
+     char  ssid[SSID_MAX_LEN];
+     char  pwd[PASSWORD_MAX_LEN];
+-} softap_basic_param_t; 
++} softap_basic_param_t;
+ 
+ __STATIC_INLINE__ int sysparam_store(const char *key, const void *value, size_t value_len)
+ {
+@@ -29,7 +29,7 @@
+     int ret = ln_kv_get(key, value_buf, value_buf_size, &v_len);
+     if (ret != KV_ERR_NONE) {
+         return SYSPARAM_ERR_LOAD;
+-    } 
++    }
+     return SYSPARAM_ERR_NONE;
+ }
+ 
+@@ -55,9 +55,9 @@
+ {
+     sta_conn_param_t conn;
+     memset(&conn, 0, sizeof(sta_conn_param_t));
+-    memcpy(&conn.ssid, TARGET_AP_SSID, strlen(TARGET_AP_SSID));
+-    memcpy(&conn.pwd, TARGET_AP_PWD, strlen(TARGET_AP_PWD));
+-    
++    // memcpy(&conn.ssid, TARGET_AP_SSID, strlen(TARGET_AP_SSID));
++    // memcpy(&conn.pwd, TARGET_AP_PWD, strlen(TARGET_AP_PWD));
++
+     return sysparam_store(KV_SYSPARAM_STA_CONN_CFG, (void *)&conn, sizeof(sta_conn_param_t));
+ }
+ 
+@@ -128,7 +128,7 @@
+     tcpip_ip_info_t sta_ip_info;
+     if (ip4addr_aton(STA_IP_ADDR,    &sta_ip_info.ip) && \
+         ip4addr_aton(STA_IP_NETMASK, &sta_ip_info.netmask) && \
+-        ip4addr_aton(STA_IP_GATWAY,  &sta_ip_info.gw)) 
++        ip4addr_aton(STA_IP_GATWAY,  &sta_ip_info.gw))
+     {
+         return sysparam_store(KV_SYSPARAM_STA_IP_INFO, (void *)&sta_ip_info, sizeof(tcpip_ip_info_t));
+     }
+@@ -140,7 +140,7 @@
+     tcpip_ip_info_t softap_ip_info;
+     if (ip4addr_aton(SOFTAP_IP_ADDR,    &softap_ip_info.ip) && \
+         ip4addr_aton(SOFTAP_IP_NETMASK, &softap_ip_info.netmask) && \
+-        ip4addr_aton(SOFTAP_IP_GATWAY,  &softap_ip_info.gw)) 
++        ip4addr_aton(SOFTAP_IP_GATWAY,  &softap_ip_info.gw))
+     {
+         return sysparam_store(KV_SYSPARAM_SOFTAP_IP_INFO, (void *)&softap_ip_info, sizeof(tcpip_ip_info_t));
+     }
+@@ -160,7 +160,7 @@
+ {
+     uint16_t len = strlen(SOFTAP_NETDEV_HOSTNAME) + 1;
+     len = (len > NETDEV_HOSTNAME_LEN_MAX) ? NETDEV_HOSTNAME_LEN_MAX : len;
+-    
++
+     return sysparam_store(KV_SYSPARAM_SOFTAP_HOSTNAME, (void *)SOFTAP_NETDEV_HOSTNAME, len);
+ }
+ 
+@@ -208,7 +208,7 @@
+ 
+     if (ip4addr_aton(DHCPD_SER_IP,        &dhcpd_cfg.server) && \
+         ip4addr_aton(DHCPD_IP_POOL_START, &dhcpd_cfg.ip_start) && \
+-        ip4addr_aton(DHCPD_IP_POOL_END,   &dhcpd_cfg.ip_end)) 
++        ip4addr_aton(DHCPD_IP_POOL_END,   &dhcpd_cfg.ip_end))
+     {
+         return sysparam_store(KV_SYSPARAM_DHCPD_CFG, (void *)&dhcpd_cfg, sizeof(server_config_t));
+     }
+@@ -336,7 +336,7 @@
+     if (!sysparam_has_stored(KV_SYSPARAM_DHCPD_CFG)) {
+         ret += sysparam_dhcpd_cfg_factory_reset();
+     }
+-    
++
+ #if 0 //TODO:
+     sysparam_has_stored(KV_SYSPARAM_MDNS_EN );
+     sysparam_has_stored(KV_SYSPARAM_MDNS_CFG);
+@@ -446,7 +446,7 @@
+ {
+     uint16_t len = strlen(hostname) + 1;
+     len = (len > NETDEV_HOSTNAME_LEN_MAX) ? NETDEV_HOSTNAME_LEN_MAX : len;
+-    
++
+     return sysparam_store(KV_SYSPARAM_SOFTAP_HOSTNAME, (void *)hostname, len);
+ }
+ 
+@@ -493,11 +493,11 @@
+   // TODO: mDNS param
+   int sysparam_mdns_en_update(int enable);
+   int sysparam_mdns_cfg_update(const mdns_config_t *cfg);
+-  
++
+   // TODO: DNS param
+   int sysparam_dns_en_update(int en);
+   int sysparam_dns_cfg_update(const dns_config_t *cfg);
+-    
++
+   // TODO: SNTP server param
+   int sysparam_sntp_en_update(int en);
+   int sysparam_sntp_cfg_update(const sntp_config_t *cfg);
+@@ -654,11 +654,11 @@
+   // TODO: mDNS param
+   int sysparam_mdns_en_get(uint8_t *en);
+   int sysparam_mdns_cfg_get(mdns_config_t *cfg);
+-  
++
+   // TODO: DNS param
+   int sysparam_dns_en_get(uint8_t *en);
+   int sysparam_dns_cfg_get(dns_config_t *cfg);
+-    
++
+   // TODO: SNTP server param
+   int sysparam_sntp_en_get(uint8_t *en);
+   int sysparam_sntp_cfg_get(sntp_config_t *cfg);
+diff -urNa ./ln882h-custom-imou/components/wifi/wifi_lib_import/wifi_port.h ./ln882h-custom-imou-patched/components/wifi/wifi_lib_import/wifi_port.h
+--- ./ln882h-custom-imou/components/wifi/wifi_lib_import/wifi_port.h	2024-03-26 18:51:42.000000000 +0800
++++ ./ln882h-custom-imou-patched/components/wifi/wifi_lib_import/wifi_port.h	2024-04-03 15:41:16.000000000 +0800
+@@ -75,7 +75,7 @@
+ 
+ /**
+  * @brief wlib_aes_init
+- * 
++ *
+  * @param key     in param
+  * @param keysize in param. Optional 16/24/32, uint byte.
+  * @return void*  return NULL: error; others: success.
+@@ -84,14 +84,14 @@
+ 
+ /**
+  * @brief wlib_aes_deinit
+- * 
++ *
+  * @param ctx in param, from wlib_aes_init()
+  */
+ void  wlib_aes_deinit(void *ctx);
+ 
+ /**
+  * @brief wlib_aes_setup
+- * 
++ *
+  * @param ctx in param, from wlib_aes_context_t, defined by lib
+  * @param keysize in param. Optional 16/24/32, uint byte.
+  * @param key in param
+@@ -99,7 +99,7 @@
+ void wlib_aes_setup(void *ctx, uint8_t keysize, const uint8_t *key);
+ /**
+  * @brief wlib_aes_encrypt
+- * 
++ *
+  * @param ctx in param, from wlib_aes_init()
+  * @param ptext in  param, plaintext
+  * @param ctext out param, ciphertext
+@@ -108,7 +108,7 @@
+ 
+ /**
+  * @brief wlib_aes_decrypt
+- * 
++ *
+  * @param ctx in param, from wlib_aes_init()
+  * @param ctext in  param, ciphertext
+  * @param ptext out param, plaintext
+@@ -142,7 +142,7 @@
+ #define WLIB_LOG_LVL_I            (2) //maclib log (necessary) infor output.
+ #define WLIB_LOG_LVL_W            (3) //maclib log warning output.
+ #define WLIB_LOG_LVL_D            (4) //maclib log debug output.
+-#define WLIB_LOG_LEVEL_CFG        WLIB_LOG_LVL_W
++#define WLIB_LOG_LEVEL_CFG        WLIB_LOG_LVL_E
+ 
+ #define WLIB_LOG_E(...)           wlib_log_printf(1, WLIB_LOG_LVL_E, __VA_ARGS__)
+ #define WLIB_LOG_I(...)           wlib_log_printf(1, WLIB_LOG_LVL_I, __VA_ARGS__)
+diff -urNa ./ln882h-custom-imou/mcu/driver_ln882h/hal/hal_interrupt.c ./ln882h-custom-imou-patched/mcu/driver_ln882h/hal/hal_interrupt.c
+--- ./ln882h-custom-imou/mcu/driver_ln882h/hal/hal_interrupt.c	2024-03-26 18:51:42.000000000 +0800
++++ ./ln882h-custom-imou-patched/mcu/driver_ln882h/hal/hal_interrupt.c	2024-04-03 10:39:40.000000000 +0800
+@@ -3,7 +3,7 @@
+ #define CFG_USING_CM_BACKTRACE
+ 
+ #ifdef CFG_USING_CM_BACKTRACE
+-#include "utils/debug/CmBackTrace/cm_backtrace.h"
++#include "cm_backtrace.h"
+ #endif /* CFG_USING_CM_BACKTRACE */
+ 
+ #include <stdbool.h>
+@@ -80,7 +80,7 @@
+         #ifdef CFG_USING_CM_BACKTRACE
+         IMPORT  cm_backtrace_fault
+         #endif
+-     
++
+         MOV    R0, LR
+         MOV    R1, SP
+         #ifdef CFG_USING_CM_BACKTRACE
+@@ -136,44 +136,44 @@
+ #if ((!defined(__MICROLIB)) && defined(__ARMCC_VERSION))
+ 
+   #if (defined(__ARMCC_VERSION) && (__ARMCC_VERSION >= 6010050)) /* ARMCC6 */
+-    __ASM (".global __use_no_semihosting");      
++    __ASM (".global __use_no_semihosting");
+   #elif (defined(__CC_ARM) && (__ARMCC_VERSION < 6000000)) /* ARMCC5 */
+-    #pragma import(__use_no_semihosting)             
+-    struct __FILE 
+-    { 
+-        int handle; 
+-    }; 
++    #pragma import(__use_no_semihosting)
++    struct __FILE
++    {
++        int handle;
++    };
+   #endif
+ 
+   __asm(".global __ARM_use_no_argv\n\t");
+-  
++
+   #include <rt_sys.h>
+-  
++
+   FILEHANDLE _sys_open(const char * name, int openmode) {
+-      return 0;  
++      return 0;
+   }
+   void _ttywrch(int ch) {
+       ch = ch;
+   }
+-  void _sys_exit(int x) { 
+-  	x = x; 
+-  } 
+-  
+-  int fputc(int ch, FILE *f) { 
++  void _sys_exit(int x) {
++  	x = x;
++  }
++
++  int fputc(int ch, FILE *f) {
+       //TODO: uart send ch
+   	return ch;
+   }
+-  
++
+   int _sys_close(FILEHANDLE fh) {
+       return 0; //return success
+   }
+   int _sys_write(FILEHANDLE fh, const unsigned char * buf, unsigned len, int mode) {
+-      return 0;   
++      return 0;
+   }
+   int _sys_read(FILEHANDLE fh, unsigned char * buf, unsigned len, int mode) {
+-      return 0;       
++      return 0;
+   }
+-  
++
+   int _sys_istty(FILEHANDLE fh) {
+       return 1; // no interactive device present
+   }
+@@ -186,9 +186,9 @@
+   long _sys_flen(FILEHANDLE fh) {
+       return 0;
+   }
+-  
++
+   char *_sys_command_string(char *cmd, int len){
+       return 0;
+   }
+-#endif 
++#endif
+ 
+diff -urNa ./ln882h-custom-imou/project/combo_mcu_basic_example/CMakeLists.txt ./ln882h-custom-imou-patched/project/combo_mcu_basic_example/CMakeLists.txt
+--- ./ln882h-custom-imou/project/combo_mcu_basic_example/CMakeLists.txt	2024-03-26 18:51:42.000000000 +0800
++++ ./ln882h-custom-imou-patched/project/combo_mcu_basic_example/CMakeLists.txt	2024-04-03 11:15:06.000000000 +0800
+@@ -5,6 +5,7 @@
+     app/main.c
+     app/usr_app.c
+     app/usr_ble_app.c
++    app/demo.c
+     bsp/serial_hw.c
+     bsp/drv_adc_measure.c
+     startup/startup_${CHIP_SERIAL}_gcc.c
+@@ -30,11 +31,30 @@
+     PRIVATE
+     -T${LINKER_SCRIPT}
+     ${EXTRA_LINK_FLAGS}
++
++    -Wl,--whole-archive
++    libmagiclink.a
++    libota.a
++    libnetcfg.a
++    libregister.a
++    libcontrol.a
++    libcoapconnect.a
++    libblenetcfg.a
++    -Wl,--no-whole-archive
++    libcjson.a
++    libcoap-3.a
++    libpaho-embed-mqtt3cc.a
++    libpaho-embed-mqtt3c.a
++    -Wl,--gc-sections
+ )
+ 
+ target_link_directories(${pro_executable_target}
+     PRIVATE
+     ${LN_SDK_ROOT}/lib/gcclib
++
++    ${LN_SDK_ROOT}/../include
++    ${LN_SDK_ROOT}/../lib/static
++    ${LN_SDK_ROOT}/../opensourcelib/static
+ )
+ 
+ target_include_directories(${pro_executable_target}
+diff -urNa ./ln882h-custom-imou/project/combo_mcu_basic_example/ProjModuleCollect.cmake ./ln882h-custom-imou-patched/project/combo_mcu_basic_example/ProjModuleCollect.cmake
+--- ./ln882h-custom-imou/project/combo_mcu_basic_example/ProjModuleCollect.cmake	2024-03-26 18:51:42.000000000 +0800
++++ ./ln882h-custom-imou-patched/project/combo_mcu_basic_example/ProjModuleCollect.cmake	2024-04-03 10:23:15.000000000 +0800
+@@ -50,10 +50,10 @@
+ # list(APPEND MODULE_SRC ${IPERF_SRC})
+ 
+ ###################################   kv   #####################################
+-# file(GLOB_RECURSE  KV_SRC  ${COMP_KV_DIR}/*.c)
++file(GLOB_RECURSE  KV_SRC  ${COMP_KV_DIR}/*.c)
+ include_directories(${COMP_KV_DIR}/kv)
+ include_directories(${COMP_KV_DIR}/kv_port)
+-# list(APPEND MODULE_SRC ${KV_SRC})
++list(APPEND MODULE_SRC ${KV_SRC})
+ 
+ ###################################  nvds  #####################################
+ file(GLOB_RECURSE  NVDS_SRC  ${COMP_NVDS_DIR}/*.c)
+@@ -183,4 +183,22 @@
+ include_directories(${COMP_WIFI_DIR}/wifi_manager)
+ include_directories(${COMP_WIFI_DIR}/wifi_lib_import)
+ include_directories(${COMP_WIFI_DIR}/wifi_lib_export)
+-list(APPEND MODULE_SRC ${MISC_SRC})
+\ No newline at end of file
++list(APPEND MODULE_SRC ${MISC_SRC})
++
++###################################  mbedtls    ################################
++file(GLOB_RECURSE  MBEDTLS_SRC  ${COMP_MBEDTLS_DIR}/library/*.c)
++file(GLOB_RECURSE  MBEDTLS_WRAPPER_SRC  ${COMP_MBEDTLS_DIR}/port_ln/library/*.c)
++include_directories(${COMP_MBEDTLS_DIR}/include)
++include_directories(${COMP_MBEDTLS_DIR}/port_ln/include)
++list(APPEND MODULE_SRC ${MBEDTLS_SRC})
++list(APPEND MODULE_SRC ${MBEDTLS_WRAPPER_SRC})
++
++#############################   Partition MGR   ################################
++file(GLOB_RECURSE  PARTMGR_SRC  ${COMP_PARTMGR_DIR}/*.c)
++include_directories(${COMP_PARTMGR_DIR})
++list(APPEND MODULE_SRC ${COMP_PARTMGR_DIR})
++
++###################################  fota   ################################
++file(GLOB_RECURSE  FOTA_SRC  ${COMP_FOTA_DIR}/ota_agent/*.c)
++include_directories(${COMP_FOTA_DIR}/ota_agent)
++list(APPEND MODULE_SRC ${FOTA_SRC})
+\ No newline at end of file
+diff -urNa ./ln882h-custom-imou/project/combo_mcu_basic_example/app/main.c ./ln882h-custom-imou-patched/project/combo_mcu_basic_example/app/main.c
+--- ./ln882h-custom-imou/project/combo_mcu_basic_example/app/main.c	2024-03-26 18:51:42.000000000 +0800
++++ ./ln882h-custom-imou-patched/project/combo_mcu_basic_example/app/main.c	2024-04-03 11:09:55.000000000 +0800
+@@ -16,7 +16,9 @@
+ #include "ln_at.h"
+ #include "flash_partition_table.h"
+ 
++#include "ln_ble_app_kv.h"
+ #include "usr_app.h"
++#include "ln_ble_app_default_cfg.h"
+ 
+ 
+ int main (int argc, char* argv[])
+@@ -48,6 +50,13 @@
+         LOG(LOG_LVL_ERROR, "NVDS init filed!\r\n");
+     }
+ 
++    if (KV_ERR_NONE != ln_kv_port_init(KV_SPACE_OFFSET, (KV_SPACE_OFFSET + KV_SPACE_SIZE))) {
++        LOG(LOG_LVL_ERROR, "KV init filed!\r\n");
++    }
++
++    //6.init system parameter
++    sysparam_integrity_check_all();
++
+     //7.rf preprocess,img cal
+     wifi_rf_calibration();
+ 
+@@ -57,7 +66,9 @@
+ 
+     //9.Init lwip stack.
+     lwip_tcpip_init();
+-
++    if ( 0 != ota_port_init()) {
++        LOG(LOG_LVL_ERROR, "ota port failed!\r\n");
++    }
+     //10.Creat usr app task.
+     creat_usr_app_task();
+ 
+diff -urNa ./ln882h-custom-imou/project/combo_mcu_basic_example/app/usr_app.c ./ln882h-custom-imou-patched/project/combo_mcu_basic_example/app/usr_app.c
+--- ./ln882h-custom-imou/project/combo_mcu_basic_example/app/usr_app.c	2024-03-26 18:51:42.000000000 +0800
++++ ./ln882h-custom-imou-patched/project/combo_mcu_basic_example/app/usr_app.c	2024-04-03 15:34:44.000000000 +0800
+@@ -25,13 +25,15 @@
+ #include "ln_ble_gatt.h"
+ #include "usr_app.h"
+ #include "usr_ble_app.h"
++#include "ln_ble_app_kv.h"
+ 
++#include "magiclink.h"
++#include "demo.h"
+ 
+ static OS_Thread_t g_usr_app_thread;
+-#define USR_APP_TASK_STACK_SIZE   6*256 //Byte
+-
+-#define WIFI_TEMP_CALIBRATE             1//1
++#define USR_APP_TASK_STACK_SIZE   4800 //Byte
+ 
++#define WIFI_TEMP_CALIBRATE             0//1
+ 
+ #if WIFI_TEMP_CALIBRATE
+ static OS_Thread_t g_temp_cal_thread;
+@@ -46,12 +48,15 @@
+ 
+ static uint8_t mac_addr[6]        = {0};
+ static uint8_t psk_value[40]      = {0x0};
++static uint8_t ssid_value[33]      = {0x0};
++static uint8_t target_sta_bssid[6] = {0x0};
++static uint8_t target_sta_pwd[65] = { 0x0 };
+ 
+ wifi_sta_connect_t connect = {
+-    .ssid    = "TL_WR741N_7F84",
+-    .pwd     = "12345678901234567890123456",
+-    .bssid   = NULL,
+-    .psk_value = NULL,
++    .ssid    = ssid_value,
++    .pwd     = target_sta_pwd,
++    .bssid   = target_sta_bssid,
++    .psk_value = psk_value,
+ };
+ 
+ wifi_scan_cfg_t scan_cfg = {
+@@ -148,7 +153,7 @@
+     LOG(LOG_LVL_INFO, "IPv6 link-local address: %s\r\n", ipaddr_ntoa(netif_ip_addr6(netif1, 0)));
+     netif_set_ip6_autoconfig_enabled(netif1, 1);
+ #endif
+-    
++
+     //2. wifi start
+     wifi_manager_reg_event_callback(WIFI_MGR_EVENT_STA_SCAN_COMPLETE, &wifi_scan_complete_cb);
+ 
+@@ -216,6 +221,58 @@
+     }
+ }
+ 
++static int GetStaInfo()
++{
++    if (sysparam_sta_conn_cfg_get(&connect) != SYSPARAM_ERR_NONE) {
++        printf("get conn cfg fail\r\n");
++        return -1;
++    }
++
++    if (strlen(connect.ssid) == 0 || strlen(connect.pwd) == 0) {
++        printf("no conn info\r\n");
++        return -1;
++    }
++    return 0;
++}
++
++static void WifiConn()
++{
++    //1. sta mac get
++     if (SYSPARAM_ERR_NONE != sysparam_sta_mac_get(mac_addr)) {
++        LOG(LOG_LVL_ERROR, "sta mac get failed!!!\r\n");
++        return;
++    }
++
++    //1. net device(lwip)
++    netdev_set_mac_addr(NETIF_IDX_STA, mac_addr);
++    netdev_set_active(NETIF_IDX_STA);
++    sysparam_sta_mac_update((const uint8_t *)mac_addr);
++
++    //2. wifi start
++    if(WIFI_ERR_NONE != wifi_sta_start(mac_addr, WIFI_NO_POWERSAVE)){
++        LOG(LOG_LVL_ERROR, "[%s]wifi sta start filed!!!\r\n", __func__);
++    }
++    if (strlen(connect.pwd) != 0) {
++        if (0 == ln_psk_calc(connect.ssid, connect.pwd, connect.psk_value, sizeof (psk_value))) {
++            // hexdump(LOG_LVL_INFO, "psk value ", psk_value, sizeof(psk_value));
++        }
++    }
++
++    wifi_sta_connect(&connect, &scan_cfg);
++    return;
++}
++
++static void WifiReconn()
++{
++    /* 获取wifi信息 */
++    if (GetStaInfo() != 0) {
++        printf("no sta info\r\n");
++        return;
++    }
++
++    WifiConn();
++    return;
++}
+ 
+ static void usr_app_task_entry(void *params)
+ {
+@@ -224,18 +281,13 @@
+     wifi_manager_init();
+ 
+     chip_mac_gen();
+-
+-    wifi_init_sta();
+-    // wifi_init_ap();
+-
+-
+-    while (!netdev_got_ip()) {
+-        OS_MsDelay(1000);
+-    }
+-    while(1)
+-    {
+-        OS_MsDelay(1000);
+-    }
++    sysparam_sta_mac_update((const uint8_t *)g_chip_wifi_mac);
++    sysparam_softap_mac_update((const uint8_t *)g_chip_wifi_mac);
++    ln_kv_ble_app_init();
++
++    WifiReconn();
++    MagicLinkSDKRun();
++    OS_ThreadDelete(NULL);
+ }
+ 
+ static void temp_cal_app_task_entry(void *params)
+@@ -286,7 +338,7 @@
+         LN_ASSERT(1);
+     }
+ 
+-    ble_creat_usr_app_task();
++    // ble_creat_usr_app_task();
+ 
+ #if  WIFI_TEMP_CALIBRATE
+     if(OS_OK != OS_ThreadCreate(&g_temp_cal_thread, "TempAPP", temp_cal_app_task_entry, NULL, OS_PRIORITY_BELOW_NORMAL, TEMP_APP_TASK_STACK_SIZE)) {
+diff -urNa ./ln882h-custom-imou/project/combo_mcu_basic_example/app/usr_ble_app.c ./ln882h-custom-imou-patched/project/combo_mcu_basic_example/app/usr_ble_app.c
+--- ./ln882h-custom-imou/project/combo_mcu_basic_example/app/usr_ble_app.c	2024-03-26 18:51:42.000000000 +0800
++++ ./ln882h-custom-imou-patched/project/combo_mcu_basic_example/app/usr_ble_app.c	2024-04-03 14:25:38.000000000 +0800
+@@ -288,7 +288,7 @@
+     adv_data_param.length = adv_data_len;
+     adv_data_param.data = adv_data;
+     ln_ble_adv_data_set(&adv_data_param);
+-    
++
+     hexdump(LOG_LVL_INFO, (const char *)"legacy_adv", adv_data, adv_data_len);
+ }
+ 
+@@ -302,7 +302,7 @@
+ 
+     ln_bd_addr_t *kv_addr = ln_kv_ble_pub_addr_get();
+     memcpy(addr.addr, kv_addr->addr, 6);
+-    
++
+     /*add item ble_addr*/
+     adv_data[0] = BD_ADDR_LEN + 1;
+     adv_data[1] = GAP_AD_TYPE_LE_BT_ADDR;
+@@ -313,7 +313,7 @@
+     adv_data_param.length = adv_data_len;
+     adv_data_param.data = adv_data;
+     ln_ble_adv_scan_rsp_data_set(&adv_data_param);
+-    
++
+     hexdump(LOG_LVL_INFO, (const char *)"legacy_scan_rsp", adv_data, adv_data_len);
+ }
+ #else
+@@ -348,7 +348,7 @@
+     adv_data_param.length = adv_data_len;
+     adv_data_param.data = ext_adv_data;
+     ln_ble_adv_data_set(&adv_data_param);
+-    
++
+     hexdump(LOG_LVL_INFO, (const char *)"ext_adv", ext_adv_data, adv_data_len);
+ }
+ 
+@@ -491,7 +491,7 @@
+ 
+     //4.stack start
+     ln_gap_reset();
+-    
++
+     uint8_t *mac = bt_addr.addr;
+     LOG(LOG_LVL_INFO, "+--------------- ble stack init ok -----------+\r\n");
+     LOG(LOG_LVL_INFO, "|ble role : %-22d            |\r\n",  role);
+@@ -624,7 +624,7 @@
+ 
+ void ble_creat_usr_app_task(void)
+ {
+-    if(OS_OK != OS_ThreadCreate(&ble_g_usr_app_thread, "BleUsrAPP", ble_app_task_entry, NULL, OS_PRIORITY_BELOW_NORMAL, BLE_USR_APP_TASK_STACK_SIZE)) 
++    if(OS_OK != OS_ThreadCreate(&ble_g_usr_app_thread, "BleUsrAPP", ble_app_task_entry, NULL, OS_PRIORITY_BELOW_NORMAL, BLE_USR_APP_TASK_STACK_SIZE))
+     {
+         LN_ASSERT(1);
+     }
+diff -urNa ./ln882h-custom-imou/project/combo_mcu_basic_example/cfg/flash_partition_cfg.json ./ln882h-custom-imou-patched/project/combo_mcu_basic_example/cfg/flash_partition_cfg.json
+--- ./ln882h-custom-imou/project/combo_mcu_basic_example/cfg/flash_partition_cfg.json	2024-03-26 18:51:42.000000000 +0800
++++ ./ln882h-custom-imou-patched/project/combo_mcu_basic_example/cfg/flash_partition_cfg.json	2024-04-03 09:59:22.000000000 +0800
+@@ -12,9 +12,10 @@
+     [
+         {"partition_type": "APP",         "start_addr": "0x00007000",  "size_KB": 1200 },
+         {"partition_type": "OTA",         "start_addr": "0x00133000",  "size_KB": 680 },
+-        {"partition_type": "NVDS",        "start_addr": "0x001DD000",  "size_KB": 12  },
+-        {"partition_type": "KV",          "start_addr": "0x001E0000",  "size_KB": 16  },
+-        {"partition_type": "USER",        "start_addr": "0x001E4000",  "size_KB": 112  }
++        {"partition_type": "CONF",        "start_addr": "0x001DD000",  "size_KB": 48 },
++        {"partition_type": "USER",        "start_addr": "0x001E9000",  "size_KB": 64 },
++        {"partition_type": "NVDS",        "start_addr": "0x001F9000",  "size_KB": 12  },
++        {"partition_type": "KV",          "start_addr": "0x001FC000",  "size_KB": 16  }
+     ]
+ }
+ 
+diff -urNa ./ln882h-custom-imou/project/combo_mcu_basic_example/cfg/flash_partition_table.h ./ln882h-custom-imou-patched/project/combo_mcu_basic_example/cfg/flash_partition_table.h
+--- ./ln882h-custom-imou/project/combo_mcu_basic_example/cfg/flash_partition_table.h	1970-01-01 08:00:00.000000000 +0800
++++ ./ln882h-custom-imou-patched/project/combo_mcu_basic_example/cfg/flash_partition_table.h	2024-04-03 15:37:38.000000000 +0800
+@@ -0,0 +1,56 @@
++#ifndef __FLASH_PARTITION_TABLE__
++#define __FLASH_PARTITION_TABLE__
++
++
++//flash partition map,it's generated by the script based on the json file <flash_partition_table.json>
++
++#define BOOT_SPACE_OFFSET                (0x00000000)
++#define BOOT_SPACE_SIZE                  (1024*24)
++
++#define PART_TAB_SPACE_OFFSET            (0x00006000)
++#define PART_TAB_SPACE_SIZE              (1024*4)
++#if (PART_TAB_SPACE_OFFSET < (BOOT_SPACE_OFFSET + BOOT_SPACE_SIZE))
++  #error "flash partition overlap,please check <flash_partition_table.json>!!!"
++#endif
++
++#define APP_SPACE_OFFSET                 (0x00007000)
++#define APP_SPACE_SIZE                   (1024*1200)
++#if (APP_SPACE_OFFSET < (PART_TAB_SPACE_OFFSET + PART_TAB_SPACE_SIZE))
++  #error "flash partition overlap,please check <flash_partition_table.json>!!!"
++#endif
++
++#define OTA_SPACE_OFFSET                 (0x00133000)
++#define OTA_SPACE_SIZE                   (1024*680)
++#if (OTA_SPACE_OFFSET < (APP_SPACE_OFFSET + APP_SPACE_SIZE))
++  #error "flash partition overlap,please check <flash_partition_table.json>!!!"
++#endif
++
++#define CONF_SPACE_OFFSET                (0x001DD000)
++#define CONF_SPACE_SIZE                  (1024*48)
++#if (CONF_SPACE_OFFSET < (OTA_SPACE_OFFSET + OTA_SPACE_SIZE))
++  #error "flash partition overlap,please check <flash_partition_table.json>!!!"
++#endif
++
++#define USER_SPACE_OFFSET                (0x001E9000)
++#define USER_SPACE_SIZE                  (1024*64)
++#if (USER_SPACE_OFFSET < (CONF_SPACE_OFFSET + CONF_SPACE_SIZE))
++  #error "flash partition overlap,please check <flash_partition_table.json>!!!"
++#endif
++
++#define NVDS_SPACE_OFFSET                (0x001F9000)
++#define NVDS_SPACE_SIZE                  (1024*12)
++#if (NVDS_SPACE_OFFSET < (USER_SPACE_OFFSET + USER_SPACE_SIZE))
++  #error "flash partition overlap,please check <flash_partition_table.json>!!!"
++#endif
++
++#define KV_SPACE_OFFSET                  (0x001FC000)
++#define KV_SPACE_SIZE                    (1024*16)
++#if (KV_SPACE_OFFSET < (NVDS_SPACE_OFFSET + NVDS_SPACE_SIZE))
++  #error "flash partition overlap,please check <flash_partition_table.json>!!!"
++#endif
++
++
++#define IMAGE_HEADER_SIZE                (0x100)
++
++#endif /* __FLASH_PARTITION_TABLE__ */
++
+diff -urNa ./ln882h-custom-imou/project/combo_mcu_basic_example/gcc/gcc-compiler-flags.cmake ./ln882h-custom-imou-patched/project/combo_mcu_basic_example/gcc/gcc-compiler-flags.cmake
+--- ./ln882h-custom-imou/project/combo_mcu_basic_example/gcc/gcc-compiler-flags.cmake	2024-03-26 18:51:42.000000000 +0800
++++ ./ln882h-custom-imou-patched/project/combo_mcu_basic_example/gcc/gcc-compiler-flags.cmake	2024-04-03 10:44:34.000000000 +0800
+@@ -1,6 +1,7 @@
+ string(TOUPPER ${CHIP_SERIAL}  DEF_CHIP_SERIAL)
+ add_compile_definitions(${DEF_CHIP_SERIAL})
+ add_compile_definitions(ARM_MATH_CM4)
++add_compile_definitions(MBEDTLS_CONFIG_FILE=<mbedtls_config.h>)
+ 
+ set(CPU         "-mcpu=cortex-m4")
+ set(FPU         "-mfpu=fpv4-sp-d16")
+diff -urNa ./ln882h-custom-imou/start_build.py ./ln882h-custom-imou-patched/start_build.py
+--- ./ln882h-custom-imou/start_build.py	2024-03-26 18:51:42.000000000 +0800
++++ ./ln882h-custom-imou-patched/start_build.py	2024-04-03 10:00:13.000000000 +0800
+@@ -25,10 +25,10 @@
+ user_action     = "config"                  # default action.
+ 
+ # NOTE: read from top CMakeLists.txt.
+-user_project    = "wifi_mcu_basic_example"  # default user project.
++user_project    = "combo_mcu_basic_example"  # default user project.
+ 
+ # NOTE: read from top CMakeListx.txt
+-build_type      = "debug"
++build_type      = "Release"
+ 
+ # NOTE: set up cmake build directory, build-proj-debug.
+ build_path      = "build"
+@@ -96,7 +96,7 @@
+     print("Warning: read configuration from top CMakeLists.txt!!!")
+     print("     Please check if there are following lines in CMakeLists.txt:")
+     print("")
+-    print("set(USER_PROJECT  wifi_mcu_basic_example)")
++    print("set(USER_PROJECT  combo_mcu_basic_example)")
+     print("")
+     return False
+ 
