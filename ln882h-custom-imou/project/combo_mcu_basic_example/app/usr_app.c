@@ -33,7 +33,7 @@
 static OS_Thread_t g_usr_app_thread;
 #define USR_APP_TASK_STACK_SIZE   4800 //Byte
 
-#define WIFI_TEMP_CALIBRATE             0//1
+#define WIFI_TEMP_CALIBRATE             1
 
 #if WIFI_TEMP_CALIBRATE
 static OS_Thread_t g_temp_cal_thread;
