@@ -25,6 +25,7 @@ target_link_libraries(${pro_executable_target}
     ${CHIP_SERIAL}_ble_full_stack
     ln::dhcpd
     lwip
+    myDimming
     ${CHIP_SERIAL}_wifi
     -lc -lm -lnosys
 
@@ -51,10 +52,10 @@ target_link_libraries(${pro_executable_target}
 target_link_directories(${pro_executable_target}
     PRIVATE
     ${LN_SDK_ROOT}/lib/gcclib
-
     ${LN_SDK_ROOT}/../include
     ${LN_SDK_ROOT}/../lib/static
     ${LN_SDK_ROOT}/../opensourcelib/static
+ 
 )
 
 target_include_directories(${pro_executable_target}
@@ -62,7 +63,7 @@ target_include_directories(${pro_executable_target}
     app
     bsp
     cfg
-
+    ${LN_SDK_ROOT}/components/myDimmingLib
 )
 
 include(gcc/gcc-custom-build-stage.cmake)

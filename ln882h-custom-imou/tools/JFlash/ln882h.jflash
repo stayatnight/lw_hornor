@@ -2,7 +2,7 @@
   FileVersion = 2
 [GENERAL]
   ConnectMode = 0
-  CurrentFile = "flashimage.bin"
+  CurrentFile = "build-combo_mcu_basic_example-release/bin/flashimage.bin"
   DataFileSAddr = 0x00000000
   GUIMode = 0
   HostName = ""
@@ -13,8 +13,8 @@
   IRLen = 0
   MultipleTargets = 0
   NumDevices = 0
-  Speed0 = 10000
-  Speed1 = 10000
+  Speed0 = 50000
+  Speed1 = 50000
   TAP_Number = 0
   UseAdaptive0 = 0
   UseAdaptive1 = 0

@@ -202,3 +202,5 @@ list(APPEND MODULE_SRC ${COMP_PARTMGR_DIR})
 file(GLOB_RECURSE  FOTA_SRC  ${COMP_FOTA_DIR}/ota_agent/*.c)
 include_directories(${COMP_FOTA_DIR}/ota_agent)
 list(APPEND MODULE_SRC ${FOTA_SRC})
+
+include_directories(${LN_SDK_ROOT}/components/myDimmingLib)

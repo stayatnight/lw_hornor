@@ -1,0 +1,95 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "clean",
+            "type": "shell",
+            "command": "python3",
+            "args": [
+                "start_build.py",
+                "clean"
+            ],
+            "group": "build",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}/ln882h-custom-imou" // 指定工作目录
+            }
+        },
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "python3",
+            "args": [
+                "start_build.py",
+                "build"
+            ],
+            "group": "build",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}/ln882h-custom-imou" // 指定工作目录
+            }
+        },
+        {
+            "label": "rebuild",
+            "type": "shell",
+            "command": "python3",
+            "args": [
+                "start_build.py",
+                "rebuild"
+            ],
+            "group": "build",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}/ln882h-custom-imou" // 指定工作目录
+            }
+        },
+        {
+            "label": "flash",
+            "type": "shell",
+            "command": "python3",
+            "args": [
+                "start_build.py",
+                "jflash"
+            ],
+            "group": "build",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}/ln882h-custom-imou" // 指定工作目录
+            }
+        },
+        {
+            "label": "config",
+            "type": "shell",
+            "command": "python3",
+            "args": [
+                "start_build.py",
+                "config"
+            ],
+            "group": "build",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}/ln882h-custom-imou" // 指定工作目录
+            }
+        }
+    ]
+}

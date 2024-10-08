@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "*.c": "c",
+        "log.h": "c",
+        "ln_drv_pwm.h": "c",
+        "hal_common.h": "c",
+        "flash_partition_table.h": "c",
+        "ln_test_common.h": "c",
+        "ln_show_reg.h": "c"
+    }
+}

@@ -19,13 +19,12 @@
 #include "ln_ble_app_kv.h"
 #include "usr_app.h"
 #include "ln_ble_app_default_cfg.h"
-
+#include"dimmingLib.h"
 
 int main (int argc, char* argv[])
 {
     LN_UNUSED(argc);
     LN_UNUSED(argv);
-
     //0. check reboot cause
     ln_chip_get_reboot_cause();
 
@@ -40,8 +39,8 @@ int main (int argc, char* argv[])
 
     //3.init log&AT
     log_init();
-    extern int ate_init(void);
-    ate_init();
+// extern int ate_init(void);
+  //  ate_init();
 
     //4.cm backtrace
     cm_backtrace_init("combo_mcu_basic_example", "hw", "sw");
@@ -71,6 +70,7 @@ int main (int argc, char* argv[])
     if ( 0 != ota_port_init()) {
         LOG(LOG_LVL_ERROR, "ota port failed!\r\n");
     }
+    myLampLoop();
     //10.Creat usr app task.
     creat_usr_app_task();
 
