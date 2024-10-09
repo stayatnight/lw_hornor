@@ -9,6 +9,7 @@
  * 
  */
 #include "ln_drv_pwm.h"
+#include "utils/debug/log.h"
 
 /**
  * @brief PWM初始化
@@ -167,7 +168,7 @@ float pwm_get_duty(pwm_channel_t pwm_channel_num)
         ret_val = hal_adv_tim_get_comp_a(reg_base) * 1.0f / (hal_adv_tim_get_load_value(reg_base) + 2) * 100;                 
     else
         ret_val = hal_adv_tim_get_comp_b(reg_base) * 1.0f / (hal_adv_tim_get_load_value(reg_base) + 2) * 100;                
-        
+        LOG(LOG_LVL_INFO,"ret value = %.2f\n",ret_val);    
     return ret_val;
 }
 
