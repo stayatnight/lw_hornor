@@ -28,7 +28,7 @@
 #include "utils/debug/log.h"
 #include "hal/hal_timer.h"
 #include "hal/hal_clock.h"
-
+#include"myKeyboard.h"
 #include "ln_drv_pwm.h"
 static void pwm_test ()
 {
@@ -108,7 +108,8 @@ int main (int argc, char* argv[])
     if ( 0 != ota_port_init()) {
         LOG(LOG_LVL_ERROR, "ota port failed!\r\n");
     }
-    myLampLoop();
+//    myLampLoop();
+//    myKeyboardLoop();
     //10.Creat usr app task.
     creat_usr_app_task();
 

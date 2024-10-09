@@ -29,6 +29,7 @@ target_link_libraries(${pro_executable_target}
     ln::dhcpd
     lwip
     myDimming
+    myKey
     ${CHIP_SERIAL}_wifi
     -lc -lm -lnosys
 
