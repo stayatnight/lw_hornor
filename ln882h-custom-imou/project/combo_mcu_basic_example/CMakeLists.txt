@@ -8,6 +8,9 @@ set(PROJ_ALL_SRC
     app/demo.c
     bsp/serial_hw.c
     bsp/drv_adc_measure.c
+    bsp/ln_drv_pwm.c
+    bsp/ln_show_reg.c
+    bsp/ln_test_common.c
     startup/startup_${CHIP_SERIAL}_gcc.c
     ${MODULE_SRC}
 )

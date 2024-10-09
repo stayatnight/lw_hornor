@@ -89,6 +89,7 @@ include_directories(${COMP_UTILS_DIR}/fifo)
 include_directories(${COMP_UTILS_DIR}/debug)
 include_directories(${COMP_UTILS_DIR}/debug/CmBacktrace)
 include_directories(${COMP_UTILS_DIR}/linux_compat)
+include_directories(${MCU_LN882X_DIR}/driver_${CHIP_SERIAL}/hal)
 list(APPEND MODULE_SRC ${UTILS_SRC})
 
 ###################################  serial  ###################################
@@ -113,6 +114,7 @@ set(MCU_SRC
     ${MCU_LN882X_DIR}/driver_${CHIP_SERIAL}/hal/hal_ext.c
     ${MCU_LN882X_DIR}/driver_${CHIP_SERIAL}/hal/hal_timer.c
     ${MCU_LN882X_DIR}/driver_${CHIP_SERIAL}/hal/hal_efuse.c
+    ${MCU_LN882X_DIR}/driver_${CHIP_SERIAL}/hal/hal_adv_timer.c
     ${MCU_LN882X_DIR}/${CHIP_SERIAL}/system_${CHIP_SERIAL}.c
 )
 
