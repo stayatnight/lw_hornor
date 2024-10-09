@@ -73,7 +73,7 @@ void hexdump(uint8_t level, const char *info, void *buff, uint32_t count)
 
 void log_init(void)
 {
-    serial_init(&m_LogSerial, SER_PORT_UART0, LOG_PORT_BAUDRATE, NULL);
+    serial_init(&m_LogSerial, SER_PORT_UART1, LOG_PORT_BAUDRATE, NULL);
 }
 
 void log_deinit(void)
