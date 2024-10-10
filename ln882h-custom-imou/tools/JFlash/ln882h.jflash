@@ -2,7 +2,7 @@
   FileVersion = 2
 [GENERAL]
   ConnectMode = 0
-  CurrentFile = "build-combo_mcu_basic_example-release/bin/flashimage.bin"
+  CurrentFile = "build-yankon-release/bin/flashimage.bin"
   DataFileSAddr = 0x00000000
   GUIMode = 0
   HostName = ""
