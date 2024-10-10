@@ -40,6 +40,12 @@ static OS_Thread_t g_temp_cal_thread;
 #define TEMP_APP_TASK_STACK_SIZE   4*256 //Byte
 #endif
 
+//yankon light task
+#if LAMP_TASK_EN && LAMP_TASK_EN==1
+static OS_Thread_t g_lamp_thread;
+#define LAMP_TASK_STACK_SIZE   4*256 //Byte
+#endif
+
 /* declaration */
 static void wifi_init_ap(void);
 static void wifi_init_sta(void);
@@ -289,7 +295,15 @@ static void usr_app_task_entry(void *params)
     MagicLinkSDKRun();
     OS_ThreadDelete(NULL);
 }
-
+static void usr_app_light_task_entry(void *params)
+{
+    LN_UNUSED(params);
+    while (1) {
+            OS_MsDelay(1000);
+              LOG(LOG_LVL_INFO,"are you ok?");
+        //TODO lamp task 
+    }
+}
 static void temp_cal_app_task_entry(void *params)
 {
     LN_UNUSED(params);
@@ -344,6 +358,10 @@ void creat_usr_app_task(void)
     if(OS_OK != OS_ThreadCreate(&g_temp_cal_thread, "TempAPP", temp_cal_app_task_entry, NULL, OS_PRIORITY_BELOW_NORMAL, TEMP_APP_TASK_STACK_SIZE)) {
         LN_ASSERT(1);
     }
+#endif
+
+#if LAMP_TASK_EN && LAMP_TASK_EN==1
+if(OS_OK!= OS_ThreadCreate(&g_lamp_thread,"LampApp",usr_app_light_task_entry,NULL,OS_PRIORITY_BELOW_NORMAL,LAMP_TASK_STACK_SIZE));
 #endif
 
     /* print sdk version */

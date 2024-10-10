@@ -207,3 +207,4 @@ list(APPEND MODULE_SRC ${FOTA_SRC})
 ######################################  yankon  #################################
 include_directories(${LN_SDK_ROOT}/components/myDimmingLib)
 include_directories(${LN_SDK_ROOT}/components/myKeyboardLib)
+include_directories(${LN_SDK_ROOT}/components/YankonHal)
