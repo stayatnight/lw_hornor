@@ -5,7 +5,11 @@ set(PROJ_ALL_SRC
     app/main.c
     app/usr_app.c
     app/usr_ble_app.c
+
     app/demo.c
+
+    app/slData.c
+   # app/smartlight.c
     bsp/serial_hw.c
     bsp/drv_adc_measure.c
     bsp/ln_drv_pwm.c
@@ -30,6 +34,7 @@ target_link_libraries(${pro_executable_target}
     lwip
     myDimming
     myKey
+    myCrc
     ${CHIP_SERIAL}_wifi
     -lc -lm -lnosys
 

@@ -130,3 +130,4 @@ endif()
 ################################################################################
 add_subdirectory(${LN_SDK_ROOT}/project/${USER_PROJECT})
 add_subdirectory(components)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fdiagnostics-color=always")

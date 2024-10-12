@@ -29,7 +29,8 @@
 
 #include "magiclink.h"
 #include "demo.h"
-
+//embed slData.c
+#include "slData.h"
 static OS_Thread_t g_usr_app_thread;
 #define USR_APP_TASK_STACK_SIZE   4800 //Byte
 
@@ -301,6 +302,7 @@ static void usr_app_light_task_entry(void *params)
     while (1) {
             OS_MsDelay(1000);
               LOG(LOG_LVL_INFO,"are you ok?");
+              rlFlagSet(1,1);
         //TODO lamp task 
     }
 }

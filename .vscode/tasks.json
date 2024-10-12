@@ -46,7 +46,17 @@
                 "rebuild"
             ],
             "group": "build",
-            "problemMatcher": [],
+    "problemMatcher": {
+  "owner": "cpp",
+  "pattern": {
+    "regexp": "^(.*):(\\d+):(\\d+):\\s+(error):\\s+(.*)$",
+    "file": 1,
+    "line": 2,
+    "column": 3,
+    "severity": 4,
+    "message": 5
+  }
+},
             "presentation": {
                 "reveal": "always",
                 "panel": "shared"

@@ -1,15 +1,15 @@
 /******************************************************************************
 * Version     : V100R001C01B001D001                                           *
-* File        : hal.h                                                         *
+* File        : myCrc.h                                                       *
 * Description :                                                               *
-*               hal header file                                               *
+*               my crc 处理头文件                                              *
 * Note        : (none)                                                        *
 * Author      : kris li                                                       *
-* Date:       : 2022-09-07                                                    *
+* Date:       : 2022-09-15                                                    *
 * Mod History : (none)                                                        *
 ******************************************************************************/
-#ifndef __HAL_H__
-#define __HAL_H__
+#ifndef __MY_CRC_H__
+#define __MY_CRC_H__
 
 #ifdef __cplusplus
 extern "C" {
@@ -18,28 +18,7 @@ extern "C" {
 /******************************************************************************
 *                                Includes                                     *
 ******************************************************************************/
-#include "FreeRTOS.h"
-#include "task.h"
-#include "semphr.h"
-#include "appConfig.h"
-#include "appDefine.h"
 #include <stdint.h>
-#include <stdio.h>
-//#include "log_service.h"
-#include "myHalLog.h"
-#include "myHalIO.h"
-#include "myHalUart.h"
-#include "myHalPwm.h"
-#include "myHalFlash.h"
-#include "myHalWifi.h"
-
-//#include "oppHalSocket.h"
-//#include "oppHalRtc.h"
-//#include "oppHalWifi.h"
-//#include "oppHalI2C.h"
-//#include "oppHalSpi.h"
-//#include "oppHalAdc.h"
-//#include "oppHalTimer.h"
 /******************************************************************************
 *                                Defines                                      *
 ******************************************************************************/
@@ -53,14 +32,16 @@ extern "C" {
 ******************************************************************************/
 
 /******************************************************************************
-*                             Declarations                                    *
+*                              Declarations                                   *
 ******************************************************************************/
+uint8_t myCalcSumCheck(const uint8_t* pucData, uint8_t ucLen);
+uint16_t usMBCRC16( uint8_t* pucFrame, uint16_t usLen );
+uint16_t myCalcCRC(uint8_t* pucData, uint16_t uwLenth);
 
 #ifdef __cplusplus
 }
 #endif
 
+#endif /*__MY_CRC_H__*/
 
-
-#endif   /*__HAL_H__*/
 

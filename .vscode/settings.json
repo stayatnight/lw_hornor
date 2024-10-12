@@ -8,6 +8,18 @@
         "ln_test_common.h": "c",
         "ln_show_reg.h": "c",
         "ln_utils.h": "c",
-        "usr_app.h": "c"
+        "usr_app.h": "c",
+        "freertos.h": "c",
+        "usr_ble_app.h": "c",
+        "ln_misc.h": "c",
+        "ln882h.h": "c",
+        "osal.h": "c"
     }
+    "terminal.integrated.commandsToSkipShell": [
+    "error" // 将此替换为你希望高亮的命令
+],
+"workbench.colorCustomizations": {
+    "terminal.ansiRed": "#ff0000", // 设置ANSI红色为红色
+    "terminal.foreground": "#ffffff" // 设置终端前景色（可选）
+}
 }
