@@ -4,9 +4,14 @@
 			"path": "ln882h-custom-imou/project/yankon/app/usr_app.c",
 			"bookmarks": [
 				{
-					"line": 446,
+					"line": 452,
 					"column": 2,
 					"label": "lamp task"
+				},
+				{
+					"line": 462,
+					"column": 0,
+					"label": "key task"
 				}
 			]
 		},

@@ -56,6 +56,12 @@ static OS_Thread_t g_temp_cal_thread;
 static OS_Thread_t g_lamp_thread;
 #define LAMP_TASK_STACK_SIZE   4*256 //Byte
 #endif
+//yankon key task
+#if KEY_TASK_EN && KEY_TASK_EN==1
+static OS_Thread_t g_key_thread;
+#define KEY_TASK_STACK_SIZE   4*256 //Byte
+#endif
+
 
 /* declaration */
 static void wifi_init_ap(void);
@@ -452,6 +458,19 @@ static void usr_app_light_task_entry(void *params)
     vTaskDelete(NULL);
     }
 }
+static void key_app_task_entry(void *params)
+{
+
+while(1)
+{
+
+    OS_MsDelay(10);
+    if (rlFlagGet(RL_FLAG_TASK_LAMP_RUNNING)) {
+        myLampLoop();
+    }
+}
+
+}
 static void temp_cal_app_task_entry(void *params)
 {
     LN_UNUSED(params);
@@ -512,6 +531,13 @@ void creat_usr_app_task(void)
 if(OS_OK!= OS_ThreadCreate(&g_lamp_thread,"LampApp",usr_app_light_task_entry,NULL,OS_PRIORITY_BELOW_NORMAL,LAMP_TASK_STACK_SIZE));
    LOG(LOG_LVL_INFO,"LAMP INIT TEST ");
 #endif
+
+#if KEY_TASK_EN && KEY_TASK_EN==1
+    if(OS_OK != OS_ThreadCreate(&g_key_thread, "KeyApp", key_app_task_entry, NULL, OS_PRIORITY_BELOW_NORMAL, KEY_TASK_STACK_SIZE)) {
+    
+    }
+#endif
+
 
     /* print sdk version */
     {

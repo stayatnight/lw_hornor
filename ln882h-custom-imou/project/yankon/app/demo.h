@@ -7,6 +7,7 @@ extern "C" {
 
 void MagicLinkSDKRun();
 #define LAMP_TASK_EN 1
+#define KEY_TASK_EN 1
 #ifdef __cplusplus
 }
 #endif /* __cplusplus */
