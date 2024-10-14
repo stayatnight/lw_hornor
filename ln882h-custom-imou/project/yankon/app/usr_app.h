@@ -7,10 +7,7 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-
-
 void creat_usr_app_task(void);
-
 #ifdef __cplusplus
 }
 #endif

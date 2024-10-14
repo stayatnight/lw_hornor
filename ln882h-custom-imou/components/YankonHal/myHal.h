@@ -26,12 +26,12 @@ extern "C" {
 #include <stdint.h>
 #include <stdio.h>
 //#include "log_service.h"
-#include "myHalLog.h"
-#include "myHalIO.h"
-#include "myHalUart.h"
-#include "myHalPwm.h"
-#include "myHalFlash.h"
-#include "myHalWifi.h"
+// #include "myHalLog.h"
+// #include "myHalIO.h"
+//#include "myHalUart.h"
+// #include "myHalPwm.h"
+// #include "myHalFlash.h"
+//#include "myHalWifi.h"
 
 //#include "oppHalSocket.h"
 //#include "oppHalRtc.h"

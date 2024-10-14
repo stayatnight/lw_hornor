@@ -97,7 +97,7 @@ int main (int argc, char* argv[])
     sysparam_integrity_check_all();
 
     //7.rf preprocess,img cal
-    wifi_rf_calibration();
+ //   wifi_rf_calibration();
 
     //8.Init wifi stack.
     wifi_init();
@@ -108,9 +108,6 @@ int main (int argc, char* argv[])
     if ( 0 != ota_port_init()) {
         LOG(LOG_LVL_ERROR, "ota port failed!\r\n");
     }
-//    myLampLoop();
-//    myKeyboardLoop();
-    //10.Creat usr app task.
     creat_usr_app_task();
 
     OS_ThreadStartScheduler();

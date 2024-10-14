@@ -31,6 +31,16 @@
 #include "demo.h"
 //embed slData.c
 #include "slData.h"
+#include"lamptask.h"
+#include "hal/hal_common.h"
+#include "hal/hal_gpio.h"
+#include "ln_test_common.h"
+#include "ln_show_reg.h"
+#include "utils/debug/log.h"
+#include "hal/hal_timer.h"
+#include "hal/hal_clock.h"
+#include"myKeyboard.h"
+#include "ln_drv_pwm.h"
 static OS_Thread_t g_usr_app_thread;
 #define USR_APP_TASK_STACK_SIZE   4800 //Byte
 
@@ -269,6 +279,96 @@ static void WifiConn()
     return;
 }
 
+static uint16_t _lampSightBri2PwmBri(uint16_t sightBri)
+{
+    float pwmBri = 0.0f;
+    float L = (sightBri-LIGHT_BRIGHT_MIN) * 100.0f / (LIGHT_BRIGHT_MAX-LIGHT_BRIGHT_MIN);
+
+    if (L <= 7.999624) {
+        pwmBri = L / 903.3;
+    } else {
+        pwmBri = (L+16)/116;
+        pwmBri = pwmBri * pwmBri * pwmBri;
+    }
+
+    pwmBri = pwmBri > 1.0f ? 1.0f : pwmBri;
+
+    return (uint16_t)(LIGHT_BRIGHT_MIN + pwmBri * (LIGHT_BRIGHT_MAX-LIGHT_BRIGHT_MIN) + 0.5f);
+}
+static int8_t _lampColor2Pwm(uint32_t ulPwm[4], myLampParam_t *pLampParam)
+{ 
+    float afPWM[3] = {1.0f, 1.0f, 1.0f};
+    uint32_t tmpPwm = 0;
+    uint16_t pwmBri = _lampSightBri2PwmBri(pLampParam->uwBri);
+
+#if LIGHT_CCT_ENABLE
+    uint16_t halfCCT = (LIGHT_COLOR_CCT_MAX-LIGHT_COLOR_CCT_MIN) / 2;
+    uint16_t cctPoint2 = LIGHT_COLOR_CCT_MIN + (uint16_t)(halfCCT / LIGHT_PWM_OUTPUT_MAX_POWER_RATIO);
+    uint16_t cctPoint1 = LIGHT_COLOR_CCT_MIN + (LIGHT_COLOR_CCT_MAX-cctPoint2); 
+    uint16_t uwCCT = APP_RANGE(pLampParam->uwCCT, LIGHT_COLOR_CCT_MIN, LIGHT_COLOR_CCT_MAX);
+    
+    if (uwCCT <= cctPoint1) {
+        afPWM[0] = (float)1.0f;
+        afPWM[1] = (float)(uwCCT - LIGHT_COLOR_CCT_MIN) / (cctPoint2 - LIGHT_COLOR_CCT_MIN);
+     } else if (uwCCT < cctPoint2) {
+        afPWM[0] = (float)(LIGHT_COLOR_CCT_MAX - uwCCT) / (cctPoint2 - LIGHT_COLOR_CCT_MIN);
+        afPWM[1] = (float)(uwCCT - LIGHT_COLOR_CCT_MIN) / (cctPoint2 - LIGHT_COLOR_CCT_MIN);
+     } else {
+        afPWM[0] = (float)(LIGHT_COLOR_CCT_MAX - uwCCT) / (cctPoint2 - LIGHT_COLOR_CCT_MIN);
+        afPWM[1] = (float)1.0f;
+     }
+#endif //LIGHT_CCT_ENABLE
+
+#if (APP_DEV_TYPE_USED == APP_DEV_TYPE_LAMP_NIGHT || APP_DEV_TYPE_USED  == APP_DEV_TYPE_LAMP_NIGHT_PTJX)
+    ulPwm[0] = (uwCCT == LIGHT_COLOR_CCT_MIN) ? LIGHT_PWM_MAX : ((uwCCT == LIGHT_COLOR_CCT_MAX) ? LIGHT_PWM_MIN : LIGHT_PWM_MAX);
+    ulPwm[1] = (uwCCT == LIGHT_COLOR_CCT_MIN) ? LIGHT_PWM_MIN : ((uwCCT == LIGHT_COLOR_CCT_MAX) ? LIGHT_PWM_MAX : LIGHT_PWM_MAX);
+#else
+     tmpPwm = LIGHT_PWM_MIN + 
+        (uint32_t)((LIGHT_PWM_MAX-LIGHT_PWM_MIN) * pwmBri * afPWM[0] / LIGHT_BRIGHT_MAX);
+    ulPwm[0] = APP_RANGE(tmpPwm, LIGHT_PWM_MIN, LIGHT_PWM_MAX);
+    tmpPwm = LIGHT_PWM_MIN + 
+        (uint32_t)((LIGHT_PWM_MAX-LIGHT_PWM_MIN) * pwmBri * afPWM[1] / LIGHT_BRIGHT_MAX);
+    ulPwm[1] = APP_RANGE(tmpPwm, LIGHT_PWM_MIN, LIGHT_PWM_MAX);
+#endif    
+    ulPwm[2] = 0;
+    ulPwm[3] = 0;
+    //my_hal_log_debug("bri %d pwmbri %d cct %d to pwm %d %d\r\n", pLampParam->uwBri, pwmBri, uwCCT, ulPwm[0], ulPwm[1]);
+
+    return 0;
+}
+static void _lampPwmOutput(uint32_t ulPwm1, uint32_t ulPwm2, uint32_t ulPwm3, uint32_t ulPwm4)
+{ 
+    myLampParam_t lampParam;
+    static uint32_t lastPwm1 = 0;
+    static uint32_t lastPwm2 = 0;
+
+    myLampStatusGet(gucLampId, &lampParam);
+    ulPwm1 = APP_RANGE(ulPwm1, LIGHT_PWM_MIN, LIGHT_PWM_MAX);
+    ulPwm2 = APP_RANGE(ulPwm2, LIGHT_PWM_MIN, LIGHT_PWM_MAX);
+
+    if (lampParam.ucSwitch == 0) {
+#ifdef LIGHT_PWM_OFF_LEVEL
+        
+        if ((ulPwm1 + ulPwm2) < LIGHT_PWM_OFF_LEVEL) {
+#else
+        if ((ulPwm1 + ulPwm2) <= LIGHT_PWM_MIN*2) {
+#endif
+            ulPwm1 = ulPwm2 = 0;
+        }
+    }
+
+    if (ulPwm1 != lastPwm1) {
+        lastPwm1 = ulPwm1;
+//      my_hal_log_debug("pwm1 out %d %d\r\n", ulPwm1, ulPwm2);
+       // myHalPwmOutput(RL_PWM_W, ulPwm1);
+    }
+    if (ulPwm2 != lastPwm2) {
+        lastPwm2 = ulPwm2;
+//      my_hal_log_debug("pwm2 out %d %d\r\n", ulPwm1, ulPwm2);
+       // myHalPwmOutput(RL_PWM_C, ulPwm2);
+    }
+}
+
 static void WifiReconn()
 {
     /* 获取wifi信息 */
@@ -296,14 +396,60 @@ static void usr_app_task_entry(void *params)
     MagicLinkSDKRun();
     OS_ThreadDelete(NULL);
 }
+/******************************************************************************
+ Function    : rlTaskLampInit
+ Description : reading lamp thread lamp init
+ Note        : (none)
+ Input Para  : (none)
+ Output Para : (none)
+ Return      : (none)
+ Other       : (none)
+******************************************************************************/
+static int rlTaskLampInit(void* arg)
+{    LOG(LOG_LVL_INFO,"LAMP INIT OK\n ");
+    myLampParam_t *pLampParam = &s_stCurLampParam;
+
+    pLampParam->minPwm = LIGHT_PWM_MIN;
+    pLampParam->maxPwm = LIGHT_PWM_MAX;
+    pLampParam->ucCtrlType = 0;
+    pLampParam->ucSwitch = 0;
+    pLampParam->uwBri = 65535;
+    pLampParam->uwCCT = LIGHT_CCT_DEFAULT;
+    pLampParam->ucSceneNo = g_stRlData.saveData.stLampSaveParam.ucSceneNo;
+    pwm_init(10000,20,PWM_CHA_1,GPIO_B,GPIO_PIN_6);     //初始化PWM
+    pwm_init(10000,20,PWM_CHA_2,GPIO_B,GPIO_PIN_7);     //初始化PWM
+    pwm_start(PWM_CHA_1);
+    pwm_start(PWM_CHA_2);  
+    myLampInit(10, NULL, NULL, NULL);
+    myLampCreateLamp(&gucLampId, 
+                     pLampParam, 
+                     _lampPwmOutput, 
+                     _lampColor2Pwm, 
+                     getMyDimmingCurve(LIGHT_PWM_CURVE), 
+                     NULL,NULL);
+  //  my_hal_log_info("create lamp switch %d max pwm is %d\r\n", 
+               //  pLampParam->ucSwitch, LIGHT_PWM_MAX);
+  //  myLampRegisterDimmingStatusCtrlHook(gucLampId, _lampStateControlHook);
+  //  myLampRegisterFlashEndHook(gucLampId, _lampBlinkEndHook);
+    LOG(LOG_LVL_INFO,"LAMP INIT OK ");
+    #if (APP_DEV_TYPE_USED != APP_DEV_TYPE_LAMP_NIGHT && APP_DEV_TYPE_USED  != APP_DEV_TYPE_LAMP_NIGHT_PTJX)
+ //   s_resetWindowTimerHandle = xTimerCreate((const char*)"reset", (30000 / portTICK_RATE_MS), 0, NULL, _lampFactoryResetWindowTimeoutHandle);
+  //  xTimerStart(s_resetWindowTimerHandle, 0);
+    #else
+    #endif
+    return 0;
+}
 static void usr_app_light_task_entry(void *params)
 {
-    LN_UNUSED(params);
-    while (1) {
-            OS_MsDelay(1000);
-              LOG(LOG_LVL_INFO,"are you ok?");
-              rlFlagSet(1,1);
-        //TODO lamp task 
+       LOG(LOG_LVL_INFO,"LAMP INIT 445 ");
+ // rlFlagSet(RL_FLAG_TASK_LAMP_RUNNING, 1);     
+    if(0 > rlTaskLampInit(params)) {
+        rlFlagSet(RL_FLAG_TASK_LAMP_RUNNING, 0);
+    }
+    while (rlFlagGet(RL_FLAG_TASK_LAMP_RUNNING)) {      
+        vTaskDelay(10);
+        myLampLoop();
+    vTaskDelete(NULL);
     }
 }
 static void temp_cal_app_task_entry(void *params)
@@ -364,6 +510,7 @@ void creat_usr_app_task(void)
 
 #if LAMP_TASK_EN && LAMP_TASK_EN==1
 if(OS_OK!= OS_ThreadCreate(&g_lamp_thread,"LampApp",usr_app_light_task_entry,NULL,OS_PRIORITY_BELOW_NORMAL,LAMP_TASK_STACK_SIZE));
+   LOG(LOG_LVL_INFO,"LAMP INIT TEST ");
 #endif
 
     /* print sdk version */

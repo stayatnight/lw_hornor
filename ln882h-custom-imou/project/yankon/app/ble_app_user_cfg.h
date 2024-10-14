@@ -20,7 +20,6 @@
 //#define BLE_CONFIG_MULTI_CONNECT      (1)
 
 
-
 /* user data trans Server  */
 #define BLE_DATA_TRANS_SERVER           (1)
 
