@@ -9,12 +9,14 @@ set(PROJ_ALL_SRC
     app/demo.c
 
     app/slData.c
+    app/gpio.c
    # app/smartlight.c
     bsp/serial_hw.c
     bsp/drv_adc_measure.c
     bsp/ln_drv_pwm.c
     bsp/ln_show_reg.c
     bsp/ln_test_common.c
+    bsp/ln_flash_test.c
     startup/startup_${CHIP_SERIAL}_gcc.c
     ${MODULE_SRC}
 )

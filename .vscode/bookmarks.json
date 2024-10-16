@@ -4,14 +4,14 @@
 			"path": "ln882h-custom-imou/project/yankon/app/usr_app.c",
 			"bookmarks": [
 				{
-					"line": 452,
-					"column": 2,
-					"label": "lamp task"
+					"line": 269,
+					"column": 4,
+					"label": "key task init"
 				},
 				{
-					"line": 462,
-					"column": 0,
-					"label": "key task"
+					"line": 479,
+					"column": 2,
+					"label": "lamp task"
 				}
 			]
 		},
@@ -22,6 +22,16 @@
 					"line": 47,
 					"column": 24,
 					"label": "main function"
+				}
+			]
+		},
+		{
+			"path": "ln882h-custom-imou/project/yankon/app/gpio.c",
+			"bookmarks": [
+				{
+					"line": 99,
+					"column": 0,
+					"label": "TODO 设置IO状态"
 				}
 			]
 		}

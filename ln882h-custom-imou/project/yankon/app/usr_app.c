@@ -41,6 +41,9 @@
 #include "hal/hal_clock.h"
 #include"myKeyboard.h"
 #include "ln_drv_pwm.h"
+#include"key_task.h"
+#include "gpio.h"
+#include"ln_flash_test.h"
 static OS_Thread_t g_usr_app_thread;
 #define USR_APP_TASK_STACK_SIZE   4800 //Byte
 
@@ -156,10 +159,15 @@ static void wifi_scan_complete_cb(void * arg)
 
     wifi_manager_ap_list_update_enable(LN_TRUE);
 }
+/************************************************KEY TASK************************************/
+
+uint32_t _rlKeyGetTickMs() 
+{
+    return xTaskGetTickCount();
+}
 
 static void netdev_get_ip_callback(struct netif *nif)
 {
-
 }
 
 static void wifi_init_sta(void)
@@ -243,7 +251,26 @@ static void wifi_init_ap(void)
         LOG(LOG_LVL_ERROR, "[%s, %d]wifi_start() fail.\r\n", __func__, __LINE__);
     }
 }
+static uint32_t _normalKeyboardKeyStatusGet(uint32_t keyValue)
+{
+    hal_io_status_t status = HAL_IO_LOW;
 
+    for (int i = 0; i < sizeof(s_a_normalKeyHalIo) / sizeof(gpio_pin_t); i++) {
+        if (keyValue == s_a_normalKeyVal[i]) {
+            myhal_gpiob_get_status(s_a_normalKeyHalIo[i], &status);
+            break;
+        }
+    }
+
+    return (uint32_t)!status;
+}
+static int _rlTaskKeyInit(void) 
+{
+
+myhal_gpiob_init(GPIO_PIN_3,HAL_IO_MODE_IN_PULLUP);
+myKeyboardInit(10, 3, 1000, 200, 100, _rlKeyGetTickMs, _normalKeyboardKeyStatusGet);
+    return 0;
+}
 static int GetStaInfo()
 {
     if (sysparam_sta_conn_cfg_get(&connect) != SYSPARAM_ERR_NONE) {
@@ -461,14 +488,14 @@ static void usr_app_light_task_entry(void *params)
 static void key_app_task_entry(void *params)
 {
 
-while(1)
-{
-
-    OS_MsDelay(10);
-    if (rlFlagGet(RL_FLAG_TASK_LAMP_RUNNING)) {
-        myLampLoop();
+   // ln_flash_test();
+    while(rlFlagGet(RL_FLAG_TASK_KEY_RUNNING)) {
+        vTaskDelay(10);
+        myKeyboardLoop();
     }
-}
+
+   // my_hal_log_info("task 'key' delete\r\n");
+    vTaskDelete(NULL);
 
 }
 static void temp_cal_app_task_entry(void *params)
