@@ -150,6 +150,7 @@ static void chip_mac_gen(void)
     g_chip_wifi_mac[4] = (uint8_t)((hash >> 16) & 0xFF);
     g_chip_wifi_mac[5] = (uint8_t)((hash >> 24) & 0xFF);
 }
+//翻转开关函数
 int8_t rlLampSwitchRevert(uint32_t ulPeroidMs)
 {
     myLampParam_t *pLampParam = &s_stCurLampParam;
@@ -377,7 +378,6 @@ static void _normalKeyLongReleaseCb(uint32_t keyVal, uint32_t flag)
 static uint32_t _normalKeyboardKeyStatusGet(uint32_t keyValue)
 {
     hal_io_status_t status = HAL_IO_LOW;
-
     for (int i = 0; i < sizeof(s_a_normalKeyHalIo) / sizeof(gpio_pin_t); i++) {
         if (keyValue == s_a_normalKeyVal[i]) {
             myhal_gpiob_get_status(s_a_normalKeyHalIo[i], &status);
@@ -389,13 +389,14 @@ static uint32_t _normalKeyboardKeyStatusGet(uint32_t keyValue)
 }
 static int _rlTaskKeyInit(void) 
 {
+    hal_io_status_t status = HAL_IO_LOW;
 myhal_gpiob_init(GPIO_PIN_3,HAL_IO_MODE_IN_PULLUP);
+
 myKeyboardInit(10, 3, 1000, 200, 100, _rlKeyGetTickMs, _normalKeyboardKeyStatusGet);
 myKeyboardRigisterCallback(_normalKeyShortPressCb,
                                 _normalKeyShortReleaseCb,
                                 _normalKeyLongPressCb,
                                 _normalKeyLongReleaseCb);
-
     for (int i = 0; i < sizeof(s_a_normalKeyVal) / sizeof(uint32_t); i++) {
         myKeyboardRegisterKey(s_a_normalKeyVal[i]);
     }
@@ -522,13 +523,15 @@ static void _lampPwmOutput(uint32_t ulPwm1, uint32_t ulPwm2, uint32_t ulPwm3, ui
 
     if (ulPwm1 != lastPwm1) {
         lastPwm1 = ulPwm1;
-//      my_hal_log_debug("pwm1 out %d %d\r\n", ulPwm1, ulPwm2);
-       // myHalPwmOutput(RL_PWM_W, ulPwm1);
+        pwm_set_duty(PWM_CHA_1, ulPwm1);
+        LOG(LOG_LVL_INFO, "pwm1 out %d\r\n", ulPwm1);
     }
     if (ulPwm2 != lastPwm2) {
         lastPwm2 = ulPwm2;
 //      my_hal_log_debug("pwm2 out %d %d\r\n", ulPwm1, ulPwm2);
+LOG(LOG_LVL_INFO, "pwm2 out %d\r\n", ulPwm2);
        // myHalPwmOutput(RL_PWM_C, ulPwm2);
+        pwm_set_duty(PWM_CHA_1, ulPwm2);
     }
 }
 
@@ -692,7 +695,6 @@ if(OS_OK!= OS_ThreadCreate(&g_lamp_thread,"LampApp",usr_app_light_task_entry,NUL
 
 #if KEY_TASK_EN && KEY_TASK_EN==1
     if(OS_OK != OS_ThreadCreate(&g_key_thread, "KeyApp", key_app_task_entry, NULL, OS_PRIORITY_BELOW_NORMAL, KEY_TASK_STACK_SIZE)) {
-    
     }
 #endif
 
