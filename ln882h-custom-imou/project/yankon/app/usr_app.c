@@ -106,7 +106,25 @@ wifi_softap_cfg_t ap_cfg = {
 
 static uint8_t g_chip_uid[16]      = {0};
 static uint8_t g_chip_wifi_mac[6]  = {0x00, 0x50, 0x00, 0x00, 0x00, 0x00};
+static uint32_t rlLampGetNextClassVal(uint8_t ctrlType, uint32_t curVal,  const uint32_t *pTable, uint32_t maxClass)
+{
+    uint32_t newVal = curVal;
 
+    if(ctrlType == 0) {
+        if(newVal > pTable[0]) {
+            uint8_t i=maxClass-1;
+            while(i > 0) { if(newVal > pTable[i]) { newVal= pTable[i]; break; } else i--; }
+            if(i==0) newVal=pTable[0];
+        }
+    } else {
+        if(newVal < pTable[maxClass-1]) {
+            uint8_t i=0;
+            while(i < maxClass-1) { if(newVal < pTable[i]) {newVal = pTable[i]; break;} else i++; }
+            if( i == maxClass-1 ) newVal=pTable[maxClass-1];
+        }
+    }
+    return newVal;
+}
 static uint32_t djb_hash_hexdata(const char *input, uint32_t len)
 {
     uint32_t hash = 5381;
@@ -132,7 +150,33 @@ static void chip_mac_gen(void)
     g_chip_wifi_mac[4] = (uint8_t)((hash >> 16) & 0xFF);
     g_chip_wifi_mac[5] = (uint8_t)((hash >> 24) & 0xFF);
 }
+int8_t rlLampSwitchRevert(uint32_t ulPeroidMs)
+{
+    myLampParam_t *pLampParam = &s_stCurLampParam;
 
+  //  //my_hal_log_info("rl lamp switch revert\r\n");
+    pLampParam->ucSwitch = !pLampParam->ucSwitch;
+    return myLampSwitchCtrl(gucLampId, ulPeroidMs, pLampParam->ucSwitch);
+}
+int8_t rlLampBriCtrlNextClass(uint32_t ulPeroidMs)
+{
+    int8_t ret = 0;
+    uint16_t uwNewBri = 0;
+    uint32_t percent = 0;
+    myLampParam_t *pLampParam = &s_stCurLampParam;
+    uint8_t ucBriDirection = rlFlagGet(RL_FLAG_LAMP_BRI_DIRECTION);
+
+    percent = LIGHT_BRIGHT_TO_PERCENT(pLampParam->uwBri);
+    percent = rlLampGetNextClassVal(ucBriDirection, percent,  k_a_uwBriPercent, sizeof(k_a_uwBriPercent) / sizeof(uint32_t));
+    uwNewBri = LIGHT_PERCENT_TO_BRIGHT(percent);
+    uwNewBri = APP_RANGE(uwNewBri, LIGHT_BRIGHT_MIN, LIGHT_BRIGHT_MAX);
+    if (uwNewBri != pLampParam->uwBri) {
+        pLampParam->uwBri = uwNewBri;
+       // my_hal_log_info("rl lamp bright ctrl next %d\r\n", pLampParam->uwBri);
+        ret = myLampBriCtrl(gucLampId, ulPeroidMs, pLampParam->uwBri);
+    }
+    return ret;
+}
 static void wifi_scan_complete_cb(void * arg)
 {
     LN_UNUSED(arg);
@@ -251,6 +295,85 @@ static void wifi_init_ap(void)
         LOG(LOG_LVL_ERROR, "[%s, %d]wifi_start() fail.\r\n", __func__, __LINE__);
     }
 }
+
+uint8_t rlLampGetOnoff(void) 
+{
+    return s_stCurLampParam.ucSwitch;
+}
+//回调函数
+static void _normalKeyShortPressCb(uint32_t keyVal, uint32_t flag)
+{
+    switch (keyVal) {
+    case LIGHT_KEY_VAL_SWITCH:
+       // my_hal_log_debug("key switch sp %d\r\n", flag);
+        if (g_stRlData.fctData.fctMode != 0) {
+          //  Printf("press key switch\r\n");
+        }
+        break;
+    default:
+        break;
+    }
+}
+static void _normalKeyShortReleaseCb(uint32_t keyVal, uint32_t flag)
+{
+    stRlLiveData_t *pLiveData = &g_stRlData.liveData;
+     
+    switch (keyVal) {
+    case LIGHT_KEY_VAL_SWITCH:
+     //   printf("key switch sr %d\r\n", flag);
+        if (g_stRlData.fctData.fctMode != 0) {
+          //  printf("release key switch\r\n");
+        }
+        rlLampSwitchRevert(pLiveData->uwAdjDuration);
+        break;
+    default:
+        break;
+    }
+}
+static void _normalKeyLongPressCb(uint32_t keyVal, uint32_t flag)
+{
+    switch (keyVal) {
+    case LIGHT_KEY_VAL_SWITCH:
+   //     printf("key switch lp %d tick %lu\r\n", flag, xTaskGetTickCount());
+        #if (APP_DEV_TYPE_USED == APP_DEV_TYPE_LAMP_NIGHT  || APP_DEV_TYPE_USED  == APP_DEV_TYPE_LAMP_NIGHT_PTJX)
+        if (flag == 12) {
+           rlLampBlinkCtrl(3, 1000, 1, RL_LAMP_BLINK_ARG_SYS_FACTORY_RESET); 
+        }
+        #else
+        if (0 != rlLampGetOnoff()) {
+            if (flag == 0) {
+                rlFlagRevert(RL_FLAG_LAMP_BRI_DIRECTION);
+            }
+            rlLampBriCtrlNextClass(200);
+        }
+        else if (flag == 25 && rlFlagGet(RL_FLAG_SYS_FACTORY_WINDOW)){
+            rlFlagSet(RL_FLAG_SYS_FACTORY_RESET, 1);
+            //my_hal_log_info("manual factory reset\r\n");
+        }
+        #endif
+        break;
+    default:
+        break;
+    }
+}
+static void _normalKeyLongReleaseCb(uint32_t keyVal, uint32_t flag)
+{
+    stRlLiveData_t *pLiveData = &g_stRlData.liveData;
+
+    switch (keyVal) {
+    case LIGHT_KEY_VAL_SWITCH:
+   //     my_hal_log_debug("key switch lr %d\r\n" );
+        if (g_stRlData.fctData.fctMode != 0) {
+      //      Printf("release key switch\r\n");
+        }
+        if (0 == rlLampGetOnoff() && flag < 25) {
+            rlLampSwitchRevert(pLiveData->uwAdjDuration);
+        }
+        break;
+    default:
+        break;
+    }
+}
 static uint32_t _normalKeyboardKeyStatusGet(uint32_t keyValue)
 {
     hal_io_status_t status = HAL_IO_LOW;
@@ -266,20 +389,27 @@ static uint32_t _normalKeyboardKeyStatusGet(uint32_t keyValue)
 }
 static int _rlTaskKeyInit(void) 
 {
-
 myhal_gpiob_init(GPIO_PIN_3,HAL_IO_MODE_IN_PULLUP);
 myKeyboardInit(10, 3, 1000, 200, 100, _rlKeyGetTickMs, _normalKeyboardKeyStatusGet);
+myKeyboardRigisterCallback(_normalKeyShortPressCb,
+                                _normalKeyShortReleaseCb,
+                                _normalKeyLongPressCb,
+                                _normalKeyLongReleaseCb);
+
+    for (int i = 0; i < sizeof(s_a_normalKeyVal) / sizeof(uint32_t); i++) {
+        myKeyboardRegisterKey(s_a_normalKeyVal[i]);
+    }
     return 0;
 }
 static int GetStaInfo()
 {
     if (sysparam_sta_conn_cfg_get(&connect) != SYSPARAM_ERR_NONE) {
-        printf("get conn cfg fail\r\n");
+    //    printf("get conn cfg fail\r\n");
         return -1;
     }
 
     if (strlen(connect.ssid) == 0 || strlen(connect.pwd) == 0) {
-        printf("no conn info\r\n");
+ //       printf("no conn info\r\n");
         return -1;
     }
     return 0;
@@ -406,7 +536,7 @@ static void WifiReconn()
 {
     /* 获取wifi信息 */
     if (GetStaInfo() != 0) {
-        printf("no sta info\r\n");
+    //    printf("no sta info\r\n");
         return;
     }
 
@@ -460,7 +590,7 @@ static int rlTaskLampInit(void* arg)
                      _lampColor2Pwm, 
                      getMyDimmingCurve(LIGHT_PWM_CURVE), 
                      NULL,NULL);
-  //  my_hal_log_info("create lamp switch %d max pwm is %d\r\n", 
+  //  //my_hal_log_info("create lamp switch %d max pwm is %d\r\n", 
                //  pLampParam->ucSwitch, LIGHT_PWM_MAX);
   //  myLampRegisterDimmingStatusCtrlHook(gucLampId, _lampStateControlHook);
   //  myLampRegisterFlashEndHook(gucLampId, _lampBlinkEndHook);
@@ -488,15 +618,16 @@ static void usr_app_light_task_entry(void *params)
 static void key_app_task_entry(void *params)
 {
 
-   // ln_flash_test();
-    while(rlFlagGet(RL_FLAG_TASK_KEY_RUNNING)) {
+  //rlFlagSet(RL_FLAG_TASK_KEY_RUNNING, 1);
+    if(0 > _rlTaskKeyInit()) {
+       // rlFlagSet(RL_FLAG_TASK_KEY_RUNNING, 0);
+    }
+
+    while(1) {
         vTaskDelay(10);
         myKeyboardLoop();
     }
-
-   // my_hal_log_info("task 'key' delete\r\n");
     vTaskDelete(NULL);
-
 }
 static void temp_cal_app_task_entry(void *params)
 {

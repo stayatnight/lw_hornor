@@ -28,7 +28,10 @@ extern "C" {
                                                         GPIO_PIN_3 }
 
 #define LIGHT_KEY_VAL_SWITCH                             0x00000001
-
+const uint32_t k_a_uwBriPercent[] = 
+{
+    0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
+};
 
 #define APP_LIGHT_NORMAL_KEY_VAL                         {\
                                                           LIGHT_KEY_VAL_SWITCH}
