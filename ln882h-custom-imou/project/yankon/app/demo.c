@@ -11,8 +11,8 @@
 #include "magiclink_netcfg.h"
 #include "magiclink_log.h"
 
-#define MY_PRDKEY "******5474b7459c9cc49eba30d93867"
-#define MY_PRDSECRET "******561c5847fdb80a601004fd0016"
+#define MY_PRDKEY "c76c504e94ad4c34b6d0c87d5d90ac43"
+#define MY_PRDSECRET "6ece2cc39cb42c83465650af3b6ae2ae"
 
 #define MY_LICENSE_KEY "******11a3f920e20b0e425d824d62bc0a16234e"
 #define MY_LICENSE_SECRET "******23e8af0da99c406f62f4fb13b713a846a5cf5e6893098e2138d58aeb3e"

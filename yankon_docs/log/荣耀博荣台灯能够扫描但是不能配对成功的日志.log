@@ -1,0 +1,412 @@
+------  combo_mcu_basic_example  -
+main 54
+main 59
+main 62
+TCP/IP initialized.
+LN882H SDK Ver: 2.1_rc1 [build time:Oct 21 2024 15:19:32][0x02010001]
+no conn info
+no sta info
+MEM enter MagicLinkSDKRun [106904]
+0000000004|MagicLinkComponentsInit|85|[I]:module:logcollect
+0000000004|InitComponent|60|[I]:enable:logcollect
+0000000006|InitComponent|64|[W]:no comp:logcollect
+0000000008|MagicLinkInit|164|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_INIT, 0
+VER:IoTSDK_1.1.0.344_20240413_test_debug, TM:Apr 13 2024 14:57:17
+
+0000000028|MagicLinkParsePropertyList|207|[I]:succ svc:baseInfo, access:0
+0000000030|MagicLinkParseActionList|328|[I]:no actionList
+0000000032|MagicLinkParsePropertyList|207|[I]:succ svc:deviceInfo, access:7
+0000000034|MagicLinkParseActionList|328|[I]:no actionList
+0000000036|MagicLinkParsePropertyList|207|[I]:succ svc:netInfo, access:5
+0000000038|MagicLinkParseActionList|328|[I]:no actionList
+0000000040|MagicLinkParsePropertyList|207|[I]:succ svc:ota, access:7
+0000000042|MagicLinkParseAction|297|[W]:no inDataList
+0000000044|MagicLinkParseAction|310|[W]:no outDataList
+0000000044|MagicLinkParseAction|297|[W]:no inDataList
+0000000046|MagicLinkParseAction|310|[W]:no outDataList
+0000000048|MagicLinkParsePropertyList|207|[I]:succ svc:timerCountdown, access:0
+0000000050|MagicLinkParseActionList|328|[I]:no actionList
+0000000050|MagicLinkParsePropertyList|207|[I]:succ svc:light, access:7
+0000000052|MagicLinkParseActionList|328|[I]:no actionList
+0000000054|MagicLinkParsePropertyList|207|[I]:succ svc:duration, access:3
+0000000056|MagicLinkParseActionList|328|[I]:no actionList
+0000000062|ModelParseJson|181|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_PROFILE_PARSE, 0
+0000000064|NetworkManagementInit|1658|[W]:succ
+0000000066|NetworkInit|70|[I]:succ
+0000000068|DiscoveryInit|556|[I]:succ
+0000000068|TransmissionInit|40|[I]:succ
+0000000070|CloudLinkMqttInit|1092|[I]:succ
+0000000070|ConnectRegRecvPacket|392|[I]:add:1 succ
+0000000072|ConnectRegSendPacket|361|[I]:add:1 succ
+0000000075|ConnectMsgProcessInit|2631|[E]:sem init
+0000000077|ConnectInit|549|[I]:succ
+0000000077|MagicLinkComponentsInit|85|[I]:module:p2p
+0000000079|InitComponent|60|[I]:enable:p2p
+0000000079|InitComponent|64|[W]:no comp:p2p
+0000000081|MagicLinkComponentsInit|85|[I]:module:blenetcfg
+0000000081|InitComponent|60|[I]:enable:blenetcfg
+0000000083|ConnectRegSendPacket|361|[I]:add:3 succ
+0000000085|MagicLinkComponentsInit|85|[I]:module:coapconnect
+0000000085|InitComponent|60|[I]:enable:coapconnect
+udp_bind(ipaddr = 0.0.0.0, port = 5683)
+0000000089|ConnectRegSendPacket|361|[I]:add:2 succ
+0000000089|ConnectRegRecvPacket|392|[I]:add:2 succ
+0000000091|NetworkSetItemValueByStr|929|[E]:inv dst:prdName
+0000000093|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdName
+0000000095|NetworkSetItemValueByStr|929|[E]:inv dst:manufactureName
+0000000097|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:manufactureName
+0000000097|NetworkSetItemValueByStr|929|[E]:inv dst:prdTypeName
+0000000099|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdTypeName
+0000000101|NetworkSetItemValueByStr|929|[E]:inv dst:modelId
+0000000103|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:modelId
+0000000105|NetworkSetItemValueByStr|929|[E]:inv dst:offeringCode
+0000000105|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:offeringCode
+0000000107|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeId
+0000000109|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeId
+0000000111|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeName
+0000000113|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeName
+0000000115|NetworkSetItemValueByStr|929|[E]:inv dst:qrScanMode
+0000000115|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:qrScanMode
+0000000119|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:udid
+0000000119|NetworkSetItemValueByStr|929|[E]:inv dst:devName
+0000000121|ModelSetDevInfoToNetwork|290|[E]:set item:deviceInfo:devName
+firmVer:1.0.0.201
+0000000123|ModelSetDevInfoToNetwork|272|[E]:set:deviceInfo:sdkVersion
+0000000125|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:MCUVersion
+0000000163|MagicLinkHuksHalRegister|243|[I]:succ
+0000000165|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000167|ConfigRead|278|[E]:header
+0000000169|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000171|ConfigRead|278|[E]:header
+0000000171|MagicLinkSafeConfigRead|434|[I]:cfg empty
+0000000173|ReadRegisterResultData|1466|[E]:cfg read
+0000000173|MagicLinkNetworkUpdateRegResult|2059|[W]:no reg ret
+0000000175|MagicLinkComponentsInit|85|[I]:module:netcfg
+0000000177|InitComponent|60|[I]:enable:netcfg
+0000000177|OnRegSessionServerRestart|1216|[I]:succ reg cb:hihonor.magiclinksdk,netCfg
+0000000181|NetCfgInit|739|[I]:succ
+0000000181|MagicLinkComponentsInit|85|[I]:module:register
+0000000183|InitComponent|60|[I]:enable:register
+0000000183|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000185|MagicLinkParseAction|297|[W]:no inDataList
+0000000187|MagicLinkParseAction|310|[W]:no outDataList
+0000000189|MagicLinkParseAction|297|[W]:no inDataList
+0000000189|MagicLinkParseAction|310|[W]:no outDataList
+0000000191|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,register
+0000000193|StartRegister|2170|[I]:start:0
+0000000195|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000197|ConfigRead|278|[E]:header
+0000000197|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000199|ConfigRead|278|[E]:header
+0000000201|MagicLinkSafeConfigRead|434|[I]:cfg empty
+0000000201|ReadRegisterData|1606|[E]:read cfg
+0000000203|ReadRegisterData|1608|[E]:MAGICLINK_CONFIG, MAGICLINK_READ_REGINFO_FAIL, -1
+0000000205|StartRegister|2182|[W]:no reg info
+0000000207|RegisterInit|2042|[I]:succ
+0000000207|MagicLinkComponentsInit|85|[I]:module:control
+0000000209|InitComponent|60|[I]:enable:control
+0000000211|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,control
+0000000213|MagicLinkComponentsInit|85|[I]:module:ota
+0000000213|InitComponent|60|[I]:enable:ota
+0000000215|MagicLinkOtaFuncInit|103|[I]:init
+0000000215|OtaInit|3516|[I]:succ
+0000000217|MagicLinkComponentsInit|85|[I]:module:bi
+0000000217|InitComponent|60|[I]:enable:bi
+0000000219|InitComponent|64|[W]:no comp:bi
+0000000219|MagicLinkComponentsInit|85|[I]:module:magiclinkactive
+0000000221|InitComponent|60|[I]:enable:magiclinkactive
+0000000223|InitComponent|64|[W]:no comp:magiclinkactive
+0000000223|MagicLinkComponentsInit|85|[I]:module:netparamsync
+0000000225|InitComponent|60|[I]:enable:netparamsync
+0000000227|InitComponent|64|[W]:no comp:netparamsync
+0000000227|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000229|ExtComponentsMngtInit|108|[I]:not reg
+0000000231|SetLocalInfo|93|[I]:not reg
+0000000231|MagicLinkInit|235|[W]:succ
+0000000233|MagicLinkFastOffline|1827|[I]:fast offline
+0000000233|MagicLinkFastOffline|1829|[I]:already offline
+0000002235|NetCfgStart|622|[I]:start
+0000002235|WifiInit|134|[I]:INIT DONE
+0000002237|OnRemoveSessionServer|1169|[I]:succ rm server:hihonor.magiclinksdk,netCfg
+0000002239|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,netCfg
+0000002241|MagicLinkParseAction|297|[W]:no inDataList
+0000002243|MagicLinkParseAction|310|[W]:no outDataList
+0000002245|MagicLinkParseAction|297|[W]:no inDataList
+0000002245|MagicLinkParseAction|310|[W]:no outDataList
+0000002247|MagicLinkParseAction|297|[W]:no inDataList
+0000002249|MagicLinkParseAction|310|[W]:no outDataList
+0000002249|NetcfgGetTimeout|210|[I]:timeout:10
+0000002251|DiscoveryAddPublishInfo|117|[I]:succ
+0000002253|PublishService|115|[I]:BLE adv start
+[BLIB_I]BLIB Ver: 1.0.5 [build time:Mar 16 2024 21:17:13][0x010005ff][for custom-imou Commit 2cda23ab]
+0000002259|BleStackInit|275|[I]:ble roal 1                      init suc
+0000002261|ProcGattReg|566|[I]:reg:0
+0000002261|AddGattDescriptor|349|[I]:add default desc
+0000002263|AddGattDescriptor|349|[I]:add default desc
+0000002263|ProcGattAddSvc|590|[I]:add svc:0, svc handle:0, char handle:16
+0000002270|ProcGapStartAdv|341|[I]:start adv:0
+0000002270|StartAdv|537|[I]:adv suc
+0000002272|ModelNotifyStatus|448|[I]:status:100
+current status is 100
+STATUS_NETCFG_ENTER
+MEM Start demo [85392]
+0000013571|BleConnectedCb|152|[I]:ble conn
+0000013571|UpdateConnParam|123|[I]:update conn param
+0000013572|ProcGapConnect|373|[I]:interval:0, addr:*:*:*:9e:ae:78
+0000014988|ProcGapSetMtu|558|[I]:MTU 512
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x11,length:0x2
+0000015011|BleGattWriteReqCb|211|[I]:gatt write
+0000015012|ProcessRecvFrame|286|[E]:header
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x14,length:0x2
+0000015041|BleGattWriteReqCb|211|[I]:gatt write
+0000015042|ProcessRecvFrame|286|[E]:header
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x10,length:0x39
+0000015106|BleGattWriteReqCb|211|[I]:gatt write
+0000015107|ProcessRecvFrame|305|[I]:ble conn msg
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x56
+0000015205|BleGattWriteReqCb|211|[I]:gatt write
+0000015206|ProcessRecvFrame|316|[I]:ble proxy msg
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x41
+0000015208|BleGattWriteReqCb|211|[I]:gatt write
+0000015208|ProcessRecvFrame|316|[I]:ble proxy msg
+0000016584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000017084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000017084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000017584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000018084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000018084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000018584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000019084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000019084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000019584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000020084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000020084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000020584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000021084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000021084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000021584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000022084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000022084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000022584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000023084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000023084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000023584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000024084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000024084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000024584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000025084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000025084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000025584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000026084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000026084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000026584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000027084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000027084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000027584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000028084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000028084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000028584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000029084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000029084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000029584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000030084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000030084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000030584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000031084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000031084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000031584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000032084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000032084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000032584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000033084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000033084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000033584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000034084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000034084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000034584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000035084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000035084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000035584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000036084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000036084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000036584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000037084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000037084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000037584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000038084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000038084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000038584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000039084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000039084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000039584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000040084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000040084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000040584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000041084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000041084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000041584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000042084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000042084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000042584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000043084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000043084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000043584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000044084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000044084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000044584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000045084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000045084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000045584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000046084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000046084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000046584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000047084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000047084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000047584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000048084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000048084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000048584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000049084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000049084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000049584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000050084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000050084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000050584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000051084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000051084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000051584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000052084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000052084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000052584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000053084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000053084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000053584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000054084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000054084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000054584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000055084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000055084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000055584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000056084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000056084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000056584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000057084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000057084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000057584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000058084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000058084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000058584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000059084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000059084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000059584|ConnectSendMsgToProcess|2701|[E]:list overflow
+adc raw:  796, temp_IC:   35
+Total:130596; Free:73968;
+0000060084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000060084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000060584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000061084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000061084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000061584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000062084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000062084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000062584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000063084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000063084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000063584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000064084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000064084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000064584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000065084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000065084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000065584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000066084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000066084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000066584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000067084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000067084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000067584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000068084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000068084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000068584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000069084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000069084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000069584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000070084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000070084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000070584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000071084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000071084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000071584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000072084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000072084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000072584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000073084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000073084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000073584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000074084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000074084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000074584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000075084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000075084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000075198|BleDisconnectedCb|178|[I]:ble disconn
+0000075199|ProcGapDisconnect|534|[I]:disconn id:0
+0000075200|ProcGapStartAdv|341|[I]:start adv:0
+0000075200|StartAdv|537|[I]:adv suc
+0000075584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000076084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000076084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000076584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000077084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000077084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000077584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000078084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000078084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000078584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000079084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000079084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000079584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000080084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000080084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000080584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000081084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000081084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000081584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000082084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000082084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000082584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000083084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000083084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000083584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000084084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000084084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000084584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000085084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000085084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000085584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000086084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000086084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000086584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000087084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000087084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000087584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000088084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000088084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000088584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000089084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000089084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000089584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000090084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000090084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000090584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000091084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000091084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000091584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000092084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000092084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000092584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000093084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000093084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000093584|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000094084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000094084|ConnectSendMsgToProcess|2701|[E]:list overflow
+0000094584|ConnectSendMsgToProcess|2701|[E]:list overflow

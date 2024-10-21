@@ -9,14 +9,19 @@
 					"label": "key task init"
 				},
 				{
-					"line": 612,
+					"line": 613,
 					"column": 2,
 					"label": "lamp task"
 				},
 				{
-					"line": 626,
+					"line": 627,
 					"column": 5,
 					"label": "key task"
+				},
+				{
+					"line": 695,
+					"column": 0,
+					"label": "线程合计"
 				}
 			]
 		},

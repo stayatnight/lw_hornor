@@ -389,8 +389,8 @@ static uint32_t _normalKeyboardKeyStatusGet(uint32_t keyValue)
 }
 static int _rlTaskKeyInit(void) 
 {
-    hal_io_status_t status = HAL_IO_LOW;
-myhal_gpiob_init(GPIO_PIN_3,HAL_IO_MODE_IN_PULLUP);
+hal_io_status_t status = HAL_IO_LOW;
+myhal_gpiob_init(GPIO_PIN_3,HAL_IO_MODE_IN_PULLDOWN);
 
 myKeyboardInit(10, 3, 1000, 200, 100, _rlKeyGetTickMs, _normalKeyboardKeyStatusGet);
 myKeyboardRigisterCallback(_normalKeyShortPressCb,
@@ -400,6 +400,7 @@ myKeyboardRigisterCallback(_normalKeyShortPressCb,
     for (int i = 0; i < sizeof(s_a_normalKeyVal) / sizeof(uint32_t); i++) {
         myKeyboardRegisterKey(s_a_normalKeyVal[i]);
     }
+LOG(LOG_LVL_INFO, "key init ok\r\n");
     return 0;
 }
 static int GetStaInfo()
@@ -610,9 +611,9 @@ static void usr_app_light_task_entry(void *params)
        LOG(LOG_LVL_INFO,"LAMP INIT 445 ");
  // rlFlagSet(RL_FLAG_TASK_LAMP_RUNNING, 1);     
     if(0 > rlTaskLampInit(params)) {
-        rlFlagSet(RL_FLAG_TASK_LAMP_RUNNING, 0);
+       // rlFlagSet(RL_FLAG_TASK_LAMP_RUNNING, 0);
     }
-    while (rlFlagGet(RL_FLAG_TASK_LAMP_RUNNING)) {      
+    while (1) {      
         vTaskDelay(10);
         myLampLoop();
     vTaskDelete(NULL);
