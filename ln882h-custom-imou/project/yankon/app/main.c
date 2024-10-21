@@ -97,7 +97,7 @@ int main (int argc, char* argv[])
     sysparam_integrity_check_all();
 
     //7.rf preprocess,img cal
- //   wifi_rf_calibration();
+    wifi_rf_calibration();
 
     //8.Init wifi stack.
     wifi_init();

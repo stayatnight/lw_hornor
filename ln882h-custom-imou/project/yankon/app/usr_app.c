@@ -689,12 +689,12 @@ void creat_usr_app_task(void)
     }
 #endif
 
-#if LAMP_TASK_EN && LAMP_TASK_EN==1
+#if LAMP_TASK_EN && LAMP_TASK_EN==0
 if(OS_OK!= OS_ThreadCreate(&g_lamp_thread,"LampApp",usr_app_light_task_entry,NULL,OS_PRIORITY_BELOW_NORMAL,LAMP_TASK_STACK_SIZE));
    LOG(LOG_LVL_INFO,"LAMP INIT TEST ");
 #endif
 
-#if KEY_TASK_EN && KEY_TASK_EN==1
+#if KEY_TASK_EN && KEY_TASK_EN==0
     if(OS_OK != OS_ThreadCreate(&g_key_thread, "KeyApp", key_app_task_entry, NULL, OS_PRIORITY_BELOW_NORMAL, KEY_TASK_STACK_SIZE)) {
     }
 #endif
