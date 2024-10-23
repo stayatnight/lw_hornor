@@ -584,8 +584,8 @@ static int rlTaskLampInit(void* arg)
     pLampParam->uwBri = 100;
     pLampParam->uwCCT = LIGHT_CCT_DEFAULT;
     pLampParam->ucSceneNo = g_stRlData.saveData.stLampSaveParam.ucSceneNo;
-    pwm_init(LIGHT_PWM_FREQ,0,PWM_CHA_1,GPIO_B,PWM_W);     //初始化PWM
-    pwm_init(LIGHT_PWM_FREQ,0,PWM_CHA_2,GPIO_B,PWM_C);     //初始化PWM
+    pwm_init(LIGHT_PWM_FREQ,0.1,PWM_CHA_1,GPIO_B,PWM_W);     //初始化PWM
+    pwm_init(LIGHT_PWM_FREQ,0.1,PWM_CHA_2,GPIO_B,PWM_C);     //初始化PWM
     pwm_start(PWM_CHA_1);
     pwm_start(PWM_CHA_2);  
     myLampInit(10, NULL, NULL, NULL);
@@ -596,7 +596,6 @@ static int rlTaskLampInit(void* arg)
                      getMyDimmingCurve(LIGHT_PWM_CURVE), 
                      NULL,NULL);
     LOG(LOG_LVL_INFO,"LAMP INIT OK ");
-  //  LampSwitchCtrl(1, 1000);
     return 0;
 }
 static void usr_app_light_task_entry(void *params)

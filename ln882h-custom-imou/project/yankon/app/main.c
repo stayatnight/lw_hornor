@@ -92,7 +92,6 @@ int main (int argc, char* argv[])
     if (KV_ERR_NONE != ln_kv_port_init(KV_SPACE_OFFSET, (KV_SPACE_OFFSET + KV_SPACE_SIZE))) {
         LOG(LOG_LVL_ERROR, "KV init filed!\r\n");
     }
-     pwm_init(10000,20,PWM_CHA_0,GPIO_B,GPIO_PIN_5);  
     //6.init system parameter
     sysparam_integrity_check_all();
 
