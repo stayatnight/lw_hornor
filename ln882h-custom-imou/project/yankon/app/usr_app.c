@@ -585,8 +585,8 @@ static int rlTaskLampInit(void* arg)
     pLampParam->uwBri = 65535;
     pLampParam->uwCCT = LIGHT_CCT_DEFAULT;
     pLampParam->ucSceneNo = g_stRlData.saveData.stLampSaveParam.ucSceneNo;
-    pwm_init(10000,20,PWM_CHA_1,GPIO_B,GPIO_PIN_6);     //初始化PWM
-    pwm_init(10000,20,PWM_CHA_2,GPIO_B,GPIO_PIN_7);     //初始化PWM
+    pwm_init(LIGHT_PWM_FREQ,20,PWM_CHA_1,GPIO_B,PWM_W);     //初始化PWM
+    pwm_init(LIGHT_PWM_FREQ,20,PWM_CHA_2,GPIO_B,PWM_C);     //初始化PWM
     pwm_start(PWM_CHA_1);
     pwm_start(PWM_CHA_2);  
     myLampInit(10, NULL, NULL, NULL);
@@ -610,12 +610,13 @@ static int rlTaskLampInit(void* arg)
 }
 static void usr_app_light_task_entry(void *params)
 {
-       LOG(LOG_LVL_INFO,"LAMP INIT 445 ");
- // rlFlagSet(RL_FLAG_TASK_LAMP_RUNNING, 1);     
-    if(0 > rlTaskLampInit(params)) {
-       // rlFlagSet(RL_FLAG_TASK_LAMP_RUNNING, 0);
+ // rlFlagSet(RL_FLAG_TASK_LAMP_RUNNING, 1); 
+ int init_ret = 0;    
+    if(init_ret = rlTaskLampInit(params)!=0) {
+        LOG(LOG_LVL_INFO,"LAMP INIT FAIL ");
     }
-    while (1) {      
+     LampSwitchCtrl(0, 1000);
+    while (init_ret==0) {      
         vTaskDelay(10);
         myLampLoop();
     vTaskDelete(NULL);
@@ -698,7 +699,7 @@ if(OS_OK!= OS_ThreadCreate(&g_lamp_thread,"LampApp",usr_app_light_task_entry,NUL
    LOG(LOG_LVL_INFO,"LAMP INIT TEST ");
 #endif
 
-#if KEY_TASK_EN && KEY_TASK_EN==1
+#if KEY_TASK_EN && KEY_TASK_EN==0
     if(OS_OK != OS_ThreadCreate(&g_key_thread, "KeyApp", key_app_task_entry, NULL, OS_PRIORITY_BELOW_NORMAL, KEY_TASK_STACK_SIZE)) {
     }
 #endif

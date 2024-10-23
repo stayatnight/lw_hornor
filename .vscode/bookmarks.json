@@ -9,17 +9,22 @@
 					"label": "key task init"
 				},
 				{
+					"line": 612,
+					"column": 0,
+					"label": "灯光主循环"
+				},
+				{
 					"line": 615,
 					"column": 2,
 					"label": "lamp task"
 				},
 				{
-					"line": 629,
+					"line": 630,
 					"column": 5,
 					"label": "key task"
 				},
 				{
-					"line": 699,
+					"line": 700,
 					"column": 0,
 					"label": "线程合计"
 				}

@@ -53,6 +53,7 @@ typedef enum
  * lamp parameter define
  * user can use pSelfParam point to other self parameter when need
  */
+//uw uc指的是变量类型
 typedef struct
 {
     uint8_t  ucSwitch;                      

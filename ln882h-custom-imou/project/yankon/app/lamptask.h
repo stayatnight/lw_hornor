@@ -1,64 +1,29 @@
+#pragma once
 #include"dimmingLib.h"
-#define PWM_W                                           MY_HAL_PWM_0
-#define PWM_C                                           MY_HAL_PWM_4
-#define RL_PWM_MAX                                         (100)
-#define LIGHT_BRIGHT_MAX                                   (65535)
+#include "hal/hal_common.h"
+#include "hal/hal_gpio.h"
+#define PWM_W                                           GPIO_PIN_6
+#define PWM_C                                           GPIO_PIN_7
+#define PWM_MAX                                         (100)
+#define LIGHT_BRIGHT_MAX                                   (100)
 #define LIGHT_BRIGHT_MIN                                   (uint16_t)(LIGHT_BRIGHT_MAX * 1.0f / 100.0f + 0.5f)
 #define LIGHT_COLOR_CCT_MIN                                (3000)
 #define LIGHT_COLOR_CCT_MAX                                (5700)
-
+//渐变时间
+#define DIMMING_TRANSIT_TIME                               (1000) //ms
 #if (APP_DEV_TYPE_USED == APP_DEV_TYPE_LAMP_READING) //reading
 #define LIGHT_CCT_ENABLE                                   (1)
-#define LIGHT_PWM_FREQ                                     (4000)
+#define LIGHT_PWM_FREQ                                     (100000)
 #define LIGHT_PWM_OUTPUT_MAX_POWER_RATIO                   (1.00)  //最大100%功率输出
 #define LIGHT_PWM_BRIGHT_MIN_PERCENT                       (0.01f) //percent: 0.00f-1.00f : 0%-100%
 #define LIGHT_PWM_BRIGHT_DEF_PERCENT                       (1.0f)  //percent: 0.00f-1.00f : 0%-100%
 #define LIGHT_CCT_DEFAULT                                  (LIGHT_COLOR_CCT_MID)
-#define LIGHT_PWM_MAX                                      RL_PWM_MAX
-#define LIGHT_PWM_MIN                                      (uint32_t)(RL_PWM_MAX * 0.0f / 100)
+#define LIGHT_PWM_MAX                                      PWM_MAX
+#define LIGHT_PWM_MIN                                      (uint32_t)(PWM_MAX * 0.0f / 100)
 #define LIGHT_LAMP_SOFT_CAPACITY_VAL                       (LIGHT_PWM_MIN * 30)
 #define LIGHT_PWM_CURVE                                    MY_DIMMING_CURVE_CIE1976
 #define LIGHT_SCENE_MODE_DEFAULT                           RL_LAMP_LIGHT_MODE_READ
-#elif (APP_DEV_TYPE_USED == APP_DEV_TYPE_LAMP_CEILING) //celling
-#define LIGHT_PWM_FREQ                                     (500)
-#define LIGHT_CCT_ENABLE                                   (1)
-#define LIGHT_PWM_OUTPUT_MAX_POWER_RATIO                   (1.00)  //最大100%功率输出
-#define LIGHT_PWM_BRIGHT_MIN_PERCENT                       (0.01f) //percent: 0.00f-1.00f : 0%-100%
-#define LIGHT_PWM_BRIGHT_DEF_PERCENT                       (1.0f)  //percent: 0.00f-1.00f : 0%-100%
-#define LIGHT_CCT_DEFAULT                                  (LIGHT_COLOR_CCT_MID)
-#define LIGHT_PWM_MAX                                      RL_PWM_MAX
-#define LIGHT_PWM_MIN                                      (uint32_t)(RL_PWM_MAX * 8.0f / 100)
-#define LIGHT_LAMP_SOFT_CAPACITY_VAL                       (LIGHT_PWM_MIN * 30)
-#define LIGHT_PWM_CURVE                                    MY_DIMMING_CURVE_CIE1976
-#define LIGHT_SCENE_MODE_DEFAULT                           CL_LAMP_LIGHT_MODE_GUEST
-#define LIGHT_STATE_SAVE_EN                                1
-#elif (APP_DEV_TYPE_USED == APP_DEV_TYPE_LAMP_NIGHT || APP_DEV_TYPE_USED == APP_DEV_TYPE_LAMP_NIGHT_PTJX) //night lamp
-#define LIGHT_CCT_ENABLE                                   (1)
-#define LIGHT_PWM_FREQ                                     (4000)
-#define LIGHT_PWM_OUTPUT_MAX_POWER_RATIO                   (1.00)  //最大100%功率输出
-#define LIGHT_PWM_BRIGHT_MIN_PERCENT                       (0.00f) //percent: 0.00f-1.00f : 0%-100%
-#define LIGHT_PWM_BRIGHT_DEF_PERCENT                       (1.0f)  //percent: 0.00f-1.00f : 0%-100%
-#define LIGHT_CCT_DEFAULT                                  (LIGHT_COLOR_CCT_MID)
-#define LIGHT_PWM_MAX                                      RL_PWM_MAX
-#define LIGHT_PWM_MIN                                      (uint32_t)(RL_PWM_MAX * 0.0f / 100)
-#define LIGHT_LAMP_SOFT_CAPACITY_VAL                       (LIGHT_PWM_MIN * 30)
-#define LIGHT_PWM_CURVE                                    MY_DIMMING_CURVE_CIE1976
-#define LIGHT_SCENE_MODE_DEFAULT                           RL_LAMP_LIGHT_MODE_READ
-#elif (APP_DEV_TYPE_USED == APP_DEV_TYPE_LAMP_READING_L) //resding_L
-#define LIGHT_CCT_ENABLE                                   (1)
-#define LIGHT_PWM_FREQ                                     (4000)
-#define LIGHT_PWM_OUTPUT_MAX_POWER_RATIO                   (1.00)  //最大100%功率输出
-#define LIGHT_PWM_BRIGHT_MIN_PERCENT                       (0.01f) //percent: 0.00f-1.00f : 0%-100%
-#define LIGHT_PWM_BRIGHT_DEF_PERCENT                       (1.0f)  //percent: 0.00f-1.00f : 0%-100%
-#define LIGHT_CCT_DEFAULT                                  (LIGHT_COLOR_CCT_MID)
-#define LIGHT_PWM_MAX                                      RL_PWM_MAX
-#define LIGHT_PWM_MIN                                      (uint32_t)(RL_PWM_MAX * 0.0f / 100)
-#define LIGHT_LAMP_SOFT_CAPACITY_VAL                       (LIGHT_PWM_MIN * 30)
-#define LIGHT_PWM_CURVE                                    MY_DIMMING_CURVE_CIE1976
-#define LIGHT_SCENE_MODE_DEFAULT                           RL_LAMP_LIGHT_MODE_READ
-#else
 #endif
-
 #define LIGHT_COLOR_CCT_MID                                (LIGHT_COLOR_CCT_MIN+(LIGHT_COLOR_CCT_MAX-LIGHT_COLOR_CCT_MIN)/2)
 
 #ifndef LIGHT_CCT_DEFAULT
@@ -77,3 +42,5 @@
 static uint8_t gucLampId;
 static myLampParam_t s_stCurLampParam = {0};
 static myLampParam_t s_stLstLampParam = {0};
+
+int LampSwitchCtrl(int status, int ulPeroidMs);

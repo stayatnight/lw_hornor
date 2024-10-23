@@ -11,6 +11,7 @@ set(PROJ_ALL_SRC
     app/slData.c
     app/gpio.c
     app/flash.c
+    app/lamptask.c
    # app/smartlight.c
     bsp/serial_hw.c
     bsp/drv_adc_measure.c
