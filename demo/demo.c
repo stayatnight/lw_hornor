@@ -597,6 +597,7 @@ static int Action(const char *service, const char *action,
     return -1;
 }
 
+//设备控制回调
 static struct MagicLinkCtrlFunc ctrlFunc = {
     .getServiceProperty = GetSvcProperty,
     .setServiceProperty = SetSvcProperty,
@@ -685,12 +686,12 @@ void MagicLinkSDKRun()
         printf("set cfg addr fail\r\n");
         return;
     }
-
+//注册pin 码
     if (MagicLinkRegGetPin(&GetPin) != 0) {
         printf("reg pin fail\r\n");
         return;
     }
-
+//注册硬件root key
     if (MagicLinkRegHardwareRootKey(MyGetHardwareRootKey) != 0) {
         printf("register MyGetHardwareRootKey fail\r\n");
         return;
@@ -700,7 +701,7 @@ void MagicLinkSDKRun()
         printf("MagicLinkInit fail\r\n");
         return;
     }
-
+//SDK注册状态回调
     if (MagicLinkRegRecvStatus(MyRecvStatus) != 0) {
         return;
     }
@@ -708,7 +709,7 @@ void MagicLinkSDKRun()
     if (MagicLinkRegGetPrdKey(MyGetPrdKey) != 0) {
         return;
     }
-
+//软 license
     if (MagicLinkRegGetLicense(MyGetLicense) != 0) {
         return;
     }

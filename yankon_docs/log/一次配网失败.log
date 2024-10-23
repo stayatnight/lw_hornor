@@ -1,0 +1,3773 @@
+
+[18:40:26.112]收←◆------  combo_mcu_basic_example  ------
+
+[18:40:26.661]收←◆------  combo_mcu_basic_example  ------
+
+[18:40:27.175]收←◆TCP/IP initialized.
+LN882H SDK Ver: 2.1_rc1 [build time:Oct 21 
+[18:40:27.180]收←◆2024 18:12:10][0x02010001]
+MEM enter MagicLinkSDKRun [112456]
+0000000003|MagicLinkComponentsInit|85|[I]:module:logcollect
+0000000004|InitComponent|60|[I]:enable:logcollect
+0000000004|InitComponent|64|[W]:no comp:logcollect
+0000000005|MagicLinkInit|164|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_INIT, 0
+VER:IoTSDK_1.1.0.344_20240413_test_debug, TM:Apr 13 2024 14:57:17
+
+0000000016|MagicLinkParsePropertyList|207|[I]:succ svc:baseInfo, access:0
+0000000017|MagicLinkParseActionList|328|[I]:no action
+[18:40:27.197]收←◆List
+0000000018|MagicLinkParsePropertyList|207|[I]:succ svc:deviceInfo, access:7
+0000000019|MagicLinkParseActionList|328|[I]:no actionList
+0000000020|MagicLinkParsePropertyList|207|[I]:succ svc:netInfo, access:5
+0000000020|MagicLinkParseActionList|328|[I]:no actionList
+0000000021|MagicLinkParsePropertyList|207|[I]:succ svc:ota, access:7
+0000000022|MagicLinkParseAction|297|[W]:no inDataList
+0000000023|MagicLinkParseAction|310|[W]:no outDataList
+0000000024|MagicLinkParseAction|297|[W]:no inDataList
+0000000024|MagicLinkParseAction|310|[W]:no outDataList
+0000000025|MagicLinkParsePropertyList|207|[I]:succ svc:timerCountdown, access:0
+0000000026|MagicLinkParseActionList|328|[I]:no actionList
+0000000027|MagicLinkParsePropertyList|207|[I]:succ svc:light, access:7
+0000000028|MagicLinkParseActionList|328|[I]:no actionList
+0000000028|MagicLinkParsePropertyList|207|[I]:succ svc:duration, access:3
+0000000029|MagicLinkParseActionList|328|[I]:no 
+[18:40:27.213]收←◆actionList
+0000000033|ModelParseJson|181|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_PROFILE_PARSE, 0
+0000000034|NetworkManagementInit|1658|[W]:succ
+0000000034|NetworkInit|70|[I]:succ
+0000000035|DiscoveryInit|556|[I]:succ
+0000000035|TransmissionInit|40|[I]:succ
+0000000036|CloudLinkMqttInit|1092|[I]:succ
+0000000037|ConnectRegRecvPacket|392|[I]:add:1 succ
+0000000037|ConnectRegSendPacket|361|[I]:add:1 succ
+0000000038|ConnectMsgProcessInit|2631|[E]:sem init
+0000000039|ConnectInit|549|[I]:succ
+0000000040|MagicLinkComponentsInit|85|[I]:module:p2p
+0000000040|InitComponent|60|[I]:enable:p2p
+0000000041|InitComponent|64|[W]:no comp:p2p
+0000000041|MagicLinkComponentsInit|85|[I]:module:blenetcfg
+0000000042|InitComponent|60|[I]:enable:blenetcfg
+0000000043|ConnectRegSendPacket|361|[I]:add:3 succ
+0000000043|MagicLinkComponentsInit|85|[I]:module:coapconnect
+0000000044|InitComponent|60|[I]:enable:coapconnect
+udp_bind(ipaddr = 0.0.0.0, port = 5683)
+0000000045|ConnectRegSendPacket|361|[I]:add:2 succ
+0000000046|ConnectRegRecvPacket|392|[I]:add:2 succ
+0000000047|NetworkSetItemValueByStr|929|[E]:inv dst:prdName
+0000000047|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdName
+0000000048|NetworkSetItemValu
+[18:40:27.231]收←◆eByStr|929|[E]:inv dst:manufactureName
+0000000049|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:manufactureName
+0000000050|NetworkSetItemValueByStr|929|[E]:inv dst:prdTypeName
+0000000051|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdTypeName
+0000000052|NetworkSetItemValueByStr|929|[E]:inv dst:modelId
+0000000052|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:modelId
+0000000053|NetworkSetItemValueByStr|929|[E]:inv dst:offeringCode
+0000000054|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:offeringCode
+0000000055|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeId
+0000000056|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeId
+0000000057|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeName
+0000000057|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeName
+0000000058|NetworkSetItemValueByStr|929|[E]:inv dst:qrScanMode
+0000000059|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:qrScanMode
+0000000060|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:udid
+0000000061|NetworkSetItemValueByStr|929|[E]:inv dst:devName
+0000000062|ModelSetDevIn
+[18:40:27.245]收←◆foToNetwork|290|[E]:set item:deviceInfo:devName
+firmVer:1.0.0.201
+0000000063|ModelSetDevInfoToNetwork|272|[E]:set:deviceInfo:sdkVersion
+0000000064|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:MCUVersion
+0000000066|HksStateNotify|182|[W]:hks state:-127
+0000000074|MagicLinkHuksHalRegister|243|[I]:succ
+0000000075|MagicLinkStorageKeyInit|612|[W]:no 
+[18:40:27.263]收←◆key, create new
+
+[18:40:27.442]收←◆0000000256|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000257|ConfigRead|278|[E]:header
+0000000257|ConfigHeaderConfirm|236|[E]:c
+[18:40:27.448]收←◆fg empty
+0000000258|ConfigRead|278|[E]:header
+0000000259|MagicLinkSafeConfigRead|434|[I]:cfg empty
+0000000260|ReadRegisterResultData|1466|[E]:cfg read
+0000000260|MagicLinkNetworkUpdateRegResult|2059|[W]:no reg ret
+0000000261|MagicLinkComponentsInit|85|[I]:module:netcfg
+0000000262|InitComponent|60|[I]:enable:netcfg
+0000000262|OnRegSessionServerRestart|1216|[I]:succ reg cb:hihonor.magiclinksdk,netCfg
+0000000263|NetCfgInit|739|[I]:succ
+0000000264|MagicLinkComponentsInit|85|[I]:module:register
+0000000264|InitComponent|60|[I]:enable:register
+0000000265|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000266|MagicLinkParseAction|297|[W]:no inDataList
+0000000267|MagicLinkParseAction|310|[W]:no outDataList
+0000000268|MagicLinkParseAction|297|[W]:no inDataList
+0000000268|MagicLinkParseAction|310|[W]:no outDataList
+0000000269|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,register
+0000000270|StartRegister|2170|[I]:start:0
+0000000271|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000272|ConfigRead|278|[E]:header
+0000000272|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000273|ConfigRead|278|[E]:header
+0000000274|MagicLinkSafeConfigRead|434|[I]:cfg empty
+0000000274|ReadRegisterData|1606|[E]:read cfg
+0000000275|ReadRegisterData|1608|[E]:MAGICLINK_CONFIG, MAGICLINK_READ_REGINFO_FAIL, -1
+0000000276|StartRegister|2182|[W]:no reg info
+[18:40:27.466]收←◆
+0000000277|RegisterInit|2042|[I]:succ
+0000000277|MagicLinkComponentsInit|85|[I]:module:control
+0000000278|InitComponent|60|[I]:enable:control
+0000000279|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,control
+0000000280|MagicLinkComponentsInit|85|[I]:module:ota
+0000000280|InitComponent|60|[I]:enable:ota
+0000000281|MagicLinkOtaFuncInit|103|[I]:init
+0000000281|OtaInit|3516|[I]:succ
+0000000282|MagicLinkComponentsInit|85|[I]:module:bi
+0000000283|InitComponent|60|[I]:enable:bi
+0000000283|InitComponent|64|[W]:no comp:bi
+0000000284|MagicLinkComponentsInit|85|[I]:module:magiclinkactive
+0000000284|InitComponent|60|[I]:enable:magiclinkactive
+0000000285|InitComponent|64|[W]:no comp:magiclinkactive
+0000000286|MagicLinkComponentsInit|85|[I]:module:netparamsync
+0000000286|InitComponent|60|[I]:enable:netparamsync
+0000000287|InitComponent|64|[W]:no comp:netparamsync
+0000000288|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000288|ExtComponentsMngtInit|108|[I]:not reg
+0000000289|SetLocalInfo|93|[I]:not reg
+0000000289|MagicLinkInit|235|[W]:succ
+0000000290|MagicLinkFastOffline|1827|[I]:fast offline
+0000000291|MagicLinkFastOffline|1829|[I]:already offline
+
+[18:40:28.467]收←◆[low_level_output, 70] netif is not link up.
+[low_level_output, 70] netif is not link up.
+
+[18:40:28.485]收←◆[low_level_output, 70] netif is not link up.
+[low_level_output, 70] netif is not link up.
+
+[18:40:29.477]收←◆0000002291|NetCfgStart|622|[I]:start
+0000002291|WifiInit|134|[I]:INIT DONE
+0000002292|OnRemoveSessionServer|1169|[I]:succ rm server:hihonor.magiclinksdk,netCfg
+0000002293|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,netCfg
+0000002294|MagicLinkParseAction|297|[W]:no inDataList
+0000002295|MagicLinkParseAction|310|[W]:no outDataList
+0000002296|MagicLinkParseAction|297|[W]:no inDataList
+0000002296|MagicLinkParseAction|310|[W]:no outDataList
+0000002297|MagicLinkParseAction|297|[W]:no inDataList
+0000002298|MagicLinkParseAction|310|[W]:no outDataList
+0000002298|NetcfgGetTimeout|210|[I]:timeout:10
+0000002299|DiscoveryAddPublishInfo|117|[I]:succ
+0000002300|PublishService|115|[I]:BLE adv start
+[BLIB_I]BLIB Ver: 1.0.5 [build time:Mar 16 2024 21:17:13][0x010005ff][for custom-imou Commit 2cda23ab]
+0000002303|BleStackInit|275|[I]:ble roal 1                      init suc
+0000002304|ProcGattReg|566|[I]:reg:0
+0000002305|AddGattDescriptor|349|[I]:add default desc
+0000002305|AddGattDescriptor|349|[I]:add default desc
+[18:40:29.495]收←◆
+0000002306|ProcGattAddSvc|590|[I]:add svc:0, svc handle:0, char handle:16
+0000002308|ProcGapStartAdv|341|[I]:start adv:0
+0000002309|StartAdv|537|[I]:adv suc
+0000002309|ModelNotifyStatus|448|[I]:status:100
+current status is 100
+STATUS_NETCFG_ENTER
+MEM Start demo [90912]
+
+[18:40:32.496]收←◆0000005311|ConnectDispatchFunc|83|[I]:running
+
+[18:40:37.216]收←◆0000010031|ConnectMsgProcessFunc|2338|[I]:running
+
+[18:40:37.497]收←◆0000010311|ConnectDispatchFunc|83|[I]:running
+
+[18:40:42.497]收←◆0000015311|ConnectDispatchFunc|83|[I]:running
+
+[18:40:46.917]收←◆0000019731|ConnectMsgProcessFunc|2338|[I]:running
+
+[18:40:47.497]收←◆0000020311|ConnectDispatchFunc|83|[I]:running
+
+[18:40:52.496]收←◆0000025311|ConnectDispatchFunc|83|[I]:running
+
+[18:40:56.627]收←◆0000029441|ConnectMsgProcessFunc|2338|[I]:running
+
+[18:40:57.496]收←◆0000030311|ConnectDispatchFunc|83|[I]:running
+
+[18:41:02.497]收←◆0000035311|ConnectDispatchFunc|83|[I]:running
+
+[18:41:06.328]收←◆0000039141|ConnectMsgProcessFunc|2338|[I]:running
+
+[18:41:07.497]收←◆0000040311|ConnectDispatchFunc|83|[I]:running
+
+[18:41:12.496]收←◆0000045311|ConnectDispatchFunc|83|[I]:running
+
+[18:41:12.619]收←◆0000045433|BleConnectedCb|152|[I]:ble conn
+0000045434|UpdateConnParam|123|[I]:update conn param
+0000045435|ProcGapConnect|373|[I]:interval:0, addr:*:*:*:c2:9b:c6
+
+[18:41:14.093]收←◆0000046906|ProcGapSetMtu|558|[I]:MTU 512
+
+[18:41:14.114]收←◆ln_gatt_write_req_ind_handler conidx:0x0,handler:0x11,length:0x2
+0000046929|BleGattWriteReqCb|2
+[18:41:14.118]收←◆11|[I]:gatt write
+0000046929|ProcessRecvFrame|286|[E]:header
+
+[18:41:14.148]收←◆ln_gatt_write_req_ind_handler conidx:0x0,handler:0x14,length:0x2
+0000046961|BleGattWriteReqCb|211|[I]:gatt write
+0000046962|Pr
+[18:41:14.153]收←◆ocessRecvFrame|286|[E]:header
+
+[18:41:14.248]收←◆ln_gatt_write_req_ind_handler conidx:0x0,handler:0x10,length:0x39
+0000047062|BleGattWriteReqCb|211|[I]:gatt write
+0000047063|ProcessRecvFrame|305|[I]:ble conn msg
+
+[18:41:14.347]收←◆ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x5
+[18:41:14.352]收←◆6
+0000047163|BleGattWriteReqCb|211|[I]:gatt write
+0000047164|ProcessRecvFrame|316|[I]:ble proxy msg
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x41
+0000047165|BleGattWriteReqCb|211|[I]:gatt write
+0000047166|ProcessRecvFrame|316|[I]:ble proxy msg
+0000047167|ParseMsgHeader|411|[E]:module:11
+0000047167|ParseMsg|2011|[E]:parse msgHeader
+0000047168|ConnectProcessMsg|2061|[E]:parse msg
+0000047169|ConnectMsgProcessFunc|2356|[E]:proc msg
+PROTO Header***0xc20x9b0xc6
+MSG Header[25]0xbabeface-14-13693743512267259906-0
+Module Header[1]0xffff0006-0-0-0-Data:0-49-1:*******
+PROTO Header***0xc20x9b0xc6
+MSG Header[63]0xbabeface-14-13693743512267259907-0
+Module Header[39]0xffff0006-0-0-1-Data:0-87-39:*******
+
+[18:41:14.782]收←◆0000047596|BleDisconnectedCb|178|[I]:ble disconn
+0000047596|ProcGapDisconnect|534|[I]:disconn id:0
+0000047597|ProcGapStartAdv|341|[I]:start adv:0
+0000047598|StartAdv|537|[I]:adv suc
+
+[18:41:16.039]收←◆0000048854|ConnectMsgProcessFunc
+[18:41:16.045]收←◆|2338|[I]:running
+
+[18:41:17.504]收←◆0000050319|ConnectDispatchFunc|8
+[18:41:17.510]收←◆3|[I]:running
+
+[18:41:18.147]收←◆0000050960|BleConnectedCb|152|[I]:ble conn
+0000050961|UpdateConnParam|123|[I]:update conn param
+0000050961|ProcGapConnect|373|[I]:interval:0, addr:*:*:*:c2:9b
+[18:41:18.153]收←◆:c6
+
+[18:41:19.545]收←◆0000052359|ProcGapSetMtu|558|[I]:MTU 512
+
+[18:41:19.568]收←◆ln_gatt_write_req_ind_handler conidx:0x0,handler:0x11,length:0x2
+0000052381|BleGattWriteReqCb|211|[I]:gatt write
+0000052382|Pr
+[18:41:19.573]收←◆ocessRecvFrame|286|[E]:header
+
+[18:41:19.590]收←◆ln_gatt_write_req_ind_handler conidx:0x0,handler:0x14,length:0x2
+0000052404|BleGattWriteReqCb|211|[I]:gatt write
+0000052404|ProcessRecvFrame|286|[E]:header
+
+[18:41:19.648]收←◆ln_gatt_write_req_ind_handler conidx:0x0,handler:0x10,length:0x3
+[18:41:19.654]收←◆9
+0000052463|BleGattWriteReqCb|211|[I]:gatt write
+0000052464|ProcessRecvFrame|305|[I]:ble conn msg
+
+[18:41:19.748]收←◆ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x56
+0000052563|BleGattWriteReqCb|211|[I]:gatt write
+0000052563|ProcessRecvFrame|316|[I]:ble proxy msg
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x101
+0000052566|BleGattWriteReqCb|211|[I]:gatt write
+0000052566|ProcessRecvFrame|316|[I]:ble proxy msg
+0000052567|ParseMsgHeader|411|[E]:module:11
+0000052568|ParseMsg|2011|[E]:parse msgHeader
+0000052568|ConnectProc
+[18:41:19.759]收←◆essMsg|2061|[E]:parse msg
+0000052569|ConnectMsgProcessFunc|2356|[E]:proc msg
+PROTO Header***0xc20x9b0xc6
+MSG Header[217]0xbabeface-14-13693743512267259914-0
+Module Header[193]0xffff0003-0-13693743512267259912-0-Data:0-241-193:*******
+0000052571|AuthSwapDeviceInfo|937|[I]:MAGICLINK_PHONE_RELATED, MAGICLINK_RECV_SWAP_DEVINFO, 0
+0000052574|AuthSwapDeviceInfo|958|[I]:peer cliId:1
+0000052575|NetworkConfigItemErrComDeal|735|[E]:ble addr:***c2:9b:c6
+0000052576|CheckInCertification|886|[I]:no handle
+0000052576|AuthSwapDeviceInfo|986|[I]:sessionId:859256135
+PROTO Header***0xc20x9b0xc6
+MSG Header[314]0xbabeface-14-13693743512267259915-0
+Module Header[290]0xffff0003-0-0-1-Data:0-338-290:*******
+
+[18:41:20.303]收←◆ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0xd3
+0000053118|BleGattWriteReqCb|
+[18:41:20.309]收←◆211|[I]:gatt write
+0000053119|ProcessRecvFrame|316|[I]:ble proxy msg
+PROTO Header***0xc20x9b0xc6
+MSG Header[171]0xbabeface-14-13693743512267259916-0
+Module Header[147]0xffff0007-10-859256135-0-Data:0-195-147:*******
+0000053124|GetProtocolParams|570|[I]:pinLen:8
+
+[18:41:20.539]收←◆PROTO Header***0xc20x9b0xc6
+MSG Header[274]0xbabeface-14-13693743512267259917-0
+Module Header[250]0xffff0007-10-859256135-1-Data:0-298-250:*******
+0000053354|SetServiceResult|685|[I]:ret ag
+[18:41:20.545]收←◆reement processing
+
+[18:41:20.783]收←◆ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x11e
+0000053599|BleGattWriteReqCb|211|[I]:gatt write
+0000053600|ProcessRecvFrame|316|[I]:ble proxy msg
+
+[18:41:20.794]收←◆PROTO Header***0xc20x9b0xc6
+MSG Header[246]0xbabeface-14-13693743512267259918-0
+Module Header[222]0xffff0007-10-859256135-0-Data:0-270-222:*******
+
+[18:41:21.002]收←◆PROTO Header***0xc20x9b0xc6
+MSG Header[130]0xbabeface-14-13693743512267259919-0
+Module Header[
+[18:41:21.008]收←◆106]0xffff0007-10-859256135-1-Data:0-154-106:*******
+0000053819|SetServiceResult|679|[I]:ret success
+
+[18:41:21.279]收←◆ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0xf0
+0000054093|BleGattWriteReqCb|211|[I]:gatt write
+0000054094|ProcessRecvFrame|316|[I]:ble proxy msg
+
+[18:41:21.290]收←◆PROTO Header***0xc20x9b0xc6
+MSG Header[200]0xbabeface-14-13693743512267259920-0
+Module Header[176]0xffff0002-0-859256135-0-Data:859256135-GCMNonce[db66a56f108ea1872699cd2d]-224-144:*******
+0000054104|NetworkSetPeerItem|410|[E]:para
+0000054104|ParseSyncNetworkInfo|384|[E]:peer mac save
+0000054105|ParseSyncNetworkInfo|441|[I]:peer cliId:1
+0000054106|ConnectionGetLocal|271|[E]:weak func
+PROTO Header***0xc20x9b0xc6
+MSG Header[281]0xbabeface-14-13693743512267259921-0
+Module Header[
+[18:41:21.308]收←◆257]0xffff0002-10-859256135-1-Data:859256135-GCMNonce[e0888964050621030496afb0]-305-241:*******
+
+[18:41:21.787]收←◆ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x4
+[18:41:21.793]收←◆1
+0000054602|BleGattWriteReqCb|211|[I]:gatt write
+0000054603|ProcessRecvFrame|316|[I]:ble proxy msg
+PROTO Header***0xc20x9b0xc6
+MSG Header[25]0xbabeface-14-13693743512267259922-0
+Module Header[1]0xffff0005-0-0-0-Data:0-49-1:*******
+0000054612|DeleteAuthTimeoutBySessId|1235|[I]:succ
+PROTO Header***0xc20x9b0xc6
+MSG Header[42]0xbabeface-14-13693743512267259923-0
+Module Header[18]0xffff0005-0-0-1-Data:0-66-18:*******
+0000054614|AuthCloseAck|1301|[I]:MAGICLINK_PHONE_RELATED, MA
+[18:41:21.806]收←◆GICLINK_AUTH_SUCC, 0
+
+[18:41:22.335]收←◆0000055148|BleDisconnectedCb|178|[I]:ble disconn
+0000055149|ProcGapDisconnect|534|[I]:disconn id:0
+0000055150|ProcGapStartAdv|
+[18:41:22.341]收←◆341|[I]:start adv:0
+0000055150|StartAdv|537|[I]:adv suc
+
+[18:41:22.507]收←◆0000055321|ConnectDispatchFunc|8
+[18:41:22.512]收←◆3|[I]:running
+
+[18:41:25.503]收←◆0000058317|BleConnectedCb|152|[I
+[18:41:25.508]收←◆]:ble conn
+0000058318|UpdateConnParam|123|[I]:update conn param
+0000058319|ProcGapConnect|373|[I]:interval:0, addr:*:*:*:c2:9b:c6
+
+[18:41:26.172]收←◆0000058986|ConnectMsgProcessFunc|2338|[I]:running
+
+[18:41:26.887]收←◆0000059701|ProcGapSetMtu|558|[I]:MTU 512
+
+[18:41:26.910]收←◆ln_gatt_write_req_ind_handler conidx:0x0,handler:0x11,length:0x2
+0000059724|BleGattWriteReqCb|211|[I]:gatt write
+0000059724|Pr
+[18:41:26.916]收←◆ocessRecvFrame|286|[E]:header
+
+[18:41:26.930]收←◆ln_gatt_write_req_ind_handler conidx:0x0,handler:0x14,length:0x2
+0000059746|BleGattWriteReqCb|211|[I]:gatt write
+0000059747|ProcessRecvFrame|286|[E]:header
+
+[18:41:26.999]收←◆ln_gatt_write_req_ind_handler conidx:0x0,handler:0x10,length:0x39
+0000059813|BleGattWriteReqCb|211|[I]:gatt write
+0000059814|ProcessRecvFrame|305|[I]:ble conn msg
+
+[18:41:27.097]收←◆ln_gatt_write_req_ind_handler co
+[18:41:27.102]收←◆nidx:0x0,handler:0x13,length:0x56
+0000059913|BleGattWriteReqCb|211|[I]:gatt write
+0000059913|ProcessRecvFrame|316|[I]:ble proxy msg
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x1f0
+0000059918|BleGattWriteReqCb|211|[I]:gatt write
+0000059919|ProcessRecvFrame|316|[I]:ble proxy msg
+0000059919|ParseMsgHeader|411|[E]:module:11
+0000059920|ParseMsg|2011|[E]:parse msgHeader
+0000059921|ConnectProcessMsg|2061|[E]:parse msg
+0000059921|ConnectMsgProcessFunc|2356|[E]:proc msg
+0000059922|ParseModuleTransHeader|682|[I]:isServer:0
+PROTO Header***0xc20x9b0xc6
+MSG Header[456]0xbabeface-13-7-1
+Module Header[448]0x1-1-1:0-0--1-0
+-Data:859256135-GCMNonce[da15f72af7118b99a6da8006]-480-416:*******
+0000059927|TransOpen|1333|[I]:succ trans:1
+
+[18:41:27.124]收←◆0000059938|SendOpenAck|446|[I]:succ identity:******69cf42409eb9bf59956d94df9a
+
+[18:41:27.187]收←◆adc raw:  795, temp_IC:   34
+Total:131204; Free:93544;
+
+[18:41:27.346]收←◆ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x1fd
+0000060161|BleGattWriteReqCb|211|[I]:gatt write
+0000060162|ProcessRecvFrame|316|[I]:ble proxy msg
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x10a
+0000060164|BleGattWriteReqCb|211|[I]:gatt write
+0000060165|ProcessRecvFrame|316|[I]:ble proxy msg
+
+[18:41:27.357]收←◆0000060170|ParseModuleTransHeader|682|[I]:isServer:0
+PROTO Header***0xc20x9b0xc6
+MSG Header[719]0xbabeface-13-8-1
+Module Header[711]0x1-0-0:0-0-1-0
+-SliceHead:0-1-0-0
+-PacketHead:0xbabeface-1-8-679-Data:859256135-GCMNonce[00000001a8338b23ce519a34]-743-651:*******
+0000060177|NetCfgModuleAction|42
+[18:41:27.367]收←◆9|[I]:svc:localeInfo, act:localeInfo
+0000060178|MakeActionOut|715|[I]:no out
+0000060178|NetCfgModuleAction|429|[I]:svc:netCfg, act:connect
+0000060179|MakeActionOut|715|[I]:no out
+0000060180|NetCfgModuleAction|429|[I]:svc:register, act:cfgRegInfo
+0000060180|StopRegister|2133|[I]:succ
+0000060181|MakeActionOut|715|[I]:no out
+method:5 req:12345, rpt:1
+0000060182|MagicLinkEncodeCmdAction|850|[I]:action:localeInfo no out
+0000060183|MagicLinkEncodeCmdAction|850|[I]:action:connect no out
+0000060184|MagicLinkEncodeCmdAction|850|[I]:action:cfgRegInfo no out
+0000060195|SendChannelMessage|193|[I]:[identity:******69cf42409eb9bf59956d94df9a],[1,0,1] send m
+[18:41:27.386]收←◆sg[291] success.
+0000060196|WifiConnectInfoClean|251|[I]:del sta info
+0000060198|NetcfgThreadFunc|216|[I]:start netCfg
+er_info:256
+0000060198|FlashConfigCreate|349|[I]:create register_info.bak:256
+0000060198|FlashConfigCreate|349|[I]:create regist
+[18:41:27.514]收←◆0000060323|ConnectDispatchFunc|83|[I]:running
+
+[18:41:27.602]收←◆0000060407|ModelNotifyStatus|448|[I]:status:101
+current status 
+[18:41:27.607]收←◆is 101
+0000060411|NetcfgGetTimeout|210|[I]:timeout:10
+0000060411|GetPublishInfo|180|[I]:find pubInfo
+0000060413|UnpublishService|142|[I]:stop ble
+0000060416|ModelNotifyStatus|448|[I]:status:200
+current status is 200
+[WLIB_E]SwEr:SPM NoSizeAlloc : 292, mem_base=0
+[WLIB_E]SwEr:SPM NoSizeAlloc : 292, mem_base=0
+
+[18:41:27.618]收←◆0000060422|BleDisconnectedCb|178|[I]:ble disconn
+0000060423|BleDisconnectedCb|184|[E]:func not reg
+
+[18:41:27.948]收←◆STA startup!
+[WLIB_E]HwEr:UKI:0
+
+[18:41:28.335]收←◆0000061142|ModelNotifyStatus|448|[I]:status:300
+current status 
+[18:41:28.341]收←◆is 300
+STATUS_REGISTER_RECV_INFO
+0000061143|SaveRegisterInfoToFlash|2126|[I]:succ
+0000061144|TransReceiveMsg|1431|[I]:succ recv:1
+0000061144|ConnectBleSendPacket|637|[E]:mac
+PROTO Header***0x00x00x0
+MSG Header[359]0xbabeface-13-0-0
+Module Header[351]0x1-0-0:1-1-0-0
+-SliceHead:0-1-0-0
+-PacketHead:0xbabeface-0-8-319-Data:859256135-GCMNonce[0000000082faaeaff4f4f507]-383-307:*******
+0000061148|ConnectDispatchToPeer|42|[E]:send pkt
+
+[18:41:28.445]收←◆STA connected to target AP!
+udp_bind(ipaddr = 0.0.0.0, port = 68)
+
+[18:41:29.760]收←◆0000062567|ModelNotifyStatus|448|[I]:status:201
+current status is 201
+0000062568|NetcfgThreadFunc|273|[I]:succ
+0000062568|StartRegister|2170|[I]:start:0
+
+[18:41:30.105]收←◆0000062911|ModelNotifyStatus|448|[I]:status:301
+current status is 301
+0000062913|CheckRegisterEmpty|1784|[W]:dev unregister
+0000062916|TlsNetworkInit|261|[I]:succ
+0000062917|TlsNetworkConnect|342|[I]:host:devicemgt-pre-drcn.platform.hihonorcloud.com
+udp_bind(ipaddr = 0.0.0.0, port = 32083)
+0000062921|OnRemoveSessionServer|1169|[I]:succ rm server:hihonor.magiclinksdk,netCfg
+
+[18:41:30.216]收←◆------  combo_mcu_basic_example  ------
+
+[18:41:30.717]收←◆TCP/IP initialized.
+LN882H SDK Ver: 2.1_rc1 [build time:Oct 21 2024 18:12:10][0x02010001]
+
+[18:41:30.728]收←◆STA startup!
+[WLIB_E]HwEr:UKI:0
+
+[18:41:30.888]收←◆MEM enter MagicLinkSDKRun [111712]
+0000000171|MagicLinkComponentsInit|85|[I]:module:logcollect
+0000000172|InitComponent|60|[I]:enable:logcollect
+0000000172|InitComponent|64|[W]:no comp:logcollect
+0000000173|MagicLinkInit|164|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_INIT, 0
+VER:IoTSDK_1.1.0.344_20240413_test_debug
+[18:41:30.898]收←◆, TM:Apr 13 2024 14:57:17
+
+0000000184|MagicLinkParsePropertyList|207|[I]:succ svc:baseInfo, access:0
+0000000185|MagicLinkParseActionList|328|[I]:no actionList
+0000000186|MagicLinkParsePropertyList|207|[I]:succ svc:deviceInfo, access:7
+0000000187|MagicLinkParseActionList|328|[I]:no actionList
+0000000188|MagicLinkParsePropertyList|207|[I]:succ svc:netInfo, access:5
+0000000188|MagicLinkParseActionList|328|[I]:no actionList
+0000000189|MagicLinkParsePropertyList|207|[I]:succ svc:ota, access:7
+0000000190|MagicLinkParseAction|297|[W]:no inDataList
+0000000191|MagicLinkParseAction|310|[W]:no outDataList
+0000000192|MagicLinkPars
+[18:41:30.915]收←◆eAction|297|[W]:no inDataList
+0000000192|MagicLinkParseAction|310|[W]:no outDataList
+0000000193|MagicLinkParsePropertyList|207|[I]:succ svc:timerCountdown, access:0
+0000000194|MagicLinkParseActionList|328|[I]:no actionList
+0000000199|MagicLinkParsePropertyList|207|[I]:succ svc:light, access:7
+0000000201|MagicLinkParseActionList|328|[I]:no actionList
+0000000201|MagicLinkParsePropertyList|207|[I]:succ svc:duration, access:3
+0000000202|MagicLinkParseActionList|328|[I]:no actionList
+0000000206|ModelParseJson|181|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_PROFILE_PARSE, 0
+0000000207|NetworkManagementInit|1658|[W]:succ
+0000000208|NetworkInit
+[18:41:30.933]收←◆|70|[I]:succ
+0000000208|DiscoveryInit|556|[I]:succ
+0000000209|TransmissionInit|40|[I]:succ
+0000000210|CloudLinkMqttInit|1092|[I]:succ
+0000000210|ConnectRegRecvPacket|392|[I]:add:1 succ
+0000000211|ConnectRegSendPacket|361|[I]:add:1 succ
+0000000212|ConnectMsgProcessInit|2631|[E]:sem init
+0000000213|ConnectInit|549|[I]:succ
+0000000214|MagicLinkComponentsInit|85|[I]:module:p2p
+0000000214|InitComponent|60|[I]:enable:p2p
+0000000215|InitComponent|64|[W]:no comp:p2p
+0000000216|MagicLinkComponentsInit|85|[I]:module:blenetcfg
+0000000216|InitComponent|60|[I]:enable:blenetcfg
+0000000217|ConnectRegSendPacket|361|[I]:add:3 succ
+0000000218|MagicLinkComponentsInit|85|[I]:module:coapconnect
+0000000219|InitComponent|60|[I]:enable:coapconnect
+udp_bind(ipaddr = 0.0.0.0, port = 5683)
+0000000220|ConnectRegSendPacket|361|[I]:add:2 succ
+0000000221|ConnectRegRecvPacket|392|[I]:add:2 succ
+0000000222|NetworkSetItemValueBySt
+[18:41:30.946]收←◆r|929|[E]:inv dst:prdName
+0000000222|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdName
+0000000223|NetworkSetItemValueByStr|929|[E]:inv dst:manufactureName
+0000000224|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:manufactureName
+0000000225|NetworkSetItemValueByStr|929|[E]:inv dst:prdTypeName
+0000000226|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdTypeName
+0000000227|NetworkSetItemValueByStr|929|[E]:inv dst:modelId
+0000000227|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:modelId
+0000000228|NetworkSetItemValueByStr|929|[E]:inv dst:offeringCode
+0000000229|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:offeringCode
+0000000230|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeId
+0000000231|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeId
+0000000232|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeName
+0000000232|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeName
+0000000233|NetworkSetItemValueByStr|929|[E]:inv dst:qrScanMode
+0000000234|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:qrScanMode
+0000000235|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:udid
+0000000236|NetworkSetItemValueByStr|929|[E]:inv dst:devName
+0000000237|ModelSetDevInfoToNetwork|290|[E]:set item:deviceInfo:devName
+firmVer:1.0.0.201
+0000000238|ModelSetDevInfoToNetwork|272|[E]:set:deviceInfo:sdkVersion
+0000000239|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:MCUVersion
+
+[18:41:30.995]收←◆0000000272|MagicLinkHuksHalRegister|243|[I]:succ
+0000000274|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000275|ConfigRead|278|[E]:header
+0000000275|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000276|ConfigRead|278|[E]:header
+0000000277|MagicLinkSafeConfigRead|434|[I]:cfg empty
+0000000277|ReadRegisterResultData|1466|[E]:cfg read
+0000000278|MagicLinkNetworkUpdateRegResult|2059|[W]:no reg ret
+0000000279|MagicLinkComponentsInit|85|[I]:module:netcfg
+0000000279|InitComponent|60|[I]:enable:netcfg
+0000000280|OnRegSessionServerRestart|1216|[I]:succ reg cb:hihonor.magiclinksdk,netCfg
+0000000281|NetCfgInit|739|[I]:succ
+0000000282|MagicLinkComponentsInit|85|[I]:module:register
+0000000283|InitComponent|60|[I]:enable:register
+0000000284|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000285|MagicLinkParseAction|297|[W]:no inDataList
+0000000285|MagicLinkParseAction|310|[W]:no outDataList
+0000000286|MagicLinkParseAction|297|[W]:no inDataList
+0000000287|MagicLinkParseAction|310|[W]:no outDataList
+0000000287|OnCreateSessionServer|1154|[I]:succ 
+[18:41:31.012]收←◆create server:hihonor.magiclinksdk,register
+0000000289|StartRegister|2170|[I]:start:0
+
+[18:41:31.313]收←◆STA connected to target AP!
+udp_bind(ipaddr = 0.0.0.0, port = 68)
+
+[18:41:31.369]收←◆0000000648|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000652|TlsNetworkInit|261|[I]:succ
+0000000652|TlsNetworkConnect|342|[I]:host:devicemgt-pre-drcn.platform.hihonorcloud.com
+udp_bind(ipaddr = 0.0.0.0, port = 3178)
+0000000658|RegisterInit|2042|[I]:succ
+0000000658|MagicLinkComponentsInit|85|[I]:module:control
+0000000659|InitComponent|60|[I]:enable:control
+0000000659|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinks
+[18:41:31.386]收←◆dk,control
+0000000661|MagicLinkComponentsInit|85|[I]:module:ota
+0000000661|InitComponent|60|[I]:enable:ota
+0000000662|MagicLinkOtaFuncInit|103|[I]:init
+0000000662|OtaInit|3516|[I]:succ
+0000000663|MagicLinkComponentsInit|85|[I]:module:bi
+0000000663|InitComponent|60|[I]:enable:bi
+0000000664|InitComponent|64|[W]:no comp:bi
+0000000664|MagicLinkComponentsInit|85|[I]:module:magiclinkactive
+0000000665|InitComponent|60|[I]:enable:magiclinkactive
+0000000666|InitComponent|64|[W]:no comp:magiclinkactive
+0000000666|MagicLinkComponentsInit|85|[I]:module:netparamsync
+0000000667|InitComponent|60|[I]:enable:netparamsync
+0000000668|InitComponent|64|[W]:no comp:netparamsync
+0000000668|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000669|ExtComponentsMngtInit|108|[I]:not reg
+0000000670|SetLocalInfo|93|[I]:not reg
+0000000670|MagicLinkInit|235|[W]:succ
+0000000671|MagicLinkFastOffline|1827|[I]:fast offline
+0000000671|MagicLinkFastOffline|1829|[I]:already offline
+
+[18:41:32.372]收←◆[low_level_output, 70] netif is not link up.
+
+[18:41:32.420]收←◆[low_level_output, 70] netif is not link up.
+
+[18:41:32.743]收←◆------  combo_mcu_basic_example  ------
+
+[18:41:33.238]收←◆TCP/IP initialized.
+LN882H SDK Ver: 2.1_rc1 [build time:Oct 21 
+[18:41:33.243]收←◆2024 18:12:10][0x02010001]
+STA startup!
+[WLIB_E]HwEr:UKI:0
+
+[18:41:33.411]收←◆MEM ente
+[18:41:33.416]收←◆r MagicLinkSDKRun [111696]
+0000000175|MagicLinkComponentsInit|85|[I]:module:logcollect
+0000000176|InitComponent|60|[I]:enable:logcollect
+0000000177|InitComponent|64|[W]:no comp:logcollect
+0000000178|MagicLinkInit|164|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_INIT, 0
+VER:IoTSDK_1.1.0.344_20240413_test_debug, TM:Apr 13 2024 14:57:17
+
+
+[18:41:33.430]收←◆0000000189|MagicLinkParsePropertyList|207|[I]:succ svc:baseInfo, access:0
+0000000190|MagicLinkParseActionList|328|[I]:no actionList
+0000000191|MagicLinkParsePropertyList|207|[I]:succ svc:deviceInfo, access:7
+0000000193|MagicLinkParseActionList|328|[I]:no actionList
+0000000193|MagicLinkParsePropertyList|207|[I]:succ svc:netInfo, access:5
+0000000194|MagicLinkParseActionList|328|[I]:no actionList
+0000000196|MagicLinkParsePropertyList|207|[I]:succ svc:ota, access:7
+0000000197|MagicLinkParseAction|297|[W]:no inDataList
+0000000197|MagicLinkParseAction|310|[W]:no outDataList
+0000000198|MagicLinkParseAction|297|[W]:no inDataList
+0000000199|MagicLinkParseAction|310|[W]:no outDataList
+0000000199|MagicLinkParsePropertyList|207|[I]:succ svc:timerCountdown, access:0
+0000000201|MagicLinkParseActionList|328|[I]:no actionList
+0000000201|MagicLinkParsePropertyList|207|[I]:succ svc:light, access:7
+0000000202|MagicLinkParseActionList|328|[I]:no actionList
+0000000203|MagicLinkParseP
+[18:41:33.447]收←◆ropertyList|207|[I]:succ svc:duration, access:3
+0000000204|MagicLinkParseActionList|328|[I]:no actionList
+0000000207|ModelParseJson|181|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_PROFILE_PARSE, 0
+0000000208|NetworkManagementInit|1658|[W]:succ
+0000000209|NetworkInit|70|[I]:succ
+0000000209|DiscoveryInit|556|[I]:succ
+0000000210|TransmissionInit|40|[I]:succ
+0000000211|CloudLinkMqttInit|1092|[I]:succ
+0000000211|ConnectRegRecvPacket|392|[I]:add:1 succ
+0000000212|ConnectRegSendPacket|361|[I]:add:1 succ
+0000000213|ConnectMsgProcessInit|2631|[E]:sem init
+0000000214|ConnectInit|549|[I]:succ
+0000000214|MagicLinkComponentsInit|85|[I]:module:p2p
+0000000215|InitComponent|60|[I]:enable:p2p
+0000000216|InitComponent|64|[W]:no comp:p2p
+0000000216|MagicLinkComponentsInit|85|[I]:module:blenetcfg
+0000000217|InitComponent|60|[I]:enable:blenetcfg
+0000000218|ConnectRegSendPacket|361|[I]:add:3 succ
+0000000218|MagicLinkComponentsInit|85|[I]:module:coapconnect
+0000000219|InitComponent|60|[I]:enable:coapconnect
+udp_bind(ipaddr = 0.0.0.0, port = 5683)
+0000000220|ConnectRegSendPacket|361|[I]:add:2 succ
+0000000221|ConnectRegR
+[18:41:33.465]收←◆ecvPacket|392|[I]:add:2 succ
+0000000222|NetworkSetItemValueByStr|929|[E]:inv dst:prdName
+0000000222|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdName
+0000000223|NetworkSetItemValueByStr|929|[E]:inv dst:manufactureName
+0000000224|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:manufactureName
+0000000225|NetworkSetItemValueByStr|929|[E]:inv dst:prdTypeName
+0000000226|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdTypeName
+0000000227|NetworkSetItemValueByStr|929|[E]:inv dst:modelId
+0000000227|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:modelId
+0000000228|NetworkSetItemValueByStr|929|[E]:inv dst:offeringCode
+0000000229|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:offeringCode
+0000000230|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeId
+0000000231|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeId
+0000000232|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeName
+0000000232|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeName
+00000
+[18:41:33.478]收←◆00233|NetworkSetItemValueByStr|929|[E]:inv dst:qrScanMode
+0000000234|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:qrScanMode
+0000000235|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:udid
+0000000237|NetworkSetItemValueByStr|929|[E]:inv dst:devName
+0000000238|ModelSetDevInfoToNetwork|290|[E]:set item:deviceInfo:devName
+firmVer:1.0.0.201
+0000000239|ModelSetDevInfoToNetwork|272|[E]:set:deviceInfo:sdkVersion
+0000000240|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:MCUVersion
+
+[18:41:33.515]收←◆0000000272|MagicLinkHuksHalRegister|243|[I]:succ
+0000000273|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000274|ConfigRead|278|[E]:header
+0000000275|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000276|ConfigRead|278|[E]:header
+0000000276|MagicLinkSafeConfigRead|434|[I]:cfg empty
+0000000277|ReadRegisterResultData|1466|[E]:cfg read
+0000000277|MagicLinkNetworkUpdateRegResult|2059|[W]:no reg ret
+0000000278|MagicLinkComponentsInit|85|[I]:module:netcfg
+0000000279|InitComponent|6
+[18:41:33.525]收←◆0|[I]:enable:netcfg
+0000000280|OnRegSessionServerRestart|1216|[I]:succ reg cb:hihonor.magiclinksdk,netCfg
+0000000281|NetCfgInit|739|[I]:succ
+0000000281|MagicLinkComponentsInit|85|[I]:module:register
+0000000282|InitComponent|60|[I]:enable:register
+0000000282|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000283|MagicLinkParseAction|297|[W]:no inDataList
+0000000284|MagicLinkParseAction|310|[W]:no outDataList
+0000000285|MagicLinkParseAction|297|[W]:no inDataList
+0000000286|MagicLinkParseAction|310|[W]:no outDataList
+0000000286|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,register
+0000000287|StartRegister|2170|[I]:start:0
+
+[18:41:33.716]收←◆------  combo_mcu_basic_example  ------
+
+[18:41:34.222]收←◆TCP/IP initialized.
+LN882H SDK Ver: 2.1_rc1 [build time:Oct 21 
+[18:41:34.228]收←◆2024 18:12:10][0x02010001]
+STA startup!
+[WLIB_E]HwEr:UKI:0
+
+[18:41:34.395]收←◆MEM enter M
+[18:41:34.400]收←◆agicLinkSDKRun [111768]
+0000000174|MagicLinkComponentsInit|85|[I]:module:logcollect
+0000000175|InitComponent|60|[I]:enable:logcollect
+0000000176|InitComponent|64|[W]:no comp:logcollect
+0000000177|MagicLinkInit|164|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_INIT, 0
+VER:IoTSDK_1.1.0.344_20240413_test_debug, TM:Apr 13 2024 14:57:17
+
+0000000187|MagicLinkParsePropertyList|207|[I]:succ svc:baseInfo, access:0
+0000000188|MagicLinkParseActionList|328|[I]:no actionList
+0000000190|MagicLinkParsePropertyList|207|[I]:succ svc:deviceInfo, access:7
+0000000191|MagicLinkParseActionList|328|[I]:no actionList
+0000000192|MagicLinkParsePropertyList|207|[I]:succ
+[18:41:34.419]收←◆ svc:netInfo, access:5
+0000000193|MagicLinkParseActionList|328|[I]:no actionList
+0000000194|MagicLinkParsePropertyList|207|[I]:succ svc:ota, access:7
+0000000195|MagicLinkParseAction|297|[W]:no inDataList
+0000000196|MagicLinkParseAction|310|[W]:no outDataList
+0000000197|MagicLinkParseAction|297|[W]:no inDataList
+0000000197|MagicLinkParseAction|310|[W]:no outDataList
+0000000198|MagicLinkParsePropertyList|207|[I]:succ svc:timerCountdown, access:0
+0000000199|MagicLinkParseActionList|328|[I]:no actionList
+0000000200|MagicLinkParsePropertyList|207|[I]:succ svc:light, access:7
+0000000201|MagicLinkParseActionList|328|[I]:no actionList
+0000000201|MagicLinkParsePropertyList|207|[I]:succ svc:duration, access:3
+0000000202|MagicLinkParseActionList|328|[I]:no 
+[18:41:34.431]收←◆actionList
+0000000206|ModelParseJson|181|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_PROFILE_PARSE, 0
+0000000207|NetworkManagementInit|1658|[W]:succ
+0000000208|NetworkInit|70|[I]:succ
+0000000208|DiscoveryInit|556|[I]:succ
+0000000209|TransmissionInit|40|[I]:succ
+0000000210|CloudLinkMqttInit|1092|[I]:succ
+0000000210|ConnectRegRecvPacket|392|[I]:add:1 succ
+0000000211|ConnectRegSendPacket|361|[I]:add:1 succ
+0000000212|ConnectMsgProcessInit|2631|[E]:sem init
+0000000213|ConnectInit|549|[I]:succ
+0000000213|MagicLinkComponentsInit|85|[I]:module:p2p
+0000000214|InitComponent|60|[I]:enable:p2p
+0000000215|InitComponent|64|[W]:no comp:p2p
+0000000215|MagicLinkComponentsInit|85|[I]:module:blenetcfg
+0000000216|InitComponent|60|[I]:enable:blenetcfg
+0000000217|ConnectRegSendPacket|361|[I]:add:3 succ
+0000000217|MagicLinkComponentsInit|85|[I]:module:coapconnect
+0000000218|InitComponent|60|[I]:enable:coapconnect
+udp_bind(ipaddr = 0.0.0.0, port = 5683)
+0000000219|ConnectRegSendPacket|361|[I]:add:2 succ
+0000000220|ConnectRegRecvPacket|392|[I]:add:2 succ
+0000000221|NetworkSetItemValueByStr|929|[E]:inv dst:prdName
+00000
+[18:41:34.450]收←◆00221|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdName
+0000000222|NetworkSetItemValueByStr|929|[E]:inv dst:manufactureName
+0000000223|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:manufactureName
+0000000224|NetworkSetItemValueByStr|929|[E]:inv dst:prdTypeName
+0000000225|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdTypeName
+0000000226|NetworkSetItemValueByStr|929|[E]:inv dst:modelId
+0000000226|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:modelId
+0000000227|NetworkSetItemValueByStr|929|[E]:inv dst:offeringCode
+0000000228|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:offeringCode
+0000000229|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeId
+0000000230|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeId
+0000000231|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeName
+0000000231|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeName
+0000000232|NetworkSetItemValueByStr|929|[E]:inv dst:qrScanMode
+0000000233|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:qrScan
+[18:41:34.462]收←◆Mode
+0000000234|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:udid
+0000000235|NetworkSetItemValueByStr|929|[E]:inv dst:devName
+0000000236|ModelSetDevInfoToNetwork|290|[E]:set item:deviceInfo:devName
+firmVer:1.0.0.201
+0000000237|ModelSetDevInfoToNetwork|272|[E]:set:deviceInfo:sdkVersion
+0000000238|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:MCUVersion
+
+[18:41:34.498]收←◆0000000272|MagicLinkHuksHalRegister|243|[I]:succ
+0000000273|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000274|ConfigRead|278|[E]:header
+0000000275|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000276|ConfigRead|278|[E]:header
+0000000277|MagicLinkSafeConfigRead|434|[I]:cfg empty
+0000000277|ReadRegisterResultData|1466|[E]:cfg read
+0000000278|MagicLinkNetworkUpdateRegResult|2059|[W]:no reg ret
+0000000279|MagicLinkComponentsInit|85|[I]:module:netcfg
+0000000279|InitComponent|60|[I]:enable:netcfg
+0000000280|
+[18:41:34.510]收←◆OnRegSessionServerRestart|1216|[I]:succ reg cb:hihonor.magiclinksdk,netCfg
+0000000281|NetCfgInit|739|[I]:succ
+0000000282|MagicLinkComponentsInit|85|[I]:module:register
+0000000283|InitComponent|60|[I]:enable:register
+0000000283|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000284|MagicLinkParseAction|297|[W]:no inDataList
+0000000285|MagicLinkParseAction|310|[W]:no outDataList
+0000000286|MagicLinkParseAction|297|[W]:no inDataList
+0000000286|MagicLinkParseAction|310|[W]:no outDataList
+0000000287|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,register
+0000000288|StartRegister|2170|[I]:start:0
+
+[18:41:34.797]收←◆STA connected to target AP!
+udp_bind(ipaddr = 0.0.0.0, port = 68)
+
+[18:41:34.872]收←◆0000000647|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000651|TlsNetworkInit|261|[I]:succ
+0000000651|TlsNetworkConnect|342|[I]:host:devicemgt-pre-drcn.platform.hihonorcloud.com
+udp_bind(ipaddr = 0.0.0.0, port = 12424)
+0000000657|RegisterInit|2042|[I]:succ
+0000000657|MagicLinkComponentsInit|85|[I]:module:control
+0000000658|InitComponent|60|[I]:enable:control
+0000000658|OnCreateSessionServer|1154|[I]:succ 
+[18:41:34.888]收←◆create server:hihonor.magiclinksdk,control
+0000000660|MagicLinkComponentsInit|85|[I]:module:ota
+0000000660|InitComponent|60|[I]:enable:ota
+0000000661|MagicLinkOtaFuncInit|103|[I]:init
+0000000661|OtaInit|3516|[I]:succ
+0000000662|MagicLinkComponentsInit|85|[I]:module:bi
+0000000662|InitComponent|60|[I]:enable:bi
+0000000663|InitComponent|64|[W]:no comp:bi
+0000000663|MagicLinkComponentsInit|85|[I]:module:magiclinkactive
+0000000664|InitComponent|60|[I]:enable:magiclinkactive
+0000000665|InitComponent|64|[W]:no comp:magiclinkactive
+0000000665|MagicLinkComponentsInit|85|[I]:module:netparamsync
+0000000666|InitComponent|60|[I]:enable:netparamsync
+0000000667|InitComponent|64|[W]:no comp:netparamsync
+0000000667|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000668|ExtComponentsMngtInit|108|[I]:not reg
+0000000669|SetLocalInfo|93|[I]:not reg
+0000000669|MagicLinkInit|235|[W]:succ
+0000000670|MagicLinkFastOffline|1
+[18:41:34.901]收←◆827|[I]:fast offline
+0000000670|MagicLinkFastOffline|1829|[I]:already offline
+
+[18:41:35.246]收←◆------  combo_mcu_basic_example  ------
+
+[18:41:35.742]收←◆TCP/IP initialized.
+LN882H SDK Ver: 2.1_rc1 [build time:Oct 21 
+[18:41:35.749]收←◆2024 18:12:10][0x02010001]
+STA startup!
+[WLIB_E]HwEr:UKI:0
+
+[18:41:35.914]收←◆MEM enter MagicLinkSDKRun [111696]
+0000000171|MagicLinkComponentsInit|85|[I]:module:logcollect
+0000000172|InitComponent|60|[I]:enable:logcollect
+0000000172|InitComponent|64|[W]:no comp:logcollect
+0000000173|MagicLinkInit|164|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_INIT, 0
+VER:IoTSDK_1.1.0.344_20240413_test_debug, TM:Apr 13 2024 14:57:17
+
+
+[18:41:35.933]收←◆0000000184|MagicLinkParsePropertyList|207|[I]:succ svc:baseInfo, access:0
+0000000189|MagicLinkParseActionList|328|[I]:no actionList
+0000000190|MagicLinkParsePropertyList|207|[I]:succ svc:deviceInfo, access:7
+0000000191|MagicLinkParseActionList|328|[I]:no actionList
+0000000193|MagicLinkParsePropertyList|207|[I]:succ svc:netInfo, access:5
+0000000194|MagicLinkParseActionList|328|[I]:no actionList
+0000000195|MagicLinkParsePropertyList|207|[I]:succ svc:ota, access:7
+0000000196|MagicLinkParseAction|297|[W]:no inDataList
+0000000196|MagicLinkParseAction|310|[W]:no outDataList
+0000000197|MagicLinkParseAction|297|[W]:no inDataList
+0000000198|MagicLinkParseAction|3
+[18:41:35.946]收←◆10|[W]:no outDataList
+0000000198|MagicLinkParsePropertyList|207|[I]:succ svc:timerCountdown, access:0
+0000000199|MagicLinkParseActionList|328|[I]:no actionList
+0000000200|MagicLinkParsePropertyList|207|[I]:succ svc:light, access:7
+0000000201|MagicLinkParseActionList|328|[I]:no actionList
+0000000202|MagicLinkParsePropertyList|207|[I]:succ svc:duration, access:3
+0000000203|MagicLinkParseActionList|328|[I]:no actionList
+0000000206|ModelParseJson|181|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_PROFILE_PARSE, 0
+0000000208|NetworkManagementInit|1658|[W]:succ
+0000000209|NetworkInit|70|[I]:succ
+0000000209|DiscoveryInit|556|[I]:succ
+0000000210|TransmissionInit|40|[I]:succ
+0000000210|CloudLinkMqttInit|1092|[I]:succ
+0000000211|ConnectRegRecvPacket|392|[I]:add:1 succ
+0000000211|ConnectRegSendPacket|361|[I]:add:1 succ
+0000000212|ConnectMsgProcessInit|2631|[E]:sem init
+0000000213|ConnectInit|549|[I]:succ
+0000000214|MagicLinkComponentsInit|85|[I]:module:p2p
+0000000214|InitComponent|60|[I]:enable:p2p
+0000000215|InitComp
+[18:41:35.963]收←◆onent|64|[W]:no comp:p2p
+0000000215|MagicLinkComponentsInit|85|[I]:module:blenetcfg
+0000000216|InitComponent|60|[I]:enable:blenetcfg
+0000000217|ConnectRegSendPacket|361|[I]:add:3 succ
+0000000217|MagicLinkComponentsInit|85|[I]:module:coapconnect
+0000000219|InitComponent|60|[I]:enable:coapconnect
+udp_bind(ipaddr = 0.0.0.0, port = 5683)
+0000000220|ConnectRegSendPacket|361|[I]:add:2 succ
+0000000221|ConnectRegRecvPacket|392|[I]:add:2 succ
+0000000221|NetworkSetItemValueByStr|929|[E]:inv dst:prdName
+0000000222|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdName
+0000000223|NetworkSetItemValueByStr|929|[E]:inv dst:manufactureName
+0000000224|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:manufactureName
+0000000225|NetworkSetItemValueByStr|929|[E]:inv dst:prdTypeName
+0000000226|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdTypeName
+0000000226|NetworkSetItemValueByStr|929|[E]:inv dst:modelId
+0000000227|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:modelId
+0000000228|NetworkSetItemValueByStr|929|[E]:inv dst:offeringCode
+0000000229|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:offeringCode
+0000000230|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeId
+0000000231|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeId
+0000000232|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeName
+0000000233|ModelSetBaseInfoToNetwork|238|[E]:set ite
+[18:41:35.984]收←◆m:baseInfo:prdSubTypeName
+0000000234|NetworkSetItemValueByStr|929|[E]:inv dst:qrScanMode
+0000000234|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:qrScanMode
+0000000235|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:udid
+0000000236|NetworkSetItemValueByStr|929|[E]:inv dst:devName
+0000000237|ModelSetDevInfoToNetwork|290|[E]:set item:deviceInfo:devName
+firmVer:1.0.0.201
+0000000238|ModelSetDevInfoToNetwork|272|[E]:set:deviceInfo:sdkVersion
+0000000239|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:MCUVersion
+
+[18:41:36.018]收←◆0000000272|MagicLinkHuksHalRegis
+[18:41:36.024]收←◆ter|243|[I]:succ
+0000000273|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000274|ConfigRead|278|[E]:header
+0000000276|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000277|ConfigRead|278|[E]:header
+0000000277|MagicLinkSafeConfigRead|434|[I]:cfg empty
+0000000278|ReadRegisterResultData|1466|[E]:cfg read
+0000000278|MagicLinkNetworkUpdateRegResult|2059|[W]:no reg ret
+0000000279|MagicLinkComponentsInit|85|[I]:module:netcfg
+0000000280|InitComponent|60|[I]:enable:netcfg
+0000000280|OnRegSessionServerRestart|1216|[I]:succ reg cb:hihonor.magiclinksdk,netCfg
+0000000282|NetCfgInit|739|[I]:succ
+0000000282|MagicLinkComponentsInit|85|[I]:module:register
+0000000283|InitComponent|60|[I]:enable:register
+0000000283|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000284|MagicLinkParseAction|297|[W]:no inDataList
+0000000285|MagicLinkParseAction|310|[W]:no outDataList
+0000000286|MagicLinkParseAction|297|[W]:no inDataList
+0000000286|MagicLinkParseAction|310|[W]:no outDataList
+0000000287|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,register
+0000000288|StartRegister|2170|[I]:start:0
+
+[18:41:36.348]收←◆STA connected to target AP!
+udp_bind(ipaddr = 0.0.0.0, port = 6
+[18:41:36.354]收←◆8)
+
+[18:41:36.395]收←◆0000000649|CheckRegisterEmpty|17
+[18:41:36.400]收←◆84|[W]:dev unregister
+0000000653|TlsNetworkInit|261|[I]:succ
+0000000654|TlsNetworkConnect|342|[I]:host:devicemgt-pre-drcn.platform.hihonorcloud.com
+udp_bind(ipaddr = 0.0.0.0, port = 60818)
+0000000659|RegisterInit|2042|[I]:succ
+0000000659|MagicLinkComponentsInit|85|[I]:module:control
+0000000660|InitComponent|60|[I]:enable:control
+0000000660|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,control
+0000000662|MagicLinkComponentsInit|85|[I]:module:ota
+0000000662|InitComponent|60|[I]:enable:ota
+0000000663|MagicLinkOtaFuncInit|103|[I]:init
+0000000663|OtaInit|3516|[I]:succ
+0000000664|MagicLinkComponentsInit|85|[I]:module:bi
+0000000664|InitComponent|60|[I]:enable:bi
+0000000665|InitComponent|64|[W]:no comp:bi
+0000000665|MagicLinkComponentsInit|85|[I]:module:magiclinkactive
+0000000666|InitCompo
+[18:41:36.418]收←◆nent|60|[I]:enable:magiclinkactive
+0000000667|InitComponent|64|[W]:no comp:magiclinkactive
+0000000668|MagicLinkComponentsInit|85|[I]:module:netparamsync
+0000000668|InitComponent|60|[I]:enable:netparamsync
+0000000669|InitComponent|64|[W]:no comp:netparamsync
+0000000670|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000670|ExtComponentsMngtInit|108|[I]:not reg
+0000000671|SetLocalInfo|93|[I]:not reg
+0000000671|MagicLinkInit|235|[W]:succ
+0000000672|MagicLinkFastOffline|1827|[I]:fast offline
+0000000672|MagicLinkFastOffline|1829|[I]:already offline
+
+[18:41:37.398]收←◆[low_level_output, 70] netif is 
+[18:41:37.404]收←◆not link up.
+
+[18:41:37.546]收←◆[low_level_output, 70] netif is not link up.
+
+[18:41:37.767]收←◆------  combo_mcu_basic_example  ------
+
+[18:41:38.263]收←◆TCP/IP initialized.
+LN882H SDK Ver: 2.1_rc1 [build time:Oct 21 2024 18:12:10][0x02010001]
+
+[18:41:38.274]收←◆STA startup!
+[WLIB_E]HwEr:UKI:0
+
+[18:41:38.434]收←◆MEM enter MagicLinkSDKRun [111696]
+0000000171|MagicLinkComponentsInit|85|[I]:module:logcollect
+0000000172|InitComponent|60|[I]:enable:logcollect
+0000000173|InitComponent|64|[W]:no comp:logcollect
+0000000173|MagicLinkInit|164|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_INIT, 0
+VER:IoTSDK_1.1.0.344_20240413_test_debug, TM:Apr 13 2024 14:57:17
+
+
+[18:41:38.447]收←◆0000000184|MagicLinkParsePropertyList|207|[I]:succ svc:baseInfo, access:0
+0000000185|MagicLinkParseActionList|328|[I]:no actionList
+0000000186|MagicLinkParsePropertyList|207|[I]:succ svc:deviceInfo, access:7
+0000000187|MagicLinkParseActionList|328|[I]:no actionList
+0000000188|MagicLinkParsePropertyList|207|[I]:succ svc:netInfo, access:5
+0000000189|MagicLinkParseActionList|328|[I]:no actionList
+0000000190|MagicLinkParsePropertyList|207|[I]:succ svc:ota, access:7
+0000000191|MagicLinkParseAction|297|[W]:no inDataList
+0000000191|MagicLinkParseAction|310|[W]:no outDataList
+0000000192|MagicLinkParseAction|297|[W]:no inDataList
+0000000193|MagicLinkParseAction|310|[W]:no outDataList
+0000000193|MagicLinkParsePropertyList|207|[I]:succ svc:timerCountdown, access:0
+0000000194|MagicLinkParseActionList|328|[I]:no actionList
+0000000195|MagicLinkParseProp
+[18:41:38.464]收←◆ertyList|207|[I]:succ svc:light, access:7
+0000000196|MagicLinkParseActionList|328|[I]:no actionList
+0000000197|MagicLinkParsePropertyList|207|[I]:succ svc:duration, access:3
+0000000198|MagicLinkParseActionList|328|[I]:no actionList
+0000000201|ModelParseJson|181|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_PROFILE_PARSE, 0
+0000000202|NetworkManagementInit|1658|[W]:succ
+0000000203|NetworkInit|70|[I]:succ
+0000000203|DiscoveryInit|556|[I]:succ
+0000000204|TransmissionInit|40|[I]:succ
+0000000205|CloudLinkMqttInit|1092|[I]:succ
+0000000205|ConnectRegRecvPacket|392|[I]:add:1 succ
+0000000206|ConnectRegSendPacket|361|[I]:add:1 succ
+0000000206|ConnectMsgProcessInit|2631|[E]:sem init
+0000000208|ConnectInit|549|[I]:succ
+0000000208|MagicLinkComponentsInit|85|[I]:module:p2p
+0000000209|InitComponent|60|[I]:enable:p2p
+0000000209|InitComponent|64|[W]:no comp:p2p
+0000000210|MagicLinkComponentsInit|85|[I]:module:blenetcfg
+0000000210|InitComponent|60|[I]:enable:blenetcfg
+0000000211|ConnectRegSendPacket|361|[I]:add:3 succ
+0000000212|MagicLinkComponentsInit|85|[I]:module:coapconnect
+000000
+[18:41:38.482]收←◆0212|InitComponent|60|[I]:enable:coapconnect
+udp_bind(ipaddr = 0.0.0.0, port = 5683)
+0000000214|ConnectRegSendPacket|361|[I]:add:2 succ
+0000000214|ConnectRegRecvPacket|392|[I]:add:2 succ
+0000000215|NetworkSetItemValueByStr|929|[E]:inv dst:prdName
+0000000216|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdName
+0000000217|NetworkSetItemValueByStr|929|[E]:inv dst:manufactureName
+0000000218|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:manufactureName
+0000000218|NetworkSetItemValueByStr|929|[E]:inv dst:prdTypeName
+0000000219|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdTypeName
+0000000220|NetworkSetItemValueByStr|929|[E]:inv dst:modelId
+0000000221|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:modelId
+0000000
+[18:41:38.495]收←◆222|NetworkSetItemValueByStr|929|[E]:inv dst:offeringCode
+0000000227|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:offeringCode
+0000000228|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeId
+0000000229|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeId
+0000000230|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeName
+0000000231|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeName
+0000000232|NetworkSetItemValueByStr|929|[E]:inv dst:qrScanMode
+0000000233|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:qrScanMode
+0000000234|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:udid
+0000000235|NetworkSetItemValueByStr|929|[E]:inv dst:devName
+0000000236|ModelSetDevInfoToNetwork|290|[E]:set item:deviceInfo:devName
+firmVer:1.0.0.201
+0000000237|ModelSetDevInfoToNetwork|272|[E]:set:deviceInfo:sdkVersion
+0000000238|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:MCUVersion
+
+[18:41:38.540]收←◆0000000273|MagicLinkHuksHalRegister|243|[I]:succ
+0000000274|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000275|ConfigRead|278|[E]:header
+0000000276|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000277|ConfigRead|278|[E]:header
+0000000277|MagicLinkSafeConfigRead|434|[I]:cfg empty
+0000000278|ReadRegisterResultData|1466|[E]:cfg read
+0000000278|MagicLinkNetworkUpdateRegResult|2059|[W]:no reg ret
+0000000279|MagicLinkComponentsInit|85|[I]:module:netcfg
+0000000280|InitComponent|60|[I]:enable:netcfg
+0000000281|OnRegSessionServerRestart|1216|[I]:succ reg cb:hihonor.magiclinksdk,netCfg
+0000000282|NetCfgInit|739|[I]:succ
+0000000282|MagicLinkComponentsInit|85|[I]:module:register
+0000000283|InitComponent|60|[I]:enable:register
+0000000283|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000284|MagicLinkParseAction|297|[W]:no inDataList
+0000000285|MagicLinkParseAction|310|[W]:no outDataList
+0000000286|MagicLinkParseActio
+[18:41:38.559]收←◆n|297|[W]:no inDataList
+0000000287|MagicLinkParseAction|310|[W]:no outDataList
+0000000287|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,register
+0000000288|StartRegister|2170|[I]:start:0
+
+[18:41:38.879]收←◆STA connected to target AP!
+udp
+[18:41:38.884]收←◆_bind(ipaddr = 0.0.0.0, port = 68)
+
+[18:41:38.918]收←◆0000000649|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000653|TlsNetworkInit|261|[I]:succ
+0000000653|TlsNetworkConnect|342|[I]:host:devicemgt-pre-drcn.platform.hihonorcloud.com
+udp_bind(ipaddr = 0.0.0.0, port = 25582)
+0000000659|RegisterInit|2042|[I]:succ
+0000000659|MagicLinkComponentsInit|85|[I]:module:control
+0000000660|InitComponent|60|[I]:enable:control
+0000000660|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,control
+0000000662|MagicLinkComponentsInit|85|[I]:module:ota
+0000000662|InitComponent|60|[I
+[18:41:38.934]收←◆]:enable:ota
+0000000663|MagicLinkOtaFuncInit|103|[I]:init
+0000000663|OtaInit|3516|[I]:succ
+0000000664|MagicLinkComponentsInit|85|[I]:module:bi
+0000000664|InitComponent|60|[I]:enable:bi
+0000000665|InitComponent|64|[W]:no comp:bi
+0000000665|MagicLinkComponentsInit|85|[I]:module:magiclinkactive
+0000000666|InitComponent|60|[I]:enable:magiclinkactive
+0000000667|InitComponent|64|[W]:no comp:magiclinkactive
+0000000667|MagicLinkComponentsInit|85|[I]:module:netparamsync
+0000000668|InitComponent|60|[I]:enable:netparamsync
+0000000669|InitComponent|64|[W]:no comp:netparamsync
+0000000669|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000670|ExtComponentsMngtInit|108|[I]:not reg
+0000000671|SetLocalInfo|93|[I]:not reg
+0000000671|MagicLinkInit|235|[W]:succ
+0000000672|MagicLinkFastOffline|1827|[I]:fast offline
+0000000672|MagicLinkFastOffline|1829|[I]:already offline
+
+[18:41:39.920]收←◆[low_level_output, 70] netif is not link up.
+
+[18:41:40.167]收←◆[low_level_output, 70] netif is not link up.
+
+[18:41:40.289]收←◆------  combo_mcu_basic_example 
+[18:41:40.294]收←◆ ------
+
+[18:41:40.785]收←◆TCP/IP initialized.
+LN882H SDK Ver: 2.1_rc1 [build time:Oct 21 
+[18:41:40.791]收←◆2024 18:12:10][0x02010001]
+STA startup!
+[WLIB_E]HwEr:UKI:0
+
+[18:41:40.956]收←◆MEM enter MagicLinkSDKRun [111712]
+0000000171|MagicLinkComponen
+[18:41:40.961]收←◆tsInit|85|[I]:module:logcollect
+0000000172|InitComponent|60|[I]:enable:logcollect
+0000000172|InitComponent|64|[W]:no comp:logcollect
+0000000173|MagicLinkInit|164|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_INIT, 0
+VER:IoTSDK_1.1.0.344_20240413_test_debug, TM:Apr 13 2024 14:57:17
+
+0000000184|MagicLinkParsePropertyList|207|[I]:succ svc:baseInfo, access:0
+0000000185|MagicLinkParseActionList|328|[I]:no actionList
+0000000186|MagicLinkParsePropertyList|207|[I]:succ svc:deviceInfo, access:7
+0000000187|MagicLinkParseActionList|328|[I]:no actionList
+0000000188|MagicLinkParsePropertyList|207|[I]:succ svc:netInfo, access:5
+0000000189|MagicLinkParseActionList|328|[I]:no actionList
+0000000191|Ma
+[18:41:40.980]收←◆gicLinkParsePropertyList|207|[I]:succ svc:ota, access:7
+0000000191|MagicLinkParseAction|297|[W]:no inDataList
+0000000192|MagicLinkParseAction|310|[W]:no outDataList
+0000000193|MagicLinkParseAction|297|[W]:no inDataList
+0000000193|MagicLinkParseAction|310|[W]:no outDataList
+0000000194|MagicLinkParsePropertyList|207|[I]:succ svc:timerCountdown, access:0
+0000000195|MagicLinkParseActionList|328|[I]:no actionList
+0000000196|MagicLinkParsePropertyList|207|[I]:succ svc:light, access:7
+0000000197|MagicLinkParseActionList|328|[I]:no actionList
+0000000197|MagicLinkParsePropertyList|207|[I]:succ svc:duration, access:3
+0000000198|MagicLinkParseActionList|328|[I]:no actionList
+0000000202|ModelParseJson|181|[I
+[18:41:40.992]收←◆]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_PROFILE_PARSE, 0
+0000000203|NetworkManagementInit|1658|[W]:succ
+0000000204|NetworkInit|70|[I]:succ
+0000000204|DiscoveryInit|556|[I]:succ
+0000000205|TransmissionInit|40|[I]:succ
+0000000205|CloudLinkMqttInit|1092|[I]:succ
+0000000206|ConnectRegRecvPacket|392|[I]:add:1 succ
+0000000206|ConnectRegSendPacket|361|[I]:add:1 succ
+0000000207|ConnectMsgProcessInit|2631|[E]:sem init
+0000000208|ConnectInit|549|[I]:succ
+0000000209|MagicLinkComponentsInit|85|[I]:module:p2p
+0000000209|InitComponent|60|[I]:enable:p2p
+0000000210|InitComponent|64|[W]:no comp:p2p
+0000000210|MagicLinkComponentsInit|85|[I]:module:blenetcfg
+0000000211|InitComponent|60|[I]:enable:blenetcfg
+0000000212|ConnectRegSendPacket|361|[I]:add:3 succ
+0000000212|MagicLinkComponentsInit|85|[I]:module:coapconnect
+0000000213|InitComponent|60|[I]:enable:coapconnect
+udp_bind(ipaddr = 0.0.0.0, port = 5683)
+0000000215|ConnectRegSendPacket|361|[I]:add:2 succ
+0000000215|ConnectRegRecvPacket|392|[I]:add:2 succ
+0000000216|NetworkSetItemValueByStr|929|[E]:inv dst:prdName
+0000000217|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdName
+0000000218|NetworkSetItemValueByStr|929|[E]:inv dst:manufactureName
+0000000218|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:manufactureName
+0000000219|NetworkSetItemValueByStr|929|[E]:inv dst:prdTypeName
+0000000220|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdTypeN
+[18:41:41.012]收←◆ame
+0000000221|NetworkSetItemValueByStr|929|[E]:inv dst:modelId
+0000000222|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:modelId
+0000000222|NetworkSetItemValueByStr|929|[E]:inv dst:offeringCode
+0000000223|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:offeringCode
+0000000224|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeId
+0000000225|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeId
+0000000226|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeName
+0000000227|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeName
+0000000228|NetworkSetItemValueByStr|929|[E]:inv dst:qrScanMode
+0000000228|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:qrScanMode
+0000000229|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:udid
+0000000230|NetworkSetItemValueByStr|929|[E]:inv dst:devName
+0000000231|ModelSetDevInfoToNetwork|290|[E]:set item:deviceInfo:devName
+firmVer:1.0.0.201
+0000000232|ModelSetDevInfoToNetwork|272|[E]:set:deviceInfo:sdkVersion
+0000000233|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:MCUVersion
+
+[18:41:41.059]收←◆0000000271|MagicLinkHuksHalRegister|243|[I]:succ
+0000000272|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000273|ConfigRead|278|[E]:header
+0000000274|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000275|ConfigRead|278|[E]:header
+0000000276|MagicLinkSafeConfigRead|434|[I]:cfg empty
+0000000276|ReadRegisterResultData|1466|[E]:cfg read
+0000000277|MagicLinkNetworkUpdateRegResult|2059|[W]:no reg ret
+0000000278|MagicLinkComponentsInit|85|[I]:module:ne
+[18:41:41.071]收←◆tcfg
+0000000278|InitComponent|60|[I]:enable:netcfg
+0000000279|OnRegSessionServerRestart|1216|[I]:succ reg cb:hihonor.magiclinksdk,netCfg
+0000000280|NetCfgInit|739|[I]:succ
+0000000282|MagicLinkComponentsInit|85|[I]:module:register
+0000000282|InitComponent|60|[I]:enable:register
+0000000283|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000284|MagicLinkParseAction|297|[W]:no inDataList
+0000000285|MagicLinkParseAction|310|[W]:no outDataList
+0000000286|MagicLinkParseAction|297|[W]:no inDataList
+0000000287|MagicLinkParseAction|310|[W]:no outDataList
+0000000287|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,register
+0000000288|StartRegister|2170|[I]:start:0
+
+[18:41:41.429]收←◆STA connected to target AP!
+udp_bind(ipaddr = 0.0.0.0, port = 6
+[18:41:41.436]收←◆8)
+0000000646|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000653|TlsNetworkInit|261|[I]:succ
+0000000654|TlsNetworkConnect|342|[I]:host:devicemgt-pre-drcn.platform.hihonorcloud.com
+
+[18:41:41.447]收←◆udp_bind(ipaddr = 0.0.0.0, port = 39535)
+0000000656|RegisterInit|2042|[I]:succ
+0000000656|MagicLinkComponentsInit|85|[I]:module:control
+0000000657|InitComponent|60|[I]:enable:control
+0000000657|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,control
+0000000659|MagicLinkComponentsInit|85|[I]:module:ota
+0000000659|InitComponent|60|[I]:enable:ota
+0000000660|MagicLinkOtaFuncInit|103|[I]:init
+0000000660|OtaInit|3516|[I]:succ
+0000000661|MagicLinkComponentsInit|85|[I]:module:bi
+0000000661|InitComponent|60|[I]:enable:bi
+0000000662|InitComponent|64|[W]:no comp:bi
+0000000662|MagicLinkComponentsInit|85|[I]:module:magiclinkactive
+0000000663|InitComponent|60|[I]:enable:magiclinkactive
+0000000664|InitComponent|64|[W]:no comp:magiclinkactive
+0000000665|MagicLinkComponentsInit|85|[I]:module:netparamsync
+0000000665|InitComponent|60|[I]:enable:netparamsync
+0000000666|InitComponent|64|[W]:no comp:netparamsync
+0000000667|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000668|ExtComponentsMngtInit|108|[I]:not reg
+0000000668|SetLocalInfo|93|[I]:not reg
+0000000669|MagicLinkInit|235|[W]:succ
+0000000669|MagicLinkFastOffline|1827|[I]:fast offline
+0000000670|MagicLinkFastOffline|1829|[I]:already offline
+
+[18:41:41.810]收←◆------  combo_mcu_basic_example  ------
+
+[18:41:42.305]收←◆TCP/IP initialized.
+LN882H SDK Ver: 2.1_rc1 [build time:Oct 21 
+[18:41:42.311]收←◆2024 18:12:10][0x02010001]
+STA startup!
+[WLIB_E]HwEr:UKI:0
+
+[18:41:42.477]收←◆MEM enter MagicLinkSDKRun [111696]
+0000000171|MagicLinkComponentsInit|85|[I]:module:logcollect
+0000000176|InitComponent|60|[I]:enable:logcollect
+0000000176|InitComponent|64|[W]:no comp:logcollect
+0000000177|MagicLinkInit|164|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_INIT, 0
+VER:IoTSDK_1.1.0.344_20240413_test_debug, TM:Apr 13 2024 14:57:17
+
+
+[18:41:42.494]收←◆0000000188|MagicLinkParsePropertyList|207|[I]:succ svc:baseInfo, access:0
+0000000189|MagicLinkParseActionList|328|[I]:no actionList
+0000000190|MagicLinkParsePropertyList|207|[I]:succ svc:deviceInfo, access:7
+0000000191|MagicLinkParseActionList|328|[I]:no actionList
+0000000192|MagicLinkParsePropertyList|207|[I]:succ svc:netInfo, access:5
+0000000192|MagicLinkParseActionList|328|[I]:no actionList
+0000000193|MagicLinkParsePropertyList|207|[I]:succ svc:ota, access:7
+0000000195|MagicLinkParseAction|297|[W]:no inDataList
+0000000196|MagicLinkParseAction|310|[W]:no outDataList
+0000000196|MagicLinkParseAction|297|[W]:no inDataList
+0000000197|MagicLinkParseAction|310|[W]:no outDataList
+0000000198|MagicLinkParsePropertyList|207|[I]:succ svc:timerCountdown, access:0
+0000000199|MagicLinkParseActionList|328|[I]:no actionList
+0000000199|MagicLinkParsePropertyList|207|[I]:succ svc:light, access:7
+0000000200|MagicLinkParseActionList|328|[I]:no actionList
+0000000201|MagicLinkParsePropertyList|207|[I]:succ svc:duration, access:3
+0000000202|MagicLinkParseActionList|328|[I]:no 
+[18:41:42.513]收←◆actionList
+0000000205|ModelParseJson|181|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_PROFILE_PARSE, 0
+0000000207|NetworkManagementInit|1658|[W]:succ
+0000000207|NetworkInit|70|[I]:succ
+0000000208|DiscoveryInit|556|[I]:succ
+0000000208|TransmissionInit|40|[I]:succ
+0000000209|CloudLinkMqttInit|1092|[I]:succ
+0000000209|ConnectRegRecvPacket|392|[I]:add:1 succ
+0000000210|ConnectRegSendPacket|361|[I]:add:1 succ
+0000000211|ConnectMsgProcessInit|2631|[E]:sem init
+0000000212|ConnectInit|549|[I]:succ
+0000000212|MagicLinkComponentsInit|85|[I]:module:p2p
+0000000213|InitComponent|60|[I]:enable:p2p
+0000000213|InitComponent|64|[W]:no comp:p2p
+000000
+[18:41:42.525]收←◆0214|MagicLinkComponentsInit|85|[I]:module:blenetcfg
+0000000215|InitComponent|60|[I]:enable:blenetcfg
+0000000216|ConnectRegSendPacket|361|[I]:add:3 succ
+0000000216|MagicLinkComponentsInit|85|[I]:module:coapconnect
+0000000217|InitComponent|60|[I]:enable:coapconnect
+udp_bind(ipaddr = 0.0.0.0, port = 5683)
+0000000218|ConnectRegSendPacket|361|[I]:add:2 succ
+0000000219|ConnectRegRecvPacket|392|[I]:add:2 succ
+0000000220|NetworkSetItemValueByStr|929|[E]:inv dst:prdName
+0000000221|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdName
+0000000221|NetworkSetItemValueByStr|929|[E]:inv dst:manufactureName
+0000000222|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:manufactureName
+0000000223|NetworkSetItemValueByStr|929|[E]:inv dst:prdTypeName
+0000000224|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdTypeName
+0000000225|NetworkSetItemValueByStr|929|[E]:inv dst:modelId
+0000000226|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:modelId
+0000000226|NetworkSetItemValueByStr|929|[E]:inv dst:offeringCode
+0000000227|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:offeringCode
+0000000228|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeId
+0000000229|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeId
+0000000230|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeName
+0000000231|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeName
+0000000232|NetworkSetItemValueByStr|929|[E]:inv dst:qrScanMode
+0000000232|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:qrScanMode
+0000000233|ModelSetDevInfo
+[18:41:42.546]收←◆ToNetwork|277|[E]:no data:deviceInfo:udid
+0000000234|NetworkSetItemValueByStr|929|[E]:inv dst:devName
+0000000235|ModelSetDevInfoToNetwork|290|[E]:set item:deviceInfo:devName
+firmVer:1.0.0.201
+0000000236|ModelSetDevInfoToNetwork|272|[E]:set:deviceInfo:sdkVersion
+0000000237|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:MCUVersion
+
+[18:41:42.581]收←◆0000000271|MagicLinkHuksHalRegister|243|[I]:succ
+0000000272|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000273|ConfigRead|278|[E
+[18:41:42.587]收←◆]:header
+0000000274|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000275|ConfigRead|278|[E]:header
+0000000275|MagicLinkSafeConfigRead|434|[I]:cfg empty
+0000000276|ReadRegisterResultData|1466|[E]:cfg read
+0000000276|MagicLinkNetworkUpdateRegResult|2059|[W]:no reg ret
+0000000277|MagicLinkComponentsInit|85|[I]:module:netcfg
+0000000278|InitComponent|60|[I]:enable:netcfg
+0000000278|OnRegSessionServerRestart|1216|[I]:succ reg cb:hihonor.magiclinksdk,netCfg
+0000000280|NetCfgInit|739|[I]:succ
+0000000280|MagicLinkComponentsInit|85|[I]:module:register
+0000000281|InitComponent|60|[I]:enable:register
+0000000281|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000282|MagicLinkParseAction|297|[W]:no inDataList
+0000000283|MagicLinkParseAction|310|[W]:no outDataList
+0000000284|MagicLinkParseAction|297|[W]:no inDataList
+0000000285|MagicLinkParseAction|310|[W]:no outDataList
+0000000286|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,register
+0000000287|StartRegister|2170|[I]:start:0
+
+[18:41:42.942]收←◆0000000634|CheckRegisterEmpty|17
+[18:41:42.949]收←◆84|[W]:dev unregister
+0000000638|TlsNetworkInit|261|[I]:succ
+0000000639|TlsNetworkConnect|342|[I]:host:devicemgt-pre-drcn.platform.hihonorcloud.com
+0000000640|ProcessDns|304|[E]:dns err:202, errno:0
+0000000641|NoBlockConnect|320|[E]:dns
+0000000641|TlsNetworkConnect|346|[E]:conn ret:-1, errno:0
+0000000642|ConnectionHttpConnect|99|[E]:tls conn
+0000000642|SocketHttpConnect|1742|[E]:http conn
+0000000644|RegisterInit|2042|[I]:succ
+0000000644|MagicLinkComponentsInit|85|[I]:module:control
+0000000645|InitComponent|60|[I]:enable:control
+0000000646|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,control
+0000000647|MagicLinkComponentsInit|85|[I]:module:ota
+0000000648|InitComponent|60|[I]:enable:ota
+0000000648|MagicLinkOtaFuncInit|103|[I]:init
+0000000649|OtaInit|3516|[I]:succ
+0000000649|MagicLinkComponentsInit|85|[I]:module:bi
+0000000650|InitComponent|60|[I]:enable:bi
+0000000650|InitComponent|64|[W]:no comp:bi
+0000000651|MagicLinkComponentsInit|85|[I]:module:magiclinkactive
+0000000652|InitComponent|60|[I]:enable:magiclinkactive
+0000000652|InitComponent|64|[W]:no comp:magiclinkactive
+0000000653|MagicLinkComponentsInit|85|[I]:
+[18:41:42.968]收←◆module:netparamsync
+0000000654|InitComponent|60|[I]:enable:netparamsync
+0000000654|InitComponent|64|[W]:no comp:netparamsync
+0000000655|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000656|ExtComponentsMngtInit|108|[I]:not reg
+0000000656|SetLocalInfo|93|[I]:not reg
+0000000657|MagicLinkInit|235|[W]:succ
+0000000657|MagicLinkFastOffline|1827|[I]:fast offline
+0000000658|MagicLinkFastOffline|1829|[I]:already offline
+
+[18:41:43.146]收←◆STA connected to target AP!
+udp_bind(ipaddr = 0.0.0.0, port = 6
+[18:41:43.151]收←◆8)
+
+[18:41:43.948]收←◆[low_level_output, 70] netif is not link up.
+0000001643|TlsNetworkConnect|342|[I]:host:devicemgt-pre-drcn.platform.hihonorcloud.com
+udp_bind(ipaddr = 0.0.0.0, port = 32935)
+
+[18:41:44.208]收←◆[low_level_output, 70] netif is 
+[18:41:44.215]收←◆not link up.
+
+[18:41:44.330]收←◆------  combo_mcu_basic_example  ------
+
+[18:41:44.825]收←◆TCP/IP initialized.
+LN882H SDK Ver: 2.1_rc1 [build time:Oct 21 2024 18:12:10][0x02010001]
+
+[18:41:44.837]收←◆STA startup!
+[WLIB_E]HwEr:UKI:0
+
+[18:41:44.997]收←◆MEM enter MagicLinkSDKRun [111712]
+0000000171|MagicLinkComponentsInit|85|[I]:module:logcollect
+0000000172|InitComponent|60|[I]:enable:logcollect
+0000000172|InitComponent|64|[W]:no comp:logcollect
+0000000173|MagicLinkInit|164|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_INIT, 0
+VER:IoTSDK_1.1.0.344_20240413_test_debug, TM:Apr 13 2024 14:57:17
+
+
+[18:41:45.010]收←◆0000000184|MagicLinkParsePropertyList|207|[I]:succ svc:baseInfo, access:0
+0000000185|MagicLinkParseActionList|328|[I]:no actionList
+0000000186|MagicLinkParsePropertyList|207|[I]:succ svc:deviceInfo, access:7
+0000000187|MagicLinkParseActionList|328|[I]:no actionList
+0000000188|MagicLinkParsePropertyList|207|[I]:succ svc:netInfo, access:5
+0000000188|MagicLinkParseActionList|328|[I]:no actionList
+0000000189|MagicLinkParsePropertyList|207|[I]:succ svc:ota, access:7
+0000000190|MagicLinkParseAction|297|[W]:no inDataList
+0000000191|MagicLinkParseAction|310|[W]:no outDataList
+0000000192|MagicLinkParseAction|297|[W]:no inDataList
+0000000192|MagicLinkParseAction|310|[W]:no outDataList
+000000019
+[18:41:45.024]收←◆3|MagicLinkParsePropertyList|207|[I]:succ svc:timerCountdown, access:0
+0000000194|MagicLinkParseActionList|328|[I]:no actionList
+0000000195|MagicLinkParsePropertyList|207|[I]:succ svc:light, access:7
+0000000196|MagicLinkParseActionList|328|[I]:no actionList
+0000000196|MagicLinkParsePropertyList|207|[I]:succ svc:duration, access:3
+0000000197|MagicLinkParseActionList|328|[I]:no actionList
+0000000201|ModelParseJson|181|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_PROFILE_PARSE, 0
+0000000202|NetworkManagementInit|1658|[W]:succ
+0000000203|NetworkInit|70|[I]:succ
+0000000203|DiscoveryInit|556|[I]:succ
+0000000204|TransmissionInit|40|[I]:succ
+0000000204|CloudLinkMqttInit|1092|[I]:succ
+0000000205|ConnectRegRecvPacket|392|[I]:add:1 succ
+0000000205|ConnectRegSendPacket|361|[I]:add:1 succ
+0000000206|ConnectMsgProcessInit|2631|[E]:sem init
+0000000207|ConnectInit|549|[I]:succ
+0000000208|MagicLinkComponentsInit|85|[I]:module:p2p
+0000000208|InitComponent|60|
+[18:41:45.043]收←◆[I]:enable:p2p
+0000000213|InitComponent|64|[W]:no comp:p2p
+0000000214|MagicLinkComponentsInit|85|[I]:module:blenetcfg
+0000000215|InitComponent|60|[I]:enable:blenetcfg
+0000000215|ConnectRegSendPacket|361|[I]:add:3 succ
+0000000216|MagicLinkComponentsInit|85|[I]:module:coapconnect
+0000000217|InitComponent|60|[I]:enable:coapconnect
+udp_bind(ipaddr = 0.0.0.0, port = 5683)
+0000000219|ConnectRegSendPacket|361|[I]:add:2 succ
+0000000219|ConnectRegRecvPacket|392|[I]:add:2 succ
+0000000220|NetworkSetItemValueByStr|929|[E]:inv dst:prdName
+0000000221|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdName
+0000000222|NetworkSetItemValueByStr|929|[E]:inv dst:manufactureName
+0000000223|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:manufactureName
+0000000223|NetworkSetItemValueByStr|9
+[18:41:45.056]收←◆29|[E]:inv dst:prdTypeName
+0000000224|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdTypeName
+0000000225|NetworkSetItemValueByStr|929|[E]:inv dst:modelId
+0000000226|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:modelId
+0000000227|NetworkSetItemValueByStr|929|[E]:inv dst:offeringCode
+0000000228|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:offeringCode
+0000000228|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeId
+0000000229|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeId
+0000000230|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeName
+0000000231|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeName
+0000000232|NetworkSetItemValueByStr|929|[E]:inv dst:qrScanMode
+0000000233|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:qrScanMode
+0000000234|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:udid
+0000000235|NetworkSetItemValueByStr|929|[E]:inv dst:devName
+0000000236|ModelSetDevInfoToNetwork|290|[E]:set item:deviceInfo:devName
+firmVer:1.0.0.201
+0000000237|ModelSetDevInfoToNetwork|272|[E]:set:deviceInfo:sdkVersion
+0000000238|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:MCUVersion
+
+[18:41:45.099]收←◆0000000270|MagicLinkHuksHalRegis
+[18:41:45.105]收←◆ter|243|[I]:succ
+0000000271|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000272|ConfigRead|278|[E]:header
+0000000273|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000273|ConfigRead|278|[E]:header
+0000000274|MagicLinkSafeConfigRead|434|[I]:cfg empty
+0000000275|ReadRegisterResultData|1466|[E]:cfg read
+0000000275|MagicLinkNetworkUpdateRegResult|2059|[W]:no reg ret
+0000000276|MagicLinkComponentsInit|85|[I]:module:netcfg
+0000000277|InitComponent|60|[I]:enable:netcfg
+0000000277|OnRegSessionServerRestart|1216|[I]:succ reg cb:hihonor.magiclinksdk,netCfg
+0000000279|NetCfgInit|739|[I]:succ
+0000000279|MagicLinkComponentsInit|85|[I]:module:register
+0000000280|InitComponent|60|[I]:enable:register
+0000000280|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000281|MagicLinkParseAction|297|[W]:no inDataList
+0000000282|MagicLinkParseAction|310|[W]:no outDataList
+0000000283|MagicLinkParseActio
+[18:41:45.119]收←◆n|297|[W]:no inDataList
+0000000283|MagicLinkParseAction|310|[W]:no outDataList
+0000000284|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,register
+0000000285|StartRegister|2170|[I]:start:0
+
+[18:41:45.447]收←◆STA connected to target AP!
+udp_bind(ipaddr = 0.0.0.0, port = 68)
+
+[18:41:45.475]收←◆0000000645|CheckRegisterEmpty|17
+[18:41:45.482]收←◆84|[W]:dev unregister
+0000000648|TlsNetworkInit|261|[I]:succ
+0000000649|TlsNetworkConnect|342|[I]:host:devicemgt-pre-drcn.platform.hihonorcloud.com
+udp_bind(ipaddr = 0.0.0.0, port = 51652)
+0000000654|RegisterInit|2042|[I]:succ
+0000000654|MagicLinkComponentsInit|85|[I]:module:control
+0000000655|InitComponent|60|[I]:enable:control
+0000000655|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,control
+0000000657|MagicLinkComponentsInit|85|[I]:module:ota
+0000000657|InitComponent|60|[I]:enable:ota
+0000000658|MagicLinkOtaFuncInit|103|[I]:init
+0000000658|OtaInit|3516|[I]:succ
+0000000659|MagicLinkComponentsInit|85|[I]:module:bi
+0000000659|In
+[18:41:45.494]收←◆itComponent|60|[I]:enable:bi
+0000000660|InitComponent|64|[W]:no comp:bi
+0000000660|MagicLinkComponentsInit|85|[I]:module:magiclinkactive
+0000000661|InitComponent|60|[I]:enable:magiclinkactive
+0000000662|InitComponent|64|[W]:no comp:magiclinkactive
+0000000663|MagicLinkComponentsInit|85|[I]:module:netparamsync
+0000000663|InitComponent|60|[I]:enable:netparamsync
+0000000664|InitComponent|64|[W]:no comp:netparamsync
+0000000665|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000665|ExtComponentsMngtInit|108|[I]:not reg
+0000000666|SetLocalInfo|93|[I]:not reg
+0000000666|MagicLinkInit|235|[W]:succ
+0000000667|MagicLinkFastOffline|1827|[I]:fast offline
+0000000667|MagicLinkFastOffline|1829|[I]:already offline
+
+[18:41:46.478]收←◆[low_level_output, 70] netif is not link up.
+
+[18:41:46.629]收←◆[low_level_output, 70] netif is 
+[18:41:46.635]收←◆not link up.
+
+[18:41:46.851]收←◆------  combo_mcu_basic_example 
+[18:41:46.857]收←◆ ------
+
+[18:41:47.346]收←◆TCP/IP initialized.
+LN882H SDK Ver: 2.1_rc1 [build time:Oct 21 
+[18:41:47.352]收←◆2024 18:12:10][0x02010001]
+STA startup!
+[WLIB_E]HwEr:UKI:0
+
+[18:41:47.519]收←◆MEM enter MagicLinkSDKRun [111712]
+0000000171|MagicLinkComponentsInit|85|[I]:module:logcollect
+[18:41:47.524]收←◆
+0000000172|InitComponent|60|[I]:enable:logcollect
+0000000173|InitComponent|64|[W]:no comp:logcollect
+0000000173|MagicLinkInit|164|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_INIT, 0
+VER:IoTSDK_1.1.0.344_20240413_test_debug, TM:Apr 13 2024 14:57:17
+
+0000000185|MagicLinkParsePropertyList|207|[I]:succ svc:baseInfo, access:0
+0000000186|MagicLinkParseActionList|328|[I]:no actionList
+0000000187|MagicLinkParsePropertyList|207|[I]:succ svc:deviceInfo, access:7
+0000000188|MagicLinkParseActionList|328|[I]:no actionList
+0000000188|MagicLinkParsePropertyList|207|[I]:succ svc:netInfo, access:5
+0000000189|MagicLinkParseActionList|328|[I]:no actionList
+0000000190|MagicLinkParsePropertyList|207|[I]:succ svc:ota, access:7
+0000000191|MagicLinkParseAction|297|[W]:no inDataList
+0000000192|Magic
+[18:41:47.544]收←◆LinkParseAction|310|[W]:no outDataList
+0000000193|MagicLinkParseAction|297|[W]:no inDataList
+0000000193|MagicLinkParseAction|310|[W]:no outDataList
+0000000194|MagicLinkParsePropertyList|207|[I]:succ svc:timerCountdown, access:0
+0000000195|MagicLinkParseActionList|328|[I]:no actionList
+0000000196|MagicLinkParsePropertyList|207|[I]:succ svc:light, access:7
+0000000197|MagicLinkParseActionList|328|[I]:no actionList
+0000000198|MagicLinkParsePropertyList|207|[I]:succ svc:duration, access:3
+0000000198|MagicLinkParseActionList|328|[I]:no actionList
+0000000202|ModelParseJson|181|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_PROFILE_PARSE, 0
+0000000203|NetworkManagementInit|1658|[W]:succ
+0000000204|NetworkInit|70|[I]:succ
+0000000204|DiscoveryInit|556|[I]:succ
+0000000205|
+[18:41:47.557]收←◆TransmissionInit|40|[I]:succ
+0000000205|CloudLinkMqttInit|1092|[I]:succ
+0000000206|ConnectRegRecvPacket|392|[I]:add:1 succ
+0000000207|ConnectRegSendPacket|361|[I]:add:1 succ
+0000000207|ConnectMsgProcessInit|2631|[E]:sem init
+0000000208|ConnectInit|549|[I]:succ
+0000000209|MagicLinkComponentsInit|85|[I]:module:p2p
+0000000210|InitComponent|60|[I]:enable:p2p
+0000000210|InitComponent|64|[W]:no comp:p2p
+0000000211|MagicLinkComponentsInit|85|[I]:module:blenetcfg
+0000000211|InitComponent|60|[I]:enable:blenetcfg
+0000000212|ConnectRegSendPacket|361|[I]:add:3 succ
+0000000213|MagicLinkComponentsInit|85|[I]:module:coapconnect
+0000000213|InitComponent|60|[I]:enable:coapconnect
+udp_bind(ipaddr = 0.0.0.0, port = 5683)
+0000000215|ConnectRegSendPacket|361|[I]:add:2 succ
+0000000215|ConnectRegRecvPacket|392|[I]:add:2 succ
+0000000216|NetworkSetItemValueByStr|929|[E]:inv dst:prdName
+0000000217|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdName
+0000000218|NetworkSetItemValueByStr|929|[E]:inv dst:manufactureName
+0000000218|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:manufactureName
+0000000219|NetworkSetItemValueByStr|929|[E]:inv dst:prdTypeName
+0000000220|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdTypeName
+0000000221|NetworkSetItemValueByStr|929|[E]:inv dst:modelId
+0000000222|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:modelId
+0000000223|NetworkSetItemValueByStr|929|[E]:inv dst:offeringCode
+0000000223|ModelSetB
+[18:41:47.577]收←◆aseInfoToNetwork|238|[E]:set item:baseInfo:offeringCode
+0000000224|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeId
+0000000225|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeId
+0000000226|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeName
+0000000227|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeName
+0000000228|NetworkSetItemValueByStr|929|[E]:inv dst:qrScanMode
+0000000228|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:qrScanMode
+0000000229|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:udid
+0000000230|NetworkSetItemValueByStr|929|[E]:inv dst:devName
+0000000231|ModelSetDevInfoToNetwork|290|[E]:set item:deviceInfo:devName
+firmVer:1.0.0.201
+0000000232|ModelSetDevInfoToNetwork|272|[E]:set:deviceInfo:sdkVersion
+0000000233|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:MCUVersion
+
+[18:41:47.623]收←◆0000000273|MagicLinkHuksHalRegister|243|[I]:succ
+0000000274|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000275|ConfigRead|278|[E]:header
+0000000276|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000277|ConfigRead|278|[E]:header
+0000000278|MagicLinkSafeConfigRead|434|[I]:cfg empty
+0000000278|ReadRegisterResultData|1466|[E]:cfg read
+0000000279|MagicLinkNetworkUpdateRegResult|2059|[W]:no reg re
+[18:41:47.635]收←◆t
+0000000280|MagicLinkComponentsInit|85|[I]:module:netcfg
+0000000281|InitComponent|60|[I]:enable:netcfg
+0000000281|OnRegSessionServerRestart|1216|[I]:succ reg cb:hihonor.magiclinksdk,netCfg
+0000000282|NetCfgInit|739|[I]:succ
+0000000283|MagicLinkComponentsInit|85|[I]:module:register
+0000000283|InitComponent|60|[I]:enable:register
+0000000284|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000285|MagicLinkParseAction|297|[W]:no inDataList
+0000000286|MagicLinkParseAction|310|[W]:no outDataList
+0000000286|MagicLinkParseAction|297|[W]:no inDataList
+0000000287|MagicLinkParseAction|310|[W]:no outDataList
+0000000288|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,register
+0000000289|StartRegister|2170|[I]:start:0
+
+[18:41:47.980]收←◆STA connected to target AP!
+udp_bind(ipaddr = 0.0.0.0, port = 68)
+
+[18:41:48.005]收←◆0000000654|CheckRegisterEmpty|1784|[W]:dev unregister
+
+[18:41:48.011]收←◆0000000658|TlsNetworkInit|261|[I]:succ
+0000000658|TlsNetworkConnect|342|[I]:host:devicemgt-pre-drcn.platform.hihonorcloud.com
+udp_bind(ipaddr = 0.0.0.0, port = 7948)
+0000000664|RegisterInit|2042|[I]:succ
+0000000664|MagicLinkComponentsInit|85|[I]:module:control
+0000000665|InitComponent|60|[I]:enable:control
+0000000665|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,control
+0000000667|MagicLinkComponentsInit|85|[I]:module:ota
+0000000667|InitComponent|60|[I]:enable:ota
+0000000668|MagicLinkOtaFuncInit|103|[I]:init
+0000000668|OtaInit|3516|[I]:succ
+0000000669|MagicLinkComponentsInit|85|[I]:module:bi
+0000000669|InitComponent|60|[I]:enable:bi
+0000000670|InitComponent|64|[W]:no comp:bi
+0000000670|MagicLinkComponentsInit|85|[I]:module:magiclinkactive
+0000000671|InitComponent|60|[I]:enable:magiclinkactive
+0000000672|InitComponent|64|[W]:no comp:magiclinkactive
+0000000673|MagicLinkComponentsInit|85|[I]:module:netparamsync
+0000000673|InitComponent|60|[I]:enable:netparamsync
+0000000674|InitComponent|64|[W]:no comp:netparamsync
+0000000675|CheckRegisterE
+[18:41:48.030]收←◆mpty|1784|[W]:dev unregister
+0000000675|ExtComponentsMngtInit|108|[I]:not reg
+0000000676|SetLocalInfo|93|[I]:not reg
+0000000676|MagicLinkInit|235|[W]:succ
+0000000677|MagicLinkFastOffline|1827|[I]:fast offline
+0000000677|MagicLinkFastOffline|1829|[I]:already offline
+
+[18:41:48.873]收←◆------  combo_mcu_basic_example  ------
+
+[18:41:49.367]收←◆TCP/IP initialized.
+LN882H SDK Ver: 2.1_rc1 [build time:Oct 21 2024 18:12:10][0x02010001]
+STA startup!
+[WLIB_E]HwEr:UKI:0
+
+[18:41:49.540]收←◆MEM enter MagicLinkSDKRun [111712]
+0000000171|MagicLinkComponentsInit|85|[I]:module:logcollect
+0000000172|InitComponent|60|[I]:enable:logcollect
+0000000172|InitComponent|64|[W]:no comp:logcollect
+0000000173|MagicLinkInit|164|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_INIT, 0
+VER:IoTSDK_1.1.0.344_20240413_test_debug, TM:Apr 13 2024 14:57:17
+
+0000000184|MagicLinkParsePropert
+[18:41:49.557]收←◆yList|207|[I]:succ svc:baseInfo, access:0
+0000000185|MagicLinkParseActionList|328|[I]:no actionList
+0000000186|MagicLinkParsePropertyList|207|[I]:succ svc:deviceInfo, access:7
+0000000187|MagicLinkParseActionList|328|[I]:no actionList
+0000000188|MagicLinkParsePropertyList|207|[I]:succ svc:netInfo, access:5
+0000000188|MagicLinkParseActionList|328|[I]:no actionList
+0000000189|MagicLinkParsePropertyList|207|[I]:succ svc:ota, access:7
+0000000190|MagicLinkParseAction|297|[W]:no inDataList
+0000000191|MagicLinkParseAction|310|[W]:no outDataList
+0000000192|MagicLinkParseAction|297|[W]:no inDataList
+0000000192|MagicLinkParseAction|310|[W]:no outDataList
+0000000193|MagicLinkParsePropertyList|207|[I]:succ svc:timerCountdown, access:0
+0000000194|MagicLinkParseActionList|328|[I]:no actionList
+0000000195|MagicLinkParsePropertyList|207|[I]:succ svc:light, access:7
+0000000196|MagicLinkParseActionList|328|[I]:no actionList
+0000000196|MagicLinkParsePropertyList|207|[I]:succ svc:duration, access:3
+0000000197|MagicLinkParseActionList|328|[I]:no actionList
+
+[18:41:49.575]收←◆0000000201|ModelParseJson|181|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_PROFILE_PARSE, 0
+0000000203|NetworkManagementInit|1658|[W]:succ
+0000000203|NetworkInit|70|[I]:succ
+0000000204|DiscoveryInit|556|[I]:succ
+0000000204|TransmissionInit|40|[I]:succ
+0000000205|CloudLinkMqttInit|1092|[I]:succ
+0000000205|ConnectRegRecvPacket|392|[I]:add:1 succ
+0000000206|ConnectRegSendPacket|361|[I]:add:1 succ
+0000000207|ConnectMsgProcessInit|2631|[E]:sem init
+0000000208|ConnectInit|549|[I]:succ
+0000000209|MagicLinkComponentsInit|85|[I]:module:p2p
+0000000209|InitComponent|60|[I]:enable:p2p
+0000000210|InitComponent|64|[W]:no comp:p2p
+0000000210|MagicLinkComponentsInit|85|[I]:module:blenetcfg
+0000000211|InitComponent|60|[I]:enable:blenetcfg
+0000000212|ConnectRegSendPacket|361|[I]:add:3 succ
+0000000212|MagicLinkComponentsInit|85|[I]:module:coapconnect
+000000
+[18:41:49.587]收←◆0213|InitComponent|60|[I]:enable:coapconnect
+udp_bind(ipaddr = 0.0.0.0, port = 5683)
+0000000214|ConnectRegSendPacket|361|[I]:add:2 succ
+0000000215|ConnectRegRecvPacket|392|[I]:add:2 succ
+0000000216|NetworkSetItemValueByStr|929|[E]:inv dst:prdName
+0000000217|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdName
+0000000217|NetworkSetItemValueByStr|929|[E]:inv dst:manufactureName
+0000000218|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:manufactureName
+0000000219|NetworkSetItemValueByStr|929|[E]:inv dst:prdTypeName
+0000000220|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdTypeName
+0000000221|NetworkSetItemValueByStr|929|[E]:inv dst:modelId
+0000000222|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:modelId
+0000000222|NetworkSetItemValueByStr|929|[E]:inv dst:offeringCode
+0000000223|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:offeringCode
+0000000224|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeId
+0000000225|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeId
+0000000226|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeName
+0000000227|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeName
+0000000228|NetworkSetItemValueByStr|929|[E]:inv dst:qrScanMode
+0000000228|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:qrScanMode
+0000000229|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:udid
+0000000230|NetworkSetItemValueByStr|929|[E]:inv dst:devName
+0000000231|ModelSetDevInfoToNetwork|290|[E]:set item:deviceInfo:devName
+firmVer:1.0.0.201
+0000000232|ModelSetDevInfoToNetwork|272|[E]:set:deviceInfo:sdkVersion
+0000000233|ModelSetDevInfoToNetwork|277|[E]:no data:d
+[18:41:49.605]收←◆eviceInfo:MCUVersion
+
+[18:41:49.637]收←◆0000000265|MagicLinkHuksHalRegister|243|[I]:succ
+0000000266|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000267|ConfigRead|278|[E]:header
+0000000268|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000273|ConfigRead|278|[E]:header
+0000000274|MagicLinkSafeConfigRead|434|[I]:cfg empty
+0000000274|ReadRegisterResultData|1466|[E]:cfg read
+0000000275|MagicLinkNetworkUpdateRegResult|2059|[W]:no reg ret
+0000000276|MagicLinkComponentsInit|85|[I]:module:netcfg
+0000000276|InitCompone
+[18:41:49.654]收←◆nt|60|[I]:enable:netcfg
+0000000278|OnRegSessionServerRestart|1216|[I]:succ reg cb:hihonor.magiclinksdk,netCfg
+0000000279|NetCfgInit|739|[I]:succ
+0000000279|MagicLinkComponentsInit|85|[I]:module:register
+0000000280|InitComponent|60|[I]:enable:register
+0000000280|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000282|MagicLinkParseAction|297|[W]:no inDataList
+0000000282|MagicLinkParseAction|310|[W]:no outDataList
+0000000283|MagicLinkParseAction|297|[W]:no inDataList
+0000000284|MagicLinkParseAction|310|[W]:no outDataList
+0000000284|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,register
+0000000285|StartRegister|2170|[I]:start:0
+
+[18:41:50.009]收←◆0000000637|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000641|TlsNetworkInit|261|[I]:succ
+0000000641|TlsNetworkConnect|342|[I]:host:devicemgt-pre-drcn.platform.hihonorcloud.com
+0000000643|ProcessDns|304|[E]:dns err:202, errno:0
+0000000643|NoBlockConnect|320|[E]:dns
+0000000644|TlsNetworkConnect|346|[E]:conn ret:-1, errno:0
+0000000644|ConnectionHttpConnect|99|[E]:tls conn
+0000000645|SocketHttpConnect|1742|[E]:http conn
+0000000648|RegisterInit|2042|[I]:succ
+0000000648|MagicLinkComponentsInit|85|[I]:module:control
+0000000649|InitComponent|60|[I]:enable:control
+0000000650|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,control
+0000000651|MagicLinkComponentsInit|85|[I]:module:ota
+[18:41:50.028]收←◆
+0000000652|InitComponent|60|[I]:enable:ota
+STA connected to target AP!
+udp_bind(ipaddr = 0.0.0.0, port = 68)
+0000000660|MagicLinkOtaFuncInit|103|[I]:init
+0000000660|OtaInit|3516|[I]:succ
+0000000661|MagicLinkComponentsInit|85|[I]:module:bi
+0000000661|InitComponent|60|[I]:enable:bi
+0000000662|InitComponent|64|[W]:no comp:bi
+0000000663|MagicLinkComponentsIni
+[18:41:50.040]收←◆t|85|[I]:module:magiclinkactive
+0000000665|InitComponent|60|[I]:enable:magiclinkactive
+0000000666|InitComponent|64|[W]:no comp:magiclinkactive
+0000000666|MagicLinkComponentsInit|85|[I]:module:netparamsync
+0000000667|InitComponent|60|[I]:enable:netparamsync
+0000000668|InitComponent|64|[W]:no comp:netparamsync
+0000000670|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000670|ExtComponentsMngtInit|108|[I]:not reg
+0000000671|SetLocalInfo|93|[I]:not reg
+0000000671|MagicLinkInit|235|[W]:succ
+0000000672|MagicLinkFastOffline|1827|[I]:fast offline
+0000000673|MagicLinkFastOffline|1829|[I]:already offline
+
+[18:41:51.018]收←◆0000001646|TlsNetworkConnect|342|[I]:host:devicemgt-pre-drcn.platform.hihonorcloud.com
+udp_bind
+[18:41:51.024]收←◆(ipaddr = 0.0.0.0, port = 23401)
+[low_level_output, 70] netif is not link up.
+
+[18:41:51.372]收←◆[low_level_output, 70] netif is not link up.
+
+[18:41:52.045]收←◆0000002673|NetCfgStart|622|[I]:start
+0000002673|WifiInit|134|[I]:INIT DONE
+0000002674|OnRemoveSessionServer|1169|[I]:succ rm server:hihonor.magiclinksdk,netCfg
+0000002675|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,netCfg
+0000002676|MagicLinkParseAction|297|[W]:no inDataList
+0000002677|MagicLinkParseAction|310|[W]:no outDataList
+0000002678|MagicLinkParseAction|297|[W]:no inDataList
+0000002679|MagicLinkParseAction|310|[W]:no outDataList
+0000002679|MagicLinkParseAction|297|[W]:no inDataList
+0000002680|MagicLinkParseAction|310|[W]:no out
+[18:41:52.057]收←◆DataList
+0000002681|NetcfgGetTimeout|210|[I]:timeout:10
+0000002681|DiscoveryAddPublishInfo|117|[I]:succ
+0000002682|PublishService|115|[I]:BLE adv start
+[BLIB_I]BLIB Ver: 1.0.5 [build time:Mar 16 2024 21:17:13][0x010005ff][for custom-imou Commit 2cda23ab]
+0000002685|BleStackInit|275|[I]:ble roal 1                      init suc
+0000002686|ProcGattReg|566|[I]:reg:0
+0000002687|AddGattDescriptor|349|[I]:add default desc
+0000002688|AddGattDescriptor|349|[I]:add default desc
+0000002688|ProcGattAddSvc|590|[I]:add svc:0, svc handle:0, char handle:16
+0000002690|ProcGapStartAdv|341|[I]:start adv:0
+0000002691|StartAdv|537|[I]:adv suc
+0000002691|ModelNotifyStatus|448|[I]:status:100
+current status is 100
+STATUS_NETCFG_ENTER
+MEM Start demo [79648]
+
+[18:41:53.039]收←◆0000003667|NoBlockConnect|364|[I]:conn timeout
+0000003668|TlsNetworkConnect|346|[E]:conn ret:-1, errno:9
+0000003668|ConnectionHttpConnect|99|[E]:tls conn
+0000003669|SocketHttpConnect|1742|[E]:http conn
+
+[18:41:54.042]收←◆0000004670|TlsNetworkConnect|342|[I]:host:devicemgt-pre-drcn.platform.hihonorcloud.com
+
+[18:41:55.056]收←◆0000005683|ConnectDispatchFunc|83|[I]:running
+
+[18:41:56.045]收←◆0000006672|NoBlockConnect|364|[I]:conn timeout
+0000006673|TlsNetworkConnect|346|[E]:conn ret:-1, errno:9
+0000006673|ConnectionHttpConnect|99|[E]:tls conn
+0000006674|SocketHttpConnect|1742|[E]:http conn
+
+[18:41:57.046]收←◆0000007675|TlsNetworkConnect|342|[I]:host:devicemgt-pre-drcn.platform.hihonorcloud.com
+
+[18:41:57.236]收←◆------  combo_mcu_basic_example  ------
+
+[18:41:57.732]收←◆TCP/IP initialized.
+LN882H SDK Ver: 2.1_rc1 [build time:Oct 21 2024 18:12:10][0x02010001]
+
+[18:41:57.743]收←◆STA startup!
+[WLIB_E]HwEr:UKI:0
+
+[18:41:57.905]收←◆MEM enter MagicLinkSDKRun [111696]
+0000000171|MagicLinkComponentsInit|85|[I]:module:logcollect
+0000000172|InitComponent|60|[I]:enable:logcollect
+0000000173|InitComponent|64|[W]:no comp:logcollect
+0000000173|MagicLinkInit|164|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_INIT, 0
+VER:IoTSDK_1.1.0.344_20240413_test_debug, TM:Apr 13 2024 14:57:17
+
+
+[18:41:57.918]收←◆0000000184|MagicLinkParsePropertyList|207|[I]:succ svc:baseInfo, access:0
+0000000185|MagicLinkParseActionList|328|[I]:no actionList
+0000000186|MagicLinkParsePropertyList|207|[I]:succ svc:deviceInfo, access:7
+0000000187|MagicLinkParseActionList|328|[I]:no actionList
+0000000188|MagicLinkParsePropertyList|207|[I]:succ svc:netInfo, access:5
+0000000189|MagicLinkParseActionList|328|[I]:no actionList
+0000000190|MagicLinkParsePropertyList|207|[I]:succ svc:ota, access:7
+0000000190|MagicLinkParseAction|297|[W]:no inDataList
+0000000191|MagicLinkParseAction|310|[W]:no outDataList
+0000000192|MagicLinkParseAction|297|[W]:no inDataList
+0000000192|MagicLinkParseAction|310|[W]:no outDataList
+0000000193|MagicLinkParsePropertyList|207|[I]:succ svc:timerCountdown, access:0
+0000000194|MagicLinkParseActionList|328|[I]:no actionList
+0000000195|MagicLinkParseProp
+[18:41:57.934]收←◆ertyList|207|[I]:succ svc:light, access:7
+0000000200|MagicLinkParseActionList|328|[I]:no actionList
+0000000201|MagicLinkParsePropertyList|207|[I]:succ svc:duration, access:3
+0000000202|MagicLinkParseActionList|328|[I]:no actionList
+0000000206|ModelParseJson|181|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_PROFILE_PARSE, 0
+000000
+[18:41:57.945]收←◆0207|NetworkManagementInit|1658|[W]:succ
+0000000208|NetworkInit|70|[I]:succ
+0000000209|DiscoveryInit|556|[I]:succ
+0000000209|TransmissionInit|40|[I]:succ
+0000000210|CloudLinkMqttInit|1092|[I]:succ
+0000000210|ConnectRegRecvPacket|392|[I]:add:1 succ
+0000000211|ConnectRegSendPacket|361|[I]:add:1 succ
+0000000212|ConnectMsgProcessInit|2631|[E]:sem init
+0000000213|ConnectInit|549|[I]:succ
+0000000213|MagicLinkComponentsInit|85|[I]:module:p2p
+0000000214|InitComponent|60|[I]:enable:p2p
+0000000214|InitComponent|64|[W]:no comp:p2p
+0000000215|MagicLinkComponentsInit|85|[I]:module:blenetcfg
+0000000216|InitComponent|60|[I]:enable:blenetcfg
+0000000216|ConnectRegSendPacket|361|[I]:add:3 succ
+0000000217|MagicLinkComponentsInit|85|[I]:module:coapconnect
+0000000218|InitComponent|60|[I]:enable:coapconnect
+udp_bind(ipaddr = 0.0.0.0, port = 5683)
+0000000219|ConnectRegSendPacket|361|[I]:add:2 succ
+0000000220|ConnectRegRecvPacket|392|[I]:add:2 succ
+0000000221|NetworkSetItemValueByStr|929|[E]:inv dst:prdName
+0000000222|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdName
+0000000222|NetworkSetItemValueByStr|929|[E]:inv dst:manufactureName
+0000000223|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:manufactureName
+0000000225|NetworkSetItemValueByStr|929|[E]:inv dst:prdTypeName
+0000000225|ModelSetBaseInfoToNetwork|23
+[18:41:57.965]收←◆8|[E]:set item:baseInfo:prdTypeName
+0000000226|NetworkSetItemValueByStr|929|[E]:inv dst:modelId
+0000000227|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:modelId
+0000000228|NetworkSetItemValueByStr|929|[E]:inv dst:offeringCode
+0000000229|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:offeringCode
+0000000230|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeId
+0000000230|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeId
+0000000232|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeName
+0000000233|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeName
+0000000233|NetworkSetItemValueByStr|929|[E]:inv dst:qrScanMode
+0000000234|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:qrScanMode
+0000000235|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:udid
+0000000236|NetworkSetItemValueByStr|929|[E]:inv dst:devName
+0000000237|ModelSetDevInfoToNetwork|290|[E]:set item:deviceInfo:devName
+firmVer:1.0.0.201
+0000000238|ModelSetDevInfoToNetwork|272|[E]:set:deviceInfo:s
+[18:41:57.978]收←◆dkVersion
+0000000239|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:MCUVersion
+
+[18:41:58.008]收←◆0000000273|MagicLinkHuksHalRegister|243|[I]:succ
+0000000274|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000275|ConfigRead|278|[E]:header
+0000000276|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000277|ConfigRead|278|[E]:header
+0000000277|MagicLinkSafeConfigRead|434|[I]:cfg empty
+0000000278|ReadRegisterResultData|1466|[E]:cfg read
+0000000278|MagicLinkNetworkUpdateRegResult|2059|[W]:no reg ret
+0000000279|MagicLinkComponentsInit|85|[I]:module:netcfg
+0000000280|InitComponent|60|[I]:enable:netcfg
+0000000280|OnRegSessionServerRestart|1216|[I]:succ reg cb:hihonor.magiclinksdk,netCfg
+0000000282|NetCfgInit|739|[I]:succ
+0000000282|MagicLinkComponentsInit|85|[I]:module:register
+0000000283|InitComponent|60|[I]:enable:register
+0000000283|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000284|MagicLinkParseAction|297|[W]:no inDataList
+0000000285|MagicLinkParseAction|310|[W]:no outDataList
+0000000286|MagicLinkParseAction|297|[W]:no inDataList
+0000000286|MagicLinkParseAction|310|[W]:no outDataList
+0000000287|OnCr
+[18:41:58.028]收←◆eateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,register
+0000000288|StartRegister|2170|[I]:start:0
+
+[18:41:58.330]收←◆STA connected to target AP!
+udp_bind(ipaddr = 0.0.0.0, port = 6
+[18:41:58.336]收←◆8)
+
+[18:41:58.385]收←◆0000000648|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000651|TlsNetworkInit|261|[I]:succ
+0000000652|TlsNetworkConnect|342|[I]:host:devicemgt-pre-drcn.platform.hihonorcloud.com
+udp_bind(ipaddr = 0.0.0.0, port = 19770)
+0000000658|RegisterInit|2042|[I]:succ
+0000000658|MagicLinkComponentsInit|85|[I]:module:control
+0000000659|InitComponent|60|[I]:enable:control
+0000000659|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,control
+0000000661|MagicLinkComponentsInit|85|[I]:module:ota
+[18:41:58.403]收←◆
+0000000661|InitComponent|60|[I]:enable:ota
+0000000662|MagicLinkOtaFuncInit|103|[I]:init
+0000000662|OtaInit|3516|[I]:succ
+0000000663|MagicLinkComponentsInit|85|[I]:module:bi
+0000000663|InitComponent|60|[I]:enable:bi
+0000000664|InitComponent|64|[W]:no comp:bi
+0000000664|MagicLinkComponentsInit|85|[I]:module:magiclinkactive
+0000000665|InitComponent|60|[I]:enable:magiclinkactive
+0000000666|InitComponent|64|[W]:no comp:magiclinkactive
+0000000666|MagicLinkComponentsInit|85|[I]:module:netparamsync
+0000000667|InitComponent|60|[I]:enable:netparamsync
+0000000668|InitComponent|64|[W]:no comp:netparamsync
+0000000668|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000669|ExtComponentsMngtInit|108|[I]:not reg
+0000000670|SetLocalInfo|93|[I]:not reg
+0000000670|MagicLinkInit|235|[W]:succ
+0000000671|MagicLinkFastOffline|1827|[I]:fast offline
+0000000671|MagicLinkFastOffline|1829|[I]:already offline
+
+[18:41:59.387]收←◆[low_level_output, 70] netif is not link up.
+
+[18:41:59.411]收←◆------  combo_mcu_basic_example  ------
+
+[18:41:59.907]收←◆TCP/IP initialized.
+LN882H SDK Ver: 2.1_rc1 [build time:Oct 21 2024 18:12:10][0x02010001]
+STA startup!
+
+[18:41:59.918]收←◆[WLIB_E]HwEr:UKI:0
+
+[18:42:00.077]收←◆MEM enter MagicLinkSDKRun [111768]
+0000000171|MagicLinkComponentsInit|85|[I]:module:logcollect
+0000000171|InitComponent|60|[I]:enable:logcollect
+0000000176|InitComponent|64|[W]:no comp:logcollect
+0000000177|MagicLinkInit|164|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_
+[18:42:00.089]收←◆INIT, 0
+VER:IoTSDK_1.1.0.344_20240413_test_debug, TM:Apr 13 2024 14:57:17
+
+0000000188|MagicLinkParsePropertyList|207|[I]:succ svc:baseInfo, access:0
+0000000189|MagicLinkParseActionList|328|[I]:no actionList
+0000000191|MagicLinkParsePropertyList|207|[I]:succ svc:deviceInfo, access:7
+0000000191|MagicLinkParseActionList|328|[I]:no actionList
+0000000192|MagicLinkParsePropertyList|207|[I]:succ svc:netInfo, access:5
+0000000193|MagicLinkParseActionList|328|[I]:no actionList
+0000000194|Ma
+[18:42:00.104]收←◆gicLinkParsePropertyList|207|[I]:succ svc:ota, access:7
+0000000195|MagicLinkParseAction|297|[W]:no inDataList
+0000000196|MagicLinkParseAction|310|[W]:no outDataList
+0000000197|MagicLinkParseAction|297|[W]:no inDataList
+0000000198|MagicLinkParseAction|310|[W]:no outDataList
+0000000198|MagicLinkParsePropertyList|207|[I]:succ svc:timerCountdown, access:0
+0000000200|MagicLinkParseActionList|328|[I]:no actionList
+0000000201|MagicLinkParsePropertyList|207|[I]:succ svc:light, access:7
+0000000202|MagicLinkParseActionList|328|[I]:no actionList
+0000000202|MagicLinkParsePropertyList|207|[I]:succ svc:duration, access:3
+0000000203|MagicLinkParseActionList|328|[I]:no actionList
+0000000207|ModelParseJson|181|[I]:MAGICLINK_BUSINESS_MANAGER, MA
+[18:42:00.119]收←◆GICLINK_PROFILE_PARSE, 0
+0000000208|NetworkManagementInit|1658|[W]:succ
+0000000209|NetworkInit|70|[I]:succ
+0000000209|DiscoveryInit|556|[I]:succ
+0000000209|TransmissionInit|40|[I]:succ
+0000000210|CloudLinkMqttInit|1092|[I]:succ
+0000000211|ConnectRegRecvPacket|392|[I]:add:1 succ
+0000000211|ConnectRegSendPacket|361|[I]:add:1 succ
+0000000212|ConnectMsgProcessInit|2631|[E]:sem init
+0000000213|ConnectInit|549|[I]:succ
+0000000214|MagicLinkComponentsInit|85|[I]:module:p2p
+0000000214|InitComponent|60|[I]:enable:p2p
+0000000215|InitComponent|64|[W]:no comp:p2p
+0000000216|MagicLinkComponentsInit|85|[I]:module:blenetcfg
+0000000216|InitComponent|60|[I]:enable:blenetcfg
+0000000217|ConnectRegSendPacket|361|[I]:add:3 succ
+0000000218|MagicLinkComponentsInit|85|[I]:module:coapconnect
+0000000218|InitComponent|60|[I]:enable:coapconnect
+udp_bind(ipaddr = 0.0.0.0, port = 5683)
+0000000220|ConnectRegSendPacket|361|[I]:add:2 succ
+0000000221|ConnectRegRecvPacket|392|[I]:add:2 succ
+0000000221|NetworkSetItemValueByStr|929|[E]:inv dst:prdName
+0000000222|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdName
+0000000223|NetworkSetItemValueByStr|929|[E]:inv dst:manufactureName
+0000000224|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:manufactureName
+0000000225|NetworkSetItemValueByStr|929|[E]:inv dst:prdTypeName
+0000000225|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdTypeName
+0000000226|NetworkSetItemVa
+[18:42:00.139]收←◆lueByStr|929|[E]:inv dst:modelId
+0000000227|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:modelId
+0000000228|NetworkSetItemValueByStr|929|[E]:inv dst:offeringCode
+0000000229|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:offeringCode
+0000000229|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeId
+0000000230|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeId
+0000000231|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeName
+0000000232|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeName
+0000000233|NetworkSetItemValueByStr|929|[E]:inv dst:qrScanMode
+0000000234|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:qrScanMode
+0000000235|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:udid
+0000000236|NetworkSetItemValueByStr|929|[E]:inv dst:devName
+0000000237|ModelSetDevInfoToNetwork|290|[E]:set item:deviceInfo:devName
+firmVer:1.0.0.201
+0000000238|ModelSetDevInfoToNetwork|272|[E]:set:deviceInfo:sdkVersion
+0000000239|ModelSetDevInfoToNetwork|277|[E]:no data:d
+[18:42:00.151]收←◆eviceInfo:MCUVersion
+[WLIB_E]HwEr:EC = 16
+[WLIB_E]HwEr:EC = 16
+[WLIB_E]HwEr:EC = 16
+
+[18:42:00.185]收←◆0000000274|MagicLinkHuksHalRegister|243|[I]:succ
+0000000275|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000276|ConfigRead|278|[E]:header
+0000000277|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000278|ConfigRead|278|[E]:header
+0000000278|MagicLinkSafeConfigRead|434|[I]:cfg empty
+0000000279|ReadRegisterResultData|1466|[E]:cfg read
+0000000280|MagicLinkNetworkUpdateRegResult|2059|[W]:no reg ret
+0000000280|MagicLinkComponentsInit|85|[I]:module:netcfg
+0000000281|InitComponent|60|[I]:enable:netcfg
+0000000282|OnRegSessionServerRestart|1216|[
+[18:42:00.198]收←◆I]:succ reg cb:hihonor.magiclinksdk,netCfg
+0000000283|NetCfgInit|739|[I]:succ
+0000000283|MagicLinkComponentsInit|85|[I]:module:register
+0000000284|InitComponent|60|[I]:enable:register
+0000000285|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000286|MagicLinkParseAction|297|[W]:no inDataList
+0000000286|MagicLinkParseAction|310|[W]:no outDataList
+0000000287|MagicLinkParseAction|297|[W]:no inDataList
+0000000288|MagicLinkParseAction|310|[W]:no outDataList
+0000000288|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,register
+0000000290|StartRegister|2170|[I]:start:0
+
+[18:42:00.547]收←◆0000000637|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000641|TlsNetworkInit|261|[I]:succ
+0000000642|TlsNetworkConnect|342|[I]:host:devicemgt-pre-drcn.platform.hihonorcloud.com
+0000000643|ProcessDns|304|[E]:dns err:202, errno:0
+0000000643|NoBlockConnect|320|[E]:dns
+00000
+[18:42:00.559]收←◆00644|TlsNetworkConnect|346|[E]:conn ret:-1, errno:0
+0000000645|ConnectionHttpConnect|99|[E]:tls conn
+0000000645|SocketHttpConnect|1742|[E]:http conn
+0000000647|RegisterInit|2042|[I]:succ
+0000000647|MagicLinkComponentsInit|85|[I]:module:control
+0000000648|InitComponent|60|[I]:enable:control
+0000000648|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,control
+0000000649|MagicLinkComponentsInit|85|[I]:module:ota
+0000000650|InitComponent|60|[I]:enable:ota
+0000000651|MagicLinkOtaFuncInit|103|[I]:init
+0000000651|OtaInit|3516|[I]:succ
+0000000652|MagicLinkComponentsInit|85|[I]:module:bi
+0000000652|InitComponent|60|[I]:enable:bi
+0000000653|InitComponent|64|[W]:no comp:bi
+0000000653|MagicLinkComponentsInit|85|[I]:module:magiclinkactive
+0000000654|InitComponent|60|[I]:enable:magiclinkactive
+0000000655|InitComponent|64|[W]:no comp:magiclinkactive
+0000000655|MagicLinkComponentsInit|85|[I]:module:netparamsync
+0000000656|
+[18:42:00.572]收←◆InitComponent|60|[I]:enable:netparamsync
+0000000657|InitComponent|64|[W]:no comp:netparamsync
+0000000657|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000658|ExtComponentsMngtInit|108|[I]:not reg
+0000000659|SetLocalInfo|93|[I]:not reg
+0000000659|MagicLinkInit|235|[W]:succ
+0000000660|MagicLinkFastOffline|1827|[I]:fast offline
+0000000660|MagicLinkFastOffline|1829|[I]:already offline
+
+[18:42:00.613]收←◆STA connected to target AP!
+udp
+[18:42:00.619]收←◆_bind(ipaddr = 0.0.0.0, port = 68)
+
+[18:42:00.932]收←◆------  combo_mcu_basic_example  ------
+
+[18:42:01.424]收←◆TCP/IP initialized.
+LN882H SDK Ver: 2.1_rc1 [build time:Oct 21 2024 18:12:10][0x02010001]
+
+[18:42:01.436]收←◆STA startup!
+[WLIB_E]HwEr:UKI:0
+
+[18:42:01.596]收←◆MEM enter MagicLinkSDKRun [111784]
+0000000171|MagicLinkComponentsInit|85|[I]:module:logcollect
+[18:42:01.602]收←◆
+0000000172|InitComponent|60|[I]:enable:logcollect
+0000000172|InitComponent|64|[W]:no comp:logcollect
+0000000173|MagicLinkInit|164|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_INIT, 0
+VER:IoTSDK_1.1.0.344_20240413_test_debug, TM:Apr 13 2024 14:57:17
+
+0000000184|MagicLinkParsePropertyList|207|[I]:succ svc:baseInfo, access:0
+0000000185|MagicLinkParseActionList|328|[I]:no actionList
+0000000186|MagicLinkParsePropertyList|207|[I]:succ svc:deviceInfo, access:7
+0000000187|MagicLinkParseActionList|328|[I]:no actionList
+0000000187|MagicLinkParsePropertyList|207|[I]:succ svc
+[18:42:01.621]收←◆:netInfo, access:5
+0000000193|MagicLinkParseActionList|328|[I]:no actionList
+0000000194|MagicLinkParsePropertyList|207|[I]:succ svc:ota, access:7
+0000000195|MagicLinkParseAction|297|[W]:no inDataList
+0000000195|MagicLinkParseAction|310|[W]:no outDataList
+0000000196|MagicLinkParseAction|297|[W]:no inDataList
+0000000197|MagicLinkParseAction|310|[W]:no outDataList
+0000000198|MagicLinkParsePropertyList|207|[I]:succ svc:timerCountdown, access:0
+0000000199|MagicLinkParseActionList|328|[I]:no actionList
+0000000200|MagicLinkParsePropertyList|207|[I]:succ svc:light, access:7
+0000000201|MagicLinkParseActionList|328|[I]:no actionList
+0000000202|MagicLinkParsePropertyList|207|[I]:succ svc:duration, access:3
+0000000203|MagicLin
+[18:42:01.635]收←◆kParseActionList|328|[I]:no actionList
+0000000206|ModelParseJson|181|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_PROFILE_PARSE, 0
+0000000207|NetworkManagementInit|1658|[W]:succ
+0000000208|NetworkInit|70|[I]:succ
+0000000208|DiscoveryInit|556|[I]:succ
+0000000209|TransmissionInit|40|[I]:succ
+0000000209|CloudLinkMqttInit|1092|[I]:succ
+0000000210|ConnectRegRecvPacket|392|[I]:add:1 succ
+0000000211|ConnectRegSendPacket|361|[I]:add:1 succ
+0000000211|ConnectMsgProcessInit|2631|[E]:sem init
+0000000213|ConnectInit|549|[I]:succ
+0000000213|MagicLinkComponentsInit|85|[I]:module:p2p
+0000000214|InitComponent|60|[I]:enable:p2p
+0000000215|InitComponent|64|[W]:no comp:p2p
+0000000215|MagicLinkComponentsInit|85|[I]:module:blenetcfg
+0000000216|InitComponent|60|[I]:enable:blenetcfg
+0000000217|ConnectRegSendPacket|361|[I]:add:3 succ
+0000000217|MagicLinkComponentsInit|85|[I]:module:coapconnect
+0000000218|InitComponent|60|[I]:enable:coapconnect
+udp_bind(ipaddr = 
+[18:42:01.650]收←◆0.0.0.0, port = 5683)
+0000000220|ConnectRegSendPacket|361|[I]:add:2 succ
+0000000220|ConnectRegRecvPacket|392|[I]:add:2 succ
+0000000221|NetworkSetItemValueByStr|929|[E]:inv dst:prdName
+0000000222|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdName
+0000000223|NetworkSetItemValueByStr|929|[E]:inv dst:manufactureName
+0000000223|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:manufactureName
+0000000224|NetworkSetItemValueByStr|929|[E]:inv dst:prdTypeName
+0000000225|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdTypeName
+0000000226|NetworkSetItemValueByStr|929|[E]:inv dst:modelId
+0000000227|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:modelId
+0000000228|NetworkSetItemValueByStr|929|[E]:inv dst:offeringCode
+0000000228|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:offeringCode
+0000000229|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeId
+0000000230|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeId
+0000000231|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeName
+0000000232|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeName
+0000000233|NetworkSetItemValueByStr|929|[E]:inv dst:qrScanMode
+0000000234|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:qrScanMode
+0000000235|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:udid
+0000000236|NetworkSetItemValueByStr|929|[E]:inv dst:devName
+0000000237|ModelSetDevInfoToNetwork|290|[E]:set item:deviceInfo:devName
+firmVer:1.0.0.201
+0000000238|ModelSetDevInfoToNetwork|272|[E]:set:deviceInfo:s
+[18:42:01.669]收←◆dkVersion
+0000000239|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:MCUVersion
+
+[18:42:01.700]收←◆0000000271|MagicLinkHuksHalRegister|243|[I]:succ
+0000000272|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000273|ConfigRead|278|[E]:header
+0000000274|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000275|ConfigRead|278|[E]:header
+0000000275|MagicLinkSafeConfigRead|434|[I]:cfg empty
+0000000276|ReadRegisterResultData|1466|[E]:cfg read
+0000000276|MagicLinkNetworkUpdateRegResult|2059|[W]:no reg ret
+0000000277|MagicLinkComponentsInit|85|[I]:module:netcfg
+0000000278|InitComponent|6
+[18:42:01.712]收←◆0|[I]:enable:netcfg
+0000000278|OnRegSessionServerRestart|1216|[I]:succ reg cb:hihonor.magiclinksdk,netCfg
+0000000280|NetCfgInit|739|[I]:succ
+0000000280|MagicLinkComponentsInit|85|[I]:module:register
+0000000281|InitComponent|60|[I]:enable:register
+0000000281|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000282|MagicLinkParseAction|297|[W]:no inDataList
+0000000283|MagicLinkParseAction|310|[W]:no outDataList
+0000000284|MagicLinkParseAction|297|[W]:no inDataList
+0000000284|MagicLinkParseAction|310|[W]:no outDataList
+0000000285|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,register
+0000000286|StartRegister|2170|[I]:start:0
+
+[18:42:02.032]收←◆STA connected to target AP!
+udp_bind(ipaddr = 0.0.0.0, port = 68)
+
+[18:42:02.075]收←◆0000000647|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000650|TlsNetworkInit|261|[I]:succ
+0000000651|TlsNetworkConnect|342|[I]:host:devicemgt-pre-drcn.platform.hihonorcloud.com
+udp_bind(ipaddr = 0.0.0.0, port = 56634)
+
+[18:42:02.087]收←◆0000000656|RegisterInit|2042|[I]:succ
+0000000656|MagicLinkComponentsInit|85|[I]:module:control
+0000000657|InitComponent|60|[I]:enable:control
+0000000657|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,control
+0000000659|MagicLinkComponentsInit|85|[I]:module:ota
+0000000659|InitComponent|60|[I]:enable:ota
+0000000660|MagicLinkOtaFuncInit|103|[I]:init
+0000000660|OtaInit|3516|[I]:succ
+0000000661|MagicLinkComponentsInit|85|[I]:module:bi
+0000000661|InitComponent|60|[I]:enable:bi
+0000000662|InitComponent|64|[W]:no comp:bi
+0000000662|MagicLinkComponentsInit|85|[I]:module:magiclinkactive
+0000000663|InitComponent|60|[I]:enable:magiclinkactive
+0000000664|InitComponent|64|[W]:no comp:magiclinkactive
+0000000664|MagicLinkComponentsInit|85|[I]:module:netparamsync
+0000000665|InitComponent|60|[I]:enable:netparamsync
+0000000666|InitComponent|64|[W]:no comp:netparamsync
+0000000666|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000667|ExtComponentsMngtInit|108|[I]:not reg
+0000000668|SetLocalInfo|93|[I]:not reg
+0000000668|MagicLinkInit|235|[W]:succ
+0000000669|MagicLinkFastOffline|1827|[I]:fast offline
+0000000669|MagicLinkFastOffline|1829|[I]:already offline
+
+[18:42:03.079]收←◆[low_level_output, 70] netif is not link up.
+
+[18:42:03.451]收←◆------  combo_mcu_basic_example  ------
+
+[18:42:03.945]收←◆TCP/IP initialized.
+LN882H SDK Ver: 2.1_rc1 [build time:Oct 21 2024 18:12:10][0x02010001]
+STA startup!
+[WLIB_E]HwEr:UKI:0
+
+[18:42:04.116]收←◆MEM enter MagicLinkSDKRun [11169
+[18:42:04.123]收←◆6]
+0000000171|MagicLinkComponentsInit|85|[I]:module:logcollect
+0000000172|InitComponent|60|[I]:enable:logcollect
+0000000173|InitComponent|64|[W]:no comp:logcollect
+0000000173|MagicLinkInit|164|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_INIT, 0
+VER:IoTSDK_1.1.0.344_20240413_test_debug, TM:Apr 13 2024 14:57:17
+
+0000000184|MagicLinkParsePropertyList|207|[I]:succ svc:baseInfo, access:0
+0000000185|MagicLinkParseActionList|328|[I]:no actionList
+0000000186|Mag
+[18:42:04.137]收←◆icLinkParsePropertyList|207|[I]:succ svc:deviceInfo, access:7
+0000000187|MagicLinkParseActionList|328|[I]:no actionList
+0000000188|MagicLinkParsePropertyList|207|[I]:succ svc:netInfo, access:5
+0000000189|MagicLinkParseActionList|328|[I]:no actionList
+0000000190|MagicLinkParsePropertyList|207|[I]:succ svc:ota, access:7
+0000000190|MagicLinkParseAction|297|[W]:no inDataList
+0000000191|MagicLinkParseAction|310|[W]:no outDataList
+0000000192|MagicLinkParseAction|297|[W]:no inDataList
+0000000192|MagicLinkParseAction|310|[W]:no outDataList
+0000000193|MagicLinkParsePropertyList|207|[I]:succ svc:timerCountdown, access:0
+0000000194|MagicLinkParseActionList|328|[I]:no actionList
+0000000195|MagicLinkParsePropertyList|207|[I]:succ svc:light, access:7
+0000000196|MagicLinkParseActionList|328|[I]:no actionList
+0000000197|MagicLinkParsePropertyList|207|[I]:succ svc:duration, access:3
+0000000197|Magi
+[18:42:04.150]收←◆cLinkParseActionList|328|[I]:no actionList
+0000000201|ModelParseJson|181|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_PROFILE_PARSE, 0
+0000000202|NetworkManagementInit|1658|[W]:succ
+0000000203|NetworkInit|70|[I]:succ
+0000000203|DiscoveryInit|556|[I]:succ
+0000000204|TransmissionInit|40|[I]:succ
+0000000204|CloudLinkMqttInit|1092|[I]:succ
+0000000205|ConnectRegRecvPacket|392|[I]:add:1 succ
+0000000206|ConnectRegSendPacket|361|[I]:add:1 succ
+0000000206|ConnectMsgProcessInit|2631|[E]:sem init
+0000000207|ConnectInit|549|[I]:succ
+0000000208|MagicLinkComponentsInit|85|[I]:module:p2p
+0000000208|InitComponent|60|[I]:enable:p2p
+0000000209|InitComponent|64|[W]:no comp:p2p
+0000000210|MagicLinkComponentsInit|85|[I]:module:blenetcfg
+0000000210|InitComponent|60|[I]:enable:blenetcfg
+0000000211|ConnectRegSendPacket|361|[I]:add:3 succ
+0000000211|MagicLinkComponentsInit|85|[I]:module:coapconnect
+0000000212|InitComponent|60|[I]:enable:coapconnect
+udp_bind(ipaddr = 
+[18:42:04.165]收←◆0.0.0.0, port = 5683)
+0000000214|ConnectRegSendPacket|361|[I]:add:2 succ
+0000000214|ConnectRegRecvPacket|392|[I]:add:2 succ
+0000000215|NetworkSetItemValueByStr|929|[E]:inv dst:prdName
+0000000216|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdName
+0000000217|NetworkSetItemValueByStr|929|[E]:inv dst:manufactureName
+0000000217|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:manufactureName
+0000000218|NetworkSetItemValueByStr|929|[E]:inv dst:prdTypeName
+0000000219|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdTypeName
+0000000220|NetworkSetItemValueByStr|929|[E]:inv dst:modelId
+0000000221|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:modelId
+0000000222|NetworkSetItemValueByStr|929|[E]:inv dst:offeringCode
+0000000222|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:offeringCode
+0000000223|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeId
+0000000224|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeId
+0000000225|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeName
+0000000230|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeName
+0000000231|NetworkSetItemValueByStr|929|[E]:inv dst:qrScanMode
+0000000232|ModelSetBaseInfoToNetwork|238|[E]:set item:b
+[18:42:04.184]收←◆aseInfo:qrScanMode
+0000000233|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:udid
+0000000235|NetworkSetItemValueByStr|929|[E]:inv dst:devName
+0000000235|ModelSetDevInfoToNetwork|290|[E]:set item:deviceInfo:devName
+firmVer:1.0.0.201
+0000000237|ModelSetDevInfoToNetwork|272|[E]:set:deviceInfo:sdkVersion
+0000000238|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:MCUVersion
+
+[18:42:04.221]收←◆0000000272|MagicLinkHuksHalRegister|243|[I]:succ
+0000000273|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000274|ConfigRead|278|[E]:header
+0000000274|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000275|ConfigRead|278|[E]:header
+0000000276|MagicLinkSafeConfigRead|434|[I]:cfg empty
+0000000277|ReadRegisterResultData|1466|[E]:cfg read
+0000000277|MagicLinkNetworkUpdateRegResult|2059|[W]:no reg ret
+0000000278|MagicLin
+[18:42:04.233]收←◆kComponentsInit|85|[I]:module:netcfg
+0000000279|InitComponent|60|[I]:enable:netcfg
+0000000280|OnRegSessionServerRestart|1216|[I]:succ reg cb:hihonor.magiclinksdk,netCfg
+0000000281|NetCfgInit|739|[I]:succ
+0000000281|MagicLinkComponentsInit|85|[I]:module:register
+0000000282|InitComponent|60|[I]:enable:register
+0000000283|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000284|MagicLinkParseAction|297|[W]:no inDataList
+0000000284|MagicLinkParseAction|310|[W]:no outDataList
+0000000285|MagicLinkParseAction|297|[W]:no inDataList
+0000000286|MagicLinkParseAction|310|[W]:no outDataList
+0000000287|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,register
+0000000288|StartRegister|2170|[I]:start:0
+
+[18:42:04.581]收←◆STA connected to target AP!
+udp_bind(ipaddr = 0.0.0.0, port = 68)
+
+[18:42:04.594]收←◆0000000646|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000649|TlsNetworkInit|261|[I]:succ
+0000000650|TlsNetworkConnect|342|[I]:host:devicemgt-pre-drcn.platform.hihonorcloud.com
+0000000651|ProcessDns|304|[E]:dns err:202, errno:0
+0000000652|NoBlockConnect|320|[E]:dns
+0000000652|TlsNetworkConnect|346|[E]:conn ret:-1, errno:0
+0000000653
+[18:42:04.607]收←◆|ConnectionHttpConnect|99|[E]:tls conn
+0000000654|SocketHttpConnect|1742|[E]:http conn
+0000000655|RegisterInit|2042|[I]:succ
+0000000655|MagicLinkComponentsInit|85|[I]:module:control
+0000000656|InitComponent|60|[I]:enable:control
+0000000656|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,control
+0000000658|MagicLinkComponentsInit|85|[I]:module:ota
+0000000658|InitComponent|60|[I]:enable:ota
+0000000659|MagicLinkOtaFuncInit|103|[I]:init
+0000000659|OtaInit|3516|[I]:succ
+0000000660|MagicLinkComponentsInit|85|[I]:module:bi
+0000000660|InitComponent|60|[I]:enable:bi
+0000000661|InitComponent|64|[W]:no comp:bi
+0000000661|MagicLinkComponentsInit|85|[I]:module:magiclinkactive
+0000000662|InitComponent|60|[I]:enable:magiclinkactive
+0000000663|InitComponent|64|[W]:no comp:magiclinkactive
+0000000663|MagicLinkComponentsInit|85|[I]:module:netparamsync
+0000000664|InitComponent|60|[I]:enable:netparamsync
+0000000665|InitComponent|64|[W]:no comp:netparamsync
+
+[18:42:04.620]收←◆0000000665|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000666|ExtComponentsMngtInit|108|[I]:not reg
+0000000667|SetLocalInfo|93|[I]:not reg
+0000000667|MagicLinkInit|235|[W]:succ
+0000000668|MagicLinkFastOffline|1827|[I]:fast offline
+0000000668|MagicLinkFastOffline|1829|[I]:already offline
+
+[18:42:05.597]收←◆[low_level_output, 70] netif is 
+[18:42:05.603]收←◆not link up.
+0000001654|TlsNetworkConnect|342|[I]:host:devicemgt-pre-drcn.platform.hihonorcloud.com
+0000001655|ProcessDns|304|[E]:dns err:202, errno:0
+0000001656|NoBlockConnect|320|[E]:dns
+0000001656|TlsNetworkConnect|346|[E]:conn ret:-1, errno:0
+0000001657|ConnectionHttpConnect|99|[E]:tls conn
+0000001657|SocketHttpConnect|1742|[E]:http conn
+
+[18:42:05.648]收←◆[low_level_output, 70] netif is 
+[18:42:05.653]收←◆not link up.
+
+[18:42:06.607]收←◆0000002658|TlsNetworkConnect|342|[I]:host:devicemgt-pre-drcn.platform.hihonorcloud.com
+udp_bind(ipaddr = 0.0.0.0, port = 27885)
+
+[18:42:06.619]收←◆0000002669|NetCfgStart|622|[I]:start
+0000002669|WifiInit|134|[I]:INIT DONE
+0000002670|OnRemoveSessionServer|1169|[I]:succ rm server:hihonor.magiclinksdk,netCfg
+0000002671|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,netCfg
+0000002672|MagicLinkParseAction|297|[W]:no inDataList
+0000002673|MagicLinkParseAction|310|[W]:no outDataList
+0000002674|MagicLinkParseAction|297|[W]:no inDataList
+0000002674|MagicLinkParseAction|310|[W]:no outDataList
+0000002675|MagicLinkParseAction|297|[W]:no inDataList
+0000002676|MagicLinkParseAction|310|[W]:no outDataList
+0000002676|NetcfgGetTimeout|210|[I]:timeout:10
+0000002677|DiscoveryAddPublishInfo|117|[I]:succ
+0000002678|PublishService|115|[I]:BLE adv start
+[BLIB_I]BLIB Ver: 1.0.5 [build time:Mar 16 2024 21:17:13][0x010005ff][for custom-imou Commit 2cda23ab]
+0000002681|BleStackInit|275|[I]:ble roal 1                      init suc
+0000002682|ProcGat
+[18:42:06.637]收←◆tReg|566|[I]:reg:0
+0000002683|AddGattDescriptor|349|[I]:add default desc
+0000002684|AddGattDescriptor|349|[I]:add default desc
+0000002684|ProcGattAddSvc|590|[I]:add svc:0, svc handle:0, char handle:16
+0000002686|ProcGapStartAdv|341|[I]:start adv:0
+0000002687|StartAdv|537|[I]:adv suc
+0000002687|ModelNotifyStatus|448|[I]:status:100
+current status is 100
+STATUS_NETCFG_ENTER
+MEM Start demo [79960]
+
+[18:42:06.971]收←◆------  combo_mcu_basic_example  ------
+
+[18:42:07.468]收←◆TCP/IP initialized.
+LN882H SDK Ver: 2.1_rc1 [build time:Oct 21 2024 18:12:10][0x02010001]
+STA startup!
+
+[18:42:07.479]收←◆[WLIB_E]HwEr:UKI:0
+
+[18:42:07.638]收←◆MEM enter MagicLinkSDKRun [111696]
+0000000171|MagicLinkComponentsInit|85|[I]:module:logcollect
+0000000172|InitComponent|60|[I]:enable:logcollect
+0000000173|InitComponent|64|[W]:no comp:logcollect
+0000000173|MagicLinkInit|164|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_INIT, 0
+VER:IoTSDK_1.1.0.344_20240413_test_debug, TM:Apr 13 2024 14:57:17
+
+
+[18:42:07.656]收←◆0000000188|MagicLinkParsePropertyList|207|[I]:succ svc:baseInfo, access:0
+0000000190|MagicLinkParseActionList|328|[I]:no actionList
+0000000191|MagicLinkParsePropertyList|207|[I]:succ svc:deviceInfo, access:7
+0000000192|MagicLinkParseActionList|328|[I]:no actionList
+0000000193|MagicLinkParsePropertyList|207|[I]:succ svc:netInfo, access:5
+0000000194|MagicLinkParseActionList|328|[I]:no actionList
+0000000195|Ma
+[18:42:07.668]收←◆gicLinkParsePropertyList|207|[I]:succ svc:ota, access:7
+0000000196|MagicLinkParseAction|297|[W]:no inDataList
+0000000196|MagicLinkParseAction|310|[W]:no outDataList
+0000000197|MagicLinkParseAction|297|[W]:no inDataList
+0000000198|MagicLinkParseAction|310|[W]:no outDataList
+0000000199|MagicLinkParsePropertyList|207|[I]:succ svc:timerCountdown, access:0
+0000000199|MagicLinkParseActionList|328|[I]:no actionList
+0000000200|MagicLinkParsePropertyList|207|[I]:succ svc:light, access:7
+0000000201|MagicLinkParseActionList|328|[I]:no actionList
+0000000202|MagicLinkParsePropertyList|207|[I]:succ svc:duration, access:3
+0000000203|MagicLinkParseActionList|328|[I]:no actionList
+0000000206|ModelParseJson|181|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_PROFILE_PARSE, 0
+0000000208|NetworkManagementInit|1658|[W]:succ
+0000000208|NetworkInit|70|[I]:succ
+0000000209|DiscoveryInit|556|[I]:succ
+0000000209|TransmissionInit|40|[I]:succ
+0000000210|CloudLinkMqttInit|1092|[I]:succ
+0000000211|ConnectRegRecvPacket|392|[I]:add:1 succ
+0000000211|ConnectRegSendPacket|361|[I]:add:1 succ
+0000000212|ConnectMsgProcessInit|2631|[E]:sem 
+[18:42:07.686]收←◆init
+0000000213|ConnectInit|549|[I]:succ
+0000000214|MagicLinkComponentsInit|85|[I]:module:p2p
+0000000214|InitComponent|60|[I]:enable:p2p
+0000000215|InitComponent|64|[W]:no comp:p2p
+0000000215|MagicLinkComponentsInit|85|[I]:module:blenetcfg
+0000000216|InitComponent|60|[I]:enable:blenetcfg
+0000000217|ConnectRegSendPacket|361|[I]:add:3 succ
+0000000217|MagicLinkComponentsInit|85|[I]:module:coapconnect
+0000000218|InitComponent|60|[I]:enable:coapconnect
+udp_bind(ipaddr = 0.0.0.0, port = 5683)
+0000000219|ConnectRegSendPacket|361|[I]:add:2 succ
+0000000220|ConnectRegRecvPacket|392|[I]:add:2 succ
+0000000221|NetworkSetItemValueByStr|929|[E]:inv dst:prdName
+0000000221|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdName
+0000000222|NetworkSetItemValueByStr|929|[E]:inv dst:manufactureName
+0000000223|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:manufactureName
+0000000224|NetworkSetItemValueByStr|929|[E]:inv dst:prdTypeName
+0000000225|ModelSetBaseInfoToNetwork|23
+[18:42:07.698]收←◆8|[E]:set item:baseInfo:prdTypeName
+0000000226|NetworkSetItemValueByStr|929|[E]:inv dst:modelId
+0000000226|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:modelId
+0000000228|NetworkSetItemValueByStr|929|[E]:inv dst:offeringCode
+0000000229|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:offeringCode
+0000000229|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeId
+0000000230|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeId
+0000000231|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeName
+0000000232|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeName
+0000000233|NetworkSetItemValueByStr|929|[E]:inv dst:qrScanMode
+0000000234|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:qrScanMode
+0000000235|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:udid
+0000000235|NetworkSetItemValueByStr|929|[E]:inv dst:devName
+0000000236|ModelSetDevInfoToNetwork|290|[E]:set item:deviceInfo:devName
+firmVer:1.0.0.201
+0000000237|ModelSetDevInfoToNetwork|272|[E]:set:deviceInfo:s
+[18:42:07.711]收←◆dkVersion
+0000000238|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:MCUVersion
+
+[18:42:07.742]收←◆0000000272|MagicLinkHuksHalRegis
+[18:42:07.749]收←◆ter|243|[I]:succ
+0000000273|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000274|ConfigRead|278|[E]:header
+0000000275|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000275|ConfigRead|278|[E]:header
+0000000276|MagicLinkSafeConfigRead|434|[I]:cfg empty
+0000000277|ReadRegisterResultData|1466|[E]:cfg read
+0000000277|MagicLinkNetworkUpdateRegResult|2059|[W]:no reg ret
+0000000278|MagicLinkComponentsInit|85|[I]:module:netcfg
+0000000279|InitComponent|60|[I]:enable:netcfg
+0000000279|OnRegSessionServerRestart|1216|[I]:succ reg cb:hihonor.magiclinksdk,netCfg
+0000000280|NetCfgInit|739|[I]:succ
+0000000281|MagicLinkComponentsInit|85|[I]:module:register
+0000000282|InitComponent|60|[I]:enable:register
+0000000282|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000283|MagicLinkParseAction|297|[W]:no inDataList
+0000000284|MagicLinkParseAction|310|[W]:no outDataList
+0000000285|MagicLinkParseAction|297|[W]:no inDataList
+0000000285|MagicLinkParseAction|310|[W]:no outDataList
+0000000286|OnCr
+[18:42:07.759]收←◆eateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,register
+0000000287|StartRegister|2170|[I]:start:0
+
+[18:42:08.064]收←◆STA connected to target AP!
+udp_bind(ipaddr = 0.0.0.0, port = 68)
+
+[18:42:08.118]收←◆0000000647|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000651|TlsNetworkInit|261|[I]:succ
+0000000652|TlsNetworkConnect|342|[I]:host:devicemgt-pre-drcn.platform.hihonorcloud.com
+udp_bind(ipaddr = 0.0.0.0, port = 47897)
+0000000657|RegisterInit|2042|[I]:succ
+0000000657|MagicLinkComponentsInit|85|[I]:module:control
+0000000658|InitComponent|60|[I]:enable:control
+0000000658|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,control
+0000000660|MagicLinkComponentsInit|85|[I]:module:ota
+0000000660|InitComponent|60|[I]:enable:ota
+0000000661|MagicLi
+[18:42:08.136]收←◆nkOtaFuncInit|103|[I]:init
+0000000661|OtaInit|3516|[I]:succ
+0000000662|MagicLinkComponentsInit|85|[I]:module:bi
+0000000662|InitComponent|60|[I]:enable:bi
+0000000663|InitComponent|64|[W]:no comp:bi
+0000000663|MagicLinkComponentsInit|85|[I]:module:magiclinkactive
+0000000664|InitComponent|60|[I]:enable:magiclinkactive
+0000000665|InitComponent|64|[W]:no comp:magiclinkactive
+0000000665|MagicLinkComponentsInit|85|[I]:module:netparamsync
+0000000666|InitComponent|60|[I]:enable:netparamsync
+0000000667|InitComponent|64|[W]:no comp:netparamsync
+0000000667|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000668|ExtComponentsMngtInit|108|[I]:not reg
+0000000669|SetLocalInfo|93|[I]:not reg
+0000000669|MagicLinkInit|235|[W]:succ
+0000000670|MagicLinkFastOffline|1827|[I]:fast offline
+0000000670|MagicLinkFastOffline|1829|[I]:already offline
+
+[18:42:09.121]收←◆[low_level_output, 70] netif is not link up.
+
+[18:42:09.491]收←◆------  combo_mcu_basic_example 
+[18:42:09.499]收←◆ ------
+
+[18:42:09.988]收←◆TCP/IP initialized.
+LN882H SDK Ver: 2.1_rc1 [build time:Oct 21 2024 18:12:10][0x02010001]
+
+[18:42:09.996]收←◆STA startup!
+[WLIB_E]HwEr:UKI:0
+
+[18:42:10.158]收←◆MEM enter MagicLinkSDKRun [111768]
+0000000171|MagicLinkComponentsInit|85|[I]:module:logcollect
+0000000172|InitComponent|60|[I]:enable:logcollect
+0000000173|InitComponent|64|[W]:no comp:logcollect
+0000000173|MagicLinkInit|164|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_INIT, 0
+VER:IoTSDK_1.1.0.344_20240413_test_debug, TM:Apr 13 2024 14:57:17
+
+
+[18:42:10.173]收←◆0000000184|MagicLinkParsePropertyList|207|[I]:succ svc:baseInfo, access:0
+0000000185|MagicLinkParseActionList|328|[I]:no actionList
+0000000186|MagicLinkParsePropertyList|207|[I]:succ svc:deviceInfo, access:7
+0000000187|MagicLinkParseActionList|328|[I]:no actionList
+0000000188|MagicLinkParsePropertyList|207|[I]:succ svc:netInfo, access:5
+0000000189|MagicLinkParseActionList|328|[I]:no actionList
+0000000190|MagicLinkParsePropertyList|207|[I]:succ svc:ota, access:7
+0000000191|MagicLinkParseAction|297|[W]:no inDataList
+0000000191|Magic
+[18:42:10.184]收←◆LinkParseAction|310|[W]:no outDataList
+0000000192|MagicLinkParseAction|297|[W]:no inDataList
+0000000193|MagicLinkParseAction|310|[W]:no outDataList
+0000000193|MagicLinkParsePropertyList|207|[I]:succ svc:timerCountdown, access:0
+0000000194|MagicLinkParseActionList|328|[I]:no actionList
+0000000195|MagicLinkParsePropertyList|207|[I]:succ svc:light, access:7
+0000000196|MagicLinkParseActionList|328|[I]:no actionList
+0000000197|MagicLinkParsePropertyList|207|[I]:succ svc:duration, access:3
+0000000198|MagicLinkParseActionList|328|[I]:no actionList
+0000000201|ModelParseJson|181|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_PROFILE_PARSE, 0
+0000000202|NetworkManagementInit|1658|[W]:succ
+0000000203|NetworkInit
+[18:42:10.196]收←◆|70|[I]:succ
+0000000203|DiscoveryInit|556|[I]:succ
+0000000204|TransmissionInit|40|[I]:succ
+0000000204|CloudLinkMqttInit|1092|[I]:succ
+0000000205|ConnectRegRecvPacket|392|[I]:add:1 succ
+0000000206|ConnectRegSendPacket|361|[I]:add:1 succ
+0000000206|ConnectMsgProcessInit|2631|[E]:sem init
+0000000207|ConnectInit|549|[I]:succ
+0000000208|MagicLinkComponentsInit|85|[I]:module:p2p
+0000000209|InitComponent|60|[I]:enable:p2p
+0000000209|InitComponent|64|[W]:no comp:p2p
+0000000210|MagicLinkComponentsInit|85|[I]:module:blenetcfg
+0000000210|InitComponent|60|[I]:enable:blenetcfg
+0000000211|ConnectRegSendPacket|361|[I]:add:3 succ
+0000000212|MagicLinkComponentsInit|85|[I]:module:coapconnect
+0000000212|InitComponent|60|[I]:enable:coapconnect
+udp_bind(ipaddr = 0.0.0.0, port = 5683)
+0000000214|ConnectRegSendPacket|361|[I]:add:2 succ
+0000000214|ConnectRegRecvPacket|392|[I]:add:2 succ
+0000000215|NetworkSetItemValueByStr|929|[E]:inv dst:prdName
+0000000216|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdName
+0000000217|NetworkSetItemValueByStr|929|[E]:inv dst:manufactureName
+0000000217|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:manufactureName
+0000000218|NetworkSetItemValueByStr|929|[E]:inv dst:prdTypeName
+0000000219|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdTypeName
+0000000220|NetworkSetItemValueByStr|929|[E]:inv dst:modelId
+0000000221|ModelSetBaseInfoToNetwork|238|[E]:se
+[18:42:10.216]收←◆t item:baseInfo:modelId
+0000000226|NetworkSetItemValueByStr|929|[E]:inv dst:offeringCode
+0000000227|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:offeringCode
+0000000228|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeId
+0000000229|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeId
+0000000230|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeName
+0000000231|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeName
+0000000232|NetworkSetItemValueByStr|929|[E]:inv dst:qrScanMode
+0000000233|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:qrScanMode
+0000000234|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:udid
+0000000235|NetworkSetItemValueByStr|92
+[18:42:10.228]收←◆9|[E]:inv dst:devName
+0000000235|ModelSetDevInfoToNetwork|290|[E]:set item:deviceInfo:devName
+firmVer:1.0.0.201
+0000000237|ModelSetDevInfoToNetwork|272|[E]:set:deviceInfo:sdkVersion
+0000000238|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:MCUVersion
+
+[18:42:10.265]收←◆0000000274|MagicLinkHuksHalRegister|243|[I]:succ
+0000000275|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000276|ConfigRead|278|[E]:header
+0000000277|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000278|ConfigRead|278|[E]:header
+0000000278|MagicLinkSafeConfigRead|434|[I]:cfg empty
+0000000279|ReadRegisterResultData|1466|[E]:cfg read
+0000000279|MagicLinkNetworkUpdateRegResult|2059|[W]:no reg ret
+0000000280|MagicLinkComponentsInit|85|[I]:module:netcfg
+0000000281|InitComponent|60|[I]:enable:netcfg
+0000000281|
+[18:42:10.276]收←◆OnRegSessionServerRestart|1216|[I]:succ reg cb:hihonor.magiclinksdk,netCfg
+0000000283|NetCfgInit|739|[I]:succ
+0000000283|MagicLinkComponentsInit|85|[I]:module:register
+0000000284|InitComponent|60|[I]:enable:register
+0000000284|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000285|MagicLinkParseAction|297|[W]:no inDataList
+0000000286|MagicLinkParseAction|310|[W]:no outDataList
+0000000287|MagicLinkParseAction|297|[W]:no inDataList
+0000000287|MagicLinkParseAction|310|[W]:no outDataList
+0000000288|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,register
+0000000289|StartRegister|2170|[I]:start:0
+
+[18:42:10.614]收←◆STA connected to target AP!
+udp_bind(ipaddr = 0.0.0.0, port = 6
+[18:42:10.621]收←◆8)
+
+[18:42:10.641]收←◆0000000649|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000653|TlsNetworkInit|261|[I]:succ
+0000000654|TlsNetworkConnect|342|[I]:host:devicemgt-pre-drcn.platform.hihonorcloud.com
+udp_bind(ipaddr = 0.0.0.0, port = 46177)
+
+[18:42:10.653]收←◆0000000659|RegisterInit|2042|[I]:succ
+0000000659|MagicLinkComponentsInit|85|[I]:module:control
+0000000660|InitComponent|60|[I]:enable:control
+0000000660|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,control
+0000000662|MagicLinkComponentsInit|85|[I]:module:ota
+0000000662|InitComponent|60|[I]:enable:ota
+0000000663|MagicLinkOtaFuncInit|103|[I]:init
+0000000663|OtaInit|3516|[I]:succ
+0000000664|MagicLinkComponentsInit|85|[I]:module:bi
+0000000664|InitComponent|60|[I]:enable:bi
+0000000665|InitComponent|64|[W]:no comp:bi
+0000000665|MagicLinkComponentsInit|85|[I]:module:magiclinkactive
+0000000666|InitComponent|60|[I]:enable:magiclinkactive
+0000000667|InitComponent|64|[W]:no comp:magiclinkactive
+0000000667|MagicLinkComponentsInit|85|[I]:module:netparamsync
+0000000668|InitComponent|60|[I]:enable:netparamsync
+0000000669|InitComponent|64|[W]:no comp:netparamsync
+0000000669|CheckRegisterE
+[18:42:10.665]收←◆mpty|1784|[W]:dev unregister
+0000000670|ExtComponentsMngtInit|108|[I]:not reg
+0000000671|SetLocalInfo|93|[I]:not reg
+0000000671|MagicLinkInit|235|[W]:succ
+0000000672|MagicLinkFastOffline|1827|[I]:fast offline
+0000000672|MagicLinkFastOffline|1829|[I]:already offline
+
+[18:42:11.644]收←◆[low_level_output, 70] netif is not link up.
+
+[18:42:11.690]收←◆[low_level_output, 70] netif is 
+[18:42:11.696]收←◆not link up.
+
+[18:42:12.011]收←◆------  combo_mcu_basic_example  ------
+
+[18:42:12.507]收←◆TCP/IP initialized.
+LN882H SDK Ver: 2.1_rc1 [build time:Oct 21 
+[18:42:12.512]收←◆2024 18:12:10][0x02010001]
+STA startup!
+[WLIB_E]HwEr:UKI:0
+
+[18:42:12.679]收←◆MEM enter MagicLinkSDKRun [111712]
+0000000171|MagicLinkComponentsInit|85|[I]:module:logcollect
+[18:42:12.684]收←◆
+0000000172|InitComponent|60|[I]:enable:logcollect
+0000000173|InitComponent|64|[W]:no comp:logcollect
+0000000173|MagicLinkInit|164|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_INIT, 0
+VER:IoTSDK_1.1.0.344_20240413_test_debug, TM:Apr 13 2024 14:57:17
+
+0000000184|MagicLinkParsePropertyList|207|[I]:succ svc:baseInfo, access:0
+0000000185|MagicLinkParseActionList|328|[I]:no action
+[18:42:12.699]收←◆List
+0000000186|MagicLinkParsePropertyList|207|[I]:succ svc:deviceInfo, access:7
+0000000187|MagicLinkParseActionList|328|[I]:no actionList
+0000000188|MagicLinkParsePropertyList|207|[I]:succ svc:netInfo, access:5
+0000000189|MagicLinkParseActionList|328|[I]:no actionList
+0000000190|MagicLinkParsePropertyList|207|[I]:succ svc:ota, access:7
+0000000191|MagicLinkParseAction|297|[W]:no inDataList
+0000000191|MagicLinkParseAction|310|[W]:no outDataList
+0000000192|MagicLinkParseAction|297|[W]:no inDataList
+0000000193|MagicLinkParseAction|310|[W]:no outDataList
+0000000193|MagicLinkParsePropertyList|207|[I]:succ svc:timerCountdown, access:0
+0000000194|MagicLinkParseActionList|328|[I]:no actionList
+0000000195|MagicLinkParsePropertyList|207|[I]:succ svc:light, access:7
+0000000196|MagicLinkParseActionList|328|[I]:no actionList
+0000000197|MagicLinkParsePropertyList|207|[I]:succ svc:duration, access:3
+0000000198|MagicLinkParseActionList|328|[I]:no actionList
+0000000201|ModelParseJson|181|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_PROFILE_PARSE, 0
+0000000203|NetworkManagementInit|1658|[W]:succ
+0000000203|NetworkInit
+[18:42:12.718]收←◆|70|[I]:succ
+0000000204|DiscoveryInit|556|[I]:succ
+0000000204|TransmissionInit|40|[I]:succ
+0000000205|CloudLinkMqttInit|1092|[I]:succ
+0000000206|ConnectRegRecvPacket|392|[I]:add:1 succ
+0000000207|ConnectRegSendPacket|361|[I]:add:1 succ
+0000000207|ConnectMsgProcessInit|2631|[E]:sem init
+0000000209|ConnectInit|549|[I]:succ
+0000000209|MagicLinkComponentsInit|85|[I]:module:p2p
+0000000210|InitComponent|60|[I]:enable:p2p
+0000000210|InitComponent|64|[W]:no comp:p2p
+0000000211|MagicLinkComponentsInit|85|[I]:module:blenetcfg
+0000000212|InitComponent|60|[I]:enable:blenetcfg
+0000000212|ConnectRegSendPacket|361|[I]:add:3 succ
+0000000213|MagicLinkComponentsInit|85|[I]:module:coapconnect
+0000000214|InitComponent|60|[I]:enable:coapconnect
+udp_bind(ipaddr = 0.0.0.0, port = 5683)
+0000000215|ConnectRegSendPacket|361|[I]:add:2 succ
+0000000216|ConnectRegRecvPacket|392|[I]:add:2 succ
+0000000217|NetworkSetItemValueByStr|929|[E]:inv dst:prdName
+00000
+[18:42:12.732]收←◆00217|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdName
+0000000218|NetworkSetItemValueByStr|929|[E]:inv dst:manufactureName
+0000000219|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:manufactureName
+0000000220|NetworkSetItemValueByStr|929|[E]:inv dst:prdTypeName
+0000000221|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdTypeName
+0000000222|NetworkSetItemValueByStr|929|[E]:inv dst:modelId
+0000000222|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:modelId
+0000000223|NetworkSetItemValueByStr|929|[E]:inv dst:offeringCode
+0000000224|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:offeringCode
+0000000225|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeId
+0000000226|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeId
+0000000227|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeName
+0000000227|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeName
+0000000228|NetworkSetItemValueByStr|929|[E]:inv dst:qrScanMode
+0000000229|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:qrScanMode
+0000000230|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:udid
+0000000231|NetworkSetItemValueByStr|929|[E]:inv dst:d
+[18:42:12.746]收←◆evName
+0000000232|ModelSetDevInfoToNetwork|290|[E]:set item:deviceInfo:devName
+firmVer:1.0.0.201
+0000000233|ModelSetDevInfoToNetwork|272|[E]:set:deviceInfo:sdkVersion
+0000000234|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:MCUVersion
+
+[18:42:12.784]收←◆0000000271|MagicLinkHuksHalRegister|243|[I]:succ
+0000000273|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000274|ConfigRead|278|[E
+[18:42:12.790]收←◆]:header
+0000000274|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000275|ConfigRead|278|[E]:header
+0000000276|MagicLinkSafeConfigRead|434|[I]:cfg empty
+0000000276|ReadRegisterResultData|1466|[E]:cfg read
+0000000277|MagicLinkNetworkUpdateRegResult|2059|[W]:no reg ret
+0000000278|MagicLinkComponentsInit|85|[I]:module:netcfg
+0000000278|InitComponent|60|[I]:enable:netcfg
+0000000279|OnRegSessionServerRestart|1216|[I]:succ reg cb:hihonor.magiclinksdk,netCfg
+0000000280|NetCfgInit|739|[I]:succ
+0000000281|MagicLinkComponentsInit|85|[I]:module:register
+0000000282|InitComponent|60|[I]:enable:register
+0000000282|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000283|MagicLinkParseAction|297|[W]:no inDataList
+0000000284|MagicLinkParseAction|310|[W]:no outDataList
+0000000285|MagicLinkParseAction|297|[W]:no inDataList
+0000000286|MagicLinkParseAction|310|[W]:no outDataList
+0000000287|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,register
+0000000288|StartRegister|2170|[I]:start:0
+
+[18:42:13.149]收←◆0000000635|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000639|TlsNetworkInit|261|[I]:succ
+0000000640|TlsNetworkConnect|342|[I]:host:devicemgt-pre-drcn.platform.hihonorcloud.com
+0000000643|ProcessDns|304|[E]:dns err:202, errno:0
+0000000643|NoBlockConnect|320|[E]:dns
+0000000644|TlsNetworkConnect|346|[E]:conn ret:-1, errno:0
+0000000645|RegisterInit|2042|[I]:succ
+0000000645|MagicLinkComponentsInit|85|[I]:module:control
+0000000646|InitComponent|60|[I]:enable:control
+0000000646|On
+[18:42:13.167]收←◆CreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,control
+STA connected to target AP!
+udp_bind(ipaddr = 0.0.0.0, port = 68)
+0000000655|MagicLinkComponentsInit|85|[I]:module:ota
+0000000656|InitComponent|60|[I]:enable:ota
+0000000656|MagicLinkOtaFuncInit|103|[I]:init
+0000000658|OtaInit|3516|[I]:succ
+0000000658|MagicLinkComponentsInit|85|[I]:module:bi
+0000000659|InitComponent|60|[I]:enable:bi
+0000000660|InitComponent|64|[W]:no comp:bi
+0000000661|MagicLinkComponentsInit|85|[I]:module:magiclinkactive
+0000000662|InitComponent|60|[I]:enable:magiclinkactive
+0000000663|InitComponent|64|[W]:no comp:magiclinkactive
+0000000663|MagicLinkComponentsInit|85|[I]:module:netparamsync
+0000000664|InitComponent|60|[I]:enable:netparamsync
+0000000665|InitComponent|64|[W]:no comp:netparamsync
+0000000666|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000667|ExtComponentsMngtInit|108|[I]:not reg
+0000000668|SetLocalInfo|93|[I]:not reg
+0000000669|MagicLinkInit|235|[W]:su
+[18:42:13.185]收←◆cc
+0000000669|MagicLinkFastOffline|1827|[I]:fast offline
+0000000670|MagicLinkFastOffline|1829|[I]:already offline
+0000000671|ConnectionHttpConnect|99|[E]:tls conn
+0000000671|SocketHttpConnect|1742|[E]:http conn
+
+[18:42:13.534]收←◆------  combo_mcu_basic_example  ------
+
+[18:42:14.029]收←◆TCP/IP initialized.
+LN882H SDK Ver: 2.1_rc1 [build time:Oct 21 2024 18:12:10][0x02010001]
+
+[18:42:14.041]收←◆STA startup!
+[WLIB_E]HwEr:UKI:0
+
+[18:42:14.204]收←◆MEM enter MagicLinkSDKRun [111696]
+0000000175|MagicLinkComponentsInit|85|[I]:module:logcollect
+0000000176|InitComponent|60|[I]:enable:logcollect
+0000000176|InitComponent|64|[W]:no comp:logcollect
+0000000177|MagicLinkInit|164|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_INIT, 0
+VER:IoTSDK_1.1.0.344_20240413_test_debug, TM:Apr 13 2024 14:57:17
+
+
+[18:42:14.220]收←◆0000000188|MagicLinkParsePropertyList|207|[I]:succ svc:baseInfo, access:0
+0000000189|MagicLinkParseActionList|328|[I]:no actionList
+0000000190|MagicLinkParsePropertyList|207|[I]:succ svc:deviceInfo, access:7
+0000000191|MagicLinkParseActionList|328|[I]:no actionList
+0000000192|MagicLinkParsePropertyList|207|[I]:succ svc:netInfo, access:5
+0000000193|MagicLinkParseActionList|328|[I]:no actionList
+0000000194|MagicLinkParsePropertyList|207|[I]:succ svc:ota, access:7
+0000000195|MagicLinkParseAction|297|[W]:no inDataList
+0000000196|Magic
+[18:42:14.232]收←◆LinkParseAction|310|[W]:no outDataList
+0000000197|MagicLinkParseAction|297|[W]:no inDataList
+0000000197|MagicLinkParseAction|310|[W]:no outDataList
+0000000199|MagicLinkParsePropertyList|207|[I]:succ svc:timerCountdown, access:0
+0000000200|MagicLinkParseActionList|328|[I]:no actionList
+0000000200|MagicLinkParsePropertyList|207|[I]:succ svc:light, access:7
+0000000201|MagicLinkParseActionList|328|[I]:no actionList
+0000000202|MagicLinkParsePropertyList|207|[I]:succ svc:duration, access:3
+0000000203|MagicLinkParseActionList|328|[I]:no actionList
+0000000206|ModelParseJson|181|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_PROFILE_PARSE, 0
+0000000208|NetworkManagementInit|1658|
+[18:42:14.243]收←◆[W]:succ
+0000000208|NetworkInit|70|[I]:succ
+0000000209|DiscoveryInit|556|[I]:succ
+0000000209|TransmissionInit|40|[I]:succ
+0000000210|CloudLinkMqttInit|1092|[I]:succ
+0000000210|ConnectRegRecvPacket|392|[I]:add:1 succ
+0000000211|ConnectRegSendPacket|361|[I]:add:1 succ
+0000000212|ConnectMsgProcessInit|2631|[E]:sem init
+0000000213|ConnectInit|549|[I]:succ
+0000000213|MagicLinkComponentsInit|85|[I]:module:p2p
+0000000214|InitComponent|60|[I]:enable:p2p
+0000000215|InitComponent|64|[W]:no comp:p2p
+0000000215|MagicLinkComponentsInit|85|[I]:module:blenetcfg
+0000000216|InitComponent|60|[I]:enable:blenetcfg
+0000000217|ConnectRegSendPacket|361|[I]:add:3 succ
+0000000217|MagicLinkComponentsInit|85|[I]:module:coapconnect
+0000000218|InitComponent|60|[I]:enable:coapconnect
+udp_bind(ipaddr = 0.0.0.0, port = 5683)
+0000000220|ConnectRegSendPacket|361|[I]:add:2 succ
+0000000220|ConnectRegRecvPacket|392|[I]:add:2 succ
+0000000221|NetworkSetItemValueByStr|929|[E]:inv dst:prdName
+0000000222|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdName
+0000000222|NetworkSetItemValueByStr|929|[E]:inv dst:manufactureName
+0000000223|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:manufactureName
+0000000224|NetworkSetItemValueByStr|929|[E]:inv dst:prdTypeName
+0000000225|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdTypeName
+0000000226|NetworkSetItemValueByStr|929|[E]:inv dst:modelId
+0000000227|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo
+[18:42:14.263]收←◆:modelId
+0000000227|NetworkSetItemValueByStr|929|[E]:inv dst:offeringCode
+0000000228|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:offeringCode
+0000000229|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeId
+0000000230|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeId
+0000000231|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeName
+0000000232|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeName
+0000000233|NetworkSetItemValueByStr|929|[E]:inv dst:qrScanMode
+0000000233|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:qrScanMode
+0000000235|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:udid
+0000000236|NetworkSetItemValueByStr|929|[E]:inv dst:devName
+0000000236|ModelSetDevInfoToNetwork|290|[E]:set item:deviceInfo:devName
+firmVer:1.0.0.201
+0000000237|ModelSetDevInfoToNetwork|272|[E]:set:deviceInfo:sdkVersion
+0000000238|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:MCUVersion
+
+[18:42:14.304]收←◆0000000272|MagicLinkHuksHalRegis
+[18:42:14.310]收←◆ter|243|[I]:succ
+0000000273|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000274|ConfigRead|278|[E]:header
+0000000275|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000276|ConfigRead|278|[E]:header
+0000000276|MagicLinkSafeConfigRead|434|[I]:cfg empty
+0000000277|ReadRegisterResultData|1466|[E]:cfg read
+0000000277|MagicLinkNetworkUpdateRegResult|2059|[W]:no reg ret
+0000000278|MagicLinkComponentsInit|85|[I]:module:netcfg
+0000000279|InitComponent|60|[I]:enable:netcfg
+0000000279|OnRegSessionServerRestart|1216|[I]:succ reg cb:hihonor.magiclinksdk,netCfg
+0000000281|NetCfgInit|739|[I]:succ
+0000000281|MagicLinkComponentsInit|85|[I]:module:register
+0000000282|InitComponent|60|[I]:enable:register
+0000000283|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000284|MagicLinkParseAction|297|[W]:no inDataList
+0000000285|MagicLinkParseAction|310|[W]:no outDataList
+[18:42:14.323]收←◆
+0000000285|MagicLinkParseAction|297|[W]:no inDataList
+0000000286|MagicLinkParseAction|310|[W]:no outDataList
+0000000287|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,register
+0000000288|StartRegister|2170|[I]:start:0
+
+[18:42:14.596]收←◆STA connected to target AP!
+udp_bind(ipaddr = 0.0.0.0, port = 6
+[18:42:14.602]收←◆8)
+
+[18:42:14.680]收←◆0000000646|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000650|TlsNetworkInit|261|[I]:succ
+0000000650|TlsNetworkConnect|342|[I]:host:devicemgt-pre-drcn.platform.hihonorcloud.com
+udp_bind(ipaddr = 0.0.0.0, port = 61927)
+0000000656|RegisterInit|2042|[I]:succ
+0000000656|MagicLinkComponentsInit|85|[I]:module:control
+0000000657|InitComponent|60|[I]:enable:control
+0000000657|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,control
+0000000659|MagicLinkComponentsInit|85|[I]:module:ota
+0000000659|InitComponent|60|[I]:enable:ota
+0000000660|MagicLinkOtaFuncInit|103|[I]:init
+0000
+[18:42:14.698]收←◆000660|OtaInit|3516|[I]:succ
+0000000661|MagicLinkComponentsInit|85|[I]:module:bi
+0000000661|InitComponent|60|[I]:enable:bi
+0000000662|InitComponent|64|[W]:no comp:bi
+0000000662|MagicLinkComponentsInit|85|[I]:module:magiclinkactive
+0000000663|InitComponent|60|[I]:enable:magiclinkactive
+0000000664|InitComponent|64|[W]:no comp:magiclinkactive
+0000000664|MagicLinkComponentsInit|85|[I]:module:netparamsync
+0000000665|InitComponent|60|[I]:enable:netparamsync
+0000000666|InitComponent|64|[W]:no comp:netparamsync
+0000000666|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000667|ExtComponentsMngtInit|108|[I]:not reg
+0000000668|SetLocalInfo|93|[I]:not reg
+0000000668|MagicLinkInit|235|[W]:succ
+0000000669|MagicLinkFastOffline|1827|[I]:fast offline
+0000000669|MagicLinkFastOffline|1829|[I]:already offline
+
+[18:42:15.682]收←◆[low_level_output, 70] netif is not link up.
+
+[18:42:15.854]收←◆------  combo_mcu_basic_example  ------
+
+[18:42:16.348]收←◆TCP/IP initialized.
+LN882H SDK Ver: 2.1_rc1 [build time:Oct 21 
+[18:42:16.354]收←◆2024 18:12:10][0x02010001]
+STA startup!
+[WLIB_E]HwEr:UKI:0
+
+[18:42:16.520]收←◆MEM enter MagicLinkSDKRun [11169
+[18:42:16.526]收←◆6]
+0000000171|MagicLinkComponentsInit|85|[I]:module:logcollect
+0000000172|InitComponent|60|[I]:enable:logcollect
+0000000173|InitComponent|64|[W]:no comp:logcollect
+0000000173|MagicLinkInit|164|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_INIT, 0
+VER:IoTSDK_1.1.0.344_20240413_test_debug, TM:Apr 13 2024 14:57:17
+
+0000000184|MagicLinkParsePropertyList|207|[I]:succ svc:baseInfo, access:0
+0000000185|MagicLinkP
+[18:42:16.539]收←◆arseActionList|328|[I]:no actionList
+0000000186|MagicLinkParsePropertyList|207|[I]:succ svc:deviceInfo, access:7
+0000000187|MagicLinkParseActionList|328|[I]:no actionList
+0000000188|MagicLinkParsePropertyList|207|[I]:succ svc:netInfo, access:5
+0000000189|MagicLinkParseActionList|328|[I]:no actionList
+0000000190|MagicLinkParsePropertyList|207|[I]:succ svc:ota, access:7
+0000000190|MagicLinkParseAction|297|[W]:no inDataList
+0000000191|MagicLinkParseAction|310|[W]:no outDataList
+0000000192|MagicLinkParseAction|297|[W]:no inDataList
+0000000192|MagicLinkParseAction|310|[W]:no outDataList
+0000000193|MagicLinkParsePropertyList|207|[I]:succ svc:timerCountdown, access:0
+0000000194|MagicLinkParseActionList|328|[I]:no actionList
+0000000195|MagicLinkParsePropertyList|207|[I]:succ svc:light, access:7
+0000000196|MagicLinkParseActionList|328|[I]:no actionList
+0000000197|MagicLinkParsePropertyList|207|[I]:succ svc:duration, access:3
+0000000197|MagicLinkParseActionList|328|[I]:no actionList
+0000000201|ModelParseJson|181|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_PROFILE_PARSE, 0
+0000000202|NetworkManagementInit|1658|[W]:succ
+0000000203|NetworkInit|70|[I]:succ
+0000000203|Discove
+[18:42:16.558]收←◆ryInit|556|[I]:succ
+0000000204|TransmissionInit|40|[I]:succ
+0000000204|CloudLinkMqttInit|1092|[I]:succ
+0000000209|ConnectRegRecvPacket|392|[I]:add:1 succ
+0000000210|ConnectRegSendPacket|361|[I]:add:1 succ
+0000000211|ConnectMsgProcessInit|2631|[E]:sem init
+0000000212|ConnectInit|549|[I]:succ
+0000000213|MagicLinkComponentsInit|85|[I]:module:p2p
+0000000214|InitComponent|60|[I]:enable:p2p
+0000000214|InitComponent|64|[W]:no comp:p2p
+0000000215|MagicLinkComponentsInit|85|[I]:module:blenetcfg
+0000000215|InitComponent|60|[I]:enable:blenetcfg
+0000000216|ConnectRegSendPacket|361|[I]:add:3 succ
+0000000217|MagicLinkComponentsInit|85|[I]:module:coapconnect
+0000000217|InitComponent|60|[I]:enable:coapconnect
+udp_bind(ipaddr = 0.0.0.0, port = 5683)
+0000000219|ConnectRegSendPacket|361|[I]:add:2 succ
+0000000220|ConnectRegRecvPacket|392|[I]:add:2 succ
+0000000220|NetworkSetItemValueByStr|929|[E]:inv dst:prdName
+0000000221|ModelSetBaseInfoToNetwor
+[18:42:16.577]收←◆k|238|[E]:set item:baseInfo:prdName
+0000000222|NetworkSetItemValueByStr|929|[E]:inv dst:manufactureName
+0000000223|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:manufactureName
+0000000224|NetworkSetItemValueByStr|929|[E]:inv dst:prdTypeName
+0000000224|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdTypeName
+0000000225|NetworkSetItemValueByStr|929|[E]:inv dst:modelId
+0000000226|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:modelId
+0000000227|NetworkSetItemValueByStr|929|[E]:inv dst:offeringCode
+0000000228|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:offeringCode
+0000000229|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeId
+0000000230|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeId
+0000000231|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeName
+0000000232|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeName
+0000000233|NetworkSetItemValueByStr|929|[E]:inv dst:qrScanMode
+0000000234|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:qrScanMode
+0000000235|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:udid
+0000000236|NetworkSetItemValueByStr|929|[E]:inv dst:devName
+0000000236|ModelSetDevInfoToNetwork|290|[E]:set item:d
+[18:42:16.592]收←◆eviceInfo:devName
+firmVer:1.0.0.201
+0000000237|ModelSetDevInfoToNetwork|272|[E]:set:deviceInfo:sdkVersion
+0000000238|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:MCUVersion
+
+[18:42:16.625]收←◆0000000272|MagicLinkHuksHalRegister|243|[I]:succ
+0000000273|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000274|ConfigRead|278|[E]:header
+0000000275|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000276|ConfigRead|278|[E]:header
+0000000276|MagicLinkSafeConfigRead|434|[I]:cfg empty
+0000000277|ReadRegisterResultData|1466|[E]:cfg read
+0000000278|MagicLinkNetworkUpdateRegResult|2059|[W]:no reg ret
+0000000279|MagicLinkComponentsInit|85|[I]:module:netcfg
+0000000280|InitComponent|60|[I]:enable:netcfg
+0000000280|
+[18:42:16.638]收←◆OnRegSessionServerRestart|1216|[I]:succ reg cb:hihonor.magiclinksdk,netCfg
+0000000281|NetCfgInit|739|[I]:succ
+0000000282|MagicLinkComponentsInit|85|[I]:module:register
+0000000283|InitComponent|60|[I]:enable:register
+0000000283|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000284|MagicLinkParseAction|297|[W]:no inDataList
+0000000285|MagicLinkParseAction|310|[W]:no outDataList
+0000000286|MagicLinkParseAction|297|[W]:no inDataList
+0000000286|MagicLinkParseAction|310|[W]:no outDataList
+0000000287|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,register
+0000000288|StartRegister|2170|[I]:start:0
+
+[18:42:16.965]收←◆STA connected to target AP!
+udp_bind(ipaddr = 0.0.0.0, port = 68)
+
+[18:42:17.001]收←◆0000000648|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000652|TlsNetworkInit|261|[I]:succ
+0000000652|TlsNetworkConnect|342|[I]:host:devicemgt-pre-drcn.platform.hihonorcloud.com
+udp_bind(ipaddr = 0.0.0.0, port = 18001)
+
+[18:42:17.012]收←◆0000000658|RegisterInit|2042|[I]:succ
+0000000658|MagicLinkComponentsInit|85|[I]:module:control
+0000000659|InitComponent|60|[I]:enable:control
+0000000659|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,control
+0000000661|MagicLinkComponentsInit|85|[I]:module:ota
+0000000661|InitComponent|60|[I]:enable:ota
+0000000662|MagicLinkOtaFuncInit|103|[I]:init
+0000000662|OtaInit|3516|[I]:succ
+0000000663|MagicLinkComponentsInit|85|[I]:module:bi
+0000000663|InitComponent|60|[I]:enable:bi
+0000000664|InitComponent|64|[W]:no comp:bi
+0000000664|MagicLinkComponentsInit|85|[I]:module:magiclinkactive
+0000000665|InitComponent|60|[I]:enable:magiclinkactive
+0000000666|InitComponent|64|[W]:no comp:magiclinkactive
+000
+[18:42:17.024]收←◆0000667|MagicLinkComponentsInit|85|[I]:module:netparamsync
+0000000667|InitComponent|60|[I]:enable:netparamsync
+0000000668|InitComponent|64|[W]:no comp:netparamsync
+0000000669|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000669|ExtComponentsMngtInit|108|[I]:not reg
+0000000670|SetLocalInfo|93|[I]:not reg
+0000000670|MagicLinkInit|235|[W]:succ
+0000000671|MagicLinkFastOffline|1827|[I]:fast offline
+0000000671|MagicLinkFastOffline|1829|[I]:already offline
+
+[18:42:17.373]收←◆------  combo_mcu_basic_example  ------
+
+[18:42:17.868]收←◆TCP/IP initialized.
+LN882H SDK Ver: 2.1_rc1 [build time:Oct 21 2024 18:12:10][0x02010001]
+STA startup!
+[WLIB_E]HwEr:UKI:0
+
+[18:42:18.042]收←◆MEM enter MagicLinkSDKRun [111696]
+0000000171|MagicLinkComponentsInit|85|[I]:module:logcollect
+0000000172|InitComponent|60|[I]:enable:logcollect
+0000000173|InitComponent|64|[W]:no comp:logcollect
+0000000173|MagicLinkInit|164|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_INIT, 0
+VER:IoTSDK_1.1.0.344_20240413_test_debug, TM:Apr 13 2024 14:57:17
+
+
+[18:42:18.055]收←◆0000000184|MagicLinkParsePropertyList|207|[I]:succ svc:baseInfo, access:0
+0000000185|MagicLinkParseActionList|328|[I]:no actionList
+0000000186|MagicLinkParsePropertyList|207|[I]:succ svc:deviceInfo, access:7
+0000000187|MagicLinkParseActionList|328|[I]:no actionList
+0000000188|MagicLinkParsePropertyList|207|[I]:succ svc:netInfo, access:5
+0000000189|MagicLinkParseActionList|328|[I]:no actionList
+0000000190|MagicLinkParsePropertyList|207|[I]:succ svc:ota, access:7
+0000000191|MagicLinkParseAction|297|[W]:no inDataList
+0000000191|MagicLinkParseAction|310|[W]:no outDataList
+0000000192|MagicLinkParseAction|297|[W]:no inDataList
+0000000193|MagicLinkParseAction|310|[W]:no outDataList
+0000000194|MagicLinkParsePropertyList|207|[I]:succ svc:timerCountdown, access:0
+0000000195|MagicLinkParseActionList|328|[I]:no actionList
+0000000195|MagicLinkParsePropertyList|207|[I]:succ svc:light, access:7
+0000000196|MagicLinkParseActionList|328|[I]:no actionList
+0000000197|MagicLinkParsePropertyList|207|[I]:succ svc:duration, access:3
+0000000198|Magi
+[18:42:18.073]收←◆cLinkParseActionList|328|[I]:no actionList
+0000000201|ModelParseJson|181|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_PROFILE_PARSE, 0
+0000000203|NetworkManagementInit|1658|[W]:succ
+0000000203|NetworkInit|70|[I]:succ
+0000000204|DiscoveryInit|556|[I]:succ
+0000000204|TransmissionInit|40|[I]:succ
+0000000205|CloudLinkMqttInit|1092|[I]:succ
+0000000205|ConnectRegRecvPacket|392|[I]:add:1 succ
+0000000206|ConnectRegSendPacket|361|[I]:add:1 succ
+0000000207|ConnectMsgProcessInit|2631|[E]:sem init
+0000000208|ConnectInit|549|[I]:succ
+0000000208|MagicLinkComponentsInit|85|[I]:module:p2p
+0000000209|InitComponent|60|[I]:enable:p2p
+0000000209|InitComponent|64|[W]:no comp:p2p
+0000000210|MagicLinkComponentsInit|85|[I]:module:blenetcfg
+0000000211|InitComponent|60|[I]:enable:blenetcfg
+0000000211|ConnectRegSendPacket|361|[I]:add:3 succ
+0000000212|MagicLinkComponentsInit|85|[I]:module:coapconnect
+0000000213|InitComponent|60|[I]:enable:coapconnect
+udp_bind(ipaddr = 0.0.0.0, port = 5683)
+0000000214|ConnectRegSendPacket|361|[I]:add:2 succ
+0000000215|ConnectRegRecvPacket|392|[I]:add:2 succ
+0000000215|NetworkSetItemValueByStr|929|[E]:inv dst:prdName
+0000000216|ModelSetBaseInfoToNetwork|
+[18:42:18.092]收←◆238|[E]:set item:baseInfo:prdName
+0000000217|NetworkSetItemValueByStr|929|[E]:inv dst:manufactureName
+0000000218|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:manufactureName
+0000000219|NetworkSetItemValueByStr|929|[E]:inv dst:prdTypeName
+0000000224|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdTypeName
+0000000225|NetworkSetItemValueByStr|929|[E]:inv dst:modelId
+0000000226|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:modelId
+0000000227|NetworkSetItemValueByStr|929|[E]:inv dst:offeringCode
+0000000228|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:offeringCode
+0000000229|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeId
+0000000230|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeId
+0000000231|NetworkSetItemValueByStr|929|[E]:i
+[18:42:18.107]收←◆nv dst:prdSubTypeName
+0000000232|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeName
+0000000232|NetworkSetItemValueByStr|929|[E]:inv dst:qrScanMode
+0000000233|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:qrScanMode
+0000000234|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:udid
+0000000235|NetworkSetItemValueByStr|929|[E]:inv dst:devName
+0000000236|ModelSetDevInfoToNetwork|290|[E]:set item:deviceInfo:devName
+firmVer:1.0.0.201
+0000000237|ModelSetDevInfoToNetwork|272|[E]:set:deviceInfo:sdkVersion
+0000000238|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:MCUVersion
+
+[18:42:18.144]收←◆0000000271|MagicLinkHuksHalRegis
+[18:42:18.150]收←◆ter|243|[I]:succ
+0000000272|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000273|ConfigRead|278|[E]:header
+0000000274|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000275|ConfigRead|278|[E]:header
+0000000276|MagicLinkSafeConfigRead|434|[I]:cfg empty
+0000000276|ReadRegisterResultData|1466|[E]:cfg read
+0000000277|MagicLinkNetworkUpdateRegResult|2059|[W]:no reg ret
+0000000278|MagicLinkComponentsInit|85|[I]:module:netcfg
+0000000279|InitComponent|60|[I]:enable:netcfg
+0000000279|OnRegSessionServerRestart|1216|[I]:succ reg cb:hihonor.magiclinksdk,netCfg
+0000000280|NetCfgInit|739|[I]:succ
+0000000281|MagicLinkComponentsInit|85|[I]:module:register
+0000000281|InitComponent|60|[I]:enable:register
+0000000282|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000283|MagicLinkParseAction|297|[W]:no inDataList
+0000000284|MagicLinkParseAction|310|[W]:no outDataList
+0000000284|MagicLinkParseAction|297|[W]:no inDataList
+0000000285|MagicLinkParseAction|310|[W]:no outDataList
+0000000286|OnCreateSessionServer|1154|[I]:succ 
+[18:42:18.167]收←◆create server:hihonor.magiclinksdk,register
+0000000287|StartRegister|2170|[I]:start:0
+
+[18:42:18.513]收←◆STA connected to target AP!
+udp_bind(ipaddr = 0.0.0.0, port = 68)
+
+[18:42:18.524]收←◆0000000647|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000652|TlsNetworkInit|261|[I]:succ
+0000000653|TlsNetworkConnect|342|[I]:host:devicemgt-pre-drcn.platform.hihonorcloud.com
+udp_bind(ipaddr = 0.0.0.0, port = 23839)
+0000000657|RegisterInit|2042|[I]:succ
+0000000657|MagicLinkComponentsInit|85|[I]:module:control
+0000000658|InitComponent|60|[I]:enable:control
+0000000658|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,control
+0000000660|MagicLinkComponentsInit|85|[I]:module:ota
+0000000660|InitComponent|60|[I]:enable:ota
+0000000661|MagicLinkOtaFuncInit|103|[I]:init
+0000000661|OtaInit|3516|[I]:succ
+0000000662|MagicLinkComponentsInit|85|[I]:module:bi
+0000000662|InitComponent|60|[I]:enable:bi
+0000000663|InitComponent|64|[W]:no comp:bi
+0000000663|MagicLinkCo
+[18:42:18.542]收←◆mponentsInit|85|[I]:module:magiclinkactive
+0000000664|InitComponent|60|[I]:enable:magiclinkactive
+0000000665|InitComponent|64|[W]:no comp:magiclinkactive
+0000000666|MagicLinkComponentsInit|85|[I]:module:netparamsync
+0000000666|InitComponent|60|[I]:enable:netparamsync
+0000000667|InitComponent|64|[W]:no comp:netparamsync
+0000000668|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000668|ExtComponentsMngtInit|108|[I]:not reg
+0000000669|SetLocalInfo|93|[I]:not reg
+0000000669|MagicLinkInit|235|[W]:succ
+0000000670|MagicLinkFastOffline|1827|[I]:fast offline
+0000000670|MagicLinkFastOffline|1829|[I]:already offline
+
+[18:42:19.524]收←◆[low_level_output, 70] netif is not link up.
+
+[18:42:19.674]收←◆[low_level_output, 70] netif is not link up.
+
+[18:42:19.895]收←◆------  combo_mcu_basic_example 
+[18:42:19.901]收←◆ ------
+
+[18:42:20.391]收←◆TCP/IP initialized.
+LN882H SDK Ver: 2.1_rc1 [build time:Oct 21 2024 18:12:10][0x02010001]
+
+[18:42:20.399]收←◆STA startup!
+[WLIB_E]HwEr:UKI:0
+
+[18:42:20.562]收←◆MEM enter MagicLinkSDKRun [111712]
+0000000171|MagicLinkComponentsInit|85|[I]:module:logcollect
+0000000172|InitComponent|60|[I]:enable:logcollect
+0000000172|InitComponent|64|[W]:no comp:logcollect
+0000000173|MagicLinkInit|164|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_INIT, 0
+VER:IoTSDK_1.1.0.344_20240413_test_debug, TM:Apr 13 2024 14:57:17
+
+
+[18:42:20.577]收←◆0000000184|MagicLinkParsePropertyList|207|[I]:succ svc:baseInfo, access:0
+0000000185|MagicLinkParseActionList|328|[I]:no actionList
+0000000186|MagicLinkParsePropertyList|207|[I]:succ svc:deviceInfo, access:7
+0000000187|MagicLinkParseActionList|328|[I]:no actionList
+0000000188|MagicLinkParsePropertyList|207|[I]:succ svc:netInfo, access:5
+0000000188|MagicLinkParseActionList|328|[I]:no actionList
+0000000189|MagicLinkParsePropertyList|207|[I]:succ svc:ota, access:7
+0000000190|MagicLinkParseAction|297|[W]:no inDataList
+0000000191|MagicLinkParseAction|310|[W]:no outDataList
+0000000192|MagicLinkParseAction|297|[W]:no inDataList
+0000000192|MagicLinkParseAction|3
+[18:42:20.590]收←◆10|[W]:no outDataList
+0000000193|MagicLinkParsePropertyList|207|[I]:succ svc:timerCountdown, access:0
+0000000194|MagicLinkParseActionList|328|[I]:no actionList
+0000000195|MagicLinkParsePropertyList|207|[I]:succ svc:light, access:7
+0000000196|MagicLinkParseActionList|328|[I]:no actionList
+0000000196|MagicLinkParsePropertyList|207|[I]:succ svc:duration, access:3
+0000000197|MagicLinkParseActionList|328|[I]:no actionList
+0000000201|ModelParseJson|181|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_PROFILE_PARSE, 0
+0000000202|NetworkManagementInit|1658|[W]:succ
+0000000203|NetworkInit|70|[I]:succ
+0000000203|DiscoveryInit|556|[I]:succ
+0000000204|TransmissionInit|40|[I]:succ
+0000000205|CloudLinkMqttInit|1092|
+[18:42:20.602]收←◆[I]:succ
+0000000205|ConnectRegRecvPacket|392|[I]:add:1 succ
+0000000206|ConnectRegSendPacket|361|[I]:add:1 succ
+0000000207|ConnectMsgProcessInit|2631|[E]:sem init
+0000000208|ConnectInit|549|[I]:succ
+0000000208|MagicLinkComponentsInit|85|[I]:module:p2p
+0000000209|InitComponent|60|[I]:enable:p2p
+0000000209|InitComponent|64|[W]:no comp:p2p
+0000000210|MagicLinkComponentsInit|85|[I]:module:blenetcfg
+0000000211|InitComponent|60|[I]:enable:blenetcfg
+0000000211|ConnectRegSendPacket|361|[I]:add:3 succ
+0000000212|MagicLinkComponentsInit|85|[I]:module:coapconnect
+0000000213|InitComponent|60|[I]:enable:coapconnect
+udp_bind(ipaddr = 0.0.0.0, port = 5683)
+0000000214|ConnectRegSendPacket|361|[I]:add:2 succ
+0000000215|ConnectRegRecvPacket|392|[I]:add:2 succ
+0000000216|NetworkSetItemValueByStr|929|[E]:inv dst:prdName
+0000000216|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdName
+0000000217|NetworkSetItemValueByStr|929|[E]:inv dst:manufactureName
+0000000218|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:manufactureName
+0000000219|NetworkSetItemValueByStr|929|[E]:inv dst:prdTypeName
+0000000220|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdTypeName
+0000000221|NetworkSetItemValueByStr|929|[E]:inv dst:modelId
+0000000222|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:modelId
+0000000222|NetworkSetItemValueByStr|929|[E]:inv dst:offeringCode
+0000000223|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:offeringCode
+0000000
+[18:42:20.621]收←◆224|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeId
+0000000225|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeId
+0000000226|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeName
+0000000227|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeName
+0000000228|NetworkSetItemValueByStr|929|[E]:inv dst:qrScanMode
+0000000228|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:qrScanMode
+0000000229|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:udid
+0000000230|NetworkSetItemValueByStr|929|[E]:inv dst:devName
+0000000231|ModelSetDevInfoToNetwork|290|[E]:set item:deviceInfo:devName
+firmVer:1.0.0.201
+0000000232|ModelSetDevInfoToNetwork|272|[E]:set:deviceInfo:sdkVersion
+0000000233|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:MCUVersion
+
+[18:42:20.665]收←◆0000000270|MagicLinkHuksHalRegister|243|[I]:succ
+0000000271|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000272|ConfigRead|278|[E]:header
+0000000273|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000274|ConfigRead|278|[E]:header
+0000000274|MagicLinkSafeConfigRead|434|[I]:cfg empty
+0000000275|ReadRegisterResultData|1466|[E]:cfg read
+0000000276|MagicLinkNetworkUpdateRegResult|2059|[W]:no reg ret
+0000000277|MagicLinkComponentsInit|85|[I]:module:netcfg
+0000000277|InitComponent|60|[I]:enable:netcfg
+0000000278|OnRegSessionServerRestart|1216|[I]:succ reg cb:hihonor.magiclinksdk,netCfg
+0000000280|NetCfgInit|739|[I]:succ
+0000000280|MagicLinkComponentsInit|85|[I]:module:register
+0000000281|InitComponent|60|[I]:enable:register
+0000000281|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000283|MagicLinkParseAction|297|[W]:no inDataList
+0000000284|MagicLinkParseAction|310|[W]:no outDataList
+0000000284|MagicLinkParseAction|297|[W]:no inDataList
+0000000285|MagicLinkParseAction|310|[W]
+[18:42:20.686]收←◆:no outDataList
+0000000286|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,register
+0000000287|StartRegister|2170|[I]:start:0
+
+[18:42:21.031]收←◆STA connected to target AP!
+udp_bind(ipaddr = 0.0.0.0, port = 68)
+
+[18:42:21.042]收←◆0000000645|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000650|TlsNetworkInit|261|[I]:succ
+0000000651|TlsNetworkConnect|342|[I]:host:devicemgt-pre-drcn.platform.hihonorcloud.com
+udp_bind(ipaddr = 0.0.0.0, port = 65389)
+0000000655|RegisterInit|2042|[I]:succ
+0000000655|MagicLinkComponentsInit|85|[I]:module:control
+0000000656|InitComponent|60|[I]:enable:control
+0000000656|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,control
+0000000658|MagicLinkComponentsInit|85|[I]:module:ota
+0000000658|InitComponent|60|[I]:enable:ota
+0000000659|MagicLinkOtaFuncInit|103|[I]:init
+0000
+[18:42:21.060]收←◆000659|OtaInit|3516|[I]:succ
+0000000660|MagicLinkComponentsInit|85|[I]:module:bi
+0000000660|InitComponent|60|[I]:enable:bi
+0000000661|InitComponent|64|[W]:no comp:bi
+0000000662|MagicLinkComponentsInit|85|[I]:module:magiclinkactive
+0000000663|InitComponent|60|[I]:enable:magiclinkactive
+0000000663|InitComponent|64|[W]:no comp:magiclinkactive
+0000000664|MagicLinkComponentsInit|85|[I]:module:netparamsync
+0000000665|InitComponent|60|[I]:enable:netparamsync
+0000000665|InitComponent|64|[W]:no comp:netparamsync
+0000000666|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000667|ExtComponentsMngtInit|108|[I]:not reg
+0000000667|SetLocalInfo|93|[I]:not reg
+0000000668|MagicLinkInit|235|[W]:succ
+0000000668|MagicLinkFastOffline|1827|[I]:fast offline
+0000000669|MagicLinkFastOffline|1829|[I]:already offline
+
+[18:42:22.045]收←◆[low_level_output, 70] netif is not link up.
+
+[18:42:22.094]收←◆[low_level_output, 70] netif is not link up.
+
+[18:42:22.416]收←◆------  combo_mcu_basic_example  ------
+
+[18:42:22.910]收←◆TCP/IP initialized.
+LN882H SDK 
+[18:42:22.916]收←◆Ver: 2.1_rc1 [build time:Oct 21 2024 18:12:10][0x02010001]
+STA startup!
+[WLIB_E]HwEr:UKI:0
+
+[18:42:23.082]收←◆MEM enter MagicLinkSDKRun [11169
+[18:42:23.089]收←◆6]
+0000000171|MagicLinkComponentsInit|85|[I]:module:logcollect
+0000000172|InitComponent|60|[I]:enable:logcollect
+0000000173|InitComponent|64|[W]:no comp:logcollect
+0000000173|MagicLinkInit|164|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_INIT, 0
+VER:IoTSDK_1.1.0.344_20240413_test_debug, TM:Apr 13 2024 14:57:17
+
+0000000184|MagicLinkParsePropertyList|207|[I]:succ svc:baseInfo, access:0
+0000000185|MagicLinkParseActionList|328|[I]:no action
+[18:42:23.103]收←◆List
+0000000186|MagicLinkParsePropertyList|207|[I]:succ svc:deviceInfo, access:7
+0000000187|MagicLinkParseActionList|328|[I]:no actionList
+0000000188|MagicLinkParsePropertyList|207|[I]:succ svc:netInfo, access:5
+0000000189|MagicLinkParseActionList|328|[I]:no actionList
+0000000190|MagicLinkParsePropertyList|207|[I]:succ svc:ota, access:7
+0000000190|MagicLinkParseAction|297|[W]:no inDataList
+0000000195|MagicLinkParseAction|310|[W]:no outDataList
+0000000197|MagicLinkParseAction|297|[W]:no inDataList
+0000000197|MagicLinkParseAction|310|[W]:no outDataList
+0000000198|MagicLinkParsePropertyList|207|[I]:succ svc:timerCountdown, access:0
+0000000199|MagicLinkParseActionList|328|[I]:no actionList
+0000000201|MagicLinkParsePropertyList|207|[I]:succ svc:light, access:7
+0000000201|MagicLinkParseActionList|328|[I]:no actionList
+0000000202|MagicLinkParsePropertyList|207|[I]:succ svc:duration, 
+[18:42:23.121]收←◆access:3
+0000000203|MagicLinkParseActionList|328|[I]:no actionList
+0000000206|ModelParseJson|181|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_PROFILE_PARSE, 0
+0000000208|NetworkManagementInit|1658|[W]:succ
+0000000208|NetworkInit|70|[I]:succ
+0000000209|DiscoveryInit|556|[I]:succ
+0000000209|TransmissionInit|40|[I]:succ
+0000000210|CloudLinkMqttInit|1092|[I]:succ
+0000000210|ConnectRegRecvPacket|392|[I]:add:1 succ
+0000000211|ConnectRegSendPacket|361|[I]:add:1 succ
+0000000212|ConnectMsgProcessInit|2631|[E]:sem init
+0000000213|ConnectInit|549|[I]:succ
+0000000213|MagicLinkComponentsInit|85|[I]:module:p2p
+0000000214|InitComponent|60|[I]:enable:p2p
+0000000214|InitComp
+[18:42:23.135]收←◆onent|64|[W]:no comp:p2p
+0000000215|MagicLinkComponentsInit|85|[I]:module:blenetcfg
+0000000216|InitComponent|60|[I]:enable:blenetcfg
+0000000217|ConnectRegSendPacket|361|[I]:add:3 succ
+0000000217|MagicLinkComponentsInit|85|[I]:module:coapconnect
+0000000218|InitComponent|60|[I]:enable:coapconnect
+udp_bind(ipaddr = 0.0.0.0, port = 5683)
+0000000220|ConnectRegSendPacket|361|[I]:add:2 succ
+0000000221|ConnectRegRecvPacket|392|[I]:add:2 succ
+0000000221|NetworkSetItemValueByStr|929|[E]:inv dst:prdName
+0000000222|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdName
+0000000223|NetworkSetItemValueByStr|929|[E]:inv dst:manufactureName
+0000000224|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:manufactureName
+0000000225|NetworkSetItemValueByStr|929|[E]:inv dst:prdTypeName
+0000000226|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdTypeName
+0000000227|NetworkSetItemValueByStr|929|[E]:inv dst:modelId
+0000000227|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:modelId
+0000000228|NetworkSetItemValueByStr|929|[E]:inv dst:offeringCode
+0000000229|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:offeringCode
+0000000230|NetworkSetItemValueByStr|929
+[18:42:23.149]收←◆|[E]:inv dst:prdSubTypeId
+0000000231|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeId
+0000000231|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeName
+0000000232|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeName
+0000000233|NetworkSetItemValueByStr|929|[E]:inv dst:qrScanMode
+0000000234|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:qrScanMode
+0000000235|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:udid
+0000000236|NetworkSetItemValueByStr|929|[E]:inv dst:devName
+0000000237|ModelSetDevInfoToNetwork|290|[E]:set item:deviceInfo:devName
+firmVer:1.0.0.201
+0000000238|ModelSetDevInfoToNetwork|272|[E]:set:deviceInfo:sdkVersion
+0000000239|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:MCUVersion
+
+[18:42:23.187]收←◆0000000272|MagicLinkHuksHalRegister|243|[I]:succ
+0000000274|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000274|ConfigRead|278|[E]:header
+0000000275|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000276|ConfigRead|278|[E]:header
+0000000277|MagicLinkSafeConfigRead|434|[I]:cfg empty
+0000000277|ReadRegisterResultData|1466|[E]:cfg read
+0000000278|MagicLinkNetworkUpdateRegResult|2059|[W]:no reg ret
+0000000279|MagicLin
+[18:42:23.200]收←◆kComponentsInit|85|[I]:module:netcfg
+0000000279|InitComponent|60|[I]:enable:netcfg
+0000000280|OnRegSessionServerRestart|1216|[I]:succ reg cb:hihonor.magiclinksdk,netCfg
+0000000281|NetCfgInit|739|[I]:succ
+0000000281|MagicLinkComponentsInit|85|[I]:module:register
+0000000282|InitComponent|60|[I]:enable:register
+0000000283|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000284|MagicLinkParseAction|297|[W]:no inDataList
+0000000285|MagicLinkParseAction|310|[W]:no outDataList
+0000000285|MagicLinkParseAction|297|[W]:no inDataList
+0000000286|MagicLinkParseAction|310|[W]:no outDataList
+0000000287|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,register
+0000000288|StartRegister|2170|[I]:start:0
+
+[18:42:23.550]收←◆0000000635|CheckRegisterEmpty|17
+[18:42:23.557]收←◆84|[W]:dev unregister
+0000000639|TlsNetworkInit|261|[I]:succ
+0000000640|TlsNetworkConnect|342|[I]:host:devicemgt-pre-drcn.platform.hihonorcloud.com
+0000000641|ProcessDns|304|[E]:dns err:202, errno:0
+0000000641|NoBlockConnect|320|[E]:dns
+0000000642|TlsNetworkConnect|346|[E]:conn ret:-1, errno:0
+0000000643|ConnectionHttpConnect|99|[E]:tls conn
+0000000643|SocketHttpConnect|1742|[E]:http conn
+0000000645|RegisterInit|2042|[I]:succ
+0000000645|MagicLinkComponentsInit|85|[I]:module:control
+0000000646|InitComponent|60|[I]:enable:control
+0000000646|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,control
+0000000647|MagicLinkComponentsInit|85|[I]:module:ota
+0000000648|InitComponent|60|[I]:enable:ota
+0000000649|MagicLinkOtaFuncInit|103|[I]:init
+0000000649|OtaInit|3516|[I]:succ
+0000000650|MagicLinkComponentsInit|85|[I]:module:bi
+0000000650|InitComponent|60|[I]:enable:bi
+0000000651|InitComponent|64|[W]:no comp:bi
+0000000651|MagicLinkComponentsInit|85|[I]:module:magiclinkactive
+0000000652|InitComponent|60|[I]:enable:magiclinkactive
+0000000653|InitComponent|64|[W]:no comp:magiclinkactive
+0000000653|MagicLinkComponentsInit|85|[I]:module:netparamsync
+0000000654|InitComponent|60|[I]:enable:netparamsync
+0000000655|InitComponent|64|[W]:no comp:netparamsync
+
+[18:42:23.577]收←◆0000000655|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000656|ExtComponentsMngtInit|108|[I]:not reg
+0000000657|SetLocalInfo|93|[I]:not reg
+0000000657|MagicLinkInit|235|[W]:succ
+0000000658|MagicLinkFastOffline|1827|[I]:fast offline
+0000000658|MagicLinkFastOffline|1829|[I]:already offline
+
+[18:42:24.555]收←◆[low_level_output, 70] netif is not link up.
+[low_level_output,
+[18:42:24.561]收←◆ 70] netif is not link up.
+0000001644|TlsNetworkConnect|342|[I]:host:devicemgt-pre-drcn.platform.hihonorcloud.com
+0000001645|ProcessDns|304|[E]:dns err:202, errno:0
+0000001645|NoBlockConnect|320|[E]:dns
+0000001646|TlsNetworkConnect|346|[E]:conn ret:-1, errno:0
+0000001647|ConnectionHttpConnect|99|[E]:tls conn
+0000001647|SocketHttpConnect|1742|[E]:http conn
+
+[18:42:24.616]收←◆[low_level_output, 70] netif is not link up.
+[low_level_output,
+[18:42:24.622]收←◆ 70] netif is not link up.
+STA connected to target AP!
+udp
+[18:42:24.635]收←◆_bind(ipaddr = 0.0.0.0, port = 68)
+
+[18:42:24.936]收←◆------  combo_mcu_basic_example  ------
+
+[18:42:25.431]收←◆TCP/IP initialized.
+LN882H SDK Ver: 2.1_rc1 [build time:Oct 21 2024 18:12:10][0x02010001]
+STA startup!
+[WLIB_E]HwEr:UKI:0
+
+[18:42:25.604]收←◆MEM enter MagicLinkSDKRun [111712]
+0000000172|MagicLinkComponentsInit|85|[I]:module:logcollect
+0000000172|InitComponent|60|[I]:enable:logcollect
+0000000173|InitComponent|64|[W]:no comp:logcollect
+0000000174|MagicLinkInit|164|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_INIT, 0
+VER:IoTSDK_1.1.0.344_20240413_test_debug, TM:Apr 13 2024 14:57:17
+
+
+[18:42:25.620]收←◆0000000185|MagicLinkParsePropertyList|207|[I]:succ svc:baseInfo, access:0
+0000000186|MagicLinkParseActionList|328|[I]:no actionList
+0000000187|MagicLinkParsePropertyList|207|[I]:succ svc:deviceInfo, access:7
+0000000188|MagicLinkParseActionList|328|[I]:no actionList
+0000000189|MagicLinkParsePropertyList|207|[I]:succ svc:netInfo, access:5
+0000000190|MagicLinkParseActionList|328|[I]:no actionList
+0000000191|MagicLinkParsePropertyList|207|[I]:succ svc:ota, access:7
+0000000192|MagicLinkParseAction|297|[W]:no inDataList
+0000000193|MagicLinkParseAction|310|[W]:no outDataList
+0000000194|MagicLinkParseAction|297|[W]:no inDataList
+0000000194|MagicLinkParseAction|310|[W]:no outDataList
+0000000195|MagicLinkParsePropertyList|207|[I]:succ svc:timerCountdown, access:0
+0000000196|MagicLinkParseActionList|328|[I]:no actionList
+0000000197|MagicLinkParsePropertyList|207|[I]:succ svc:light, access:7
+0000000198|MagicLinkParseActionList|328|[I]:no actionList
+0000000198|MagicLinkParsePropertyList|207|[I]:succ svc:dur
+[18:42:25.638]收←◆ation, access:3
+0000000199|MagicLinkParseActionList|328|[I]:no actionList
+0000000203|ModelParseJson|181|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_PROFILE_PARSE, 0
+0000000204|NetworkManagementInit|1658|[W]:succ
+0000000205|NetworkInit|70|[I]:succ
+0000000205|DiscoveryInit|556|[I]:succ
+0000000206|TransmissionInit|40|[I]:succ
+0000000206|CloudLinkMqttInit|1092|[I]:succ
+0000000207|ConnectRegRecvPacket|392|[I]:add:1 succ
+0000000207|ConnectRegSendPacket|361|[I]:add:1 succ
+0000000208|ConnectMsgProcessInit|2631|[E]:sem init
+0000000209|ConnectInit|549|[I]:succ
+0000000210|MagicLinkComponentsInit|85|[I]:module:p2p
+0000000210|InitComponent|60|[I]:enable:p2p
+0000000211|InitComponent|64|[W]:no comp:p2p
+0000000211|MagicLinkComponentsInit|85|[I]:module:blenetcfg
+0000000212
+[18:42:25.653]收←◆|InitComponent|60|[I]:enable:blenetcfg
+0000000213|ConnectRegSendPacket|361|[I]:add:3 succ
+0000000213|MagicLinkComponentsInit|85|[I]:module:coapconnect
+0000000214|InitComponent|60|[I]:enable:coapconnect
+udp_bind(ipaddr = 0.0.0.0, port = 5683)
+0000000215|ConnectRegSendPacket|361|[I]:add:2 succ
+0000000216|ConnectRegRecvPacket|392|[I]:add:2 succ
+0000000217|NetworkSetItemValueByStr|929|[E]:inv dst:prdName
+0000000217|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdName
+0000000218|NetworkSetItemValueByStr|929|[E]:inv dst:manufactureName
+0000000219|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:manufactureName
+0000000220|NetworkSetItemValueByStr|929|[E]:inv dst:prdTypeName
+0000000221|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdTypeName
+0000000222|NetworkSetItemValueByStr|929|[E]:inv dst:modelId
+0000000223|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:modelId
+0000000223|NetworkSetItemValueByStr|929|[E]:inv dst:offeringCode
+0000000224|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:offeringCode
+0000000225|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeId
+0000000226|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeId
+0000000227|NetworkSetIte
+[18:42:25.668]收←◆mValueByStr|929|[E]:inv dst:prdSubTypeName
+0000000228|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeName
+0000000233|NetworkSetItemValueByStr|929|[E]:inv dst:qrScanMode
+0000000234|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:qrScanMode
+0000000235|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:udid
+0000000236|NetworkSetItemValueByStr|929|[E]:inv dst:devName
+0000000236|ModelSetDevInfoToNetwork|290|[E]:set item:deviceInfo:devName
+firmVer:1.0.0.201
+0000000238|ModelSetDevInfoToNetwork|272|[E]:set:deviceInfo:sdkVersion
+0000000239|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:MCUVersion
+
+[18:42:25.708]收←◆0000000272|MagicLinkHuksHalRegis
+[18:42:25.714]收←◆ter|243|[I]:succ
+0000000274|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000274|ConfigRead|278|[E]:header
+0000000275|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000276|ConfigRead|278|[E]:header
+0000000277|MagicLinkSafeConfigRead|434|[I]:cfg empty
+0000000277|ReadRegisterResultData|1466|[E]:cfg read
+0000000278|MagicLinkNetworkUpdateRegResult|2059|[W]:no reg ret
+0000000279|MagicLinkComponentsInit|85|[I]:module:netcfg
+0000000279|InitComponent|60|[I]:enable:netcfg
+0000000280|OnRegSessionServerRestart|1216|[I]:succ reg cb:hihonor.magiclinksdk,netCfg
+0000000281|NetCfgInit|739|[I]:succ
+0000000282|MagicLinkComponentsInit|85|[I]:module:register
+0000000282|InitComponent|60|[I]:enable:register
+0000000283|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000284|MagicLinkParseAction|297|[W]:no inDataList
+0000000285|MagicLinkParseAction|310|[W]:no outDataList
+0000000285|MagicLinkParseAction|297|[W]:no inDataList
+0000000286|MagicLinkParseAction|310|[W]
+[18:42:25.727]收←◆:no outDataList
+0000000287|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,register
+0000000288|StartRegister|2170|[I]:start:0
+
+[18:42:26.074]收←◆0000000639|CheckRegisterEmpty|1784|[W]:dev unregister
+STA connected to target AP!
+udp_bind(ipaddr = 0.0.0.0, port = 68)
+0000000649|RegisterInit|2042|[I]:succ
+0000000649|MagicLinkComponentsInit|85|[I]:module:control
+0000000651|InitComponent|60|[I]
+[18:42:26.092]收←◆:enable:control
+0000000651|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,control
+0000000653|MagicLinkComponentsInit|85|[I]:module:ota
+0000000654|InitComponent|60|[I]:enable:ota
+0000000655|MagicLinkOtaFuncInit|103|[I]:init
+0000000656|OtaInit|3516|[I]:succ
+0000000656|MagicLinkComponentsInit|85|[I]:module:bi
+0000000658|InitComponent|60|[I]:enable:bi
+0000000658|InitComponent|64|[W]:no comp:bi
+0000000659|MagicLinkComponentsInit|85|[I]:module:magiclinkactive
+0000000660|InitComponent|60|[I]:enable:magiclinkactive
+0000000660|InitComponent|64|[W]:no comp:magiclinkactive
+0000000661|MagicLinkComponentsInit|85|[I]:module:netparamsync
+0000000662|InitComponent|60|[I]:enable:netparamsync
+0000000662|InitComponent|64|[W]:no comp:netparamsync
+0000000663|CheckRegisterE
+[18:42:26.104]收←◆mpty|1784|[W]:dev unregister
+0000000664|ExtComponentsMngtInit|108|[I]:not reg
+0000000664|SetLocalInfo|93|[I]:not reg
+0000000665|MagicLinkInit|235|[W]:succ
+0000000665|MagicLinkFastOffline|1827|[I]:fast offline
+0000000666|MagicLinkFastOffline|1829|[I]:already offline
+0000000669|TlsNetworkInit|261|[I]:succ
+0000000669|TlsNetworkConnect|342|[I]:host:devicemgt-pre-drcn.platform.hihonorcloud.com
+udp_bind(ipaddr = 0.0.0.0, port = 25823)
+
+[18:42:27.082]收←◆[low_level_output, 70] netif is 
+[18:42:27.086]收←◆not link up.
+
+[18:42:27.137]收←◆[low_level_output, 70] netif is not link up.

@@ -1,7 +1,7 @@
 #include"dimmingLib.h"
-#define RL_PWM_W                                           MY_HAL_PWM_0
-#define RL_PWM_C                                           MY_HAL_PWM_4
-#define RL_PWM_MAX                                         (9999)
+#define PWM_W                                           MY_HAL_PWM_0
+#define PWM_C                                           MY_HAL_PWM_4
+#define RL_PWM_MAX                                         (100)
 #define LIGHT_BRIGHT_MAX                                   (65535)
 #define LIGHT_BRIGHT_MIN                                   (uint16_t)(LIGHT_BRIGHT_MAX * 1.0f / 100.0f + 0.5f)
 #define LIGHT_COLOR_CCT_MIN                                (3000)

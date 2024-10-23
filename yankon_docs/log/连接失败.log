@@ -1,0 +1,141 @@
+
+[13:35:25.449]ÊÕ¡û¡ô0000130157|ConnectDispatchFunc|8
+[13:35:25.453]ÊÕ¡û¡ô3|[I]:running
+
+[13:35:28.560]ÊÕ¡û¡ô0000133267|BleConnectedCb|152|[I]:ble conn
+0000133268|UpdateConnParam|123|[I]:update conn param
+0000133269|ProcGapConnect|373|[I]:interval:0, addr:*:*:*:2a:41:19
+
+[13:35:30.452]ÊÕ¡û¡ô0000135160|ConnectDispatchFunc|83|[I]:running
+
+[13:35:31.372]ÊÕ¡û¡ô0000136080|ConnectMsgProcessFunc
+[13:35:31.376]ÊÕ¡û¡ô|2338|[I]:running
+
+[13:35:35.452]ÊÕ¡û¡ô0000140160|ConnectDispatchFunc|83|[I]:running
+
+[13:35:38.536]ÊÕ¡û¡ô0000143244|BleDisconnectedCb|178|[I]:ble disconn
+0000143245|ProcGapDisconnect|534|[I]:disconn id:0
+0000143246|ProcGapStartAdv|341|[I]:start adv:0
+0000143246|StartAdv|537|[I]:adv suc
+
+[13:35:38.651]ÊÕ¡û¡ô0000143359|BleConnectedCb|152|[I
+[13:35:38.657]ÊÕ¡û¡ô]:ble conn
+0000143359|UpdateConnParam|123|[I]:update conn param
+0000143360|ProcGapConnect|373|[I]:interval:0, addr:*:*:*:2a:41:19
+
+[13:35:40.453]ÊÕ¡û¡ô0000145161|ConnectDispatchFunc|83|[I]:running
+
+[13:35:41.094]ÊÕ¡û¡ô0000145801|ConnectMsgProcessFunc|2338|[I]:running
+
+[13:35:45.453]ÊÕ¡û¡ô0000150161|ConnectDispatchFunc|83|[I]:running
+
+[13:35:48.587]ÊÕ¡û¡ô0000153294|BleDisconnectedCb|178
+[13:35:48.593]ÊÕ¡û¡ô|[I]:ble disconn
+0000153295|ProcGapDisconnect|534|[I]:disconn id:0
+0000153296|ProcGapStartAdv|341|[I]:start adv:0
+0000153296|StartAdv|537|[I]:adv suc
+
+[13:35:48.702]ÊÕ¡û¡ô0000153409|BleConnectedCb|152|[I]:ble conn
+0000153409|UpdateConnParam|123|[I]:update conn param
+0000153410|ProcGapConnect|373|[I]:interval:0, addr:*:*:*:2a:41:19
+
+[13:35:50.453]ÊÕ¡û¡ô0000155161|ConnectDispatchFunc|83|[I]:running
+
+[13:35:50.803]ÊÕ¡û¡ô0000155511|ConnectMsgProcessFunc|2338|[I]:running
+
+[13:35:55.453]ÊÕ¡û¡ô0000160161|ConnectDispatchFunc|83|[I]:running
+
+[13:35:58.686]ÊÕ¡û¡ô0000163394|BleDisconnectedCb|178|[I]:ble disconn
+0000163395|ProcGapDisconnect|534|[I]:disconn id:0
+0000163396|ProcGapStartAdv|341|[I]:start adv:0
+0000163396|StartAdv|537|[I]:adv suc
+
+[13:35:59.006]ÊÕ¡û¡ô0000163713|BleConnectedCb|152|[I]:ble conn
+0000163714|UpdateConnParam|123|[I]:update conn param
+0000163715|ProcGapConnect|373|[I]:interval:0, addr:*:*:*:2a:41:19
+
+[13:36:00.454]ÊÕ¡û¡ô0000165161|ConnectDispatchFunc|83|[I]:running
+
+[13:36:00.504]ÊÕ¡û¡ô0000165211|ConnectMsgProcessFunc|2338|[I]:running
+
+[13:36:05.453]ÊÕ¡û¡ô0000170161|ConnectDispatchFunc|83|[I]:running
+
+[13:36:08.737]ÊÕ¡û¡ô0000173444|BleDisconnectedCb|178|[I]:ble disconn
+0000173445|ProcGapDisconnect|534|[I]:disconn id:0
+0000173446|ProcGapStartAdv|341|[I]:start adv:0
+0000173446|StartAdv|537|[I]:adv suc
+
+[13:36:10.223]ÊÕ¡û¡ô0000174931|ConnectMsgProcessFunc|2338|[I]:running
+
+[13:36:10.454]ÊÕ¡û¡ô0000175161|ConnectDispatchFunc|83|[I]:running
+
+[13:36:10.831]ÊÕ¡û¡ô0000175538|BleConnectedCb|152|[I]:ble conn
+0000175538|UpdateConnParam|123|[I]:update conn param
+0000175539|ProcGapConnect|373|[I]:interval:0, addr:*:*:*:2a:41:19
+
+[13:36:15.294]ÊÕ¡û¡ôadc raw:  798, temp_IC:   36
+To
+[13:36:15.300]ÊÕ¡û¡ôtal:131204; Free:95824;
+
+[13:36:15.454]ÊÕ¡û¡ô0000180161|ConnectDispatchFunc|83|[I]:running
+
+[13:36:18.787]ÊÕ¡û¡ô0000183494|BleDisconnectedCb|178
+[13:36:18.794]ÊÕ¡û¡ô|[I]:ble disconn
+0000183495|ProcGapDisconnect|534|[I]:disconn id:0
+0000183495|ProcGapStartAdv|341|[I]:start adv:0
+0000183496|StartAdv|537|[I]:adv suc
+
+[13:36:19.004]ÊÕ¡û¡ô0000183711|BleConnectedCb|152|[I]:ble conn
+0000183712|UpdateConnParam|123|[I]:update conn param
+0000183713|ProcGapConnect|373|[I]:interval:0, addr:*:*:*:2a:41:19
+
+[13:36:19.924]ÊÕ¡û¡ô0000184631|ConnectMsgProcessFunc|2338|[I]:running
+
+[13:36:20.454]ÊÕ¡û¡ô0000185161|ConnectDispatchFunc|83|[I]:running
+
+[13:36:25.454]ÊÕ¡û¡ô0000190161|ConnectDispatchFunc|83|[I]:running
+
+[13:36:28.787]ÊÕ¡û¡ô0000193494|BleDisconnectedCb|178
+[13:36:28.795]ÊÕ¡û¡ô|[I]:ble disconn
+0000193495|ProcGapDisconnect|534|[I]:disconn id:0
+0000193495|ProcGapStartAdv|341|[I]:start adv:0
+0000193496|StartAdv|537|[I]:adv suc
+
+[13:36:28.893]ÊÕ¡û¡ô0000193600|BleConnectedCb|152|[I]:ble conn
+0000193601|UpdateConnParam|123|[I]:update conn param
+0000193601|ProcGapConnect|373|[I]:interval:0, addr:*:*:*:2a:41:19
+
+[13:36:29.636]ÊÕ¡û¡ô0000194343|ConnectMsgProcessFunc
+[13:36:29.642]ÊÕ¡û¡ô|2338|[I]:running
+
+[13:36:30.456]ÊÕ¡û¡ô0000195163|ConnectDispatchFunc|83|[I]:running
+
+[13:36:35.456]ÊÕ¡û¡ô0000200163|ConnectDispatchFunc|83|[I]:running
+
+[13:36:38.837]ÊÕ¡û¡ô0000203544|BleDisconnectedCb|178|[I]:ble disconn
+0000203545|ProcGapDisconnect|534|[I]:disconn id:0
+0000203545|ProcGapStartAdv|341|[I]:start adv:0
+0000203546|StartAdv|537|[I]:adv suc
+
+[13:36:39.265]ÊÕ¡û¡ô0000203972|BleConnectedCb|152|[I]:ble conn
+0000203972|UpdateConnParam|123|[I]:update conn param
+0000203973|ProcGapConnect|373|[I]:interval:0, addr:*:*:*:2a:41:19
+
+[13:36:39.347]ÊÕ¡û¡ô0000204054|ConnectMsgProcessFunc|2338|[I]:running
+
+[13:36:40.457]ÊÕ¡û¡ô0000205164|ConnectDispatchFunc|83|[I]:running
+
+[13:36:45.457]ÊÕ¡û¡ô0000210164|ConnectDispatchFunc|8
+[13:36:45.469]ÊÕ¡û¡ô3|[I]:running
+
+[13:36:48.938]ÊÕ¡û¡ô0000213644|BleDisconnectedCb|178
+[13:36:48.958]ÊÕ¡û¡ô|[I]:ble disconn
+0000213645|ProcGapDisconnect|534|[I]:disconn id:0
+0000213645|ProcGapStartAdv|341|[I]:start adv:0
+0000213646|StartAdv|537|[I]:adv suc
+
+[13:36:49.060]ÊÕ¡û¡ô0000213767|ConnectMsgProcessFunc
+[13:36:49.084]ÊÕ¡û¡ô|2338|[I]:running
+
+[13:36:50.460]ÊÕ¡û¡ô0000215167|ConnectDispatchFunc|8
+[13:36:50.469]ÊÕ¡û¡ô3|[I]:running

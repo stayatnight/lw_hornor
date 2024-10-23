@@ -1,0 +1,3686 @@
+
+[15:35:52.623]ÊÕ¡û¡ô------  combo_mcu_basic_example  ------
+
+[15:35:53.079]ÊÕ¡û¡ô------  combo_mcu_basic_example  ------
+
+[15:35:53.136]ÊÕ¡û¡ô------  combo_mcu_basic_example  ------
+
+[15:35:53.639]ÊÕ¡û¡ôTCP/IP initialized.
+LAMP INIT TEST LN882H SDK Ver: 2.1_rc1 [build time:Oct 23 2024 15:35:04][0x
+[15:35:53.645]ÊÕ¡û¡ô02010001]
+LAMP INIT 445 LAMP INIT OK
+ GPIOB  STATUS:0
+key init ok
+LAMP INIT OK get IO STATUS 0
+
+[15:35:53.663]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:53.673]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:53.692]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:53.713]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:53.723]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:53.743]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:53.754]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:53.774]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:53.794]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:53.802]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:53.824]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:53.832]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:53.852]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:53.863]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:53.882]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:53.893]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:53.913]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:53.924]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:53.942]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:53.963]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:53.972]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:53.992]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:54.004]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:54.024]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:54.033]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:54.052]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:54.072]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:54.084]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:54.103]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:54.112]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:54.132]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:54.142]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:54.162]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:54.184]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:54.192]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:54.213]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:54.224]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:54.244]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:54.252]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:54.272]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:54.284]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:54.303]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:54.324]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:54.333]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:54.353]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:54.363]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:54.382]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:54.393]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:54.413]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:54.424]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:54.443]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:54.463]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:54.471]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:54.493]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:54.502]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:54.524]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:54.543]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:54.554]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:54.573]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:54.582]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:54.604]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:54.612]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:54.632]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:54.643]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:54.663]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:54.674]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:54.694]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:54.713]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:54.724]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:54.743]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:54.752]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:54.772]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:54.784]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:54.803]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:54.824]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:54.832]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:54.852]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:54.863]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:54.882]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:54.893]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:54.913]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:54.924]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:54.944]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:54.964]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:54.972]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:54.993]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:55.004]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:55.023]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:55.043]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:55.054]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:55.074]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:55.082]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:55.102]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:55.113]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:55.132]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:55.143]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:55.163]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:55.173]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:55.193]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:55.213]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:55.224]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:55.244]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:55.252]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:55.274]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:55.292]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:55.303]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:55.323]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:55.334]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:55.354]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:55.362]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:55.382]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:55.393]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:55.413]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:55.424]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:55.444]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:55.463]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:55.473]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:55.493]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:55.502]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:55.522]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:55.543]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:55.551]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:55.573]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:55.582]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:55.602]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:55.613]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:55.632]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:55.643]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:55.663]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:55.674]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:55.693]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:55.713]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:55.722]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:55.742]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:55.753]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:55.774]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:55.793]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:55.802]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:55.824]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:55.832]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:55.852]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:55.862]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:55.882]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:55.893]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:55.914]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:55.932]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:55.942]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:55.962]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:55.973]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:55.993]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:56.002]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:56.022]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:56.043]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:56.053]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:56.073]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:56.082]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:56.102]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:56.113]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:56.132]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:56.143]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:56.163]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:56.173]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:56.193]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:56.212]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:56.223]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:56.243]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:56.253]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:56.272]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:56.283]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:56.303]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:56.324]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:56.332]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:56.352]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:56.363]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:56.382]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:56.393]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:56.413]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:56.434]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:56.442]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:56.462]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:56.473]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:56.493]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:56.504]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:56.523]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:56.543]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:56.552]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:56.574]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:56.582]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:56.602]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:56.613]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:56.632]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:56.643]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:56.663]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:56.674]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:56.694]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:56.713]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:56.724]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:56.744]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:56.753]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:56.773]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:56.793]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:56.803]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:56.823]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:56.832]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:56.852]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:56.863]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:56.882]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:56.893]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:56.913]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:56.924]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:56.943]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:56.962]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:56.974]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:56.993]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:57.002]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:57.024]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:57.033]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:57.053]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:57.072]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:57.084]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:57.104]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:57.112]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:57.132]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:57.143]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:57.162]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:57.173]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:57.193]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:57.213]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:57.224]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:57.244]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:57.252]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:57.272]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:57.283]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:57.303]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:57.322]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:57.332]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:57.352]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:57.363]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:57.383]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:57.394]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:57.413]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:57.432]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:57.443]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:57.464]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:57.473]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:57.492]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:57.503]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:57.524]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:57.543]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:57.552]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:57.571]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:57.582]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:57.602]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:57.613]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:57.632]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:57.642]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:57.662]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:57.673]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:57.693]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:57.713]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:57.722]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:57.743]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:57.752]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:57.772]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:57.793]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:57.802]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:57.823]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:57.832]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:57.852]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:57.863]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:57.883]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:57.893]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:57.911]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:57.932]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:57.943]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:57.963]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:57.972]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:57.993]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:58.002]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:58.024]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:58.044]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:58.052]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:58.073]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:58.082]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:58.102]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:58.113]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:58.132]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:58.143]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:58.164]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:58.182]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:58.193]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:58.214]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:58.222]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:58.242]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:58.253]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:58.272]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:58.283]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:58.303]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:58.322]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:58.332]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:58.352]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:58.363]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:58.382]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:58.393]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:58.413]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:58.423]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:58.443]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:58.464]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:58.472]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:58.492]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:58.501]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:58.524]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:58.533]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:58.553]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:58.572]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:35:58.581]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:35:58.604]ÊÕ¡û¡ôget IO STATUS 1
+switch is 1
+
+[15:35:58.612]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:35:58.632]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:35:58.643]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:35:58.662]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:35:58.674]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:35:58.694]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:35:58.713]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:35:58.722]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 0
+
+[15:35:58.742]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:58.751]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:58.772]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:58.784]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:58.801]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:58.822]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:58.832]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:58.853]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:58.862]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:58.882]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:58.893]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:58.913]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 1
+
+[15:35:58.933]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:35:58.942]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+xxxxx is 0
+switc
+[15:35:58.958]ÊÕ¡û¡ôh is 0
+get IO STATUS 1
+
+[15:35:58.973]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:35:58.993]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:35:59.002]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:35:59.024]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:35:59.033]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:35:59.053]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:35:59.071]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:35:59.082]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:35:59.103]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:35:59.113]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:35:59.132]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:35:59.143]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:35:59.163]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:35:59.182]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:35:59.192]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:35:59.213]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:35:59.224]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 0
+
+[15:35:59.243]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:59.252]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:59.273]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:59.283]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:59.302]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:59.322]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:59.332]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:59.354]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:59.363]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:59.382]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:59.393]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 1
+
+[15:35:59.412]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:35:59.423]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+xxxxx is 0
+switch is 1
+
+[15:35:59.441]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:35:59.463]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:35:59.472]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:35:59.493]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:35:59.502]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:35:59.522]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:35:59.543]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:35:59.552]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:35:59.564]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:35:59.581]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:35:59.602]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:35:59.613]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:35:59.632]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:35:59.643]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:35:59.663]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:35:59.682]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:35:59.693]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:59.713]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:59.722]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:59.742]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:59.751]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:59.774]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:59.793]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:59.802]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:59.823]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:59.833]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:59.853]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:35:59.862]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:35:59.882]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:35:59.893]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:35:59.911]ÊÕ¡û¡ôget IO STATUS 1
+xxxxx is 0
+switch is 0
+
+[15:35:59.924]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:35:59.944]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:35:59.963]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:35:59.972]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:35:59.993]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:00.002]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:00.023]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:00.042]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:00.053]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:00.074]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:00.082]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:00.102]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:00.111]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 1
+
+[15:36:00.132]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:00.153]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:00.163]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:00.182]ÊÕ¡û¡ôget IO STATUS 1
+xxxxx is 0
+switch is 1
+
+[15:36:00.193]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:00.213]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:00.222]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:00.242]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:00.254]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:00.274]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:00.282]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:00.303]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:00.322]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:00.332]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:00.352]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:00.363]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:00.382]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+xxxxx is 0
+switc
+[15:36:00.397]ÊÕ¡û¡ôh is 0
+get IO STATUS 1
+
+[15:36:00.413]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:00.432]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:00.443]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:00.461]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:00.473]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:00.492]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:00.503]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:00.524]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:00.533]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:00.552]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:00.572]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:00.582]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:00.602]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:00.614]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 0
+
+[15:36:00.632]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:00.643]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:00.663]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:00.682]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:00.693]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:00.711]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:00.722]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:00.743]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:00.752]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:00.772]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:00.783]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:00.801]ÊÕ¡û¡ôget IO STATUS 1
+xxxxx is 0
+switch is 1
+
+[15:36:00.814]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:00.832]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:00.852]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:00.863]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:00.882]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:00.893]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:00.914]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:00.932]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:00.943]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:00.963]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:00.972]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:00.993]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:01.002]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:01.021]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:01.033]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:01.053]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:01.071]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:01.082]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:01.102]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:01.111]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:01.132]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:01.143]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:01.163]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:01.182]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:01.193]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:01.213]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:01.222]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:01.243]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:01.252]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:01.272]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:01.293]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:01.302]ÊÕ¡û¡ôget IO STATUS 1
+xxxxx is 0
+switch is 0
+
+[15:36:01.314]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:01.331]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 0
+
+[15:36:01.351]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:01.363]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:01.381]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:01.392]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:01.412]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:01.424]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:01.443]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:01.463]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:01.471]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:01.493]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:01.502]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:01.522]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:01.543]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:01.552]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:01.572]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:01.581]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:01.601]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:01.612]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:01.632]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:01.653]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:01.661]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:01.682]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:01.693]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:01.713]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:01.722]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:01.743]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:01.752]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:01.771]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:01.783]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:01.803]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:01.821]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:01.832]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 1
+
+[15:36:01.852]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:01.861]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+xxxxx is 0
+switc
+[15:36:01.877]ÊÕ¡û¡ôh is 1
+get IO STATUS 1
+
+[15:36:01.893]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:01.913]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:01.932]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:01.943]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:01.961]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:01.973]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:01.993]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:02.002]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:02.023]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:02.042]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:02.053]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:02.073]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:02.082]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:02.102]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:02.111]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:02.132]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:02.143]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:02.163]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:02.182]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:02.193]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:02.211]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:02.223]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:02.242]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:02.251]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 1
+
+[15:36:02.272]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:02.283]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+xxxxx is 0
+switch is 0
+
+[15:36:02.303]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:02.322]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:02.332]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 0
+
+[15:36:02.352]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:02.363]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:02.382]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:02.393]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:02.413]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:02.432]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:02.443]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:02.463]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:02.472]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:02.493]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:02.502]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:02.522]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 1
+
+[15:36:02.543]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:02.552]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+xxxxx is 0
+switc
+[15:36:02.567]ÊÕ¡û¡ôh is 1
+get IO STATUS 1
+
+[15:36:02.583]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:02.603]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:02.613]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:02.632]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:02.643]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:02.663]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:02.682]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:02.693]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:02.714]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:02.722]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:02.743]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:02.752]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:02.771]ÊÕ¡û¡ôget IO STATUS 1
+xxxxx is 0
+switch is 0
+
+[15:36:02.784]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 0
+
+[15:36:02.803]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:02.823]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:02.832]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:02.852]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:02.861]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:02.882]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:02.893]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:02.913]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:02.931]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:02.942]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:02.963]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:02.972]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:02.993]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:03.002]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:03.022]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:03.043]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:03.052]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:03.072]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:03.081]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:03.101]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:03.113]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:03.133]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:03.142]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:03.162]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:03.183]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:03.192]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:03.212]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:03.221]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:03.243]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:03.252]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:03.272]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:03.293]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:03.302]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:03.322]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:03.333]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:03.351]ÊÕ¡û¡ôget IO STATUS 1
+xxxxx is 0
+switch is 1
+
+[15:36:03.364]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 0
+
+[15:36:03.382]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:03.393]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:03.413]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:03.433]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:03.442]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:03.463]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:03.472]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:03.493]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:03.502]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:03.522]ÊÕ¡û¡ôget IO STATUS 1
+xxxxx is 0
+switch is 0
+get IO STATUS 1
+
+[15:36:03.543]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:03.552]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:03.572]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:03.581]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:03.602]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:03.613]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:03.632]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:03.652]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:03.661]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:03.682]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:03.693]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:03.713]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:03.722]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:03.743]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:03.752]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:03.772]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:03.793]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:03.802]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:03.822]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:03.832]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:03.852]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:03.861]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:03.882]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:03.893]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:03.912]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:03.933]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:03.942]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:03.962]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:03.971]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:03.991]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:04.003]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:04.023]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:04.041]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:04.053]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:04.072]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:04.082]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:04.102]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:04.111]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:04.132]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:04.143]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:04.163]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:04.182]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:04.191]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:04.211]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:04.223]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:04.243]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:04.252]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:04.272]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:04.293]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:04.302]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:04.322]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:04.332]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:04.352]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:04.363]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:04.382]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:04.393]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:04.413]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:04.431]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:04.442]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:04.462]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:04.471]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:04.493]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:04.502]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:04.522]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:04.543]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:04.552]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:04.572]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:04.582]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:04.602]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:04.611]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:04.632]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:04.652]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:04.661]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:04.682]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:04.693]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:04.711]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:04.722]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:04.741]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:04.752]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:04.771]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:04.783]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:04.803]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:04.822]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:04.832]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:04.853]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:04.863]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:04.882]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:04.902]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:04.911]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:04.931]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:04.943]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:04.961]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:04.973]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:04.993]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:05.002]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:05.022]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:05.042]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:05.051]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:05.072]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:05.081]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:05.101]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:05.113]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:05.132]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:05.143]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:05.163]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:05.181]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:05.193]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:05.213]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:05.222]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:05.243]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:05.252]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:05.272]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:05.293]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:05.302]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:05.322]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:05.331]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:05.352]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:05.363]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:05.382]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:05.402]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:05.411]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:05.432]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:05.443]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:05.463]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:05.472]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:05.491]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:05.503]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:05.521]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:05.533]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:05.553]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:05.571]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:05.583]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:05.603]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:05.612]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:05.632]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:05.652]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:05.661]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:05.682]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:05.693]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:05.711]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:05.722]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:05.743]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:05.752]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:05.772]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:05.791]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:05.802]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:05.823]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:05.832]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:05.852]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:05.861]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:05.882]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:05.901]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:05.912]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:05.923]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:05.941]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:05.961]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:05.973]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:05.993]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:06.002]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:06.022]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:06.043]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:06.052]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:06.072]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:06.081]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:06.102]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:06.113]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:06.132]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:06.142]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:06.161]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:06.182]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:06.193]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:06.213]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:06.222]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:06.243]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:06.252]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:06.272]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:06.293]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:06.302]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:06.322]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:06.331]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:06.351]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:06.363]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:06.382]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:06.402]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:06.411]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:06.432]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:06.441]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:06.461]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:06.473]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:06.491]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:06.502]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:06.522]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:06.543]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:06.552]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:06.572]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:06.581]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:06.601]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:06.612]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:06.633]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:06.642]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:06.662]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:06.673]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:06.693]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:06.713]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:06.722]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:06.743]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:06.752]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:06.772]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:06.793]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:06.802]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:06.822]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:06.832]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:06.852]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:06.863]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:06.882]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:06.893]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:06.913]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:06.932]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:06.943]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:06.963]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:06.972]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:06.991]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:07.002]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:07.022]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:07.043]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:07.052]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:07.072]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:07.081]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:07.102]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:07.113]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:07.132]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:07.151]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:07.162]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:07.183]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:07.192]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:07.212]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:07.221]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:07.242]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:07.262]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:07.271]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:07.291]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:07.302]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:07.323]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:07.331]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:07.352]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:07.363]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:07.382]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:07.402]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:07.411]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:07.431]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:07.443]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:07.461]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:07.472]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:07.492]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:07.501]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:07.522]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:07.533]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:07.551]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:07.571]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:07.583]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:07.603]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:07.613]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:07.633]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:07.642]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:07.663]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:07.682]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:07.692]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:07.712]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:07.721]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:07.742]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:07.753]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:07.771]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:07.783]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:07.802]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:07.821]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:07.832]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:07.852]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:07.861]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:07.881]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:07.893]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:07.911]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:07.932]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:07.941]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:07.961]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:07.973]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:07.991]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:08.002]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:08.023]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:08.041]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:08.052]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:08.073]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:08.081]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:08.101]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:08.112]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:08.133]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:08.142]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:08.162]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:08.183]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:08.191]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:08.213]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:08.222]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:08.241]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:08.252]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:08.271]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:08.283]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:08.303]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:08.322]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:08.332]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:08.352]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:08.361]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:08.382]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:08.402]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:08.413]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:08.432]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:08.440]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:08.463]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:08.471]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:08.492]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:08.512]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:08.521]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:08.533]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:08.553]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:08.572]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:08.582]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:08.601]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:08.613]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:08.632]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:08.652]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:08.661]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:08.682]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:08.693]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:08.711]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:08.722]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:08.741]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:08.752]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:08.773]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:08.782]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:08.801]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:08.822]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:08.832]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:08.852]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:08.861]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:08.882]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:08.902]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:08.911]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:08.932]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:08.941]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:08.961]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:08.972]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:08.991]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:09.002]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:09.023]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:09.032]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:09.053]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:09.072]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:09.082]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:09.103]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:09.111]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:09.132]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:09.152]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:09.161]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:09.182]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:09.191]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:09.211]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:09.223]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:09.241]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:09.253]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:09.272]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:09.291]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:09.302]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:09.323]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:09.332]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:09.351]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:09.362]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:09.382]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:09.403]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:09.413]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:09.432]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:09.441]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:09.461]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:09.472]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:09.491]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:09.502]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:09.522]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:09.543]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:09.553]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:09.572]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:09.582]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:09.602]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:09.612]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:09.633]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:09.642]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:09.663]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:09.682]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:09.691]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:09.711]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:09.722]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:09.741]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:09.752]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:09.771]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:09.791]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:09.803]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:09.822]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:09.832]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:09.852]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:09.861]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:09.882]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:09.902]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:09.911]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:09.932]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:09.941]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:09.961]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:09.973]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:09.991]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:10.002]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:10.022]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:10.043]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:10.051]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:10.070]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:10.080]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:10.100]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:10.111]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:10.131]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:10.150]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:10.161]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:10.180]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:10.190]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:10.230]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+get IO STATUS 0
+
+[15:36:10.238]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+get IO STATUS 0
+
+[15:36:10.262]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:10.273]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:10.286]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:10.300]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:10.317]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:10.335]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:10.352]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:10.363]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:10.385]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:10.393]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:10.412]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:10.434]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:10.441]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:10.461]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:10.472]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:10.492]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:10.503]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:10.521]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:10.533]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:10.550]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:10.573]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:10.581]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:10.602]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:10.611]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:10.631]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:10.642]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:10.661]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:10.681]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:10.692]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:10.711]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:10.721]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:10.741]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:10.761]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:10.771]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:10.791]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:10.801]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:10.822]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:10.831]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:10.853]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:10.862]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:10.883]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:10.892]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:10.911]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:10.931]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:10.943]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:10.962]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:10.972]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:10.992]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:11.001]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:11.021]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:11.033]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:11.052]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:11.071]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:11.082]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:11.102]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:11.111]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:11.132]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:11.150]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:11.162]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:11.181]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:11.191]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:11.211]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:11.221]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:11.241]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:11.261]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:11.271]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:11.283]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:11.302]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:11.321]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:11.333]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:11.352]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:11.362]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:11.382]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:11.392]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:11.411]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:11.431]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:11.443]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:11.461]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:11.471]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:11.493]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:11.502]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:11.522]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:11.542]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:11.551]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:11.571]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:11.583]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:11.602]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:11.612]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:11.633]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:11.642]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:11.662]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:11.682]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:11.692]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:11.711]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:11.721]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:11.743]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:11.752]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:11.771]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:11.792]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:11.801]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:11.823]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:11.833]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:11.852]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:11.861]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:11.881]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:11.901]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:11.913]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:11.932]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:11.942]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:11.961]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:11.971]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:11.993]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:12.002]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:12.021]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:12.040]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:12.052]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:12.072]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:12.082]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:12.101]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:12.113]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:12.132]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:12.142]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:12.161]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:12.182]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:12.191]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:12.212]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:12.221]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:12.240]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:12.252]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:12.272]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:12.291]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:12.302]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:12.321]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:12.331]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 1
+
+[15:36:12.351]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:12.363]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:12.382]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:12.392]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:12.411]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:12.433]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:12.442]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:12.462]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:12.471]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:12.493]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:12.502]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:12.521]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:12.533]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:12.553]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:12.564]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:12.584]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 0
+
+[15:36:12.601]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:12.612]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:12.632]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:12.653]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:12.664]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:12.673]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:12.692]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:12.712]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:12.721]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:12.740]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:12.761]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:12.771]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:12.790]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:12.802]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:12.822]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:12.833]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:12.850]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:12.861]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:12.884]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:12.892]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:12.913]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:12.930]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:12.942]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:12.964]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:12.972]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:12.994]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:13.003]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:13.023]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:13.034]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:13.052]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:13.072]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:13.084]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:13.100]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:13.111]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:13.132]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:13.151]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:13.160]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:13.182]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:13.189]ÊÕ¡û¡ôget IO STATUS 1
+xxxxx is 0
+switch is 1
+
+[15:36:13.205]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:13.222]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:13.240]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:13.253]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:13.271]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:13.283]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:13.302]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:13.321]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:13.331]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:13.353]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:13.362]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 1
+
+[15:36:13.380]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:13.392]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+xxxxx is 0
+switch is 0
+
+[15:36:13.414]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:13.431]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:13.440]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 0
+
+[15:36:13.462]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:13.472]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:13.492]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:13.502]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:13.521]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:13.542]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:13.551]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:13.573]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:13.581]ÊÕ¡û¡ôget IO STATUS 1
+xxxxx is 0
+switch is 1
+get IO STATUS 1
+
+[15:36:13.601]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:13.611]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:13.632]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:13.642]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:13.662]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:13.683]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:13.690]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:13.712]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:13.722]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:13.742]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:13.752]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:13.772]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:13.782]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:13.801]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:13.821]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:13.832]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:13.852]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:13.862]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:13.883]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:13.892]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:13.911]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:13.931]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:13.943]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:13.962]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:13.971]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:13.990]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:14.002]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:14.022]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:14.033]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:14.051]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:14.071]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:14.082]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:14.101]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:14.111]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:14.130]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:14.153]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:14.162]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:14.182]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:14.192]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:14.211]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:14.221]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:14.242]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:14.252]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:14.272]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:14.283]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:14.302]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:14.321]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:14.332]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:14.351]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:14.361]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:14.382]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:14.392]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:14.412]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:14.432]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:14.441]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:14.461]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:14.470]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:14.491]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:14.503]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:14.522]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+xxxxx is 0
+switc
+[15:36:14.537]ÊÕ¡û¡ôh is 0
+get IO STATUS 1
+
+[15:36:14.553]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:14.570]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:14.583]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 0
+
+[15:36:14.603]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:14.613]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:14.631]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:14.652]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:14.662]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:14.681]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:14.691]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:14.711]ÊÕ¡û¡ôget IO STATUS 1
+
+[15:36:14.721]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:14.741]ÊÕ¡û¡ôget IO STATUS 1
+xxxxx is 0
+switch is 1
+
+[15:36:14.751]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 1
+
+[15:36:14.771]ÊÕ¡û¡ôget IO STATUS 1
+get IO STATUS 0
+
+[15:36:14.792]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:14.802]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:14.821]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:14.832]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:14.852]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:14.862]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:14.880]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:14.892]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:14.912]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:14.932]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:14.942]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:14.961]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:14.973]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:14.992]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:15.002]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:15.021]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:15.041]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:15.051]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:15.071]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:15.083]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:15.100]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:15.111]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:15.132]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:15.150]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:15.161]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:15.182]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:15.191]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:15.211]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:15.223]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:15.240]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:15.252]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:15.271]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:15.291]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:15.301]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:15.322]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:15.331]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:15.351]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:15.362]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:15.383]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:15.392]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:15.411]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:15.432]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:15.441]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:15.461]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:15.471]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:15.491]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:15.512]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:15.521]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:15.533]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:15.550]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:15.571]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:15.582]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:15.602]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:15.612]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:15.633]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:15.643]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:15.662]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:15.682]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:15.692]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:15.711]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:15.721]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:15.741]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:15.753]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:15.771]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:15.791]ÊÕ¡û¡ôget IO STATUS 0
+
+[15:36:15.801]ÊÕ¡û¡ôget IO STATUS 0
+get IO STATUS 0
+
+[15:36:15.822]ÊÕ¡û¡ôget IO STATUS 0

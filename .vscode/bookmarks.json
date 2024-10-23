@@ -4,22 +4,22 @@
 			"path": "ln882h-custom-imou/project/yankon/app/usr_app.c",
 			"bookmarks": [
 				{
-					"line": 392,
+					"line": 393,
 					"column": 4,
 					"label": "key task init"
 				},
 				{
-					"line": 613,
+					"line": 615,
 					"column": 2,
 					"label": "lamp task"
 				},
 				{
-					"line": 627,
+					"line": 629,
 					"column": 5,
 					"label": "key task"
 				},
 				{
-					"line": 695,
+					"line": 699,
 					"column": 0,
 					"label": "线程合计"
 				}
@@ -42,6 +42,21 @@
 					"line": 99,
 					"column": 0,
 					"label": "TODO 设置IO状态"
+				}
+			]
+		},
+		{
+			"path": "demo/demo.c",
+			"bookmarks": [
+				{
+					"line": 477,
+					"column": 1,
+					"label": "控制回到列表"
+				},
+				{
+					"line": 598,
+					"column": 0,
+					"label": "设备控制回调"
 				}
 			]
 		}

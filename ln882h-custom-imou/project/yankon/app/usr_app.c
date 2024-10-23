@@ -157,6 +157,7 @@ int8_t rlLampSwitchRevert(uint32_t ulPeroidMs)
 
   //  //my_hal_log_info("rl lamp switch revert\r\n");
     pLampParam->ucSwitch = !pLampParam->ucSwitch;
+    LOG(LOG_LVL_INFO,"switch is %d\n", pLampParam->ucSwitch );
     return myLampSwitchCtrl(gucLampId, ulPeroidMs, pLampParam->ucSwitch);
 }
 int8_t rlLampBriCtrlNextClass(uint32_t ulPeroidMs)
@@ -325,6 +326,7 @@ static void _normalKeyShortReleaseCb(uint32_t keyVal, uint32_t flag)
         if (g_stRlData.fctData.fctMode != 0) {
           //  printf("release key switch\r\n");
         }
+        LOG(LOG_LVL_INFO,"xxxxx is %d\n",pLiveData->uwAdjDuration);
         rlLampSwitchRevert(pLiveData->uwAdjDuration);
         break;
     default:
@@ -384,7 +386,6 @@ static uint32_t _normalKeyboardKeyStatusGet(uint32_t keyValue)
             break;
         }
     }
-
     return (uint32_t)!status;
 }
 static int _rlTaskKeyInit(void) 
@@ -524,7 +525,7 @@ static void _lampPwmOutput(uint32_t ulPwm1, uint32_t ulPwm2, uint32_t ulPwm3, ui
 
     if (ulPwm1 != lastPwm1) {
         lastPwm1 = ulPwm1;
-        pwm_set_duty(PWM_CHA_1, ulPwm1);
+        pwm_set_duty(ulPwm1, PWM_CHA_1);
         LOG(LOG_LVL_INFO, "pwm1 out %d\r\n", ulPwm1);
     }
     if (ulPwm2 != lastPwm2) {
@@ -532,7 +533,8 @@ static void _lampPwmOutput(uint32_t ulPwm1, uint32_t ulPwm2, uint32_t ulPwm3, ui
 //      my_hal_log_debug("pwm2 out %d %d\r\n", ulPwm1, ulPwm2);
 LOG(LOG_LVL_INFO, "pwm2 out %d\r\n", ulPwm2);
        // myHalPwmOutput(RL_PWM_C, ulPwm2);
-        pwm_set_duty(PWM_CHA_1, ulPwm2);
+       LOG(LOG_LVL_INFO, "pwm2 out %d\r\n", ulPwm2);
+        pwm_set_duty(ulPwm2,PWM_CHA_2);
     }
 }
 
@@ -631,7 +633,9 @@ static void key_app_task_entry(void *params)
         vTaskDelay(10);
         myKeyboardLoop();
     }
+       LOG(LOG_LVL_INFO,"KEY APP TASK END ");
     vTaskDelete(NULL);
+ 
 }
 static void temp_cal_app_task_entry(void *params)
 {
@@ -676,11 +680,11 @@ void creat_usr_app_task(void)
         ln_pm_always_clk_disable_select(CLK_G_I2S | CLK_G_WS2811 | CLK_G_SDIO | CLK_G_AES);
         ln_pm_lightsleep_clk_disable_select(CLK_G_SPI0 | CLK_G_SPI1 | CLK_G_I2C0 | CLK_G_TRNG);
     }
-
+#if WIFI_APP_TASK && WIFI_APP_TASK==0
     if(OS_OK != OS_ThreadCreate(&g_usr_app_thread, "WifiUsrAPP", usr_app_task_entry, NULL, OS_PRIORITY_BELOW_NORMAL, USR_APP_TASK_STACK_SIZE)) {
         LN_ASSERT(1);
     }
-
+#endif
     // ble_creat_usr_app_task();
 
 #if  WIFI_TEMP_CALIBRATE
@@ -689,12 +693,12 @@ void creat_usr_app_task(void)
     }
 #endif
 
-#if LAMP_TASK_EN && LAMP_TASK_EN==0
+#if LAMP_TASK_EN && LAMP_TASK_EN==1
 if(OS_OK!= OS_ThreadCreate(&g_lamp_thread,"LampApp",usr_app_light_task_entry,NULL,OS_PRIORITY_BELOW_NORMAL,LAMP_TASK_STACK_SIZE));
    LOG(LOG_LVL_INFO,"LAMP INIT TEST ");
 #endif
 
-#if KEY_TASK_EN && KEY_TASK_EN==0
+#if KEY_TASK_EN && KEY_TASK_EN==1
     if(OS_OK != OS_ThreadCreate(&g_key_thread, "KeyApp", key_app_task_entry, NULL, OS_PRIORITY_BELOW_NORMAL, KEY_TASK_STACK_SIZE)) {
     }
 #endif
