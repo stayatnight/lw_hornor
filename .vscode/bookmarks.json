@@ -4,27 +4,22 @@
 			"path": "ln882h-custom-imou/project/yankon/app/usr_app.c",
 			"bookmarks": [
 				{
-					"line": 393,
-					"column": 4,
-					"label": "key task init"
-				},
-				{
-					"line": 612,
+					"line": 603,
 					"column": 0,
 					"label": "灯光主循环"
 				},
 				{
-					"line": 615,
+					"line": 606,
 					"column": 2,
 					"label": "lamp task"
 				},
 				{
-					"line": 630,
+					"line": 621,
 					"column": 5,
 					"label": "key task"
 				},
 				{
-					"line": 700,
+					"line": 690,
 					"column": 0,
 					"label": "线程合计"
 				}

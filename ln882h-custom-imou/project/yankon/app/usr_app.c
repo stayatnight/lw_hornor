@@ -392,7 +392,6 @@ static int _rlTaskKeyInit(void)
 {
 hal_io_status_t status = HAL_IO_LOW;
 myhal_gpiob_init(GPIO_PIN_3,HAL_IO_MODE_IN_PULLDOWN);
-
 myKeyboardInit(10, 3, 1000, 200, 100, _rlKeyGetTickMs, _normalKeyboardKeyStatusGet);
 myKeyboardRigisterCallback(_normalKeyShortPressCb,
                                 _normalKeyShortReleaseCb,
@@ -582,11 +581,11 @@ static int rlTaskLampInit(void* arg)
     pLampParam->maxPwm = LIGHT_PWM_MAX;
     pLampParam->ucCtrlType = 0;
     pLampParam->ucSwitch = 0;
-    pLampParam->uwBri = 65535;
+    pLampParam->uwBri = 100;
     pLampParam->uwCCT = LIGHT_CCT_DEFAULT;
     pLampParam->ucSceneNo = g_stRlData.saveData.stLampSaveParam.ucSceneNo;
-    pwm_init(LIGHT_PWM_FREQ,20,PWM_CHA_1,GPIO_B,PWM_W);     //初始化PWM
-    pwm_init(LIGHT_PWM_FREQ,20,PWM_CHA_2,GPIO_B,PWM_C);     //初始化PWM
+    pwm_init(LIGHT_PWM_FREQ,0,PWM_CHA_1,GPIO_B,PWM_W);     //初始化PWM
+    pwm_init(LIGHT_PWM_FREQ,0,PWM_CHA_2,GPIO_B,PWM_C);     //初始化PWM
     pwm_start(PWM_CHA_1);
     pwm_start(PWM_CHA_2);  
     myLampInit(10, NULL, NULL, NULL);
@@ -596,16 +595,8 @@ static int rlTaskLampInit(void* arg)
                      _lampColor2Pwm, 
                      getMyDimmingCurve(LIGHT_PWM_CURVE), 
                      NULL,NULL);
-  //  //my_hal_log_info("create lamp switch %d max pwm is %d\r\n", 
-               //  pLampParam->ucSwitch, LIGHT_PWM_MAX);
-  //  myLampRegisterDimmingStatusCtrlHook(gucLampId, _lampStateControlHook);
-  //  myLampRegisterFlashEndHook(gucLampId, _lampBlinkEndHook);
     LOG(LOG_LVL_INFO,"LAMP INIT OK ");
-    #if (APP_DEV_TYPE_USED != APP_DEV_TYPE_LAMP_NIGHT && APP_DEV_TYPE_USED  != APP_DEV_TYPE_LAMP_NIGHT_PTJX)
- //   s_resetWindowTimerHandle = xTimerCreate((const char*)"reset", (30000 / portTICK_RATE_MS), 0, NULL, _lampFactoryResetWindowTimeoutHandle);
-  //  xTimerStart(s_resetWindowTimerHandle, 0);
-    #else
-    #endif
+  //  LampSwitchCtrl(1, 1000);
     return 0;
 }
 static void usr_app_light_task_entry(void *params)
@@ -615,12 +606,12 @@ static void usr_app_light_task_entry(void *params)
     if(init_ret = rlTaskLampInit(params)!=0) {
         LOG(LOG_LVL_INFO,"LAMP INIT FAIL ");
     }
-     LampSwitchCtrl(0, 1000);
+   
     while (init_ret==0) {      
         vTaskDelay(10);
         myLampLoop();
-    vTaskDelete(NULL);
     }
+        vTaskDelete(NULL);
 }
 static void key_app_task_entry(void *params)
 {
@@ -636,7 +627,6 @@ static void key_app_task_entry(void *params)
     }
        LOG(LOG_LVL_INFO,"KEY APP TASK END ");
     vTaskDelete(NULL);
- 
 }
 static void temp_cal_app_task_entry(void *params)
 {
@@ -699,7 +689,7 @@ if(OS_OK!= OS_ThreadCreate(&g_lamp_thread,"LampApp",usr_app_light_task_entry,NUL
    LOG(LOG_LVL_INFO,"LAMP INIT TEST ");
 #endif
 
-#if KEY_TASK_EN && KEY_TASK_EN==0
+#if KEY_TASK_EN && KEY_TASK_EN==1
     if(OS_OK != OS_ThreadCreate(&g_key_thread, "KeyApp", key_app_task_entry, NULL, OS_PRIORITY_BELOW_NORMAL, KEY_TASK_STACK_SIZE)) {
     }
 #endif
