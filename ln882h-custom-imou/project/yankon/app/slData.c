@@ -525,17 +525,17 @@ int rlDataInit(void)
     rlFlagSetMutex = xSemaphoreCreateMutex();
 
     if (rlFlagSetMutex == NULL) {
-        my_hal_log_error("rlFlagSetMutex create failed\r\n");
+    //    my_hal_log_error("rlFlagSetMutex create failed\r\n");
         while (1) {
             ;
         }
     }
 
-    rlDataReadFctData();
+    // rlDataReadFctData();
 
-    rlDataReadConfigData();
+    // rlDataReadConfigData();
 
-    rlDataShowVersion();
+    // rlDataShowVersion();
 
     #if (APP_DEV_TYPE_USED == APP_DEV_TYPE_LAMP_NIGHT || APP_DEV_TYPE_USED  == APP_DEV_TYPE_LAMP_NIGHT_PTJX)
     pLiveData->ucLightMode = 100;
@@ -543,7 +543,7 @@ int rlDataInit(void)
     pLiveData->ucLightMode = 0;
     #endif
     pLiveData->uwAdjDuration = rlDataAdjDurationMap[g_stRlData.saveData.eDuration].uwDuration;
-    my_hal_log_debug("adjust duration: %d\r\n", pLiveData->uwAdjDuration);
+    // my_hal_log_debug("adjust duration: %d\r\n", pLiveData->uwAdjDuration);
 #if (APP_DEV_TYPE_USED == APP_DEV_TYPE_LAMP_BEDSIDE)
     pLiveData->uwSleepDuration = rlDataSleepDurationMap[g_stRlData.saveData.eSleepDuration].uwDuration;
     my_hal_log_debug("sleep duration: %d\r\n", pLiveData->uwSleepDuration);

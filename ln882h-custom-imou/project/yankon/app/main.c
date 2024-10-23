@@ -30,6 +30,7 @@
 #include "hal/hal_clock.h"
 #include"myKeyboard.h"
 #include "ln_drv_pwm.h"
+#include"slData.h"
 static void pwm_test ()
 {
    uint32_t pwm_duty = 0;
@@ -101,7 +102,7 @@ int main (int argc, char* argv[])
     //8.Init wifi stack.
     wifi_init();
 //    wlib_pvtcmd_output_cb_set(ln_at_vprintf);
-
+    rlDataInit();
     //9.Init lwip stack.
     lwip_tcpip_init();
     if ( 0 != ota_port_init()) {

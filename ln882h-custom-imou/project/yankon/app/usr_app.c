@@ -615,12 +615,12 @@ static void usr_app_light_task_entry(void *params)
 static void key_app_task_entry(void *params)
 {
 
-  //rlFlagSet(RL_FLAG_TASK_KEY_RUNNING, 1);
+    rlFlagSet(RL_FLAG_TASK_KEY_RUNNING, 1);
     if(0 > _rlTaskKeyInit()) {
-       // rlFlagSet(RL_FLAG_TASK_KEY_RUNNING, 0);
+        rlFlagSet(RL_FLAG_TASK_KEY_RUNNING, 0);
     }
 
-    while(1) {
+    while(RL_FLAG_TASK_KEY_RUNNING) {
         vTaskDelay(10);
         myKeyboardLoop();
     }

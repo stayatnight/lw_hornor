@@ -35,8 +35,8 @@
 #define LIGHT_BRIGHT_LOCAL_TO_PWM(b)                       (uint16_t)(LIGHT_PWM_BRIGHT_MIN + (float)((b)-LIGHT_BRIGHT_MIN) * (LIGHT_BRIGHT_MAX - LIGHT_PWM_BRIGHT_MIN) / (LIGHT_BRIGHT_MAX-LIGHT_BRIGHT_MIN) + 0.5f)
 
 /* bright: value <---> percent */
-#define LIGHT_BRIGHT_TO_PERCENT(b)                         (uint32_t)((b) * 100.0f / 65535 + 0.5f)
-#define LIGHT_PERCENT_TO_BRIGHT(p)                         (uint16_t)((p) * 65535.0f / 100 + 0.5f)
+#define LIGHT_BRIGHT_TO_PERCENT(b)                         (uint32_t)((b) * 100.0f /100 + 0.5f)
+#define LIGHT_PERCENT_TO_BRIGHT(p)                         (uint16_t)((p) * 100.0f / 100 + 0.5f)
 
 #define RL_LAMP_REPORT_INTERVAL                            (800) //ms
 static uint8_t gucLampId;
