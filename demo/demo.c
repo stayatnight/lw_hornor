@@ -473,7 +473,7 @@ struct TestControlFunc {
     int (*setFunc)(const void *data, unsigned int len);
     int (*getFunc)(void **data, unsigned int *len);
 };
-
+//TODO
 static struct TestControlFunc g_testCtrlFunc[] = {
     { "deviceInfo", "sn", NULL, GetDevSnFunc },
     { "deviceInfo", "udid", NULL, GetDevUdidFunc },

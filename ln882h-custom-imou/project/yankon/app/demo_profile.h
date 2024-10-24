@@ -458,50 +458,6 @@ static const char *g_profile = "{\
 {\
 \"propertyList\": [\
 {\
-\"access\": 0,\
-\"defaultValue\": 8,\
-\"description\": \"开发者网站勾选本地定时后有此服务属性，网关本身定时器最大数量为8，开发者网站支持可修改范围[1,8]，非网关表示设备本身\",\
-\"index\": 0,\
-\"type\": \"int\",\
-\"id\": \"timerMax\",\
-\"value\": 8\
-},\
-{\
-\"access\": 0,\
-\"defaultValue\": 8,\
-\"description\": \"开发者网站创建网关设备时勾选本地定时后有此服务属性，子设备的定时器最大数量为8，开发者网站支持可修改范围[1,8]，非网关设备无需关注此字段\",\
-\"index\": 1,\
-\"type\": \"int\",\
-\"id\": \"subDevTimerMax\",\
-\"value\": 8\
-},\
-{\
-\"access\": 0,\
-\"defaultValue\": 1,\
-\"description\": \"网关本身倒计时最大数量，固定值为1\",\
-\"index\": 2,\
-\"type\": \"int\",\
-\"id\": \"countdownMax\",\
-\"value\": 1\
-},\
-{\
-\"access\": 0,\
-\"defaultValue\": 1,\
-\"description\": \"子设备倒计时最大数量，固定值为1，非网关设备无需关注此字段\",\
-\"index\": 3,\
-\"type\": \"int\",\
-\"id\": \"subDevCountdownMax\",\
-\"value\": 1\
-}\
-],\
-\"description\": \"定时/倒计时\",\
-\"index\": 4,\
-\"id\": \"timerCountdown\",\
-\"title\": \"定时/倒计时\"\
-},\
-{\
-\"propertyList\": [\
-{\
 \"access\": 7,\
 \"defaultValue\": 0,\
 \"description\": \"\",\
@@ -534,15 +490,11 @@ static const char *g_profile = "{\
 },\
 {\
 \"access\": 7,\
-\"defaultValue\": 0,\
+\"defaultValue\": 8,\
 \"description\": \"\",\
 \"index\": 2,\
 \"type\": \"int\",\
 \"valueList\": [\
-{\
-\"description\": \"会客模式\",\
-\"value\": 0\
-},\
 {\
 \"description\": \"阅读模式\",\
 \"value\": 8\
@@ -557,64 +509,19 @@ static const char *g_profile = "{\
 }\
 ],\
 \"id\": \"lightMode\",\
-\"value\": 0\
+\"value\": 8\
 }\
 ],\
 \"description\": \"灯\",\
-\"index\": 5,\
+\"index\": 4,\
 \"id\": \"light\",\
 \"title\": \"灯\"\
-},\
-{\
-\"propertyList\": [\
-{\
-\"access\": 3,\
-\"defaultValue\": 0,\
-\"index\": 0,\
-\"type\": \"int\",\
-\"valueList\": [\
-{\
-\"description\": \"无\",\
-\"value\": 0\
-},\
-{\
-\"description\": \"0.5s\",\
-\"value\": 1\
-},\
-{\
-\"description\": \"1.0s\",\
-\"value\": 2\
-},\
-{\
-\"description\": \"1.5s\",\
-\"value\": 3\
-},\
-{\
-\"description\": \"2.0s\",\
-\"value\": 4\
-},\
-{\
-\"description\": \"2.5s\",\
-\"value\": 5\
-},\
-{\
-\"description\": \"3.0s\",\
-\"value\": 6\
-}\
-],\
-\"id\": \"duration\",\
-\"value\": 0\
-}\
-],\
-\"description\": \"渐变\",\
-\"index\": 6,\
-\"id\": \"duration\",\
-\"title\": \"渐变\"\
 }\
 ],\
 \"description\": \"阳光博荣台灯S\",\
 \"title\": \"阳光博荣台灯S\"\
 }";
+
 
 
 #ifdef __cplusplus
