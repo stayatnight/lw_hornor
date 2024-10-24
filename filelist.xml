@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <files>
+    <file>
+      <spath>flashimage-ota-xz-v0.1.bin</spath>
+      <sha256>74e398848beda9f4b2905a4a80de6b6be6592104cf38f5fc1ef292af9d2207ed</sha256>
+      <size>601951</size>
+    </file>
+  </files>
+</root>

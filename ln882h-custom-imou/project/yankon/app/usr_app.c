@@ -400,7 +400,7 @@ myKeyboardRigisterCallback(_normalKeyShortPressCb,
     for (int i = 0; i < sizeof(s_a_normalKeyVal) / sizeof(uint32_t); i++) {
         myKeyboardRegisterKey(s_a_normalKeyVal[i]);
     }
-LOG(LOG_LVL_INFO, "key init ok\r\n");
+    LOG(LOG_LVL_INFO, "key init ok\r\n");
     return 0;
 }
 static int GetStaInfo()
@@ -670,7 +670,7 @@ void creat_usr_app_task(void)
         ln_pm_always_clk_disable_select(CLK_G_I2S | CLK_G_WS2811 | CLK_G_SDIO | CLK_G_AES);
         ln_pm_lightsleep_clk_disable_select(CLK_G_SPI0 | CLK_G_SPI1 | CLK_G_I2C0 | CLK_G_TRNG);
     }
-#if WIFI_APP_TASK && WIFI_APP_TASK==0
+#if WIFI_APP_TASK && WIFI_APP_TASK==1
     if(OS_OK != OS_ThreadCreate(&g_usr_app_thread, "WifiUsrAPP", usr_app_task_entry, NULL, OS_PRIORITY_BELOW_NORMAL, USR_APP_TASK_STACK_SIZE)) {
         LN_ASSERT(1);
     }

@@ -146,10 +146,10 @@ typedef struct
     myKeyboardKey_t myKeyboardKey;
     getMsTickFunc pFuncGetMsTick;
     myKeyboardKeyStatusGetFunc pFuncKeyStatusGet;
-    myKeyboardEventsCallbackFunc pFuncKeyShortPress;
-    myKeyboardEventsCallbackFunc pFuncKeyShortRelease;
-    myKeyboardEventsCallbackFunc pFuncKeyLongPress;
-    myKeyboardEventsCallbackFunc pFuncKeyLongRelease;
+    myKeyboardEventsCallbackFunc pFuncKeyShortPress; //短按
+    myKeyboardEventsCallbackFunc pFuncKeyShortRelease;//短释放
+    myKeyboardEventsCallbackFunc pFuncKeyLongPress;//长按
+    myKeyboardEventsCallbackFunc pFuncKeyLongRelease;//长释放
 } myKeyboard_t;
 
 /******************************************************************************
