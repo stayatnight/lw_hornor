@@ -10,7 +10,9 @@
 #include "magiclink.h"
 #include "magiclink_netcfg.h"
 #include "magiclink_log.h"
-
+#include"slData.h"
+#include"lamptask.h"
+#include "utils/debug/log.h"
 #define MY_PRDKEY "c76c504e94ad4c34b6d0c87d5d90ac43"
 #define MY_PRDSECRET "6ece2cc39cb42c83465650af3b6ae2ae"
 
@@ -466,6 +468,30 @@ static int GetLightCctInt(void **data, unsigned int *len)
     printf("get light cct\r\n");
     return 0;
 }
+static int SetLightOnoff()
+{
+    stRlLiveData_t *pLiveData = &g_stRlData.liveData;
+    LOG(LOG_LEVEL_INFO,"set light onoff %d\r\n",g_light.on);
+    LampSwitchCtrl((uint8_t)g_light.on,1000 );
+    return 0;
+}
+static int GetLightOnoff()
+{
+
+   int *len = sizeof(g_light.on);
+
+  int  *data = malloc(*len);
+    if (*data == NULL) {
+        printf("malloc err \r\n");
+        return -1;
+    }
+
+    (void)memset(*data, 0, *len);
+    (void)memcpy(*data, &g_light.on, *len);
+
+    printf("get light switch %d \r\n", g_light.on);
+    return 0;
+}
 
 struct TestControlFunc {
     const char *svcId;
@@ -473,7 +499,7 @@ struct TestControlFunc {
     int (*setFunc)(const void *data, unsigned int len);
     int (*getFunc)(void **data, unsigned int *len);
 };
-
+//设备回调函数
 static struct TestControlFunc g_testCtrlFunc[] = {
     { "deviceInfo", "sn", NULL, GetDevSnFunc },
     { "deviceInfo", "udid", NULL, GetDevUdidFunc },
@@ -491,8 +517,9 @@ static struct TestControlFunc g_testCtrlFunc[] = {
     { "dvService", "switch", SetLightSwitchInt, GetLightSwitchInt },
     { "dvService", "supportSinkSvc", SetLightSwitchInt, GetLightSwitchInt },
     { "dvService", "devSvcStatus", SetLightSwitchInt, GetLightSwitchInt },
-    { "light", "switch", SetLightSwitchInt, GetLightSwitchInt },
-    { "light", "color", SetLightColorString, GetLightColorString },
+    { "light", "On", SetLightOnoff, GetLightOnoff },
+    { "light", "Brightness", SetLightColorString, GetLightColorString },
+    {  "light", "lightMode", SetLightModeInt, GetLightModeInt },  
     { "lightMode", "mode", SetLightModeInt, GetLightModeInt },
     { "volume", "volume", SetLightVolumeInt, GetLightVolumeInt },
     { "switch", "on", SetLightSwitchInt, GetLightSwitchInt },

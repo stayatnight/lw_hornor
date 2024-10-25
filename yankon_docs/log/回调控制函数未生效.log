@@ -1,0 +1,1244 @@
+
+[21:17:29.862]ÊÕ¡û¡ô------  combo_mcu_basic_example  ------
+
+[21:17:30.392]ÊÕ¡û¡ôTCP/IP initialized.
+LAMP INIT TEST LN882H SDK Ver: 2.1_rc1 [build time:Oct 24 2024 13:06:14][0x
+[21:17:30.396]ÊÕ¡û¡ô02010001]
+LAMP INIT OK
+ LAMP INIT OK GPIOB  STATUS:0
+key init ok
+MEM enter MagicLinkSDKRun [108776]
+0000000035|MagicLinkComponentsInit|85|[I]:module:logcollect
+0000000036|InitComponent|60|[I]:enable:logcollect
+0000000036|InitComponent|64|[W]:no comp:logcollect
+0000000037|MagicLinkInit|164|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_INIT, 0
+VER:IoTSDK_1.1.0.344_20240413_test_debug, TM:Apr 13 2024 14:57:17
+
+
+[21:17:30.412]ÊÕ¡û¡ô0000000047|MagicLinkParsePropertyList|207|[I]:succ svc:baseInfo, access:0
+0000000047|MagicLinkParseActionList|328|[I]:no actionList
+0000000049|MagicLinkParsePropertyList|207|[I]:succ svc:deviceInfo, access:7
+0000000049|MagicLinkParseActionList|328|[I]:no actionList
+0000000050|MagicLinkParsePropertyList|207|[I]:succ svc:netInfo, access:5
+0000000051|MagicLinkParseActionList|328|[I]:no actionList
+0000000052|MagicLinkParsePropertyList|207|[I]:succ svc:ota, access:7
+0000000053|MagicLinkParseAction|297|[W]:no inDataList
+0000000054|MagicLinkParseAction|310|[W]:no outDataList
+0000000054|MagicLinkParseAction|297|[W]:no inDataList
+0000000055|MagicLinkParseAction|310|[W]:no outDataList
+0000000056|MagicLinkParsePropertyList|207|[I]:succ svc:light, access:7
+0000000057|MagicLinkParseActionLi
+[21:17:30.425]ÊÕ¡û¡ôst|328|[I]:no actionList
+0000000060|ModelParseJson|181|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_PROFILE_PARSE, 0
+0000000061|NetworkManagementInit|1658|[W]:succ
+0000000061|NetworkInit|70|[I]:succ
+0000000062|DiscoveryInit|556|[I]:succ
+0000000062|TransmissionInit|40|[I]:succ
+0000000063|CloudLinkMqttInit|1092|[I]:succ
+0000000064|ConnectRegRecvPacket|392|[I]:add:1 succ
+0000000064|ConnectRegSendPacket|361|[I]:add:1 succ
+0000000065|ConnectMsgProcessInit|2631|[E]:sem init
+0000000066|ConnectInit|549|[I]:succ
+0000000067|MagicLinkComponentsInit|85|[I]:module:p2p
+0000000067|InitComponent|60|[I]:enable:p2p
+0000000068|InitComponent|64|[W]:no comp:p2p
+0000000068|MagicLinkComponentsInit|85|[I]:module:blenetcfg
+0000000069|InitComponent|60|[I]:enable:blenetcfg
+0000000070|ConnectRegSendPacket|361|[I]:add:3 succ
+0000000070|MagicLinkComponentsInit|85|[I]:module:coapconnect
+000000
+[21:17:30.441]ÊÕ¡û¡ô0071|InitComponent|60|[I]:enable:coapconnect
+udp_bind(ipaddr = 0.0.0.0, port = 5683)
+0000000072|ConnectRegSendPacket|361|[I]:add:2 succ
+0000000073|ConnectRegRecvPacket|392|[I]:add:2 succ
+0000000074|NetworkSetItemValueByStr|929|[E]:inv dst:prdName
+0000000074|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdName
+0000000075|NetworkSetItemValueByStr|929|[E]:inv dst:manufactureName
+0000000076|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:manufactureName
+0000000077|NetworkSetItemValueByStr|929|[E]:inv dst:prdTypeName
+0000000078|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdTypeName
+0000000079|NetworkSetItemValueByStr|929|[E]:inv dst:modelId
+0000000079|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:modelId
+0000000080|NetworkSetItemValueByStr|929|[E]:inv dst:offeringCode
+0000000081|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:offeringCode
+0000000082|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeId
+0000000083|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeId
+0000000084|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeName
+0000000084|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeName
+0000000085|NetworkSetItemValueByStr|929|[E]:inv dst:qrScanMode
+0000000086|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:qrScanMode
+0000000087|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:udid
+0000000088|NetworkSetItemValueByStr|929|[E]:inv dst:devName
+0000000089|ModelSetDevInfoToNetwork|290|[E]:set item:deviceInfo:devName
+firmVer:1.0.0.201
+0000000090|ModelSetDevInfoToNetwork|272|[E]:set:deviceInfo:sdkVersion
+0000000091|ModelSetDevInfoToNetwork|277|[E]:no data:d
+[21:17:30.464]ÊÕ¡û¡ôeviceInfo:MCUVersion
+0000000094|HksStateNotify|182|[W]:hks state:-127
+
+[21:17:30.473]ÊÕ¡û¡ô0000000101|MagicLinkHuksHalRegister|243|[I]:succ
+0000000102|MagicLinkStorageKeyInit|612|[W]:no key, create new
+
+[21:17:30.654]ÊÕ¡û¡ô0000000280|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000283|Con
+[21:17:30.663]ÊÕ¡û¡ôfigRead|278|[E]:header
+0000000284|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000285|ConfigRead|278|[E]:header
+0000000286|MagicLinkSafeConfigRead|434|[I]:cfg empty
+0000000286|ReadRegisterResultData|1466|[E]:cfg read
+0000000287|MagicLinkNetworkUpdateRegResult|2059|[W]:no reg ret
+0000000288|MagicLinkComponentsInit|85|[I]:module:netcfg
+0000000288|InitComponent|60|[I]:enable:netcfg
+0000000289|OnRegSessionServerRestart|1216|[I]:succ reg cb:hihonor.magiclinksdk,netCfg
+0000000290|NetCfgInit|739|[I]:succ
+0000000290|MagicLinkComponentsInit|85|[I]:module:register
+0000000291|InitComponent|60|[I]:enable:register
+0000000292|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000293|MagicLinkParseAction|297|[W]:no inDataList
+0000000293|MagicLinkParseAction|310|[W]:no outDataList
+0000000294|MagicLinkParseAction|297|[W]:no inDataList
+0000000295|MagicLinkParseAction|310|[W]:no outDataList
+0000000296|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,register
+0000000297|StartRegister|2170|[I]:start:0
+0000000297|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000298|ConfigRead|278|[E]:header
+0000000299|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000300|ConfigRead|278|[E]:header
+0000000301|MagicLinkSafeConfigRead|434|[I]:cfg empty
+0000000301|ReadRegisterData|1606|[E]:read cfg
+00000
+[21:17:30.686]ÊÕ¡û¡ô00302|ReadRegisterData|1608|[E]:MAGICLINK_CONFIG, MAGICLINK_READ_REGINFO_FAIL, -1
+0000000303|StartRegister|2182|[W]:no reg info
+0000000303|RegisterInit|2042|[I]:succ
+0000000304|MagicLinkComponentsInit|85|[I]:module:control
+0000000305|InitComponent|60|[I]:enable:control
+0000000305|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,control
+0000000307|MagicLinkComponentsInit|85|[I]:module:ota
+0000000307|InitComponent|60|[I]:enable:ota
+0000000308|MagicLinkOtaFuncInit|103|[I]:init
+0000000308|OtaInit|3516|[I]:succ
+0000000309|MagicLinkComponentsInit|85|[I]:module:bi
+0000000309|InitComponent|60|[I]:enable:bi
+0000000310|InitComponent|64|[W]:no comp:bi
+0000000310|MagicLinkComponentsInit|85|[I]:module:magiclinkactive
+0000000311|InitComponent|60|[I]:enable:magiclinkactive
+0000000312|InitComponent|64|[W]:no comp:magiclinkactive
+0000000312|MagicLinkComponentsInit|85|[I]:module:netparamsync
+0000000313|InitComponent|60|[I]:enable:netparamsync
+0000000314|InitComponent|64|[W]:no comp:netparamsync
+0000000314|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000315|ExtComponentsMngtInit
+[21:17:30.699]ÊÕ¡û¡ô|108|[I]:not reg
+0000000316|SetLocalInfo|93|[I]:not reg
+0000000316|MagicLinkInit|235|[W]:succ
+0000000317|MagicLinkFastOffline|1827|[I]:fast offline
+0000000317|MagicLinkFastOffline|1829|[I]:already offline
+
+[21:17:31.680]ÊÕ¡û¡ô[low_level_output, 70] netif is not link up.
+[low_level_output, 70] netif is not link up.
+
+[21:17:31.773]ÊÕ¡û¡ô[low_level_output, 70] netif is not link up.
+[low_level_output, 70] netif is not link up.
+
+[21:17:32.690]ÊÕ¡û¡ô0000002318|NetCfgStart|622|[I]:start
+0000002318|WifiInit|134|[I]:INIT DONE
+0000002319|OnRemoveSessionServer|1169|[I]:succ rm server:hihonor.magiclinksdk,netCfg
+0000002320|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,netCfg
+0000002321|MagicLinkParseAction|297|[W]:no inDataList
+0000002322|MagicLinkParseAction|310|[W]:no outDataList
+0000002323|MagicLinkParseAction|297|[W]:no inDataList
+0000002323|MagicLinkParseAction|310|[W]:no outDataList
+0000002324|MagicLinkParseAction|297|[W]:no inDataList
+0000002325|MagicLinkParseAction|310|[W]:no outDataList
+0000002326|NetcfgGetTimeout|210|[I]:timeout:10
+0000002326|DiscoveryAddPublishInfo|117|[I]:succ
+0000002327|PublishSer
+[21:17:32.707]ÊÕ¡û¡ôvice|115|[I]:BLE adv start
+[BLIB_I]BLIB Ver: 1.0.5 [build time:Mar 16 2024 21:17:13][0x010005ff][for custom-imou Commit 2cda23ab]
+0000002330|BleStackInit|275|[I]:ble roal 1                      init suc
+0000002331|ProcGattReg|566|[I]:reg:0
+0000002332|AddGattDescriptor|349|[I]:add default desc
+0000002332|AddGattDescriptor|349|[I]:add default desc
+0000002333|ProcGattAddSvc|590|[I]:add svc:0, svc handle:0, char handle:16
+0000002335|ProcGapStartAdv|341|[I]:start adv:0
+0000002336|StartAdv|537|[I]:adv suc
+0000002336|ModelNotifyStatus|448|[I]:status:100
+current status is 100
+STATUS_NETCFG_ENTER
+MEM Start demo [87920]
+
+[21:17:35.709]ÊÕ¡û¡ô0000005338|ConnectDispatchFunc|83|[I]:running
+
+[21:17:40.430]ÊÕ¡û¡ô0000010058|ConnectMsgProcessFunc|2338|[I]:running
+
+[21:17:40.710]ÊÕ¡û¡ô0000010338|ConnectDispatchFunc|83|[I]:running
+
+[21:17:45.709]ÊÕ¡û¡ô0000015338|ConnectDispatchFunc|83|[I]:running
+
+[21:17:47.406]ÊÕ¡û¡ô0000017033|BleConnectedCb|152|[I]:ble conn
+0000017034|UpdateConnParam|123|[I]:update conn param
+0000017035|ProcGapConnect|373|
+[21:17:47.414]ÊÕ¡û¡ô[I]:interval:0, addr:*:*:*:c5:61:d9
+
+[21:17:48.835]ÊÕ¡û¡ô0000018463|ProcGapSetMtu|558|[I]:MTU 512
+
+[21:17:48.852]ÊÕ¡û¡ôln_gatt_write_req_ind_handler conidx:0x0,handler:0x11,length:0x2
+0000018477|BleGattWriteReqCb|211|[I]:gatt write
+0000018478|ProcessRecvFrame|286|[E]:header
+
+[21:17:48.864]ÊÕ¡û¡ôln_gatt_write_req_ind_handler conidx:0x0,handler:0x14,length:0x2
+0000018492|BleGattWriteReqCb|211|[I]:gatt write
+0000018493|ProcessRecvFrame|286|[E]:header
+
+[21:17:48.928]ÊÕ¡û¡ôln_gatt_write_req_ind_handler conidx:0x0,handler:0x10,length:0x39
+0000018556|BleGattWriteReqCb|211|[I]:gatt write
+0000018557|ProcessRecvFrame|305|[I]:ble conn msg
+
+[21:17:49.028]ÊÕ¡û¡ôln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x56
+0000018656|BleGattWriteReqCb|211|[I]:gatt write
+0000018657|P
+[21:17:49.035]ÊÕ¡û¡ôrocessRecvFrame|316|[I]:ble proxy msg
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x41
+0000018659|BleGattWriteReqCb|211|[I]:gatt write
+0000018659|ProcessRecvFrame|316|[I]:ble proxy msg
+0000018660|ParseMsgHeader|411|[E]:module:11
+0000018661|ParseMsg|2011|[E]:parse msgHeader
+0000018661|ConnectProcessMsg|2061|[E]:parse msg
+0000018662|ConnectMsgProcessFunc|2356|[E]:proc msg
+PROTO Header***0xc50x610xd9
+MSG Header[25]0xbabeface-14-13693743508374945794-0
+Module Header[1]0xffff0006-0-0-0-
+[21:17:49.049]ÊÕ¡û¡ôData:0-49-1:*******
+PROTO Header***0xc50x610xd9
+MSG Header[63]0xbabeface-14-13693743508374945795-0
+Module Header[39]0xffff0006-0-0-1-Data:0-87-39:*******
+
+[21:17:49.539]ÊÕ¡û¡ô0000019167|BleDisconnectedCb|178|[I]:ble disconn
+0000019168|ProcGapDisconnect|534|[I]:disconn id:0
+0000019169|ProcGapStartAdv|341|[I]:start adv:0
+0000019169|StartAdv|537|[I]:adv suc
+
+[21:17:50.123]ÊÕ¡û¡ô0000019750|ConnectMsgProcessFunc|2338|[I]:running
+
+[21:17:50.713]ÊÕ¡û¡ô0000020341|ConnectDispatchFunc|8
+[21:17:50.720]ÊÕ¡û¡ô3|[I]:running
+
+[21:17:52.580]ÊÕ¡û¡ô0000022207|BleConnectedCb|152|[I]:ble conn
+0000022208|UpdateConnParam|123|[I]:update conn param
+0000022209|ProcGapConnect|373|[I]:interval:0, addr:*:*:*:c5:61:d9
+
+[21:17:53.980]ÊÕ¡û¡ô0000023608|ProcGapSetMtu|558|[I]
+[21:17:53.987]ÊÕ¡û¡ô:MTU 512
+
+[21:17:54.003]ÊÕ¡û¡ôln_gatt_write_req_ind_handler conidx:0x0,handler:0x11,length:0x2
+0000023630|BleGattWriteReqCb|211|[I]:gatt write
+0000023631|ProcessRecvFrame|286|[E]:header
+
+[21:17:54.024]ÊÕ¡û¡ôln_gatt_write_req_ind_handler conidx:0x0,handler:0x14,length:0x2
+[21:17:54.034]ÊÕ¡û¡ô
+0000023652|BleGattWriteReqCb|211|[I]:gatt write
+0000023653|ProcessRecvFrame|286|[E]:header
+
+[21:17:54.129]ÊÕ¡û¡ôln_gatt_write_req_ind_handler conidx:0x0,handler:0x10,length:0x39
+0000023757|BleGattWriteReqCb|211|[I]:gatt write
+0000023758|ProcessRecvFrame|305|[I]:ble conn msg
+
+[21:17:54.228]ÊÕ¡û¡ôln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x56
+0000023856|BleGattWriteReqCb|211|[I]:gatt write
+0000023857|ProcessRecvFrame|316|[I]:ble proxy msg
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x101
+0000023859|BleGattWriteReqCb|211|[I]:gatt write
+0000023860|ProcessRecvFrame|316|[I]:ble proxy msg
+0000023861|ParseMsgHeader|411|[E]:module:11
+0000023861|ParseMsg|2011|[E]:parse msgHeader
+0000023862|ConnectProcessMsg|2061|[E]:parse msg
+0000023862|ConnectMsgProcessFunc|2356|[E]:proc msg
+PROTO Header***0xc50x610xd9
+MSG Header[217]0xbab
+[21:17:54.249]ÊÕ¡û¡ôeface-14-13693743508374945802-0
+Module Header[193]0xffff0003-0-13693743508374945800-0-Data:0-241-193:*******
+0000023865|AuthSwapDeviceInfo|937|[I]:MAGICLINK_PHONE_RELATED, MAGICLINK_RECV_SWAP_DEVINFO, 0
+0000023868|AuthSwapDeviceInfo|958|[I]:peer cliId:1
+0000023869|NetworkConfigItemErrComDeal|735|[E]:ble addr:***c5:61:d9
+0000023870|CheckInCertification|886|[I]:no handle
+0000023870|AuthSwapDeviceInfo|986|[I]:sessionId:859256132
+PROTO Header***0xc50x610xd9
+MSG Header[314]0xbabeface-14-13693743508374945803-0
+Module Header[290]0xffff0003-0-0-1-Data:0-338-290:*******
+
+[21:17:54.578]ÊÕ¡û¡ôln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0xd
+[21:17:54.583]ÊÕ¡û¡ô3
+0000024207|BleGattWriteReqCb|211|[I]:gatt write
+0000024208|ProcessRecvFrame|316|[I]:ble proxy msg
+PROTO Header***0xc50x610xd9
+MSG Header[171]0xbabeface-14-13693743508374945804-0
+Module Header[147]0xffff0007-10-859256132-0-Data:0-195-147:*******
+
+[21:17:54.602]ÊÕ¡û¡ô0000024218|GetProtocolParams|570|[I]:pinLen:8
+
+[21:17:54.822]ÊÕ¡û¡ôPROTO Header***0xc50x610xd9
+MSG Header[274]0xbabeface-14-13693743508374945805-0
+Module Header[250]0xffff0007-10-859256132-1-Data:0-298-250:*******
+0000024451
+[21:17:54.831]ÊÕ¡û¡ô|SetServiceResult|685|[I]:ret agreement processing
+
+[21:17:54.994]ÊÕ¡û¡ôln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x11e
+0000024623|BleGattWriteReqCb|211|[I]:gatt write
+0000024624|ProcessRecvFrame|316|[I]:ble proxy msg
+
+[21:17:55.009]ÊÕ¡û¡ôPROTO Header***0xc50x610xd9
+MSG Header[246]0xbabeface-14-13693743508374945806-0
+Module Header[222]0xffff0007-10-859256132-0-Data:0-270-222:*******
+
+[21:17:55.225]ÊÕ¡û¡ôPROTO Header***0xc50x610xd9
+MSG Header[130]0xbabeface-14-13693743508374945807-0
+Module Header[106]0xffff0007-10-859256132-1-Data:0-154-106:*******
+0000024853|SetServiceResult|679|[I]:ret success
+
+[21:17:55.489]ÊÕ¡û¡ôln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0xf0
+0000025117|BleGattWriteReqCb|211|[I]:gatt write
+0000025118|ProcessRecvFrame|316|[I]:ble proxy msg
+PROTO Header***0xc50x610xd9
+MSG Header[200]0xbabeface-14-13693743508374945808-0
+Module Header[
+[21:17:55.506]ÊÕ¡û¡ô176]0xffff0002-0-859256132-0-Data:859256132-GCMNonce[60b8128986fc43506bbca7c0]-224-144:*******
+0000025128|NetworkSetPeerItem|410|[E]:para
+0000025128|ParseSyncNetworkInfo|384|[E]:peer mac save
+0000025129|ParseSyncNetworkInfo|441|[I]:peer cliId:1
+0000025130|ConnectionGetLocal|271|[E]:weak func
+
+[21:17:55.519]ÊÕ¡û¡ôPROTO Header***0xc50x610xd9
+MSG Header[281]0xbabeface-14-13693743508374945809-0
+Module Header[257]0xffff0002-10-859256132-1-Data:859256132-GCMNonce[1f9fa0696a6ba167d3d4df1c]-305-241:*******
+
+[21:17:55.715]ÊÕ¡û¡ô0000025344|ConnectDispatchFunc|8
+[21:17:55.722]ÊÕ¡û¡ô3|[I]:running
+
+[21:17:55.990]ÊÕ¡û¡ôln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x41
+0000025618|BleGattWriteReqCb|211|[I]:gatt write
+0000025619|ProcessRecvFrame|316|[I]:ble proxy msg
+PROTO Header***0xc50x610xd9
+MSG Header[25]0xbabeface-14-1369374
+[21:17:56.003]ÊÕ¡û¡ô3508374945810-0
+Module Header[1]0xffff0005-0-0-0-Data:0-49-1:*******
+0000025627|DeleteAuthTimeoutBySessId|1235|[I]:succ
+PROTO Header***0xc50x610xd9
+MSG Header[42]0xbabeface-14-13693743508374945811-0
+Module Header[18]0xffff0005-0-0-1-Data:0-66-18:*******
+0000025629|AuthCloseAck|1301|[I]:MAGICLINK_PHONE_RELATED, MAGICLINK_AUTH_SUCC, 0
+
+[21:17:56.515]ÊÕ¡û¡ô0000026142|BleDisconnectedCb|178|[I]:ble disconn
+0000026143|ProcGapDisconnect|534|[I]:disconn id:0
+0000026144|ProcGapStartAdv|
+[21:17:56.523]ÊÕ¡û¡ô341|[I]:start adv:0
+0000026144|StartAdv|537|[I]:adv suc
+
+[21:17:59.569]ÊÕ¡û¡ô0000029196|BleConnectedCb|152|[I]:ble conn
+0000029197|UpdateConnParam|123|[I]:update conn param
+0000029198|ProcGapConnect|373|
+[21:17:59.581]ÊÕ¡û¡ô[I]:interval:0, addr:*:*:*:c5:61:d9
+
+[21:18:00.264]ÊÕ¡û¡ô0000029891|ConnectMsgProcessFunc|2338|[I]:running
+
+[21:18:00.717]ÊÕ¡û¡ô0000030345|ConnectDispatchFunc|8
+[21:18:00.724]ÊÕ¡û¡ô3|[I]:running
+
+[21:18:00.933]ÊÕ¡û¡ô0000030560|ProcGapSetMtu|558|[I]:MTU 512
+
+[21:18:00.955]ÊÕ¡û¡ôln_gatt_write_req_ind_handler conidx:0x0,handler:0x11,length:0x2
+0000030582|BleGattWriteReqCb|211|[I]:gatt write
+0000030583|ProcessRecvFrame|286|[E]:header
+
+[21:18:00.978]ÊÕ¡û¡ôln_gatt_write_req_ind_handler conidx:0x0,handler:0x14,length:0x2
+0000030605|BleGattWriteReqCb|211|[I]:gatt write
+0000030606|ProcessRecvFrame|286|[E]:header
+
+[21:18:01.079]ÊÕ¡û¡ôln_gatt_write_req_ind_handler conidx:0x0,handler:0x10,length:0x39
+0000030707|BleGattWriteReqCb|
+[21:18:01.086]ÊÕ¡û¡ô211|[I]:gatt write
+0000030708|ProcessRecvFrame|305|[I]:ble conn msg
+
+[21:18:01.179]ÊÕ¡û¡ôln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x56
+0000030806|BleGattWriteReqCb|211|[I]:gatt write
+0000030807|ProcessRecvFrame|316|[I]:ble proxy msg
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x1ef
+0000030811|BleGattWriteReqCb|211|[I]:gatt write
+0000030812|ProcessRecvFrame|316|[I]:ble proxy msg
+0000030813|ParseMsgHeader|411|[E]:module:11
+0000030813|ParseMsg|2011|[E]:parse msgHeader
+0000030814|ConnectProcessMsg|2061|[E]:parse msg
+0000030814|ConnectMsgProcessFunc|2356|[E]:pr
+[21:18:01.195]ÊÕ¡û¡ôoc msg
+0000030815|ParseModuleTransHeader|682|[I]:isServer:0
+PROTO Header***0xc50x610xd9
+MSG Header[455]0xbabeface-13-7-1
+Module Header[447]0x1-1-1:0-0--1-0
+-Data:859256132-GCMNonce[eea4d61ad35ad8fd14b329bc]-479-415:*******
+0000030820|TransOpen|1333|[I]:succ trans:1
+
+[21:18:01.205]ÊÕ¡û¡ô0000030831|SendOpenAck|446|[I]:succ identity:******5246f1425294c1b2e588ccc013
+
+[21:18:01.629]ÊÕ¡û¡ôln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x1fd
+0000031258|BleGattWriteReqCb|211|[I]:gatt write
+0000031259|ProcessRecvFrame|316|[I]:ble proxy msg
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x10a
+0000031261|BleGattWriteReqCb|211|[I]:gatt write
+0000031261|ProcessRecvFrame|316|[I]:ble proxy msg
+0000031263|ParseModuleTransHeader|682|[I]:isServer:0
+
+[21:18:01.645]ÊÕ¡û¡ôPROTO Header***0xc50x610xd9
+MSG Header[719]0xbabeface-13-8-1
+Module Header[711]0x1-0-0:0-0-1-0
+-SliceHead:0-1-0-0
+-PacketHead:0xbabeface-1-8-679-Data:859256132-GCMNonce[000000015e1517da9b877d03]-743-651:*******
+0000031270|NetCfgModuleAction|429|[I]:svc:localeInfo, act:localeInfo
+0000031271|MakeActionOut|715|[I]:no out
+0000031272|NetCfgModuleAction|429|[I]:svc:netCfg, act:connect
+0000031272|MakeActionOut|715|[I]:no out
+0000031273|NetCfgModuleAction|429|[I]:svc:register, act:cfgRegInfo
+0000031274|StopRegister|2133|[I]:succ
+0000031274|MakeActionOut|715|[I]:no out
+method:5 req:12345, rpt:1
+0000031275|MagicLinkEncodeCmdAction|850|[I]:action:localeInfo no out
+0000031276|MagicLinkEncodeCmdAction|850|[I]:action:connect no out
+0000031277|MagicLinkEncodeCmdAction|850|[I]:action:cfgRegInfo no out
+
+[21:18:01.662]ÊÕ¡û¡ô0000031289|SendChannelMessage|193|[I]:[identity:******5246f1425294c1b2e588ccc013],[1,0,1] send msg[291] success.
+0000031290|WifiConnectInfoClean|251|[I]:del sta info
+0000031291|FlacfgThreadFunc|216|[I]:start netCfg
+er_info:256
+0000031292|FlashConfigCreate|349|[I]:create register_info.bak:256
+0000031292|FlashConfigCreate|349
+[21:18:01.679]ÊÕ¡û¡ô|[I]:create regist
+[21:18:01.882]ÊÕ¡û¡ô0000031501|ModelNotifyStatus|448|[I]:status:101
+current status is 101
+0000031503|NetcfgGetTimeout|210|[I]:timeout:10
+0000031505|GetPublishInfo|180|[I]:find pubInfo
+0000031507|UnpublishService|142|[I]:stop ble
+0000031510|ModelNotifyStatus|448|[I]:status:200
+current status is 200
+[WLIB_E]SwEr:SPM NoSizeAlloc : 292, mem_ba
+[21:18:01.902]ÊÕ¡û¡ôse=0
+[WLIB_E]SwEr:SPM NoSizeAlloc : 292, mem_base=0
+0000031513|BleDisconnectedCb|178|[I]:ble disconn
+0000031514|BleDisconnectedCb|184|[E]:func not reg
+
+[21:18:02.226]ÊÕ¡û¡ôSTA startup!
+[WLIB_E]HwEr:UKI:0
+
+[21:18:02.614]ÊÕ¡û¡ô0000032233|ModelNotifyStatus|448|[I]:status:300
+current status is 300
+STATUS_REGISTER_RECV_INFO
+0000032234|SaveRegisterInfoToFlash|2126|[I]:succ
+0000032235|TransReceiveMsg|1431|[I]:succ recv:1
+0000032235|ConnectBleSendPacket|637|[E]:mac
+PROTO Header***0x00x00x0
+MSG Header[359]0xbabeface-13-0-0
+Module Header[351]0x1-0-0:1-1-0-0
+-SliceHead:0-1-0-0
+-PacketHead:0xbabeface-0-8-319-Data:859256132-GCMNonce[00000000318a424374bdbea6]-383-307:*******
+0000032239|ConnectDispatchToPeer|42|[E]:send pkt
+
+[21:18:02.706]ÊÕ¡û¡ôSTA connected to target AP!
+udp_bind(ipaddr = 0.0.0.0, port = 68)
+
+[21:18:03.440]ÊÕ¡û¡ô0000033057|ModelNotifyStatus|448|[I]:status:201
+current status is 201
+0000033058|NetcfgThreadFunc|273|[I]:succ
+0000033058|StartRegister|2170|[I]:start:0
+
+[21:18:03.784]ÊÕ¡û¡ô0000033403|ModelNotifyStatus|448|[I]:status:301
+current status is 301
+0000033404|CheckRegisterEmpty|1784|[W]:dev unregister
+0000033407|TlsNetworkInit|261|[I]:succ
+0000033408|TlsNetworkConnect|342|[I]:host:devicemgt-pre-drcn.platform.hihonorcloud.com
+udp_bind(ipaddr = 0.0.0.0, port = 48464)
+
+[21:18:03.802]ÊÕ¡û¡ô0000033414|OnRemoveSessionServer|1169|[I]:succ rm server:hihonor.magiclinksdk,netCfg
+
+[21:18:04.573]ÊÕ¡û¡ô0000034192|TlsNetHandshake|330|[
+[21:18:04.581]ÊÕ¡û¡ôI]:succ
+0000034201|ConnectionHttpSend|143|[I]:send succ
+
+[21:18:04.635]ÊÕ¡û¡ô0000034254|MagicLinkHttpResponseParser|223|[I]:status:200
+
+[21:18:04.684]ÊÕ¡û¡ô0000034302|GetKeyAndSecret|902|[I]:authMode:2
+0000034303|GetKey
+[21:18:04.691]ÊÕ¡û¡ôAndSecret|902|[I]:authMode:2
+0000034307|ConnectionHttpSend|143|[I]:send succ
+0000034308|DeviceRegister|1515|[I]:MAGICLINK_CLOUD_RELATED, MAGICLINK_REQ_REGISTER_CLOUD, 0
+
+[21:18:04.777]ÊÕ¡û¡ô0000034396|MagicLinkHttpResponse
+[21:18:04.784]ÊÕ¡û¡ôParser|223|[I]:status:200
+0000034397|DeviceRegister|1532|[I]:MAGICLINK_CLOUD_RELATED, MAGICLINK_RECV_REGRESULT, 0
+0000034398|RegisterThreadFunc|1854|[I]:devId: ******f2d0e7094ca685f399d1b0dc8d1anc1nl00071
+0000034400|MakeJsonRegisterResult|1999|[E]:ext null
+0000034401|MakeJsonRegisterResult|1999|[E]:ext null
+
+[21:18:05.490]ÊÕ¡û¡ô0000035105|ModelNotifyStatus|448|[I]:status:302
+current status is 302
+0000035106|RegisterThreadFunc|1879|[I]:reg succ
+0000035107|BiReport|1579|[E]:rpt
+0000035107|RegisterThreadFunc|1881|[E]:bi rpt
+0000035108|FlashConfigSave|364|[I]:del cfg:register_info
+
+[21:18:05.506]ÊÕ¡û¡ô0000035109|FlashConfigSave|364|[I]:del cfg:register_info.bak
+0000035115|FlashConfigCreate|349|[I]:create register_info:256
+0000035121|FlashConfigCreate|349|[I]:create register_info.bak:256
+[21:18:05.518]ÊÕ¡û¡ô
+0000035126|TlsNetworkDisconnect|147|[I]:succ fd:0
+0000035130|OnRemoveSessionServer|1169|[I]:succ rm server:hihonor.magiclinksdk,register
+0000035131|RegisterDeInit|2084|[I]:succ
+
+[21:18:05.814]ÊÕ¡û¡ô0000035425|ConnectDispatchFunc|83|[I]:running
+
+[21:18:05.956]ÊÕ¡û¡ô0000035568|CheckRegister|1259|[I]:reg succ
+
+[21:18:06.467]ÊÕ¡û¡ô0000036078|LocalCmdProcess|953|[I]:mqtt conn
+
+[21:18:06.475]ÊÕ¡û¡ô0000036083|InitTlsContex|173|[I]:initialized
+0000036084|TlsNetworkInit|261|[I]:succ
+0000036084|TlsNetworkConnect|342|[I]:host:devicelink-pre-drcn.platform.hihonorcloud.com
+udp_bind(ipaddr = 0.0.0.0, port = 63593)
+
+[21:18:07.276]ÊÕ¡û¡ô0000036886|TlsNetHandshake|330|[I]:succ
+0000036887|CloudLinkMqttConnect|1194|[I]:devId:******f2d0e7094ca685f399d1b0dc8d1anc1nl0
+[21:18:07.283]ÊÕ¡û¡ô0071
+
+[21:18:07.340]ÊÕ¡û¡ô0000036950|CloudLinkMqttAsyncSubscribe|763|[I]:mqtt async sub
+0000036951|LinkStatusCallback|1302|[I]:conn succ
+0000036952|CreateHeartbeatTimer|422|[I]:internal heartbeat
+0000036952|ProcessM
+[21:18:07.347]ÊÕ¡û¡ôqttConnect|1042|[I]:MAGICLINK_CLOUD_RELATED, MAGICLINK_CONNECT_CLOUD, 0
+
+[21:18:07.450]ÊÕ¡û¡ô0000037060|MagiclinkCoapConnectionCallback|619|[I]:get msg
+
+[21:18:07.624]ÊÕ¡û¡ô0000037236|SubSelfShareTopic|979|[E]:call
+0000037237|ProcessMqt
+[21:18:07.631]ÊÕ¡û¡ôtConnect|1076|[I]:ota enable
+0000037237|MagicLinkCheckOtaResult|934|[I]:check ota ret
+0000037238|MagicLinkGetRptStatusPayload|998|[E]:no svc:baseInfo
+0000037239|MagicLinkGetRptStatusPkt|604|[E]:get rpt payload
+0000037240|MagicLinkReportServiceStatus|764|[E]:get status:baseInfo
+0000037240|MagicLinkRptAllServiceStatus|788|[E]:rpt status:baseInfo
+type:0 req:104202588, rpt:2
+0000037242|MagicLinkAddSvcToRptStatus|743|[E]:get prop udid
+firmVer:1.0.0.201
+0000037243|MagicLinkAddSvcToRptStatus|743|[E]:get prop sdkVersion
+MCUVer:
+0000037245|MagicLinkGetRptStatusPkt|613|[I]:svc:deviceInfo
+0000037247|ConnectCoAPRecvPacket|1051|[I]:join mcast succ
+0000037248|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+0000037248|MagicLinkRptStatusToCloud|676|[I]:pub succ
+0000037249|MagicLinkReportServiceStatus|778|[I]:rpt status:deviceInfo
+type:0 req:2036960033, rpt:3
+0000037251|MagicLinkGetRptStatusPkt|613|[I]:svc:netInfo
+0000037253|CloudLinkMqttAsyncP
+[21:18:07.653]ÊÕ¡û¡ôublish|714|[I]:mqtt async pub
+0000037254|MagicLinkRptStatusToCloud|676|[I]:pub succ
+0000037254|MagicLinkReportServiceStatus|778|[I]:rpt status:netInfo
+type:0 req:190137392, rpt:4
+0000037256|GetUpdTypeCheckResult|548|[E]:not check
+0000037258|MagicLinkOtaGetReportInfo|3351|[I]:succ
+0000037259|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+0000037260|MagicLinkRptStatusToCloud|676|[I]:pub succ
+0000037261|MagicLinkReportServiceStatus|778|[I]:rpt status:ota
+type:0 req:1306846619, rpt:5
+0000037262|MagicLinkAddSvcToRptStatus|743|[E]:get prop On
+0000037263|MagicLinkAddSvcToRptStatus|743|[E]:get prop Brightness
+0000037264|MagicLinkAddSvcToRptStatus|743|[E]:get prop lightMode
+0000037265|MagicLinkGetRpt
+[21:18:07.663]ÊÕ¡û¡ôStatusPkt|613|[I]:svc:light
+0000037266|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+0000037267|MagicLinkRptStatusToCloud|676|[I]:pub succ
+0000037268|MagicLinkReportServiceStatus|778|[I]:rpt status:light
+0000037269|ProcessMqttConnect|1084|[I]:rpt services succ
+0000037270|ProcessMqttConnect|1086|[I]:pub topic
+0000037270|ConnectCreateMqttMsgPayload|1485|[I]:traceID:VqVsYt0w1w4z4B7C9FaHdIfKgLiOgQmR
+0000037272|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+0000037273|ConnectCloudSendSystemMsg|816|[I]:pub SYS_MGR_TOPIC_SUB_SUCCESS:0
+0000037274|CloudLinkBIProcess|896|[I]:biFlag:0x0000
+0000037275|ProcessMqttConnect|1102|[I]:
+[21:18:07.674]ÊÕ¡û¡ôSTATUS_DEVICE_ONLINE
+0000037275|ModelNotifyStatus|448|[I]:status:500
+current status is 500
+0000037277|MagicLinkGetRptEventPacket|1051|[E]:no svc:event
+0000037279|MagicLinkReportServiceEvent|509|[E]:get rptEventPkt
+rpt event msg fail
+0000037281|ConnectCreateMqttMsgPayload|1485|[I]:traceID:2y5A6D8E9GbHeGfMhNkPkSnSoVqWtYt1
+0000037285|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+0000037287|ConnectCloudSendSystemMsg|816|[I]:pub SYS_MGR_SYNC_TIME_REQ:0
+0000037289|LocalCmdProcess|983|[I]:mqtt sub
+
+[21:18:07.733]ÊÕ¡û¡ô0000037343|ConnectCreateMqttMsgPayload|1485|[I]:traceID:rWtYu1w2
+[21:18:07.741]ÊÕ¡û¡ôz4A7C7DaFbIdGgLgOgOmRmSp
+0000037347|SendMqttHeartbeat|213|[I]:succ
+PROTO Header[241]*******.0.108:41110
+MSG Header[217]0xbabeface-14-13693743508374945820-0
+Module Header[193]0xffff0003-0-13693743508374945818-0-Data:0-241-193:*******
+0000037351|AuthSwapDeviceInfo|937|[I]:MAGICLINK_PHONE_RELATED, MAGICLINK_REC
+[21:18:07.753]ÊÕ¡û¡ôV_SWAP_DEVINFO, 0
+0000037354|AuthSwapDeviceInfo|958|[I]:peer cliId:1
+0000037355|NetworkConfigItemErrComDeal|725|[E]:coap addr:******8.0.108 1
+0000037356|CheckInCertification|886|[I]:no handle
+0000037356|AuthSwapDeviceInfo|986|[I]:sessionId:859256142
+PROTO Header[398]*******.0.108:41110
+MSG Header[374]0xbabeface-14-13693743508374945821-0
+Module Header[350]0xffff0003-0-0-1-Data:0-398-350:*******
+0000037364|CoapSetNetworkMyIp|737|[I]:set my ip:******8.0.121
+0000037366|MagicLinkGetWlanConnInterface|283|[E]:no func
+0000037367|CoapSetNetworkMyIp|745|[E]:get conn
+0000037368|ConnectProcessMsg|2067|[E]:proc cmd
+0000037368|ConnectMsgProcessFunc|2356|[E]:proc msg
+0000037369|LocalCmdProcess|966|[I]:mqtt pub
+
+[21:18:07.791]ÊÕ¡û¡ômagiclink sdk: recv mqtt ping response
+
+[21:18:07.913]ÊÕ¡û¡ô0000037523|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:8
+0000037524|ConnectCloudSendSystemMsg|816|[I]:pub SYS_ANALYTICS_BUZ_LOG:3
+0000037525|MakeJsonRegisterResult|1999|[E]:ext null
+0000037526|MakeJsonRegisterResult|1999|[E]:ext null
+
+[21:18:07.988]ÊÕ¡û¡ô0000037598|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:9
+0000037600|LocalCmdProcess|966|[I]:mqtt pub
+
+[21:18:08.061]ÊÕ¡û¡ô0000037672|CloudLinkMqttPublish|
+[21:18:08.068]ÊÕ¡û¡ô1372|[I]:ret:0 qos:1,packetId:10
+0000037674|LocalCmdProcess|966|[I]:mqtt pub
+
+[21:18:08.138]ÊÕ¡û¡ô0000037744|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:11
+
+[21:18:08.145]ÊÕ¡û¡ô0000037746|LocalCmdProcess|966|[I]:mqtt pub
+
+[21:18:08.218]ÊÕ¡û¡ô0000037825|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:12
+0000037827|LocalCmdProcess|966
+[21:18:08.232]ÊÕ¡û¡ô|[I]:mqtt pub
+
+[21:18:08.291]ÊÕ¡û¡ô0000037899|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:13
+0000037901|LocalCmdProcess|966|[I]:mqtt pub
+0000037904|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+[21:18:08.307]ÊÕ¡û¡ô
+PROTO Header[49]*******.0.108:41110
+MSG Header[25]0xbabeface-14-13693743508374945822-0
+Module Header[1]0xffff0005-0-0-0-Data:0-49-1:*******
+0000037912|DeleteAuthTimeoutBySessId|1235|[I]:succ
+PROTO Header[66]*******.0.108:41110
+MSG Header[42]0xbabeface-14-13693743508374945823-0
+Module 
+[21:18:08.318]ÊÕ¡û¡ôHeader[18]0xffff0005-0-0-1-Data:0-66-18:*******
+0000037918|AuthCloseAck|1301|[I]:MAGICLINK_PHONE_RELATED, MAGICLINK_AUTH_SUCC, 0
+
+[21:18:08.352]ÊÕ¡û¡ô0000037957|MqttMessageArrived|1387|[I]:recv data:226
+
+[21:18:08.473]ÊÕ¡û¡ô10-24 21:18:06.939|AuthHandleTimeOutProcess|1058|[I]:coap handle timeout.
+
+[21:18:08.637]ÊÕ¡û¡ô10-24 21:18:07.099|MqttMessageAr
+[21:18:08.645]ÊÕ¡û¡ôrived|1387|[I]:recv data:289
+PROTO Header[241]*******7c521ad42eb9a3098472c0c66a8o00|[I]:get 10-24 21:18:07.105|MagiclinkCoapConnectionCallback|619|[I]:get msg
+MSG Header[217]0xbabeface-14-13693743508374945828-0
+Module Header[193]0xffff0003-0-13693743508374945826-0-Data:0-289-193:*******
+10-24 21:18:07.112|AuthSwapDeviceInfo|937|[I]:MAGICLINK_PHONE_RELATED, MAGICLINK_RECV_SWAP_DEVINFO, 0
+10-24 21:18:07.118|AuthSwapDevic
+[21:18:08.662]ÊÕ¡û¡ôeInfo|958|[I]:peer cliId:1
+10-24 21:18:07.120|NetworkConfigItemErrComDeal|730|[E]:cloud addr:******87c521ad42eb9a3098472c0c66a8o000200cb0 1
+10-24 21:18:07.122|CheckInCertification|886|[I]:no handle
+10-24 21:18:07.124|AuthSwapDeviceInfo|986|[I]:sessionId:859256140
+PROTO Header[398]*******7c521ad42eb9a3098472c0c66a8o000200cb0
+MSG Header[374]0xbabeface-14-13693743508374945829-0
+Module Header[350]0xffff0003-0-0-1-Data:0-446-350:*******
+
+[21:18:08.679]ÊÕ¡û¡ô10-24 21:18:07.136|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+
+[21:18:08.806]ÊÕ¡û¡ô10-24 21:18:07.270|ConnectCreateMqttMsgPayload|1485|[I]:traceID:iNkPlSnTqVrWtYu1w2z4A7C7FaFbIdIg
+
+[21:18:08.927]ÊÕ¡û¡ô10-24 21:18:07.391|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:14
+10-24 21:18:07.392|ConnectCloudSendSystemMsg|816|[I]:pub SYS_ANALYTICS_BUZ_LOG:3
+10-24 21:18:07.394|MakeJsonRegisterResult|1999|[E]:ext null
+10-24 21:18:07.395|MakeJsonRegisterResult|1999|[E]:ext null
+
+[21:18:09.476]ÊÕ¡û¡ô10-24 21:18:07.937|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+
+[21:18:09.595]ÊÕ¡û¡ô10-24 21:18:08.054|MqttMessageAr
+[21:18:09.602]ÊÕ¡û¡ôrived|1387|[I]:recv data:97
+PROTO Header[49]*******7c521ad42eb9a3098472c0c66a8o000200cb0
+MSG Header[25]0xbabeface-14-13693743508374945830-0
+Module Header[1]0xffff0005-0-0-0-Data:0-97-1:*******
+10-24 21:18:08.065|DeleteAuthTimeoutBySessId|1235|[I]:succ
+PROTO Header[66]*******7c521ad42eb9a3098472c0c66a8o000200cb0
+MSG Header[42]0xbabeface-14-13693743508374945831-0
+Module Header[18]0xffff0005-0-0-1-Data:0-114-1
+[21:18:09.620]ÊÕ¡û¡ô8:*******
+10-24 21:18:08.073|AuthCloseAck|1301|[I]:MAGICLINK_PHONE_RELATED, MAGICLINK_AUTH_SUCC, 0
+10-24 21:18:08.078|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+
+[21:18:09.707]ÊÕ¡û¡ô10-24 21:18:08.167|CloudLinkBiThreadFunc|871|[I]:exit
+
+[21:18:09.938]ÊÕ¡û¡ô10-24 21:18:08.397|MagiclinkCoapConnectionCallback|619|[I]:get msg
+
+[21:18:09.999]ÊÕ¡û¡ô10-24 21:18:08.460|ParseModuleTr
+[21:18:10.004]ÊÕ¡û¡ôansHeader|682|[I]:isServer:0
+PROTO Header[472]*******.0.108:5763
+MSG Header[448]0xbabeface-13-18446744071874505294-1
+Module Header[440]0x1-1-1:0-1--1-0
+-Data:859256132-GCMNonce[659a9ef10c42b0de0c1149f7]-472-408:*******
+10-24 21:18:08.465|TransOpen|1333|[I]:succ trans:1
+
+[21:18:10.024]ÊÕ¡û¡ô10-24 21:18:08.477|SendOpenAck|446|[I]:succ identity:******ac90204d11b9006a565ec54eee
+10-24 21:18:08.480|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+
+[21:18:10.481]ÊÕ¡û¡ô10-24 21:18:08.941|AuthHandleTimeOutProcess|1079|[I]:mqtt handle
+[21:18:10.488]ÊÕ¡û¡ô timeout.
+
+[21:18:11.493]ÊÕ¡û¡ô10-24 21:18:09.953|ParseModuleTransHeader|682|[I]:isServer:0
+PROTO Header[316]*******.0.108:5763
+MSG Header[292]0xbabeface-13-18446744071874505295-1
+Module Header[284]0x1-0-0:0-1-1-0
+-SliceHead:0-1-0-0
+-PacketHead:0xbabeface-1-8-252-Data:859256132-GCMNonce[000000019c377e0fb5c2e3d7]-316-224:*******
+method:3 req:0, rpt:6
+10-24 21:18:09.960|MagicLinkProcessProfile|1356|[I]:write req ac
+[21:18:11.509]ÊÕ¡û¡ôk
+
+[21:18:11.519]ÊÕ¡û¡ô10-24 21:18:09.972|SendChannelMessage|193|[I]:[identity:******ac90204d11b9006a565ec54eee],[1,1,1] send msg[216] success.
+type:0 req:1766702847, rpt:7
+10-24 21:18:09.974|MagicLinkAddSvcToRptStatus|743|[E]:get prop On
+10-24 21:18:09.975|MagicLinkAddSvcToRptStatus|743|[E]:get prop Brightness
+10-24 21:18:09.976|MagicLinkAddSvcToRptStatus|743|[E]:get prop lightMode
+10-24 21:18:09.978|MagicLinkGetRptStatusPkt|613|[I]:svc:light
+10-24 21:18:09.979|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-24 21:18:09.980|MagicLinkRptStatusToCloud|676|[I]:pub succ
+type:0 req:735928426, rpt:8
+10-24 21:18:09.982|MagicLinkAddSvcToRptStatus|743|[E]:get prop udid
+firmVer:1.0.0.201
+10-24 21:18:09.983|MagicLinkAddSvcToRptStatus|743|[E]:get prop sdkVersion
+MCUVer:
+10-24 21:18:09.985|MagicLinkGetRptStatusPkt|613|[I]:svc:deviceInfo
+10-24 21:18:09.987|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-24 21:18:09.988|MagicLinkRptStatusToCloud|676|[I]:pub succ
+10-24 21:18:09.989|TransRece
+[21:18:11.537]ÊÕ¡û¡ôiveMsg|1431|[I]:succ recv:1
+10-24 21:18:09.990|LocalCmdProcess|966|[I]:mqtt pub
+
+[21:18:11.591]ÊÕ¡û¡ô10-24 21:18:10.049|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:15
+10-24 21:18:10.051|Loc
+[21:18:11.598]ÊÕ¡û¡ôalCmdProcess|966|[I]:mqtt pub
+
+[21:18:11.649]ÊÕ¡û¡ô10-24 21:18:10.108|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:16
+10-24 21:18:10.110|ParseModuleTransHeader|682|[I]:isServer:0
+PROTO Header[316]*******.0.108:5763
+MSG Header[292]0xbabeface-13-18446744071874505294-1
+Module Header[284]0x1-0-0:0-1-1-0
+-SliceHead:0-1-0-0
+-PacketHead:0xbabeface-2-8-252-Data:859256132-GCMNonce[00000002344115674d1e6961]-316-224:*******
+metho
+[21:18:11.669]ÊÕ¡û¡ôd:3 req:1, rpt:9
+10-24 21:18:10.117|MagicLinkProcessProfile|1356|[I]:write req ack
+10-24 21:18:10.128|SendChannelMessage|193|[I]:[identity:******ac90204d11b9006a565ec54eee],[1,1,2] send msg[216] success.
+type:0
+[21:18:11.682]ÊÕ¡û¡ô req:263841044, rpt:10
+10-24 21:18:10.130|MagicLinkAddSvcToRptStatus|743|[E]:get prop On
+10-24 21:18:10.131|MagicLinkAddSvcToRptStatus|743|[E]:get prop Brightness
+10-24 21:18:10.132|MagicLinkAddSvcToRptStatus|743|[E]:get prop lightMode
+10-24 21:18:10.134|MagicLinkGetRptStatusPkt|613|[I]:svc:light
+10-24 21:18:10.136|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-24 21:18:10.137|MagicLinkRptStatusToCloud|676|[I]:pub succ
+type:0 req:1380550270, rpt:11
+10-24 21:18:10.138|MagicLinkAddSvcToRptStatus|743|[E]:get prop udid
+firmVer:1.0.0.201
+10-24 21:18:10.139|MagicLinkAddSvcToRptStatus|743|[E]:get prop sdkVersion
+MCUVer:
+10-24 21:18:10.141|MagicLinkGetRptStatusPkt|613|[I]:svc:deviceInfo
+10-24 21:18:10.143|CloudLinkMq
+[21:18:11.692]ÊÕ¡û¡ôttAsyncPublish|714|[I]:mqtt async pub
+10-24 21:18:10.144|MagicLinkRptStatusToCloud|676|[I]:pub succ
+10-24 21:18:10.145|TransReceiveMsg|1431|[I]:succ recv:1
+10-24 21:18:10.147|ParseModuleTransHeader|682|[I]:isServer:0
+PROTO Header[428]*******.0.108:5763
+MSG Header[404]0xbabeface-13-18446744071874505295-1
+Module Header[396]0x1-0-0:0-1-1-0
+-SliceHead:0-1-0-0
+-PacketHead:0xbabeface-3-8-364-Data:859256132-GCMNonce[00000003ab9218c1953103f8]-428-336:*******
+10-24 21:18:10.154|CheckValueByDataDef|623|[E]:inv str[36,32]
+10-24 21:18:10.155|ExecuteCmdProperty|661|[E]:prop:sdkVersion
+method:3 req:2, rpt:12
+10-24 21:18:10.158|MagicLinkProcessProfile|1356|[I]:write req ack
+
+[21:18:11.713]ÊÕ¡û¡ô10-24 21:18:10.169|SendChannelMessage|193|[I]:[identity:******ac90204d11b9006a565ec54eee],[1,1,3] send msg[381] success.
+type:0 req:1638354685, rpt:13
+10-24 21:18:10.172|MagicLinkAddSvcToRptStatus|743|[E]:get prop On
+10-24 21:18:10.173|MagicLinkAddSvcToRptStatus|743|[E]:get prop Brightness
+10-24 21:18:10.174|MagicL
+[21:18:11.723]ÊÕ¡û¡ôinkAddSvcToRptStatus|743|[E]:get prop lightMode
+10-24 21:18:10.176|MagicLinkGetRptStatusPkt|613|[I]:svc:light
+10-24 21:18:10.177|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-24 21:18:10.178|MagicLinkRptStatusToCloud|676|[I]:pub succ
+type:0 req:607580263, rpt:14
+10-24 21:18:10.180|MagicLinkAddSvcToRptStatus|743|[E]:get prop udid
+firmVer:1.0.0.201
+10-24 21:18:10.181|MagicLinkAddSvcToRptStatus|743|[E]:get prop sdkVersion
+MCUVer:
+10-24 21:18:10.183|MagicLinkGetRpt
+[21:18:11.736]ÊÕ¡û¡ôStatusPkt|613|[I]:svc:deviceInfo
+10-24 21:18:10.185|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-24 21:18:10.186|MagicLinkRptStatusToCloud|676|[I]:pub succ
+10-24 21:18:10.187|TransReceiveMsg|1431|[I]:succ recv:1
+10-24 21:18:10.188|LocalCmdProcess|966|[I]:mqtt pub
+
+[21:18:11.788]ÊÕ¡û¡ô10-24 21:18:10.248|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:17
+10-24 21:18:10.249|LocalCmdProcess|966|[I]:mqtt pub
+
+[21:18:11.851]ÊÕ¡û¡ô10-24 21:18:10.311|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:18
+10-24 21:18:10.312|LocalCmdProcess|966|[I]:mqtt pub
+
+[21:18:11.919]ÊÕ¡û¡ô10-24 21:18:10.378|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:19
+10-24 21:18:10.380|Loc
+[21:18:11.931]ÊÕ¡û¡ôalCmdProcess|966|[I]:mqtt pub
+
+[21:18:11.982]ÊÕ¡û¡ô10-24 21:18:10.441|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:20
+
+[21:18:13.242]ÊÕ¡û¡ô10-24 21:18:11.702|ConnectMsgProcessFunc|2338|[I]:running
+
+[21:18:15.582]ÊÕ¡û¡ô10-24 21:18:14.042|ConnectDispatchFunc|83|[I]:running
+
+[21:18:21.823]ÊÕ¡û¡ô10-24 21:18:20.283|ParseModuleTr
+[21:18:21.830]ÊÕ¡û¡ôansHeader|682|[I]:isServer:0
+PROTO Header[276]*******.0.108:5763
+MSG Header[252]0xbabeface-13-18446744071874505294-1
+Module Header[244]0x1-0-0:0-1-1-0
+-SliceHead:0-1-0-0
+-PacketHead:0xbabeface-4-8-212-Data:859256132-GCMNonce[000000046c194e3ff73010a4]-276-184:*******
+method:1 req:0, rpt:0
+10-24 21:18:20.289|MagicLinkEncodeCmdOut|971|[I]:enc write req
+10-24 21:18:20.291|MagicLinkProcessProfile|1356|[I]:write req ack
+
+[21:18:21.850]ÊÕ¡û¡ô10-24 21:18:20.301|SendChannelMessage|193|[I]:[identity:******ac90204d11b9006a565ec54eee],[1,1,4] send msg[67] success.
+10-24 21:18:20.304|ExecuteCmdProperty|641|[E]:write prop:-1
+type:0 req:436776575, rpt:15
+10-24 21:18:20.305|MagicLinkAddSvcToRptStatus|743|[E]:get prop On
+10-24 21:18:20.306|MagicLinkAddSvcToRptStatus|743|[E]:get prop Brightness
+10-24 21:18:20.307|MagicLinkAddSvcToRptStatus|743|[E]:get prop lightMode
+10-24 21:18:20.309|MagicLinkGetRptStatusPkt|613|[I]:svc:light
+10-24 21:18:20.310|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-24 21:18:20.311|MagicLinkRptStatusToCloud|676|[I]:pub succ
+10-24 21:18:20.312|TransReceiveMsg|1431|[I]:succ recv:1
+10-24 21:18:20.314|LocalCmdProcess|966|[I]:mqtt pub
+
+[21:18:21.904]ÊÕ¡û¡ô10-24 21:18:20.364|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,pac
+[21:18:21.912]ÊÕ¡û¡ôketId:21
+
+[21:18:23.206]ÊÕ¡û¡ô10-24 21:18:21.666|ConnectMsgProcessFunc|2338|[I]:running
+
+[21:18:25.627]ÊÕ¡û¡ô10-24 21:18:24.087|ConnectDispatchFunc|83|[I]:running
+
+[21:18:30.455]ÊÕ¡û¡ôadc raw:  796, temp_IC:   35
+Total:129972; Free:65920;
+
+[21:18:33.107]ÊÕ¡û¡ô10-24 21:18:31.567|ConnectMsgPro
+[21:18:33.115]ÊÕ¡û¡ôcessFunc|2338|[I]:running
+
+[21:18:35.628]ÊÕ¡û¡ô10-24 21:18:34.088|ConnectDispatchFunc|83|[I]:running
+
+[21:18:43.008]ÊÕ¡û¡ô10-24 21:18:41.468|ConnectMsgProcessFunc|2338|[I]:running
+
+[21:18:45.631]ÊÕ¡û¡ô10-24 21:18:44.089|ConnectDispatchFunc|83|[I]:running
+
+[21:18:52.910]ÊÕ¡û¡ô10-24 21:18:51.369|ConnectMsgProcessFunc|2338|[I]:running
+
+[21:18:55.632]ÊÕ¡û¡ô10-24 21:18:54.090|ConnectDispatchFunc|83|[I]:running
+
+[21:19:00.500]ÊÕ¡û¡ôswitch is 1
+pwm1 out 100
+pwm2 o
+[21:19:00.507]ÊÕ¡û¡ôut 100
+pwm2 out 100
+
+[21:19:01.891]ÊÕ¡û¡ôpwm1 out 99
+pwm2 out 99
+pwm2 o
+[21:19:01.898]ÊÕ¡û¡ôut 99
+pwm1 out 98
+pwm2 out 98
+pwm2 out 98
+
+[21:19:01.917]ÊÕ¡û¡ôpwm1 out 96
+pwm2 out 96
+pwm2 out 96
+
+[21:19:01.925]ÊÕ¡û¡ôpwm1 out 95
+pwm2 out 95
+pwm2 out 95
+pwm1 out 94
+pwm2 out 94
+pwm2 out 94
+
+[21:19:01.943]ÊÕ¡û¡ôpwm1 out 93
+pwm2 out 93
+pwm2 out 93
+pwm1 out 92
+pwm2 out 92
+pwm2 out 92
+
+[21:19:01.960]ÊÕ¡û¡ôpwm1 out 90
+pwm2 out 90
+pwm2 out 90
+pwm1 out 89
+pwm2 out 89
+pwm2 o
+[21:19:01.982]ÊÕ¡û¡ôut 89
+pwm1 out 88
+pwm2 out 88
+pwm2 out 88
+
+[21:19:01.991]ÊÕ¡û¡ôpwm1 out 87
+pwm2 out 87
+pwm2 out 87
+
+[21:19:02.003]ÊÕ¡û¡ôpwm1 out 86
+pwm2 out 86
+pwm2 out 86
+pwm1 out 85
+pwm2 out 85
+pwm2 out 85
+
+[21:19:02.021]ÊÕ¡û¡ôpwm1 out 84
+pwm2 out 84
+pwm2 out 84
+
+[21:19:02.037]ÊÕ¡û¡ôpwm1 out 82
+pwm2 out 82
+pwm2 out 82
+pwm1 out 81
+pwm2 out 81
+pwm2 out 81
+
+[21:19:02.053]ÊÕ¡û¡ôpwm1 out 80
+pwm2 out 80
+pwm2 out 80
+pwm1 out 79
+pwm2 out 79
+pwm2 out 79
+
+[21:19:02.071]ÊÕ¡û¡ôpwm1 out 78
+pwm2 out 78
+pwm2 out 78
+
+[21:19:02.082]ÊÕ¡û¡ôpwm1 out 77
+pwm2 out 77
+pwm2 out 77
+pwm1 out 76
+pwm2 out 76
+pwm2 o
+[21:19:02.102]ÊÕ¡û¡ôut 76
+pwm1 out 75
+pwm2 out 75
+pwm2 out 75
+pwm1 out 74
+pwm2 out 74
+pwm2 o
+[21:19:02.120]ÊÕ¡û¡ôut 74
+pwm1 out 73
+pwm2 out 73
+pwm2 o
+[21:19:02.131]ÊÕ¡û¡ôut 73
+pwm1 out 72
+pwm2 out 72
+pwm2 out 72
+pwm1 out 71
+pwm2 out 71
+pwm2 o
+[21:19:02.151]ÊÕ¡û¡ôut 71
+pwm1 out 70
+pwm2 out 70
+pwm2 out 70
+
+[21:19:02.160]ÊÕ¡û¡ôpwm1 out 69
+pwm2 out 69
+pwm2 out 69
+
+[21:19:02.179]ÊÕ¡û¡ôpwm1 out 68
+pwm2 out 68
+pwm2 out 68
+pwm1 out 67
+pwm2 out 67
+pwm2 out 67
+
+[21:19:02.195]ÊÕ¡û¡ôpwm1 out 66
+pwm2 out 66
+pwm2 out 66
+
+[21:19:02.211]ÊÕ¡û¡ôpwm1 out 65
+pwm2 out 65
+pwm2 out 65
+
+[21:19:02.221]ÊÕ¡û¡ôpwm1 out 64
+pwm2 out 64
+pwm2 out 64
+pwm1 out 63
+pwm2 out 63
+pwm2 o
+[21:19:02.239]ÊÕ¡û¡ôut 63
+pwm1 out 62
+pwm2 out 62
+pwm2 out 62
+pwm1 out 61
+pwm2 out 61
+pwm2 o
+[21:19:02.258]ÊÕ¡û¡ôut 61
+
+[21:19:02.268]ÊÕ¡û¡ôpwm1 out 60
+pwm2 out 60
+pwm2 out 60
+pwm1 out 59
+pwm2 out 59
+pwm2 out 59
+
+[21:19:02.289]ÊÕ¡û¡ôpwm1 out 58
+pwm2 out 58
+pwm2 out 58
+
+[21:19:02.303]ÊÕ¡û¡ôpwm1 out 57
+pwm2 out 57
+pwm2 out 57
+pwm1 out 56
+pwm2 out 56
+pwm2 out 56
+
+[21:19:02.321]ÊÕ¡û¡ôpwm1 out 55
+pwm2 out 55
+pwm2 out 55
+
+[21:19:02.331]ÊÕ¡û¡ôpwm1 out 54
+pwm2 out 54
+pwm2 out 54
+
+[21:19:02.350]ÊÕ¡û¡ôpwm1 out 53
+pwm2 out 53
+pwm2 out 53
+
+[21:19:02.363]ÊÕ¡û¡ôpwm1 out 52
+pwm2 out 52
+pwm2 out 52
+pwm1 out 51
+pwm2 out 51
+pwm2 o
+[21:19:02.378]ÊÕ¡û¡ôut 51
+pwm1 out 50
+pwm2 out 50
+pwm2 out 50
+
+[21:19:02.400]ÊÕ¡û¡ôpwm1 out 49
+pwm2 out 49
+pwm2 out 49
+
+[21:19:02.413]ÊÕ¡û¡ôpwm1 out 48
+pwm2 out 48
+pwm2 out 48
+pwm1 out 47
+pwm2 out 47
+pwm2 o
+[21:19:02.427]ÊÕ¡û¡ôut 47
+
+[21:19:02.441]ÊÕ¡û¡ôpwm1 out 46
+pwm2 out 46
+pwm2 out 46
+pwm1 out 45
+pwm2 out 45
+pwm2 out 45
+
+[21:19:02.461]ÊÕ¡û¡ôpwm1 out 44
+pwm2 out 44
+pwm2 out 44
+
+[21:19:02.481]ÊÕ¡û¡ôpwm1 out 43
+pwm2 out 43
+pwm2 out 43
+
+[21:19:02.490]ÊÕ¡û¡ôpwm1 out 42
+pwm2 out 42
+pwm2 out 42
+
+[21:19:02.510]ÊÕ¡û¡ôpwm1 out 41
+pwm2 out 41
+pwm2 out 41
+
+[21:19:02.523]ÊÕ¡û¡ôpwm1 out 40
+pwm2 out 40
+pwm2 out 40
+
+[21:19:02.540]ÊÕ¡û¡ôpwm1 out 39
+pwm2 out 39
+pwm2 out 39
+
+[21:19:02.554]ÊÕ¡û¡ôpwm1 out 38
+pwm2 out 38
+pwm2 out 38
+
+[21:19:02.571]ÊÕ¡û¡ôpwm1 out 37
+pwm2 out 37
+pwm2 out 37
+
+[21:19:02.581]ÊÕ¡û¡ôpwm1 out 36
+pwm2 out 36
+pwm2 out 36
+
+[21:19:02.601]ÊÕ¡û¡ôpwm1 out 35
+pwm2 out 35
+pwm2 out 35
+
+[21:19:02.611]ÊÕ¡û¡ôpwm1 out 34
+pwm2 out 34
+pwm2 out 34
+
+[21:19:02.630]ÊÕ¡û¡ôpwm1 out 33
+pwm2 out 33
+pwm2 out 33
+
+[21:19:02.651]ÊÕ¡û¡ôpwm1 out 32
+pwm2 out 32
+pwm2 out 32
+
+[21:19:02.663]ÊÕ¡û¡ôpwm1 out 31
+pwm2 out 31
+pwm2 out 31
+
+[21:19:02.680]ÊÕ¡û¡ôpwm1 out 30
+pwm2 out 30
+pwm2 out 30
+
+[21:19:02.700]ÊÕ¡û¡ôpwm1 out 29
+pwm2 out 29
+pwm2 o
+[21:19:02.707]ÊÕ¡û¡ôut 29
+
+[21:19:02.720]ÊÕ¡û¡ôpwm1 out 28
+pwm2 out 28
+pwm2 out 28
+
+[21:19:02.740]ÊÕ¡û¡ôpwm1 out 27
+pwm2 out 27
+pwm2 out 27
+
+[21:19:02.760]ÊÕ¡û¡ôpwm1 out 26
+pwm2 out 26
+pwm2 out 26
+
+[21:19:02.780]ÊÕ¡û¡ôpwm1 out 25
+pwm2 out 25
+pwm2 o
+[21:19:02.786]ÊÕ¡û¡ôut 25
+
+[21:19:02.800]ÊÕ¡û¡ôpwm1 out 24
+pwm2 out 24
+pwm2 out 24
+
+[21:19:02.815]ÊÕ¡û¡ô10-24 21:19:01.270|ConnectMsgProcessFunc|2338|[I]:running
+pwm1 out 23
+pwm2 out 23
+pwm2 out 23
+
+[21:19:02.850]ÊÕ¡û¡ôpwm1 out 22
+pwm2 out 22
+pwm2 out 22
+
+[21:19:02.870]ÊÕ¡û¡ôpwm1 out 21
+pwm2 out 21
+pwm2 o
+[21:19:02.877]ÊÕ¡û¡ôut 21
+
+[21:19:02.901]ÊÕ¡û¡ôpwm1 out 20
+pwm2 out 20
+pwm2 out 20
+
+[21:19:02.919]ÊÕ¡û¡ôpwm1 out 19
+pwm2 out 19
+pwm2 o
+[21:19:02.926]ÊÕ¡û¡ôut 19
+
+[21:19:02.950]ÊÕ¡û¡ôpwm1 out 18
+pwm2 out 18
+pwm2 o
+[21:19:02.956]ÊÕ¡û¡ôut 18
+
+[21:19:02.980]ÊÕ¡û¡ôpwm1 out 17
+pwm2 out 17
+pwm2 o
+[21:19:02.986]ÊÕ¡û¡ôut 17
+pwm1 out 16
+pwm2 out 16
+pwm2 o
+[21:19:03.007]ÊÕ¡û¡ôut 16
+
+[21:19:03.030]ÊÕ¡û¡ôpwm1 out 15
+pwm2 out 15
+pwm2 o
+[21:19:03.037]ÊÕ¡û¡ôut 15
+
+[21:19:03.061]ÊÕ¡û¡ôpwm1 out 14
+pwm2 out 14
+pwm2 o
+[21:19:03.068]ÊÕ¡û¡ôut 14
+
+[21:19:03.090]ÊÕ¡û¡ôpwm1 out 13
+pwm2 out 13
+pwm2 o
+[21:19:03.097]ÊÕ¡û¡ôut 13
+
+[21:19:03.130]ÊÕ¡û¡ôpwm1 out 12
+pwm2 out 12
+pwm2 out 12
+
+[21:19:03.161]ÊÕ¡û¡ôpwm1 out 11
+pwm2 out 11
+pwm2 out 11
+
+[21:19:03.202]ÊÕ¡û¡ôpwm1 out 10
+pwm2 out 10
+pwm2 out 10
+
+[21:19:03.241]ÊÕ¡û¡ôpwm1 out 9
+pwm2 out 9
+pwm2 out 9
+
+[21:19:03.280]ÊÕ¡û¡ôpwm1 out 8
+pwm2 out 8
+pwm2 out
+[21:19:03.287]ÊÕ¡û¡ô 8
+
+[21:19:03.330]ÊÕ¡û¡ôpwm1 out 7
+pwm2 out 7
+pwm2 out 7
+
+[21:19:03.391]ÊÕ¡û¡ôpwm1 out 6
+pwm2 out 6
+pwm2 out 6
+
+[21:19:03.450]ÊÕ¡û¡ôpwm1 out 5
+pwm2 out 5
+pwm2 out
+[21:19:03.457]ÊÕ¡û¡ô 5
+
+[21:19:03.522]ÊÕ¡û¡ôpwm1 out 4
+pwm2 out 4
+pwm2 out 4
+
+[21:19:03.610]ÊÕ¡û¡ôpwm1 out 3
+pwm2 out 3
+pwm2 out
+[21:19:03.616]ÊÕ¡û¡ô 3
+
+[21:19:03.712]ÊÕ¡û¡ôpwm1 out 2
+pwm2 out 2
+pwm2 out 2
+
+[21:19:03.870]ÊÕ¡û¡ôpwm1 out 1
+pwm2 out 1
+pwm2 out
+[21:19:03.877]ÊÕ¡û¡ô 1
+
+[21:19:05.633]ÊÕ¡û¡ô10-24 21:19:04.091|ConnectDispatchFunc|83|[I]:running
+
+[21:19:07.355]ÊÕ¡û¡ô10-24 21:19:05.813|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+
+[21:19:07.365]ÊÕ¡û¡ô10-24 21:19:05.823|SendMqttHeartbeat|213|[I]:succ
+
+[21:19:07.423]ÊÕ¡û¡ômagiclink sdk: recv mqtt ping response

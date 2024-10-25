@@ -108,7 +108,7 @@ if(*status>=HAL_IO_NUM)
 return -1;
 else
 {
-LOG(LOG_LVL_INFO,"get IO STATUS %d\n",*status);
+//LOG(LOG_LVL_INFO,"get IO STATUS %d\n",*status);
 return *status;
 }
 }

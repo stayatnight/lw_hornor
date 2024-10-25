@@ -51,22 +51,32 @@
 			]
 		},
 		{
-			"path": "demo/demo.c",
+			"path": "demo/demo_copy.c",
 			"bookmarks": [
 				{
-					"line": 140,
+					"line": 143,
 					"column": 0,
 					"label": "ota版本号"
 				},
 				{
-					"line": 477,
-					"column": 1,
-					"label": "注册回调函数"
-				},
-				{
-					"line": 598,
+					"line": 625,
 					"column": 0,
 					"label": "设备控制回调"
+				}
+			]
+		},
+		{
+			"path": "ln882h-custom-imou/project/yankon/app/demo.c",
+			"bookmarks": [
+				{
+					"line": 267,
+					"column": 0,
+					"label": "g_LIGHT"
+				},
+				{
+					"line": 517,
+					"column": 2,
+					"label": "设备回调函数"
 				}
 			]
 		}

@@ -10,6 +10,9 @@
 #include "magiclink.h"
 #include "magiclink_netcfg.h"
 #include "magiclink_log.h"
+#include"slData.h"
+#include"lamptask.h"
+#include "utils/debug/log.h"
 
 #define MY_PRDKEY "******5474b7459c9cc49eba30d93867"
 #define MY_PRDSECRET "******561c5847fdb80a601004fd0016"
@@ -286,7 +289,30 @@ static int SetLightSwitchInt(const void *data, unsigned int len)
     printf("set light switch succ\r\n");
     return 0;
 }
+static int SetLightOnoff()
+{
+    stRlLiveData_t *pLiveData = &g_stRlData.liveData;
+    LOG(LOG_LEVEL_INFO,"set light onoff %d\r\n",g_light.on);
+    LampSwitchCtrl((uint8_t)g_light.on,1000 );
+    return 0;
+}
+static int GetLightOnoff()
+{
 
+   int *len = sizeof(g_light.on);
+
+  int  *data = malloc(*len);
+    if (*data == NULL) {
+        printf("malloc err \r\n");
+        return -1;
+    }
+
+    (void)memset(*data, 0, *len);
+    (void)memcpy(*data, &g_light.on, *len);
+
+    printf("get light switch %d \r\n", g_light.on);
+    return 0;
+}
 static int GetLightSwitchInt(void **data, unsigned int *len)
 {
     *len = sizeof(g_light.on);
@@ -491,8 +517,9 @@ static struct TestControlFunc g_testCtrlFunc[] = {
     { "dvService", "switch", SetLightSwitchInt, GetLightSwitchInt },
     { "dvService", "supportSinkSvc", SetLightSwitchInt, GetLightSwitchInt },
     { "dvService", "devSvcStatus", SetLightSwitchInt, GetLightSwitchInt },
-    { "light", "switch", SetLightSwitchInt, GetLightSwitchInt },
-    { "light", "color", SetLightColorString, GetLightColorString },
+    { "light", "On", SetLightOnoff, GetLightOnoff },
+    { "light", "Brightness", SetLightColorString, GetLightColorString },
+    {  "light", "lightMode", SetLightModeInt, GetLightModeInt },                                                              },
     { "lightMode", "mode", SetLightModeInt, GetLightModeInt },
     { "volume", "volume", SetLightVolumeInt, GetLightVolumeInt },
     { "switch", "on", SetLightSwitchInt, GetLightSwitchInt },

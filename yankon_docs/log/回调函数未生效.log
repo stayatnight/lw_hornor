@@ -1,0 +1,22 @@
+
+-PacketHead:0xbabeface-6-8-212-Data:859256145-GCMNonce[000000064faa087157a54e5d]-324-184:*******
+method:1 req:2, rpt:0
+10-24 21:38:07.617|MagicLinkEncodeCmdOut|971|[I]:enc write req
+10-24 21:38:07.619|MagicLinkProcessProfile|1356|[I]:write req ack
+10-24 21:38:07.629|SendChannelMessage|193|[I]:[identity:******5579cb4830af7ec25f53644bc7],[1,4,6] send msg[67] success.
+10-24 21:38:07.631|ExecuteCmdProperty|641|[E]:write prop:-1
+type:0 req:361817720, rpt:19
+10-24 21:38:07.632|MagicLinkAddSvcToRptStatus|743|[E]:get prop On
+10-24 21:38:07.633|MagicLinkAddSvcToRptStatus|743|[E]:get prop Brightness
+10-24 21:38:07.634|MagicLinkAddSvcToRptStatus|743|[E]:get prop lightMode
+10-24 21:38:07.636|MagicLinkGetRptStatusPkt|613|[I]:svc:light
+10-24 21:38:07.637|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-24 21:38:07.638|MagicLinkRptStatusToCloud|676|[I]:pub succ
+10-24 21:38:07.639|TransReceiveMsg|1431|[I]:succ recv:1
+10-24 21:38:07.642|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+10-24 21:38:07.643|LocalCmdProcess|966|[I]:mqtt pub
+10-24 21:38:07.784|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:24
+10-24 21:38:09.136|ConnectMsgProcessFunc|2338|[I]:running
+10-24 21:38:12.187|ConnectDispatchFunc|83|[I]:running
+10-24 21:38:19.037|ConnectMsgProcessFunc|2338|[I]:running
+10-24 21:38:22.187|ConnectDispatchFunc|83|[I]:running
