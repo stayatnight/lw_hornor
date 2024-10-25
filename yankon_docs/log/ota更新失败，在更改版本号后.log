@@ -1,0 +1,937 @@
+ROTO Header[281]*******.0.108:41620
+MSG Header[257]0xbabeface-13-1797792923-1
+Module Header[249]0x1-0-0:0-30-1-0
+-SliceHead:0-1-0-0
+-PacketHead:0xbabeface-25-8-217-Data:859256161-GCMNonce[0000001911828ecc35d1aeae]-281-189:*******
+10-25 17:25:44.490|MagicLinkParseDataArray|283|[I]:Array is 0
+10-25 17:25:44.492|MakeActionOut|715|[I]:no out
+10-25 17:25:44.493|ModelNotifyStatus|448|[I]:status:702
+current status isrpt:1010-25 17:25:44.494|DownloadThreadFunc|2769|[I]:start download
+10-25 17:25:44.494|Download10-25 17:25:44.496|MagicLinkEncot|261|[I]:succ
+[I]:action:otaAction no out
+10-25 17:25:44.497|TlsNetworkInit|261|[I]:succ
+10-25 17:25:44.499|TlsNetworkConnect|342|[I]:host:update.hihonorcdn.com
+udp_bind(ipaddr = 0.0.0.0, port = 39560)
+                                        10-25 17:25:44.513|SendChannelMessage|193|[I]:[identity:******c269284f74a383589e546ab67a],[1,30,25] send msg[158] success.
+10-25 17:25:44.515|ControlMsgReceived|96|[I]:empty
+10-25 17:25:44.515|TransReceiveMsg|1431|[I]:succ recv:1
+adc raw:  819, temp_IC:   44
+Total:129972; Free:47088;
+10-25 17:25:47.054|ConnectDispatchFunc|83|[I]:running
+10-25 17:25:48.768|TlsNetHandshake|330|[I]:succ
+10-25 17:25:48.770|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:49.082|GetOtaInfoNumByLabelBegin|1051|[W]:pointerLeft is null
+10-25 17:25:49.084|GetInfosAccordingFilelist|1178|[I]:info:1|flashimage-ota-xz-v0.1.bin|601822
+10-25 17:25:49.085|SaveOtaVersionInfo|2225|[I]:newVer:1.0.1.202|454789
+10-25 17:25:49.086|MakeJsonRegisterResult|1999|[E]:ext null
+10-25 17:25:49.087|MakeJsonRegisterResult|1999|[E]:ext null
+type:0 req:43340684, rpt:1051
+10-25 17:25:49.848|MagicLinkOtaGetReportInfo|3351|[I]:succ
+10-25 17:25:49.850|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-25 17:25:49.851|MagicLinkRptStatusToCloud|676|[I]:pub succ
+10-25 17:25:49.852|ReportOtaServiceStatus|791|[I]:succ
+10-25 17:25:49.853|FlashOtaPkgWrite|66|[E]:inv type: 3
+10-25 17:25:49.855|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:49.861|LocalCmdProcess|966|[I]:mqtt pub
+10-25 17:25:49.923|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:51
+10-25 17:25:50.065|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:50.253|CheckOtaPkgSHA256|842|[I]:len:4096, type:0
+10-25 17:25:50.256|FlashOtaPkgWrite|50|[I]:ota addr=00133000
+10-25 17:25:50.404|FlashOtaPkgWrite|52|[I]:begin succ
+10-25 17:25:50.445|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:50.485|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:50.518|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:50.546|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:50.582|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:50.619|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:50.645|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:50.681|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:50.715|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:50.743|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:50.779|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:50.822|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:50.850|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:50.885|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:50.922|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:50.948|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:50.983|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:51.112|ConnectMsgProcessFunc|2338|[I]:running
+10-25 17:25:52.440|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:52.468|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:52.505|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:52.539|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:52.567|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:52.604|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:52.647|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:52.675|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:52.712|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:52.756|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:52.782|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:52.819|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:52.853|DownloadPkgScheduleFunc|2408|[I]:schedule: 3000/205000
+type:0 req:1166698448, rpt:1052
+10-25 17:25:52.855|MagicLinkOtaGetReportInfo|3351|[I]:succ
+10-25 17:25:52.857|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-25 17:25:52.858|MagicLinkRptStatusToCloud|676|[I]:pub succ
+10-25 17:25:52.859|ReportOtaServiceStatus|791|[I]:succ
+10-25 17:25:52.861|LocalCmdProcess|966|[I]:mqtt pub
+10-25 17:25:52.868|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:52.895|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:52.917|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:52
+10-25 17:25:52.933|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:52.974|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:53.001|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:53.042|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:54.442|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:54.468|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:54.516|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:54.554|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:54.581|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:54.630|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:54.667|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:54.693|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:54.731|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:54.768|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:54.795|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:54.834|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:54.873|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:54.901|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:54.939|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:54.977|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:55.003|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:55.042|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:55.080|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:55.107|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:55.145|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:55.184|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:55.211|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:55.252|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:55.289|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:55.316|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:55.356|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:55.392|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:55.419|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:55.454|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:55.490|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:55.518|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:55.551|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:55.589|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:55.617|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:55.652|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:55.687|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:55.713|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:55.751|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:55.786|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:55.814|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:55.853|DownloadPkgScheduleFunc|2408|[I]:schedule: 6000/205000
+type:0 req:507629270, rpt:1053
+10-25 17:25:55.855|MagicLinkOtaGetReportInfo|3351|[I]:succ
+10-25 17:25:55.857|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-25 17:25:55.858|MagicLinkRptStatusToCloud|676|[I]:pub succ
+10-25 17:25:55.859|ReportOtaServiceStatus|791|[I]:succ
+10-25 17:25:55.861|ConnectionHttpSend|143|[I]:senub
+cc
+10-25 17:25:55.862|LocalCmdProcess|966|[I]:mqtt pub
+10-25 17:25:55.895|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:55.921|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:55.930|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:53
+10-25 17:25:55.962|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:55.997|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:56.024|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:56.060|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:56.097|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:56.124|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:56.165|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:56.198|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:56.224|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:56.923|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-25 17:25:56.925|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-25 17:25:57.463|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:57.498|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:57.525|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:57.564|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:57.597|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:57.624|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:57.660|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:57.862|ConnectDispatchFunc|83|[I]:running
+10-25 17:25:58.853|DownloadPkgScheduleFunc|2408|[I]:schedule: 9000/205000
+type:0 req:1996043741, rpt:1054
+10-25 17:25:58.855|MagicLinkOtaGetReportInfo|3351|[I]:succ
+10-25 17:25:58.857|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-25 17:25:58.858|MagicLinkRptStatusToCloud|676|[I]:pub succ
+10-25 17:25:58.858|ReportOtaServiceStatus|791|[I]:succ
+10-25 17:25:58.862|LocalCmdProcess|966|[I]:mqtt pub
+10-25 17:25:58.923|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:54
+10-25 17:25:58.960|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:58.987|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:59.027|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:59.061|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:59.088|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:59.131|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:59.164|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:59.191|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:59.235|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:59.271|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:59.298|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:59.335|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:59.372|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:59.398|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:59.436|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:59.471|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:59.498|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:59.535|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:59.571|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:59.597|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:59.635|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:59.669|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:59.697|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:59.732|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:59.767|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:59.794|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:59.834|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:59.868|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:59.894|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:59.933|ConnectionHttpSend|143|[I]:send succ
+10-25 17:25:59.966|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:25:59.993|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:00.029|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:00.068|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:00.094|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:00.131|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:00.167|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:00.194|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:00.235|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:00.269|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:00.296|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:00.344|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:00.383|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:00.409|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:00.448|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:00.488|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:00.516|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:00.554|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:00.588|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:00.615|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:00.655|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:00.691|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:00.718|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:00.759|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:00.793|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:00.821|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:00.860|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:00.898|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:00.925|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:00.962|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:01.006|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:01.033|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:01.068|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:01.106|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:01.132|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:01.169|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:01.204|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:01.231|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:01.271|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:01.305|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:01.331|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:01.367|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:01.399|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:01.426|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:01.461|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:01.495|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:01.522|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:01.558|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:01.595|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:01.622|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:01.657|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:01.696|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:01.723|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:01.760|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:01.795|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:01.821|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:01.853|DownloadPkgScheduleFunc|2408|[I]:schedule: 12000/205000
+type:0 req:1336974564, rpt:1055
+10-25 17:26:01.855|MagicLinkOtaGetReportInfo|3351|[I]:succ
+10-25 17:26:01.857|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-25 17:26:01.858|MagicLinkRptStatusToCloud|676|[I]:pub succ
+10-25 17:26:01.859|ReportOtaServiceStatus|791|[I]:succ
+10-25 17:26:01.860|LocalCmdProcess|966|[I]:mqtt pub
+10-25 17:26:01.866|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:01.902|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:01.930|CloudLinkMqttPubld|143|[I]:send succ
+s:1,packetId:55
+10-25 17:26:01.932|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:01.969|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:02.006|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:02.033|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:02.054|ConnectMsgProcessFunc|2338|[I]:running
+10-25 17:26:02.068|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:02.109|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:02.135|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:02.171|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:02.211|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:02.238|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:02.274|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:02.316|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:02.343|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:02.377|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:02.416|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:02.443|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:02.480|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:02.520|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:02.547|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:02.581|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:02.615|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:02.642|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:02.676|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:02.712|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:02.739|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:02.774|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:02.806|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:02.833|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:02.869|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:02.907|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:02.936|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:02.973|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:03.010|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:03.037|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:03.076|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:03.111|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:03.139|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:03.173|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:03.208|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:03.236|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:03.273|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:03.307|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:03.334|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:03.369|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:03.402|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:03.429|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:03.466|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:03.498|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:03.524|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:03.560|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:03.592|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:03.620|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:03.659|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:03.695|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:03.722|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:04.853|DownloadPkgScheduleFunc|2408|[I]:schedule: 15000/205000
+type:0 req:677905387, rpt:1056
+10-25 17:26:04.855|MagicLinkOtaGetReportInfo|3351|[I]:succ
+10-25 17:26:04.857|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-25 17:26:04.858|MagicLinkRptStatusToCloud|676|[I]:pub succ
+10-25 17:26:04.858|ReportOtaServiceStatus|791|[I]:succ
+10-25 17:26:04.861|LocalCmdProcess|966|[I]:mqtt pub
+10-25 17:26:04.914|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:56
+10-25 17:26:05.029|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:05.062|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:05.089|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:05.124|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:05.158|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:05.186|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:05.221|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:05.257|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:05.284|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:05.321|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:05.355|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:05.384|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:05.419|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:05.453|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:05.480|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:05.515|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:05.551|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:05.578|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:05.612|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:05.649|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:05.677|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:05.718|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:05.752|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:05.779|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:05.813|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:05.847|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:05.874|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:05.911|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:05.947|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:05.973|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:06.014|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:06.047|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:06.074|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:06.121|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:06.154|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:06.181|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:06.218|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:06.253|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:06.279|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:07.535|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:07.570|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:07.598|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:07.638|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:07.674|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:07.701|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:07.739|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:07.773|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:07.800|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:07.835|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:07.853|DownloadPkgScheduleFunc|2408|[I]:schedule: 18000/205000
+type:0 req:18836210, rpt:1057
+10-25 17:26:07.855|MagicLinkOtaGetReportInfo|3351|[I]:succ
+10-25 17:26:07.857|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-25 17:26:07.858|MagicLinkRptStatusToCloud|676|[I]:pub succ
+10-25 17:26:07.858|ReportOtaServiceStatus|791|[I]:succ
+10-25 17:26:07.861|LocalCmdProcess|966|[I]:mqtt pub
+10-25 17:26:07.875|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:07.902|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:07.926|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:57
+10-25 17:26:07.938|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:07.977|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:08.004|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:08.097|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:08.141|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:08.169|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:08.205|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:08.256|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:08.282|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:08.320|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:08.356|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:08.384|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:08.421|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:08.463|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:08.490|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:08.527|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:08.564|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:08.591|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:08.639|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:09.149|ConnectDispatchFunc|83|[I]:running
+10-25 17:26:10.036|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:10.063|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:10.100|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:10.133|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:10.159|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:10.203|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:10.236|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:10.263|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:10.298|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:10.333|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:10.359|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:10.396|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:10.429|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:10.456|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:10.492|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:10.527|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:10.554|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:10.590|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:10.627|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:10.653|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:10.689|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:10.853|DownloadPkgScheduleFunc|2408|[I]:schedule: 21000/205000
+type:0 req:1507250680, rpt:1058
+10-25 17:26:10.855|MagicLinkOtaGetReportInfo|3351|[I]:succ
+10-25 17:26:10.857|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-25 17:26:10.858|MagicLinkRptStatusToCloud|676|[I]:pub succ
+10-25 17:26:10.858|ReportOtaServiceStatus|791|[I]:succ
+10-25 17:26:10.862|LocalCmdProcess|966|[I]:mqtt pub
+10-25 17:26:10.913|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:58
+10-25 17:26:12.056|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:12.083|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:12.117|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:12.151|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:12.178|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:12.213|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:12.250|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:12.277|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:12.313|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:12.347|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:12.374|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:12.410|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:12.451|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:12.477|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:12.513|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:12.551|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:12.579|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:12.615|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:12.649|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:12.676|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:12.713|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:12.748|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:12.777|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:12.811|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:12.848|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:12.875|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:12.884|ConnectMsgProcessFunc|2338|[I]:running
+10-25 17:26:12.914|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:12.952|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:12.980|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:13.017|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:13.050|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:13.078|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:13.114|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:13.148|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:13.175|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:13.210|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:13.244|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:13.271|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:13.306|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:13.341|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:13.367|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:13.407|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:13.448|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:13.475|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:13.510|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:13.545|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:13.571|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:13.607|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:13.639|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:13.667|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:13.853|DownloadPkgScheduleFunc|2408|[I]:schedule: 24000/205000
+type:0 req:848181503, rpt:1059
+10-25 17:26:13.855|MagicLinkOtaGetReportInfo|3351|[I]:succ
+10-25 17:26:13.857|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-25 17:26:13.858|MagicLinkRptStatusToCloud|676|[I]:pub succ
+10-25 17:26:13.858|ReportOtaServiceStatus|791|[I]:succ
+10-25 17:26:13.859|LocalCmdProcess|966|[I]:mqtt pub
+10-25 17:26:13.916|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:59
+10-25 17:26:15.061|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:15.094|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:15.122|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:15.157|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:15.191|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:15.217|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:15.256|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:15.290|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:15.317|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:15.353|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:15.389|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:15.415|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:15.455|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:15.497|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:15.525|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:15.560|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:15.595|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:15.622|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:15.659|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:15.696|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:15.723|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:15.758|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:15.793|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:15.820|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:15.855|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:15.889|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:15.915|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:15.950|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:15.985|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:16.012|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:16.047|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:16.081|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:16.107|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:16.146|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:16.182|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:16.209|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:16.244|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:16.277|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:16.304|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:16.340|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:16.379|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:16.406|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:16.446|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:16.481|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:16.509|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:16.545|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:16.585|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:16.611|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:16.655|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:16.687|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:16.715|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:16.750|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:16.784|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:16.811|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:16.847|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:16.853|DownloadPkgScheduleFunc|2408|[I]:schedule: 27000/205000
+type:0 req:189112326, rpt:1060
+10-25 17:26:16.855|MagicLinkOtaGetReportInfo|3351|[I]:succ
+10-25 17:26:16.857|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-25 17:26:16.858|MagicLinkRptStatusToCloud|676|[I]:pub succ
+10-25 17:26:16.858|ReportOtaServiceStatus|791|[I]:succ
+10-25 17:26:16.860|LocalCmdProcess|966|[I]:mqtt pub
+10-25 17:26:16.879|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-25 17:26:16.906|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:16.921|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:60
+10-25 17:26:16.944|ConnectionHttpSend|143|[I]:send succ
+10-25 17:26:16.980|CheckOtaPkgSHA256|842|[I]:len:3806, type:1
+10-25 17:26:16.983|DownloadUpdatePackage|1541|[I]:finish:1
+10-25 17:26:17.005|CheckOtaPkgSHA256|842|[I]:len:0, type:2
+10-25 17:26:17.006|ModelNotifyStatus|448|[I]:status:703
+current status is 703
+10-25 17:26:17.007|DownloadUpdatePackage|1556|[I]:succ:1
+10-25 17:26:17.008|DfxRefreshLogBuffer|2485|[E]:refresh
+type:0 req:1563847585, rpt:1061
+10-25 17:26:17.010|MagicLinkOtaGetReportInfo|3351|[I]:succ
+10-25 17:26:17.012|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-25 17:26:17.013|MagicLinkRptStatusToCloud|676|[I]:pub succ
+10-25 17:26:17.014|ReportOtaServiceStatus|791|[I]:succ
+10-25 17:26:17.015|FlashOtaPkgWrite|62|[I]:end
+10-25 17:26:17.015|TlsNetworkDisconnect|147|[I]:succ 10-25 17:26:17.015|TlsNetworkDisconnect|147|[I]:succ fd:1
+10-25 17:26:17.019|TlsNetworkDisconnect|143|[I]:disconnected
+10-25 17:26:17.020|DfxRefreshLogBuffer|2485|[E]:refresh
+10-25 17:26:17.024|JudgeResizeClientSendBuf|1330|[I]:need reset mqtt mem
+10-25 17:26:17.077|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:61
+------  combo_mcu_basic_example  ------
+TCP/IP initialized.
+LAMP INIT TEST LN882H SDK Ver: 2.1_rc1 [build time:Oct 25 2024 16:08:32][0x02010001]
+LAMP INIT OK
+             LAMP INIT OK GPIOB  STATUS:0
+                                         key init ok
+STA startup!
+[WLIB_E]HwEr:UKI:0
+MEM enter MagicLinkSDKRun [108024]
+0000000173|MagicLinkComponentsInit|85|[I]:module:logcollect
+0000000174|InitComponent|60|[I]:enable:logcollect
+0000000174|InitComponent|64|[W]:no comp:logcollect
+0000000175|MagicLinkInit|164|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_INIT, 0
+VER:IoTSDK_1.1.0.344_20240413_test_debug, TM:Apr 13 2024 14:57:17
+
+0000000184|MagicLinkParsePropertyList|207|[I]:succ svc:baseInfo, access:0
+0000000185|MagicLinkParseActionList|328|[I]:no actionList
+0000000186|MagicLinkParsePropertyList|207|[I]:succ svc:deviceInfo, access:7
+0000000187|MagicLinkParseActionList|328|[I]:no actionList
+0000000188|MagicLinkParsePropertyList|207|[I]:succ svc:netInfo, access:5
+0000000189|MagicLinkParseActionList|328|[I]:no actionList
+0000000190|MagicLinkParsePropertyList|207|[I]:succ svc:ota, access:7
+0000000191|MagicLinkParseAction|297|[W]:no inDataList
+0000000192|MagicLinkParseAction|310|[W]:no outDataList
+0000000192|MagicLinkParseAction|297|[W]:no inDataList
+0000000193|MagicLinkParseAction|310|[W]:no outDataList
+0000000194|MagicLinkParsePropertyList|207|[I]:succ svc:light, access:7
+0000000194|MagicLinkParseActionList|328|[I]:no actionList
+0000000198|ModelParseJson|181|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_PROFILE_PARSE, 0
+0000000199|NetworkManagementInit|1658|[W]:succ
+0000000199|NetworkInit|70|[I]:succ
+0000000200|DiscoveryInit|556|[I]:succ
+0000000201|TransmissionInit|40|[I]:succ
+0000000201|CloudLinkMqttInit|1092|[I]:succ
+0000000202|ConnectRegRecvPacket|392|[I]:add:1 succ
+0000000202|ConnectRegSendPacket|361|[I]:add:1 succ
+0000000203|ConnectMsgProcessInit|2631|[E]:sem init
+0000000204|ConnectInit|549|[I]:succ
+0000000205|MagicLinkComponentsInit|85|[I]:module:p2p
+0000000205|InitComponent|60|[I]:enable:p2p
+0000000206|InitComponent|64|[W]:no comp:p2p
+0000000206|MagicLinkComponentsInit|85|[I]:module:blenetcfg
+0000000207|InitComponent|60|[I]:enable:blenetcfg
+0000000208|ConnectRegSendPacket|361|[I]:add:3 succ
+0000000208|MagicLinkComponentsInit|85|[I]:module:coapconnect
+0000000209|InitComponent|60|[I]:enable:coapconnect
+udp_bind(ipaddr = 0.0.0.0, port = 5683)
+                                       0000000211|ConnectRegSendPacket|361|[I]:add:2 succ
+0000000211|ConnectRegRecvPacket|392|[I]:add:2 succ
+0000000212|NetworkSetItemValueByStr|929|[E]:inv dst:prdName
+0000000213|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdName
+0000000213|NetworkSetItemValueByStr|929|[E]:inv dst:manufactureName
+0000000214|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:manufactureName
+0000000215|NetworkSetItemValueByStr|929|[E]:inv dst:prdTypeName
+0000000216|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdTypeName
+0000000217|NetworkSetItemValueByStr|929|[E]:inv dst:modelId
+0000000218|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:modelId
+0000000218|NetworkSetItemValueByStr|929|[E]:inv dst:offeringCode
+0000000219|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:offeringCode
+0000000220|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeId
+0000000221|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeId
+0000000222|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeName
+0000000223|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeName
+0000000224|NetworkSetItemValueByStr|929|[E]:inv dst:qrScanMode
+0000000224|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:qrScanMode
+0000000225|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:udid
+0000000226|NetworkSetItemValueByStr|929|[E]:inv dst:devName
+0000000227|ModelSetDevInfoToNetwork|290|[E]:set item:deviceInfo:devName
+firmVer:1.0.0.201
+0000000228|ModelSetDevInfoToNetwork|272|[E]:set:deviceInfo:sdkVersion
+0000000229|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:MCUVersion
+0000000267|MagicLinkHuksHalRegister|243|[I]:succ
+0000000620|MakeJsonRegisterResult|1999|[E]:ext null
+0000000621|MakeJsonRegisterResult|1999|[E]:ext null
+STA connected to target AP!
+udp_bind(ipaddr = 0.0.0.0, port = 68)
+                                     0000001387|MagicLinkNetworkUpdateRegResult|2076|[W]:succ
+0000001388|MagicLinkComponentsInit|85|[I]:module:netcfg
+0000001388|InitComponent|60|[I]:enable:netcfg
+0000001389|OnRegSessionServerRestart|1216|[I]:succ reg cb:hihonor.magiclinksdk,netCfg
+0000001390|NetCfgInit|739|[I]:succ
+0000001391|MagicLinkComponentsInit|85|[I]:module:register
+0000001391|InitComponent|60|[I]:enable:register
+0000001392|CheckRegisterEmpty|1780|[I]:registered
+0000001392|RegisterInit|1992|[I]:registered
+0000001393|MagicLinkComponentsInit|85|[I]:module:control
+0000001394|InitComponent|60|[I]:enable:control
+0000001394|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,control
+0000001395|MagicLinkComponentsInit|85|[I]:module:ota
+0000001396|InitComponent|60|[I]:enable:ota
+0000001397|MagicLinkOtaFuncInit|103|[I]:init
+0000001397|OtaInit|3516|[I]:succ
+0000001398|MagicLinkComponentsInit|85|[I]:module:bi
+0000001398|InitComponent|60|[I]:enable:bi
+0000001399|InitComponent|64|[W]:no comp:bi
+0000001399|MagicLinkComponentsInit|85|[I]:module:magiclinkactive
+0000001400|InitComponent|60|[I]:enable:magiclinkactive
+0000001401|InitComponent|64|[W]:no comp:magiclinkactive
+0000001401|MagicLinkComponentsInit|85|[I]:module:netparamsync
+0000001402|InitComponent|60|[I]:enable:netparamsync
+0000001403|InitComponent|64|[W]:no comp:netparamsync
+0000001404|CheckRegisterEmpty|1780|[I]:registered
+0000001404|ExtComponentsMngtInit|114|[I]:module:dvService
+0000001405|SetLocalInfo|93|[I]:not reg
+0000001405|MagicLinkInit|235|[W]:succ
+MEM Start demo [90120]
+0000001406|CheckRegister|1259|[I]:reg succ
+0000001407|CheckRegister|1259|[I]:reg succ
+0000001917|LocalCmdProcess|953|[I]:mqtt conn
+0000001925|TlsNetworkInit|261|[I]:succ
+0000001925|TlsNetworkConnect|342|[I]:host:devicelink-pre-drcn.platform.hihonorcloud.com
+udp_bind(ipaddr = 0.0.0.0, port = 1503)
+                                       [low_level_output, 70] netif is not link up.
+[low_level_output, 70] netif is not link up.
+0000002782|TlsNetHandshake|330|[I]:succ
+0000002783|CloudLinkMqttConnect|1194|[I]:devId:******5b4fdc4a4cb3847bc6d5f93bfc0bnc1nl000ca
+0000002842|CloudLinkMqttAsyncSubscribe|763|[I]:mqtt async sub
+0000002843|LinkStatusCallback|1302|[I]:conn succ
+0000002844|CreateHeartbeatTimer|422|[I]:internal heartbeat
+0000002844|ProcessMqttConnect|1042|[I]:MAGICLINK_CLOUD_RELATED, MAGICLINK_CONNECT_CLOUD, 0
+0000002910|ConnectCoAPRecvPacket|1051|[I]:join mcast succ
+0000003133|SubSelfShareTopic|979|[E]:call
+0000003134|ProcessMqttConnect|1076|[I]:ota enable
+0000003135|MagicLinkCheckOtaResult|951|[I]:newVer:1.0.1.202|454789, curVer:1.0.0.201
+0000003136|MagicLinkCheckOtaResult|959|[I]:rpt ota result
+0000003138|AddCloudRequstHeader|1887|[I]:env:prod, reqId:******376491beec194674a1cefc2956
+0000003139|ConnectCreateMqttMsgPayload|1485|[I]:traceID:UrXsZv0x2y3A6B8E9GbHeGfKhNiPkQnS
+0000003141|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+0000003142|ConnectCloudSendSystemMsg|816|[I]:pub SYS_MGR_OTA_FIRMWARE_VERSION_REQ:0
+0000003143|ModelNotifyStatus|448|[I]:status:707
+current status is 707
+0000003144|SaveOtaVersionInfo|2225|[I]:newVer:|
+0000003145|MakeJsonRegisterResult|1999|[E]:ext null
+0000003146|MakeJsonRegisterResult|1999|[E]:ext null
+0000003897|MagicLinkGetRptStatusPayload|998|[E]:no svc:baseInfo
+0000003898|MagicLinkGetRptStatusPkt|604|[E]:get rpt payload
+0000003899|MagicLinkReportServiceStatus|764|[E]:get status:baseInfo
+0000003899|MagicLinkRptAllServiceStatus|788|[E]:rpt status:baseInfo
+type:0 req:717439024, rpt:2001
+0000003901|MagicLinkAddSvcToRptStatus|743|[E]:get prop udid
+firmVer:1.0.0.201
+0000003902|MagicLinkAddSvcToRptStatus|743|[E]:get prop sdkVersion
+MCUVer:
+0000003904|MagicLinkGetRptStatusPkt|613|[I]:svc:deviceInfo
+0000003906|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+0000003907|MagicLinkRptStatusToCloud|676|[I]:pub succ
+0000003908|MagicLinkReportServiceStatus|778|[I]:rpt status:deviceInfo
+type:0 req:502712821, rpt:2002
+0000003910|MagicLinkGetRptStatusPkt|613|[I]:svc:netInfo
+0000003911|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+0000003912|MagicLinkRptStatusToCloud|676|[I]:pub succ
+0000003913|MagicLinkReportServiceStatus|778|[I]:rpt status:netInfo
+type:0 req:803373829, rpt:2003
+0000003915|GetUpdTypeCheckResult|548|[E]:not check
+0000003917|MagicLinkOtaGetReportInfo|3351|[I]:succ
+0000003918|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+0000003919|MagicLinkRptStatusToCloud|676|[I]:pub succ
+0000003920|MagicLinkReportServiceStatus|778|[I]:rpt status:ota
+type:0 req:438317122, rpt:2004
+get light brightness 3
+get light brightness 3
+get light mode 1
+0000003922|MagicLinkGetRptStatusPkt|613|[I]:svc:light
+0000003924|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+0000003925|MagicLinkRptStatusToCloud|676|[I]:pub succ
+0000003926|MagicLinkReportServiceStatus|778|[I]:rpt status:light
+0000003926|ProcessMqttConnect|1084|[I]:rpt services succ
+0000003927|ProcessMqttConnect|1086|[I]:pub topic
+0000003928|ConnectCreateMqttMsgPayload|1485|[I]:traceID:E9GcHeKfMiNiPlQnToVrWtYu1w2x4A5C
+0000003930|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+0000003931|ConnectCloudSendSystemMsg|816|[I]:pub SYS_MGR_TOPIC_SUB_SUCCESS:0
+0000003932|CloudLinkBIProcess|896|[I]:biFlag:0x0011
+0000003932|ProcessMqttConnect|1102|[I]:STATUS_DEVICE_ONLINE
+0000003933|ModelNotifyStatus|448|[I]:status:500
+current status is 500
+0000003934|MagicLinkGetRptEventPacket|1051|[E]:no svc:event
+0000003935|MagicLinkReportServiceEvent|509|[E]:get rptEventPkt
+rpt event msg fail
+0000003936|ConnectCreateMqttMsgPayload|1485|[I]:traceID:eLgMgOkRmRpUpXsXt0v0y3y6B6E9E9Hc
+0000003938|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+0000003939|ConnectCloudSendSystemMsg|816|[I]:pub SYS_MGR_SYNC_TIME_REQ:0
+0000003940|LocalCmdProcess|983|[I]:mqtt sub
+0000003991|SendMqttHeartbeat|213|[I]:succ
+0000003992|LocalCmdProcess|966|[I]:mqtt pub
+magiclink sdk: recv mqtt ping response
+0000004086|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:8
+0000004087|LocalCmdProcess|966|[I]:mqtt pub
+0000004154|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:9
+0000004155|LocalCmdProcess|966|[I]:mqtt pub
+0000004210|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:10
+0000004211|LocalCmdProcess|966|[I]:mqtt pub
+0000004281|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:11
+0000004282|LocalCmdProcess|966|[I]:mqtt pub
+0000004342|MqttMessageArrived|1387|[I]:recv data:387
+0000004344|CloudLinkRecvCmdMsg|394|[E]:no func:SYS_MGR_OTA_FIRMWARE_VERSION_RSP
+0000004406|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:12
+0000004407|LocalCmdProcess|966|[I]:mqtt pub
+0000004463|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:13
+0000004465|LocalCmdProcess|966|[I]:mqtt pub
+0000004476|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+0000004531|MqttMessageArrived|1387|[I]:recv data:226
+10-25 17:26:24.796|MqttMessageArrived|1387|[I]:recv data:289
+PROTO Header[241]*******7c521ad42eb9a3098472c0c66a8o000200cb0
+MSG Header[217]0xbabeface-14-13693743508374946234-0
+Module Header[193]0xffff0003-0-13693743508374946232-0-Data:0-289-193:*******
+10-25 17:26:24.806|AuthSwapDeviceInfo|937|[I]:MAGICLINK_PHONE_RELATED, MAGICLINK_RECV_SWAP_DEVINFO, 0
+10-25 17:26:24.809|AuthSwapDeviceInfo|958|[I]:peer cliId:1
+10-25 17:26:24.810|NetworkConfigItemErrComDeal|730|[E]:cloud addr:******87c521ad42eb9a3098472c0c66a8o000200cb0 1
+10-25 17:26:24.811|CheckInCertification|886|[I]:no handle
+10-25 17:26:24.812|AuthSwapDeviceInfo|986|[I]:sessionId:859256137
+PROTO Header[390]*******7c521ad42eb9a3098472c0c66a8o000200cb0
+MSG Header[366]0xbabeface-14-13693743508374946235-0
+Module Header[342]0xffff0003-0-0-1-Data:0-438-342:*******
+10-25 17:26:24.828|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+10-25 17:26:25.170|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+10-25 17:26:25.383|MqttMessageArrived|1387|[I]:recv data:243
+PROTO Header[195]*******7c521ad42eb9a3098472c0c66a8o000200cb0
+MSG Header[171]0xbabeface-14-13693743508374946236-0
+Module Header[147]0xffff0008-11-859256137-0-Data:0-243-147:*******
+10-25 17:26:25.396|GetProtocolParams|570|[I]:pinLen:8
+PROTO Header[298]*******7c521ad42eb9a3098472c0c66a8o000200cb0
+MSG Header[274]0xbabeface-14-13693743508374946237-0
+Module Header[250]0xffff0008-10-859256137-1-Data:0-346-250:*******
+10-25 17:26:25.633|SetServiceResult|685|[I]:ret agreement processing
+10-25 17:26:25.636|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+10-25 17:26:26.175|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+10-25 17:26:26.427|MqttMessageArrived|1387|[I]:recv data:318
+PROTO Header[270]*******7c521ad42eb9a3098472c0c66a8o000200cb0
+MSG Header[246]0xbabeface-14-13693743508374946238-0
+Module Header[222]0xffff0008-11-859256137-0-Data:0-318-222:*******
+PROTO Header[154]*******7c521ad42eb9a3098472c0c66a8o000200cb0
+MSG Header[130]0xbabeface-14-13693743508374946239-0
+Module Header[106]0xffff0008-10-859256137-1-Data:0-202-106:*******
+10-25 17:26:26.649|SetServiceResult|679|[I]:ret success
+10-25 17:26:26.660|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+10-25 17:26:27.162|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+10-25 17:26:27.317|MqttMessageArrived|1387|[I]:recv data:272
+PROTO Header[224]*******7c521ad42eb9a3098472c0c66a8o000200cb0
+MSG Header[200]0xbabeface-14-13693743508374946240-0
+Module Header[176]0xffff0002-0-859256137-0-Data:859256137-GCMNonce[206ee88b6d270577de253036]-272-144:*******
+10-25 17:26:27.327|NetworkSetPeerItem|410|[E]:para
+10-25 17:26:27.328|ParseSyncNetworkInfo|384|[E]:peer mac save
+10-25 17:26:27.329|ParseSyncNetworkInfo|441|[I]:peer cliId:1
+10-25 17:26:27.330|ConnectionGetLocal|271|[E]:weak func
+PROTO Header[345]*******7c521ad42eb9a3098472c0c66a8o000200cb0
+MSG Header[321]0xbabeface-14-13693743508374946241-0
+Module Header[297]0xffff0002-10-859256137-1-Data:859256137-GCMNonce[5f4d4e04c2c3645b5c0c3a3b]-393-281:*******
+10-25 17:26:27.350|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+10-25 17:26:28.170|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+10-25 17:26:28.359|MqttMessageArrived|1387|[I]:recv data:97
+PROTO Header[49]*******7c521ad42eb9a3098472c0c66a8o000200cb0
+MSG Header[25]0xbabeface-14-13693743508374946242-0
+Module Header[1]0xffff0005-0-0-0-Data:0-97-1:*******
+10-25 17:26:28.364|DeleteAuthTimeoutBySessId|1235|[I]:succ
+PROTO Header[66]*******7c521ad42eb9a3098472c0c66a8o000200cb0
+MSG Header[42]0xbabeface-14-13693743508374946243-0
+Module Header[18]0xffff0005-0-0-1-Data:0-114-18:*******
+10-25 17:26:28.368|AuthCloseAck|1301|[I]:MAGICLINK_PHONE_RELATED, MAGICLINK_AUTH_SUCC, 0
+10-25 17:26:28.372|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+10-25 17:26:29.172|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+10-25 17:26:29.517|MagiclinkCoapConnectionCallback|619|[I]:get msg
+10-25 17:26:29.546|MqttMessageArrived|1387|[I]:recv data:521
+10-25 17:26:29.553|ParseModuleTransHeader|682|[I]:isServer:0
+PROTO Header[473]*******7c521ad42eb9a3098472c0c66a8o000200cb0
+MSG Header[449]0xbabeface-13-18446744073310340147-1
+Module Header[441]0x1-1-1:0-31--1-0
+-Data:859256137-GCMNonce[fc5852c703f5b1bda9b84fa0]-521-409:*******
+10-25 17:26:29.558|TransOpen|1333|[I]:succ trans:1
+10-25 17:26:29.570|SendOpenAck|446|[I]:succ identity:******7a926340c79bb082983b96fa43
+10-25 17:26:29.579|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+PROTO Header[241]*******.0.108:55768
+MSG Header[217]0xbabeface-14-13693743508374946248-0
+Module Header[193]0xffff0003-0-13693743508374946246-0-Data:0-241-193:*******
+10-25 17:26:29.602|AuthSwapDeviceInfo|937|[I]:MAGICLINK_PHONE_RELATED, MAGICLINK_RECV_SWAP_DEVINFO, 0
+10-25 17:26:29.605|AuthSwapDeviceInfo|958|[I]:peer cliId:1
+10-25 17:26:29.606|NetworkConfigItemErrComDeal|725|[E]:coap addr:******8.0.108 1
+10-25 17:26:29.607|CheckInCertification|886|[I]:no handle
+10-25 17:26:29.608|AuthSwapDeviceInfo|986|[I]:sessionId:859256167
+PROTO Header[398]*******.0.108:55768
+MSG Header[374]0xbabeface-14-13693743508374946249-0
+Module Header[350]0xffff0003-0-0-1-Data:0-398-350:*******
+10-25 17:26:29.620|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+10-25 17:26:29.621|CoapSetNetworkMyIp|737|[I]:set my ip:******8.0.121
+10-25 17:26:29.622|MagicLinkGetWlanConnInterface|283|[E]:no func
+10-25 17:26:29.623|CoapSetNetworkMyIp|745|[E]:get conn
+10-25 17:26:29.623|ConnectProcessMsg|2067|[E]:proc cmd
+10-25 17:26:29.624|ConnectMsgProcessFunc|2356|[E]:proc msg
+10-25 17:26:29.790|MqttMessageArrived|1387|[I]:recv data:323
+10-25 17:26:29.795|ParseModuleTransHeader|682|[I]:isServer:0
+PROTO Header[275]*******7c521ad42eb9a3098472c0c66a8o000200cb0
+MSG Header[251]0xbabeface-13-18446744073310340147-1
+Module Header[243]0x1-0-0:0-31-1-0
+-SliceHead:0-1-0-0
+-PacketHead:0xbabeface-1-8-211-Data:859256137-GCMNonce[0000000199ba1daf2d165e7a]-323-183:*******
+10-25 17:26:29.801|MagicLinkCheckCmd|1244|[E]:no svc:callingPkgName
+10-25 17:26:29.802|MagicLinkProcessProfile|1334|[E]:check cmd
+method:3 req:81, rpt:2005
+10-25 17:26:29.803|MagicLinkEncodeCmdOut|966|[E]:errcode:12
+10-25 17:26:29.815|SendChannelMessage|193|[I]:[identity:******7a926340c79bb082983b96fa43],[1,31,1] send msg[84] success.
+10-25 17:26:29.816|ControlMsgReceived|96|[I]:empty
+10-25 17:26:29.817|TransReceiveMsg|1431|[I]:succ recv:1
+PROTO Header[49]*******.0.108:55768
+MSG Header[25]0xbabeface-14-13693743508374946252-0
+Module Header[1]0xffff0005-0-0-0-Data:0-49-1:*******
+10-25 17:26:29.851|DeleteAuthTimeoutBySessId|1235|[I]:succ
+PROTO Header[66]*******.0.108:55768
+MSG Header[42]0xbabeface-14-13693743508374946253-0
+Module Header[18]0xffff0005-0-0-1-Data:0-66-18:*******
+10-25 17:26:29.854|AuthCloseAck|1301|[I]:MAGICLINK_PHONE_RELATED, MAGICLINK_AUTH_SUCC, 0
+10-25 17:26:29.862|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+10-25 17:26:30.163|AuthHandleTimeOutProcess|1058|[I]:coap handle timeout.
+10-25 17:26:30.473|MqttMessageArrived|1387|[I]:recv data:321
+10-25 17:26:30.484|ParseModuleTransHeader|682|[I]:isServer:0
+PROTO Header[273]*******7c521ad42eb9a3098472c0c66a8o000200cb0
+MSG Header[249]0xbabeface-13-18446744073310340147-1
+Module Header[241]0x1-0-0:0-31-1-0
+-SliceHead:0-1-0-0
+-PacketHead:0xbabeface-2-8-209-Data:859256137-GCMNonce[00000002c9589259983ba222]-321-181:*******
+method:3 req:82, rpt:2006
+10-25 17:26:30.491|MagicLinkProcessProfile|1356|[I]:write req ack
+10-25 17:26:30.502|SendChannelMessage|193|[I]:[identity:******7a926340c79bb082983b96fa43],[1,31,2] send msg[163] success.
+type:0 req:2128340171, rpt:2007
+10-25 17:26:30.504|MagicLinkAddSvcToRptStatus|743|[E]:get prop udid
+firmVer:1.0.0.201
+10-25 17:26:30.506|MagicLinkAddSvcToRptStatus|743|[E]:get prop sdkVersion
+MCUVer:
+10-25 17:26:30.508|MagicLinkGetRptStatusPkt|613|[I]:svc:deviceInfo
+10-25 17:26:30.510|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-25 17:26:30.511|MagicLinkRptStatusToCloud|676|[I]:pub succ
+10-25 17:26:30.512|TransReceiveMsg|1431|[I]:succ recv:1
+10-25 17:26:30.513|LocalCmdProcess|966|[I]:mqtt pub
+10-25 17:26:30.575|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:14
+10-25 17:26:30.578|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+10-25 17:26:30.799|ConnectDispatchFunc|83|[I]:running
+10-25 17:26:31.134|MagiclinkCoapDiscoveryCallback|520|[I]:recv disc msg
+10-25 17:26:34.279|ConnectMsgProcessFunc|2338|[I]:running
+10-25 17:26:40.800|ConnectDispatchFunc|83|[I]:running
+10-25 17:26:44.180|ConnectMsgProcessFunc|2338|[I]:running
+10-25 17:26:50.801|ConnectDispatchFunc|83|[I]:running
+10-25 17:26:54.091|ConnectMsgProcessFunc|2338|[I]:running
+10-25 17:27:00.802|ConnectDispatchFunc|83|[I]:running
+10-25 17:27:03.992|ConnectMsgProcessFunc|2338|[I]:running
+10-25 17:27:10.803|ConnectDispatchFunc|83|[I]:running
+10-25 17:27:13.892|ConnectMsgProcessFunc|2338|[I]:running
+adc raw:  815, temp_IC:   42
+Total:129972; Free:68512;
+10-25 17:27:20.804|ConnectDispatchFunc|83|[I]:running
+10-25 17:27:22.790|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-25 17:27:22.796|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-25 17:27:23.787|ConnectMsgProcessFunc|2338|[I]:running
+10-25 17:27:30.805|ConnectDispatchFunc|83|[I]:running
+10-25 17:27:33.688|ConnectMsgProcessFunc|2338|[I]:running
+10-25 17:27:40.806|ConnectDispatchFunc|83|[I]:running
+10-25 17:27:43.588|ConnectMsgProcessFunc|2338|[I]:running
+
+分析，ota 固件是下载了，也正确获取了相关固件的版本号和文件大小，这说明打包的xml可能没有问题。
+10-25 17:25:52.853|DownloadPkgScheduleFunc|2408|[I]:schedule: 3000/205000
+
+

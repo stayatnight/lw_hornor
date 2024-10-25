@@ -1,0 +1,4 @@
+目录说明
+-version
+---xxxxx.zip 这是ota固件
+---flashimage.bin 这是可以串口烧录的固件，包括bootloader

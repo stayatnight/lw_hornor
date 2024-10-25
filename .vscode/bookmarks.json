@@ -51,18 +51,13 @@
 			]
 		},
 		{
-			"path": "demo/demo_copy.c",
-			"bookmarks": [
-				{
-					"line": 143,
-					"column": 0,
-					"label": "ota版本号"
-				}
-			]
-		},
-		{
 			"path": "ln882h-custom-imou/project/yankon/app/demo.c",
 			"bookmarks": [
+				{
+					"line": 144,
+					"column": 2,
+					"label": "ota版本号"
+				},
 				{
 					"line": 267,
 					"column": 0,

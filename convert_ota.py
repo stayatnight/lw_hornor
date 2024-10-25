@@ -69,7 +69,7 @@ for file in files_to_copy:
 import re
 
 # 读取C文件内容,获取版本号
-with open('D:/code/h_test/honor_magiclink_sdk/demo/demo.c', 'r',encoding='utf-8') as file:
+with open('D:/code/h_test/honor_magiclink_sdk/ln882h-custom-imou/project/yankon/app/demo.c', 'r',encoding='utf-8') as file:
     content = file.read()
 
 # 定义正则表达式模式来匹配版本号
@@ -86,12 +86,17 @@ if match:
 else:
     print("Version not found.")
 zip_filename=version+'_ota.zip'
+version_dir = 'version'
+version_subdir = os.path.join(version_dir, version)
+os.makedirs(version_subdir, exist_ok=True)
+zip_path = os.path.join(version_subdir, zip_filename)
 # 创建zip文件并将full文件夹中的内容添加到其中
-with zipfile.ZipFile(zip_filename, 'w', zipfile.ZIP_DEFLATED) as zipf:
+with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as zipf:
     for root, dirs, files in os.walk(folder_name):
         for file in files:
             zipf.write(os.path.join(root, file), os.path.relpath(os.path.join(root, file), os.path.join(root, '..')))
-
+full_is_bin_path = os.path.join(version_subdir, 'flashimage.bin')
+shutil.copy('D:/code/h_test/honor_magiclink_sdk/ln882h-custom-imou/build-yankon-release/bin/flashimage.bin', full_is_bin_path)
 # 如果需要，可以删除full文件夹（可选）
 # shutil.rmtree(folder_name)
 
