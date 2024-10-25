@@ -468,31 +468,57 @@ static int GetLightCctInt(void **data, unsigned int *len)
     printf("get light cct\r\n");
     return 0;
 }
-static int SetLightOnoff()
+static int SetLightOnoff(const void*data, unsigned int len)
 {
     stRlLiveData_t *pLiveData = &g_stRlData.liveData;
+    g_light.on = *(int *)data > 0 ? 1 : 0;
     LOG(LOG_LEVEL_INFO,"set light onoff %d\r\n",g_light.on);
     LampSwitchCtrl((uint8_t)g_light.on,1000 );
     return 0;
 }
-static int GetLightOnoff()
+
+static int GetLightOnoff(void **data, unsigned int *len)
 {
+    *len = sizeof(g_light.brightness);
 
-   int *len = sizeof(g_light.on);
-
-  int  *data = malloc(*len);
+    *data = malloc(*len);
     if (*data == NULL) {
-        printf("malloc err \r\n");
+        LOG(LOG_LEVEL_INFO,"malloc err \r\n");
         return -1;
     }
-
     (void)memset(*data, 0, *len);
-    (void)memcpy(*data, &g_light.on, *len);
 
-    printf("get light switch %d \r\n", g_light.on);
+    (void)memcpy(*data, &g_light.brightness, *len);
+
+    LOG(LOG_LEVEL_INFO,"get light brightness %d\r\n", g_light.brightness);
     return 0;
 }
+static int SetBrightness(const void*data, unsigned int len)
+{
+    stRlLiveData_t *pLiveData = &g_stRlData.liveData;
 
+    g_light.brightness = *(int *)data;
+
+    LOG(LOG_LEVEL_INFO,"set light brightness %d\r\n", g_light.brightness);
+    LampBriPercentCtrl((uint16_t)g_light.brightness, 1000);
+    return 0;
+}
+static int GetBrightness(const void**data, unsigned int *len)
+{
+    *len = sizeof(g_light.brightness);
+
+    *data = malloc(*len);
+    if (*data == NULL) {
+        LOG(LOG_LEVEL_INFO,"malloc err \r\n");
+        return -1;
+    }
+    (void)memset(*data, 0, *len);
+
+    (void)memcpy(*data, &g_light.brightness, *len);
+
+    LOG(LOG_LVL_INFO,"get light brightness %d\r\n", g_light.brightness);
+   return 0; 
+}
 struct TestControlFunc {
     const char *svcId;
     const char *propId;
@@ -518,7 +544,7 @@ static struct TestControlFunc g_testCtrlFunc[] = {
     { "dvService", "supportSinkSvc", SetLightSwitchInt, GetLightSwitchInt },
     { "dvService", "devSvcStatus", SetLightSwitchInt, GetLightSwitchInt },
     { "light", "On", SetLightOnoff, GetLightOnoff },
-    { "light", "Brightness", SetLightColorString, GetLightColorString },
+    { "light", "Brightness", SetBrightness, GetBrightness },
     {  "light", "lightMode", SetLightModeInt, GetLightModeInt },  
     { "lightMode", "mode", SetLightModeInt, GetLightModeInt },
     { "volume", "volume", SetLightVolumeInt, GetLightVolumeInt },

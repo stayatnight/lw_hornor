@@ -37,10 +37,11 @@
 /* bright: value <---> percent */
 #define LIGHT_BRIGHT_TO_PERCENT(b)                         (uint32_t)((b) * 100.0f /100 + 0.5f)
 #define LIGHT_PERCENT_TO_BRIGHT(p)                         (uint16_t)((p) * 100.0f / 100 + 0.5f)
-
+#define APP_MIN_VAL(a, b)                                  (((a) > (b)) ? (b) : (a))
 #define RL_LAMP_REPORT_INTERVAL                            (800) //ms
 static uint8_t gucLampId;
 static myLampParam_t s_stCurLampParam = {0};
 static myLampParam_t s_stLstLampParam = {0};
-
+//灯光控制函数
 int LampSwitchCtrl(int status, int ulPeroidMs);
+int LampBriPercentCtrl(int ucPercent, int ulPeroidMs);
