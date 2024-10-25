@@ -519,6 +519,37 @@ static int GetBrightness(const void**data, unsigned int *len)
     LOG(LOG_LVL_INFO,"get light brightness %d\r\n", g_light.brightness);
    return 0; 
 }
+static int GetMode(void **data, unsigned int *len)
+{
+    *len = sizeof(g_light.lightMode);
+
+    *data = malloc(*len);
+    if (*data == NULL) {
+        LOG(LOG_LEVEL_INFO,"malloc err \r\n");
+        return -1;
+    }
+    (void)memset(*data, 0, *len);
+
+    (void)memcpy(*data, &g_light.lightMode, *len);
+    LOG(LOG_LEVEL_INFO,"get light mode %d\r\n", g_light.lightMode);
+    return 0;
+}
+static int SetMode(const void*data, unsigned int len)
+{
+     stRlLiveData_t *pLiveData = &g_stRlData.liveData;
+
+    g_light.lightMode = *(int *)data;
+    LOG(LOG_LEVEL_INFO,"set light mode %d\r\n", g_light.lightMode);
+    if(g_light.lightMode==LIGHT_BRIGHT_MODE_READING)
+    LampBriPercentCtrl((uint16_t)LIGHT_BRIGHT_MODE_READING_VAL, 1000);
+    if(g_light.lightMode==LIGHT_BRIGHT_MODE_MOON)
+    LampBriPercentCtrl((uint16_t)LIGHT_BRIGHT_MODE_MOON_VAL, 1000);
+    if(g_light.lightMode==LIGHT_BRIGHT_MODE_WRITE)
+    LampBriPercentCtrl((uint16_t)LIGHT_BRIGHT_MODE_WRITE_VAL, 1000);
+    if(g_light.lightMode!=LIGHT_BRIGHT_MODE_READING&&g_light.lightMode!=LIGHT_BRIGHT_MODE_MOON&&g_light.lightMode!=LIGHT_BRIGHT_MODE_WRITE)
+    LOG(LOG_LEVEL_INFO,"set light mode error\r\n");
+   return 0; 
+}
 struct TestControlFunc {
     const char *svcId;
     const char *propId;
@@ -545,7 +576,7 @@ static struct TestControlFunc g_testCtrlFunc[] = {
     { "dvService", "devSvcStatus", SetLightSwitchInt, GetLightSwitchInt },
     { "light", "On", SetLightOnoff, GetLightOnoff },
     { "light", "Brightness", SetBrightness, GetBrightness },
-    {  "light", "lightMode", SetLightModeInt, GetLightModeInt },  
+    {  "light", "lightMode", SetMode, GetMode},  
     { "lightMode", "mode", SetLightModeInt, GetLightModeInt },
     { "volume", "volume", SetLightVolumeInt, GetLightVolumeInt },
     { "switch", "on", SetLightSwitchInt, GetLightSwitchInt },

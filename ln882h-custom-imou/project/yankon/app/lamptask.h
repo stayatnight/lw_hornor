@@ -45,3 +45,11 @@ static myLampParam_t s_stLstLampParam = {0};
 //灯光控制函数
 int LampSwitchCtrl(int status, int ulPeroidMs);
 int LampBriPercentCtrl(int ucPercent, int ulPeroidMs);
+//台灯各种模式
+#define LIGHT_BRIGHT_MODE_READING                           (8)
+#define LIGHT_BRIGHT_MODE_MOON                             (10)
+#define LIGHT_BRIGHT_MODE_WRITE                             (11)
+//灯光模式的具体亮度
+#define LIGHT_BRIGHT_MODE_READING_VAL                       (100)
+#define LIGHT_BRIGHT_MODE_MOON_VAL                         (15)
+#define LIGHT_BRIGHT_MODE_WRITE_VAL                        (50)
