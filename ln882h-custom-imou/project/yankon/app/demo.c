@@ -160,7 +160,7 @@ static int GetDevFirmwareVersionFunc(void **data, unsigned int *len)
 
 static int GetMCUVersionFunc(void **data, unsigned int *len)
 {
-    char *tmp = "";
+    char *tmp =LN_MCU_VERSION;
     unsigned int tmpLen = strlen(tmp) + 1;
     *len = tmpLen - 1;
 
@@ -479,7 +479,7 @@ static int SetLightOnoff(const void*data, unsigned int len)
 
 static int GetLightOnoff(void **data, unsigned int *len)
 {
-    *len = sizeof(g_light.brightness);
+    *len = sizeof(g_light.on);
 
     *data = malloc(*len);
     if (*data == NULL) {
@@ -488,9 +488,9 @@ static int GetLightOnoff(void **data, unsigned int *len)
     }
     (void)memset(*data, 0, *len);
 
-    (void)memcpy(*data, &g_light.brightness, *len);
+    (void)memcpy(*data, &g_light.on, *len);
 
-    LOG(LOG_LEVEL_INFO,"get light brightness %d\r\n", g_light.brightness);
+    LOG(LOG_LEVEL_INFO,"get light brightness %d\r\n", g_light.on);
     return 0;
 }
 static int SetBrightness(const void*data, unsigned int len)

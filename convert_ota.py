@@ -3,6 +3,25 @@ import hashlib
 import xml.etree.ElementTree as ET
 import shutil
 import zipfile
+import re
+
+# 读取C文件内容,获取版本号
+with open('D:/code/h_test/honor_magiclink_sdk/ln882h-custom-imou/project/yankon/app/demo.c', 'r',encoding='utf-8') as file:
+    content = file.read()
+
+# 定义正则表达式模式来匹配版本号
+# 假设版本号的格式为 "x.x.x.xxx"，其中x是数字
+pattern = r'"\d+\.\d+\.\d+\.\d+"'
+
+# 在文件内容中搜索匹配项
+match = re.search(pattern, content)
+
+if match:
+    # 提取并打印版本号（去除双引号）
+    version = match.group(0)[1:-1]  # 使用切片去除匹配结果中的双引号
+    print(f"Found version: {version}")
+else:
+    print("Version not found.")
 # 文件名
 name='flashimage-ota-xz-v0.1.bin'
 filename = 'D:/code/h_test/honor_magiclink_sdk/ln882h-custom-imou/build-yankon-release/bin/flashimage-ota-xz-v0.1.bin'
@@ -66,26 +85,9 @@ if not os.path.exists(folder_name):
 # 将文件复制到full文件夹中
 for file in files_to_copy:
     shutil.copy(file, folder_name)
-import re
 
-# 读取C文件内容,获取版本号
-with open('D:/code/h_test/honor_magiclink_sdk/ln882h-custom-imou/project/yankon/app/demo.c', 'r',encoding='utf-8') as file:
-    content = file.read()
 
-# 定义正则表达式模式来匹配版本号
-# 假设版本号的格式为 "x.x.x.xxx"，其中x是数字
-pattern = r'"\d+\.\d+\.\d+\.\d+"'
-
-# 在文件内容中搜索匹配项
-match = re.search(pattern, content)
-
-if match:
-    # 提取并打印版本号（去除双引号）
-    version = match.group(0)[1:-1]  # 使用切片去除匹配结果中的双引号
-    print(f"Found version: {version}")
-else:
-    print("Version not found.")
-zip_filename=version+'_ota.zip'
+zip_filename=version+'.zip'
 version_dir = 'version'
 version_subdir = os.path.join(version_dir, version)
 os.makedirs(version_subdir, exist_ok=True)

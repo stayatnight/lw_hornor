@@ -53,3 +53,6 @@ int LampBriPercentCtrl(int ucPercent, int ulPeroidMs);
 #define LIGHT_BRIGHT_MODE_READING_VAL                       (100)
 #define LIGHT_BRIGHT_MODE_MOON_VAL                         (15)
 #define LIGHT_BRIGHT_MODE_WRITE_VAL                        (50)
+//MCU版本
+#define LN_MCU_VERSION                                     ""
+
