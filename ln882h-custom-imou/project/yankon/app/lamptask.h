@@ -19,9 +19,9 @@
 #define LIGHT_PWM_BRIGHT_DEF_PERCENT                       (1.0f)  //percent: 0.00f-1.00f : 0%-100%
 #define LIGHT_CCT_DEFAULT                                  (LIGHT_COLOR_CCT_MID)
 #define LIGHT_PWM_MAX                                      PWM_MAX
-#define LIGHT_PWM_MIN                                      (uint32_t)(PWM_MAX * 0.0f / 100)
+#define LIGHT_PWM_MIN                                      (uint32_t)(PWM_MAX * 2.0f / 100)
 #define LIGHT_LAMP_SOFT_CAPACITY_VAL                       (LIGHT_PWM_MIN * 30)
-#define LIGHT_PWM_CURVE                                    MY_DIMMING_CURVE_CIE1976
+#define LIGHT_PWM_CURVE                                     MY_DIMMING_CURVE_SUPPORT_LINEAR
 #define LIGHT_SCENE_MODE_DEFAULT                           RL_LAMP_LIGHT_MODE_READ
 #endif
 #define LIGHT_COLOR_CCT_MID                                (LIGHT_COLOR_CCT_MIN+(LIGHT_COLOR_CCT_MAX-LIGHT_COLOR_CCT_MIN)/2)
@@ -55,4 +55,6 @@ int LampBriPercentCtrl(int ucPercent, int ulPeroidMs);
 #define LIGHT_BRIGHT_MODE_WRITE_VAL                        (50)
 //MCU版本
 #define LN_MCU_VERSION                                     ""
+//PWM打印
+#define PRINT_PWM   0
 

@@ -173,6 +173,17 @@ uint32_t myKeyboardMatrixKeyValueGet(void);
  Output Para : (none)
  Return      : 0 -- success, other -- failed
  Other       : (none)
+//中文注释
+函数功能：键盘初始化
+注意事项：用户必须在使用usb库之前调用此函数，完成键盘初始化
+输入参数：keyCheckInterval -- 按键检查间隔时间(单位:ms)
+keyFilterCount -- 按键检查过滤次数(过滤时间=(keyCheckInterval*keyFilterCount)ms)
+keyLongPressKeepTime -- 按键按下保持此时间改变为长按状态(单位:ms)
+keyLongPressLoopTime -- 在长按状态时，每隔此时间调用一次长按回调函数(单位:ms)
+keyDoublePressInterval -- 按键双击间隔时间(单位:ms)
+pFuncGetMsTick -- 获取系统时间(单位:ms)，此函数必须由用户完成
+pFuncKeyStatusGet -- 通过keyvalue获取按键状态，此函数必须由用户完成
+
 ******************************************************************************/
 int8_t myKeyboardInit(uint32_t keyCheckInterval, 
                        uint32_t keyFilterCount, 

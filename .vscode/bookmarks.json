@@ -4,27 +4,32 @@
 			"path": "ln882h-custom-imou/project/yankon/app/usr_app.c",
 			"bookmarks": [
 				{
-					"line": 396,
+					"line": 373,
+					"column": 0,
+					"label": "长按回调函数"
+				},
+				{
+					"line": 398,
 					"column": 1,
 					"label": "按钮回调函数"
 				},
 				{
-					"line": 602,
+					"line": 608,
 					"column": 0,
 					"label": "灯光主循环"
 				},
 				{
-					"line": 605,
+					"line": 611,
 					"column": 2,
 					"label": "lamp task"
 				},
 				{
-					"line": 620,
+					"line": 626,
 					"column": 5,
 					"label": "key task"
 				},
 				{
-					"line": 689,
+					"line": 695,
 					"column": 0,
 					"label": "线程合计"
 				}
@@ -47,6 +52,16 @@
 					"line": 99,
 					"column": 0,
 					"label": "TODO 设置IO状态"
+				}
+			]
+		},
+		{
+			"path": "yankon_docs/需求实现日志/需求实现.md",
+			"bookmarks": [
+				{
+					"line": 48,
+					"column": 0,
+					"label": "需求实现文档"
 				}
 			]
 		},

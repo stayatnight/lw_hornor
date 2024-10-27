@@ -300,6 +300,7 @@ static void wifi_init_ap(void)
 
 uint8_t rlLampGetOnoff(void) 
 {
+//    LOG(LOG_LVL_INFO,"switch is %d\n",s_stCurLampParam.ucSwitch);
     return s_stCurLampParam.ucSwitch;
 }
 //回调函数
@@ -347,6 +348,7 @@ static void _normalKeyLongPressCb(uint32_t keyVal, uint32_t flag)
             if (flag == 0) {
                 rlFlagRevert(RL_FLAG_LAMP_BRI_DIRECTION);
             }
+         //   LOG(LOG_LVL_INFO,"long press\n");
             rlLampBriCtrlNextClass(200);
         }
         else if (flag == 25 && rlFlagGet(RL_FLAG_SYS_FACTORY_WINDOW)){
@@ -367,9 +369,9 @@ static void _normalKeyLongReleaseCb(uint32_t keyVal, uint32_t flag)
     case LIGHT_KEY_VAL_SWITCH:
    //     my_hal_log_debug("key switch lr %d\r\n" );
         if (g_stRlData.fctData.fctMode != 0) {
-      //      Printf("release key switch\r\n");
         }
         if (0 == rlLampGetOnoff() && flag < 25) {
+            LOG(LOG_LVL_INFO,"long press  is %d\n",pLiveData->uwAdjDuration);
             rlLampSwitchRevert(pLiveData->uwAdjDuration);
         }
         break;
@@ -525,15 +527,19 @@ static void _lampPwmOutput(uint32_t ulPwm1, uint32_t ulPwm2, uint32_t ulPwm3, ui
     if (ulPwm1 != lastPwm1) {
         lastPwm1 = ulPwm1;
         pwm_set_duty(ulPwm1, PWM_CHA_1);
+        #ifdef PRINT_PWM && PRINT_PWM==1
         LOG(LOG_LVL_INFO, "pwm1 out %d\r\n", ulPwm1);
+        #endif
     }
     if (ulPwm2 != lastPwm2) {
         lastPwm2 = ulPwm2;
 //      my_hal_log_debug("pwm2 out %d %d\r\n", ulPwm1, ulPwm2);
-LOG(LOG_LVL_INFO, "pwm2 out %d\r\n", ulPwm2);
        // myHalPwmOutput(RL_PWM_C, ulPwm2);
+#ifdef PRINT_PWM && PRINT_PWM==1
        LOG(LOG_LVL_INFO, "pwm2 out %d\r\n", ulPwm2);
+#endif
         pwm_set_duty(ulPwm2,PWM_CHA_2);
+  
     }
 }
 
