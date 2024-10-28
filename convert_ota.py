@@ -49,9 +49,7 @@ file_size = os.path.getsize(filename)
 
 # 创建XML元素
 root = ET.Element("root")
-files = ET.SubElement(root, "files")
-file = ET.SubElement(files, "file")
-
+file = ET.SubElement(root, "file")
 spath = ET.SubElement(file, "spath")
 spath.text = name
 
@@ -79,6 +77,17 @@ indent(root)
 tree = ET.ElementTree(root)
 tree.write("filelist.xml", encoding="utf-8", xml_declaration=True)
 
+# 现在读取文件并删除行首空格
+with open("filelist.xml", "r+", encoding="utf-8") as file:
+    content = file.read()
+    # 使用正则表达式删除每行行首的空格
+    cleaned_content = re.sub(r'^\s+', '', content, flags=re.MULTILINE)
+    # 将文件指针移回文件开头以便重写内容
+    file.seek(0)
+    # 重写文件内容
+    file.write(cleaned_content)
+    # 截断文件，以防新内容比旧内容短
+    file.truncate()
 if not os.path.exists(folder_name):
     os.makedirs(folder_name)
 

@@ -325,9 +325,9 @@ static void _normalKeyShortReleaseCb(uint32_t keyVal, uint32_t flag)
     case LIGHT_KEY_VAL_SWITCH:
      //   printf("key switch sr %d\r\n", flag);
         if (g_stRlData.fctData.fctMode != 0) {
-          //  printf("release key switch\r\n");
+        LOG(LOG_LVL_INFO,"release key switch\n");
         }
-        LOG(LOG_LVL_INFO,"xxxxx is %d\n",pLiveData->uwAdjDuration);
+      
         rlLampSwitchRevert(pLiveData->uwAdjDuration);
         break;
     default:
@@ -371,8 +371,10 @@ static void _normalKeyLongReleaseCb(uint32_t keyVal, uint32_t flag)
         if (g_stRlData.fctData.fctMode != 0) {
         }
         if (0 == rlLampGetOnoff() && flag < 25) {
-            LOG(LOG_LVL_INFO,"long press  is %d\n",pLiveData->uwAdjDuration);
-            rlLampSwitchRevert(pLiveData->uwAdjDuration);
+//TODO:一开机，这个长按就触发了很离谱
+ 
+          //  LOG(LOG_LVL_INFO,"long press  is %d\n",pLiveData->uwAdjDuration);
+            //rlLampSwitchRevert(pLiveData->uwAdjDuration);
         }
         break;
     default:
@@ -527,7 +529,7 @@ static void _lampPwmOutput(uint32_t ulPwm1, uint32_t ulPwm2, uint32_t ulPwm3, ui
     if (ulPwm1 != lastPwm1) {
         lastPwm1 = ulPwm1;
         pwm_set_duty(ulPwm1, PWM_CHA_1);
-        #ifdef PRINT_PWM && PRINT_PWM==1
+        #if defined(PRINT_PWM) && (PRINT_PWM==1)
         LOG(LOG_LVL_INFO, "pwm1 out %d\r\n", ulPwm1);
         #endif
     }
@@ -535,7 +537,7 @@ static void _lampPwmOutput(uint32_t ulPwm1, uint32_t ulPwm2, uint32_t ulPwm3, ui
         lastPwm2 = ulPwm2;
 //      my_hal_log_debug("pwm2 out %d %d\r\n", ulPwm1, ulPwm2);
        // myHalPwmOutput(RL_PWM_C, ulPwm2);
-#ifdef PRINT_PWM && PRINT_PWM==1
+#if defined (PRINT_PWM) && (PRINT_PWM==1)
        LOG(LOG_LVL_INFO, "pwm2 out %d\r\n", ulPwm2);
 #endif
         pwm_set_duty(ulPwm2,PWM_CHA_2);

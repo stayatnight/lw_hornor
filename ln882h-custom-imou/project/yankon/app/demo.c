@@ -574,9 +574,11 @@ static struct TestControlFunc g_testCtrlFunc[] = {
     { "dvService", "switch", SetLightSwitchInt, GetLightSwitchInt },
     { "dvService", "supportSinkSvc", SetLightSwitchInt, GetLightSwitchInt },
     { "dvService", "devSvcStatus", SetLightSwitchInt, GetLightSwitchInt },
+
     { "light", "On", SetLightOnoff, GetLightOnoff },
     { "light", "Brightness", SetBrightness, GetBrightness },
     {  "light", "lightMode", SetMode, GetMode},  
+    
     { "lightMode", "mode", SetLightModeInt, GetLightModeInt },
     { "volume", "volume", SetLightVolumeInt, GetLightVolumeInt },
     { "switch", "on", SetLightSwitchInt, GetLightSwitchInt },

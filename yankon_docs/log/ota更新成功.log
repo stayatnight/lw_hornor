@@ -1,0 +1,2056 @@
+10-28 18:07:30.900|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:07:33.631|ConnectDispatchFunc|83|[I]:running
+10-28 18:07:36.490|ParseModuleTransHeader|682|[I]:isServer:0
+PROTO Header[281]*******.0.108:32468
+MSG Header[257]0xbabeface-13-18446744072927908019-1
+Module Header[249]0x1-0-0:0-16-1-0
+-SliceHead:0-1-0-0
+-PacketHead:0xbabeface-2-8-217-Data:859256120-GCMNonce[000000029dafd342d0ff8940]-281-189:*******
+10-28 18:07:36.496|MagicLinkParseDataArray|283|[I]:Array is 0
+10-28 18:07:36.498|ModelNotifyStatus|448|[I]:statmethod:5 req:18, rpt:32
+10-28 18:07:36.499|MagicLinkEncodeCmdAction|850|[I]:action:otaAction no out
+10-28 18:07:36.499|MagicLinkEncodeCmdAction|850|[I]:actiocurrent status is 702
+10-28 18:07:36.501|DownloadThreadFunc|2769|[I]:start download
+10-28 18:07:36.507|TlsNetworkInit|261|[I]:succ
+10-28 18:07:36.509|TlsNetworkConnect|342|[I]:host:update.hihonorcdn.com
+udp_bind(ipaddr = 0.0.0.0, port = 42310)
+                                        10-28 18:07:36.517|SendChannelMessage|193|[I]:[identity:******ed7dee4b11ab8d164de9a5ba71],[1,16,2] send msg[156] success.
+10-28 18:07:36.519|ControlMsgReceived|96|[I]:empty
+10-28 18:07:36.520|TransReceiveMsg|1431|[I]:succ recv:1
+10-28 18:07:38.088|TlsNetHandshake|330|[I]:succ
+10-28 18:07:38.090|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:38.244|GetOtaInfoNumByLabelBegin|1051|[W]:pointerLeft is null
+10-28 18:07:38.246|GetInfosAccordingFilelist|1178|[I]:info:1|flashimage-ota-xz-v0.1.bin|601712
+10-28 18:07:38.247|SaveOtaVersionInfo|2225|[I]:newVer:1.0.1.203|456163
+10-28 18:07:38.248|MakeJsonRegisterResult|1999|[E]:ext null
+10-28 18:07:38.249|MakeJsonRegisterResult|1999|[E]:ext null
+type:0 req:1636161009, rpt:33
+10-28 18:07:39.006|MagicLinkOtaGetReportInfo|3351|[I]:succ
+10-28 18:07:39.008|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-28 18:07:39.009|MagicLinkRptStatusToCloud|676|[I]:pub succ
+10-28 18:07:39.009|ReportOtaServiceStatus|791|[I]:succ
+10-28 18:07:39.010|FlashOtaPkgWrite|66|[E]:inv type: 3
+10-28 18:07:39.013|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:39.016|LocalCmdProcess|966|[I]:mqtt pub
+10-28 18:07:39.072|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:26
+10-28 18:07:39.231|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:39.421|CheckOtaPkgSHA256|842|[I]:len:4096, type:0
+10-28 18:07:39.423|FlashOtaPkgWrite|50|[I]:ota addr=00133000
+10-28 18:07:39.586|FlashOtaPkgWrite|52|[I]:begin succ
+10-28 18:07:39.613|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:39.653|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:39.692|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:39.718|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:39.754|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:39.790|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:39.818|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:39.854|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:39.888|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:39.915|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:39.950|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:39.991|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:40.019|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:40.055|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:40.089|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:40.116|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:40.155|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:40.189|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:40.217|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:40.253|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:40.289|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:40.317|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:40.355|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:40.390|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:40.417|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:40.516|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:40.557|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:40.584|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:40.624|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:40.663|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:40.689|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:40.729|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:40.767|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:40.794|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:40.831|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:40.891|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:40.917|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:40.955|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:40.998|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:41.025|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:41.064|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:41.100|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:41.127|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:41.178|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:41.215|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:41.243|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:41.277|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:07:41.281|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:41.318|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:41.345|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:41.387|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:41.426|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:41.454|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:41.493|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:41.530|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:41.557|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:41.596|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:41.637|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:41.665|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:41.704|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:41.745|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:41.772|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:41.810|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:41.851|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:41.879|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:41.919|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:41.956|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:41.983|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:42.016|DownloadPkgScheduleFunc|2408|[I]:schedule: 3000/205000
+type:0 req:912696133, rpt:34
+10-28 18:07:42.018|MagicLinkOtaGetReportInfo|3351|[I]:succ
+10-28 18:07:42.020|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-28 18:07:42.021|MagicLinkRptStatusToCloud|676|[I]:pub succ
+10-28 18:07:42.021|ReportOtaServiceStatus|791|[I]:succ
+10-28 18:07:42.024|LocalCmdProcess|966|[I]:mqtt pub
+10-28 18:07:42.030|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:42.066|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:42.094|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:27
+10-28 18:07:42.096|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:42.137|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:42.182|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:42.209|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:42.262|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:42.302|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:42.328|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:42.367|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:42.405|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:42.433|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:42.467|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:42.502|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:42.528|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:42.564|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:42.599|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:42.626|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:42.662|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:42.696|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:42.722|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:42.760|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:42.797|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:42.824|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:42.860|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:42.908|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:42.935|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:42.971|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:43.009|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:43.037|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:43.073|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:43.108|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:43.134|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:43.171|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:43.209|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:43.236|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:43.273|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:43.312|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:43.340|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:43.376|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:43.417|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:43.443|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:43.481|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:43.518|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:43.545|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:43.590|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:43.625|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:43.651|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:43.693|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:43.737|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:43.765|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:43.807|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:43.841|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:43.867|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:43.909|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:43.944|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:43.971|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:44.008|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:44.510|ConnectDispatchFunc|83|[I]:running
+10-28 18:07:45.016|DownloadPkgScheduleFunc|2408|[I]:schedule: 6000/205000
+type:0 req:253626956, rpt:35
+10-28 18:07:45.018|MagicLinkOtaGetReportInfo|3351|[I]:succ
+10-28 18:07:45.020|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-28 18:07:45.021|MagicLinkRptStatusToCloud|676|[I]:pub succ
+10-28 18:07:45.021|ReportOtaServiceStatus|791|[I]:succ
+10-28 18:07:45.022|LocalCmdProcess|966|[I]:mqtt pub
+10-28 18:07:45.085|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:28
+10-28 18:07:45.379|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:45.406|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:45.443|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:45.478|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:45.505|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:45.543|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:45.576|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:45.602|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:45.640|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:45.675|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:45.703|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:45.742|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:45.779|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:45.805|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:45.841|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:45.876|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:45.904|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:45.945|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:45.979|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:46.007|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:46.046|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:46.082|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:46.109|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:46.145|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:46.185|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:46.213|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:46.254|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:46.289|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:46.315|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:46.359|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:46.395|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:46.422|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:46.460|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:46.498|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:46.525|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:46.561|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:46.598|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:46.625|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:46.662|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:46.699|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:46.725|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:46.800|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:46.860|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:46.888|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:46.944|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:47.015|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:47.041|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:47.083|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:47.122|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:47.149|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:47.191|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:47.230|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:47.257|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:47.293|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:47.796|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:07:47.805|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:07:48.016|DownloadPkgScheduleFunc|2408|[I]:schedule: 9000/205000
+type:0 req:1742041427, rpt:36
+10-28 18:07:48.018|MagicLinkOtaGetReportInfo|3351|[I]:succ
+10-28 18:07:48.020|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-28 18:07:48.021|MagicLinkRptStatusToCloud|676|[I]:pub succ
+10-28 18:07:48.021|ReportOtaServiceStatus|791|[I]:succ
+10-28 18:07:48.022|LocalCmdProcess|966|[I]:mqtt pub
+10-28 18:07:48.080|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:29
+10-28 18:07:48.146|ConnectCreateMqttMsgPayload|1485|[I]:traceID:iNkPlSnToVrWtYu1w2z4A5C7DaFbIdGg
+10-28 18:07:48.148|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-28 18:07:48.149|ConnectCloudSendSystemMsg|816|[I]:pub SYS_MGR_SYNC_TIME_REQ:0
+10-28 18:07:48.152|LocalCmdProcess|966|[I]:mqtt pub
+10-28 18:07:48.154|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+10-28 18:07:48.205|MqttMessageArrived|1387|[I]:recv data:226
+10-28 18:07:48.433|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:48.460|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:48.502|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:48.538|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:48.565|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:48.599|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:48.632|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:48.660|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:48.696|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:48.735|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:48.761|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:48.800|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:48.840|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:48.867|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:48.914|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:48.951|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:48.978|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:49.013|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:49.052|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:49.078|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:49.116|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:49.149|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:49.176|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:49.212|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:49.263|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:49.289|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:49.334|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:49.369|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:49.397|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:49.433|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:49.467|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:49.493|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:49.529|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:49.567|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:49.595|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:49.631|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:49.668|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:49.695|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:49.731|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:49.771|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:49.798|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:49.833|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:49.869|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:49.895|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:49.931|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:49.968|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:49.995|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:50.034|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:50.071|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:50.097|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:50.136|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:50.172|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:50.200|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:50.234|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:50.267|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:50.295|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:50.330|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:50.364|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:50.390|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:50.426|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:50.462|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:50.490|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:50.525|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:50.558|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:50.586|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:50.621|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:50.656|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:50.685|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:50.719|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:50.754|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:50.781|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:50.817|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:50.849|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:50.876|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:50.929|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:50.969|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:50.996|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:51.008|DownloadPkgScheduleFunc|2408|[I]:schedule: 12000/205000
+type:0 req:1254841859, rpt:37
+10-28 18:07:51.010|MagicLinkOtaGetReportInfo|3351|[I]:succ
+10-28 18:07:51.011|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-28 18:07:51.012|MagicLinkRptStatusToCloud|676|[I]:pub succ
+10-28 18:07:51.013|ReportOtaServiceStatus|791|[I]:succ
+10-28 18:07:51.015|LocalCmdProcess|966|[I]:mqtt pub
+10-28 18:07:51.037|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:51.068|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:30
+10-28 18:07:51.128|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:51.155|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:51.199|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:51.243|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:51.269|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:51.307|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:51.343|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:51.370|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:51.409|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:51.445|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:51.473|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:51.513|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:51.555|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:51.582|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:51.624|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:51.665|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:51.692|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:51.729|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:51.765|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:51.791|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:51.863|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:51.898|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:51.926|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:51.970|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:52.007|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:52.034|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:52.071|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:52.106|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:52.133|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:52.170|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:52.206|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:52.233|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:52.271|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:52.305|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:52.333|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:52.371|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:52.408|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:52.435|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:52.500|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:52.539|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:52.566|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:52.595|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:07:52.606|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:52.642|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:52.668|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:52.705|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:52.744|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:52.771|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:52.811|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:52.846|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:52.873|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:52.911|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:52.950|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:52.977|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:53.024|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:53.061|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:53.088|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:53.125|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:53.166|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:53.192|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:53.232|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:53.267|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:53.295|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:53.343|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:53.391|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:53.418|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:53.459|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:53.495|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:53.523|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:53.590|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:53.628|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:53.656|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:53.695|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:53.735|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:53.763|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:53.801|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:53.836|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:53.863|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:53.899|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:53.937|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:53.965|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:54.006|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:54.008|DownloadPkgScheduleFunc|2408|[I]:schedule: 15000/205000
+type:0 req:595772682, rpt:38
+10-28 18:07:54.010|MagicLinkOtaGetReportInfo|3351|[I]:succ
+10-28 18:07:54.011|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-28 18:07:54.012|MagicLinkRptStatusToCloud|676|[I]:pub succ
+10-28 18:07:54.013|ReportOtaServiceStatus|791|[I]:succ
+10-28 18:07:54.014|LocalCmdProcess|966|[I]:mqtt pub
+10-28 18:07:54.041|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:54.068|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:54.077|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:31
+10-28 18:07:55.511|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:55.545|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:55.573|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:55.620|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:55.705|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:55.732|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:55.775|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:55.824|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:55.851|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:55.900|ConnectDispatchFunc|83|[I]:running
+10-28 18:07:55.902|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:55.937|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:55.964|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:56.003|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:56.039|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:56.066|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:56.103|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:56.143|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:56.170|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:56.236|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:56.271|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:56.298|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:56.337|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:56.372|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:56.399|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:56.434|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:56.470|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:56.496|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:56.534|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:57.008|DownloadPkgScheduleFunc|2408|[I]:schedule: 18000/205000
+type:0 req:2084187153, rpt:39
+10-28 18:07:57.010|MagicLinkOtaGetReportInfo|3351|[I]:succ
+10-28 18:07:57.012|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-28 18:07:57.013|MagicLinkRptStatusToCloud|676|[I]:pub succ
+10-28 18:07:57.013|ReportOtaServiceStatus|791|[I]:succ
+10-28 18:07:57.015|LocalCmdProcess|966|[I]:mqtt pub
+10-28 18:07:57.070|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:32
+10-28 18:07:58.034|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:58.062|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:58.101|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:58.138|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:58.165|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:58.204|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:58.244|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:58.273|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:58.311|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:58.351|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:58.378|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:58.416|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:58.453|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:58.482|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:58.520|ConnectionHttpSend|143|[I]:send succ
+10-28 18:07:58.558|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:07:58.585|ConnectionHttpSend|143|[I]:send succ
+10-28 18:08:00.008|DownloadPkgScheduleFunc|2408|[I]:schedule: 21000/205000
+type:0 req:1425117975, rpt:40
+10-28 18:08:00.010|MagicLinkOtaGetReportInfo|3351|[I]:succ
+10-28 18:08:00.012|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-28 18:08:00.013|MagicLinkRptStatusToCloud|676|[I]:pub succ
+10-28 18:08:00.013|ReportOtaServiceStatus|791|[I]:succ
+10-28 18:08:00.014|LocalCmdProcess|966|[I]:mqtt pub
+10-28 18:08:00.082|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:33
+10-28 18:08:00.575|ConnectionHttpSend|143|[I]:send succ
+10-28 18:08:00.722|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:08:00.750|ConnectionHttpSend|143|[I]:send succ
+10-28 18:08:00.922|ConnectionHttpSend|143|[I]:send succ
+10-28 18:08:01.126|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:08:01.153|ConnectionHttpSend|143|[I]:send succ
+10-28 18:08:01.283|ConnectionHttpSend|143|[I]:send succ
+10-28 18:08:01.408|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:08:01.434|ConnectionHttpSend|143|[I]:send succ
+10-28 18:08:01.528|ConnectionHttpSend|143|[I]:send succ
+10-28 18:08:01.627|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:08:01.655|ConnectionHttpSend|143|[I]:send succ
+10-28 18:08:01.782|ConnectionHttpSend|143|[I]:send succ
+10-28 18:08:01.903|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:08:01.929|ConnectionHttpSend|143|[I]:send succ
+10-28 18:08:02.059|ConnectionHttpSend|143|[I]:send succ
+10-28 18:08:02.153|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:08:02.180|ConnectionHttpSend|143|[I]:send succ
+10-28 18:08:02.246|ConnectionHttpSend|143|[I]:send succ
+10-28 18:08:02.308|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:08:02.334|ConnectionHttpSend|143|[I]:send succ
+10-28 18:08:02.369|ConnectionHttpSend|143|[I]:send succ
+10-28 18:08:02.405|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:08:02.432|ConnectionHttpSend|143|[I]:send succ
+10-28 18:08:02.468|ConnectionHttpSend|143|[I]:send succ
+10-28 18:08:02.502|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:08:02.528|ConnectionHttpSend|143|[I]:send succ
+10-28 18:08:02.563|ConnectionHttpSend|143|[I]:send succ
+10-28 18:08:02.599|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:08:02.627|ConnectionHttpSend|143|[I]:send succ
+10-28 18:08:02.667|ConnectionHttpSend|143|[I]:send succ
+10-28 18:08:02.704|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:08:02.730|ConnectionHttpSend|143|[I]:send succ
+10-28 18:08:02.766|ConnectionHttpSend|143|[I]:send succ
+10-28 18:08:02.819|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:08:02.846|ConnectionHttpSend|143|[I]:send succ
+10-28 18:08:02.912|ConnectionHttpSend|143|[I]:send succ
+10-28 18:08:03.008|DownloadPkgScheduleFunc|2408|[I]:schedule: 24000/205000
+type:0 req:766048798, rpt:41
+10-28 18:08:03.010|MagicLinkOtaGetReportInfo|3351|[I]:succ
+10-28 18:08:03.012|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-28 18:08:03.013|MagicLinkRptStatusToCloud|676|[I]:pub succ
+10-28 18:08:03.013|ReportOtaServiceStatus|791|[I]:succ
+10-28 18:08:03.015|LocalCmdProcess|966|[I]:mqtt pub
+10-28 18:08:03.086|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:08:03.112|ConnectionHttpSend|143|[I]:send succ
+10-28 18:08:03.144|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:34
+10-28 18:08:03.336|ConnectionHttpSend|143|[I]:send succ
+10-28 18:08:03.405|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:08:03.681|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:08:03.710|ConnectionHttpSend|143|[I]:send succ
+10-28 18:08:04.096|ConnectionHttpSend|143|[I]:send succ
+10-28 18:08:04.397|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:08:04.426|ConnectionHttpSend|143|[I]:send succ
+10-28 18:08:06.008|DownloadPkgScheduleFunc|2408|[I]:schedule: 27000/205000
+type:0 req:106979621, rpt:42
+10-28 18:08:06.010|MagicLinkOtaGetReportInfo|3351|[I]:succ
+10-28 18:08:06.012|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-28 18:08:06.013|MagicLinkRptStatusToCloud|676|[I]:pub succ
+10-28 18:08:06.013|ReportOtaServiceStatus|791|[I]:succ
+10-28 18:08:06.014|LocalCmdProcess|966|[I]:mqtt pub
+10-28 18:08:06.055|ConnectionHttpSend|143|[I]:send succ
+10-28 18:08:06.074|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:35
+10-28 18:08:06.118|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:08:06.144|ConnectionHttpSend|143|[I]:send succ
+10-28 18:08:06.179|ConnectionHttpSend|143|[I]:send succ
+10-28 18:08:06.213|CheckOtaPkgSHA256|842|[I]:len:4096, type:1
+10-28 18:08:06.240|ConnectionHttpSend|143|[I]:send succ
+10-28 18:08:06.278|ConnectionHttpSend|143|[I]:send succ
+10-28 18:08:06.342|CheckOtaPkgSHA256|842|[I]:len:3696, type:1
+10-28 18:08:06.358|DownloadUpdatePackage|1541|[I]:finish:1
+10-28 18:08:06.366|CheckOtaPkgSHA256|842|[I]:len:0, type:2
+10-28 18:08:06.367|ModelNotifyStatus|448|[I]:status:703
+current status is 703
+10-28 18:08:06.368|DownloadUpdatePackage|1556|[I]:succ:1
+10-28 18:08:06.369|DfxRefreshLogBuffer|2485|[E]:refresh
+type:0 req:1782819123, rpt:43
+10-28 18:08:06.371|MagicLinkOtaGetReportInfo|3351|[I]:succ
+10-28 18:08:06.373|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-28 18:08:06.374|MagicLinkRptStatusToCloud|676|[I]:pub succ
+10-28 18:08:06.375|ReportOtaServiceStatus|791|[I]:succ
+10-28 18:08:06.375|FlashOtaPkgWrite|62|[I]:end
+10-28 18:08:06.376|TlsNetworkDisconnect|147|[I]:succ fd:1
+10-28 18:08:06.378|LocalCmdProcess|966|[I]:mqtt pub
+10-28 18:08:06.380|TlsNetworkDisconnect|143|[I]:disconnected
+t mqtt mem
+10-28 18:08:06.380|TlsNetworkDisconnect|143|[I]:disconnected
+10-28 18:08:06.382|DfxRefreshLogBuffer|2485|[E]:refresh
+10-28 18:08:06.467|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:36
+10-28 18:08:06.690|ConnectDispatchFunc|83|[I]:running
+------  combo_mcu_basic_example  ------
+TCP/IP initialized.
+LAMP INIT TEST LN882H SDK Ver: 2.1_rc1 [build time:Oct 28 2024 17:25:18][0x02010001]
+LAMP INIT OK
+             LAMP INIT OK GPIOB  STATUS:0
+                                         key init ok
+STA startup!
+[WLIB_E]HwEr:UKI:0
+MEM enter MagicLinkSDKRun [108096]
+0000000172|MagicLinkComponentsInit|85|[I]:module:logcollect
+0000000173|InitComponent|60|[I]:enable:logcollect
+0000000173|InitComponent|64|[W]:no comp:logcollect
+0000000174|MagicLinkInit|164|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_INIT, 0
+VER:IoTSDK_1.1.0.344_20240413_test_debug, TM:Apr 13 2024 14:57:17
+
+0000000188|MagicLinkParsePropertyList|207|[I]:succ svc:baseInfo, access:0
+0000000189|MagicLinkParseActionList|328|[I]:no actionList
+0000000191|MagicLinkParsePropertyList|207|[I]:succ svc:deviceInfo, access:7
+0000000192|MagicLinkParseActionList|328|[I]:no actionList
+0000000193|MagicLinkParsePropertyList|207|[I]:succ svc:netInfo, access:5
+0000000194|MagicLinkParseActionList|328|[I]:no actionList
+0000000195|MagicLinkParsePropertyList|207|[I]:succ svc:ota, access:7
+0000000196|MagicLinkParseAction|297|[W]:no inDataList
+0000000196|MagicLinkParseAction|310|[W]:no outDataList
+0000000197|MagicLinkParseAction|297|[W]:no inDataList
+0000000198|MagicLinkParseAction|310|[W]:no outDataList
+0000000198|MagicLinkParsePropertyList|207|[I]:succ svc:light, access:7
+0000000199|MagicLinkParseActionList|328|[I]:no actionList
+0000000202|ModelParseJson|181|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_PROFILE_PARSE, 0
+0000000204|NetworkManagementInit|1658|[W]:succ
+0000000204|NetworkInit|70|[I]:succ
+0000000205|DiscoveryInit|556|[I]:succ
+0000000205|TransmissionInit|40|[I]:succ
+0000000207|CloudLinkMqttInit|1092|[I]:succ
+0000000207|ConnectRegRecvPacket|392|[I]:add:1 succ
+0000000208|ConnectRegSendPacket|361|[I]:add:1 succ
+0000000209|ConnectMsgProcessInit|2631|[E]:sem init
+0000000210|ConnectInit|549|[I]:succ
+0000000211|MagicLinkComponentsInit|85|[I]:module:p2p
+0000000211|InitComponent|60|[I]:enable:p2p
+0000000212|InitComponent|64|[W]:no comp:p2p
+0000000212|MagicLinkComponentsInit|85|[I]:module:blenetcfg
+0000000213|InitComponent|60|[I]:enable:blenetcfg
+0000000214|ConnectRegSendPacket|361|[I]:add:3 succ
+0000000215|MagicLinkComponentsInit|85|[I]:module:coapconnect
+0000000215|InitComponent|60|[I]:enable:coapconnect
+udp_bind(ipaddr = 0.0.0.0, port = 5683)
+                                       0000000217|ConnectRegSendPacket|361|[I]:add:2 succ
+0000000218|ConnectRegRecvPacket|392|[I]:add:2 succ
+0000000218|NetworkSetItemValueByStr|929|[E]:inv dst:prdName
+0000000219|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdName
+0000000220|NetworkSetItemValueByStr|929|[E]:inv dst:manufactureName
+0000000221|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:manufactureName
+0000000222|NetworkSetItemValueByStr|929|[E]:inv dst:prdTypeName
+0000000222|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdTypeName
+0000000223|NetworkSetItemValueByStr|929|[E]:inv dst:modelId
+0000000224|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:modelId
+0000000225|NetworkSetItemValueByStr|929|[E]:inv dst:offeringCode
+0000000226|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:offeringCode
+0000000227|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeId
+0000000228|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeId
+0000000229|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeName
+0000000229|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeName
+0000000230|NetworkSetItemValueByStr|929|[E]:inv dst:qrScanMode
+0000000231|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:qrScanMode
+0000000232|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:udid
+0000000233|NetworkSetItemValueByStr|929|[E]:inv dst:devName
+0000000234|ModelSetDevInfoToNetwork|290|[E]:set item:deviceInfo:devName
+firmVer:1.0.1.203
+0000000235|ModelSetDevInfoToNetwork|272|[E]:set:deviceInfo:sdkVersion
+0000000236|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:MCUVersion
+0000000269|MagicLinkHuksHalRegister|243|[I]:succ
+STA connected to target AP!
+udp_bind(ipaddr = 0.0.0.0, port = 68)
+                                     0000000636|MakeJsonRegisterResult|1999|[E]:ext null
+0000000637|MakeJsonRegisterResult|1999|[E]:ext null
+0000001390|MagicLinkNetworkUpdateRegResult|2076|[W]:succ
+0000001391|MagicLinkComponentsInit|85|[I]:module:netcfg
+0000001392|InitComponent|60|[I]:enable:netcfg
+0000001392|OnRegSessionServerRestart|1216|[I]:succ reg cb:hihonor.magiclinksdk,netCfg
+0000001394|NetCfgInit|739|[I]:succ
+0000001394|MagicLinkComponentsInit|85|[I]:module:register
+0000001395|InitComponent|60|[I]:enable:register
+0000001395|CheckRegisterEmpty|1780|[I]:registered
+0000001396|RegisterInit|1992|[I]:registered
+0000001396|MagicLinkComponentsInit|85|[I]:module:control
+0000001397|InitComponent|60|[I]:enable:control
+0000001398|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,control
+0000001399|MagicLinkComponentsInit|85|[I]:module:ota
+0000001399|InitComponent|60|[I]:enable:ota
+0000001400|MagicLinkOtaFuncInit|103|[I]:init
+0000001401|OtaInit|3516|[I]:succ
+0000001401|MagicLinkComponentsInit|85|[I]:module:bi
+0000001402|InitComponent|60|[I]:enable:bi
+0000001402|InitComponent|64|[W]:no comp:bi
+0000001403|MagicLinkComponentsInit|85|[I]:module:magiclinkactive
+0000001404|InitComponent|60|[I]:enable:magiclinkactive
+0000001404|InitComponent|64|[W]:no comp:magiclinkactive
+0000001405|MagicLinkComponentsInit|85|[I]:module:netparamsync
+0000001406|InitComponent|60|[I]:enable:netparamsync
+0000001407|InitComponent|64|[W]:no comp:netparamsync
+0000001407|CheckRegisterEmpty|1780|[I]:registered
+0000001408|ExtComponentsMngtInit|114|[I]:module:dvService
+0000001408|SetLocalInfo|93|[I]:not reg
+0000001409|MagicLinkInit|235|[W]:succ
+MEM Start demo [90112]
+0000001410|CheckRegister|1259|[I]:reg succ
+0000001411|CheckRegister|1259|[I]:reg succ
+0000001921|LocalCmdProcess|953|[I]:mqtt conn
+0000001929|TlsNetworkInit|261|[I]:succ
+0000001929|TlsNetworkConnect|342|[I]:host:devicelink-pre-drcn.platform.hihonorcloud.com
+udp_bind(ipaddr = 0.0.0.0, port = 1899)
+                                       [low_level_output, 70] netif is not link up.
+[low_level_output, 70] netif is not link up.
+0000002794|TlsNetHandshake|330|[I]:succ
+0000002795|CloudLinkMqttConnect|1194|[I]:devId:******6e0fdbfb4791b2e0694069e2489bnc1nl00593
+0000002848|CloudLinkMqttAsyncSubscribe|763|[I]:mqtt async sub
+0000002849|LinkStatusCallback|1302|[I]:conn succ
+0000002850|CreateHeartbeatTimer|422|[I]:internal heartbeat
+0000002851|ProcessMqttConnect|1042|[I]:MAGICLINK_CLOUD_RELATED, MAGICLINK_CONNECT_CLOUD, 0
+0000002999|ConnectCoAPRecvPacket|1051|[I]:join mcast succ
+0000003268|SubSelfShareTopic|979|[E]:call
+0000003269|ProcessMqttConnect|1076|[I]:ota enable
+0000003269|MagicLinkCheckOtaResult|951|[I]:newVer:1.0.1.203|456163, curVer:1.0.1.203
+0000003328|ConnectCreateMqttMsgPayload|1485|[I]:traceID:Zu1x2z5A5C8DaGbIeGgLhMgPkRnSpUqX
+0000003331|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+0000003332|ConnectCloudSendSystemMsg|816|[I]:pub SYS_ANALYTICS_BUZ_LOG:3
+0000003333|MagicLinkCheckOtaResult|959|[I]:rpt ota result
+0000003334|AddCloudRequstHeader|1887|[I]:env:prod, reqId:******bce91744719fccf9265481aedc
+0000003336|ConnectCreateMqttMsgPayload|1485|[I]:traceID:OlQlToTpWrXuZu2x2A5A8D8DbGbGeGhM
+0000003338|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+0000003339|ConnectCloudSendSystemMsg|816|[I]:pub SYS_MGR_OTA_FIRMWARE_VERSION_REQ:0
+0000003340|ModelNotifyStatus|448|[I]:status:706
+current status is 706
+0000003341|SaveOtaVersionInfo|2225|[I]:newVer:|
+0000003342|MakeJsonRegisterResult|1999|[E]:ext null
+0000003343|MakeJsonRegisterResult|1999|[E]:ext null
+0000004099|MagicLinkGetRptStatusPayload|998|[E]:no svc:baseInfo
+0000004100|MagicLinkGetRptStatusPkt|604|[E]:get rpt payload
+0000004100|MagicLinkReportServiceStatus|764|[E]:get status:baseInfo
+0000004101|MagicLinkRptAllServiceStatus|788|[E]:rpt status:baseInfo
+type:0 req:1705800088, rpt:1001
+0000004103|MagicLinkAddSvcToRptStatus|743|[E]:get prop udid
+firmVer:1.0.1.203
+0000004104|MagicLinkAddSvcToRptStatus|743|[E]:get prop sdkVersion
+MCUVer:
+0000004106|MagicLinkGetRptStatusPkt|613|[I]:svc:deviceInfo
+0000004108|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+0000004109|MagicLinkRptStatusToCloud|676|[I]:pub succ
+0000004109|MagicLinkReportServiceStatus|778|[I]:rpt status:deviceInfo
+type:0 req:9307952, rpt:1002
+0000004111|MagicLinkGetRptStatusPkt|613|[I]:svc:netInfo
+0000004113|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+0000004114|MagicLinkRptStatusToCloud|676|[I]:pub succ
+0000004114|MagicLinkReportServiceStatus|778|[I]:rpt status:netInfo
+type:0 req:309968960, rpt:1003
+0000004116|GetUpdTypeCheckResult|548|[E]:not check
+0000004118|MagicLinkOtaGetReportInfo|3351|[I]:succ
+0000004120|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+0000004120|MagicLinkRptStatusToCloud|676|[I]:pub succ
+0000004121|MagicLinkReportServiceStatus|778|[I]:rpt status:ota
+type:0 req:1426678186, rpt:1004
+get light brightness 0
+get light brightness 3
+get light mode 1
+0000004124|MagicLinkGetRptStatusPkt|613|[I]:svc:light
+0000004125|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+0000004126|MagicLinkRptStatusToCloud|676|[I]:pub succ
+0000004127|MagicLinkReportServiceStatus|778|[I]:rpt status:light
+0000004128|ProcessMqttConnect|1084|[I]:rpt services succ
+0000004128|ProcessMqttConnect|1086|[I]:pub topic
+0000004129|ConnectCreateMqttMsgPayload|1485|[I]:traceID:B8D8GbGcGeKhMhPkPnSnVqVqYtYw1w4z
+0000004131|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+0000004132|ConnectCloudSendSystemMsg|816|[I]:pub SYS_MGR_TOPIC_SUB_SUCCESS:0
+0000004133|CloudLinkBIProcess|896|[I]:biFlag:0x0011
+0000004133|ProcessMqttConnect|1102|[I]:STATUS_DEVICE_ONLINE
+0000004134|ModelNotifyStatus|448|[I]:status:500
+current status is 500
+0000004135|MagicLinkGetRptEventPacket|1051|[E]:no svc:event
+0000004136|MagicLinkReportServiceEvent|509|[E]:get rptEventPkt
+rpt event msg fail
+0000004137|ConnectCreateMqttMsgPayload|1485|[I]:traceID:dIdKgLiOgQlRmTpUrXsZu0x2y3A6B8D9
+0000004139|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+0000004139|ConnectCloudSendSystemMsg|816|[I]:pub SYS_MGR_SYNC_TIME_REQ:0
+0000004140|LocalCmdProcess|983|[I]:mqtt sub
+0000004195|SendMqttHeartbeat|213|[I]:succ
+0000004196|LocalCmdProcess|966|[I]:mqtt pub
+magiclink sdk: recv mqtt ping response
+0000004357|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:8
+0000004358|LocalCmdProcess|966|[I]:mqtt pub
+0000004423|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:9
+0000004424|LocalCmdProcess|966|[I]:mqtt pub
+0000004483|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:10
+0000004484|LocalCmdProcess|966|[I]:mqtt pub
+0000004545|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:11
+0000004547|LocalCmdProcess|966|[I]:mqtt pub
+0000004619|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:12
+0000004620|LocalCmdProcess|966|[I]:mqtt pub
+0000004672|MqttMessageArrived|1387|[I]:recv data:387
+0000004674|CloudLinkRecvCmdMsg|394|[E]:no func:SYS_MGR_OTA_FIRMWARE_VERSION_RSP
+0000004734|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:13
+0000004736|LocalCmdProcess|966|[I]:mqtt pub
+0000004808|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:14
+0000004809|LocalCmdProcess|966|[I]:mqtt pub
+0000004821|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+0000004875|MqttMessageArrived|1387|[I]:recv data:226
+10-28 18:08:24.467|MqttMessageArrived|1387|[I]:recv data:289
+PROTO Header[241]*******7c521ad42eb9a3098472c0c66a8o000200cb0
+MSG Header[217]0xbabeface-14-13693743508072956170-0
+Module Header[193]0xffff0003-0-13693743508072956168-0-Data:0-289-193:*******
+10-28 18:08:24.472|AuthSwapDeviceInfo|937|[I]:MAGICLINK_PHONE_RELATED, MAGICLINK_RECV_SWAP_DEVINFO, 0
+10-28 18:08:24.475|AuthSwapDeviceInfo|958|[I]:peer cliId:1
+10-28 18:08:24.476|NetworkConfigItemErrComDeal|730|[E]:cloud addr:******87c521ad42eb9a3098472c0c66a8o000200cb0 1
+10-28 18:08:24.477|CheckInCertification|886|[I]:no handle
+10-28 18:08:24.478|AuthSwapDeviceInfo|986|[I]:sessionId:859256133
+PROTO Header[390]*******7c521ad42eb9a3098472c0c66a8o000200cb0
+MSG Header[366]0xbabeface-14-13693743508072956171-0
+Module Header[342]0xffff0003-0-0-1-Data:0-438-342:*******
+10-28 18:08:24.484|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+10-28 18:08:24.780|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+10-28 18:08:24.929|MqttMessageArrived|1387|[I]:recv data:243
+PROTO Header[195]*******7c521ad42eb9a3098472c0c66a8o000200cb0
+MSG Header[171]0xbabeface-14-13693743508072956172-0
+Module Header[147]0xffff0008-11-859256133-0-Data:0-243-147:*******
+10-28 18:08:24.935|GetProtocolParams|570|[I]:pinLen:8
+PROTO Header[298]*******7c521ad42eb9a3098472c0c66a8o000200cb0
+MSG Header[274]0xbabeface-14-13693743508072956173-0
+Module Header[250]0xffff0008-10-859256133-1-Data:0-346-250:*******
+10-28 18:08:25.172|SetServiceResult|685|[I]:ret agreement processing
+10-28 18:08:25.182|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+10-28 18:08:25.782|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+10-28 18:08:25.920|MqttMessageArrived|1387|[I]:recv data:318
+PROTO Header[270]*******7c521ad42eb9a3098472c0c66a8o000200cb0
+MSG Header[246]0xbabeface-14-13693743508072956174-0
+Module Header[222]0xffff0008-11-859256133-0-Data:0-318-222:*******
+PROTO Header[154]*******7c521ad42eb9a3098472c0c66a8o000200cb0
+MSG Header[130]0xbabeface-14-13693743508072956175-0
+Module Header[106]0xffff0008-10-859256133-1-Data:0-202-106:*******
+10-28 18:08:26.144|SetServiceResult|679|[I]:ret success
+10-28 18:08:26.152|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+10-28 18:08:26.774|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+10-28 18:08:26.985|MqttMessageArrived|1387|[I]:recv data:272
+PROTO Header[224]*******7c521ad42eb9a3098472c0c66a8o000200cb0
+MSG Header[200]0xbabeface-14-13693743508072956176-0
+Module Header[176]0xffff0002-0-859256133-0-Data:859256133-GCMNonce[dfa043395de2c49800ab5aab]-272-144:*******
+10-28 18:08:26.999|NetworkSetPeerItem|410|[E]:para
+10-28 18:08:27.000|ParseSyncNetworkInfo|384|[E]:peer mac save
+10-28 18:08:27.001|ParseSyncNetworkInfo|441|[I]:peer cliId:1
+10-28 18:08:27.002|ConnectionGetLocal|271|[E]:weak func
+PROTO Header[345]*******7c521ad42eb9a3098472c0c66a8o000200cb0
+MSG Header[321]0xbabeface-14-13693743508072956177-0
+Module Header[297]0xffff0002-10-859256133-1-Data:859256133-GCMNonce[27414211ebecbe3f40d1cfd0]-393-281:*******
+10-28 18:08:27.018|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+10-28 18:08:27.778|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+10-28 18:08:28.007|MqttMessageArrived|1387|[I]:recv data:97
+PROTO Header[49]*******7c521ad42eb9a3098472c0c66a8o000200cb0
+MSG Header[25]0xbabeface-14-13693743508072956178-0
+Module Header[1]0xffff0005-0-0-0-Data:0-97-1:*******
+10-28 18:08:28.012|DeleteAuthTimeoutBySessId|1235|[I]:succ
+PROTO Header[66]*******7c521ad42eb9a3098472c0c66a8o000200cb0
+MSG Header[42]0xbabeface-14-13693743508072956179-0
+Module Header[18]0xffff0005-0-0-1-Data:0-114-18:*******
+10-28 18:08:28.016|AuthCloseAck|1301|[I]:MAGICLINK_PHONE_RELATED, MAGICLINK_AUTH_SUCC, 0
+10-28 18:08:28.019|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+10-28 18:08:28.779|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+10-28 18:08:29.385|MagiclinkCoapConnectionCallback|619|[I]:get msg
+PROTO Header[241]*******.0.108:2533
+MSG Header[217]0xbabeface-14-13693743508072956184-0
+Module Header[193]0xffff0003-0-13693743508072956182-0-Data:0-241-193:*******
+10-28 18:08:29.455|AuthSwapDeviceInfo|937|[I]:MAGICLINK_PHONE_RELATED, MAGICLINK_RECV_SWAP_DEVINFO, 0
+10-28 18:08:29.458|AuthSwapDeviceInfo|958|[I]:peer cliId:1
+10-28 18:08:29.459|NetworkConfigItemErrComDeal|725|[E]:coap addr:******8.0.108 1
+10-28 18:08:29.460|CheckInCertification|886|[I]:no handle
+10-28 18:08:29.461|AuthSwapDeviceInfo|986|[I]:sessionId:859256136
+PROTO Header[398]*******.0.108:2533
+MSG Header[374]0xbabeface-14-13693743508072956185-0
+Module Header[350]0xffff0003-0-0-1-Data:0-398-350:*******
+10-28 18:08:29.466|CoapSetNetworkMyIp|737|[I]:set my ip:******8.0.121
+10-28 18:08:29.468|MagicLinkGetWlanConnInterface|283|[E]:no func
+10-28 18:08:29.469|CoapSetNetworkMyIp|745|[E]:get conn
+10-28 18:08:29.469|ConnectProcessMsg|2067|[E]:proc cmd
+10-28 18:08:29.470|ConnectMsgProcessFunc|2356|[E]:proc msg
+PROTO Header[49]*******.0.108:2533
+MSG Header[25]0xbabeface-14-13693743508072956186-0
+Module Header[1]0xffff0005-0-0-0-Data:0-49-1:*******
+10-28 18:08:29.513|DeleteAuthTimeoutBySessId|1235|[I]:succ
+PROTO Header[66]*******.0.108:2533
+MSG Header[42]0xbabeface-14-13693743508072956187-0
+Module Header[18]0xffff0005-0-0-1-Data:0-66-18:*******
+10-28 18:08:29.516|AuthCloseAck|1301|[I]:MAGICLINK_PHONE_RELATED, MAGICLINK_AUTH_SUCC, 0
+10-28 18:08:29.768|AuthHandleTimeOutProcess|1058|[I]:coap handle timeout.
+10-28 18:08:30.529|ConnectDispatchFunc|83|[I]:running
+10-28 18:08:34.109|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:08:40.531|ConnectDispatchFunc|83|[I]:running
+10-28 18:08:44.010|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:08:50.532|ConnectDispatchFunc|83|[I]:running
+10-28 18:08:53.911|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:09:00.533|ConnectDispatchFunc|83|[I]:running
+10-28 18:09:03.812|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:09:10.534|ConnectDispatchFunc|83|[I]:running
+10-28 18:09:13.722|ConnectMsgProcessFunc|2338|[I]:running
+adc raw:  815, temp_IC:   42
+Total:129972; Free:68824;
+10-28 18:09:20.535|ConnectDispatchFunc|83|[I]:running
+10-28 18:09:22.407|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:09:22.412|SendMqttHeartbeat|213|[I]:succ
+10-28 18:09:23.613|ConnectMsgProcessFunc|2338|[I]:running
+magiclink sdk: recv mqtt ping response
+10-28 18:09:30.540|ConnectDispatchFunc|83|[I]:running
+10-28 18:09:33.513|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:09:40.541|ConnectDispatchFunc|83|[I]:running
+10-28 18:09:43.413|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:09:50.542|ConnectDispatchFunc|83|[I]:running
+10-28 18:09:53.313|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:10:00.544|ConnectDispatchFunc|83|[I]:running
+10-28 18:10:03.213|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:10:04.767|CheckAsyncTimeoutCallback|153|[I]:asyncInfo timeout and del
+10-28 18:10:04.768|DestroyAsyncInfo|72|[I]:ref:0, refCount:0, type:2
+10-28 18:10:10.545|ConnectDispatchFunc|83|[I]:running
+10-28 18:10:13.113|ConnectMsgProcessFunc|2338|[I]:running
+adc raw:  809, temp_IC:   40
+Total:129972; Free:68752;
+10-28 18:10:20.546|ConnectDispatchFunc|83|[I]:running
+10-28 18:10:22.407|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:10:22.417|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:10:23.008|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:10:30.556|ConnectDispatchFunc|83|[I]:running
+10-28 18:10:32.909|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:10:40.556|ConnectDispatchFunc|83|[I]:running
+10-28 18:10:42.809|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:10:50.556|ConnectDispatchFunc|83|[I]:running
+10-28 18:10:52.719|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:11:00.556|ConnectDispatchFunc|83|[I]:running
+10-28 18:11:02.619|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:11:10.556|ConnectDispatchFunc|83|[I]:running
+10-28 18:11:12.519|ConnectMsgProcessFunc|2338|[I]:running
+adc raw:  813, temp_IC:   41
+Total:129972; Free:68856;
+10-28 18:11:20.556|ConnectDispatchFunc|83|[I]:running
+10-28 18:11:22.407|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:11:22.409|SendMqttHeartbeat|213|[I]:succ
+10-28 18:11:22.411|ConnectMsgProcessFunc|2338|[I]:running
+magiclink sdk: recv mqtt ping response
+10-28 18:11:30.558|ConnectDispatchFunc|83|[I]:running
+10-28 18:11:32.311|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:11:40.559|ConnectDispatchFunc|83|[I]:running
+10-28 18:11:42.211|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:11:50.559|ConnectDispatchFunc|83|[I]:running
+10-28 18:11:52.111|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:12:00.559|ConnectDispatchFunc|83|[I]:running
+10-28 18:12:02.011|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:12:10.560|ConnectDispatchFunc|83|[I]:running
+10-28 18:12:11.911|ConnectMsgProcessFunc|2338|[I]:running
+adc raw:  813, temp_IC:   41
+Total:129972; Free:68752;
+10-28 18:12:20.560|ConnectDispatchFunc|83|[I]:running
+10-28 18:12:21.811|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:12:22.407|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:12:22.412|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:12:30.565|ConnectDispatchFunc|83|[I]:running
+10-28 18:12:31.713|ConnectMsgProcessFunc|2338|[I]:running
+adc raw:  815, temp_IC:   42
+Total:129972; Free:68752;
+10-28 18:12:40.566|ConnectDispatchFunc|83|[I]:running
+10-28 18:12:41.613|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:12:50.567|ConnectDispatchFunc|83|[I]:running
+10-28 18:12:51.513|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:13:00.568|ConnectDispatchFunc|83|[I]:running
+10-28 18:13:01.413|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:13:10.568|ConnectDispatchFunc|83|[I]:running
+10-28 18:13:11.313|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:13:20.569|ConnectDispatchFunc|83|[I]:running
+10-28 18:13:20.957|IsAutoSwitchON|3388|[I]:not ON
+10-28 18:13:20.957|TimeCheckAutoUpdate|3401|[I]:auto switch off
+10-28 18:13:21.213|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:13:22.407|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:13:22.420|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:13:23.697|ConnectCreateMqttMsgPayload|1485|[I]:traceID:z6B7E9EcHcIfKgNiNlQlToTrWrWuZu2x
+10-28 18:13:23.699|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-28 18:13:23.700|ConnectCloudSendSystemMsg|816|[I]:pub SYS_MGR_SYNC_TIME_REQ:0
+10-28 18:13:23.701|LocalCmdProcess|966|[I]:mqtt pub
+10-28 18:13:23.706|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+10-28 18:13:23.762|MqttMessageArrived|1387|[I]:recv data:226
+10-28 18:13:30.583|ConnectDispatchFunc|83|[I]:running
+10-28 18:13:31.107|ConnectMsgProcessFunc|2338|[I]:running
+adc raw:  815, temp_IC:   42
+Total:129972; Free:68752;
+10-28 18:13:40.584|ConnectDispatchFunc|83|[I]:running
+10-28 18:13:41.008|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:13:50.585|ConnectDispatchFunc|83|[I]:running
+10-28 18:13:50.908|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:14:00.585|ConnectDispatchFunc|83|[I]:running
+10-28 18:14:00.808|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:14:10.585|ConnectDispatchFunc|83|[I]:running
+10-28 18:14:10.718|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:14:20.585|ConnectDispatchFunc|83|[I]:running
+10-28 18:14:20.618|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:14:22.406|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:14:22.416|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:14:30.517|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:14:30.596|ConnectDispatchFunc|83|[I]:running
+adc raw:  813, temp_IC:   41
+Total:129972; Free:68856;
+10-28 18:14:40.418|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:14:40.596|ConnectDispatchFunc|83|[I]:running
+10-28 18:14:50.318|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:14:50.596|ConnectDispatchFunc|83|[I]:running
+10-28 18:15:00.218|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:15:00.596|ConnectDispatchFunc|83|[I]:running
+10-28 18:15:10.118|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:15:10.596|ConnectDispatchFunc|83|[I]:running
+10-28 18:15:20.018|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:15:20.596|ConnectDispatchFunc|83|[I]:running
+10-28 18:15:22.406|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:15:22.409|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:15:29.910|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:15:30.601|ConnectDispatchFunc|83|[I]:running
+adc raw:  815, temp_IC:   42
+Total:129972; Free:68752;
+10-28 18:15:39.811|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:15:40.602|ConnectDispatchFunc|83|[I]:running
+10-28 18:15:49.722|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:15:50.602|ConnectDispatchFunc|83|[I]:running
+10-28 18:15:59.623|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:16:00.602|ConnectDispatchFunc|83|[I]:running
+10-28 18:16:09.523|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:16:10.602|ConnectDispatchFunc|83|[I]:running
+10-28 18:16:19.424|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:16:20.602|ConnectDispatchFunc|83|[I]:running
+10-28 18:16:22.406|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:16:22.415|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:16:29.316|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:16:30.611|ConnectDispatchFunc|83|[I]:running
+adc raw:  813, temp_IC:   41
+Total:129972; Free:68856;
+10-28 18:16:39.217|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:16:40.611|ConnectDispatchFunc|83|[I]:running
+10-28 18:16:49.117|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:16:50.611|ConnectDispatchFunc|83|[I]:running
+adc raw:  815, temp_IC:   42
+Total:129972; Free:69304;
+10-28 18:16:59.017|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:17:00.611|ConnectDispatchFunc|83|[I]:running
+10-28 18:17:08.917|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:17:10.611|ConnectDispatchFunc|83|[I]:running
+10-28 18:17:18.817|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:17:20.611|ConnectDispatchFunc|83|[I]:running
+10-28 18:17:22.406|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:17:22.408|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:17:28.718|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:17:30.612|ConnectDispatchFunc|83|[I]:running
+10-28 18:17:38.619|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:17:40.612|ConnectDispatchFunc|83|[I]:running
+10-28 18:17:48.519|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:17:50.613|ConnectDispatchFunc|83|[I]:running
+adc raw:  814, temp_IC:   42
+Total:129972; Free:69304;
+10-28 18:17:58.419|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:18:00.613|ConnectDispatchFunc|83|[I]:running
+10-28 18:18:08.319|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:18:10.613|ConnectDispatchFunc|83|[I]:running
+10-28 18:18:18.219|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:18:20.613|ConnectDispatchFunc|83|[I]:running
+10-28 18:18:20.956|IsAutoSwitchON|3388|[I]:not ON
+10-28 18:18:20.956|TimeCheckAutoUpdate|3401|[I]:auto switch off
+10-28 18:18:22.406|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:18:22.410|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:18:23.696|ConnectCreateMqttMsgPayload|1485|[I]:traceID:z4C7CaFaGdIdLgLgOgQmRoUpUsXsZv0x
+10-28 18:18:23.698|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-28 18:18:23.699|ConnectCloudSendSystemMsg|816|[I]:pub SYS_MGR_SYNC_TIME_REQ:0
+10-28 18:18:23.701|LocalCmdProcess|966|[I]:mqtt pub
+10-28 18:18:23.703|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+10-28 18:18:24.844|MqttMessageArrived|1387|[I]:recv data:226
+10-28 18:18:28.106|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:18:30.629|ConnectDispatchFunc|83|[I]:running
+10-28 18:18:38.007|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:18:40.629|ConnectDispatchFunc|83|[I]:running
+10-28 18:18:47.907|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:18:50.629|ConnectDispatchFunc|83|[I]:running
+adc raw:  811, temp_IC:   41
+Total:129972; Free:69216;
+10-28 18:18:57.807|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:19:00.629|ConnectDispatchFunc|83|[I]:running
+10-28 18:19:07.717|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:19:10.629|ConnectDispatchFunc|83|[I]:running
+10-28 18:19:17.617|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:19:20.629|ConnectDispatchFunc|83|[I]:running
+10-28 18:19:22.408|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:19:22.420|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:19:27.511|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:19:30.633|ConnectDispatchFunc|83|[I]:running
+10-28 18:19:37.412|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:19:40.633|ConnectDispatchFunc|83|[I]:running
+10-28 18:19:47.312|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:19:50.633|ConnectDispatchFunc|83|[I]:running
+adc raw:  814, temp_IC:   42
+Total:129972; Free:69304;
+10-28 18:19:57.212|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:20:00.633|ConnectDispatchFunc|83|[I]:running
+10-28 18:20:07.113|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:20:10.633|ConnectDispatchFunc|83|[I]:running
+10-28 18:20:17.014|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:20:20.633|ConnectDispatchFunc|83|[I]:running
+10-28 18:20:22.408|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:20:22.424|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:20:26.915|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:20:30.636|ConnectDispatchFunc|83|[I]:running
+10-28 18:20:36.816|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:20:40.636|ConnectDispatchFunc|83|[I]:running
+10-28 18:20:46.727|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:20:50.636|ConnectDispatchFunc|83|[I]:running
+adc raw:  815, temp_IC:   42
+Total:129972; Free:69304;
+10-28 18:20:56.627|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:21:00.638|ConnectDispatchFunc|83|[I]:running
+10-28 18:21:06.527|ConnectMsgProcessFunc|2338|[I]:running
+adc raw:  815, temp_IC:   42
+Total:129972; Free:69304;
+10-28 18:21:10.638|ConnectDispatchFunc|83|[I]:running
+10-28 18:21:16.427|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:21:20.638|ConnectDispatchFunc|83|[I]:running
+10-28 18:21:22.408|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:21:22.418|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:21:26.319|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:21:30.640|ConnectDispatchFunc|83|[I]:running
+10-28 18:21:36.220|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:21:40.641|ConnectDispatchFunc|83|[I]:running
+10-28 18:21:46.120|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:21:50.641|ConnectDispatchFunc|83|[I]:running
+10-28 18:21:56.020|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:22:00.641|ConnectDispatchFunc|83|[I]:running
+10-28 18:22:05.922|ConnectMsgProcessFunc|2338|[I]:running
+adc raw:  811, temp_IC:   41
+Total:129972; Free:69304;
+10-28 18:22:10.641|ConnectDispatchFunc|83|[I]:running
+10-28 18:22:15.822|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:22:20.641|ConnectDispatchFunc|83|[I]:running
+10-28 18:22:22.408|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:22:22.413|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:22:25.724|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:22:30.649|ConnectDispatchFunc|83|[I]:running
+10-28 18:22:35.625|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:22:40.649|ConnectDispatchFunc|83|[I]:running
+10-28 18:22:45.525|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:22:50.650|ConnectDispatchFunc|83|[I]:running
+10-28 18:22:55.425|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:23:00.650|ConnectDispatchFunc|83|[I]:running
+10-28 18:23:05.325|ConnectMsgProcessFunc|2338|[I]:running
+adc raw:  814, temp_IC:   42
+Total:129972; Free:69216;
+10-28 18:23:10.650|ConnectDispatchFunc|83|[I]:running
+10-28 18:23:15.225|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:23:20.650|ConnectDispatchFunc|83|[I]:running
+10-28 18:23:20.958|IsAutoSwitchON|3388|[I]:not ON
+10-28 18:23:20.958|TimeCheckAutoUpdate|3401|[I]:auto switch off
+10-28 18:23:22.408|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:23:22.421|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:23:23.698|ConnectCreateMqttMsgPayload|1485|[I]:traceID:A5A7D8DbGbGeGgMhOkPkSnSpVqXtYv1w
+10-28 18:23:23.700|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-28 18:23:23.701|ConnectCloudSendSystemMsg|816|[I]:pub SYS_MGR_SYNC_TIME_REQ:0
+10-28 18:23:23.702|LocalCmdProcess|966|[I]:mqtt pub
+10-28 18:23:23.705|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+10-28 18:23:23.756|MqttMessageArrived|1387|[I]:recv data:226
+10-28 18:23:25.135|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:23:30.678|ConnectDispatchFunc|83|[I]:running
+10-28 18:23:35.036|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:23:40.678|ConnectDispatchFunc|83|[I]:running
+10-28 18:23:44.936|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:23:50.678|ConnectDispatchFunc|83|[I]:running
+10-28 18:23:54.836|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:24:00.678|ConnectDispatchFunc|83|[I]:running
+10-28 18:24:04.746|ConnectMsgProcessFunc|2338|[I]:running
+adc raw:  810, temp_IC:   40
+Total:129972; Free:69304;
+10-28 18:24:10.678|ConnectDispatchFunc|83|[I]:running
+10-28 18:24:14.647|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:24:20.678|ConnectDispatchFunc|83|[I]:running
+10-28 18:24:22.427|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:24:22.429|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:24:24.540|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:24:30.686|ConnectDispatchFunc|83|[I]:running
+10-28 18:24:34.441|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:24:40.686|ConnectDispatchFunc|83|[I]:running
+10-28 18:24:44.341|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:24:50.686|ConnectDispatchFunc|83|[I]:running
+10-28 18:24:54.241|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:25:00.686|ConnectDispatchFunc|83|[I]:running
+10-28 18:25:04.141|ConnectMsgProcessFunc|2338|[I]:running
+adc raw:  815, temp_IC:   42
+Total:129972; Free:69216;
+10-28 18:25:10.686|ConnectDispatchFunc|83|[I]:running
+10-28 18:25:14.041|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:25:20.686|ConnectDispatchFunc|83|[I]:running
+10-28 18:25:22.427|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:25:22.437|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+adc raw:  815, temp_IC:   42
+Total:129972; Free:69304;
+10-28 18:25:23.937|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:25:30.694|ConnectDispatchFunc|83|[I]:running
+10-28 18:25:33.838|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:25:40.694|ConnectDispatchFunc|83|[I]:running
+10-28 18:25:43.748|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:25:50.694|ConnectDispatchFunc|83|[I]:running
+10-28 18:25:53.648|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:26:00.694|ConnectDispatchFunc|83|[I]:running
+10-28 18:26:03.549|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:26:10.694|ConnectDispatchFunc|83|[I]:running
+10-28 18:26:13.449|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:26:20.694|ConnectDispatchFunc|83|[I]:running
+10-28 18:26:22.427|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:26:22.430|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:26:23.342|ConnectMsgProcessFunc|2338|[I]:running
+adc raw:  813, temp_IC:   41
+Total:129972; Free:69304;
+10-28 18:26:30.694|ConnectDispatchFunc|83|[I]:running
+10-28 18:26:33.243|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:26:40.695|ConnectDispatchFunc|83|[I]:running
+10-28 18:26:43.143|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:26:50.695|ConnectDispatchFunc|83|[I]:running
+10-28 18:26:53.043|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:27:00.695|ConnectDispatchFunc|83|[I]:running
+10-28 18:27:02.944|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:27:10.695|ConnectDispatchFunc|83|[I]:running
+10-28 18:27:12.844|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:27:20.695|ConnectDispatchFunc|83|[I]:running
+10-28 18:27:22.427|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:27:22.434|SendMqttHeartbeat|213|[I]:succ
+10-28 18:27:22.745|ConnectMsgProcessFunc|2338|[I]:running
+adc raw:  809, temp_IC:   40
+Total:129972; Free:67800;
+magiclink sdk: recv mqtt ping response
+10-28 18:27:30.702|ConnectDispatchFunc|83|[I]:running
+10-28 18:27:32.645|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:27:40.703|ConnectDispatchFunc|83|[I]:running
+10-28 18:27:42.545|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:27:50.703|ConnectDispatchFunc|83|[I]:running
+10-28 18:27:52.445|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:28:00.703|ConnectDispatchFunc|83|[I]:running
+10-28 18:28:02.345|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:28:10.703|ConnectDispatchFunc|83|[I]:running
+10-28 18:28:12.245|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:28:20.703|ConnectDispatchFunc|83|[I]:running
+10-28 18:28:20.977|IsAutoSwitchON|3388|[I]:not ON
+10-28 18:28:20.977|TimeCheckAutoUpdate|3401|[I]:auto switch off
+10-28 18:28:22.145|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:28:22.427|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:28:22.435|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+adc raw:  813, temp_IC:   41
+Total:129972; Free:69216;
+10-28 18:28:23.717|ConnectCreateMqttMsgPayload|1485|[I]:traceID:y5B6B8E9GcHeKfMhNiPlQnToVqWtYu1w
+10-28 18:28:23.719|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-28 18:28:23.720|ConnectCloudSendSystemMsg|816|[I]:pub SYS_MGR_SYNC_TIME_REQ:0
+10-28 18:28:23.726|LocalCmdProcess|966|[I]:mqtt pub
+10-28 18:28:23.728|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+10-28 18:28:23.777|MqttMessageArrived|1387|[I]:recv data:226
+10-28 18:28:30.726|ConnectDispatchFunc|83|[I]:running
+10-28 18:28:32.035|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:28:40.727|ConnectDispatchFunc|83|[I]:running
+10-28 18:28:41.935|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:28:50.727|ConnectDispatchFunc|83|[I]:running
+10-28 18:28:51.835|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:29:00.727|ConnectDispatchFunc|83|[I]:running
+10-28 18:29:01.745|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:29:10.727|ConnectDispatchFunc|83|[I]:running
+10-28 18:29:11.645|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:29:20.727|ConnectDispatchFunc|83|[I]:running
+10-28 18:29:21.545|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:29:22.433|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:29:22.437|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+adc raw:  811, temp_IC:   41
+Total:129972; Free:69216;
+10-28 18:29:30.733|ConnectDispatchFunc|83|[I]:running
+10-28 18:29:31.439|ConnectMsgProcessFunc|2338|[I]:running
+adc raw:  813, temp_IC:   41
+Total:129972; Free:69216;
+10-28 18:29:40.734|ConnectDispatchFunc|83|[I]:running
+10-28 18:29:41.339|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:29:50.734|ConnectDispatchFunc|83|[I]:running
+10-28 18:29:51.239|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:30:00.734|ConnectDispatchFunc|83|[I]:running
+10-28 18:30:01.139|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:30:10.734|ConnectDispatchFunc|83|[I]:running
+10-28 18:30:11.039|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:30:20.734|ConnectDispatchFunc|83|[I]:running
+10-28 18:30:20.939|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:30:22.433|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:30:22.445|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:30:30.737|ConnectDispatchFunc|83|[I]:running
+10-28 18:30:30.836|ConnectMsgProcessFunc|2338|[I]:running
+adc raw:  816, temp_IC:   43
+Total:129972; Free:69216;
+10-28 18:30:40.738|ConnectDispatchFunc|83|[I]:running
+10-28 18:30:40.746|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:30:50.646|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:30:50.738|ConnectDispatchFunc|83|[I]:running
+10-28 18:31:00.546|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:31:00.738|ConnectDispatchFunc|83|[I]:running
+10-28 18:31:10.447|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:31:10.738|ConnectDispatchFunc|83|[I]:running
+10-28 18:31:20.347|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:31:20.738|ConnectDispatchFunc|83|[I]:running
+10-28 18:31:22.433|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:31:22.438|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:31:30.239|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:31:30.738|ConnectDispatchFunc|83|[I]:running
+adc raw:  809, temp_IC:   40
+Total:129972; Free:69216;
+10-28 18:31:40.140|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:31:40.738|ConnectDispatchFunc|83|[I]:running
+10-28 18:31:50.040|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:31:50.738|ConnectDispatchFunc|83|[I]:running
+10-28 18:31:59.940|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:32:00.738|ConnectDispatchFunc|83|[I]:running
+10-28 18:32:09.840|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:32:10.738|ConnectDispatchFunc|83|[I]:running
+10-28 18:32:19.750|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:32:20.738|ConnectDispatchFunc|83|[I]:running
+10-28 18:32:22.433|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:32:22.449|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:32:29.650|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:32:30.744|ConnectDispatchFunc|83|[I]:running
+10-28 18:32:39.551|ConnectMsgProcessFunc|2338|[I]:running
+adc raw:  813, temp_IC:   41
+Total:129972; Free:69304;
+10-28 18:32:40.744|ConnectDispatchFunc|83|[I]:running
+10-28 18:32:49.451|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:32:50.744|ConnectDispatchFunc|83|[I]:running
+10-28 18:32:59.351|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:33:00.744|ConnectDispatchFunc|83|[I]:running
+10-28 18:33:09.251|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:33:10.744|ConnectDispatchFunc|83|[I]:running
+10-28 18:33:19.151|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:33:20.744|ConnectDispatchFunc|83|[I]:running
+10-28 18:33:20.983|IsAutoSwitchON|3388|[I]:not ON
+10-28 18:33:20.983|TimeCheckAutoUpdate|3401|[I]:auto switch off
+10-28 18:33:22.433|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:33:22.442|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:33:23.723|ConnectCreateMqttMsgPayload|1485|[I]:traceID:y4z6C7E9FcHdKfLgNiOlQmToUrWrZuZv
+10-28 18:33:23.725|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-28 18:33:23.726|ConnectCloudSendSystemMsg|816|[I]:pub SYS_MGR_SYNC_TIME_REQ:0
+10-28 18:33:23.727|LocalCmdProcess|966|[I]:mqtt pub
+10-28 18:33:23.729|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+10-28 18:33:23.791|MqttMessageArrived|1387|[I]:recv data:226
+10-28 18:33:29.032|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:33:30.745|ConnectDispatchFunc|83|[I]:running
+10-28 18:33:38.933|ConnectMsgProcessFunc|2338|[I]:running
+adc raw:  813, temp_IC:   41
+Total:129972; Free:69216;
+10-28 18:33:40.745|ConnectDispatchFunc|83|[I]:running
+10-28 18:33:48.833|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:33:50.745|ConnectDispatchFunc|83|[I]:running
+adc raw:  812, temp_IC:   41
+Total:129972; Free:69216;
+10-28 18:33:58.743|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:34:00.745|ConnectDispatchFunc|83|[I]:running
+10-28 18:34:08.643|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:34:10.745|ConnectDispatchFunc|83|[I]:running
+10-28 18:34:18.543|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:34:20.745|ConnectDispatchFunc|83|[I]:running
+10-28 18:34:22.424|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:34:22.426|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:34:28.437|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:34:30.746|ConnectDispatchFunc|83|[I]:running
+10-28 18:34:38.338|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:34:40.746|ConnectDispatchFunc|83|[I]:running
+10-28 18:34:48.239|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:34:50.746|ConnectDispatchFunc|83|[I]:running
+adc raw:  812, temp_IC:   41
+Total:129972; Free:69216;
+10-28 18:34:58.139|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:35:00.746|ConnectDispatchFunc|83|[I]:running
+10-28 18:35:08.039|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:35:10.746|ConnectDispatchFunc|83|[I]:running
+10-28 18:35:17.939|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:35:20.746|ConnectDispatchFunc|83|[I]:running
+10-28 18:35:22.424|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:35:22.437|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:35:27.838|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:35:30.752|ConnectDispatchFunc|83|[I]:running
+10-28 18:35:37.749|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:35:40.752|ConnectDispatchFunc|83|[I]:running
+10-28 18:35:47.650|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:35:50.752|ConnectDispatchFunc|83|[I]:running
+adc raw:  811, temp_IC:   41
+Total:129972; Free:69304;
+10-28 18:35:57.550|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:36:00.752|ConnectDispatchFunc|83|[I]:running
+10-28 18:36:07.450|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:36:10.752|ConnectDispatchFunc|83|[I]:running
+10-28 18:36:17.350|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:36:20.752|ConnectDispatchFunc|83|[I]:running
+10-28 18:36:22.424|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:36:22.431|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:36:27.242|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:36:30.754|ConnectDispatchFunc|83|[I]:running
+10-28 18:36:37.143|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:36:40.754|ConnectDispatchFunc|83|[I]:running
+10-28 18:36:47.043|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:36:50.754|ConnectDispatchFunc|83|[I]:running
+adc raw:  811, temp_IC:   41
+Total:129972; Free:69304;
+10-28 18:36:56.943|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:37:00.754|ConnectDispatchFunc|83|[I]:running
+10-28 18:37:06.843|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:37:10.754|ConnectDispatchFunc|83|[I]:running
+10-28 18:37:16.753|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:37:20.754|ConnectDispatchFunc|83|[I]:running
+10-28 18:37:22.424|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:37:22.434|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:37:26.645|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:37:30.763|ConnectDispatchFunc|83|[I]:running
+10-28 18:37:36.546|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:37:40.763|ConnectDispatchFunc|83|[I]:running
+10-28 18:37:46.446|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:37:50.763|ConnectDispatchFunc|83|[I]:running
+adc raw:  815, temp_IC:   42
+Total:129972; Free:69216;
+10-28 18:37:56.346|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:38:00.763|ConnectDispatchFunc|83|[I]:running
+10-28 18:38:06.246|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:38:10.763|ConnectDispatchFunc|83|[I]:running
+adc raw:  813, temp_IC:   41
+Total:129972; Free:69216;
+10-28 18:38:16.146|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:38:20.763|ConnectDispatchFunc|83|[I]:running
+10-28 18:38:20.974|IsAutoSwitchON|3388|[I]:not ON
+10-28 18:38:20.974|TimeCheckAutoUpdate|3401|[I]:auto switch off
+10-28 18:38:22.424|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:38:22.433|SendMqttHeartbeat|213|[I]:succ
+10-28 18:38:23.714|ConnectCreateMqttMsgPayload|1485|[I]:traceID:x4z5C7DaFaIdIeLgMgOgRmRpUpVsXs0v
+10-28 18:38:23.716|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-28 18:38:23.717|ConnectCloudSendSystemMsg|816|[I]:pub SYS_MGR_SYNC_TIME_REQ:0
+10-28 18:38:23.718|LocalCmdProcess|966|[I]:mqtt pub
+10-28 18:38:23.720|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+magiclink sdk: recv mqtt ping response
+10-28 18:38:23.908|MqttMessageArrived|1387|[I]:recv data:226
+10-28 18:38:26.048|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:38:30.777|ConnectDispatchFunc|83|[I]:running
+10-28 18:38:35.949|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:38:40.778|ConnectDispatchFunc|83|[I]:running
+10-28 18:38:45.849|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:38:50.778|ConnectDispatchFunc|83|[I]:running
+10-28 18:38:55.759|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:39:00.778|ConnectDispatchFunc|83|[I]:running
+10-28 18:39:05.660|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:39:10.781|ConnectDispatchFunc|83|[I]:running
+adc raw:  816, temp_IC:   43
+Total:129972; Free:69304;
+10-28 18:39:15.560|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:39:20.781|ConnectDispatchFunc|83|[I]:running
+10-28 18:39:22.431|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:39:22.441|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:39:25.452|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:39:30.782|ConnectDispatchFunc|83|[I]:running
+10-28 18:39:35.353|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:39:40.782|ConnectDispatchFunc|83|[I]:running
+10-28 18:39:45.253|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:39:50.782|ConnectDispatchFunc|83|[I]:running
+10-28 18:39:55.153|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:40:00.782|ConnectDispatchFunc|83|[I]:running
+10-28 18:40:05.053|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:40:10.782|ConnectDispatchFunc|83|[I]:running
+adc raw:  810, temp_IC:   40
+Total:129972; Free:69304;
+10-28 18:40:14.953|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:40:20.782|ConnectDispatchFunc|83|[I]:running
+10-28 18:40:22.431|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:40:22.434|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:40:24.845|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:40:30.782|ConnectDispatchFunc|83|[I]:running
+10-28 18:40:34.756|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:40:40.783|ConnectDispatchFunc|83|[I]:running
+10-28 18:40:44.657|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:40:50.783|ConnectDispatchFunc|83|[I]:running
+10-28 18:40:54.557|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:41:00.783|ConnectDispatchFunc|83|[I]:running
+10-28 18:41:04.458|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:41:10.783|ConnectDispatchFunc|83|[I]:running
+adc raw:  813, temp_IC:   41
+Total:129972; Free:69304;
+10-28 18:41:14.358|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:41:20.783|ConnectDispatchFunc|83|[I]:running
+10-28 18:41:22.431|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:41:22.439|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:41:24.250|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:41:30.791|ConnectDispatchFunc|83|[I]:running
+10-28 18:41:34.151|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:41:40.792|ConnectDispatchFunc|83|[I]:running
+10-28 18:41:44.052|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:41:50.793|ConnectDispatchFunc|83|[I]:running
+10-28 18:41:53.952|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:41:56.590|MagiclinkCoapDiscoveryCallback|520|[I]:recv disc msg
+10-28 18:41:57.468|MagiclinkCoapConnectionCallback|619|[I]:get msg
+10-28 18:41:57.535|ParseModuleTransHeader|682|[I]:isServer:0
+PROTO Header[472]*******.0.108:38610
+MSG Header[448]0xbabeface-13-610898965-1
+Module Header[440]0x1-1-1:0-17--1-0
+-Data:859256133-GCMNonce[48d3612190e9ea7ace7ee360]-472-408:*******
+10-28 18:41:57.540|TransOpen|1333|[I]:succ trans:1
+10-28 18:41:57.552|SendOpenAck|446|[I]:succ identity:******4e91904fffb303038b78aaaf04
+10-28 18:41:57.834|ParseModuleTransHeader|682|[I]:isServer:0
+PROTO Header[273]*******.0.108:38610
+MSG Header[249]0xbabeface-13-610898965-1
+Module Header[241]0x1-0-0:0-17-1-0
+-SliceHead:0-1-0-0
+-PacketHead:0xbabeface-1-8-209-Data:859256133-GCMNonce[00000001b99d5424d4539e14]-273-181:*******
+method:3 req:30, rpt:1005
+10-28 18:41:57.841|MagicLinkProcessProfile|1356|[I]:write req ack
+10-28 18:41:57.852|SendChannelMessage|193|[I]:[identity:******4e91904fffb303038b78aaaf04],[1,17,1] send msg[163] success.
+type:0 req:1488729890, rpt:1006
+10-28 18:41:57.854|MagicLinkAddSvcToRptStatus|743|[E]:get prop udid
+firmVer:1.0.1.203
+10-28 18:41:57.856|MagicLinkAddSvcToRptStatus|743|[E]:get prop sdkVersion
+MCUVer:
+10-28 18:41:57.858|MagicLinkGetRptStatusPkt|613|[I]:svc:deviceInfo
+10-28 18:41:57.860|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-28 18:41:57.861|MagicLinkRptStatusToCloud|676|[I]:pub succ
+10-28 18:41:57.862|TransReceiveMsg|1431|[I]:succ recv:1
+10-28 18:41:57.863|LocalCmdProcess|966|[I]:mqtt pub
+10-28 18:41:57.923|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:15
+10-28 18:41:59.864|MagiclinkCoapDiscoveryCallback|520|[I]:recv disc msg
+10-28 18:42:00.847|ConnectDispatchFunc|83|[I]:running
+10-28 18:42:03.937|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:42:10.848|ConnectDispatchFunc|83|[I]:running
+adc raw:  817, temp_IC:   43
+Total:129972; Free:68504;
+10-28 18:42:13.838|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:42:20.848|ConnectDispatchFunc|83|[I]:running
+10-28 18:42:22.431|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:42:22.440|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:42:23.741|ConnectMsgProcessFunc|2338|[I]:running
+adc raw:  813, temp_IC:   41
+Total:129972; Free:68400;
+10-28 18:42:30.852|ConnectDispatchFunc|83|[I]:running
+10-28 18:42:33.643|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:42:40.852|ConnectDispatchFunc|83|[I]:running
+10-28 18:42:43.543|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:42:50.852|ConnectDispatchFunc|83|[I]:running
+10-28 18:42:53.443|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:43:00.852|ConnectDispatchFunc|83|[I]:running
+10-28 18:43:03.343|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:43:10.854|ConnectDispatchFunc|83|[I]:running
+10-28 18:43:13.243|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:43:20.854|ConnectDispatchFunc|83|[I]:running
+10-28 18:43:20.981|IsAutoSwitchON|3388|[I]:not ON
+10-28 18:43:20.981|TimeCheckAutoUpdate|3401|[I]:auto switch off
+10-28 18:43:22.431|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:43:22.434|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:43:23.135|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:43:23.721|ConnectCreateMqttMsgPayload|1485|[I]:traceID:qVqYtYv1w3z4B7C7EaFcIdKgLiNgOlRm
+10-28 18:43:23.723|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-28 18:43:23.724|ConnectCloudSendSystemMsg|816|[I]:pub SYS_MGR_SYNC_TIME_REQ:0
+10-28 18:43:23.726|LocalCmdProcess|966|[I]:mqtt pub
+10-28 18:43:23.728|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+10-28 18:43:23.777|MqttMessageArrived|1387|[I]:recv data:226
+adc raw:  813, temp_IC:   41
+Total:129972; Free:68504;
+10-28 18:43:29.811|CheckAsyncTimeoutCallback|153|[I]:asyncInfo timeout and del
+10-28 18:43:29.812|DestroyAsyncInfo|72|[I]:ref:0, refCount:0, type:2
+10-28 18:43:30.879|ConnectDispatchFunc|83|[I]:running
+10-28 18:43:33.049|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:43:40.879|ConnectDispatchFunc|83|[I]:running
+10-28 18:43:42.950|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:43:50.879|ConnectDispatchFunc|83|[I]:running
+10-28 18:43:52.850|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:44:00.879|ConnectDispatchFunc|83|[I]:running
+10-28 18:44:02.760|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:44:10.881|ConnectDispatchFunc|83|[I]:running
+10-28 18:44:12.661|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:44:20.882|ConnectDispatchFunc|83|[I]:running
+10-28 18:44:22.451|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:44:22.453|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:44:22.554|ConnectMsgProcessFunc|2338|[I]:running
+adc raw:  812, temp_IC:   41
+Total:129972; Free:68536;
+10-28 18:44:30.885|ConnectDispatchFunc|83|[I]:running
+10-28 18:44:32.454|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:44:40.886|ConnectDispatchFunc|83|[I]:running
+10-28 18:44:42.354|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:44:50.886|ConnectDispatchFunc|83|[I]:running
+10-28 18:44:52.254|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:45:00.886|ConnectDispatchFunc|83|[I]:running
+10-28 18:45:02.154|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:45:10.886|ConnectDispatchFunc|83|[I]:running
+10-28 18:45:12.054|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:45:20.886|ConnectDispatchFunc|83|[I]:running
+10-28 18:45:21.954|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:45:22.451|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:45:22.456|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+adc raw:  817, temp_IC:   43
+Total:129972; Free:68432;
+10-28 18:45:30.897|ConnectDispatchFunc|83|[I]:running
+10-28 18:45:31.847|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:45:40.898|ConnectDispatchFunc|83|[I]:running
+10-28 18:45:41.757|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:45:50.898|ConnectDispatchFunc|83|[I]:running
+10-28 18:45:51.657|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:46:00.898|ConnectDispatchFunc|83|[I]:running
+10-28 18:46:01.557|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:46:10.898|ConnectDispatchFunc|83|[I]:running
+10-28 18:46:11.457|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:46:20.898|ConnectDispatchFunc|83|[I]:running
+10-28 18:46:21.357|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:46:22.451|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:46:22.458|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+adc raw:  815, temp_IC:   42
+Total:129972; Free:68536;
+10-28 18:46:30.904|ConnectDispatchFunc|83|[I]:running
+10-28 18:46:31.249|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:46:40.905|ConnectDispatchFunc|83|[I]:running
+10-28 18:46:41.149|ConnectMsgProcessFunc|2338|[I]:running
+adc raw:  809, temp_IC:   40
+Total:129972; Free:68536;
+10-28 18:46:50.905|ConnectDispatchFunc|83|[I]:running
+10-28 18:46:51.049|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:47:00.905|ConnectDispatchFunc|83|[I]:running
+10-28 18:47:00.949|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:47:10.849|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:47:10.905|ConnectDispatchFunc|83|[I]:running
+10-28 18:47:20.760|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:47:20.905|ConnectDispatchFunc|83|[I]:running
+10-28 18:47:22.451|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:47:22.461|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:47:30.652|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:47:30.905|ConnectDispatchFunc|83|[I]:running
+10-28 18:47:40.553|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:47:40.905|ConnectDispatchFunc|83|[I]:running
+adc raw:  811, temp_IC:   41
+Total:129972; Free:68536;
+10-28 18:47:50.453|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:47:50.905|ConnectDispatchFunc|83|[I]:running
+10-28 18:48:00.353|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:48:00.905|ConnectDispatchFunc|83|[I]:running
+10-28 18:48:10.253|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:48:10.905|ConnectDispatchFunc|83|[I]:running
+10-28 18:48:20.153|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:48:20.905|ConnectDispatchFunc|83|[I]:running
+10-28 18:48:21.001|IsAutoSwitchON|3388|[I]:not ON
+10-28 18:48:21.001|TimeCheckAutoUpdate|3401|[I]:auto switch off
+10-28 18:48:22.451|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:48:22.456|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:48:23.741|ConnectCreateMqttMsgPayload|1485|[I]:traceID:oVrWtZu1w2z4A5C8DaFbIdGgLhMgOkRm
+10-28 18:48:23.743|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-28 18:48:23.744|ConnectCloudSendSystemMsg|816|[I]:pub SYS_MGR_SYNC_TIME_REQ:0
+10-28 18:48:23.747|LocalCmdProcess|966|[I]:mqtt pub
+10-28 18:48:23.756|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+10-28 18:48:23.811|MqttMessageArrived|1387|[I]:recv data:226
+10-28 18:48:30.045|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:48:30.911|ConnectDispatchFunc|83|[I]:running
+10-28 18:48:39.946|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:48:40.911|ConnectDispatchFunc|83|[I]:running
+adc raw:  817, temp_IC:   43
+Total:129972; Free:68896;
+10-28 18:48:49.846|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:48:50.911|ConnectDispatchFunc|83|[I]:running
+10-28 18:48:59.756|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:49:00.911|ConnectDispatchFunc|83|[I]:running
+10-28 18:49:09.658|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:49:10.911|ConnectDispatchFunc|83|[I]:running
+10-28 18:49:11.702|MagiclinkCoapConnectionCallback|619|[I]:get msg
+10-28 18:49:12.941|MagiclinkCoapConnectionCallback|619|[I]:get msg
+10-28 18:49:12.999|ParseModuleTransHeader|682|[I]:isServer:0
+PROTO Header[472]*******.0.108:37830
+MSG Header[448]0xbabeface-13-1951118049-1
+Module Header[440]0x1-1-1:0-18--1-0
+-Data:859256133-GCMNonce[d2aedc89640ec8809fda8f7e]-472-408:*******
+10-28 18:49:13.004|TransOpen|1287|[I]:exist serverId:1
+10-28 18:49:13.016|SendOpenAck|446|[I]:succ identity:******e43cea41c28372e2847e74462d
+10-28 18:49:13.908|ParseModuleTransHeader|682|[I]:isServer:0
+PROTO Header[277]*******.0.108:37830
+MSG Header[253]0xbabeface-13-1951118049-1
+Module Header[245]0x1-0-0:0-18-1-0
+-SliceHead:0-1-0-0
+-PacketHead:0xbabeface-1-8-213-Data:859256133-GCMNonce[000000018be69897ff5fb175]-277-185:*******
+method:1 req:94, rpt:0
+10-28 18:49:13.914|MagicLinkEncodeCmdOut|971|[I]:enc write req
+10-28 18:49:13.916|MagicLinkProcessProfile|1356|[I]:write req ack
+10-28 18:49:13.926|SendChannelMessage|193|[I]:[identity:******e43cea41c28372e2847e74462d],[1,18,1] send msg[68] success.
+set light onoff 1
+lamp switch ctrl 1
+type:0 req:415195882, rpt:1007
+get light brightness 1
+get light brightness 3
+get light mode 1
+10-28 18:49:13.931|MagicLinkGetRptStatusPkt|613|[I]:svc:light
+10-28 18:49:13.932|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-28 18:49:13.933|MagicLinkRptStatusToCloud|676|[I]:pub succ
+10-28 18:49:13.934|TransReceiveMsg|1431|[I]:succ recv:1
+10-28 18:49:13.936|LocalCmdProcess|966|[I]:mqtt pub
+10-28 18:49:13.994|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:16
+10-28 18:49:19.635|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:49:20.956|ConnectDispatchFunc|83|[I]:running
+10-28 18:49:21.436|MagiclinkCoapDiscoveryCallback|520|[I]:recv disc msg
+10-28 18:49:22.449|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:49:22.451|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:49:23.222|ParseModuleTransHeader|682|[I]:isServer:0
+PROTO Header[277]*******.0.108:37830
+MSG Header[253]0xbabeface-13-1951118051-1
+Module Header[245]0x1-0-0:0-18-1-0
+-SliceHead:0-1-0-0
+-PacketHead:0xbabeface-2-8-213-Data:859256133-GCMNonce[00000002ab6f7a9bf6da5e0f]-277-185:*******
+method:1 req:95, rpt:0
+10-28 18:49:23.228|MagicLinkEncodeCmdOut|971|[I]:enc write req
+10-28 18:49:23.230|MagicLinkProcessProfile|1356|[I]:write req ack
+10-28 18:49:23.240|SendChannelMessage|193|[I]:[identity:******e43cea41c28372e2847e74462d],[1,18,2] send msg[68] success.
+set light onoff 0
+lamp switch ctrl 0
+type:0 req:1788780883, rpt:1008
+get light brightness 0
+get light brightness 3
+get light mode 1
+10-28 18:49:23.245|MagicLinkGetRptStatusPkt|613|[I]:svc:light
+10-28 18:49:23.246|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-28 18:49:23.247|MagicLinkRptStatusToCloud|676|[I]:pub succ
+10-28 18:49:23.248|TransReceiveMsg|1431|[I]:succ recv:1
+10-28 18:49:23.250|LocalCmdProcess|966|[I]:mqtt pub
+10-28 18:49:23.298|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:17
+10-28 18:49:25.160|ParseModuleTransHeader|682|[I]:isServer:0
+PROTO Header[279]*******.0.108:37830
+MSG Header[255]0xbabeface-13-1951118051-1
+Module Header[247]0x1-0-0:0-18-1-0
+-SliceHead:0-1-0-0
+-PacketHead:0xbabeface-3-8-215-Data:859256133-GCMNonce[0000000319e14a902077c0c6]-279-187:*******
+10-28 18:49:25.166|CheckValueByDataDef|623|[E]:inv str[36,32]
+10-28 18:49:25.167|ExecuteCmdProperty|661|[E]:prop:sdkVersion
+method:3 req:32, rpt:1009
+10-28 18:49:25.169|MagicLinkProcessProfile|1356|[I]:write req ack
+10-28 18:49:25.179|SendChannelMessage|193|[I]:[identity:******e43cea41c28372e2847e74462d],[1,18,3] send msg[169] success.
+type:0 req:1535408827, rpt:1010
+10-28 18:49:25.182|MagicLinkAddSvcToRptStatus|743|[E]:get prop udid
+firmVer:1.0.1.203
+10-28 18:49:25.183|MagicLinkAddSvcToRptStatus|743|[E]:get prop sdkVersion
+MCUVer:
+10-28 18:49:25.185|MagicLinkGetRptStatusPkt|613|[I]:svc:deviceInfo
+10-28 18:49:25.187|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-28 18:49:25.188|MagicLinkRptStatusToCloud|676|[I]:pub succ
+10-28 18:49:25.189|TransReceiveMsg|1431|[I]:succ recv:1
+10-28 18:49:25.191|LocalCmdProcess|966|[I]:mqtt pub
+10-28 18:49:25.246|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:18
+10-28 18:49:29.657|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:49:31.068|ConnectDispatchFunc|83|[I]:running
+10-28 18:49:34.569|ParseModuleTransHeader|682|[I]:isServer:0
+PROTO Header[284]*******.0.108:37830
+MSG Header[260]0xbabeface-13-1951118053-1
+Module Header[252]0x1-0-0:0-18-1-0
+-SliceHead:0-1-0-0
+-PacketHead:0xbabeface-4-8-220-Data:859256133-GCMNonce[000000041abe9ddec2dc46b0]-284-192:*******
+10-28 18:49:34.575|MagicLinkParseDataArray|283|[I]:Array is 0
+10-28 18:49:34.576|ParseCheckVerInData|3124|[I]:no indata
+10-28 18:49:34.577|BuildChkVerReqBody|1796|[I]:check Info:1|1.0.1.203|******1309000573|******y_mac
+10-28 18:49:34.579|AddCloudRequstHeader|1887|[I]:env:prod, reqId:******6a97c5f21f4d7aa7d4022f5c8a
+10-28 18:49:34.581|ConnectCreateMqttMsgPayload|1485|[I]:traceID:C7E9FcHdKfLgNiOlQmToTrWrXuZv2x2A
+10-28 18:49:34.584|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-28 18:49:34.585|ConnectCloudSendSystemMsg|816|[I]:pub SYS_MGR_OTA_FIRMWARE_VERSION_REQ:0
+10-28 18:49:34.586|CheckVersionTimerStart|3057|[I]:succ
+10-28 18:49:34.587|MakeActionOut|715|[I]:no out
+method:5 req:19, rpt:1011
+10-28 18:49:34.588|MagicLinkEncodeCmdAction|850|[I]:action:checkVersion no out
+10-28 18:49:34.599|SendChannelMessage|193|[I]:[identity:******e43cea41c28372e2847e74462d],[1,18,4] send msg[161] success.
+10-28 18:49:34.601|ControlMsgReceived|96|[I]:empty
+10-28 18:49:34.602|TransReceiveMsg|1431|[I]:succ recv:1
+10-28 18:49:34.604|LocalCmdProcess|966|[I]:mqtt pub
+10-28 18:49:34.666|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:19
+10-28 18:49:34.970|MqttMessageArrived|1387|[I]:recv data:795
+10-28 18:49:34.974|ReceiveCloudResponse|3224|[I]:rsp body
+10-28 18:49:34.975|ReceiveCheckVersionResp|3109|[I]:ver:1|1||
+10-28 18:49:35.089|CheckVersionTimeoutFunc|2975|[I]:module chk end
+10-28 18:49:35.090|ModelNotifyStatus|448|[I]:status:701
+current status is 701
+type:0 req:1536031513, rpt:1012
+10-28 18:49:35.093|MagicLinkOtaGetReportInfo|3351|[I]:succ
+10-28 18:49:35.094|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-28 18:49:35.095|MagicLinkRptStatusToCloud|676|[I]:pub succ
+10-28 18:49:35.096|ReportOtaServiceStatus|791|[I]:succ
+10-28 18:49:35.097|LocalCmdProcess|966|[I]:mqtt pub
+10-28 18:49:35.186|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:20
+10-28 18:49:37.708|ParseModuleTransHeader|682|[I]:isServer:0
+PROTO Header[338]*******.0.108:37830
+MSG Header[314]0xbabeface-13-1951118053-1
+Module Header[306]0x1-0-0:0-18-1-0
+-SliceHead:0-1-0-0
+-PacketHead:0xbabeface-5-8-274-Data:859256133-GCMNonce[000000057c5a3def920fa28e]-338-246:*******
+method:3 req:33, rpt:1013
+10-28 18:49:37.716|MagicLinkProcessProfile|1356|[I]:write req ack
+10-28 18:49:37.727|SendChannelMessage|193|[I]:[identity:******e43cea41c28372e2847e74462d],[1,18,5] send msg[304] success.
+type:0 req:468162564, rpt:1014
+10-28 18:49:37.731|MagicLinkOtaGetReportInfo|3351|[I]:succ
+10-28 18:49:37.733|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-28 18:49:37.734|MagicLinkRptStatusToCloud|676|[I]:pub succ
+10-28 18:49:37.734|TransReceiveMsg|1431|[I]:succ recv:1
+10-28 18:49:37.736|LocalCmdProcess|966|[I]:mqtt pub
+10-28 18:49:37.801|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:21
+10-28 18:49:39.793|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:49:41.264|ConnectDispatchFunc|83|[I]:running
+adc raw:  816, temp_IC:   43
+Total:129972; Free:68304;
+10-28 18:49:49.694|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:49:51.264|ConnectDispatchFunc|83|[I]:running
+10-28 18:49:59.595|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:50:01.264|ConnectDispatchFunc|83|[I]:running
+10-28 18:50:09.495|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:50:11.264|ConnectDispatchFunc|83|[I]:running
+10-28 18:50:19.395|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:50:21.264|ConnectDispatchFunc|83|[I]:running
+10-28 18:50:22.449|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:50:22.456|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:50:29.287|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:50:31.264|ConnectDispatchFunc|83|[I]:running
+10-28 18:50:39.188|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:50:41.264|ConnectDispatchFunc|83|[I]:running
+adc raw:  817, temp_IC:   43
+Total:129972; Free:68304;
+10-28 18:50:44.809|CheckAsyncTimeoutCallback|153|[I]:asyncInfo timeout and del
+10-28 18:50:44.810|DestroyAsyncInfo|72|[I]:ref:0, refCount:0, type:2
+10-28 18:50:49.088|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:50:51.265|ConnectDispatchFunc|83|[I]:running
+10-28 18:50:58.988|ConnectMsgProcessFunc|2338|[I]:running
+adc raw:  815, temp_IC:   42
+Total:129972; Free:68336;
+10-28 18:51:01.265|ConnectDispatchFunc|83|[I]:running
+10-28 18:51:08.888|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:51:09.809|CheckAsyncTimeoutCallback|153|[I]:asyncInfo timeout and del
+10-28 18:51:09.810|DestroyAsyncInfo|72|[I]:ref:0, refCount:0, type:2
+10-28 18:51:11.265|ConnectDispatchFunc|83|[I]:running
+10-28 18:51:18.798|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:51:21.265|ConnectDispatchFunc|83|[I]:running
+10-28 18:51:22.449|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:51:22.457|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:51:28.698|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:51:31.273|ConnectDispatchFunc|83|[I]:running
+10-28 18:51:38.599|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:51:41.273|ConnectDispatchFunc|83|[I]:running
+10-28 18:51:48.500|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:51:51.273|ConnectDispatchFunc|83|[I]:running
+10-28 18:51:58.400|ConnectMsgProcessFunc|2338|[I]:running
+adc raw:  813, temp_IC:   41
+Total:129972; Free:68280;
+10-28 18:52:01.273|ConnectDispatchFunc|83|[I]:running
+10-28 18:52:08.300|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:52:11.273|ConnectDispatchFunc|83|[I]:running
+10-28 18:52:18.200|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:52:21.273|ConnectDispatchFunc|83|[I]:running
+10-28 18:52:22.449|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:52:22.450|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:52:28.092|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:52:31.281|ConnectDispatchFunc|83|[I]:running
+10-28 18:52:37.993|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:52:41.281|ConnectDispatchFunc|83|[I]:running
+10-28 18:52:47.893|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:52:51.281|ConnectDispatchFunc|83|[I]:running
+10-28 18:52:57.803|ConnectMsgProcessFunc|2338|[I]:running
+adc raw:  817, temp_IC:   43
+Total:129972; Free:68384;
+10-28 18:53:01.281|ConnectDispatchFunc|83|[I]:running
+10-28 18:53:07.703|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:53:11.281|ConnectDispatchFunc|83|[I]:running
+10-28 18:53:17.603|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:53:20.999|IsAutoSwitchON|3388|[I]:not ON
+10-28 18:53:20.999|TimeCheckAutoUpdate|3401|[I]:auto switch off
+10-28 18:53:21.281|ConnectDispatchFunc|83|[I]:running
+10-28 18:53:22.449|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:53:22.454|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:53:23.739|ConnectCreateMqttMsgPayload|1485|[I]:traceID:LgLgOgRmRpUpUsXs0v0y3y5B6D9E9HcH
+10-28 18:53:23.741|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-28 18:53:23.742|ConnectCloudSendSystemMsg|816|[I]:pub SYS_MGR_SYNC_TIME_REQ:0
+10-28 18:53:23.745|LocalCmdProcess|966|[I]:mqtt pub
+10-28 18:53:23.747|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+10-28 18:53:23.800|MqttMessageArrived|1387|[I]:recv data:226
+10-28 18:53:27.494|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:53:31.308|ConnectDispatchFunc|83|[I]:running
+10-28 18:53:37.395|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:53:41.308|ConnectDispatchFunc|83|[I]:running
+10-28 18:53:47.295|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:53:51.308|ConnectDispatchFunc|83|[I]:running
+10-28 18:53:57.195|ConnectMsgProcessFunc|2338|[I]:running
+adc raw:  818, temp_IC:   43
+Total:129972; Free:68384;
+10-28 18:54:01.308|ConnectDispatchFunc|83|[I]:running
+10-28 18:54:07.095|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:54:11.308|ConnectDispatchFunc|83|[I]:running
+10-28 18:54:16.995|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:54:21.308|ConnectDispatchFunc|83|[I]:running
+10-28 18:54:22.455|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:54:22.458|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:54:26.890|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:54:31.313|ConnectDispatchFunc|83|[I]:running
+10-28 18:54:36.801|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:54:41.313|ConnectDispatchFunc|83|[I]:running
+10-28 18:54:46.701|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:54:51.313|ConnectDispatchFunc|83|[I]:running
+10-28 18:54:56.601|ConnectMsgProcessFunc|2338|[I]:running
+adc raw:  809, temp_IC:   40
+Total:129972; Free:68384;
+10-28 18:55:01.313|ConnectDispatchFunc|83|[I]:running
+10-28 18:55:06.501|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:55:11.313|ConnectDispatchFunc|83|[I]:running
+adc raw:  817, temp_IC:   43
+Total:129972; Free:68384;
+10-28 18:55:16.401|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:55:21.314|ConnectDispatchFunc|83|[I]:running
+10-28 18:55:22.455|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:55:22.464|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:55:26.296|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:55:31.320|ConnectDispatchFunc|83|[I]:running
+10-28 18:55:36.197|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:55:41.320|ConnectDispatchFunc|83|[I]:running
+10-28 18:55:46.098|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:55:51.320|ConnectDispatchFunc|83|[I]:running
+10-28 18:55:55.998|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:56:01.320|ConnectDispatchFunc|83|[I]:running
+10-28 18:56:05.898|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:56:11.320|ConnectDispatchFunc|83|[I]:running
+adc raw:  814, temp_IC:   42
+Total:129972; Free:68744;
+10-28 18:56:15.808|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:56:21.320|ConnectDispatchFunc|83|[I]:running
+10-28 18:56:22.455|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:56:22.459|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:56:25.700|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:56:31.326|ConnectDispatchFunc|83|[I]:running
+10-28 18:56:35.601|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:56:41.326|ConnectDispatchFunc|83|[I]:running
+10-28 18:56:45.501|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:56:51.326|ConnectDispatchFunc|83|[I]:running
+10-28 18:56:55.401|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:57:01.326|ConnectDispatchFunc|83|[I]:running
+10-28 18:57:05.301|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:57:11.326|ConnectDispatchFunc|83|[I]:running
+10-28 18:57:15.201|ConnectMsgProcessFunc|2338|[I]:running
+adc raw:  815, temp_IC:   42
+Total:129972; Free:68744;
+10-28 18:57:21.326|ConnectDispatchFunc|83|[I]:running
+10-28 18:57:22.455|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:57:22.462|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:57:25.093|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:57:31.326|ConnectDispatchFunc|83|[I]:running
+10-28 18:57:34.994|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:57:41.326|ConnectDispatchFunc|83|[I]:running
+10-28 18:57:44.895|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:57:51.326|ConnectDispatchFunc|83|[I]:running
+10-28 18:57:54.805|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:58:01.326|ConnectDispatchFunc|83|[I]:running
+10-28 18:58:04.705|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:58:11.326|ConnectDispatchFunc|83|[I]:running
+10-28 18:58:14.605|ConnectMsgProcessFunc|2338|[I]:running
+adc raw:  815, temp_IC:   42
+Total:129972; Free:68744;
+10-28 18:58:21.005|IsAutoSwitchON|3388|[I]:not ON
+10-28 18:58:21.005|TimeCheckAutoUpdate|3401|[I]:auto switch off
+10-28 18:58:21.326|ConnectDispatchFunc|83|[I]:running
+10-28 18:58:22.455|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:58:22.457|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:58:23.745|ConnectCreateMqttMsgPayload|1485|[I]:traceID:GhMhPkPmSnSqVqXtYv1w3z4B6C7EaFcI
+10-28 18:58:23.747|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+10-28 18:58:23.748|ConnectCloudSendSystemMsg|816|[I]:pub SYS_MGR_SYNC_TIME_REQ:0
+10-28 18:58:23.749|LocalCmdProcess|966|[I]:mqtt pub
+10-28 18:58:23.761|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+10-28 18:58:23.810|MqttMessageArrived|1387|[I]:recv data:226
+10-28 18:58:24.512|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:58:31.343|ConnectDispatchFunc|83|[I]:running
+10-28 18:58:34.414|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:58:41.345|ConnectDispatchFunc|83|[I]:running
+10-28 18:58:44.314|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:58:51.345|ConnectDispatchFunc|83|[I]:running
+10-28 18:58:54.214|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:59:01.346|ConnectDispatchFunc|83|[I]:running
+10-28 18:59:04.114|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:59:11.346|ConnectDispatchFunc|83|[I]:running
+10-28 18:59:14.014|ConnectMsgProcessFunc|2338|[I]:running
+adc raw:  815, temp_IC:   42
+Total:129972; Free:68832;
+10-28 18:59:21.346|ConnectDispatchFunc|83|[I]:running
+10-28 18:59:22.465|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 18:59:22.477|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 18:59:23.908|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:59:31.346|ConnectDispatchFunc|83|[I]:running
+adc raw:  817, temp_IC:   43
+Total:129972; Free:68832;
+10-28 18:59:33.819|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:59:41.346|ConnectDispatchFunc|83|[I]:running
+10-28 18:59:43.719|ConnectMsgProcessFunc|2338|[I]:running
+10-28 18:59:51.346|ConnectDispatchFunc|83|[I]:running
+10-28 18:59:53.619|ConnectMsgProcessFunc|2338|[I]:running
+10-28 19:00:01.346|ConnectDispatchFunc|83|[I]:running
+10-28 19:00:03.519|ConnectMsgProcessFunc|2338|[I]:running
+10-28 19:00:11.346|ConnectDispatchFunc|83|[I]:running
+10-28 19:00:13.419|ConnectMsgProcessFunc|2338|[I]:running
+10-28 19:00:21.346|ConnectDispatchFunc|83|[I]:running
+10-28 19:00:22.465|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 19:00:22.477|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 19:00:23.318|ConnectMsgProcessFunc|2338|[I]:running
+10-28 19:00:31.349|ConnectDispatchFunc|83|[I]:running
+adc raw:  817, temp_IC:   43
+Total:129972; Free:68744;
+10-28 19:00:33.219|ConnectMsgProcessFunc|2338|[I]:running
+10-28 19:00:41.349|ConnectDispatchFunc|83|[I]:running
+10-28 19:00:43.119|ConnectMsgProcessFunc|2338|[I]:running
+10-28 19:00:51.349|ConnectDispatchFunc|83|[I]:running
+10-28 19:00:53.019|ConnectMsgProcessFunc|2338|[I]:running
+10-28 19:01:01.350|ConnectDispatchFunc|83|[I]:running
+10-28 19:01:02.919|ConnectMsgProcessFunc|2338|[I]:running
+10-28 19:01:11.350|ConnectDispatchFunc|83|[I]:running
+10-28 19:01:12.829|ConnectMsgProcessFunc|2338|[I]:running
+10-28 19:01:21.350|ConnectDispatchFunc|83|[I]:running
+10-28 19:01:22.465|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 19:01:22.471|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+10-28 19:01:22.722|ConnectMsgProcessFunc|2338|[I]:running
+10-28 19:01:31.351|ConnectDispatchFunc|83|[I]:running
+adc raw:  813, temp_IC:   41
+Total:129972; Free:68744;
+10-28 19:01:32.623|ConnectMsgProcessFunc|2338|[I]:running
+10-28 19:01:41.351|ConnectDispatchFunc|83|[I]:running
+10-28 19:01:42.523|ConnectMsgProcessFunc|2338|[I]:running
+10-28 19:01:51.351|ConnectDispatchFunc|83|[I]:running
+10-28 19:01:52.423|ConnectMsgProcessFunc|2338|[I]:running
+10-28 19:02:01.352|ConnectDispatchFunc|83|[I]:running
+10-28 19:02:02.323|ConnectMsgProcessFunc|2338|[I]:running
+10-28 19:02:11.352|ConnectDispatchFunc|83|[I]:running
+10-28 19:02:12.223|ConnectMsgProcessFunc|2338|[I]:running
+10-28 19:02:21.352|ConnectDispatchFunc|83|[I]:running
+10-28 19:02:22.123|ConnectMsgProcessFunc|2338|[I]:running
+10-28 19:02:22.465|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+10-28 19:02:22.482|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
