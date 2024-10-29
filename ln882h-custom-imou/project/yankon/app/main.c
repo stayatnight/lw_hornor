@@ -31,32 +31,20 @@
 #include"myKeyboard.h"
 #include "ln_drv_pwm.h"
 #include"slData.h"
-static void pwm_test ()
+#include"flash.h"
+static void flash_test ()
 {
-   uint32_t pwm_duty = 0;
-  /****************** 1. 系统初始化 ***********************/
-SetSysClock();
-log_init();   
-LOG(LOG_LVL_INFO,"ln882H init! \n");
-ln_show_reg_init();
-
-/****************** 2. 外设配置 ***********************/
-pwm_init(10000,20,PWM_CHA_0,GPIO_B,GPIO_PIN_5);     //初始化PWM,设置频率为10K,占空比为20%
-pwm_init(10000,20,PWM_CHA_1,GPIO_B,GPIO_PIN_6);     //初始化PWM
-pwm_init(10000,20,PWM_CHA_2,GPIO_B,GPIO_PIN_7);     //初始化PWM
-pwm_start(PWM_CHA_0);  
-pwm_start(PWM_CHA_1);
-pwm_start(PWM_CHA_2);                             //开始产生PWM
+    uint8_t *test_data = {"1234567890abcdef"};
+    //uint8_t *temp={""}; 写法错误
+    
+    
+    uint32_t len_test_data=strlen(test_data)+1;
+    uint8_t temp[len_test_data];
+    myhal_flash_write(MAC_FLASH_ADDR,test_data,len_test_data);
+    myhal_flash_read(MAC_FLASH_ADDR, temp,len_test_data);
 while(1)
 {
-    pwm_duty ++;
-      LOG(LOG_LVL_INFO,"Duty = %d\n",pwm_duty);
-    if(pwm_duty > 100) pwm_duty = 0;
-    
-    pwm_set_duty(pwm_duty,PWM_CHA_0);               //配置占空比
-    pwm_set_duty(pwm_duty,PWM_CHA_1); 
-    pwm_set_duty(pwm_duty,PWM_CHA_2); 
-    
+    LOG(LOG_LVL_INFO,"temp:%s\r\n",(const char*)temp);
     ln_delay_ms(100);
 }
 }
@@ -84,7 +72,6 @@ int main (int argc, char* argv[])
     //4.cm backtrace
     cm_backtrace_init("combo_mcu_basic_example", "hw", "sw");
     LOG(LOG_LVL_INFO, "------  combo_mcu_basic_example  ------\r\n");
-
    // 5. init NVDS&KV
     if (NVDS_ERR_OK != ln_nvds_init(NVDS_SPACE_OFFSET)) {
         LOG(LOG_LVL_ERROR, "NVDS init filed!\r\n");

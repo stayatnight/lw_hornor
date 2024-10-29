@@ -14,34 +14,19 @@
 					"label": "按钮回调函数"
 				},
 				{
-					"line": 610,
-					"column": 0,
-					"label": "灯光主循环"
-				},
-				{
-					"line": 613,
+					"line": 643,
 					"column": 2,
 					"label": "lamp task"
 				},
 				{
-					"line": 628,
+					"line": 670,
 					"column": 5,
 					"label": "key task"
 				},
 				{
-					"line": 697,
+					"line": 739,
 					"column": 0,
 					"label": "线程合计"
-				}
-			]
-		},
-		{
-			"path": "ln882h-custom-imou/project/yankon/app/main.c",
-			"bookmarks": [
-				{
-					"line": 48,
-					"column": 24,
-					"label": "main function"
 				}
 			]
 		},
@@ -79,7 +64,7 @@
 					"label": "g_LIGHT"
 				},
 				{
-					"line": 574,
+					"line": 601,
 					"column": 2,
 					"label": "设备回调函数"
 				}

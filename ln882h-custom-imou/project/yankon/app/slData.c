@@ -19,6 +19,9 @@ extern "C" {
 #include "slData.h"
 #include "myCrc.h"
 #include "magiclink.h"
+#include "utils/debug/log.h"
+#include"string.h"
+#include"flash.h"
 //#include "sys_api.h"
 //#include "semphr.h"
 /******************************************************************************
@@ -151,16 +154,16 @@ int rlDataReadFctData(void)
     int ret = 0;
     uint16_t crc = 0;
 
-    myHalFlashRead(RL_FCT_DATA_FLASH_ADDR, (uint8_t *)&g_stRlData.fctData, sizeof(stRlFctData_t));
+   myhal_flash_read(RL_FCT_DATA_FLASH_ADDR, (uint8_t *)&g_stRlData.fctData, sizeof(stRlFctData_t));
     crc = myCalcCRC((uint8_t*)&g_stRlData.fctData, sizeof(stRlFctData_t)-2);
     if(crc != g_stRlData.fctData.crc) {
-        my_hal_log_warning("\r\nFlash FCT Data crc failure\r\n");
+        LOG(LOG_LVL_INFO,"\r\nFlash FCT Data crc failure\r\n");
         g_stRlData.fctData.fctMode = 0;
         g_stRlData.fctData.fctOk = 0;
         memset(g_stRlData.fctData.sn, 0, 32);
-        myHalWifiGetMacAddr(g_stRlData.fctData.sn, 32);
+     //   myHalWifiGetMacAddr(g_stRlData.fctData.sn, 32);
         rlDataWriteFctData();
-        my_hal_log_info("\r\nFlash FCT Data factory reset\r\n");
+        LOG(LOG_LVL_INFO,"\r\nFlash FCT Data factory reset\r\n");
         ret = -1;
     }
     return ret;
@@ -180,10 +183,10 @@ int rlDataWriteFctData(void)
     int ret = 0;
 
     g_stRlData.fctData.crc = myCalcCRC((uint8_t*)&g_stRlData.fctData, sizeof(stRlFctData_t)-2);
-    myHalFlashErase(RL_FCT_DATA_FLASH_ADDR);
-    ret = myHalFlashWrite(RL_FCT_DATA_FLASH_ADDR, (uint8_t*)&g_stRlData.fctData, sizeof(stRlFctData_t));
+    myhal_flash_erase(RL_FCT_DATA_FLASH_ADDR);
+    ret = myhal_flash_write(RL_FCT_DATA_FLASH_ADDR, (uint8_t*)&g_stRlData.fctData, sizeof(stRlFctData_t));
     if (ret != 0) {
-        my_hal_log_error("rl data write fct failed %d\r\n", ret);
+        LOG(LOG_LVL_INFO,"rl data write fct failed %d\r\n", ret);
     }
     return ret;
 }
@@ -201,29 +204,29 @@ int rlDataReadConfigData(void)
 {
     uint16_t crc = 0;
 
-    myHalFlashRead(RL_CFG_DATA_FLASH_ADDR, (uint8_t *)&g_stRlData.saveData, sizeof(stRlSaveData_t));
+    myhal_flash_read(RL_CFG_DATA_FLASH_ADDR, (uint8_t *)&g_stRlData.saveData, sizeof(stRlSaveData_t));
     crc = myCalcCRC((uint8_t*)&g_stRlData.saveData, sizeof(stRlSaveData_t)-2);
     if(crc != g_stRlData.saveData.crc) {
-        my_hal_log_warning("\r\nFlash config data crc failure\r\n");
-        myHalFlashRead(RL_CFG_DATA_FLASH_ADDR_BACKUP, (uint8_t *)&g_stRlData.saveData, sizeof(stRlSaveData_t));
+        LOG(LOG_LVL_INFO,"\r\nFlash config data crc failure\r\n");
+        myhal_flash_read(RL_CFG_DATA_FLASH_ADDR_BACKUP, (uint8_t *)&g_stRlData.saveData, sizeof(stRlSaveData_t));
         crc = myCalcCRC((uint8_t*)&g_stRlData.saveData, sizeof(stRlSaveData_t)-2);
         if (crc != g_stRlData.saveData.crc) {
-            my_hal_log_warning("\r\nFlash Config Data backup Crc Failure\r\n");
+            LOG(LOG_LVL_INFO,"\r\nFlash Config Data backup Crc Failure\r\n");
             rlDataRestoreFactory();  //恢复出厂的配置数据
         }
         else {
-            myHalFlashErase(RL_CFG_DATA_FLASH_ADDR);
-            myHalFlashWrite(RL_CFG_DATA_FLASH_ADDR, (uint8_t*)&g_stRlData.saveData, sizeof(stRlSaveData_t));
+            myhal_flash_erase(RL_CFG_DATA_FLASH_ADDR);
+            myhal_flash_write(RL_CFG_DATA_FLASH_ADDR, (uint8_t*)&g_stRlData.saveData, sizeof(stRlSaveData_t));
         }
     }
     else {
-        myHalFlashRead(RL_CFG_DATA_FLASH_ADDR_BACKUP, (uint8_t *)&g_stRlData.saveData, sizeof(stRlSaveData_t));
+        myhal_flash_read(RL_CFG_DATA_FLASH_ADDR_BACKUP, (uint8_t *)&g_stRlData.saveData, sizeof(stRlSaveData_t));
         crc = myCalcCRC((uint8_t*)&g_stRlData.saveData, sizeof(stRlSaveData_t)-2);
         if (crc != g_stRlData.saveData.crc) {
-            my_hal_log_warning("\r\nFlash config data backup crc failure\r\n");
-            myHalFlashRead(RL_CFG_DATA_FLASH_ADDR, (uint8_t *)&g_stRlData.saveData, sizeof(stRlSaveData_t));
-            myHalFlashErase(RL_CFG_DATA_FLASH_ADDR_BACKUP);
-            myHalFlashWrite(RL_CFG_DATA_FLASH_ADDR_BACKUP, (uint8_t*)&g_stRlData.saveData, sizeof(stRlSaveData_t));
+            LOG(LOG_LVL_INFO,"\r\nFlash config data backup crc failure\r\n");
+            myhal_flash_read(RL_CFG_DATA_FLASH_ADDR, (uint8_t *)&g_stRlData.saveData, sizeof(stRlSaveData_t));
+            myhal_flash_erase(RL_CFG_DATA_FLASH_ADDR_BACKUP);
+            myhal_flash_write(RL_CFG_DATA_FLASH_ADDR_BACKUP, (uint8_t*)&g_stRlData.saveData, sizeof(stRlSaveData_t));
         }
     }
     return 0;
@@ -241,11 +244,11 @@ int rlDataReadConfigData(void)
 int rlDataWriteConfigData(void)
 {
     g_stRlData.saveData.crc = myCalcCRC((uint8_t*)&g_stRlData.saveData, sizeof(stRlSaveData_t)-2);
-    myHalFlashErase(RL_CFG_DATA_FLASH_ADDR);
-    myHalFlashWrite(RL_CFG_DATA_FLASH_ADDR, (uint8_t*)&g_stRlData.saveData, sizeof(stRlSaveData_t));
-    myHalFlashErase(RL_CFG_DATA_FLASH_ADDR_BACKUP);
-    myHalFlashWrite(RL_CFG_DATA_FLASH_ADDR_BACKUP, (uint8_t*)&g_stRlData.saveData, sizeof(stRlSaveData_t));
-    my_hal_log_debug("Flash Config Data Write\r\n");
+    myhal_flash_erase(RL_CFG_DATA_FLASH_ADDR);
+    myhal_flash_write(RL_CFG_DATA_FLASH_ADDR, (uint8_t*)&g_stRlData.saveData, sizeof(stRlSaveData_t));
+    myhal_flash_erase(RL_CFG_DATA_FLASH_ADDR_BACKUP);
+    myhal_flash_write(RL_CFG_DATA_FLASH_ADDR_BACKUP, (uint8_t*)&g_stRlData.saveData, sizeof(stRlSaveData_t));
+    LOG(LOG_LVL_INFO,"Flash Config Data Write\r\n");
     return 0;
 }
 
@@ -272,7 +275,7 @@ int rlDataRestoreFactory(void)
 #endif
     rlDataWriteConfigData();
 
-    my_hal_log_info("Restore Factory End.\r\n");
+    LOG(LOG_LVL_INFO,"Restore Factory End.\r\n");
     return 0;
 }
 
@@ -501,11 +504,11 @@ void rlDataShowVersion(void)
 {
     char temp[32] = {0};
     MagicLinkGetSDKVersion(temp, 32);
-    my_hal_log_raw("\r\n*********************** Module Info *************************\r\n");
-    my_hal_log_raw("PID:XXXX name %s firmware version:%s\r\n", g_stRlData.saveData.chDevName, RL_FIRMWARE_VER);
-    my_hal_log_raw("release: %s %s\r\n", __DATE__, __TIME__);
-    my_hal_log_raw("magiclink Version: %s\r\n", temp);
-    my_hal_log_raw("*************************************************************\r\n");
+    LOG(LOG_LVL_INFO,"\r\n*********************** Module Info *************************\r\n");
+    LOG(LOG_LVL_INFO,"PID:XXXX name %s firmware version:%s\r\n", g_stRlData.saveData.chDevName, RL_FIRMWARE_VER);
+    LOG(LOG_LVL_INFO,"release: %s %s\r\n", __DATE__, __TIME__);
+    LOG(LOG_LVL_INFO,"magiclink Version: %s\r\n", temp);
+    LOG(LOG_LVL_INFO,"*************************************************************\r\n");
 }
 
 /******************************************************************************
@@ -525,17 +528,17 @@ int rlDataInit(void)
     rlFlagSetMutex = xSemaphoreCreateMutex();
 
     if (rlFlagSetMutex == NULL) {
-    //    my_hal_log_error("rlFlagSetMutex create failed\r\n");
+        LOG(LOG_LVL_INFO,"rlFlagSetMutex create failed\r\n");
         while (1) {
             ;
         }
     }
 
-    // rlDataReadFctData();
+     rlDataReadFctData();
 
-    // rlDataReadConfigData();
+     rlDataReadConfigData();
 
-    // rlDataShowVersion();
+     rlDataShowVersion();
 
     #if (APP_DEV_TYPE_USED == APP_DEV_TYPE_LAMP_NIGHT || APP_DEV_TYPE_USED  == APP_DEV_TYPE_LAMP_NIGHT_PTJX)
     pLiveData->ucLightMode = 100;

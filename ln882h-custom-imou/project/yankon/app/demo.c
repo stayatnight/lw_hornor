@@ -142,7 +142,7 @@ static int GetDevSubDevTypeFunc(void **data, unsigned int *len)
 
 static int GetDevFirmwareVersionFunc(void **data, unsigned int *len)
 {
-    char *tmp = "1.0.1.202";
+    char *tmp = RL_FIRMWARE_VER;
     unsigned int tmpLen = strlen(tmp) + 1;
     *len = tmpLen - 1;
 
@@ -281,7 +281,34 @@ static struct MagicLinkTestLight {
     .brightness = 3,
     .colorTemperature = 4000
 };
+void MagicLinkDataReport(void) 
+{
+    if (rlFlagGet(RL_FLAG_MAGIC_REPORT_LIGHT_NEED)) {
+        rlFlagSet(RL_FLAG_MAGIC_REPORT_LIGHT_NEED, 0);
+#if defined(APP_DEV_CCT_SUPPORT) && (APP_DEV_CCT_SUPPORT != 0)
+        printf("%d magic report onoff %d bri %d cct %d\r\n", xTaskGetTickCount(), g_light.on, g_light.brightness, g_light.colorTemperature);
+#else
+        printf("%d magic report onoff %d bri %d\r\n", xTaskGetTickCount(), g_light.on, g_light.brightness);
+#endif
+        MagicLinkReportServiceStatus("light");
+    }
 
+#if (APP_DEV_TYPE_USED == APP_DEV_TYPE_LAMP_BEDSIDE)
+    if (rlFlagGet(RL_FLAG_MAGIC_REPORT_BAT_NEED)) {
+        rlFlagSet(RL_FLAG_MAGIC_REPORT_BAT_NEED, 0);
+        printf("%d magic report battery %d\r\n", xTaskGetTickCount(), g_light.batteryPercent);
+        MagicLinkReportServiceStatus("battery");
+    }
+
+    if (rlFlagGet(RL_FLAG_MAGIC_REPORT_POS_NEED)) {
+        rlFlagSet(RL_FLAG_MAGIC_REPORT_POS_NEED, 0);
+        printf("%d magic report position %d\r\n", xTaskGetTickCount(), g_light.position);
+        MagicLinkReportServiceStatus("position");
+    }
+#elif (APP_DEV_TYPE_USED == APP_DEV_TYPE_LAMP_NIGHT || APP_DEV_TYPE_USED  == APP_DEV_TYPE_LAMP_NIGHT_PTJX)
+    MagicLinkReportServiceStatus("nightLight");
+#endif
+}
 static int SetLightSwitchInt(const void *data, unsigned int len)
 {
     g_light.on = *(int *)data;

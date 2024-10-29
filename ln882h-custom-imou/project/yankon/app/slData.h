@@ -23,12 +23,12 @@ extern "C" {
 /******************************************************************************
 *                                Defines                                      *
 ******************************************************************************/
-#define MY_COMPILE_VER                                     "v1.0.7"
+#define MY_COMPILE_VER                                     "1.0.1.202"
 
 #if (APP_DEV_TYPE_USED  == APP_DEV_TYPE_LAMP_READING)
 #define RL_FIRMWARE_VER                                    MY_COMPILE_VER//"v1.1.3"
 #define RL_HARDWARE_VER                                    "v1.0.0"
-#define RL_DEV_NAME_DEF                                    "阳光博荣台灯"
+#define RL_DEV_NAME_DEF                                    "阳光博荣台灯S"
 #define RL_DEV_MODEL                                       "MTSL2010"
 #define RL_SUB_DEV_TYPE                                    "0"
 #define RL_DEV_MCU_VER                                     ""

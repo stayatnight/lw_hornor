@@ -448,6 +448,37 @@ static void WifiConn()
     return;
 }
 
+/******************************************************************************
+ Function    : _lampReportProc
+ Description : reading lamp report proc
+ Note        : (none)
+ Input Para  : (none)
+ Output Para : (none)
+ Return      : (none)
+ Other       : (none)
+******************************************************************************/
+void _lampReportProc(void) 
+{
+    static uint32_t free_delay = 0;
+
+    free_delay = (free_delay > 10) ? (free_delay - 10) : 0;
+    if (free_delay > 0) {
+        return;
+    }
+
+    if ( 0 != rlFlagGet(RL_FLAG_MAGIC_REPORT_NEED)) {
+        rlFlagSet(RL_FLAG_MAGIC_REPORT_NEED, 0);
+        free_delay = RL_LAMP_REPORT_INTERVAL;
+#if defined(APP_MAGIC_LINK_USE) && (APP_MAGIC_LINK_USE != 0)
+        if (g_stRlData.fctData.fctMode == 0) {
+            if (0 != rlFlagGet(RL_FLAG_SYS_DEV_ONLINE)) {
+                extern void MagicLinkDataReport(void);
+                MagicLinkDataReport();
+            } 
+        }
+#endif
+    }
+}
 static uint16_t _lampSightBri2PwmBri(uint16_t sightBri)
 {
     float pwmBri = 0.0f;
@@ -608,15 +639,26 @@ static int rlTaskLampInit(void* arg)
 }
 static void usr_app_light_task_entry(void *params)
 {
- // rlFlagSet(RL_FLAG_TASK_LAMP_RUNNING, 1); 
- int init_ret = 0;    
-    if(init_ret = rlTaskLampInit(params)!=0) {
+  rlFlagSet(RL_FLAG_TASK_LAMP_RUNNING, 1);   
+    if(0>rlTaskLampInit(params)) {
         LOG(LOG_LVL_INFO,"LAMP INIT FAIL ");
+        rlFlagSet(RL_FLAG_TASK_FCT_RUNNING, 0);
     }
    
-    while (init_ret==0) {      
+    while (rlFlagGet(RL_FLAG_TASK_LAMP_RUNNING)) {      
         vTaskDelay(10);
         myLampLoop();
+        //上报
+        _lampReportProc();
+        //重置
+        if (rlFlagGet(RL_FLAG_SYS_FACTORY_RESET)) {
+    //    _lampFactoryReset();
+        }
+        //写入
+        if (rlFlagGet(RL_FLAG_SYS_CFG_DATA_SAVE)) {
+        rlFlagSet(RL_FLAG_SYS_CFG_DATA_SAVE, 0);
+        rlDataWriteConfigData();
+        }
     }
         vTaskDelete(NULL);
 }
