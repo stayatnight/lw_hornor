@@ -17,3 +17,10 @@ int LampBriPercentCtrl(int ucPercent, int ulPeroidMs)
    // pLampParam->uwBri = APP_RANGE(pLampParam->uwBri, LIGHT_BRIGHT_MIN, LIGHT_BRIGHT_MAX);
     return myLampBriCtrl(gucLampId, ulPeroidMs, pLampParam->uwBri);
 }
+int lamp_flash_count(void)
+{
+    myLampParam_t *pLampParam = &s_stCurLampParam;
+    myLampFlashCtrl(gucLampId,500,1000,3,NULL,0);
+    LOG(LOG_LVL_INFO,"is flashing");
+return 0;
+}
