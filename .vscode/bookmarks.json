@@ -4,29 +4,29 @@
 			"path": "ln882h-custom-imou/project/yankon/app/usr_app.c",
 			"bookmarks": [
 				{
-					"line": 375,
+					"line": 387,
 					"column": 0,
 					"label": "长按回调函数"
 				},
 				{
-					"line": 400,
+					"line": 412,
 					"column": 1,
 					"label": "按钮回调函数"
 				},
 				{
-					"line": 643,
-					"column": 2,
-					"label": "lamp task"
-				},
-				{
-					"line": 670,
-					"column": 5,
-					"label": "key task"
-				},
-				{
-					"line": 739,
+					"line": 634,
 					"column": 0,
-					"label": "线程合计"
+					"label": "灯光初始化"
+				},
+				{
+					"line": 646,
+					"column": 0,
+					"label": "重置计时"
+				},
+				{
+					"line": 661,
+					"column": 3,
+					"label": "灯光线程"
 				}
 			]
 		},
@@ -54,17 +54,12 @@
 			"path": "ln882h-custom-imou/project/yankon/app/demo.c",
 			"bookmarks": [
 				{
-					"line": 144,
-					"column": 2,
-					"label": "ota版本号"
-				},
-				{
-					"line": 267,
+					"line": 269,
 					"column": 0,
 					"label": "g_LIGHT"
 				},
 				{
-					"line": 601,
+					"line": 603,
 					"column": 2,
 					"label": "设备回调函数"
 				}

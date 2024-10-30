@@ -138,7 +138,7 @@ static uint32_t djb_hash_hexdata(const char *input, uint32_t len)
     }
     return hash;
 }
-
+static xTimerHandle s_resetWindowTimerHandle, s_lampctrlTimer;
 static void chip_mac_gen(void)
 {
     hal_flash_read_unique_id(g_chip_uid);
@@ -174,7 +174,7 @@ int8_t rlLampBriCtrlNextClass(uint32_t ulPeroidMs)
     uwNewBri = APP_RANGE(uwNewBri, LIGHT_BRIGHT_MIN, LIGHT_BRIGHT_MAX);
     if (uwNewBri != pLampParam->uwBri) {
         pLampParam->uwBri = uwNewBri;
-       // my_hal_log_info("rl lamp bright ctrl next %d\r\n", pLampParam->uwBri);
+       LOG(LOG_LVL_INFO,"rl lamp bright ctrl next %d\r\n", pLampParam->uwBri);
         ret = myLampBriCtrl(gucLampId, ulPeroidMs, pLampParam->uwBri);
     }
     return ret;
@@ -202,7 +202,6 @@ static void wifi_scan_complete_cb(void * arg)
         LOG(LOG_LVL_INFO, "BSSID:[%02X:%02X:%02X:%02X:%02X:%02X],SSID:\"%s\"\r\n", \
                            mac[0], mac[1], mac[2], mac[3], mac[4], mac[5], ap_info->ssid);
     }
-
     wifi_manager_ap_list_update_enable(LN_TRUE);
 }
 /************************************************KEY TASK************************************/
@@ -248,7 +247,20 @@ static void wifi_init_sta(void)
 
     wifi_sta_connect(&connect, &scan_cfg);
 }
-
+/******************************************************************************
+ Function    : _lampFactoryResetWindowTimeoutHandle
+ Description : reading lamp factory reset window timeout handle
+ Note        : (none)
+ Input Para  : (none)
+ Output Para : (none)
+ Return      : (none)
+ Other       : (none)
+******************************************************************************/
+void _lampFactoryResetWindowTimeoutHandle(xTimerHandle pxTimer) 
+{
+    LOG(LOG_LVL_INFO,"close factory reset window\r\n");
+    rlFlagSet(RL_FLAG_SYS_FACTORY_WINDOW, 0);
+}
 static void ap_startup_cb(void * arg)
 {
     netdev_set_state(NETIF_IDX_AP, NETDEV_UP);
@@ -335,10 +347,10 @@ static void _normalKeyShortReleaseCb(uint32_t keyVal, uint32_t flag)
     }
 }
 static void _normalKeyLongPressCb(uint32_t keyVal, uint32_t flag)
-{
+{    
     switch (keyVal) {
     case LIGHT_KEY_VAL_SWITCH:
-   //     printf("key switch lp %d tick %lu\r\n", flag, xTaskGetTickCount());
+        LOG(LOG_LVL_INFO,"key switch lp %d tick %lu\r\n", flag, xTaskGetTickCount());
         #if (APP_DEV_TYPE_USED == APP_DEV_TYPE_LAMP_NIGHT  || APP_DEV_TYPE_USED  == APP_DEV_TYPE_LAMP_NIGHT_PTJX)
         if (flag == 12) {
            rlLampBlinkCtrl(3, 1000, 1, RL_LAMP_BLINK_ARG_SYS_FACTORY_RESET); 
@@ -348,12 +360,12 @@ static void _normalKeyLongPressCb(uint32_t keyVal, uint32_t flag)
             if (flag == 0) {
                 rlFlagRevert(RL_FLAG_LAMP_BRI_DIRECTION);
             }
-         //   LOG(LOG_LVL_INFO,"long press\n");
+            LOG(LOG_LVL_INFO,"long press\n");
             rlLampBriCtrlNextClass(200);
         }
         else if (flag == 25 && rlFlagGet(RL_FLAG_SYS_FACTORY_WINDOW)){
             rlFlagSet(RL_FLAG_SYS_FACTORY_RESET, 1);
-            //my_hal_log_info("manual factory reset\r\n");
+            LOG(LOG_LVL_INFO,"manual factory reset\r\n");
         }
         #endif
         break;
@@ -373,8 +385,8 @@ static void _normalKeyLongReleaseCb(uint32_t keyVal, uint32_t flag)
         if (0 == rlLampGetOnoff() && flag < 25) {
 //TODO:一开机，这个长按就触发了很离谱
  
-          //  LOG(LOG_LVL_INFO,"long press  is %d\n",pLiveData->uwAdjDuration);
-            //rlLampSwitchRevert(pLiveData->uwAdjDuration);
+        
+            rlLampSwitchRevert(pLiveData->uwAdjDuration);
         }
         break;
     default:
@@ -566,8 +578,6 @@ static void _lampPwmOutput(uint32_t ulPwm1, uint32_t ulPwm2, uint32_t ulPwm3, ui
     }
     if (ulPwm2 != lastPwm2) {
         lastPwm2 = ulPwm2;
-//      my_hal_log_debug("pwm2 out %d %d\r\n", ulPwm1, ulPwm2);
-       // myHalPwmOutput(RL_PWM_C, ulPwm2);
 #if defined (PRINT_PWM) && (PRINT_PWM==1)
        LOG(LOG_LVL_INFO, "pwm2 out %d\r\n", ulPwm2);
 #endif
@@ -634,6 +644,11 @@ static int rlTaskLampInit(void* arg)
                      _lampColor2Pwm, 
                      getMyDimmingCurve(LIGHT_PWM_CURVE), 
                      NULL,NULL);
+    
+    //30s后关闭长按重置
+    s_resetWindowTimerHandle = xTimerCreate((const char*)"reset", (30000 / portTICK_RATE_MS), 0, NULL, _lampFactoryResetWindowTimeoutHandle);
+    xTimerStart(s_resetWindowTimerHandle, 0);
+
     LOG(LOG_LVL_INFO,"LAMP INIT OK ");
     return 0;
 }
@@ -670,7 +685,7 @@ static void key_app_task_entry(void *params)
         rlFlagSet(RL_FLAG_TASK_KEY_RUNNING, 0);
     }
 
-    while(RL_FLAG_TASK_KEY_RUNNING) {
+    while(rlFlagGet(RL_FLAG_TASK_KEY_RUNNING)) {
         vTaskDelay(10);
         myKeyboardLoop();
     }

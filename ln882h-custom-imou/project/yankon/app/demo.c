@@ -142,7 +142,9 @@ static int GetDevSubDevTypeFunc(void **data, unsigned int *len)
 
 static int GetDevFirmwareVersionFunc(void **data, unsigned int *len)
 {
-    char *tmp = RL_FIRMWARE_VER;
+    char *tmp = "1.0.1.202";
+    //不能被声明两次
+  //  char *tmp = RL_FIRMWARE_VER;
     unsigned int tmpLen = strlen(tmp) + 1;
     *len = tmpLen - 1;
 
@@ -278,7 +280,7 @@ static struct MagicLinkTestLight {
     .color = "red",
     .lightMode = 1,
     .volume = 2,
-    .brightness = 3,
+    .brightness = 100,
     .colorTemperature = 4000
 };
 void MagicLinkDataReport(void) 

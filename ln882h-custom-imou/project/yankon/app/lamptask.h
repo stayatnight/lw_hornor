@@ -55,6 +55,8 @@ int LampBriPercentCtrl(int ucPercent, int ulPeroidMs);
 #define LIGHT_BRIGHT_MODE_WRITE_VAL                        (50)
 //MCU版本
 #define LN_MCU_VERSION                                     ""
+
+
 //PWM打印
 #define PRINT_PWM   0
 
