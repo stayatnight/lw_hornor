@@ -142,7 +142,7 @@ static int GetDevSubDevTypeFunc(void **data, unsigned int *len)
 
 static int GetDevFirmwareVersionFunc(void **data, unsigned int *len)
 {
-    char *tmp = "1.0.1.202";
+    char *tmp = "1.0.1.203";
     unsigned int tmpLen = strlen(tmp) + 1;
     *len = tmpLen - 1;
 
