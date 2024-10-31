@@ -10,7 +10,7 @@
 #define LIGHT_COLOR_CCT_MIN                                (3000)
 #define LIGHT_COLOR_CCT_MAX                                (5700)
 //渐变时间
-#define DIMMING_TRANSIT_TIME                               (1000) //ms
+#define DIMMING_TRANSIT_TIME                               (800) //ms
 #if (APP_DEV_TYPE_USED == APP_DEV_TYPE_LAMP_READING) //reading
 #define LIGHT_CCT_ENABLE                                   (1)
 #define LIGHT_PWM_FREQ                                     (100000)
@@ -58,5 +58,6 @@ int lamp_flash_count(void);
 #define LN_MCU_VERSION                                     ""
 
 //PWM打印
-#define PRINT_PWM   0
+#define PRINT_PWM   1 
+#define PRINT_BON   1
 

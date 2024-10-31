@@ -104,7 +104,6 @@ static int do_pvtcmd(cmd_tbl_t *cmd, int argc, const char *line)
     if (at_cmd_echo_en) {
         ln_ty_ate_printf("%s\r\n", str);
     }
-
     if(0 != wifi_private_command((char *)_line)) {
         LOG(LOG_LVL_ERROR, "send pvtcmd failed!\r\n");
     }

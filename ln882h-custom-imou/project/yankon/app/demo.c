@@ -142,7 +142,7 @@ static int GetDevSubDevTypeFunc(void **data, unsigned int *len)
 
 static int GetDevFirmwareVersionFunc(void **data, unsigned int *len)
 {
-    char *tmp = "1.0.1.202";
+    char *tmp = "RL_FIRMWARE_VER";
     //不能被声明两次
   //  char *tmp = RL_FIRMWARE_VER;
     unsigned int tmpLen = strlen(tmp) + 1;
@@ -632,7 +632,6 @@ static int GetSvcProperty(const char *service, const char *property,
             printf("[%s|%s] no get func\r\n", service, property);
             return -1;
         }
-
         return g_testCtrlFunc[idx].getFunc(outBuf, outLen);
     }
 

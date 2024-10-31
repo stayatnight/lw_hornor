@@ -582,7 +582,6 @@ static void _lampPwmOutput(uint32_t ulPwm1, uint32_t ulPwm2, uint32_t ulPwm3, ui
        LOG(LOG_LVL_INFO, "pwm2 out %d\r\n", ulPwm2);
 #endif
         pwm_set_duty(ulPwm2,PWM_CHA_2);
-  
     }
 }
 
@@ -593,7 +592,6 @@ static void WifiReconn()
     //    printf("no sta info\r\n");
         return;
     }
-
     WifiConn();
     return;
 }
