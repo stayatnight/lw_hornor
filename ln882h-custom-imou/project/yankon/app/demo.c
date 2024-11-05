@@ -29,7 +29,7 @@
 
 static int GetDevSnFunc(void **data, unsigned int *len)
 {
-    char *tmp = "A2NM011309000573"; // SN需要和最终打印到设备上的SN保持一致，业界一般使用大写，建议使用大写
+    char *tmp = "A2NM011309000574"; // SN需要和最终打印到设备上的SN保持一致，业界一般使用大写，建议使用大写
     unsigned int tmpLen = strlen(tmp) + 1; // 实际存储字符串的空间需要使用包含结束符的长度
     *len = tmpLen - 1; // 返回的长度为字符串实际的长度，不包含结束符
 

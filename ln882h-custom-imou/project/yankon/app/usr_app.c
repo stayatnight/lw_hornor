@@ -408,7 +408,7 @@ static uint32_t _normalKeyboardKeyStatusGet(uint32_t keyValue)
 static int _rlTaskKeyInit(void) 
 {
 myhal_gpiob_init(GPIO_PIN_3,HAL_IO_MODE_IN_PULLDOWN);
-myKeyboardInit(10, 3, 1000, 200, 500, _rlKeyGetTickMs, _normalKeyboardKeyStatusGet);
+myKeyboardInit(10, 3, 1000, 200, 100, _rlKeyGetTickMs, _normalKeyboardKeyStatusGet);
 myKeyboardRigisterCallback(_normalKeyShortPressCb,
                                 _normalKeyShortReleaseCb,
                                 _normalKeyLongPressCb,

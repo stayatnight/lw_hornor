@@ -6,7 +6,7 @@
 #define PWM_C                                           GPIO_PIN_7
 #define PWM_MAX                                         (100)
 #define LIGHT_BRIGHT_MAX                                   (100)
-#define LIGHT_BRIGHT_MIN                                   (uint16_t)(LIGHT_BRIGHT_MAX * 1.0f / 100.0f + 0.5f)
+#define LIGHT_BRIGHT_MIN                                   (uint16_t)(LIGHT_BRIGHT_MAX * 5.0f / 100.0f + 0.5f)
 #define LIGHT_COLOR_CCT_MIN                                (3000)
 #define LIGHT_COLOR_CCT_MAX                                (5700)
 //渐变时间
