@@ -142,7 +142,7 @@ static int GetDevSubDevTypeFunc(void **data, unsigned int *len)
 
 static int GetDevFirmwareVersionFunc(void **data, unsigned int *len)
 {
-    char *tmp = "RL_FIRMWARE_VER";
+    char *tmp = RL_FIRMWARE_VER;
     //不能被声明两次
   //  char *tmp = RL_FIRMWARE_VER;
     unsigned int tmpLen = strlen(tmp) + 1;
