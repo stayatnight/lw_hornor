@@ -59,5 +59,5 @@ int lamp_flash_count(void);
 
 //PWM打印
 #define PRINT_PWM   1 
-#define PRINT_BON   1
+#define PRINT_BON   0
 

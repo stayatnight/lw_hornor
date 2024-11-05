@@ -4,6 +4,7 @@
 #include "utils/debug/log.h"
 #include "ln_test_common.h"
 #include"gpio.h"
+#include"lamptask.h"
 uint32_t data_buf[100];
 uint8_t pin_sta = 0;
 int8_t myhal_gpioa_init(gpio_pin_t pin,hal_mode_t mode)
@@ -108,7 +109,9 @@ if(*status>=HAL_IO_NUM)
 return -1;
 else
 {
-//LOG(LOG_LVL_INFO,"get IO STATUS %d\n",*status);
+#if defined(PRINT_BON) && (PRINT_BON==1)  
+LOG(LOG_LVL_INFO,"get IO STATUS %d\r\n",*status);
+#endif
 return *status;
 }
 }

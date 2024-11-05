@@ -1,67 +1,12 @@
 {
 	"files": [
 		{
-			"path": "ln882h-custom-imou/project/yankon/app/usr_app.c",
+			"path": "ln882h-custom-imou/project/yankon/app/lamptask.h",
 			"bookmarks": [
 				{
-					"line": 322,
-					"column": 0,
-					"label": "长按回调函数"
-				},
-				{
-					"line": 347,
-					"column": 1,
-					"label": "按钮回调函数"
-				},
-				{
-					"line": 569,
-					"column": 0,
-					"label": "灯光初始化"
-				},
-				{
-					"line": 581,
-					"column": 0,
-					"label": "重置计时"
-				},
-				{
-					"line": 594,
-					"column": 3,
-					"label": "灯光线程"
-				}
-			]
-		},
-		{
-			"path": "ln882h-custom-imou/project/yankon/app/gpio.c",
-			"bookmarks": [
-				{
-					"line": 99,
-					"column": 0,
-					"label": "TODO 设置IO状态"
-				}
-			]
-		},
-		{
-			"path": "yankon_docs/需求实现日志/需求实现.md",
-			"bookmarks": [
-				{
-					"line": 41,
-					"column": 0,
-					"label": "需求实现文档"
-				}
-			]
-		},
-		{
-			"path": "ln882h-custom-imou/project/yankon/app/demo.c",
-			"bookmarks": [
-				{
-					"line": 298,
-					"column": 0,
-					"label": "g_LIGHT"
-				},
-				{
-					"line": 632,
-					"column": 2,
-					"label": "设备回调函数"
+					"line": 61,
+					"column": 21,
+					"label": "按钮"
 				}
 			]
 		}

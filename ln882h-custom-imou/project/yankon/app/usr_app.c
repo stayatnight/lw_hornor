@@ -167,14 +167,14 @@ int8_t rlLampBriCtrlNextClass(uint32_t ulPeroidMs)
     uint32_t percent = 0;
     myLampParam_t *pLampParam = &s_stCurLampParam;
     uint8_t ucBriDirection = rlFlagGet(RL_FLAG_LAMP_BRI_DIRECTION);
-
+    LOG(LOG_LVL_INFO,"enter this\r\n");
     percent = LIGHT_BRIGHT_TO_PERCENT(pLampParam->uwBri);
     percent = rlLampGetNextClassVal(ucBriDirection, percent,  k_a_uwBriPercent, sizeof(k_a_uwBriPercent) / sizeof(uint32_t));
     uwNewBri = LIGHT_PERCENT_TO_BRIGHT(percent);
     uwNewBri = APP_RANGE(uwNewBri, LIGHT_BRIGHT_MIN, LIGHT_BRIGHT_MAX);
     if (uwNewBri != pLampParam->uwBri) {
         pLampParam->uwBri = uwNewBri;
-       LOG(LOG_LVL_INFO,"rl lamp bright ctrl next %d\r\n", pLampParam->uwBri);
+         LOG(LOG_LVL_INFO,"rl lamp bright ctrl next %d\r\n", pLampParam->uwBri);
         ret = myLampBriCtrl(gucLampId, ulPeroidMs, pLampParam->uwBri);
     }
     return ret;
@@ -322,7 +322,7 @@ static void _normalKeyShortPressCb(uint32_t keyVal, uint32_t flag)
     case LIGHT_KEY_VAL_SWITCH:
        // my_hal_log_debug("key switch sp %d\r\n", flag);
         if (g_stRlData.fctData.fctMode != 0) {
-          //  Printf("press key switch\r\n");
+            LOG(LOG_LVL_INFO,"press key switch\r\n");
         }
         break;
     default:
@@ -335,7 +335,7 @@ static void _normalKeyShortReleaseCb(uint32_t keyVal, uint32_t flag)
      
     switch (keyVal) {
     case LIGHT_KEY_VAL_SWITCH:
-     //   printf("key switch sr %d\r\n", flag);
+        LOG(LOG_LVL_INFO,"key switch sr %d\r\n", flag);
         if (g_stRlData.fctData.fctMode != 0) {
         LOG(LOG_LVL_INFO,"release key switch\n");
         }
@@ -350,7 +350,9 @@ static void _normalKeyLongPressCb(uint32_t keyVal, uint32_t flag)
 {    
     switch (keyVal) {
     case LIGHT_KEY_VAL_SWITCH:
-        LOG(LOG_LVL_INFO,"key switch lp %d tick %lu\r\n", flag, xTaskGetTickCount());
+        #if defined(PRINT_BON) && (PRINT_BON==1)
+        LOG(LOG_LVL_INFO,"flag is %d tick %lu\r\n", flag, xTaskGetTickCount());
+        #endif
         #if (APP_DEV_TYPE_USED == APP_DEV_TYPE_LAMP_NIGHT  || APP_DEV_TYPE_USED  == APP_DEV_TYPE_LAMP_NIGHT_PTJX)
         if (flag == 12) {
            rlLampBlinkCtrl(3, 1000, 1, RL_LAMP_BLINK_ARG_SYS_FACTORY_RESET); 
@@ -360,6 +362,7 @@ static void _normalKeyLongPressCb(uint32_t keyVal, uint32_t flag)
             if (flag == 0) {
                 rlFlagRevert(RL_FLAG_LAMP_BRI_DIRECTION);
             }
+//NOTE:没有按也触发了这段代码.
             LOG(LOG_LVL_INFO,"long press\n");
             rlLampBriCtrlNextClass(200);
         }
@@ -379,13 +382,11 @@ static void _normalKeyLongReleaseCb(uint32_t keyVal, uint32_t flag)
 
     switch (keyVal) {
     case LIGHT_KEY_VAL_SWITCH:
-   //     my_hal_log_debug("key switch lr %d\r\n" );
+        LOG(LOG_LVL_INFO,"key switch lr\r\n" );
         if (g_stRlData.fctData.fctMode != 0) {
         }
         if (0 == rlLampGetOnoff() && flag < 25) {
-//TODO:一开机，这个长按就触发了很离谱
- 
-        
+//TODO:一开机，这个长按就触发了很离谱        
             rlLampSwitchRevert(pLiveData->uwAdjDuration);
         }
         break;
@@ -402,13 +403,12 @@ static uint32_t _normalKeyboardKeyStatusGet(uint32_t keyValue)
             break;
         }
     }
-    return (uint32_t)!status;
+    return (uint32_t)status;
 }
 static int _rlTaskKeyInit(void) 
 {
-hal_io_status_t status = HAL_IO_LOW;
 myhal_gpiob_init(GPIO_PIN_3,HAL_IO_MODE_IN_PULLDOWN);
-myKeyboardInit(10, 3, 1000, 200, 100, _rlKeyGetTickMs, _normalKeyboardKeyStatusGet);
+myKeyboardInit(10, 3, 1000, 200, 500, _rlKeyGetTickMs, _normalKeyboardKeyStatusGet);
 myKeyboardRigisterCallback(_normalKeyShortPressCb,
                                 _normalKeyShortReleaseCb,
                                 _normalKeyLongPressCb,
@@ -685,20 +685,19 @@ static void key_app_task_entry(void *params)
 
     while(rlFlagGet(RL_FLAG_TASK_KEY_RUNNING)) {
         vTaskDelay(10);
+    
         myKeyboardLoop();
     }
        LOG(LOG_LVL_INFO,"KEY APP TASK END ");
-    vTaskDelete(NULL);
+       vTaskDelete(NULL);
 }
 static void temp_cal_app_task_entry(void *params)
 {
     LN_UNUSED(params);
-
     int8_t cap_comp = 0;
     uint16_t adc_val = 0;
     int16_t curr_adc = 0;
     uint8_t cnt = 0;
-
     if (NVDS_ERR_OK == ln_nvds_get_xtal_comp_val((uint8_t *)&cap_comp)) {
         if ((uint8_t)cap_comp == 0xFF) {
             cap_comp = 0;
@@ -727,7 +726,7 @@ static void temp_cal_app_task_entry(void *params)
 }
 
 void creat_usr_app_task(void)
-{
+{ 
     {
         ln_pm_sleep_mode_set(ACTIVE);
         ln_pm_always_clk_disable_select(CLK_G_I2S | CLK_G_WS2811 | CLK_G_SDIO | CLK_G_AES);

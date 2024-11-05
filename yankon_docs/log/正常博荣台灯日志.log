@@ -1,0 +1,113 @@
+=~=~=~=~=~=~=~=~=~=~=~= MobaXterm log 2024.11.04 21:34:29 =~=~=~=~=~=~=~=~=~=~=~=
+
+== Rtl8710c IoT Platform ==
+Chip VID: 5, Ver: 3
+ROM Version: v3.0
+
+== Boot Loader ==
+Dec 30 2021:16:31:34
+
+Boot Loader <==
+
+== RAM Start ==
+Build @ 17:57:59, Nov 29 2022
+
+$8710c>
+*********************** Module Info *************************
+PID:B524 name  firmware version:v1.1.2
+release: Nov 30 2022 13:38:02
+BOOT Version: BOOT-V1.0.0
+magiclink Version: IoTSDK_1.1.0.308
+current firmware index is 1
+OTA1 Version: OTA1-V1.0.0
+OTA2 Version: OTA2-V1.0.0
+*************************************************************
+[00:00:00-000][appstartTask-92]: 
+app task entry
+[00:00:00-005][_rlTaskKeyInit-217]: task 'key' init ok
+[00:00:00-010][rlTaskLampInit-1017]: create lamp switch 0 max pwm is 9999
+[00:00:00-015][rlTaskLampInit-1023]: task 'lamp' init ok
+MEM enter Minterface 0 [00:00:00-023][rlTaskFctInit-380]: task 'fct' init ok
+ais initializgicLinkSDKRed
+interfacun [132264]e 1 is initi
+00000000alized
+
+I00|MagicLinknitializingSetAttr|358| WIFI ...[I]:succ attr:203
+0000000000|MagicLinkSetAttr|358|[I]:succ attr:204
+0000000000|MagicLinkSetAttr|358|[I]:succ attr:0
+0000000000|MagicLinkSetAttr|358|[I]:succ attr:302
+VER:IoTSDK_1.1.0.308, TM:Nov 26 2022 01:09:55
+
+get dev sn E816563B58A4
+get dev mac E816563B58A4
+get dev name 
+get dev model MTSL2010
+get firmware version v1.1.2
+get hardware version v1.0.0
+get dev name 
+
+LwIP_DHCP: dhcp stop.
+Deinitializing WIFI ...[FAST_CONNECT] Fast connect profile is empty, abort fast connection
+
+WIFI initialized
+
+init_thread(55), Available heap 0x119d0
+WIFI deinitialized
+Initializing WIFI ...
+WIFI initialized
+current status is 100
+MEM Start demo [67056]
+[00:00:11-569][rlLampSwitchRevert-615]: rl lamp switch revert
+[00:00:11-573][_lampStateControlHook-323]: switch changed 1
+[00:00:11-578][_lampStateControlHook-329]: brightness changed 65535
+[00:00:11-584][_lampStateControlHook-335]: cct changed 4350
+[00:00:20-860][rlLampSwitchRevert-615]: rl lamp switch revert
+[00:00:20-864][_lampStateControlHook-323]: switch changed 0
+[00:00:23-029][rlLampSwitchRevert-615]: rl lamp switch revert
+[00:00:23-033][_lampStateControlHook-323]: switch changed 1
+[00:00:24-418][rlLampSwitchRevert-615]: rl lamp switch revert
+[00:00:24-422][_lampStateControlHook-323]: switch changed 0
+[00:00:25-797][rlLampSwitchRevert-615]: rl lamp switch revert
+[00:00:25-801][_lampStateControlHook-323]: switch changed 1
+[00:00:28-166][rlLampBriCtrlNextClass-766]: rl lamp bright ctrl next 58982
+[00:00:28-171][_lampStateControlHook-329]: brightness changed 58982
+[00:00:28-367][rlLampBriCtrlNextClass-766]: rl lamp bright ctrl next 52428
+[00:00:28-372][_lampStateControlHook-329]: brightness changed 52428
+[00:00:28-568][rlLampBriCtrlNextClass-766]: rl lamp bright ctrl next 45875
+[00:00:28-573][_lampStateControlHook-329]: brightness changed 45875
+[00:00:28-769][rlLampBriCtrlNextClass-766]: rl lamp bright ctrl next 39321
+[00:00:28-774][_lampStateControlHook-329]: brightness changed 39321
+[00:00:28-970][rlLampBriCtrlNextClass-766]: rl lamp bright ctrl next 32768
+[00:00:28-975][_lampStateControlHook-329]: brightness changed 32768
+[00:00:29-171][rlLampBriCtrlNextClass-766]: rl lamp bright ctrl next 26214
+[00:00:29-176][_lampStateControlHook-329]: brightness changed 26214
+[00:00:29-372][rlLampBriCtrlNextClass-766]: rl lamp bright ctrl next 19661
+[00:00:29-377][_lampStateControlHook-329]: brightness changed 19661
+[00:00:29-573][rlLampBriCtrlNextClass-766]: rl lamp bright ctrl next 13107
+[00:00:29-578][_lampStateControlHook-329]: brightness changed 13107
+[00:00:29-774][rlLampBriCtrlNextClass-766]: rl lamp bright ctrl next 6554
+[00:00:29-779][_lampStateControlHook-329]: brightness changed 6554
+[00:00:29-975][rlLampBriCtrlNextClass-766]: rl lamp bright ctrl next 655
+[00:00:29-980][_lampStateControlHook-329]: brightness changed 655
+[00:00:30-015][_lampFactoryResetWindowTimeoutHandle-435]: close factory reset window
+[00:00:33-751][rlLampBriCtrlNextClass-766]: rl lamp bright ctrl next 6554
+[00:00:33-756][_lampStateControlHook-329]: brightness changed 6554
+[00:00:33-952][rlLampBriCtrlNextClass-766]: rl lamp bright ctrl next 13107
+[00:00:33-957][_lampStateControlHook-329]: brightness changed 13107
+[00:00:34-153][rlLampBriCtrlNextClass-766]: rl lamp bright ctrl next 19661
+[00:00:34-158][_lampStateControlHook-329]: brightness changed 19661
+[00:00:34-354][rlLampBriCtrlNextClass-766]: rl lamp bright ctrl next 26214
+[00:00:34-359][_lampStateControlHook-329]: brightness changed 26214
+[00:00:34-555][rlLampBriCtrlNextClass-766]: rl lamp bright ctrl next 32768
+[00:00:34-560][_lampStateControlHook-329]: brightness changed 32768
+[00:00:34-756][rlLampBriCtrlNextClass-766]: rl lamp bright ctrl next 39321
+[00:00:34-761][_lampStateControlHook-329]: brightness changed 39321
+[00:00:34-957][rlLampBriCtrlNextClass-766]: rl lamp bright ctrl next 45875
+[00:00:34-962][_lampStateControlHook-329]: brightness changed 45875
+[00:00:35-158][rlLampBriCtrlNextClass-766]: rl lamp bright ctrl next 52428
+[00:00:35-163][_lampStateControlHook-329]: brightness changed 52428
+[00:00:35-359][rlLampBriCtrlNextClass-766]: rl lamp bright ctrl next 58982
+[00:00:35-364][_lampStateControlHook-329]: brightness changed 58982
+[00:00:35-560][rlLampBriCtrlNextClass-766]: rl lamp bright ctrl next 65535
+[00:00:35-565][_lampStateControlHook-329]: brightness changed 65535
+
