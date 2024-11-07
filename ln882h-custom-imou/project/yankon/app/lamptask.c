@@ -1,5 +1,6 @@
 #include"lamptask.h"
 #include "utils/debug/log.h"
+#include "slData.h"
 int LampSwitchCtrl(int status, int ulPeroidMs)
 {
     myLampParam_t *pLampParam = &s_stCurLampParam;
@@ -22,6 +23,9 @@ int lamp_flash_count(void)
 {
     myLampParam_t *pLampParam = &s_stCurLampParam;
     myLampFlashCtrl(gucLampId,500,1000,3,NULL,0);
-    LOG(LOG_LVL_INFO,"is flashing");
-return 0;
+    LOG(LOG_LVL_INFO,"is flashing\r\n");
+    rlFlagSet(RL_FLAG_SYS_FACTORY_RESET,0);
+ //   slDataFactoryReset();
+
+    return 0;
 }

@@ -1,12 +1,37 @@
 {
 	"files": [
 		{
+			"path": "ln882h-custom-imou/project/yankon/app/usr_app.c",
+			"bookmarks": [
+				{
+					"line": 746,
+					"column": 0,
+					"label": "总线程"
+				},
+				{
+					"line": 762,
+					"column": 3,
+					"label": "按钮开关"
+				}
+			]
+		},
+		{
 			"path": "ln882h-custom-imou/project/yankon/app/lamptask.h",
 			"bookmarks": [
 				{
 					"line": 61,
 					"column": 21,
 					"label": "按钮"
+				}
+			]
+		},
+		{
+			"path": "include/magiclink.h",
+			"bookmarks": [
+				{
+					"line": 109,
+					"column": 2,
+					"label": "消息"
 				}
 			]
 		}

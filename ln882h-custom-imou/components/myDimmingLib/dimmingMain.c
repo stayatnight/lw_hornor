@@ -1149,7 +1149,12 @@ int8_t myLampRegisterDimmingStatusCtrlHook(uint8_t lampId, dimmingStatusCtrlHook
     lamp.lampTable[lampId].pLampData->lampCtrl.dimmingStatusCtrlHook = statusHook;
     return 0;
 }
+int8_t myLampRegisterFlashEndHook(uint8_t lampId, flashEndFunc flashEndHook)
+{
 
+    lamp.lampTable[lampId].pLampData->lampCtrl.pFuncflashEnd = flashEndHook;
+    return 0;
+}
 /******************************************************************************
  Function    : myLampInit
  Description : 灯控制模块初始化

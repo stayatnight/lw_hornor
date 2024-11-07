@@ -342,6 +342,7 @@ int8_t myLampFlashCtrl(uint8_t lampId, uint32_t ulStepMs, uint32_t ulPeriodMs, u
 ******************************************************************************/
 int8_t myLampRegisterDimmingStatusCtrlHook(uint8_t lampId, dimmingStatusCtrlHookFunc statusHook);
 
+int8_t myLampRegisterFlashEndHook(uint8_t lampId, flashEndFunc flashEndHook);
 /******************************************************************************
  Function    : myLampInit
  Description : lamp init

@@ -56,7 +56,8 @@ int lamp_flash_count(void);
 #define LIGHT_BRIGHT_MODE_WRITE_VAL                        (50)
 //MCU版本
 #define LN_MCU_VERSION                                     ""
-
+//重置参数
+#define RL_LAMP_BLINK_ARG_SYS_FACTORY_RESET                1
 //PWM打印
 #define PRINT_PWM   1 
 #define PRINT_BON   0

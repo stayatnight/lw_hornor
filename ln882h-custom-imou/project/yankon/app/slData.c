@@ -270,9 +270,6 @@ int rlDataRestoreFactory(void)
     pSaveData->ulUsed = CFG_DATA_OK;
     strcpy(pSaveData->chDevName, RL_DEV_NAME_DEF);
     rlDataSetAdjDuration(RL_DEV_DURATION_DEF);
-#if (APP_DEV_TYPE_USED == APP_DEV_TYPE_LAMP_BEDSIDE)
-    rlDataSetSleepDuration(SL_SLEEP_15MIN);
-#endif
     rlDataWriteConfigData();
 
     LOG(LOG_LVL_INFO,"Restore Factory End.\r\n");
@@ -294,11 +291,11 @@ void slDataFactoryReset(void)
     if (g_stRlData.fctData.fctMode == 0) {
         extern int MagicLinkReset(void);
         MagicLinkReset();
+       // LOG(LOG_LVL_INFO,__LINE__,"slDataFactoryReset\r\n");
     }
 #endif
-    rlDataRestoreFactory();
+ //   rlDataRestoreFactory();
     vTaskDelay(10);
-    //sys_reset();
 }
 
 /******************************************************************************

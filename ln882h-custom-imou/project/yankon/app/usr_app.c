@@ -57,7 +57,7 @@ static OS_Thread_t g_temp_cal_thread;
 //yankon light task
 #if LAMP_TASK_EN && LAMP_TASK_EN==1
 static OS_Thread_t g_lamp_thread;
-#define LAMP_TASK_STACK_SIZE   4*256 //Byte
+#define LAMP_TASK_STACK_SIZE   8*256 //Byte
 #endif
 //yankon key task
 #if KEY_TASK_EN && KEY_TASK_EN==1
@@ -210,7 +210,13 @@ uint32_t _rlKeyGetTickMs()
 {
     return xTaskGetTickCount();
 }
-
+static void _lampBlinkEndHook(uint32_t arg) 
+{
+    LOG(LOG_LVL_INFO,"blink end %d\r\n", arg);
+    if (arg == RL_LAMP_BLINK_ARG_SYS_FACTORY_RESET) {
+        slDataFactoryReset();
+    }
+}
 static void netdev_get_ip_callback(struct netif *nif)
 {
 }
@@ -375,6 +381,15 @@ static void _normalKeyLongPressCb(uint32_t keyVal, uint32_t flag)
     default:
         break;
     }
+}
+int8_t rlLampBlinkCtrl(uint32_t blinkCnt, uint32_t ulPeroidMs, uint8_t lock, uint32_t arg) 
+{
+    //return myLampFlashCtrl(gucLampId, ulPeroidMs/2, ulPeroidMs, blinkCnt, lock, arg);
+    return lamp_flash_count();
+}
+void _lampFactoryReset(void) 
+{
+    rlLampBlinkCtrl(3, 1000, 1, RL_LAMP_BLINK_ARG_SYS_FACTORY_RESET);
 }
 static void _normalKeyLongReleaseCb(uint32_t keyVal, uint32_t flag)
 {
@@ -641,8 +656,7 @@ static int rlTaskLampInit(void* arg)
                      _lampPwmOutput, 
                      _lampColor2Pwm, 
                      getMyDimmingCurve(LIGHT_PWM_CURVE), 
-                     NULL,NULL);
-    
+                     NULL, NULL);
     //30s后关闭长按重置
     s_resetWindowTimerHandle = xTimerCreate((const char*)"reset", (30000 / portTICK_RATE_MS), 0, NULL, _lampFactoryResetWindowTimeoutHandle);
     xTimerStart(s_resetWindowTimerHandle, 0);
@@ -665,7 +679,7 @@ static void usr_app_light_task_entry(void *params)
         _lampReportProc();
         //重置
         if (rlFlagGet(RL_FLAG_SYS_FACTORY_RESET)) {
-    //    _lampFactoryReset();
+        _lampFactoryReset();
         }
         //写入
         if (rlFlagGet(RL_FLAG_SYS_CFG_DATA_SAVE)) {

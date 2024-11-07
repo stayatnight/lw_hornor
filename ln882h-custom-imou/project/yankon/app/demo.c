@@ -725,7 +725,7 @@ static void MyRecvStatus(enum MagicLinkSDKStatus status)
             printf("STATUS_NETCFG_ENTER\r\n");
             break;
         case STATUS_REGISTER_RECV_INFO:
-            printf("STATUS_REGISTER_RECV_INFO\r\n");
+            printf("STATUS_REGISTER_RECV_INFO\r\n"); //从日志上来说直接使用printf是能够直接打印的。
             break;
         case STATUS_LOGIN_ONLINE: {
             struct MagicLinkDataVal eventData = { 0, strlen("test event msg"), (unsigned char *)"test event msg" };
@@ -737,7 +737,13 @@ static void MyRecvStatus(enum MagicLinkSDKStatus status)
             printf("rpt event msg\r\n");
             break;
         }
-
+        case STATUS_DEVICE_DELETE:
+            printf("device delete\r\n");
+            rlFlagSet(RL_FLAG_SYS_FACTORY_RESET, 1);
+            break;
+        case STATUS_DEVICE_RESET:
+            printf("device factory reset\r\n");
+            break;
         default:
             break;
     }
