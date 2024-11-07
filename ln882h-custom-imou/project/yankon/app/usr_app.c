@@ -57,7 +57,8 @@ static OS_Thread_t g_temp_cal_thread;
 //yankon light task
 #if LAMP_TASK_EN && LAMP_TASK_EN==1
 static OS_Thread_t g_lamp_thread;
-#define LAMP_TASK_STACK_SIZE   8*256 //Byte
+#define LAMP_TASK_STACK_SIZE   16*256 //Byte
+//这个栈如果太小，重置会失败
 #endif
 //yankon key task
 #if KEY_TASK_EN && KEY_TASK_EN==1

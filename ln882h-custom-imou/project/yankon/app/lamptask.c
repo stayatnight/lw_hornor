@@ -25,7 +25,7 @@ int lamp_flash_count(void)
     myLampFlashCtrl(gucLampId,500,1000,3,NULL,0);
     LOG(LOG_LVL_INFO,"is flashing\r\n");
     rlFlagSet(RL_FLAG_SYS_FACTORY_RESET,0);
- //   slDataFactoryReset();
+    slDataFactoryReset();
 
     return 0;
 }
