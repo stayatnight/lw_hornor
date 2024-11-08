@@ -44,6 +44,7 @@
 #include"key_task.h"
 #include "gpio.h"
 #include"ln_flash_test.h"
+#include "utils/reboot_trace/reboot_trace.h"
 static OS_Thread_t g_usr_app_thread;
 #define USR_APP_TASK_STACK_SIZE   4800 //Byte
 
@@ -657,7 +658,7 @@ static int rlTaskLampInit(void* arg)
                      _lampPwmOutput, 
                      _lampColor2Pwm, 
                      getMyDimmingCurve(LIGHT_PWM_CURVE), 
-                     NULL, NULL);
+                     NULL, ln_chip_reboot);
     //30s后关闭长按重置
     s_resetWindowTimerHandle = xTimerCreate((const char*)"reset", (30000 / portTICK_RATE_MS), 0, NULL, _lampFactoryResetWindowTimeoutHandle);
     xTimerStart(s_resetWindowTimerHandle, 0);

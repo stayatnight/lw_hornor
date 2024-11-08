@@ -22,6 +22,7 @@ extern "C" {
 #include "utils/debug/log.h"
 #include"string.h"
 #include"flash.h"
+#include "utils/reboot_trace/reboot_trace.h"
 //#include "sys_api.h"
 //#include "semphr.h"
 /******************************************************************************
@@ -285,6 +286,7 @@ int rlDataRestoreFactory(void)
  Return      : (none)
  Other       : (none)
 ******************************************************************************/
+
 void slDataFactoryReset(void) 
 {
 #if defined(APP_MAGIC_LINK_USE) && (APP_MAGIC_LINK_USE != 0)
@@ -294,10 +296,14 @@ void slDataFactoryReset(void)
        // LOG(LOG_LVL_INFO,__LINE__,"slDataFactoryReset\r\n");
     }
 #endif
- //   rlDataRestoreFactory();
+// NOTE :使用这个接口会出现栈溢出的问题（stackoverflow）
+    rlDataRestoreFactory();
     vTaskDelay(10);
+    LOG(LOG_LVL_INFO,"\r\n chip reboot\r\n");
+//
+ //   ln_chip_reboot();
 }
-
+//NOTE:使用这个接口灯就不闪了
 /******************************************************************************
  Function    : rlDataSetDevName
  Description : reading lamp data get device name

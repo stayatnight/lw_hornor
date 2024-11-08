@@ -34,6 +34,16 @@
 					"label": "消息"
 				}
 			]
+		},
+		{
+			"path": "ln882h-custom-imou/project/yankon/app/slData.c",
+			"bookmarks": [
+				{
+					"line": 298,
+					"column": 2,
+					"label": "重启函数"
+				}
+			]
 		}
 	]
 }
