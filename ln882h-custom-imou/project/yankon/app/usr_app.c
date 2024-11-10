@@ -358,7 +358,6 @@ static void wifi_init_ap(void)
 
 uint8_t rlLampGetOnoff(void) 
 {
-//    LOG(LOG_LVL_INFO,"switch is %d\n",s_stCurLampParam.ucSwitch);
     return s_stCurLampParam.ucSwitch;
 }
 uint8_t LampGetBriPercent(void)

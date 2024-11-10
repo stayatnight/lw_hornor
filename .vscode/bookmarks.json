@@ -44,6 +44,16 @@
 					"label": "重启函数"
 				}
 			]
+		},
+		{
+			"path": "ln882h-custom-imou/project/yankon/app/demo.c",
+			"bookmarks": [
+				{
+					"line": 614,
+					"column": 1,
+					"label": "设备回调函数"
+				}
+			]
 		}
 	]
 }

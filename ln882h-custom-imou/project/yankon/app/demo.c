@@ -486,7 +486,8 @@ static int SetLightOnoff(const void*data, unsigned int len)
     stRlLiveData_t *pLiveData = &g_stRlData.liveData;
     g_light.on = *(int *)data > 0 ? 1 : 0;
     LOG(LOG_LEVEL_INFO,"set light onoff %d\r\n",g_light.on);
-    LampSwitchCtrl((uint8_t)g_light.on,1000 );
+  //  LampSwitchCtrl((uint8_t)g_light.on,1000 );
+    rlLampSwitchRevert(1000);
     return 0;
 }
 void MagicLinkDataRsync(void) 
@@ -531,7 +532,7 @@ static int GetLightOnoff(void **data, unsigned int *len)
 
     (void)memcpy(*data, &g_light.on, *len);
 
-    LOG(LOG_LEVEL_INFO,"get light brightness %d\r\n", g_light.on);
+    LOG(LOG_LEVEL_INFO,"get light onoff %d\r\n", g_light.on);
     return 0;
 }
 static int SetBrightness(const void*data, unsigned int len)
@@ -624,9 +625,9 @@ static struct TestControlFunc g_testCtrlFunc[] = {
     { "dvService", "supportSinkSvc", SetLightSwitchInt, GetLightSwitchInt },
     { "dvService", "devSvcStatus", SetLightSwitchInt, GetLightSwitchInt },
 
-    { "light", "On", SetLightOnoff, GetLightOnoff },
+    { "light", "On", SetLightOnoff, GetLightOnoff},
     { "light", "Brightness", SetBrightness, GetBrightness },
-    {  "light", "lightMode", SetMode, GetMode},  
+    { "light", "lightMode", SetMode, GetMode},  
     
     { "lightMode", "mode", SetLightModeInt, GetLightModeInt },
     { "volume", "volume", SetLightVolumeInt, GetLightVolumeInt },
@@ -758,6 +759,12 @@ static void MyRecvStatus(enum MagicLinkSDKStatus status)
 #endif
             break;
         }
+        case STATUS_LOGIN_OFFLINE:
+            {
+            printf("device login offline\r\n");
+            rlFlagSet(RL_FLAG_SYS_DEV_ONLINE, 0);
+            break;
+            }
         case STATUS_DEVICE_DELETE:
             printf("device delete\r\n");
             rlFlagSet(RL_FLAG_SYS_FACTORY_RESET, 1);
