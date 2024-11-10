@@ -505,6 +505,34 @@ static int SetLightOnoff(const void*data, unsigned int len)
     LampSwitchCtrl((uint8_t)g_light.on,1000 );
     return 0;
 }
+void MagicLinkDataRsync(void) 
+{
+    int tmp = 0;
+
+    tmp = (int)rlLampGetOnoff();
+    if (tmp != g_light.on) {
+        g_light.on = tmp;
+        rlFlagSet(RL_FLAG_MAGIC_REPORT_NEED, 1);
+        rlFlagSet(RL_FLAG_MAGIC_REPORT_LIGHT_NEED, 1);
+    }
+
+    tmp = (int)LampGetBriPercent();
+    tmp = APP_MAX_VAL(1, tmp);
+    if (tmp != g_light.brightness) {
+        g_light.brightness = tmp;
+        rlFlagSet(RL_FLAG_MAGIC_REPORT_NEED, 1);
+        rlFlagSet(RL_FLAG_MAGIC_REPORT_LIGHT_NEED, 1);
+    }
+
+
+    tmp = (int)rlLampGetLightMode();
+    if (tmp != g_light.lightMode) {
+        g_light.lightMode = tmp;
+        rlFlagSet(RL_FLAG_MAGIC_REPORT_NEED, 1);
+        rlFlagSet(RL_FLAG_MAGIC_REPORT_LIGHT_NEED, 1);
+    }
+
+}
 
 static int GetLightOnoff(void **data, unsigned int *len)
 {
@@ -569,14 +597,22 @@ static int SetMode(const void*data, unsigned int len)
 
     g_light.lightMode = *(int *)data;
     LOG(LOG_LEVEL_INFO,"set light mode %d\r\n", g_light.lightMode);
-    if(g_light.lightMode==LIGHT_BRIGHT_MODE_READING)
+    if(g_light.lightMode==LIGHT_BRIGHT_MODE_READING){
     LampBriPercentCtrl((uint16_t)LIGHT_BRIGHT_MODE_READING_VAL, 1000);
-    if(g_light.lightMode==LIGHT_BRIGHT_MODE_MOON)
+    g_light.brightness=LIGHT_BRIGHT_MODE_READING_VAL;
+    }
+    if(g_light.lightMode==LIGHT_BRIGHT_MODE_MOON){
     LampBriPercentCtrl((uint16_t)LIGHT_BRIGHT_MODE_MOON_VAL, 1000);
-    if(g_light.lightMode==LIGHT_BRIGHT_MODE_WRITE)
+    g_light.brightness=LIGHT_BRIGHT_MODE_MOON_VAL;
+    }
+    if(g_light.lightMode==LIGHT_BRIGHT_MODE_WRITE){
     LampBriPercentCtrl((uint16_t)LIGHT_BRIGHT_MODE_WRITE_VAL, 1000);
+    g_light.brightness=LIGHT_BRIGHT_MODE_WRITE_VAL;
+    }
     if(g_light.lightMode!=LIGHT_BRIGHT_MODE_READING&&g_light.lightMode!=LIGHT_BRIGHT_MODE_MOON&&g_light.lightMode!=LIGHT_BRIGHT_MODE_WRITE)
     LOG(LOG_LEVEL_INFO,"set light mode error\r\n");
+    //上报
+    MagicLinkReportServiceStatus("light");
    return 0; 
 }
 struct TestControlFunc {

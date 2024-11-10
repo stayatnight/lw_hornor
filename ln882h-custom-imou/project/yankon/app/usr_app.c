@@ -45,6 +45,7 @@
 #include "gpio.h"
 #include"ln_flash_test.h"
 #include "utils/reboot_trace/reboot_trace.h"
+#include"appConfig.h"
 static OS_Thread_t g_usr_app_thread;
 #define USR_APP_TASK_STACK_SIZE   4800 //Byte
 
@@ -207,7 +208,44 @@ static void wifi_scan_complete_cb(void * arg)
     wifi_manager_ap_list_update_enable(LN_TRUE);
 }
 /************************************************KEY TASK************************************/
+static void _lampStateControlHook(uint8_t lampId, const myLampParam_t *pLampParam)
+{
+    int changed = 0;
+    myLampParam_t *pCurLampParam = &s_stCurLampParam;
+    myLampParam_t *pLstLampParam = &s_stLstLampParam;
 
+    if (pLstLampParam->ucSwitch != pCurLampParam->ucSwitch) {
+        pLstLampParam->ucSwitch = pCurLampParam->ucSwitch;
+        changed = 1;
+        LOG(LOG_LVL_INFO,"switch changed %d\r\n", pCurLampParam->ucSwitch);
+    }
+
+    if (pLstLampParam->uwBri != pCurLampParam->uwBri) {
+        pLstLampParam->uwBri = pCurLampParam->uwBri;
+        changed = 1;
+        LOG(LOG_LVL_INFO,"brightness changed %d\r\n", pCurLampParam->uwBri);
+    }
+
+    if (pLstLampParam->uwCCT != pCurLampParam->uwCCT) {
+        pLstLampParam->uwCCT = pCurLampParam->uwCCT;
+        changed = 1;
+        LOG(LOG_LVL_INFO,"cct changed %d\r\n", pCurLampParam->uwCCT);
+    }
+
+#if defined(LIGHT_STATE_SAVE_EN) && (LIGHT_STATE_SAVE_EN == 1)
+    if (changed && pCurLampParam->ucSwitch != 0) {
+        memcpy((void*)&g_stRlData.saveData.stLampSaveParam, (void *)pCurLampParam, sizeof(myLampParam_t));
+        rlFlagSet(RL_FLAG_SYS_CFG_DATA_SAVE, 1);
+    }
+#endif
+
+#if defined(APP_MAGIC_LINK_USE) && (APP_MAGIC_LINK_USE != 0)
+        if (g_stRlData.fctData.fctMode == 0) {
+            extern void MagicLinkDataRsync(void);
+            MagicLinkDataRsync();
+        }
+#endif
+}
 uint32_t _rlKeyGetTickMs() 
 {
     return xTaskGetTickCount();
@@ -322,6 +360,15 @@ uint8_t rlLampGetOnoff(void)
 {
 //    LOG(LOG_LVL_INFO,"switch is %d\n",s_stCurLampParam.ucSwitch);
     return s_stCurLampParam.ucSwitch;
+}
+uint8_t LampGetBriPercent(void)
+{
+
+    return s_stCurLampParam.uwBri;
+}
+uint8_t rlLampGetLightMode(void)
+{
+    return s_stCurLampParam.ucSceneNo;
 }
 //回调函数
 static void _normalKeyShortPressCb(uint32_t keyVal, uint32_t flag)
@@ -660,6 +707,7 @@ static int rlTaskLampInit(void* arg)
                      getMyDimmingCurve(LIGHT_PWM_CURVE), 
                      NULL, ln_chip_reboot);
     //30s后关闭长按重置
+  //  myLampRegisterDimmingStatusCtrlHook(gucLampId, _lampStateControlHook);
     s_resetWindowTimerHandle = xTimerCreate((const char*)"reset", (30000 / portTICK_RATE_MS), 0, NULL, _lampFactoryResetWindowTimeoutHandle);
     xTimerStart(s_resetWindowTimerHandle, 0);
 
