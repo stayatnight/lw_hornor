@@ -294,22 +294,6 @@ void MagicLinkDataReport(void)
 #endif
         MagicLinkReportServiceStatus("light");
     }
-
-#if (APP_DEV_TYPE_USED == APP_DEV_TYPE_LAMP_BEDSIDE)
-    if (rlFlagGet(RL_FLAG_MAGIC_REPORT_BAT_NEED)) {
-        rlFlagSet(RL_FLAG_MAGIC_REPORT_BAT_NEED, 0);
-        printf("%d magic report battery %d\r\n", xTaskGetTickCount(), g_light.batteryPercent);
-        MagicLinkReportServiceStatus("battery");
-    }
-
-    if (rlFlagGet(RL_FLAG_MAGIC_REPORT_POS_NEED)) {
-        rlFlagSet(RL_FLAG_MAGIC_REPORT_POS_NEED, 0);
-        printf("%d magic report position %d\r\n", xTaskGetTickCount(), g_light.position);
-        MagicLinkReportServiceStatus("position");
-    }
-#elif (APP_DEV_TYPE_USED == APP_DEV_TYPE_LAMP_NIGHT || APP_DEV_TYPE_USED  == APP_DEV_TYPE_LAMP_NIGHT_PTJX)
-    MagicLinkReportServiceStatus("nightLight");
-#endif
 }
 static int SetLightSwitchInt(const void *data, unsigned int len)
 {
@@ -763,14 +747,15 @@ static void MyRecvStatus(enum MagicLinkSDKStatus status)
         case STATUS_REGISTER_RECV_INFO:
             printf("STATUS_REGISTER_RECV_INFO\r\n"); //从日志上来说直接使用printf是能够直接打印的。
             break;
-        case STATUS_LOGIN_ONLINE: {
-            struct MagicLinkDataVal eventData = { 0, strlen("test event msg"), (unsigned char *)"test event msg" };
-
-            if (MagicLinkReportServiceEvent("event", "testEventMsg", 1, &eventData) != 0) {
-                printf("rpt event msg fail\r\n");
-                return;
-            }
-            printf("rpt event msg\r\n");
+        case STATUS_LOGIN_ONLINE:
+         {
+            printf("device login online\r\n");
+            rlFlagSet(RL_FLAG_SYS_DEV_ONLINE, 1);
+#if IS_LAMP_DEV_TYPE_USED()
+            MagicLinkDataRsync();
+#else
+            rlFlagSet(RL_FLAG_SYS_DATA_SYNC_NEED, 1);
+#endif
             break;
         }
         case STATUS_DEVICE_DELETE:

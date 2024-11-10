@@ -707,7 +707,7 @@ static int rlTaskLampInit(void* arg)
                      getMyDimmingCurve(LIGHT_PWM_CURVE), 
                      NULL, ln_chip_reboot);
     //30s后关闭长按重置
-  //  myLampRegisterDimmingStatusCtrlHook(gucLampId, _lampStateControlHook);
+    myLampRegisterDimmingStatusCtrlHook(gucLampId, _lampStateControlHook);
     s_resetWindowTimerHandle = xTimerCreate((const char*)"reset", (30000 / portTICK_RATE_MS), 0, NULL, _lampFactoryResetWindowTimeoutHandle);
     xTimerStart(s_resetWindowTimerHandle, 0);
 
