@@ -53,7 +53,7 @@ int lamp_flash_count(void);
 //灯光模式的具体亮度
 #define LIGHT_BRIGHT_MODE_READING_VAL                       (100)
 #define LIGHT_BRIGHT_MODE_MOON_VAL                         (15)
-#define LIGHT_BRIGHT_MODE_WRITE_VAL                        (50)
+#define LIGHT_BRIGHT_MODE_WRITE_VAL                        (75)
 //MCU版本
 #define LN_MCU_VERSION                                     ""
 //重置参数
