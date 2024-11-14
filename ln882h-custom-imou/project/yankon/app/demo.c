@@ -13,6 +13,7 @@
 #include"slData.h"
 #include"lamptask.h"
 #include "utils/debug/log.h"
+#include "ble_arch/arch.h"
 #define MY_PRDKEY "c76c504e94ad4c34b6d0c87d5d90ac43"
 #define MY_PRDSECRET "6ece2cc39cb42c83465650af3b6ae2ae"
 
@@ -26,13 +27,37 @@
  */
 
 #define CONFIG_FLASH_BASE_ADDR (0x001DD000) /* ln882hCONF分区存放SDK注册信息、秘钥等数据 */
+static int myHalWifiGetMacAddr(char *mac, uint32_t macBufSize)
+{
+    char buf[32] = {0};
 
+    if (!mac || macBufSize < 18) { // 修改为18，因为MAC地址字符串形式为"XX:XX:XX:XX:XX:XX"，长度为17，额外一个字符用于'\0'
+        return -1;
+    }
+    if (0 != ln_ble_mac_get(buf)) {
+        return -2;
+    }
+    
+    // 修正MAC地址的显示顺序
+    printf("get mac [%02X:%02X:%02X:%02X:%02X:%02X]\r\n", 
+           buf[5], buf[4], buf[3], buf[2], buf[1], buf[0]);
+    
+    // 修正mac地址的赋值逻辑
+    sprintf(mac, "%02X%02X%02X%02X%02X%02X",
+            buf[5], buf[4], buf[3], buf[2], buf[1], buf[0]);
+    
+    return 0;
+}
 static int GetDevSnFunc(void **data, unsigned int *len)
 {
-    char *tmp = "A2NM011309000576"; // SN需要和最终打印到设备上的SN保持一致，业界一般使用大写，建议使用大写
-    unsigned int tmpLen = strlen(tmp) + 1; // 实际存储字符串的空间需要使用包含结束符的长度
-    *len = tmpLen - 1; // 返回的长度为字符串实际的长度，不包含结束符
-
+    char sn[32] = {0};
+    char *tmp = sn;
+    unsigned int tmpLen = 0;
+    myHalWifiGetMacAddr(sn, 32);
+    printf("get dev sn %s\r\n", sn);
+    printf("get mac [%02X:%02X:%02X:%02X:%02X:%02X]\r\n", sn[5],sn[4], sn[3], sn[2], sn[1],sn[0]);
+    tmpLen = strlen(tmp) + 1;//实际存储字符串的空间需要使用包含结束符的长度
+    *len = tmpLen - 1;//返回的长度为字符串实际的长度，不包含结束符
     *data = malloc(tmpLen);
     if (*data == NULL) {
         printf("malloc err\r\n");
@@ -72,7 +97,7 @@ static int GetDevUdidFunc(void **data, unsigned int *len)
     return 0;
 }
 
-static char g_devName[64] = "test_my_DevName";
+static char g_devName[64] = "BW_LAMP_CANL";
 /* 设备名称的获取需从持久化保存单元获取， 全局变量g_devName仅作为示例 */
 /* 设备重置（RESET）后，设备名的存储单元内容需更新为默认设备名称 */
 static int GetDevNameFunc(void **data, unsigned int *len)
@@ -818,7 +843,6 @@ static int GetPin(char *pinBuf, unsigned int pinBufLen)
     printf("GEN PIN(%s)\r\n", pinBuf);
     return strlen(pinBuf);
 }
-
 void MagicLinkSDKRun()
 {
     printf("MEM enter MagicLinkSDKRun [%d]\r\n", xPortGetFreeHeapSize());

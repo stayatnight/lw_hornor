@@ -23,7 +23,6 @@ extern "C" {
 #include "ble_qiot_config.h"
 #include "ble_qiot_export.h"
 #include "ble_qiot_hmac.h"
-#include "ble_qiot_import.h"
 #include "ble_qiot_log.h"
 #include "ble_qiot_param_check.h"
 #include "ble_qiot_utils_base64.h"

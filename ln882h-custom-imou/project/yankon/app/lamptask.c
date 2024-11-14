@@ -26,6 +26,5 @@ int lamp_flash_count(void)
     LOG(LOG_LVL_INFO,"is flashing\r\n");
     rlFlagSet(RL_FLAG_SYS_FACTORY_RESET,0);
     slDataFactoryReset();
-
     return 0;
 }

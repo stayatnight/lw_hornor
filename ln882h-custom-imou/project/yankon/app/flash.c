@@ -23,6 +23,7 @@ int myhal_flash_write(uint32_t addr, uint8_t *buf,  uint32_t len)
 //NOTE:把别人的一些返回值切换成自己的返回值的技巧
    res= hal_flash_program(MY_HAL_FLASH_BASE+addr, len, buf);
    return (res == 0 ? 0 : -2);
+
 }
 void myhal_flash_erase(uint32_t addr)
 {
@@ -33,3 +34,5 @@ void myhal_flash_erase(uint32_t addr)
     hal_flash_erase(MY_HAL_FLASH_BASE+addr,0x1000);
 return 0;
 }
+//一开始我总是逃避写这种存储，以为太复杂了，但是实际上我也能把这种东西给搞定，
+//我所恐惧了一个月的东西，可能只是晚上的一个小时的事情
