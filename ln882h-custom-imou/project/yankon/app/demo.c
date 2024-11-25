@@ -10,17 +10,17 @@
 #include "magiclink.h"
 #include "magiclink_netcfg.h"
 #include "magiclink_log.h"
-#include"slData.h"
-#include"lamptask.h"
+#include "slData.h"
+#include "lamptask.h"
 #include "utils/debug/log.h"
 #include "ble_arch/arch.h"
-#define MY_PRDKEY "c76c504e94ad4c34b6d0c87d5d90ac43"
+#define MY_PRDKEY    "c76c504e94ad4c34b6d0c87d5d90ac43"
 #define MY_PRDSECRET "6ece2cc39cb42c83465650af3b6ae2ae"
 
-#define MY_LICENSE_KEY "******11a3f920e20b0e425d824d62bc0a16234e"
+#define MY_LICENSE_KEY    "******11a3f920e20b0e425d824d62bc0a16234e"
 #define MY_LICENSE_SECRET "******23e8af0da99c406f62f4fb13b713a846a5cf5e6893098e2138d58aeb3e"
 
- /* ln882h固件分区分布，后续写入说明文档,并协调厂商给OTA升级留足空间
+/* ln882h固件分区分布，后续写入说明文档,并协调厂商给OTA升级留足空间
  * 分区     ||BOOT      ||PART_TAB  ||APP       ||OTA       ||CONF      ||USER      ||NVDS      ||KV       ||
  * 起始地址 ||0x00000000||0x00006000||0x00007000||0x00133000||0x001DD000||0x001E9000||0x001F9000||0x001FC000||
  * 分区大小 ||24KB      ||4KB       ||1200KB    ||680Kb     ||48 Kb     ||64Kb      ||12Kb      ||16Kb      ||
@@ -31,34 +31,33 @@ static int myHalWifiGetMacAddr(char *mac, uint32_t macBufSize)
 {
     char buf[32] = {0};
 
-    if (!mac || macBufSize < 18) { // 修改为18，因为MAC地址字符串形式为"XX:XX:XX:XX:XX:XX"，长度为17，额外一个字符用于'\0'
+    if (!mac ||
+        macBufSize < 18) {  // 修改为18，因为MAC地址字符串形式为"XX:XX:XX:XX:XX:XX"，长度为17，额外一个字符用于'\0'
         return -1;
     }
     if (0 != ln_ble_mac_get(buf)) {
         return -2;
     }
-    
+
     // 修正MAC地址的显示顺序
-    printf("get mac [%02X:%02X:%02X:%02X:%02X:%02X]\r\n", 
-           buf[5], buf[4], buf[3], buf[2], buf[1], buf[0]);
-    
+    printf("get mac [%02X:%02X:%02X:%02X:%02X:%02X]\r\n", buf[5], buf[4], buf[3], buf[2], buf[1], buf[0]);
+
     // 修正mac地址的赋值逻辑
-    sprintf(mac, "%02X%02X%02X%02X%02X%02X",
-            buf[5], buf[4], buf[3], buf[2], buf[1], buf[0]);
-    
+    sprintf(mac, "%02X%02X%02X%02X%02X%02X", buf[5], buf[4], buf[3], buf[2], buf[1], buf[0]);
+
     return 0;
 }
 static int GetDevSnFunc(void **data, unsigned int *len)
 {
-    char sn[32] = {0};
-    char *tmp = sn;
+    char         sn[32] = {0};
+    char        *tmp    = sn;
     unsigned int tmpLen = 0;
     myHalWifiGetMacAddr(sn, 32);
     printf("get dev sn %s\r\n", sn);
-    printf("get mac [%02X:%02X:%02X:%02X:%02X:%02X]\r\n", sn[5],sn[4], sn[3], sn[2], sn[1],sn[0]);
-    tmpLen = strlen(tmp) + 1;//实际存储字符串的空间需要使用包含结束符的长度
-    *len = tmpLen - 1;//返回的长度为字符串实际的长度，不包含结束符
-    *data = malloc(tmpLen);
+    printf("get mac [%02X:%02X:%02X:%02X:%02X:%02X]\r\n", sn[5], sn[4], sn[3], sn[2], sn[1], sn[0]);
+    tmpLen = strlen(tmp) + 1;  // 实际存储字符串的空间需要使用包含结束符的长度
+    *len   = tmpLen - 1;       // 返回的长度为字符串实际的长度，不包含结束符
+    *data  = malloc(tmpLen);
     if (*data == NULL) {
         printf("malloc err\r\n");
         return -1;
@@ -72,9 +71,9 @@ static int GetDevSnFunc(void **data, unsigned int *len)
 
 static int GetDevMacFunc(void **data, unsigned int *len)
 {
-    char *tmp = "test_my_mac";
+    char        *tmp    = "test_my_mac";
     unsigned int tmpLen = strlen(tmp) + 1;
-    *len = tmpLen - 1;
+    *len                = tmpLen - 1;
 
     *data = malloc(tmpLen);
     if (*data == NULL) {
@@ -91,7 +90,7 @@ static int GetDevMacFunc(void **data, unsigned int *len)
 static int GetDevUdidFunc(void **data, unsigned int *len)
 {
     /* 对于非android的设备，一般无UDID，该接口无需实现 */
-    *len = 0;
+    *len  = 0;
     *data = NULL;
 
     return 0;
@@ -103,7 +102,7 @@ static char g_devName[64] = "BW_LAMP_CANL";
 static int GetDevNameFunc(void **data, unsigned int *len)
 {
     unsigned int tmpLen = strlen(g_devName) + 1;
-    *len = tmpLen - 1;
+    *len                = tmpLen - 1;
 
     *data = malloc(tmpLen);
     if (*data == NULL) {
@@ -130,9 +129,9 @@ static int SetDevNameFunc(const void *data, unsigned int len)
 
 static int GetDevModelFunc(void **data, unsigned int *len)
 {
-    char *tmp = "test_DevModel";
+    char        *tmp    = "test_DevModel";
     unsigned int tmpLen = strlen(tmp) + 1;
-    *len = tmpLen - 1;
+    *len                = tmpLen - 1;
 
     *data = malloc(tmpLen);
     if (*data == NULL) {
@@ -149,9 +148,9 @@ static int GetDevModelFunc(void **data, unsigned int *len)
 /* 获取设备子型号，可取值"0"~"35"，若无子型号，取默认值"0" */
 static int GetDevSubDevTypeFunc(void **data, unsigned int *len)
 {
-    char *tmp = "0";
+    char        *tmp    = "0";
     unsigned int tmpLen = strlen(tmp) + 1;
-    *len = tmpLen - 1;
+    *len                = tmpLen - 1;
 
     *data = malloc(tmpLen);
     if (*data == NULL) {
@@ -168,10 +167,10 @@ static int GetDevSubDevTypeFunc(void **data, unsigned int *len)
 static int GetDevFirmwareVersionFunc(void **data, unsigned int *len)
 {
     char *tmp = RL_FIRMWARE_VER;
-    //不能被声明两次
-  //  char *tmp = RL_FIRMWARE_VER;
+    // 不能被声明两次
+    //  char *tmp = RL_FIRMWARE_VER;
     unsigned int tmpLen = strlen(tmp) + 1;
-    *len = tmpLen - 1;
+    *len                = tmpLen - 1;
 
     *data = malloc(tmpLen);
     if (*data == NULL) {
@@ -187,9 +186,9 @@ static int GetDevFirmwareVersionFunc(void **data, unsigned int *len)
 
 static int GetMCUVersionFunc(void **data, unsigned int *len)
 {
-    char *tmp =LN_MCU_VERSION;
+    char        *tmp    = LN_MCU_VERSION;
     unsigned int tmpLen = strlen(tmp) + 1;
-    *len = tmpLen - 1;
+    *len                = tmpLen - 1;
 
     *data = malloc(tmpLen);
     if (*data == NULL) {
@@ -205,9 +204,9 @@ static int GetMCUVersionFunc(void **data, unsigned int *len)
 
 static int GetDevHardwareVersionVersionFunc(void **data, unsigned int *len)
 {
-    char *tmp = "HW_1.0.1";
+    char        *tmp    = "HW_1.0.1";
     unsigned int tmpLen = strlen(tmp) + 1;
-    *len = tmpLen - 1;
+    *len                = tmpLen - 1;
 
     *data = malloc(tmpLen);
     if (*data == NULL) {
@@ -224,9 +223,9 @@ static int GetDevHardwareVersionVersionFunc(void **data, unsigned int *len)
 /* netInfo 设备网络信息相关回调 */
 static int GetNetInfoSsidFunc(void **data, unsigned int *len)
 {
-    char *tmp = "testSsid123";
+    char        *tmp    = "testSsid123";
     unsigned int tmpLen = strlen(tmp) + 1;
-    *len = tmpLen - 1;
+    *len                = tmpLen - 1;
 
     *data = malloc(tmpLen);
     if (*data == NULL) {
@@ -243,7 +242,7 @@ static int GetNetInfoSsidFunc(void **data, unsigned int *len)
 static int GetNetInfoRssiFunc(void **data, unsigned int *len)
 {
     int rssi = -36;
-    *len = sizeof(rssi);
+    *len     = sizeof(rssi);
 
     *data = malloc(*len);
     if (*data == NULL) {
@@ -259,9 +258,9 @@ static int GetNetInfoRssiFunc(void **data, unsigned int *len)
 
 static int GetNetInfoIpFunc(void **data, unsigned int *len)
 {
-    char *tmp = "127.0.0.1";
+    char        *tmp    = "127.0.0.1";
     unsigned int tmpLen = strlen(tmp) + 1;
-    *len = tmpLen - 1;
+    *len                = tmpLen - 1;
 
     *data = malloc(tmpLen);
     if (*data == NULL) {
@@ -277,9 +276,9 @@ static int GetNetInfoIpFunc(void **data, unsigned int *len)
 
 static int GetNetInfoBssidFunc(void **data, unsigned int *len)
 {
-    char *tmp = "testBssid123";
+    char        *tmp    = "testBssid123";
     unsigned int tmpLen = strlen(tmp) + 1;
-    *len = tmpLen - 1;
+    *len                = tmpLen - 1;
 
     *data = malloc(tmpLen);
     if (*data == NULL) {
@@ -294,26 +293,20 @@ static int GetNetInfoBssidFunc(void **data, unsigned int *len)
 }
 
 static struct MagicLinkTestLight {
-    int on;
+    int  on;
     char color[16];
-    int lightMode;
-    int volume;
-    int brightness;
-    int colorTemperature;
-} g_light = {
-    .on = 0,
-    .color = "red",
-    .lightMode = 1,
-    .volume = 2,
-    .brightness = 100,
-    .colorTemperature = 4000
-};
-void MagicLinkDataReport(void) 
+    int  lightMode;
+    int  volume;
+    int  brightness;
+    int  colorTemperature;
+} g_light = {.on = 0, .color = "red", .lightMode = 1, .volume = 2, .brightness = 100, .colorTemperature = 4000};
+void MagicLinkDataReport(void)
 {
     if (rlFlagGet(RL_FLAG_MAGIC_REPORT_LIGHT_NEED)) {
         rlFlagSet(RL_FLAG_MAGIC_REPORT_LIGHT_NEED, 0);
 #if defined(APP_DEV_CCT_SUPPORT) && (APP_DEV_CCT_SUPPORT != 0)
-        printf("%d magic report onoff %d bri %d cct %d\r\n", xTaskGetTickCount(), g_light.on, g_light.brightness, g_light.colorTemperature);
+        printf("%d magic report onoff %d bri %d cct %d\r\n", xTaskGetTickCount(), g_light.on, g_light.brightness,
+               g_light.colorTemperature);
 #else
         printf("%d magic report onoff %d bri %d\r\n", xTaskGetTickCount(), g_light.on, g_light.brightness);
 #endif
@@ -363,7 +356,7 @@ static int SetLightColorString(const void *data, unsigned int len)
 static int GetLightColorString(void **data, unsigned int *len)
 {
     unsigned int tmpLen = strlen(g_light.color) + 1;
-    *len = tmpLen - 1;
+    *len                = tmpLen - 1;
 
     *data = malloc(*len);
     if (*data == NULL) {
@@ -384,32 +377,32 @@ static int SetLightModeInt(const void *data, unsigned int len)
     printf("set light mode\r\n");
 
     if (g_light.lightMode == 0) {
-        g_light.brightness = 10;
+        g_light.brightness       = 10;
         g_light.colorTemperature = 2000;
     }
 
     if (g_light.lightMode == 1) {
-        g_light.brightness = 20;
+        g_light.brightness       = 20;
         g_light.colorTemperature = 2500;
     }
 
     if (g_light.lightMode == 2) {
-        g_light.brightness = 30;
+        g_light.brightness       = 30;
         g_light.colorTemperature = 3000;
     }
 
     if (g_light.lightMode == 3) {
-        g_light.brightness = 40;
+        g_light.brightness       = 40;
         g_light.colorTemperature = 3500;
     }
 
     if (g_light.lightMode == 4) {
-        g_light.brightness = 50;
+        g_light.brightness       = 50;
         g_light.colorTemperature = 4000;
     }
 
     if (g_light.lightMode == 5) {
-        g_light.brightness = 60;
+        g_light.brightness       = 60;
         g_light.colorTemperature = 4500;
     }
 
@@ -494,7 +487,7 @@ static int GetLightCctInt(void **data, unsigned int *len)
 {
     *len = sizeof(g_light.colorTemperature);
 
-   *data = malloc(*len);
+    *data = malloc(*len);
     if (*data == NULL) {
         printf("malloc err\r\n");
         return -1;
@@ -506,16 +499,16 @@ static int GetLightCctInt(void **data, unsigned int *len)
     printf("get light cct\r\n");
     return 0;
 }
-static int SetLightOnoff(const void*data, unsigned int len)
+static int SetLightOnoff(const void *data, unsigned int len)
 {
     stRlLiveData_t *pLiveData = &g_stRlData.liveData;
-    g_light.on = *(int *)data > 0 ? 1 : 0;
-    LOG(LOG_LEVEL_INFO,"set light onoff %d\r\n",g_light.on);
-  //  LampSwitchCtrl((uint8_t)g_light.on,1000 );
+    g_light.on                = *(int *)data > 0 ? 1 : 0;
+    LOG(LOG_LEVEL_INFO, "set light onoff %d\r\n", g_light.on);
+    //  LampSwitchCtrl((uint8_t)g_light.on,1000 );
     rlLampSwitchRevert(1000);
     return 0;
 }
-void MagicLinkDataRsync(void) 
+void MagicLinkDataRsync(void)
 {
     int tmp = 0;
 
@@ -534,14 +527,12 @@ void MagicLinkDataRsync(void)
         rlFlagSet(RL_FLAG_MAGIC_REPORT_LIGHT_NEED, 1);
     }
 
-
     tmp = (int)rlLampGetLightMode();
     if (tmp != g_light.lightMode) {
         g_light.lightMode = tmp;
         rlFlagSet(RL_FLAG_MAGIC_REPORT_NEED, 1);
         rlFlagSet(RL_FLAG_MAGIC_REPORT_LIGHT_NEED, 1);
     }
-
 }
 
 static int GetLightOnoff(void **data, unsigned int *len)
@@ -550,41 +541,41 @@ static int GetLightOnoff(void **data, unsigned int *len)
 
     *data = malloc(*len);
     if (*data == NULL) {
-        LOG(LOG_LEVEL_INFO,"malloc err \r\n");
+        LOG(LOG_LEVEL_INFO, "malloc err \r\n");
         return -1;
     }
     (void)memset(*data, 0, *len);
 
     (void)memcpy(*data, &g_light.on, *len);
 
-    LOG(LOG_LEVEL_INFO,"get light onoff %d\r\n", g_light.on);
+    LOG(LOG_LEVEL_INFO, "get light onoff %d\r\n", g_light.on);
     return 0;
 }
-static int SetBrightness(const void*data, unsigned int len)
+static int SetBrightness(const void *data, unsigned int len)
 {
     stRlLiveData_t *pLiveData = &g_stRlData.liveData;
 
     g_light.brightness = *(int *)data;
 
-    LOG(LOG_LEVEL_INFO,"set light brightness %d\r\n", g_light.brightness);
+    LOG(LOG_LEVEL_INFO, "set light brightness %d\r\n", g_light.brightness);
     LampBriPercentCtrl((uint16_t)g_light.brightness, 1000);
     return 0;
 }
-static int GetBrightness(const void**data, unsigned int *len)
+static int GetBrightness(const void **data, unsigned int *len)
 {
     *len = sizeof(g_light.brightness);
 
     *data = malloc(*len);
     if (*data == NULL) {
-        LOG(LOG_LEVEL_INFO,"malloc err \r\n");
+        LOG(LOG_LEVEL_INFO, "malloc err \r\n");
         return -1;
     }
     (void)memset(*data, 0, *len);
 
     (void)memcpy(*data, &g_light.brightness, *len);
 
-    LOG(LOG_LVL_INFO,"get light brightness %d\r\n", g_light.brightness);
-   return 0; 
+    LOG(LOG_LVL_INFO, "get light brightness %d\r\n", g_light.brightness);
+    return 0;
 }
 static int GetMode(void **data, unsigned int *len)
 {
@@ -592,38 +583,39 @@ static int GetMode(void **data, unsigned int *len)
 
     *data = malloc(*len);
     if (*data == NULL) {
-        LOG(LOG_LEVEL_INFO,"malloc err \r\n");
+        LOG(LOG_LEVEL_INFO, "malloc err \r\n");
         return -1;
     }
     (void)memset(*data, 0, *len);
 
     (void)memcpy(*data, &g_light.lightMode, *len);
-    LOG(LOG_LEVEL_INFO,"get light mode %d\r\n", g_light.lightMode);
+    LOG(LOG_LEVEL_INFO, "get light mode %d\r\n", g_light.lightMode);
     return 0;
 }
-static int SetMode(const void*data, unsigned int len)
+static int SetMode(const void *data, unsigned int len)
 {
-     stRlLiveData_t *pLiveData = &g_stRlData.liveData;
+    stRlLiveData_t *pLiveData = &g_stRlData.liveData;
 
     g_light.lightMode = *(int *)data;
-    LOG(LOG_LEVEL_INFO,"set light mode %d\r\n", g_light.lightMode);
-    if(g_light.lightMode==LIGHT_BRIGHT_MODE_READING){
-    LampBriPercentCtrl((uint16_t)LIGHT_BRIGHT_MODE_READING_VAL, 1000);
-    g_light.brightness=LIGHT_BRIGHT_MODE_READING_VAL;
+    LOG(LOG_LEVEL_INFO, "set light mode %d\r\n", g_light.lightMode);
+    if (g_light.lightMode == LIGHT_BRIGHT_MODE_READING) {
+        LampBriPercentCtrl((uint16_t)LIGHT_BRIGHT_MODE_READING_VAL, 1000);
+        g_light.brightness = LIGHT_BRIGHT_MODE_READING_VAL;
     }
-    if(g_light.lightMode==LIGHT_BRIGHT_MODE_MOON){
-    LampBriPercentCtrl((uint16_t)LIGHT_BRIGHT_MODE_MOON_VAL, 1000);
-    g_light.brightness=LIGHT_BRIGHT_MODE_MOON_VAL;
+    if (g_light.lightMode == LIGHT_BRIGHT_MODE_MOON) {
+        LampBriPercentCtrl((uint16_t)LIGHT_BRIGHT_MODE_MOON_VAL, 1000);
+        g_light.brightness = LIGHT_BRIGHT_MODE_MOON_VAL;
     }
-    if(g_light.lightMode==LIGHT_BRIGHT_MODE_WRITE){
-    LampBriPercentCtrl((uint16_t)LIGHT_BRIGHT_MODE_WRITE_VAL, 1000);
-    g_light.brightness=LIGHT_BRIGHT_MODE_WRITE_VAL;
+    if (g_light.lightMode == LIGHT_BRIGHT_MODE_WRITE) {
+        LampBriPercentCtrl((uint16_t)LIGHT_BRIGHT_MODE_WRITE_VAL, 1000);
+        g_light.brightness = LIGHT_BRIGHT_MODE_WRITE_VAL;
     }
-    if(g_light.lightMode!=LIGHT_BRIGHT_MODE_READING&&g_light.lightMode!=LIGHT_BRIGHT_MODE_MOON&&g_light.lightMode!=LIGHT_BRIGHT_MODE_WRITE)
-    LOG(LOG_LEVEL_INFO,"set light mode error\r\n");
-    //上报
+    if (g_light.lightMode != LIGHT_BRIGHT_MODE_READING && g_light.lightMode != LIGHT_BRIGHT_MODE_MOON &&
+        g_light.lightMode != LIGHT_BRIGHT_MODE_WRITE)
+        LOG(LOG_LEVEL_INFO, "set light mode error\r\n");
+    // 上报
     MagicLinkReportServiceStatus("light");
-   return 0; 
+    return 0;
 }
 struct TestControlFunc {
     const char *svcId;
@@ -631,38 +623,36 @@ struct TestControlFunc {
     int (*setFunc)(const void *data, unsigned int len);
     int (*getFunc)(void **data, unsigned int *len);
 };
-//设备回调函数
+// 设备回调函数
 static struct TestControlFunc g_testCtrlFunc[] = {
-    { "deviceInfo", "sn", NULL, GetDevSnFunc },
-    { "deviceInfo", "udid", NULL, GetDevUdidFunc },
-    { "deviceInfo", "mac", NULL, GetDevMacFunc },
-    { "deviceInfo", "devName", SetDevNameFunc, GetDevNameFunc },
-    { "deviceInfo", "devModel", NULL, GetDevModelFunc },
-    { "deviceInfo", "subDevType", NULL, GetDevSubDevTypeFunc },
-    { "deviceInfo", "firmwareVersion", NULL, GetDevFirmwareVersionFunc },
-    { "deviceInfo", "hardwareVersion", NULL, GetDevHardwareVersionVersionFunc },
-    { "deviceInfo", "MCUVersion", NULL, GetMCUVersionFunc },
-    { "netInfo", "ssid", NULL, GetNetInfoSsidFunc },
-    { "netInfo", "rssi", NULL, GetNetInfoRssiFunc },
-    { "netInfo", "ip", NULL, GetNetInfoIpFunc },
-    { "netInfo", "bssid", NULL, GetNetInfoBssidFunc },
-    { "dvService", "switch", SetLightSwitchInt, GetLightSwitchInt },
-    { "dvService", "supportSinkSvc", SetLightSwitchInt, GetLightSwitchInt },
-    { "dvService", "devSvcStatus", SetLightSwitchInt, GetLightSwitchInt },
+    {"deviceInfo", "sn", NULL, GetDevSnFunc},
+    {"deviceInfo", "udid", NULL, GetDevUdidFunc},
+    {"deviceInfo", "mac", NULL, GetDevMacFunc},
+    {"deviceInfo", "devName", SetDevNameFunc, GetDevNameFunc},
+    {"deviceInfo", "devModel", NULL, GetDevModelFunc},
+    {"deviceInfo", "subDevType", NULL, GetDevSubDevTypeFunc},
+    {"deviceInfo", "firmwareVersion", NULL, GetDevFirmwareVersionFunc},
+    {"deviceInfo", "hardwareVersion", NULL, GetDevHardwareVersionVersionFunc},
+    {"deviceInfo", "MCUVersion", NULL, GetMCUVersionFunc},
+    {"netInfo", "ssid", NULL, GetNetInfoSsidFunc},
+    {"netInfo", "rssi", NULL, GetNetInfoRssiFunc},
+    {"netInfo", "ip", NULL, GetNetInfoIpFunc},
+    {"netInfo", "bssid", NULL, GetNetInfoBssidFunc},
+    {"dvService", "switch", SetLightSwitchInt, GetLightSwitchInt},
+    {"dvService", "supportSinkSvc", SetLightSwitchInt, GetLightSwitchInt},
+    {"dvService", "devSvcStatus", SetLightSwitchInt, GetLightSwitchInt},
 
-    { "light", "On", SetLightOnoff, GetLightOnoff},
-    { "light", "Brightness", SetBrightness, GetBrightness },
-    { "light", "lightMode", SetMode, GetMode},  
-    
-    { "lightMode", "mode", SetLightModeInt, GetLightModeInt },
-    { "volume", "volume", SetLightVolumeInt, GetLightVolumeInt },
-    { "switch", "on", SetLightSwitchInt, GetLightSwitchInt },
-    { "brightness", "brightness", SetLightBrightnessInt, GetLightBrightnessInt },
-    { "cct", "colorTemperature", SetLightCctInt, GetLightCctInt }
-};
+    {"light", "On", SetLightOnoff, GetLightOnoff},
+    {"light", "Brightness", SetBrightness, GetBrightness},
+    {"light", "lightMode", SetMode, GetMode},
 
-static int GetSvcProperty(const char *service, const char *property,
-    void **outBuf, unsigned int *outLen)
+    {"lightMode", "mode", SetLightModeInt, GetLightModeInt},
+    {"volume", "volume", SetLightVolumeInt, GetLightVolumeInt},
+    {"switch", "on", SetLightSwitchInt, GetLightSwitchInt},
+    {"brightness", "brightness", SetLightBrightnessInt, GetLightBrightnessInt},
+    {"cct", "colorTemperature", SetLightCctInt, GetLightCctInt}};
+
+static int GetSvcProperty(const char *service, const char *property, void **outBuf, unsigned int *outLen)
 {
     unsigned int num = sizeof(g_testCtrlFunc) / sizeof(struct TestControlFunc);
     for (unsigned int idx = 0; idx < num; idx++) {
@@ -684,8 +674,7 @@ static int GetSvcProperty(const char *service, const char *property,
     return -1;
 }
 
-static int SetSvcProperty(const char *service, const char *property,
-    const void *inBuf, unsigned int inLen)
+static int SetSvcProperty(const char *service, const char *property, const void *inBuf, unsigned int inLen)
 {
     unsigned int num = sizeof(g_testCtrlFunc) / sizeof(struct TestControlFunc);
     for (unsigned int idx = 0; idx < num; idx++) {
@@ -698,7 +687,7 @@ static int SetSvcProperty(const char *service, const char *property,
         }
 
         if (g_testCtrlFunc[idx].setFunc == NULL) {
-           printf("[%s|%s] no set func\r\n", service, property);
+            printf("[%s|%s] no set func\r\n", service, property);
             return -1;
         }
 
@@ -714,9 +703,8 @@ static int ExectionTestAction1(unsigned int dataNum, const struct MagicLinkDataV
         printf("no data\r\n");
         return 0;
     }
-    for (int i = 0;i < dataNum; i++) {
-        printf("%d, %s, %d", dataArray[0].dataIdx,
-            (char *)dataArray[i].data, *(int *)dataArray[i].data);
+    for (int i = 0; i < dataNum; i++) {
+        printf("%d, %s, %d", dataArray[0].dataIdx, (char *)dataArray[i].data, *(int *)dataArray[i].data);
     }
     return 0;
 }
@@ -727,12 +715,10 @@ struct TestActionFunc {
     int (*action)(unsigned int dataNum, const struct MagicLinkDataVal *dataArray);
 };
 
-static struct TestActionFunc g_testActionFunc[] = {
-    { "testAction", "testAction1", ExectionTestAction1 }
-};
+static struct TestActionFunc g_testActionFunc[] = {{"testAction", "testAction1", ExectionTestAction1}};
 
-static int Action(const char *service, const char *action,
-    unsigned int dataNum, const struct MagicLinkDataVal *dataArray)
+static int Action(const char *service, const char *action, unsigned int dataNum,
+                  const struct MagicLinkDataVal *dataArray)
 {
     printf("service[%s], action[%s]\r\n", service, action);
     unsigned int num = sizeof(g_testActionFunc) / sizeof(struct TestActionFunc);
@@ -758,10 +744,7 @@ static int Action(const char *service, const char *action,
 }
 
 static struct MagicLinkCtrlFunc ctrlFunc = {
-    .getServiceProperty = GetSvcProperty,
-    .setServiceProperty = SetSvcProperty,
-    .execAction = Action
-};
+    .getServiceProperty = GetSvcProperty, .setServiceProperty = SetSvcProperty, .execAction = Action};
 
 static void MyRecvStatus(enum MagicLinkSDKStatus status)
 {
@@ -771,10 +754,9 @@ static void MyRecvStatus(enum MagicLinkSDKStatus status)
             printf("STATUS_NETCFG_ENTER\r\n");
             break;
         case STATUS_REGISTER_RECV_INFO:
-            printf("STATUS_REGISTER_RECV_INFO\r\n"); //从日志上来说直接使用printf是能够直接打印的。
+            printf("STATUS_REGISTER_RECV_INFO\r\n");  // 从日志上来说直接使用printf是能够直接打印的。
             break;
-        case STATUS_LOGIN_ONLINE:
-         {
+        case STATUS_LOGIN_ONLINE: {
             printf("device login online\r\n");
             rlFlagSet(RL_FLAG_SYS_DEV_ONLINE, 1);
 #if IS_LAMP_DEV_TYPE_USED()
@@ -784,12 +766,11 @@ static void MyRecvStatus(enum MagicLinkSDKStatus status)
 #endif
             break;
         }
-        case STATUS_LOGIN_OFFLINE:
-            {
+        case STATUS_LOGIN_OFFLINE: {
             printf("device login offline\r\n");
             rlFlagSet(RL_FLAG_SYS_DEV_ONLINE, 0);
             break;
-            }
+        }
         case STATUS_DEVICE_DELETE:
             printf("device delete\r\n");
             rlFlagSet(RL_FLAG_SYS_FACTORY_RESET, 1);
@@ -835,7 +816,7 @@ static int MyGetHardwareRootKey(unsigned char *rootKeyBuf, unsigned int rootKeyB
 
 static int GetPin(char *pinBuf, unsigned int pinBufLen)
 {
-    char *pin ="123456";
+    char *pin = "123456";
 
     (void)memset(pinBuf, 0, pinBufLen);
     (void)memcpy(pinBuf, pin, strlen(pin));
