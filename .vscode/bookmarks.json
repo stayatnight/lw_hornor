@@ -29,6 +29,16 @@
 					"label": "版本"
 				}
 			]
+		},
+		{
+			"path": "ln882h-custom-imou/project/yankon/app/lamptask.h",
+			"bookmarks": [
+				{
+					"line": 15,
+					"column": 28,
+					"label": "灯光参数"
+				}
+			]
 		}
 	]
 }

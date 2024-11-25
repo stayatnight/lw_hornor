@@ -748,7 +748,6 @@ static void key_app_task_entry(void *params)
 
     while(rlFlagGet(RL_FLAG_TASK_KEY_RUNNING)) {
         vTaskDelay(10);
-    
         myKeyboardLoop();
     }
        LOG(LOG_LVL_INFO,"KEY APP TASK END ");

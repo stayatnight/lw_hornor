@@ -37,7 +37,6 @@ static void flash_test ()
     uint8_t *test_data = {"1234567890abcdef"};
     //uint8_t *temp={""}; 写法错误
     
-    
     uint32_t len_test_data=strlen(test_data)+1;
     uint8_t temp[len_test_data];
     myhal_flash_write(MAC_FLASH_ADDR,test_data,len_test_data);
@@ -68,7 +67,6 @@ int main (int argc, char* argv[])
     log_init();
 // extern int ate_init(void);
   //  ate_init();
-
     //4.cm backtrace
     cm_backtrace_init("combo_mcu_basic_example", "hw", "sw");
     LOG(LOG_LVL_INFO, "------  combo_mcu_basic_example  ------\r\n");
@@ -76,7 +74,6 @@ int main (int argc, char* argv[])
     if (NVDS_ERR_OK != ln_nvds_init(NVDS_SPACE_OFFSET)) {
         LOG(LOG_LVL_ERROR, "NVDS init filed!\r\n");
     }
-
     if (KV_ERR_NONE != ln_kv_port_init(KV_SPACE_OFFSET, (KV_SPACE_OFFSET + KV_SPACE_SIZE))) {
         LOG(LOG_LVL_ERROR, "KV init filed!\r\n");
     }
@@ -85,7 +82,6 @@ int main (int argc, char* argv[])
 
     //7.rf preprocess,img cal
     wifi_rf_calibration();
-
     //8.Init wifi stack.
     wifi_init();
 //    wlib_pvtcmd_output_cb_set(ln_at_vprintf);

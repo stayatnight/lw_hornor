@@ -99,8 +99,6 @@ return 0;
 int8_t myhal_gpio_set_status(gpio_pin_t pin,hal_io_status_t status)
 {
 
-
-
 }
 int8_t myhal_gpiob_get_status(gpio_pin_t pin ,hal_io_status_t *status)
 {
