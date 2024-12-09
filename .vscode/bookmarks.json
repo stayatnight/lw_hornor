@@ -39,6 +39,16 @@
 					"label": "灯光参数"
 				}
 			]
+		},
+		{
+			"path": "ln882h-custom-imou/project/yankon/app/usr_app.c",
+			"bookmarks": [
+				{
+					"line": 638,
+					"column": 0,
+					"label": "更新pwm"
+				}
+			]
 		}
 	]
 }

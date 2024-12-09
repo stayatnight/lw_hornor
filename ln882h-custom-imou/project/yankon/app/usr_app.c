@@ -401,7 +401,7 @@ static void _normalKeyShortReleaseCb(uint32_t keyVal, uint32_t flag)
                 LOG(LOG_LVL_INFO, "release key switch\n");
             }
 
-            rlLampSwitchRevert(pLiveData->uwAdjDuration);
+            rlLampSwitchRevert(800);
             break;
         default:
             break;
