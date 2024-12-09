@@ -6,11 +6,11 @@
 #define PWM_C                                           GPIO_PIN_7
 #define PWM_MAX                                         (100)
 #define LIGHT_BRIGHT_MAX                                   (100)
-#define LIGHT_BRIGHT_MIN                                   (uint16_t)(LIGHT_BRIGHT_MAX * 1.0f / 100.0f + 0.5f)
+#define LIGHT_BRIGHT_MIN                                   (uint16_t)(LIGHT_BRIGHT_MAX * 5.0f / 100.0f + 0.5f)
 #define LIGHT_COLOR_CCT_MIN                                (3000)
 #define LIGHT_COLOR_CCT_MAX                                (5700)
 //渐变时间
-#define DIMMING_TRANSIT_TIME                               (1000) //ms
+#define DIMMING_TRANSIT_TIME                               (800) //ms
 #if (APP_DEV_TYPE_USED == APP_DEV_TYPE_LAMP_READING) //reading
 #define LIGHT_CCT_ENABLE                                   (1)
 #define LIGHT_PWM_FREQ                                     (10000)//频率要高于10000hz

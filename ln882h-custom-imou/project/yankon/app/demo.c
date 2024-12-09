@@ -14,6 +14,9 @@
 #include "lamptask.h"
 #include "utils/debug/log.h"
 #include "ble_arch/arch.h"
+#include"flash.h"
+#include "utils/ln_misc.h"
+#include "utils/system_parameter.h"
 #define MY_PRDKEY    "c76c504e94ad4c34b6d0c87d5d90ac43"
 #define MY_PRDSECRET "6ece2cc39cb42c83465650af3b6ae2ae"
 
@@ -25,22 +28,22 @@
  * 起始地址 ||0x00000000||0x00006000||0x00007000||0x00133000||0x001DD000||0x001E9000||0x001F9000||0x001FC000||
  * 分区大小 ||24KB      ||4KB       ||1200KB    ||680Kb     ||48 Kb     ||64Kb      ||12Kb      ||16Kb      ||
  */
-
+uint8_t sg_mac[6] = {0};
 #define CONFIG_FLASH_BASE_ADDR (0x001DD000) /* ln882hCONF分区存放SDK注册信息、秘钥等数据 */
 static int myHalWifiGetMacAddr(char *mac, uint32_t macBufSize)
 {
-    char buf[32] = {0};
+    char buf[6] = {0};
 
     if (!mac ||
-        macBufSize < 18) {  // 修改为18，因为MAC地址字符串形式为"XX:XX:XX:XX:XX:XX"，长度为17，额外一个字符用于'\0'
+        macBufSize < 6) {  // 修改为18，因为MAC地址字符串形式为"XX:XX:XX:XX:XX:XX"，长度为17，额外一个字符用于'\0'
         return -1;
     }
-    if (0 != ln_ble_mac_get(buf)) {
+    if (0 != sysparam_sta_mac_get(buf)) {
         return -2;
     }
 
     // 修正MAC地址的显示顺序
-    printf("get mac [%02X:%02X:%02X:%02X:%02X:%02X]\r\n", buf[5], buf[4], buf[3], buf[2], buf[1], buf[0]);
+    printf("get sn1 [%02X:%02X:%02X:%02X:%02X:%02X]\r\n", buf[5], buf[4], buf[3], buf[2], buf[1], buf[0]);
 
     // 修正mac地址的赋值逻辑
     sprintf(mac, "%02X%02X%02X%02X%02X%02X", buf[5], buf[4], buf[3], buf[2], buf[1], buf[0]);
@@ -49,13 +52,16 @@ static int myHalWifiGetMacAddr(char *mac, uint32_t macBufSize)
 }
 static int GetDevSnFunc(void **data, unsigned int *len)
 {
-    char         sn[32] = {0};
-    char        *tmp    = sn;
+   
+    char sn[32]={0};
+    char*tmp=sn;
     unsigned int tmpLen = 0;
-    myHalWifiGetMacAddr(sn, 32);
-    printf("get dev sn %s\r\n", sn);
-    printf("get mac [%02X:%02X:%02X:%02X:%02X:%02X]\r\n", sn[5], sn[4], sn[3], sn[2], sn[1], sn[0]);
-    tmpLen = strlen(tmp) + 1;  // 实际存储字符串的空间需要使用包含结束符的长度
+    myHalWifiGetMacAddr(sn, 6);
+    printf("get sn [%02X:%02X:%02X:%02X:%02X:%02X]\r\n", sg_mac[5], sg_mac[4], sg_mac[3], sg_mac[2], sg_mac[1], sg_mac[0]);
+   // sprintf(sn, "%02X%02X%02X%02X%02X%02X", sg_mac[5], sg_mac[4], sg_mac[3], sg_mac[2], sg_mac[2], sg_mac[0]);
+   
+   
+    tmpLen = strlen(sn) + 1;  // 实际存储字符串的空间需要使用包含结束符的长度
     *len   = tmpLen - 1;       // 返回的长度为字符串实际的长度，不包含结束符
     *data  = malloc(tmpLen);
     if (*data == NULL) {
@@ -64,7 +70,7 @@ static int GetDevSnFunc(void **data, unsigned int *len)
     }
     (void)memset(*data, 0, tmpLen);
 
-    (void)strcpy(*data, tmp);
+    (void)strcpy(*data, sn);
 
     return 0;
 }

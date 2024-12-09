@@ -11,7 +11,8 @@ int myhal_flash_read(uint32_t addr, uint8_t *buf,  uint32_t len)
     if (!buf || addr+len>=MY_HAL_FLASH_SIZE) {
         return -1;
     }
-hal_flash_read(MY_HAL_FLASH_BASE+addr, len, buf);
+res=hal_flash_read(MY_HAL_FLASH_BASE+addr, len, buf);
+//printf("the content is %s\n",buf);
 return (res == 0 ? 0 : -2);
 }
 int myhal_flash_write(uint32_t addr, uint8_t *buf,  uint32_t len)

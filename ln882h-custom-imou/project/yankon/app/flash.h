@@ -6,7 +6,7 @@
 //user 分区，user size :64kb
 #define MY_HAL_FLASH_BASE                                    (0x001E9000)
 #define MY_HAL_FLASH_SIZE                                      (1024*64)
-#define MAC_FLASH_ADDR                                  0
+#define MAC_FLASH_ADDR                                  0                             
 #define FCT_DATA_FLASH_ADDR                             4096
 #define CFG_DATA_FLASH_ADDR                             4096*2
 #define CFG_DATA_FLASH_ADDR_BACKUP                      4096*3
