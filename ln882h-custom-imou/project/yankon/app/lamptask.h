@@ -13,7 +13,7 @@
 #define DIMMING_TRANSIT_TIME                               (800) //ms
 #if (APP_DEV_TYPE_USED == APP_DEV_TYPE_LAMP_READING) //reading
 #define LIGHT_CCT_ENABLE                                   (1)
-#define LIGHT_PWM_FREQ                                     (10000)//频率要高于10000hz
+#define LIGHT_PWM_FREQ                                     (100000)//频率要高于10000hz
 #define LIGHT_PWM_OUTPUT_MAX_POWER_RATIO                   (1.00)  //最大100%功率输出
 #define LIGHT_PWM_BRIGHT_MIN_PERCENT                       (0.01f) //percent: 0.00f-1.00f : 0%-100%
 #define LIGHT_PWM_BRIGHT_DEF_PERCENT                       (1.0f)  //percent: 0.00f-1.00f : 0%-100%
