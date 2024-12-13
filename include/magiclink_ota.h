@@ -16,7 +16,6 @@ typedef struct MagicLinkOtaFunc {
     /* 存储版本包回调 */
     int (*writeOtaPkg)(const void *position, unsigned int offset, const void *data, unsigned int len,
         OtaPackageBufType type);
-
     /* 执行升级动作 */
     int (*execOta)(void);
 

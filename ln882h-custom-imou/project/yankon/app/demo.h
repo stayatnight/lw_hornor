@@ -10,6 +10,7 @@ void MagicLinkDataRsync();
 #define LAMP_TASK_EN 1
 #define KEY_TASK_EN 1
 #define WIFI_APP_TASK 1
+//#define ble_adv_
 #ifdef __cplusplus
 }
 #endif /* __cplusplus */

@@ -10,7 +10,7 @@ extern "c" {
 
 enum MagicLinkAttr {
     /* 配网参数 */
-    MAGICLINK_ATTR_NETCFG_TIMEOUT = 3, /* 整数，单位为min，0表示配网永远不超时自动退出 */
+    MAGICLINK_ATTR_NETCFG_TIMEOUT = 0, /* 整数，单位为min，0表示配网永远不超时自动退出 */
 
     /* 传输参数 */
     MAGICLINK_ATTR_MQTT_BUF_SIZE = 100, /* 整数，为发送报文长度，如不设置默认为MAGICLINK_ATTR_MQTT_BUF_SIZE(2048), 可设置最大长度为32Kb */

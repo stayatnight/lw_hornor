@@ -22,7 +22,7 @@
 
 #define MY_LICENSE_KEY    "******11a3f920e20b0e425d824d62bc0a16234e"
 #define MY_LICENSE_SECRET "******23e8af0da99c406f62f4fb13b713a846a5cf5e6893098e2138d58aeb3e"
-
+static BaseType_t isNetCfgRunning = pdFALSE;
 /* ln882h固件分区分布，后续写入说明文档,并协调厂商给OTA升级留足空间
  * 分区     ||BOOT      ||PART_TAB  ||APP       ||OTA       ||CONF      ||USER      ||NVDS      ||KV       ||
  * 起始地址 ||0x00000000||0x00006000||0x00007000||0x00133000||0x001DD000||0x001E9000||0x001F9000||0x001FC000||
@@ -101,7 +101,16 @@ static int GetDevUdidFunc(void **data, unsigned int *len)
 
     return 0;
 }
-
+static void vTimerCallback(TimerHandle_t xTimer) {
+    // 停止配网
+    if (isNetCfgRunning == pdTRUE) {
+        // 调用停止配网的函数，这里假设函数名为 StopNetCfg
+    printf("stop netcfg\r\n");
+    MagicLinkStopNetCfg();
+     ln_ble_adv_stop();
+    isNetCfgRunning = pdFALSE;
+    }
+}
 static char g_devName[64] = "BW_LAMP_CANL";
 /* 设备名称的获取需从持久化保存单元获取， 全局变量g_devName仅作为示例 */
 /* 设备重置（RESET）后，设备名的存储单元内容需更新为默认设备名称 */
@@ -833,7 +842,7 @@ static int GetPin(char *pinBuf, unsigned int pinBufLen)
 void MagicLinkSDKRun()
 {
     printf("MEM enter MagicLinkSDKRun [%d]\r\n", xPortGetFreeHeapSize());
-
+   //更改这个感觉没什么用
     unsigned int timeout = 10;
     if (MagicLinkSetAttr(MAGICLINK_ATTR_NETCFG_TIMEOUT, &timeout, sizeof(timeout)) != 0) {
         return;
@@ -844,7 +853,8 @@ void MagicLinkSDKRun()
         printf("set cfg addr fail\r\n");
         return;
     }
-
+    const TickType_t x10Minutes = pdMS_TO_TICKS(10*60 * 1000);
+    TimerHandle_t x10MinutesTimer = xTimerCreate("10Minutes", x10Minutes, pdTRUE, (void *)1, vTimerCallback);
     if (MagicLinkRegGetPin(&GetPin) != 0) {
         printf("reg pin fail\r\n");
         return;
@@ -874,9 +884,14 @@ void MagicLinkSDKRun()
 
     /* 设备未注册到设备云，启动配网 */
     if (MagicLinkIsRegistered() == false) {
+        isNetCfgRunning = pdTRUE;
         if (MagicLinkStartNetCfg() != 0) {
             return;
         }
+    }
+    if(xTimerStart(x10MinutesTimer,0)!=pdPASS)
+    {
+        printf("xTimerStart fail\r\n");
     }
 
     printf("MEM Start demo [%d]\r\n", xPortGetFreeHeapSize());

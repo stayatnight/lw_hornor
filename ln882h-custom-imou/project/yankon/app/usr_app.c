@@ -46,6 +46,7 @@
 #include "ln_flash_test.h"
 #include "utils/reboot_trace/reboot_trace.h"
 #include "appConfig.h"
+#include "ln_ble_advertising.h"
 static OS_Thread_t g_usr_app_thread;
 #define USR_APP_TASK_STACK_SIZE 4800  // Byte
 
@@ -152,6 +153,7 @@ static uint32_t djb_hash_hexdata(const char *input, uint32_t len)
     return hash;
 }
 static xTimerHandle s_resetWindowTimerHandle, s_lampctrlTimer;
+static xTimerHandle s_closeAdvTimerHandle;
 static void         chip_mac_gen(void)
 {
     hal_flash_read_unique_id(g_chip_uid);
@@ -315,6 +317,12 @@ void _lampFactoryResetWindowTimeoutHandle(xTimerHandle pxTimer)
 {
     LOG(LOG_LVL_INFO, "close factory reset window\r\n");
     rlFlagSet(RL_FLAG_SYS_FACTORY_WINDOW, 0);
+}
+static void _lampCloseAdv(xTimerHandle pxTimer)
+{
+MagicLinkStopNetCfg();
+ ln_ble_adv_stop();
+ LOG(LOG_LVL_INFO, "stop adv\r\n");
 }
 static void ap_startup_cb(void *arg)
 {
@@ -710,9 +718,11 @@ static int rlTaskLampInit(void *arg)
     // 30s后关闭长按重置
     myLampRegisterDimmingStatusCtrlHook(gucLampId, _lampStateControlHook);
     s_resetWindowTimerHandle =
-        xTimerCreate((const char *)"reset", (30000 / portTICK_RATE_MS), 0, NULL, _lampFactoryResetWindowTimeoutHandle);
+    xTimerCreate((const char *)"reset", (30000 / portTICK_RATE_MS), 0, NULL, _lampFactoryResetWindowTimeoutHandle);
     xTimerStart(s_resetWindowTimerHandle, 0);
-
+//计时位置
+   //s_closeAdvTimerHandle= xTimerCreate((const char *)"closeAdv", (30000 / portTICK_RATE_MS), 0, NULL, _lampCloseAdv);
+   // xTimerStart(s_closeAdvTimerHandle, 0);
     LOG(LOG_LVL_INFO, "LAMP INIT OK ");
     return 0;
 }

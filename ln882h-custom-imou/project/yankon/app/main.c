@@ -58,8 +58,9 @@ int main (int argc, char* argv[])
     SetSysClock();
     set_interrupt_priority();
     switch_global_interrupt(HAL_ENABLE);
-    ln_runtime_measure_init();
 
+    ln_runtime_measure_init();
+//调试和计数器
     //2. register os heap mem
     OS_DefineHeapRegions();
 
@@ -87,10 +88,12 @@ int main (int argc, char* argv[])
 //    wlib_pvtcmd_output_cb_set(ln_at_vprintf);
     rlDataInit();
     //9.Init lwip stack.
-    lwip_tcpip_init();
+    lwip_tcpip_init();//初始化lwip
+
     if ( 0 != ota_port_init()) {
         LOG(LOG_LVL_ERROR, "ota port failed!\r\n");
     }
+    //创建用户任务
     creat_usr_app_task();
 
     OS_ThreadStartScheduler();

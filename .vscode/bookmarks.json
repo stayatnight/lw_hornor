@@ -47,6 +47,11 @@
 					"line": 638,
 					"column": 0,
 					"label": "更新pwm"
+				},
+				{
+					"line": 714,
+					"column": 6,
+					"label": "计时"
 				}
 			]
 		}
