@@ -1,0 +1,226 @@
+------  combo_mcu_basic_example  ------
+------  combo_mcu_basic_example  ------
+
+*********************** Module Info *************************
+PID:XXXX name 阳光博荣台灯S firmware version:1.0.1.209
+release: Dec 16 2024 13:12:44
+magiclink Version:
+*************************************************************
+TCP/IP initialized.
+LAMP INIT TEST LN882H SDK Ver: 2.1_rc1 [build time:Dec 16 2024 13:12:44][0x02010001]
+LAMP INIT OK
+             GPIOB  STATUS:0
+                            key init ok
+MEM enter MagicLinkSDKRun [105584]
+LAMP INIT OK 0000000002|MagicLinkComponentsInit|85|[I]:module:logcollect
+0000000004|InitComponent|60|[I]:enable:logcollect
+0000000004|InitComponent|64|[W]:no comp:logcollect
+0000000005|MagicLinkInit|164|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_INIT, 0
+VER:IoTSDK_1.1.0.344_20240413_test_debug, TM:Apr 13 2024 14:57:17
+
+0000000014|MagicLinkParsePropertyList|207|[I]:succ svc:baseInfo, access:0
+0000000015|MagicLinkParseActionList|328|[I]:no actionList
+0000000016|MagicLinkParsePropertyList|207|[I]:succ svc:deviceInfo, access:7
+0000000017|MagicLinkParseActionList|328|[I]:no actionList
+0000000018|MagicLinkParsePropertyList|207|[I]:succ svc:netInfo, access:5
+0000000019|MagicLinkParseActionList|328|[I]:no actionList
+0000000020|MagicLinkParsePropertyList|207|[I]:succ svc:ota, access:7
+0000000021|MagicLinkParseAction|297|[W]:no inDataList
+0000000022|MagicLinkParseAction|310|[W]:no outDataList
+0000000022|MagicLinkParseAction|297|[W]:no inDataList
+0000000023|MagicLinkParseAction|310|[W]:no outDataList
+0000000024|MagicLinkParsePropertyList|207|[I]:succ svc:light, access:7
+0000000024|MagicLinkParseActionList|328|[I]:no actionList
+0000000027|ModelParseJson|181|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_PROFILE_PARSE, 0
+0000000029|NetworkManagementInit|1658|[W]:succ
+0000000029|NetworkInit|70|[I]:succ
+0000000030|DiscoveryInit|556|[I]:succ
+0000000030|TransmissionInit|40|[I]:succ
+0000000031|CloudLinkMqttInit|1092|[I]:succ
+0000000031|ConnectRegRecvPacket|392|[I]:add:1 succ
+0000000032|ConnectRegSendPacket|361|[I]:add:1 succ
+0000000033|ConnectMsgProcessInit|2631|[E]:sem init
+0000000034|ConnectInit|549|[I]:succ
+0000000034|MagicLinkComponentsInit|85|[I]:module:p2p
+0000000035|InitComponent|60|[I]:enable:p2p
+0000000036|InitComponent|64|[W]:no comp:p2p
+0000000036|MagicLinkComponentsInit|85|[I]:module:blenetcfg
+0000000037|InitComponent|60|[I]:enable:blenetcfg
+0000000037|ConnectRegSendPacket|361|[I]:add:3 succ
+0000000038|MagicLinkComponentsInit|85|[I]:module:coapconnect
+0000000039|InitComponent|60|[I]:enable:coapconnect
+udp_bind(ipaddr = 0.0.0.0, port = 5683)
+                                       0000000040|ConnectRegSendPacket|361|[I]:add:2 succ
+0000000041|ConnectRegRecvPacket|392|[I]:add:2 succ
+0000000041|NetworkSetItemValueByStr|929|[E]:inv dst:prdName
+0000000042|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdName
+0000000043|NetworkSetItemValueByStr|929|[E]:inv dst:manufactureName
+0000000044|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:manufactureName
+0000000045|NetworkSetItemValueByStr|929|[E]:inv dst:prdTypeName
+0000000046|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdTypeName
+0000000047|NetworkSetItemValueByStr|929|[E]:inv dst:modelId
+0000000047|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:modelId
+0000000048|NetworkSetItemValueByStr|929|[E]:inv dst:offeringCode
+0000000049|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:offeringCode
+0000000050|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeId
+0000000051|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeId
+0000000051|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeName
+0000000052|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeName
+0000000053|NetworkSetItemValueByStr|929|[E]:inv dst:qrScanMode
+0000000054|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:qrScanMode
+get sn1 [DF:2D:4A:AB:50:00]
+get sn [00:00:00:00:00:00]
+0000000056|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:udid
+0000000057|NetworkSetItemValueByStr|929|[E]:inv dst:devName
+0000000058|ModelSetDevInfoToNetwork|290|[E]:set item:deviceInfo:devName
+firmVer:1.0.1.209
+0000000059|ModelSetDevInfoToNetwork|272|[E]:set:deviceInfo:sdkVersion
+MCUVer:1.0.0
+0000000092|MagicLinkHuksHalRegister|243|[I]:succ
+0000000093|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000094|ConfigRead|278|[E]:header
+0000000095|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000095|ConfigRead|278|[E]:header
+0000000096|MagicLinkSafeConfigRead|434|[I]:cfg empty
+0000000097|ReadRegisterResultData|1466|[E]:cfg read
+0000000097|MagicLinkNetworkUpdateRegResult|2059|[W]:no reg ret
+0000000098|MagicLinkComponentsInit|85|[I]:module:netcfg
+0000000099|InitComponent|60|[I]:enable:netcfg
+0000000099|OnRegSessionServerRestart|1216|[I]:succ reg cb:hihonor.magiclinksdk,netCfg
+0000000101|NetCfgInit|739|[I]:succ
+0000000101|MagicLinkComponentsInit|85|[I]:module:register
+0000000102|InitComponent|60|[I]:enable:register
+0000000102|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000103|MagicLinkParseAction|297|[W]:no inDataList
+0000000104|MagicLinkParseAction|310|[W]:no outDataList
+0000000105|MagicLinkParseAction|297|[W]:no inDataList
+0000000106|MagicLinkParseAction|310|[W]:no outDataList
+0000000106|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,register
+0000000107|StartRegister|2170|[I]:start:0
+0000000108|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000109|ConfigRead|278|[E]:header
+0000000110|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000111|ConfigRead|278|[E]:header
+0000000111|MagicLinkSafeConfigRead|434|[I]:cfg empty
+0000000112|ReadRegisterData|1606|[E]:read cfg
+0000000112|ReadRegisterData|1608|[E]:MAGICLINK_CONFIG, MAGICLINK_READ_REGINFO_FAIL, -1
+0000000113|StartRegister|2182|[W]:no reg info
+0000000114|RegisterInit|2042|[I]:succ
+0000000115|MagicLinkComponentsInit|85|[I]:module:control
+0000000115|InitComponent|60|[I]:enable:control
+0000000116|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,control
+0000000117|MagicLinkComponentsInit|85|[I]:module:ota
+0000000118|InitComponent|60|[I]:enable:ota
+0000000118|MagicLinkOtaFuncInit|103|[I]:init
+0000000119|OtaInit|3516|[I]:succ
+0000000119|MagicLinkComponentsInit|85|[I]:module:bi
+0000000120|InitComponent|60|[I]:enable:bi
+0000000120|InitComponent|64|[W]:no comp:bi
+0000000121|MagicLinkComponentsInit|85|[I]:module:magiclinkactive
+0000000122|InitComponent|60|[I]:enable:magiclinkactive
+0000000122|InitComponent|64|[W]:no comp:magiclinkactive
+0000000123|MagicLinkComponentsInit|85|[I]:module:netparamsync
+0000000124|InitComponent|60|[I]:enable:netparamsync
+0000000124|InitComponent|64|[W]:no comp:netparamsync
+0000000125|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000126|ExtComponentsMngtInit|108|[I]:not reg
+0000000126|SetLocalInfo|93|[I]:not reg
+0000000127|MagicLinkInit|235|[W]:succ
+0000000127|MagicLinkFastOffline|1827|[I]:fast offline
+0000000128|MagicLinkFastOffline|1829|[I]:already offline
+[low_level_output, 70] netif is not link up.
+[low_level_output, 70] netif is not link up.
+[low_level_output, 70] netif is not link up.
+[low_level_output, 70] netif is not link up.
+0000002129|NetCfgStart|622|[I]:start
+0000002129|WifiInit|134|[I]:INIT DONE
+0000002130|OnRemoveSessionServer|1169|[I]:succ rm server:hihonor.magiclinksdk,netCfg
+0000002131|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,netCfg
+0000002132|MagicLinkParseAction|297|[W]:no inDataList
+0000002133|MagicLinkParseAction|310|[W]:no outDataList
+0000002134|MagicLinkParseAction|297|[W]:no inDataList
+0000002134|MagicLinkParseAction|310|[W]:no outDataList
+0000002135|MagicLinkParseAction|297|[W]:no inDataList
+0000002136|MagicLinkParseAction|310|[W]:no outDataList
+0000002136|NetcfgGetTimeout|210|[I]:timeout:10
+0000002137|DiscoveryAddPublishInfo|117|[I]:succ
+0000002138|PublishService|115|[I]:BLE adv start
+[BLIB_I]BLIB Ver: 1.0.5 [build time:Mar 16 2024 21:17:13][0x010005ff][for custom-imou Commit 2cda23ab]
+0000002141|BleStackInit|275|[I]:ble roal 1                      init suc
+0000002142|ProcGattReg|566|[I]:reg:0
+0000002143|AddGattDescriptor|349|[I]:add default desc
+0000002143|AddGattDescriptor|349|[I]:add default desc
+0000002144|ProcGattAddSvc|590|[I]:add svc:0, svc handle:0, char handle:16
+0000002146|ProcGapStartAdv|341|[I]:start adv:0
+0000002147|StartAdv|537|[I]:adv suc
+0000002147|ModelNotifyStatus|448|[I]:status:100
+current status is 100
+STATUS_NETCFG_ENTER
+MEM Start demo [84456]
+0000005149|ConnectDispatchFunc|83|[I]:running
+0000009869|ConnectMsgProcessFunc|2338|[I]:running
+0000010149|ConnectDispatchFunc|83|[I]:running
+0000015149|ConnectDispatchFunc|83|[I]:running
+0000019569|ConnectMsgProcessFunc|2338|[I]:running
+0000020149|ConnectDispatchFunc|83|[I]:running
+0000025149|ConnectDispatchFunc|83|[I]:running
+0000029279|ConnectMsgProcessFunc|2338|[I]:running
+close factory reset window
+0000030149|ConnectDispatchFunc|83|[I]:running
+0000035149|ConnectDispatchFunc|83|[I]:running
+0000038648|BleConnectedCb|152|[I]:ble conn
+0000038649|UpdateConnParam|123|[I]:update conn param
+0000038649|ProcGapConnect|373|[I]:interval:0, addr:*:*:*:92:c4:91
+0000038779|ProcGapSetMtu|558|[I]:MTU 512
+0000039000|ConnectMsgProcessFunc|2338|[I]:running
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x11,length:0x2
+0000039470|BleGattWriteReqCb|211|[I]:gatt write
+0000039470|ProcessRecvFrame|286|[E]:header
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x14,length:0x2
+0000039620|BleGattWriteReqCb|211|[I]:gatt write
+0000039620|ProcessRecvFrame|286|[E]:header
+0000040151|ConnectDispatchFunc|83|[I]:running
+0000045151|ConnectDispatchFunc|83|[I]:running
+0000048701|ConnectMsgProcessFunc|2338|[I]:running
+0000050151|ConnectDispatchFunc|83|[I]:running
+0000055151|ConnectDispatchFunc|83|[I]:running
+0000058411|ConnectMsgProcessFunc|2338|[I]:running
+adc raw:  762, temp_IC:   21
+Total:129764; Free:89368;
+0000060151|ConnectDispatchFunc|83|[I]:running
+0000065151|ConnectDispatchFunc|83|[I]:running
+0000068111|ConnectMsgProcessFunc|2338|[I]:running
+0000070151|ConnectDispatchFunc|83|[I]:running
+0000075151|ConnectDispatchFunc|83|[I]:running
+0000077831|ConnectMsgProcessFunc|2338|[I]:running
+0000080151|ConnectDispatchFunc|83|[I]:running
+0000085151|ConnectDispatchFunc|83|[I]:running
+0000087541|ConnectMsgProcessFunc|2338|[I]:running
+0000090151|ConnectDispatchFunc|83|[I]:running
+0000095151|ConnectDispatchFunc|83|[I]:running
+0000097241|ConnectMsgProcessFunc|2338|[I]:running
+0000100151|ConnectDispatchFunc|83|[I]:running
+0000105151|ConnectDispatchFunc|83|[I]:running
+0000106961|ConnectMsgProcessFunc|2338|[I]:running
+0000110151|ConnectDispatchFunc|83|[I]:running
+0000115151|ConnectDispatchFunc|83|[I]:running
+0000116661|ConnectMsgProcessFunc|2338|[I]:running
+adc raw:  771, temp_IC:   25
+Total:129764; Free:89368;
+0000120151|ConnectDispatchFunc|83|[I]:running
+0000125151|ConnectDispatchFunc|83|[I]:running
+0000126371|ConnectMsgProcessFunc|2338|[I]:running
+0000130151|ConnectDispatchFunc|83|[I]:running
+0000135151|ConnectDispatchFunc|83|[I]:running
+0000136071|ConnectMsgProcessFunc|2338|[I]:running
+0000140151|ConnectDispatchFunc|83|[I]:running
+0000145151|ConnectDispatchFunc|83|[I]:running
+0000145791|ConnectMsgProcessFunc|2338|[I]:running
+0000147410|BleDisconnectedCb|178|[I]:ble disconn
+0000147411|ProcGapDisconnect|534|[I]:disconn id:0
+0000147412|ProcGapStartAdv|341|[I]:start adv:0
+0000147412|StartAdv|537|[I]:adv suc
+0000150153|ConnectDispatchFunc|83|[I]:running
+0000155153|ConnectDispatchFunc|83|[I]:running
+0000155503|ConnectMsgProcessFunc|2338|[I]:running
+0000160153|ConnectDispatchFunc|83|[I]:running

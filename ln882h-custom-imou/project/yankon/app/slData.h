@@ -23,7 +23,7 @@ extern "C" {
 /******************************************************************************
 *                                Defines                                      *
 ******************************************************************************/
-#define MY_COMPILE_VER                                     "1.0.1.207"
+#define MY_COMPILE_VER                                     "1.0.1.211"
 
 #if (APP_DEV_TYPE_USED  == APP_DEV_TYPE_LAMP_READING)
 #define RL_FIRMWARE_VER                                    MY_COMPILE_VER//"v1.1.3"
@@ -39,8 +39,7 @@ extern "C" {
 #define RL_DEV_NAME_DEF                                    "阳光星辰吸顶灯"
 #define RL_DEV_MODEL                                       "MXL1151"
 #define RL_SUB_DEV_TYPE                                    "0"
-#define RL_DEV_MCU_VER                                     ""
-#define RL_DEV_DURATION_DEF                                RL_ADJ_500MS
+-/#define RL_DEV_DURATION_DEF                                RL_ADJ_500MS
 #elif (APP_DEV_TYPE_USED  == APP_DEV_TYPE_LAMP_BEDSIDE)
 #define RL_FIRMWARE_VER                                    MY_COMPILE_VER//"v1.0.3"
 #define RL_HARDWARE_VER                                    "v1.0.0"

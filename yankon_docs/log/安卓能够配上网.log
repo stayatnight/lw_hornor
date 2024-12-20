@@ -1,0 +1,702 @@
+------  combo_mcu_basic_example  ------
+
+*********************** Module Info *************************
+PID:XXXX name 阳光博荣台灯S firmware version:1.0.1.209
+release: Dec 16 2024 13:12:44
+magiclink Version:
+*************************************************************
+TCP/IP initialized.
+LAMP INIT TEST LN882H SDK Ver: 2.1_rc1 [build time:Dec 16 2024 13:12:44][0x02010001]
+LAMP INIT OK
+             GPIOB  STATUS:0
+                            key init ok
+MEM enter MagicLinkSDKRun [105584]
+LAMP INIT OK 0000000002|MagicLinkComponentsInit|85|[I]:module:logcollect
+0000000004|InitComponent|60|[I]:enable:logcollect
+0000000004|InitComponent|64|[W]:no comp:logcollect
+0000000005|MagicLinkInit|164|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_INIT, 0
+VER:IoTSDK_1.1.0.344_20240413_test_debug, TM:Apr 13 2024 14:57:17
+
+0000000014|MagicLinkParsePropertyList|207|[I]:succ svc:baseInfo, access:0
+0000000015|MagicLinkParseActionList|328|[I]:no actionList
+0000000016|MagicLinkParsePropertyList|207|[I]:succ svc:deviceInfo, access:7
+0000000017|MagicLinkParseActionList|328|[I]:no actionList
+0000000018|MagicLinkParsePropertyList|207|[I]:succ svc:netInfo, access:5
+0000000019|MagicLinkParseActionList|328|[I]:no actionList
+0000000020|MagicLinkParsePropertyList|207|[I]:succ svc:ota, access:7
+0000000021|MagicLinkParseAction|297|[W]:no inDataList
+0000000022|MagicLinkParseAction|310|[W]:no outDataList
+0000000022|MagicLinkParseAction|297|[W]:no inDataList
+0000000023|MagicLinkParseAction|310|[W]:no outDataList
+0000000024|MagicLinkParsePropertyList|207|[I]:succ svc:light, access:7
+0000000024|MagicLinkParseActionList|328|[I]:no actionList
+0000000027|ModelParseJson|181|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_PROFILE_PARSE, 0
+0000000029|NetworkManagementInit|1658|[W]:succ
+0000000029|NetworkInit|70|[I]:succ
+0000000030|DiscoveryInit|556|[I]:succ
+0000000030|TransmissionInit|40|[I]:succ
+0000000031|CloudLinkMqttInit|1092|[I]:succ
+0000000031|ConnectRegRecvPacket|392|[I]:add:1 succ
+0000000032|ConnectRegSendPacket|361|[I]:add:1 succ
+0000000033|ConnectMsgProcessInit|2631|[E]:sem init
+0000000034|ConnectInit|549|[I]:succ
+0000000034|MagicLinkComponentsInit|85|[I]:module:p2p
+0000000035|InitComponent|60|[I]:enable:p2p
+0000000036|InitComponent|64|[W]:no comp:p2p
+0000000036|MagicLinkComponentsInit|85|[I]:module:blenetcfg
+0000000037|InitComponent|60|[I]:enable:blenetcfg
+0000000037|ConnectRegSendPacket|361|[I]:add:3 succ
+0000000038|MagicLinkComponentsInit|85|[I]:module:coapconnect
+0000000039|InitComponent|60|[I]:enable:coapconnect
+udp_bind(ipaddr = 0.0.0.0, port = 5683)
+                                       0000000040|ConnectRegSendPacket|361|[I]:add:2 succ
+0000000041|ConnectRegRecvPacket|392|[I]:add:2 succ
+0000000041|NetworkSetItemValueByStr|929|[E]:inv dst:prdName
+0000000042|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdName
+0000000043|NetworkSetItemValueByStr|929|[E]:inv dst:manufactureName
+0000000044|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:manufactureName
+0000000045|NetworkSetItemValueByStr|929|[E]:inv dst:prdTypeName
+0000000046|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdTypeName
+0000000047|NetworkSetItemValueByStr|929|[E]:inv dst:modelId
+0000000047|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:modelId
+0000000048|NetworkSetItemValueByStr|929|[E]:inv dst:offeringCode
+0000000049|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:offeringCode
+0000000050|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeId
+0000000051|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeId
+0000000051|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeName
+0000000052|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeName
+0000000053|NetworkSetItemValueByStr|929|[E]:inv dst:qrScanMode
+0000000054|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:qrScanMode
+get sn1 [DF:2D:4A:AB:50:00]
+get sn [00:00:00:00:00:00]
+0000000056|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:udid
+0000000057|NetworkSetItemValueByStr|929|[E]:inv dst:devName
+0000000058|ModelSetDevInfoToNetwork|290|[E]:set item:deviceInfo:devName
+firmVer:1.0.1.209
+0000000059|ModelSetDevInfoToNetwork|272|[E]:set:deviceInfo:sdkVersion
+MCUVer:1.0.0
+0000000092|MagicLinkHuksHalRegister|243|[I]:succ
+0000000093|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000094|ConfigRead|278|[E]:header
+0000000095|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000095|ConfigRead|278|[E]:header
+0000000096|MagicLinkSafeConfigRead|434|[I]:cfg empty
+0000000097|ReadRegisterResultData|1466|[E]:cfg read
+0000000097|MagicLinkNetworkUpdateRegResult|2059|[W]:no reg ret
+0000000098|MagicLinkComponentsInit|85|[I]:module:netcfg
+0000000099|InitComponent|60|[I]:enable:netcfg
+0000000099|OnRegSessionServerRestart|1216|[I]:succ reg cb:hihonor.magiclinksdk,netCfg
+0000000101|NetCfgInit|739|[I]:succ
+0000000101|MagicLinkComponentsInit|85|[I]:module:register
+0000000102|InitComponent|60|[I]:enable:register
+0000000102|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000103|MagicLinkParseAction|297|[W]:no inDataList
+0000000104|MagicLinkParseAction|310|[W]:no outDataList
+0000000105|MagicLinkParseAction|297|[W]:no inDataList
+0000000106|MagicLinkParseAction|310|[W]:no outDataList
+0000000106|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,register
+0000000107|StartRegister|2170|[I]:start:0
+0000000108|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000109|ConfigRead|278|[E]:header
+0000000110|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000111|ConfigRead|278|[E]:header
+0000000111|MagicLinkSafeConfigRead|434|[I]:cfg empty
+0000000112|ReadRegisterData|1606|[E]:read cfg
+0000000112|ReadRegisterData|1608|[E]:MAGICLINK_CONFIG, MAGICLINK_READ_REGINFO_FAIL, -1
+0000000113|StartRegister|2182|[W]:no reg info
+0000000114|RegisterInit|2042|[I]:succ
+0000000115|MagicLinkComponentsInit|85|[I]:module:control
+0000000115|InitComponent|60|[I]:enable:control
+0000000116|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,control
+0000000117|MagicLinkComponentsInit|85|[I]:module:ota
+0000000118|InitComponent|60|[I]:enable:ota
+0000000118|MagicLinkOtaFuncInit|103|[I]:init
+0000000119|OtaInit|3516|[I]:succ
+0000000119|MagicLinkComponentsInit|85|[I]:module:bi
+0000000120|InitComponent|60|[I]:enable:bi
+0000000120|InitComponent|64|[W]:no comp:bi
+0000000121|MagicLinkComponentsInit|85|[I]:module:magiclinkactive
+0000000122|InitComponent|60|[I]:enable:magiclinkactive
+0000000122|InitComponent|64|[W]:no comp:magiclinkactive
+0000000123|MagicLinkComponentsInit|85|[I]:module:netparamsync
+0000000124|InitComponent|60|[I]:enable:netparamsync
+0000000124|InitComponent|64|[W]:no comp:netparamsync
+0000000125|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000126|ExtComponentsMngtInit|108|[I]:not reg
+0000000126|SetLocalInfo|93|[I]:not reg
+0000000127|MagicLinkInit|235|[W]:succ
+0000000127|MagicLinkFastOffline|1827|[I]:fast offline
+0000000128|MagicLinkFastOffline|1829|[I]:already offline
+[low_level_output, 70] netif is not link up.
+[low_level_output, 70] netif is not link up.
+[low_level_output, 70] netif is not link up.
+[low_level_output, 70] netif is not link up.
+0000002129|NetCfgStart|622|[I]:start
+0000002129|WifiInit|134|[I]:INIT DONE
+0000002130|OnRemoveSessionServer|1169|[I]:succ rm server:hihonor.magiclinksdk,netCfg
+0000002131|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,netCfg
+0000002132|MagicLinkParseAction|297|[W]:no inDataList
+0000002133|MagicLinkParseAction|310|[W]:no outDataList
+0000002134|MagicLinkParseAction|297|[W]:no inDataList
+0000002134|MagicLinkParseAction|310|[W]:no outDataList
+0000002135|MagicLinkParseAction|297|[W]:no inDataList
+0000002136|MagicLinkParseAction|310|[W]:no outDataList
+0000002136|NetcfgGetTimeout|210|[I]:timeout:10
+0000002137|DiscoveryAddPublishInfo|117|[I]:succ
+0000002138|PublishService|115|[I]:BLE adv start
+[BLIB_I]BLIB Ver: 1.0.5 [build time:Mar 16 2024 21:17:13][0x010005ff][for custom-imou Commit 2cda23ab]
+0000002141|BleStackInit|275|[I]:ble roal 1                      init suc
+0000002142|ProcGattReg|566|[I]:reg:0
+0000002143|AddGattDescriptor|349|[I]:add default desc
+0000002143|AddGattDescriptor|349|[I]:add default desc
+0000002144|ProcGattAddSvc|590|[I]:add svc:0, svc handle:0, char handle:16
+0000002146|ProcGapStartAdv|341|[I]:start adv:0
+0000002147|StartAdv|537|[I]:adv suc
+0000002147|ModelNotifyStatus|448|[I]:status:100
+current status is 100
+STATUS_NETCFG_ENTER
+MEM Start demo [84456]
+0000005149|ConnectDispatchFunc|83|[I]:running
+0000009869|ConnectMsgProcessFunc|2338|[I]:running
+0000010149|ConnectDispatchFunc|83|[I]:running
+0000011605|BleConnectedCb|152|[I]:ble conn
+0000011606|UpdateConnParam|123|[I]:update conn param
+0000011606|ProcGapConnect|373|[I]:interval:0, addr:*:*:*:28:c1:cd
+0000013164|ProcGapSetMtu|558|[I]:MTU 512
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x11,length:0x2
+0000013188|BleGattWriteReqCb|211|[I]:gatt write
+0000013189|ProcessRecvFrame|286|[E]:header
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x14,length:0x2
+0000013243|BleGattWriteReqCb|211|[I]:gatt write
+0000013244|ProcessRecvFrame|286|[E]:header
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x10,length:0x39
+0000013394|BleGattWriteReqCb|211|[I]:gatt write
+0000013395|ProcessRecvFrame|305|[I]:ble conn msg
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x56
+0000013495|BleGattWriteReqCb|211|[I]:gatt write
+0000013495|ProcessRecvFrame|316|[I]:ble proxy msg
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x41
+0000013497|BleGattWriteReqCb|211|[I]:gatt write
+0000013498|ProcessRecvFrame|316|[I]:ble proxy msg
+0000013499|ParseMsgHeader|411|[E]:module:11
+0000013499|ParseMsg|2011|[E]:parse msgHeader
+0000013500|ConnectProcessMsg|2061|[E]:parse msg
+0000013500|ConnectMsgProcessFunc|2356|[E]:proc msg
+PROTO Header***0x280xc10xcd
+MSG Header[25]0xbabeface-14-13693743511277404162-0
+Module Header[1]0xffff0006-0-0-0-Data:0-49-1:*******
+PROTO Header***0x280xc10xcd
+MSG Header[63]0xbabeface-14-13693743511277404163-0
+Module Header[39]0xffff0006-0-0-1-Data:0-87-39:*******
+0000013592|BleDisconnectedCb|178|[I]:ble disconn
+0000013593|ProcGapDisconnect|534|[I]:disconn id:0
+0000013594|ProcGapStartAdv|341|[I]:start adv:0
+0000013595|StartAdv|537|[I]:adv suc
+0000015150|ConnectDispatchFunc|83|[I]:running
+0000016648|BleConnectedCb|152|[I]:ble conn
+0000016648|UpdateConnParam|123|[I]:update conn param
+0000016649|ProcGapConnect|373|[I]:interval:0, addr:*:*:*:28:c1:cd
+0000018108|ProcGapSetMtu|558|[I]:MTU 512
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x11,length:0x2
+0000018130|BleGattWriteReqCb|211|[I]:gatt write
+0000018131|ProcessRecvFrame|286|[E]:header
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x14,length:0x2
+0000018153|BleGattWriteReqCb|211|[I]:gatt write
+0000018154|ProcessRecvFrame|286|[E]:header
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x10,length:0x39
+0000018194|BleGattWriteReqCb|211|[I]:gatt write
+0000018195|ProcessRecvFrame|305|[I]:ble conn msg
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x56
+0000018294|BleGattWriteReqCb|211|[I]:gatt write
+0000018295|ProcessRecvFrame|316|[I]:ble proxy msg
+0000018296|ParseMsgHeader|411|[E]:module:11
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x101
+0000018298|BleGattWriteReqCb|211|[I]:gatt write
+0000018298|ProcessRecvFrame|316|[I]:ble proxy msg
+0000018299|ParseMsg|2011|[E]:parse msgHeader
+0000018299|ConnectProcessMsg|2061|[E]:parse msg
+0000018300|ConnectMsgProcessFunc|2356|[E]:proc msg
+PROTO Header***0x280xc10xcd
+MSG Header[217]0xbabeface-14-13693743511277404170-0
+Module Header[193]0xffff0003-0-13693743511277404168-0-Data:0-241-193:*******
+0000018303|AuthSwapDeviceInfo|937|[I]:MAGICLINK_PHONE_RELATED, MAGICLINK_RECV_SWAP_DEVINFO, 0
+0000018306|AuthSwapDeviceInfo|958|[I]:peer cliId:1
+0000018307|NetworkConfigItemErrComDeal|735|[E]:ble addr:***28:c1:cd
+0000018308|CheckInCertification|886|[I]:no handle
+0000018308|AuthSwapDeviceInfo|986|[I]:sessionId:808464458
+PROTO Header***0x280xc10xcd
+MSG Header[306]0xbabeface-14-13693743511277404171-0
+Module Header[282]0xffff0003-0-0-1-Data:0-330-282:*******
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0xd3
+0000018645|BleGattWriteReqCb|211|[I]:gatt write
+0000018645|ProcessRecvFrame|316|[I]:ble proxy msg
+PROTO Header***0x280xc10xcd
+MSG Header[171]0xbabeface-14-13693743511277404172-0
+Module Header[147]0xffff0007-10-808464458-0-Data:0-195-147:*******
+0000018656|GetProtocolParams|570|[I]:pinLen:8
+PROTO Header***0x280xc10xcd
+MSG Header[274]0xbabeface-14-13693743511277404173-0
+Module Header[250]0xffff0007-10-808464458-1-Data:0-298-250:*******
+0000018891|SetServiceResult|685|[I]:ret agreement processing
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x11e
+0000019098|BleGattWriteReqCb|211|[I]:gatt write
+0000019099|ProcessRecvFrame|316|[I]:ble proxy msg
+PROTO Header***0x280xc10xcd
+MSG Header[246]0xbabeface-14-13693743511277404174-0
+Module Header[222]0xffff0007-10-808464458-0-Data:0-270-222:*******
+PROTO Header***0x280xc10xcd
+MSG Header[130]0xbabeface-14-13693743511277404175-0
+Module Header[106]0xffff0007-10-808464458-1-Data:0-154-106:*******
+0000019322|SetServiceResult|679|[I]:ret success
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0xf0
+0000019595|BleGattWriteReqCb|211|[I]:gatt write
+0000019596|ProcessRecvFrame|316|[I]:ble proxy msg
+PROTO Header***0x280xc10xcd
+MSG Header[200]0xbabeface-14-13693743511277404176-0
+Module Header[176]0xffff0002-0-808464458-0-Data:808464458-GCMNonce[74a723f35df4cb19402a4ed2]-224-144:*******
+0000019608|NetworkSetPeerItem|410|[E]:para
+0000019608|ParseSyncNetworkInfo|384|[E]:peer mac save
+0000019609|ParseSyncNetworkInfo|441|[I]:peer cliId:1
+0000019610|ConnectionGetLocal|271|[E]:weak func
+PROTO Header***0x280xc10xcd
+MSG Header[275]0xbabeface-14-13693743511277404177-0
+Module Header[251]0xffff0002-10-808464458-1-Data:808464458-GCMNonce[575758ec74feff0607f19e9f]-299-235:*******
+0000020005|ConnectMsgProcessFunc|2338|[I]:running
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x41
+0000020088|BleGattWriteReqCb|211|[I]:gatt write
+0000020089|ProcessRecvFrame|316|[I]:ble proxy msg
+PROTO Header***0x280xc10xcd
+MSG Header[25]0xbabeface-14-13693743511277404178-0
+Module Header[1]0xffff0005-0-0-0-Data:0-49-1:*******
+0000020097|DeleteAuthTimeoutBySessId|1235|[I]:succ
+PROTO Header***0x280xc10xcd
+MSG Header[42]0xbabeface-14-13693743511277404179-0
+Module Header[18]0xffff0005-0-0-1-Data:0-66-18:*******
+0000020099|AuthCloseAck|1301|[I]:MAGICLINK_PHONE_RELATED, MAGICLINK_AUTH_SUCC, 0
+0000020152|ConnectDispatchFunc|83|[I]:running
+0000020620|BleDisconnectedCb|178|[I]:ble disconn
+0000020621|ProcGapDisconnect|534|[I]:disconn id:0
+0000020621|ProcGapStartAdv|341|[I]:start adv:0
+0000020622|StartAdv|537|[I]:adv suc
+0000023981|BleConnectedCb|152|[I]:ble conn
+0000023982|UpdateConnParam|123|[I]:update conn param
+0000023982|ProcGapConnect|373|[I]:interval:0, addr:*:*:*:28:c1:cd
+0000025154|ConnectDispatchFunc|83|[I]:running
+0000025397|ProcGapSetMtu|558|[I]:MTU 512
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x11,length:0x2
+0000025421|BleGattWriteReqCb|211|[I]:gatt write
+0000025421|ProcessRecvFrame|286|[E]:header
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x14,length:0x2
+0000025443|BleGattWriteReqCb|211|[I]:gatt write
+0000025444|ProcessRecvFrame|286|[E]:header
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x10,length:0x39
+0000025494|BleGattWriteReqCb|211|[I]:gatt write
+0000025495|ProcessRecvFrame|305|[I]:ble conn msg
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x56
+0000025595|BleGattWriteReqCb|211|[I]:gatt write
+0000025595|ProcessRecvFrame|316|[I]:ble proxy msg
+0000025597|ParseMsgHeader|411|[E]:module:11
+0000025597|ParseMsg|2011|[E]:parse msgHeader
+0000025598|ConnectProcessMsg|2061|[E]:parse msg
+0000025598|ConnectMsgProcessFunc|2356|[E]:proc msg
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x1ef
+0000025602|BleGattWriteReqCb|211|[I]:gatt write
+0000025603|ProcessRecvFrame|316|[I]:ble proxy msg
+0000025609|ParseModuleTransHeader|682|[I]:isServer:0
+PROTO Header***0x280xc10xcd
+MSG Header[455]0xbabeface-13-7-1
+Module Header[447]0x1-1-1:0-0--1-0
+-Data:808464458-GCMNonce[af960f231bdd58c68ba7e7ab]-479-415:*******
+0000025614|TransOpen|1333|[I]:succ trans:1
+0000025625|SendOpenAck|446|[I]:succ identity:******4701904f66a531a11e3d450275
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x1fd
+0000026096|BleGattWriteReqCb|211|[I]:gatt write
+0000026097|ProcessRecvFrame|316|[I]:ble proxy msg
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x10a
+0000026103|BleGattWriteReqCb|211|[I]:gatt write
+0000026104|ProcessRecvFrame|316|[I]:ble proxy msg
+0000026107|ParseModuleTransHeader|682|[I]:isServer:0
+PROTO Header***0x280xc10xcd
+MSG Header[719]0xbabeface-13-8-1
+Module Header[711]0x1-0-0:0-0-1-0
+-SliceHead:0-1-0-0
+-PacketHead:0xbabeface-1-8-679-Data:808464458-GCMNonce[0000000198cb8031dff01f88]-743-651:*******
+0000026114|NetCfgModuleAction|429|[I]:svc:localeInfo, act:localeInfo
+0000026115|MakeActionOut|715|[I]:no out
+0000026115|NetCfgModuleAction|429|[I]:svc:netCfg, act:connect
+0000026116|MakeActionOut|715|[I]:no out
+0000026117|NetCfgModuleAction|429|[I]:svc:register, act:cfgRegInfo
+0000026118|StopRegister|2133|[I]:succ
+0000026118|MakeActionOut|715|[I]:no out
+method:5 req:12345, rpt:1
+0000026119|MagicLinkEncodeCmdAction|850|[I]:action:localeInfo no out
+0000026120|MagicLinkEncodeCmdAction|850|[I]:action:connect no out
+0000026121|MagicLinkEncodeCmdAction|850|[I]:action:cfgRegInfo no out
+0000026133|SendChannelMessage|193|[I]:[identity:******4701904f66a531a11e3d450275],[1,0,1] send msg[291] success.
+0000026134|WifiConnectInfoClean|251|[I]:del sta info
+0000026135|FlashConfeadFunc|216|[I]:start netCfg
+er_info:256
+0000026136|FlashConfigCreate|349|[I]:create register_info.bak:256
+0000026136|FlashConfigCreate|349|[I]:create regist0000026345|ModelNotifyStatus|448|[I]:status:101
+current status is 101
+0000026347|NetcfgGetTimeout|210|[I]:timeout:10
+0000026349|GetPublishInfo|180|[I]:find pubInfo
+0000026351|UnpublishService|142|[I]:stop ble
+0000026353|ModelNotifyStatus|448|[I]:status:200
+current status is 200
+[WLIB_E]SwEr:SPM NoSizeAlloc : 292, mem_base=0
+[WLIB_E]SwEr:SPM NoSizeAlloc : 292, mem_base=0
+0000026359|BleDisconnectedCb|178|[I]:ble disconn
+0000026360|BleDisconnectedCb|184|[E]:func not reg
+STA startup!
+[WLIB_E]HwEr:UKI:0
+0000027084|ModelNotifyStatus|448|[I]:status:300
+current status is 300
+STATUS_REGISTER_RECV_INFO
+0000027085|SaveRegisterInfoToFlash|2126|[I]:succ
+0000027086|TransReceiveMsg|1431|[I]:succ recv:1
+0000027086|ConnectBleSendPacket|637|[E]:mac
+PROTO Header***0x00x00x0
+MSG Header[359]0xbabeface-13-0-0
+Module Header[351]0x1-0-0:1-1-0-0
+-SliceHead:0-1-0-0
+-PacketHead:0xbabeface-0-8-319-Data:808464458-GCMNonce[00000000174b4cf09899ffc4]-383-307:*******
+0000027090|ConnectDispatchToPeer|42|[E]:send pkt
+STA connected to target AP!
+udp_bind(ipaddr = 0.0.0.0, port = 68)
+                                     0000028507|ModelNotifyStatus|448|[I]:status:201
+current status is 201
+0000028508|NetcfgThreadFunc|273|[I]:succ
+0000028508|StartRegister|2170|[I]:start:0
+0000028853|ModelNotifyStatus|448|[I]:status:301
+current status is 301
+0000028854|CheckRegisterEmpty|1784|[W]:dev unregister
+0000028858|TlsNetworkInit|261|[I]:succ
+0000028858|TlsNetworkConnect|342|[I]:host:devicemgt-pre-drcn.platform.hihonorcloud.com
+udp_bind(ipaddr = 0.0.0.0, port = 22013)
+                                        0000028863|OnRemoveSessionServer|1169|[I]:succ rm server:hihonor.magiclinksdk,netCfg
+0000029636|TlsNetHandshake|330|[I]:succ
+0000029645|ConnectionHttpSend|143|[I]:send succ
+0000029696|MagicLinkHttpResponseParser|223|[I]:status:200
+0000029745|GetKeyAndSecret|902|[I]:authMode:2
+0000029746|GetKeyAndSecret|902|[I]:authMode:2
+0000029750|ConnectionHttpSend|143|[I]:send succ
+0000029750|DeviceRegister|1515|[I]:MAGICLINK_CLOUD_RELATED, MAGICLINK_REQ_REGISTER_CLOUD, 0
+0000029838|MagicLinkHttpResponseParser|223|[I]:status:200
+0000029839|DeviceRegister|1532|[I]:MAGICLINK_CLOUD_RELATED, MAGICLINK_RECV_REGRESULT, 0
+0000029840|RegisterThreadFunc|1854|[I]:devId: ******8062188f4cd28c57fe61b28cbd26nc1nl00a92
+0000029842|MakeJsonRegisterResult|1999|[E]:ext null
+0000029843|MakeJsonRegisterResult|1999|[E]:ext null
+close factory reset window
+0000030233|ConnectDispatchFunc|83|[I]:running
+0000030550|ModelNotifyStatus|448|[I]:status:302
+current status is 302
+0000030551|RegisterThreadFunc|1879|[I]:reg succ
+0000030552|BiReport|1579|[E]:rpt
+0000030552|RegisterThreadFunc|1881|[E]:bi rpt
+0000030553|FlashConfigSave|364|[I]:del cfg:register_info
+0000030554|FlashConfigSave|364|[I]:del cfg:register_info.bak
+0000030561|FlashConfigCreate|349|[I]:create register_info:256
+0000030567|FlashConfigCreate|349|[I]:create register_info.bak:256
+0000030570|TlsNetworkDisconnect|147|[I]:succ fd:0
+0000030573|OnRemoveSessionServer|1169|[I]:succ rm server:hihonor.magiclinksdk,register
+0000030574|RegisterDeInit|2084|[I]:succ
+0000030657|ConnectMsgProcessFunc|2338|[I]:running
+0000031037|CheckRegister|1259|[I]:reg succ
+0000031547|LocalCmdProcess|953|[I]:mqtt conn
+0000031552|InitTlsContex|173|[I]:initialized
+0000031553|TlsNetworkInit|261|[I]:succ
+0000031553|TlsNetworkConnect|342|[I]:host:devicelink-pre-drcn.platform.hihonorcloud.com
+udp_bind(ipaddr = 0.0.0.0, port = 3147)
+                                       0000031892|MagiclinkCoapConnectionCallback|619|[I]:get msg
+0000032374|TlsNetHandshake|330|[I]:succ
+0000032375|CloudLinkMqttConnect|1194|[I]:devId:******8062188f4cd28c57fe61b28cbd26nc1nl00a92
+0000032440|CloudLinkMqttAsyncSubscribe|763|[I]:mqtt async sub
+0000032441|LinkStatusCallback|1302|[I]:conn succ
+0000032442|CreateHeartbeatTimer|422|[I]:internal heartbeat
+0000032442|ProcessMqttConnect|1042|[I]:MAGICLINK_CLOUD_RELATED, MAGICLINK_CONNECT_CLOUD, 0
+0000032564|ConnectCoAPRecvPacket|1051|[I]:join mcast succ
+0000032750|SubSelfShareTopic|979|[E]:call
+0000032751|ProcessMqttConnect|1076|[I]:ota enable
+0000032751|MagicLinkCheckOtaResult|934|[I]:check ota ret
+0000032752|MagicLinkGetRptStatusPayload|998|[E]:no svc:baseInfo
+0000032753|MagicLinkGetRptStatusPkt|604|[E]:get rpt payload
+0000032754|MagicLinkReportServiceStatus|764|[E]:get status:baseInfo
+0000032755|MagicLinkRptAllServiceStatus|788|[E]:rpt status:baseInfo
+type:0 req:1511600016, rpt:2
+get sn1 [DF:2D:4A:AB:50:00]
+get sn [00:00:00:00:00:00]
+0000032757|MagicLinkAddSvcToRptStatus|743|[E]:get prop udid
+firmVer:1.0.1.209
+0000032758|MagicLinkAddSvcToRptStatus|743|[E]:get prop sdkVersion
+MCUVer:1.0.0
+0000032760|MagicLinkGetRptStatusPkt|613|[I]:svc:deviceInfo
+0000032762|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+0000032763|MagicLinkRptStatusToCloud|676|[I]:pub succ
+0000032764|MagicLinkReportServiceStatus|778|[I]:rpt status:deviceInfo
+type:0 req:1296873813, rpt:3
+0000032766|MagicLinkGetRptStatusPkt|613|[I]:svc:netInfo
+0000032767|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+0000032768|MagicLinkRptStatusToCloud|676|[I]:pub succ
+0000032769|MagicLinkReportServiceStatus|778|[I]:rpt status:netInfo
+type:0 req:931817106, rpt:4
+0000032770|GetUpdTypeCheckResult|553|[E]:not end
+0000032772|MagicLinkOtaGetReportInfo|3351|[I]:succ
+0000032774|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+0000032775|MagicLinkRptStatusToCloud|676|[I]:pub succ
+0000032775|MagicLinkReportServiceStatus|778|[I]:rpt status:ota
+type:0 req:566760399, rpt:5
+get light onoff 0
+get light brightness 100
+get light mode 1
+0000032778|MagicLinkGetRptStatusPkt|613|[I]:svc:light
+0000032779|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+0000032780|MagicLinkRptStatusToCloud|676|[I]:pub succ
+0000032781|MagicLinkReportServiceStatus|778|[I]:rpt status:light
+0000032782|ProcessMqttConnect|1084|[I]:rpt services succ
+0000032783|ProcessMqttConnect|1086|[I]:pub topic
+0000032783|ConnectCreateMqttMsgPayload|1485|[I]:traceID:TpUrWsZu0x2y3A5B8D9GbHeGeKhMiPkQ
+0000032785|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+0000032786|ConnectCloudSendSystemMsg|816|[I]:pub SYS_MGR_TOPIC_SUB_SUCCESS:0
+0000032787|CloudLinkBIProcess|896|[I]:biFlag:0x0000
+0000032788|ProcessMqttConnect|1102|[I]:STATUS_DEVICE_ONLINE
+0000032788|ModelNotifyStatus|448|[I]:status:500
+current status is 500
+device login online
+0000032791|ConnectCreateMqttMsgPayload|1485|[I]:traceID:tZw1w4z4C7CaFaFdIdLgLgOgQmRmUpUr
+00000327gic report onoff 0 bri 100
+|714|[I]:mqtt async pub
+32797 magic report onoff 0 bri 100
+type:0 req:631377716, rpt:6
+get light onoff 0
+get light brightness 100
+get light mode 0
+0000032800|MagicLinkGetRptStatusPkt|613|[I]:svc:light
+0000032801|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+0000032802|MagicLinkRptStatusToCloud|676|[I]:pub succ
+0000032803|MagicLinkReportServiceStatus|778|[I]:rpt status:light
+0000032804|ConnectCloudSendSystemMsg|816|[I]:pub SYS_MGR_SYNC_TIME_REQ:0
+PROTO Header[241]*******.0.108:51667
+MSG Header[217]0xbabeface-14-13693743511277404184-0
+Module Header[193]0xffff0003-0-13693743511277404182-0-Data:0-241-193:*******
+0000032810|AuthSwapDeviceInfo|937|[I]:MAGICLINK_PHONE_RELATED, MAGICLINK_RECV_SWAP_DEVINFO, 0
+0000032814|AuthSwapDeviceInfo|958|[I]:peer cliId:1
+0000032816|NetworkConfigItemErrComDeal|725|[E]:coap addr:******8.0.108 1
+0000032818|CheckInCertification|886|[I]:no handle
+0000032820|AuthSwapDeviceInfo|986|[I]:sessionId:808464462
+PROTO Header[390]*******.0.108:51667
+MSG Header[366]0xbabeface-14-13693743511277404185-0
+Module Header[342]0xffff0003-0-0-1-Data:0-390-342:*******
+0000032832|CoapSetNetworkMyIp|737|[I]:set my ip:******8.0.127
+0000032834|MagicLinkGetWlanConnInterface|283|[E]:no func
+0000032834|CoapSetNetworkMyIp|745|[E]:get conn
+0000032836|ConnectProcessMsg|2067|[E]:proc cmd
+0000032836|ConnectMsgProcessFunc|2356|[E]:proc msg
+0000032839|LocalCmdProcess|983|[I]:mqtt sub
+0000032883|ConnectCreateMqttMsgPayload|1485|[I]:traceID:QlQoToVrWtZu1x2z4A5C8DaFbIdGgLhM
+0000033080|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:8
+0000033081|ConnectCloudSendSystemMsg|816|[I]:pub SYS_ANALYTICS_BUZ_LOG:3
+0000033083|SendMqttHeartbeat|213|[I]:succ
+0000033083|LocalCmdProcess|966|[I]:mqtt pub
+0000033084|MakeJsonRegisterResult|1999|[E]:ext null
+0000033085|MakeJsonRegisterResult|1999|[E]:ext null
+magiclink sdk: recv mqtt ping response
+0000033190|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:9
+0000033192|LocalCmdProcess|966|[I]:mqtt pub
+0000033262|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:10
+0000033264|LocalCmdProcess|966|[I]:mqtt pub
+0000033368|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:11
+0000033370|LocalCmdProcess|966|[I]:mqtt pub
+0000033439|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:12
+0000033441|LocalCmdProcess|966|[I]:mqtt pub
+0000033509|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:13
+0000033511|LocalCmdProcess|966|[I]:mqtt pub
+0000033595|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:14
+0000033597|LocalCmdProcess|966|[I]:mqtt pub
+0000033600|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+PROTO Header[49]*******.0.108:51667
+MSG Header[25]0xbabeface-14-13693743511277404190-0
+Module Header[1]0xffff0005-0-0-0-Data:0-49-1:*******
+0000033607|DeleteAuthTimeoutBySessId|1235|[I]:succ
+PROTO Header[66]*******.0.108:51667
+MSG Header[42]0xbabeface-14-13693743511277404191-0
+Module Header[18]0xffff0005-0-0-1-Data:0-66-18:*******
+0000033613|AuthCloseAck|1301|[I]:MAGICLINK_PHONE_RELATED, MAGICLINK_AUTH_SUCC, 0
+0000033616|AuthHandleTimeOutProcess|1058|[I]:coap handle timeout.
+0000033667|MqttMessageArrived|1387|[I]:recv data:226
+12-17 17:20:48.422|MagiclinkCoapConnectionCallback|619|[I]:get msg
+12-17 17:20:48.485|ParseModuleTransHeader|682|[I]:isServer:0
+PROTO Header[472]*******.0.108:20202
+MSG Header[448]0xbabeface-13-857935312-1
+Module Header[440]0x1-1-1:0-1--1-0
+-Data:808464458-GCMNonce[caccd43f3927bb4145239c49]-472-408:*******
+12-17 17:20:48.496|TransOpen|1333|[I]:succ trans:1
+12-17 17:20:48.520|SendOpenAck|446|[I]:succ identity:******2d7da2441594e179883c9a8c34
+12-17 17:20:48.548|MqttMessageArrived|1387|[I]:recv data:289
+PROTO Header[241]*******b1b616d4f03820c12db9b1579fco000200028
+MSG Header[217]0xbabeface-14-13693743511277404196-0
+Module Header[193]0xffff0003-0-13693743511277404194-0-Data:0-289-193:*******
+12-17 17:20:48.558|AuthSwapDeviceInfo|937|[I]:MAGICLINK_PHONE_RELATED, MAGICLINK_RECV_SWAP_DEVINFO, 0
+12-17 17:20:48.564|AuthSwapDeviceInfo|958|[I]:peer cliId:1
+12-17 17:20:48.566|NetworkConfigItemErrComDeal|730|[E]:cloud addr:******6b1b616d4f03820c12db9b1579fco000200028 1
+12-17 17:20:48.570|CheckInCertification|886|[I]:no handle
+12-17 17:20:48.572|AuthSwapDeviceInfo|986|[I]:sessionId:808464466
+PROTO Header[390]*******b1b616d4f03820c12db9b1579fco000200028
+MSG Header[366]0xbabeface-14-13693743511277404197-0
+Module Header[342]0xffff0003-0-0-1-Data:0-438-342:*******
+12-17 17:20:48.597|ConnectCreateMqttMsgPayload|1485|[I]:traceID:sXv0v1y3z6B6E9EcHcIfKfNiNlQlToTq
+12-17 17:20:48.604|ParseModuleTransHeader|682|[I]:isServer:0
+PROTO Header[272]*******.0.108:20202
+MSG Header[248]0xbabeface-13-857935313-1
+Module Header[240]0x1-0-0:0-1-1-0
+-SliceHead:0-1-0-0
+-PacketHead:0xbabeface-1-8-208-Data:808464458-GCMNonce[00000001cee5166e4be011b0]-272-180:*******
+method:3 req:0, rpt:7
+12-17 17:20:48.615|MagicLinkProcessProfile|1356|[I]:write req ack
+12-17 17:20:48.627|SendChannelMessage|193|[I]:[identity:******2d7da2441594e179883c9a8c34],[1,1,1] send msg[159] success.
+type:0 req:54475839, rpt:8
+get sn1 [DF:2D:4A:AB:50:00]
+get sn [00:00:00:00:00:00]
+12-17 17:20:48.630|MagicLinkAddSvcToRptStatus|743|[E]:get prop udid
+firmVer:1.0.1.209
+12-17 17:20:48.632|MagicLinkAddSvcToRptStatus|743|[E]:get prop sdkVersion
+MCUVer:1.0.0
+12-17 17:20:48.634|MagicLinkGetRptStatusPkt|613|[I]:svc:deviceInfo
+12-17 17:20:48.636|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+12-17 17:20:48.637|MagicLinkRptStatusToCloud|676|[I]:pub succ
+12-17 17:20:48.637|TransReceiveMsg|1431|[I]:succ recv:1
+12-17 17:20:48.763|MqttMessageArrived|1387|[I]:recv data:390
+12-17 17:20:49.035|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:15
+12-17 17:20:49.036|ConnectCloudSendSystemMsg|816|[I]:pub SYS_ANALYTICS_BUZ_LOG:3
+12-17 17:20:49.038|MakeJsonRegisterResult|1999|[E]:ext null
+12-17 17:20:49.038|MakeJsonRegisterResult|1999|[E]:ext null
+12-17 17:20:49.049|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+12-17 17:20:49.053|LocalCmdProcess|966|[I]:mqtt pub
+12-17 17:20:49.158|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:16
+12-17 17:20:49.163|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+PROTO Header[342]*******940d66645af9328976ef04b1720o000200de4
+MSG Header[318]0xbabeface-14-2-0
+Module Header[294]0xffff0003-0-0-0-Data:0-390-294:*******
+12-17 17:20:49.173|AuthSwapDeviceInfo|937|[I]:MAGICLINK_PHONE_RELATED, MAGICLINK_RECV_SWAP_DEVINFO, 0
+12-17 17:20:49.179|AuthSwapDeviceInfo|958|[I]:peer cliId:1
+12-17 17:20:49.181|NetworkConfigItemErrComDeal|730|[E]:cloud addr:******4940d66645af9328976ef04b1720o000200de4 1
+12-17 17:20:49.185|CheckInCertification|886|[I]:no handle
+12-17 17:20:49.187|AuthSwapDeviceInfo|986|[I]:sessionId:808464482
+PROTO Header[382]*******940d66645af9328976ef04b1720o000200de4
+MSG Header[358]0xbabeface-14-3-0
+Module Header[334]0xffff0003-0-0-1-Data:0-430-334:*******
+12-17 17:20:49.202|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+12-17 17:20:49.297|MqttMessageArrived|1387|[I]:recv data:97
+PROTO Header[49]*******b1b616d4f03820c12db9b1579fco000200028
+MSG Header[25]0xbabeface-14-13693743511277404200-0
+Module Header[1]0xffff0005-0-0-0-Data:0-97-1:*******
+12-17 17:20:49.312|DeleteAuthTimeoutBySessId|1235|[I]:succ
+PROTO Header[66]*******b1b616d4f03820c12db9b1579fco000200028
+MSG Header[42]0xbabeface-14-13693743511277404201-0
+Module Header[18]0xffff0005-0-0-1-Data:0-114-18:*******
+12-17 17:20:49.318|AuthCloseAck|1301|[I]:MAGICLINK_PHONE_RELATED, MAGICLINK_AUTH_SUCC, 0
+12-17 17:20:49.334|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+12-17 17:20:49.503|MqttMessageArrived|1387|[I]:recv data:218
+PROTO Header[170]*******940d66645af9328976ef04b1720o000200de4
+MSG Header[146]0xbabeface-14-4-4
+Module Header[122]0xffff0008-10-808464482-0-Data:0-218-122:*******
+12-17 17:20:49.513|GetProtocolParams|570|[I]:pinLen:8
+12-17 17:20:50.158|CloudLinkBiThreadFunc|871|[I]:exit
+PROTO Header[1001]*******940d66645af9328976ef04b1720o000200de4
+MSG Header[977]0xbabeface-14-5-0
+Module Header[953]0xffff0008-10-808464482-1-Data:0-1049-953:*******
+12-17 17:20:50.222|SetServiceResult|685|[I]:ret agreement processing
+12-17 17:20:50.225|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+12-17 17:20:50.226|AuthHandleTimeOutProcess|1079|[I]:mqtt handle timeout.
+12-17 17:20:50.237|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+12-17 17:20:50.518|ParseModuleTransHeader|682|[I]:isServer:0
+PROTO Header[272]*******.0.108:20202
+MSG Header[248]0xbabeface-13-857935314-1
+Module Header[240]0x1-0-0:0-1-1-0
+-SliceHead:0-1-0-0
+-PacketHead:0xbabeface-2-8-208-Data:808464458-GCMNonce[00000002b942ac747bc04cda]-272-180:*******
+method:3 req:1, rpt:9
+12-17 17:20:50.525|MagicLinkProcessProfile|1356|[I]:write req ack
+12-17 17:20:50.535|SendChannelMessage|193|[I]:[identity:******2d7da2441594e179883c9a8c34],[1,1,2] send msg[159] success.
+type:0 req:445282392, rpt:10
+get sn1 [DF:2D:4A:AB:50:00]
+get sn [00:00:00:00:00:00]
+12-17 17:20:50.539|MagicLinkAddSvcToRptStatus|743|[E]:get prop udid
+firmVer:1.0.1.209
+12-17 17:20:50.540|MagicLinkAddSvcToRptStatus|743|[E]:get prop sdkVersion
+MCUVer:1.0.0
+12-17 17:20:50.542|MagicLinkGetRptStatusPkt|613|[I]:svc:deviceInfo
+12-17 17:20:50.544|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+12-17 17:20:50.545|MagicLinkRptStatusToCloud|676|[I]:pub succ
+12-17 17:20:50.546|TransReceiveMsg|1431|[I]:succ recv:1
+12-17 17:20:50.558|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+12-17 17:20:50.559|LocalCmdProcess|966|[I]:mqtt pub
+12-17 17:20:50.687|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:17
+12-17 17:20:50.691|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+12-17 17:20:50.808|MagiclinkCoapDiscoveryCallback|520|[I]:recv disc msg
+12-17 17:20:50.842|MqttMessageArrived|1387|[I]:recv data:1024
+PROTO Header[976]*******940d66645af9328976ef04b1720o000200de4
+MSG Header[952]0xbabeface-14-6-4
+Module Header[928]0xffff0008-10-808464482-0-Data:0-1024-928:*******
+PROTO Header[154]*******940d66645af9328976ef04b1720o000200de4
+MSG Header[130]0xbabeface-14-7-0
+Module Header[106]0xffff0008-10-808464482-1-Data:0-202-106:*******
+12-17 17:20:51.190|SetServiceResult|679|[I]:ret success
+12-17 17:20:51.195|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+12-17 17:20:51.196|ParseModuleTransHeader|682|[I]:isServer:0
+PROTO Header[278]*******.0.108:20202
+MSG Header[254]0xbabeface-13-857935315-1
+Module Header[246]0x1-0-0:0-1-1-0
+-SliceHead:0-1-0-0
+-PacketHead:0xbabeface-3-8-214-Data:808464458-GCMNonce[00000003bbd60fe8619be412]-278-186:*******
+12-17 17:20:51.202|CheckValueByDataDef|623|[E]:inv str[36,32]
+12-17 17:20:51.203|ExecuteCmdProperty|661|[E]:prop:sdkVersion
+method:3 req:2, rpt:11
+12-17 17:20:51.205|MagicLinkProcessProfile|1356|[I]:write req ack
+12-17 17:20:51.216|SendChannelMessage|193|[I]:[identity:******2d7da2441594e179883c9a8c34],[1,1,3] send msg[166] success.
+type:0 req:146172709, rpt:12
+get sn1 [DF:2D:4A:AB:50:00]
+get sn [00:00:00:00:00:00]
+12-17 17:20:51.219|MagicLinkAddSvcToRptStatus|743|[E]:get prop udid
+firmVer:1.0.1.209
+12-17 17:20:51.221|MagicLinkAddSvcToRptStatus|743|[E]:get prop sdkVersion
+MCUVer:1.0.0
+12-17 17:20:51.223|MagicLinkGetRptStatusPkt|613|[I]:svc:deviceInfo
+12-17 17:20:51.225|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+12-17 17:20:51.226|MagicLinkRptStatusToCloud|676|[I]:pub succ
+12-17 17:20:51.227|TransReceiveMsg|1431|[I]:succ recv:1
+12-17 17:20:51.235|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+12-17 17:20:51.236|LocalCmdProcess|966|[I]:mqtt pub
+12-17 17:20:51.317|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:18
+12-17 17:20:51.544|MqttMessageArrived|1387|[I]:recv data:310
+PROTO Header[262]*******940d66645af9328976ef04b1720o000200de4
+MSG Header[238]0xbabeface-14-8-0
+Module Header[214]0xffff0002-0-808464482-0-Data:808464482-GCMNonce[1e281c7b644514735a455e4b]-310-182:*******
+12-17 17:20:51.553|NetworkSetPeerItem|423|[W]:no peerUdid:******ome-767A094B-8123-4CB0-AD1B-DF47DE746FD0
+12-17 17:20:51.554|ParseSyncNetworkInfo|378|[E]:no mac
+12-17 17:20:51.555|NetworkSetPeerItem|423|[W]:no peerUdid:******ome-767A094B-8123-4CB0-AD1B-DF47DE746FD0
+12-17 17:20:51.556|ParseSyncNetworkInfo|441|[I]:peer cliId:1
+12-17 17:20:51.557|ConnectionGetLocal|271|[E]:weak func
+PROTO Header[339]*******940d66645af9328976ef04b1720o000200de4
+MSG Header[315]0xbabeface-14-9-0
+Module Header[291]0xffff0002-10-808464482-1-Data:808464482-GCMNonce[e7a87879dfb3b40ec2c344d0]-387-275:*******
+12-17 17:20:51.576|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+12-17 17:20:51.658|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+12-17 17:20:51.805|MqttMessageArrived|1387|[I]:recv data:97
+PROTO Header[49]*******940d66645af9328976ef04b1720o000200de4
+MSG Header[25]0xbabeface-14-10-0
+Module Header[1]0xffff0005-0-0-0-Data:0-97-1:*******
+12-17 17:20:51.811|DeleteAuthTimeoutBySessId|1235|[I]:succ
+PROTO Header[66]*******940d66645af9328976ef04b1720o000200de4
+MSG Header[42]0xbabeface-14-11-0
+Module Header[18]0xffff0005-0-0-1-Data:0-114-18:*******
+12-17 17:20:51.814|AuthCloseAck|1301|[I]:MAGICLINK_PHONE_RELATED, MAGICLINK_AUTH_SUCC, 0
+12-17 17:20:51.818|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+12-17 17:20:52.658|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+12-17 17:20:54.467|ConnectDispatchFunc|83|[I]:running
+12-17 17:20:59.060|ConnectMsgProcessFunc|2338|[I]:running
+12-17 17:21:04.468|ConnectDispatchFunc|83|[I]:running
+12-17 17:21:08.961|ConnectMsgProcessFunc|2338|[I]:running
+12-17 17:21:14.469|ConnectDispatchFunc|83|[I]:running
+adc raw:  771, temp_IC:   25
+Total:129764; Free:61664;

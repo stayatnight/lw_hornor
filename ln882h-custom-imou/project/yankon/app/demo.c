@@ -111,7 +111,7 @@ static void vTimerCallback(TimerHandle_t xTimer) {
     isNetCfgRunning = pdFALSE;
     }
 }
-static char g_devName[64] = "BW_LAMP_CANL";
+static char g_devName[64] = "博荣台灯S";
 /* 设备名称的获取需从持久化保存单元获取， 全局变量g_devName仅作为示例 */
 /* 设备重置（RESET）后，设备名的存储单元内容需更新为默认设备名称 */
 static int GetDevNameFunc(void **data, unsigned int *len)
@@ -144,7 +144,7 @@ static int SetDevNameFunc(const void *data, unsigned int len)
 
 static int GetDevModelFunc(void **data, unsigned int *len)
 {
-    char        *tmp    = "test_DevModel";
+    char        *tmp    = "MTSL2010";
     unsigned int tmpLen = strlen(tmp) + 1;
     *len                = tmpLen - 1;
 
@@ -238,7 +238,7 @@ static int GetDevHardwareVersionVersionFunc(void **data, unsigned int *len)
 /* netInfo 设备网络信息相关回调 */
 static int GetNetInfoSsidFunc(void **data, unsigned int *len)
 {
-    char        *tmp    = "testSsid123";
+    char        *tmp    = "reading lamp";
     unsigned int tmpLen = strlen(tmp) + 1;
     *len                = tmpLen - 1;
 
@@ -291,7 +291,7 @@ static int GetNetInfoIpFunc(void **data, unsigned int *len)
 
 static int GetNetInfoBssidFunc(void **data, unsigned int *len)
 {
-    char        *tmp    = "testBssid123";
+    char        *tmp    = "bssid8976";
     unsigned int tmpLen = strlen(tmp) + 1;
     *len                = tmpLen - 1;
 
@@ -574,6 +574,7 @@ static int SetBrightness(const void *data, unsigned int len)
 
     LOG(LOG_LEVEL_INFO, "set light brightness %d\r\n", g_light.brightness);
     LampBriPercentCtrl((uint16_t)g_light.brightness, 1000);
+    MagicLinkReportServiceStatus("light");
     return 0;
 }
 static int GetBrightness(const void **data, unsigned int *len)
