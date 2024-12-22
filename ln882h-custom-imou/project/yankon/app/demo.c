@@ -574,7 +574,7 @@ static int SetBrightness(const void *data, unsigned int len)
     LOG(LOG_LEVEL_INFO, "set light brightness %d\r\n", g_light.brightness);
     LampBriPercentCtrl((uint16_t)g_light.brightness, 1000);
     g_light.brightness = *(int *)data;
-    MagicLinkReportServiceStatus("light");
+  //  MagicLinkReportServiceStatus("light");
     return 0;
 }
 static int GetBrightness(const void **data, unsigned int *len)
