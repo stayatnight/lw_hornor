@@ -571,9 +571,9 @@ static int SetBrightness(const void *data, unsigned int len)
     stRlLiveData_t *pLiveData = &g_stRlData.liveData;
 
     g_light.brightness = *(int *)data;
-
     LOG(LOG_LEVEL_INFO, "set light brightness %d\r\n", g_light.brightness);
     LampBriPercentCtrl((uint16_t)g_light.brightness, 1000);
+    g_light.brightness = *(int *)data;
     MagicLinkReportServiceStatus("light");
     return 0;
 }
@@ -628,7 +628,11 @@ static int SetMode(const void *data, unsigned int len)
     }
     if (g_light.lightMode != LIGHT_BRIGHT_MODE_READING && g_light.lightMode != LIGHT_BRIGHT_MODE_MOON &&
         g_light.lightMode != LIGHT_BRIGHT_MODE_WRITE)
+        {
+        LOG(LOG_LEVEL_INFO, "erro mode  is %d\r\n", g_light.lightMode);
         LOG(LOG_LEVEL_INFO, "set light mode error\r\n");
+        }    
+    g_light.lightMode = *(int *)data;
     // 上报
     MagicLinkReportServiceStatus("light");
     return 0;
@@ -657,7 +661,7 @@ static struct TestControlFunc g_testCtrlFunc[] = {
     {"dvService", "switch", SetLightSwitchInt, GetLightSwitchInt},
     {"dvService", "supportSinkSvc", SetLightSwitchInt, GetLightSwitchInt},
     {"dvService", "devSvcStatus", SetLightSwitchInt, GetLightSwitchInt},
-
+//基本的设备回调函数
     {"light", "On", SetLightOnoff, GetLightOnoff},
     {"light", "Brightness", SetBrightness, GetBrightness},
     {"light", "lightMode", SetMode, GetMode},

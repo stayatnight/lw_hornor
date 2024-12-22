@@ -17,6 +17,11 @@
 					"line": 39,
 					"column": 0,
 					"label": "SN"
+				},
+				{
+					"line": 641,
+					"column": 9,
+					"label": "设备回调函数"
 				}
 			]
 		},

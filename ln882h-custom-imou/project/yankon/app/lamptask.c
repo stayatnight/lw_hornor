@@ -40,8 +40,6 @@ int LampBriPercentCtrl(int ucPercent, int ulPeroidMs)
     ucPercent = APP_MIN_VAL(ucPercent, 100);
     pLampParam->uwBri = LIGHT_PERCENT_TO_BRIGHT(ucPercent);
     LOG(LOG_LVL_INFO, "lamp bri percent ctrl %d\r\n", ucPercent);
-   // pLampParam->uwBri = APP_RANGE(pLampParam->uwBri, LIGHT_BRIGHT_MIN, LIGHT_BRIGHT_MAX);
-//   lampStateControlHook();
     return myLampBriCtrl(gucLampId, ulPeroidMs, pLampParam->uwBri);
 }
 int lamp_flash_count(void)
