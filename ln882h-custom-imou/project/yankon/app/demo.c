@@ -519,7 +519,7 @@ static int SetLightOnoff(const void *data, unsigned int len)
     stRlLiveData_t *pLiveData = &g_stRlData.liveData;
     g_light.on                = *(int *)data > 0 ? 1 : 0;
     LOG(LOG_LEVEL_INFO, "set light onoff %d\r\n", g_light.on);
-    //  LampSwitchCtrl((uint8_t)g_light.on,1000 );
+    //LampSwitchCtrl((uint8_t)g_light.on,1000 );
     rlLampSwitchRevert(1000);
     return 0;
 }
@@ -573,7 +573,7 @@ static int SetBrightness(const void *data, unsigned int len)
     g_light.brightness = *(int *)data;
     LOG(LOG_LEVEL_INFO, "set light brightness %d\r\n", g_light.brightness);
     LampBriPercentCtrl((uint16_t)g_light.brightness, 1000);
-    g_light.brightness = *(int *)data;
+ //   g_light.brightness = *(int *)data;
   //  MagicLinkReportServiceStatus("light");
     return 0;
 }

@@ -23,7 +23,7 @@ extern "C" {
 /******************************************************************************
 *                                Defines                                      *
 ******************************************************************************/
-#define MY_COMPILE_VER                                     "1.0.1.225"
+#define MY_COMPILE_VER                                     "1.0.1.231"
 
 #if (APP_DEV_TYPE_USED  == APP_DEV_TYPE_LAMP_READING)
 #define RL_FIRMWARE_VER                                    MY_COMPILE_VER//"v1.1.3"

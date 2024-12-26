@@ -384,6 +384,15 @@ uint8_t rlLampGetLightMode(void)
 {
     return s_stCurLampParam.ucSceneNo;
 }
+int LampBriPercentCtrl(int ucPercent, int ulPeroidMs)
+{
+    myLampParam_t *pLampParam = &s_stCurLampParam;
+    
+    ucPercent = APP_MIN_VAL(ucPercent, 100);
+    pLampParam->uwBri = LIGHT_PERCENT_TO_BRIGHT(ucPercent);
+    LOG(LOG_LVL_INFO, "lamp bri percent ctrl %d\r\n", ucPercent);
+    return myLampBriCtrl(gucLampId, ulPeroidMs, pLampParam->uwBri);
+}
 // 回调函数
 static void _normalKeyShortPressCb(uint32_t keyVal, uint32_t flag)
 {

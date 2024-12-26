@@ -6,7 +6,8 @@ int LampSwitchCtrl(int status, int ulPeroidMs)
     myLampParam_t *pLampParam = &s_stCurLampParam;
 
     LOG(LOG_LVL_INFO, "lamp switch ctrl %d\r\n", status);
-    pLampParam->ucSwitch = status ? 1 : 0;
+    pLampParam->ucSwitch = !pLampParam->ucSwitch;
+    //改这个对台灯得不到0没有任何关系
     return myLampSwitchCtrl(gucLampId, ulPeroidMs, pLampParam->ucSwitch);
 }
 static void lampStateControlHook()
@@ -32,15 +33,6 @@ static void lampStateControlHook()
         changed = 1;
         printf("cct changed %d\r\n", pCurLampParam->uwCCT);
     }
-}
-int LampBriPercentCtrl(int ucPercent, int ulPeroidMs)
-{
-    myLampParam_t *pLampParam = &s_stCurLampParam;
-    
-    ucPercent = APP_MIN_VAL(ucPercent, 100);
-    pLampParam->uwBri = LIGHT_PERCENT_TO_BRIGHT(ucPercent);
-    LOG(LOG_LVL_INFO, "lamp bri percent ctrl %d\r\n", ucPercent);
-    return myLampBriCtrl(gucLampId, ulPeroidMs, pLampParam->uwBri);
 }
 int lamp_flash_count(void)
 {
