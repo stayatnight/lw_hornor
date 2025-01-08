@@ -1,0 +1,49 @@
+12-26 19:57:27.259|MqttMessageArrived|1387|[I]:recv data:331
+12-26 19:57:27.269|ParseModuleTransHeader|682|[I]:isServer:0
+PROTO Header[283]*******359cd2c41f5968edc38c5fb96d2o000200367
+MSG Header[259]0xbabeface-13-1226321149-1
+Module Header[251]0x1-0-0:0-7-1-0
+-SliceHead:0-1-0-0
+-PacketHead:0xbabeface-5-8-219-Data:808464455-GCMNonce[00000005b6103b904cccbd9f]-331-191:*******
+12-26 19:57:27.275|MagicLinkParseDataArray|283|[I]:Array is 0
+12-26 19:57:27.276|ParseCheckVerInData|3124|[I]:no indata
+12-26 19:57:27.277|BuildChkVerReqBody|1796|[I]:check Info:0|1.0.0|******AB5000|******y_mac
+12-26 19:57:27.279|AddCloudRequstHeader|1887|[I]:env:prod, reqId:******0734618fbce91744719fccf926
+12-26 19:57:27.281|ConnectCreateMqttMsgPayload|1485|[I]:traceID:QmToUpWrXuZv2x3A5A8D8EbGcGeGhMhP
+12-26 19:57:27.284|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+12-26 19:57:27.285|ConnectCloudSendSystemMsg|816|[I]:pub SYS_MGR_OTA_FIRMWARE_VERSION_REQ:0
+12-26 19:57:27.286|CheckVersionTimerStart|3057|[I]:succ
+12-26 19:57:27.287|MakeActionOut|715|[I]:no out
+method:5 req:6, rpt:16013
+12-26 19:57:27.288|MagicLinkEncodeCmdAction|850|[I]:action:checkVersion no out
+12-26 19:57:27.299|SendChannelMessage|193|[I]:[identity:******07a9614736878373b25d43720f],[1,7,5] send msg[161] success.
+12-26 19:57:27.301|ControlMsgReceived|96|[I]:empty
+12-26 19:57:27.301|TransReceiveMsg|1431|[I]:succ recv:1
+12-26 19:57:27.311|CloudLinkMqttPublish|1372|[I]:ret:0 qos:0,packetId:0
+12-26 19:57:27.313|LocalCmdProcess|966|[I]:mqtt pub
+12-26 19:57:27.472|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:20
+12-26 19:57:27.722|MqttMessageArrived|1387|[I]:recv data:796
+12-26 19:57:27.726|ReceiveCloudResponse|3224|[I]:rsp body
+12-26 19:57:27.727|ReceiveCheckVersionResp|3109|[I]:ver:0|1||
+12-26 19:57:27.790|CheckVersionTimeoutFunc|2981|[I]:mcu chk end
+12-26 19:57:27.791|BuildChkVerReqBody|1796|[I]:check Info:1|1.0.1.231|******AB5000|******y_mac
+12-26 19:57:27.793|AddCloudRequstHeader|1887|[I]:env:prod, reqId:******99c6f3204e7ba8d603305e8bb8
+12-26 19:57:27.795|ConnectCreateMqttMsgPayload|1485|[I]:traceID:mRnUpVsXs0v0y3y6B6B9E9HcHfKfMiNi
+12-26 19:57:27.797|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+12-26 19:57:27.798|ConnectCloudSendSystemMsg|816|[I]:pub SYS_MGR_OTA_FIRMWARE_VERSION_REQ:0
+12-26 19:57:27.800|LocalCmdProcess|966|[I]:mqtt pub
+12-26 19:57:27.882|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:21
+12-26 19:57:28.065|MqttMessageArrived|1387|[I]:recv data:795
+12-26 19:57:28.069|ReceiveCloudResponse|3224|[I]:rsp body
+12-26 19:57:28.070|ReceiveCheckVersionResp|3109|[I]:ver:1|1||
+12-26 19:57:28.290|CheckVersionTimeoutFunc|2975|[I]:module chk end
+12-26 19:57:28.291|ModelNotifyStatus|444|[W]:repeat:701
+type:0 req:1368097499, rpt:16014
+12-26 19:57:28.293|MagicLinkOtaGetReportInfo|3351|[I]:succ
+12-26 19:57:28.295|CloudLinkMqttAsyncPublish|714|[I]:mqtt async pub
+12-26 19:57:28.296|MagicLinkRptStatusToCloud|676|[I]:pub succ
+12-26 19:57:28.297|ReportOtaServiceStatus|791|[I]:succ
+12-26 19:57:28.298|LocalCmdProcess|966|[I]:mqtt pub
+12-26 19:57:28.367|CloudLinkMqttPublish|1372|[I]:ret:0 qos:1,packetId:22
+12-26 19:57:30.489|ConnectMsgProcessFunc|2338|[I]:running
+12-26 19:57:31.210|ConnectDispatchFunc|83|[I]:running

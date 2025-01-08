@@ -64,7 +64,6 @@
 0000173445|ProcGapDisconnect|534|[I]:disconn id:0
 0000173446|ProcGapStartAdv|341|[I]:start adv:0
 0000173446|StartAdv|537|[I]:adv suc
-
 [13:36:10.223]ÊÕ¡û¡ô0000174931|ConnectMsgProcessFunc|2338|[I]:running
 
 [13:36:10.454]ÊÕ¡û¡ô0000175161|ConnectDispatchFunc|83|[I]:running
@@ -111,16 +110,13 @@ To
 [13:36:30.456]ÊÕ¡û¡ô0000195163|ConnectDispatchFunc|83|[I]:running
 
 [13:36:35.456]ÊÕ¡û¡ô0000200163|ConnectDispatchFunc|83|[I]:running
-
 [13:36:38.837]ÊÕ¡û¡ô0000203544|BleDisconnectedCb|178|[I]:ble disconn
 0000203545|ProcGapDisconnect|534|[I]:disconn id:0
 0000203545|ProcGapStartAdv|341|[I]:start adv:0
 0000203546|StartAdv|537|[I]:adv suc
-
 [13:36:39.265]ÊÕ¡û¡ô0000203972|BleConnectedCb|152|[I]:ble conn
 0000203972|UpdateConnParam|123|[I]:update conn param
 0000203973|ProcGapConnect|373|[I]:interval:0, addr:*:*:*:2a:41:19
-
 [13:36:39.347]ÊÕ¡û¡ô0000204054|ConnectMsgProcessFunc|2338|[I]:running
 
 [13:36:40.457]ÊÕ¡û¡ô0000205164|ConnectDispatchFunc|83|[I]:running
@@ -141,5 +137,9 @@ To
 [13:36:50.469]ÊÕ¡û¡ô3|[I]:running
 
 [13:36:48.958]ÊÕ¡û¡ô|[I]:ble disconn 
+
+
+
+
 每次联网失败都是因为这个蓝牙连接失败的原因。
 实际上是因为我使用手机连接tws
