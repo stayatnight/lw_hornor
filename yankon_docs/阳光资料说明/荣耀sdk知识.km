@@ -10,7 +10,12 @@
                 "data": {
                     "id": "d6vpf13j51s0",
                     "created": 1736239164847,
-                    "text": "开发包结构"
+                    "text": "开发包结构",
+                    "expandState": "collapse",
+                    "layout_mind_offset": {
+                        "x": -146.9999997663499,
+                        "y": -12.999999979337076
+                    }
                 },
                 "children": [
                     {
@@ -25,7 +30,8 @@
                         "data": {
                             "id": "d6vpfvpdt940",
                             "created": 1736239231471,
-                            "text": "目录结构"
+                            "text": "目录结构",
+                            "expandState": "collapse"
                         },
                         "children": [
                             {
@@ -46,16 +52,21 @@
                     "created": 1736240239601,
                     "text": "遇到的几个问题",
                     "layout_mind_offset": {
-                        "x": 110.99999982357042,
-                        "y": 92.99999985218062
-                    }
+                        "x": -87.9999998601279,
+                        "y": 5.999999990463266
+                    },
+                    "expandState": "collapse"
                 },
                 "children": [
                     {
                         "data": {
                             "id": "d6vpt08b4kg0",
                             "created": 1736240260057,
-                            "text": "一，突然就不能烧录了"
+                            "text": "一，突然就不能烧录了",
+                            "layout_right_offset": {
+                                "x": 24.999999960263608,
+                                "y": -74.9999998807908
+                            }
                         },
                         "children": []
                     },
@@ -63,7 +74,11 @@
                         "data": {
                             "id": "d6vpt8hlmqo0",
                             "created": 1736240278033,
-                            "text": "二、蓝牙配网存在问题"
+                            "text": "二、蓝牙配网存在问题",
+                            "layout_right_offset": {
+                                "x": 45.99999992688504,
+                                "y": -23.999999961853064
+                            }
                         },
                         "children": []
                     },
@@ -71,7 +86,11 @@
                         "data": {
                             "id": "d6vptj5a9go0",
                             "created": 1736240301233,
-                            "text": "三、栈溢出"
+                            "text": "三、栈溢出",
+                            "layout_right_offset": {
+                                "x": 89.99999985694899,
+                                "y": 36.99999994119014
+                            }
                         },
                         "children": []
                     }
@@ -81,7 +100,11 @@
                 "data": {
                     "id": "d6vr5crak200",
                     "created": 1736244048806,
-                    "text": "分支主题"
+                    "text": "测试",
+                    "layout_mind_offset": {
+                        "x": 212.4999996622407,
+                        "y": 74.99999988079078
+                    }
                 },
                 "children": []
             }

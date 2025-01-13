@@ -1,0 +1,374 @@
+
+
+Flash FCT Data crc failure
+
+Flash FCT Data factory reset
+
+Flash config data crc failure
+
+Flash Config Data backup Crc Failure
+Flash Config Data Write
+Restore Factory End.
+
+*********************** Module Info *************************
+PID:XXXX name 阳光博荣台灯S firmware version:1.0.1.232
+release: Jan 10 2025 16:27:42
+magiclink Version:
+*************************************************************
+TCP/IP initialized.
+LAMP INIT TEST LN882H SDK Ver: 2.1_rc1 [build time:Jan 10 2025 17:46:56][0x02010001]
+LAMP INIT OK
+             MEM enter MagicLinkSDKRun [105464]
+LAMP INIT OK GPIOB  STATUS:0
+                            key init ok
+0000000048|MagicLinkComponentsInit|85|[I]:module:logcollect
+0000000050|InitComponent|60|[I]:enable:logcollect
+0000000050|InitComponent|64|[W]:no comp:logcollect
+0000000051|MagicLinkInit|164|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_INIT, 0
+VER:IoTSDK_1.1.0.344_20240413_test_debug, TM:Apr 13 2024 14:57:17
+
+Flash Config Data Write
+0000000072|MagicLinkParsePropertyList|207|[I]:succ svc:baseInfo, access:0
+0000000073|MagicLinkParseActionList|328|[I]:no actionList
+0000000074|MagicLinkParsePropertyList|207|[I]:succ svc:deviceInfo, access:7
+0000000075|MagicLinkParseActionList|328|[I]:no actionList
+0000000076|MagicLinkParsePropertyList|207|[I]:succ svc:netInfo, access:5
+0000000077|MagicLinkParseActionList|328|[I]:no actionList
+0000000078|MagicLinkParsePropertyList|207|[I]:succ svc:ota, access:7
+0000000079|MagicLinkParseAction|297|[W]:no inDataList
+0000000080|MagicLinkParseAction|310|[W]:no outDataList
+0000000080|MagicLinkParseAction|297|[W]:no inDataList
+0000000081|MagicLinkParseAction|310|[W]:no outDataList
+0000000082|MagicLinkParsePropertyList|207|[I]:succ svc:light, access:7
+0000000083|MagicLinkParseActionList|328|[I]:no actionList
+0000000086|ModelParseJson|181|[I]:MAGICLINK_BUSINESS_MANAGER, MAGICLINK_PROFILE_PARSE, 0
+0000000087|NetworkManagementInit|1658|[W]:succ
+0000000087|NetworkInit|70|[I]:succ
+0000000088|DiscoveryInit|556|[I]:succ
+0000000088|TransmissionInit|40|[I]:succ
+0000000089|CloudLinkMqttInit|1092|[I]:succ
+0000000090|ConnectRegRecvPacket|392|[I]:add:1 succ
+0000000090|ConnectRegSendPacket|361|[I]:add:1 succ
+0000000091|ConnectMsgProcessInit|2631|[E]:sem init
+0000000092|ConnectInit|549|[I]:succ
+0000000093|MagicLinkComponentsInit|85|[I]:module:p2p
+0000000093|InitComponent|60|[I]:enable:p2p
+0000000094|InitComponent|64|[W]:no comp:p2p
+0000000094|MagicLinkComponentsInit|85|[I]:module:blenetcfg
+0000000095|InitComponent|60|[I]:enable:blenetcfg
+0000000096|ConnectRegSendPacket|361|[I]:add:3 succ
+0000000096|MagicLinkComponentsInit|85|[I]:module:coapconnect
+0000000097|InitComponent|60|[I]:enable:coapconnect
+udp_bind(ipaddr = 0.0.0.0, port = 5683)
+                                       0000000098|ConnectRegSendPacket|361|[I]:add:2 succ
+0000000099|ConnectRegRecvPacket|392|[I]:add:2 succ
+0000000100|NetworkSetItemValueByStr|929|[E]:inv dst:prdName
+0000000100|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdName
+0000000101|NetworkSetItemValueByStr|929|[E]:inv dst:manufactureName
+0000000102|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:manufactureName
+0000000103|NetworkSetItemValueByStr|929|[E]:inv dst:prdTypeName
+0000000104|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdTypeName
+0000000105|NetworkSetItemValueByStr|929|[E]:inv dst:modelId
+0000000105|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:modelId
+0000000106|NetworkSetItemValueByStr|929|[E]:inv dst:offeringCode
+0000000107|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:offeringCode
+0000000108|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeId
+0000000109|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeId
+0000000110|NetworkSetItemValueByStr|929|[E]:inv dst:prdSubTypeName
+0000000110|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:prdSubTypeName
+0000000111|NetworkSetItemValueByStr|929|[E]:inv dst:qrScanMode
+0000000112|ModelSetBaseInfoToNetwork|238|[E]:set item:baseInfo:qrScanMode
+get sn1 [DF:22:E3:35:50:00]
+get sn [00:00:00:00:00:00]
+0000000114|ModelSetDevInfoToNetwork|277|[E]:no data:deviceInfo:udid
+0000000115|NetworkSetItemValueByStr|929|[E]:inv dst:devName
+0000000116|ModelSetDevInfoToNetwork|290|[E]:set item:deviceInfo:devName
+firmVer:1.0.1.232
+0000000117|ModelSetDevInfoToNetwork|272|[E]:set:deviceInfo:sdkVersion
+MCUVer:1.0.0
+0000000120|HksStateNotify|182|[W]:hks state:-127
+0000000127|MagicLinkHuksHalRegister|243|[I]:succ
+0000000128|MagicLinkStorageKeyInit|612|[W]:no key, create new
+0000000309|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000309|ConfigRead|278|[E]:header
+0000000310|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000311|ConfigRead|278|[E]:header
+0000000312|MagicLinkSafeConfigRead|434|[I]:cfg empty
+0000000312|ReadRegisterResultData|1466|[E]:cfg read
+0000000313|MagicLinkNetworkUpdateRegResult|2059|[W]:no reg ret
+0000000314|MagicLinkComponentsInit|85|[I]:module:netcfg
+0000000314|InitComponent|60|[I]:enable:netcfg
+0000000315|OnRegSessionServerRestart|1216|[I]:succ reg cb:hihonor.magiclinksdk,netCfg
+0000000316|NetCfgInit|739|[I]:succ
+0000000317|MagicLinkComponentsInit|85|[I]:module:register
+0000000317|InitComponent|60|[I]:enable:register
+0000000318|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000319|MagicLinkParseAction|297|[W]:no inDataList
+0000000320|MagicLinkParseAction|310|[W]:no outDataList
+0000000320|MagicLinkParseAction|297|[W]:no inDataList
+0000000321|MagicLinkParseAction|310|[W]:no outDataList
+0000000322|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,register
+0000000323|StartRegister|2170|[I]:start:0
+0000000324|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000324|ConfigRead|278|[E]:header
+0000000325|ConfigHeaderConfirm|236|[E]:cfg empty
+0000000326|ConfigRead|278|[E]:header
+0000000327|MagicLinkSafeConfigRead|434|[I]:cfg empty
+0000000327|ReadRegisterData|1606|[E]:read cfg
+0000000328|ReadRegisterData|1608|[E]:MAGICLINK_CONFIG, MAGICLINK_READ_REGINFO_FAIL, -1
+0000000329|StartRegister|2182|[W]:no reg info
+0000000329|RegisterInit|2042|[I]:succ
+0000000330|MagicLinkComponentsInit|85|[I]:module:control
+0000000331|InitComponent|60|[I]:enable:control
+0000000331|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,control
+0000000332|MagicLinkComponentsInit|85|[I]:module:ota
+0000000333|InitComponent|60|[I]:enable:ota
+0000000334|MagicLinkOtaFuncInit|103|[I]:init
+0000000334|OtaInit|3516|[I]:succ
+0000000335|MagicLinkComponentsInit|85|[I]:module:bi
+0000000335|InitComponent|60|[I]:enable:bi
+0000000336|InitComponent|64|[W]:no comp:bi
+0000000336|MagicLinkComponentsInit|85|[I]:module:magiclinkactive
+0000000337|InitComponent|60|[I]:enable:magiclinkactive
+0000000338|InitComponent|64|[W]:no comp:magiclinkactive
+0000000338|MagicLinkComponentsInit|85|[I]:module:netparamsync
+0000000339|InitComponent|60|[I]:enable:netparamsync
+0000000340|InitComponent|64|[W]:no comp:netparamsync
+0000000340|CheckRegisterEmpty|1784|[W]:dev unregister
+0000000341|ExtComponentsMngtInit|108|[I]:not reg
+0000000342|SetLocalInfo|93|[I]:not reg
+0000000342|MagicLinkInit|235|[W]:succ
+0000000343|MagicLinkFastOffline|1827|[I]:fast offline
+0000000343|MagicLinkFastOffline|1829|[I]:already offline
+[low_level_output, 70] netif is not link up.
+[low_level_output, 70] netif is not link up.
+[low_level_output, 70] netif is not link up.
+[low_level_output, 70] netif is not link up.
+0000002344|NetCfgStart|622|[I]:start
+0000002344|WifiInit|134|[I]:INIT DONE
+0000002345|OnRemoveSessionServer|1169|[I]:succ rm server:hihonor.magiclinksdk,netCfg
+0000002346|OnCreateSessionServer|1154|[I]:succ create server:hihonor.magiclinksdk,netCfg
+0000002347|MagicLinkParseAction|297|[W]:no inDataList
+0000002348|MagicLinkParseAction|310|[W]:no outDataList
+0000002349|MagicLinkParseAction|297|[W]:no inDataList
+0000002349|MagicLinkParseAction|310|[W]:no outDataList
+0000002350|MagicLinkParseAction|297|[W]:no inDataList
+0000002351|MagicLinkParseAction|310|[W]:no outDataList
+0000002351|NetcfgGetTimeout|210|[I]:timeout:10
+0000002352|DiscoveryAddPublishInfo|117|[I]:succ
+0000002353|PublishService|115|[I]:BLE adv start
+[BLIB_I]BLIB Ver: 1.0.5 [build time:Mar 16 2024 21:17:13][0x010005ff][for custom-imou Commit 2cda23ab]
+0000002356|BleStackInit|275|[I]:ble roal 1                      init suc
+0000002357|ProcGattReg|566|[I]:reg:0
+0000002358|AddGattDescriptor|349|[I]:add default desc
+0000002358|AddGattDescriptor|349|[I]:add default desc
+0000002359|ProcGattAddSvc|590|[I]:add svc:0, svc handle:0, char handle:16
+0000002361|ProcGapStartAdv|341|[I]:start adv:0
+0000002362|StartAdv|537|[I]:adv suc
+0000002362|ModelNotifyStatus|448|[I]:status:100
+current status is 100
+STATUS_NETCFG_ENTER
+MEM Start demo [84552]
+0000005364|ConnectDispatchFunc|83|[I]:running
+0000010084|ConnectMsgProcessFunc|2338|[I]:running
+0000010364|ConnectDispatchFunc|83|[I]:running
+0000014818|BleConnectedCb|152|[I]:ble conn
+0000014819|UpdateConnParam|123|[I]:update conn param
+0000014820|ProcGapConnect|373|[I]:interval:0, addr:*:*:*:00:ae:51
+0000015364|ConnectDispatchFunc|83|[I]:running
+0000016565|ProcGapSetMtu|558|[I]:MTU 512
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x11,length:0x2
+0000016603|BleGattWriteReqCb|211|[I]:gatt write
+0000016604|ProcessRecvFrame|286|[E]:header
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x14,length:0x2
+0000016922|BleGattWriteReqCb|211|[I]:gatt write
+0000016923|ProcessRecvFrame|286|[E]:header
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x10,length:0x39
+0000017134|BleGattWriteReqCb|211|[I]:gatt write
+0000017135|ProcessRecvFrame|305|[I]:ble conn msg
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x56
+0000017348|BleGattWriteReqCb|211|[I]:gatt write
+0000017349|ProcessRecvFrame|316|[I]:ble proxy msg
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x41
+0000017350|BleGattWriteReqCb|211|[I]:gatt write
+0000017351|ProcessRecvFrame|316|[I]:ble proxy msg
+0000017356|ParseMsgHeader|411|[E]:module:11
+0000017356|ParseMsg|2011|[E]:parse msgHeader
+0000017357|ConnectProcessMsg|2061|[E]:parse msg
+0000017357|ConnectMsgProcessFunc|2356|[E]:proc msg
+PROTO Header***0x00xae0x51
+MSG Header[25]0xbabeface-14-14900426164953678266-0
+Module Header[1]0xffff0006-0-0-0-Data:0-49-1:*******
+PROTO Header***0x00xae0x51
+MSG Header[63]0xbabeface-14-14900426164953678267-0
+Module Header[39]0xffff0006-0-0-1-Data:0-87-39:*******
+0000018727|BleDisconnectedCb|178|[I]:ble disconn
+0000018728|ProcGapDisconnect|534|[I]:disconn id:0
+0000018729|ProcGapStartAdv|341|[I]:start adv:0
+0000018729|StartAdv|537|[I]:adv suc
+0000019773|ConnectMsgProcessFunc|2338|[I]:running
+0000020367|ConnectDispatchFunc|83|[I]:running
+0000021033|BleConnectedCb|152|[I]:ble conn
+0000021034|UpdateConnParam|123|[I]:update conn param
+0000021035|ProcGapConnect|373|[I]:interval:0, addr:*:*:*:00:ae:51
+0000022693|ProcGapSetMtu|558|[I]:MTU 512
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x11,length:0x2
+0000022766|BleGattWriteReqCb|211|[I]:gatt write
+0000022766|ProcessRecvFrame|286|[E]:header
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x14,length:0x2
+0000022978|BleGattWriteReqCb|211|[I]:gatt write
+0000022979|ProcessRecvFrame|286|[E]:header
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x10,length:0x39
+0000023191|BleGattWriteReqCb|211|[I]:gatt write
+0000023191|ProcessRecvFrame|305|[I]:ble conn msg
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x56
+0000023403|BleGattWriteReqCb|211|[I]:gatt write
+0000023404|ProcessRecvFrame|316|[I]:ble proxy msg
+0000023405|ParseMsgHeader|411|[E]:module:11
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x101
+0000023406|BleGattWriteReqCb|211|[I]:gatt write
+0000023407|ProcessRecvFrame|316|[I]:ble proxy msg
+0000023408|ParseMsg|2011|[E]:parse msgHeader
+0000023408|ConnectProcessMsg|2061|[E]:parse msg
+0000023409|ConnectMsgProcessFunc|2356|[E]:proc msg
+PROTO Header***0x00xae0x51
+MSG Header[217]0xbabeface-14-14900426164953678274-0
+Module Header[193]0xffff0003-0-14900426164953678272-0-Data:0-241-193:*******
+0000023412|AuthSwapDeviceInfo|937|[I]:MAGICLINK_PHONE_RELATED, MAGICLINK_RECV_SWAP_DEVINFO, 0
+0000023415|AuthSwapDeviceInfo|958|[I]:peer cliId:1
+0000023415|NetworkConfigItemErrComDeal|735|[E]:ble addr:***00:ae:51
+0000023416|CheckInCertification|886|[I]:no handle
+0000023417|AuthSwapDeviceInfo|986|[I]:sessionId:808464462
+PROTO Header***0x00xae0x51
+MSG Header[306]0xbabeface-14-14900426164953678275-0
+Module Header[282]0xffff0003-0-0-1-Data:0-330-282:*******
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0xd3
+0000023936|BleGattWriteReqCb|211|[I]:gatt write
+0000023936|ProcessRecvFrame|316|[I]:ble proxy msg
+PROTO Header***0x00xae0x51
+MSG Header[171]0xbabeface-14-14900426164953678276-0
+Module Header[147]0xffff0007-10-808464462-0-Data:0-195-147:*******
+0000023945|GetProtocolParams|570|[I]:pinLen:8
+PROTO Header***0x00xae0x51
+MSG Header[274]0xbabeface-14-14900426164953678277-0
+Module Header[250]0xffff0007-10-808464462-1-Data:0-298-250:*******
+0000024177|SetServiceResult|685|[I]:ret agreement processing
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x11e
+0000024362|BleGattWriteReqCb|211|[I]:gatt write
+0000024362|ProcessRecvFrame|316|[I]:ble proxy msg
+PROTO Header***0x00xae0x51
+MSG Header[246]0xbabeface-14-14900426164953678278-0
+Module Header[222]0xffff0007-10-808464462-0-Data:0-270-222:*******
+PROTO Header***0x00xae0x51
+MSG Header[130]0xbabeface-14-14900426164953678279-0
+Module Header[106]0xffff0007-10-808464462-1-Data:0-154-106:*******
+0000024585|SetServiceResult|679|[I]:ret success
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0xf5
+0000024786|BleGattWriteReqCb|211|[I]:gatt write
+0000024787|ProcessRecvFrame|316|[I]:ble proxy msg
+PROTO Header***0x00xae0x51
+MSG Header[205]0xbabeface-14-14900426164953678280-0
+Module Header[181]0xffff0002-0-808464462-0-Data:808464462-GCMNonce[315288d38e54b24143c6ec89]-229-149:*******
+0000024792|NetworkSetPeerItem|410|[E]:para
+0000024793|ParseSyncNetworkInfo|384|[E]:peer mac save
+0000024793|ParseSyncNetworkInfo|441|[I]:peer cliId:1
+0000024794|ConnectionGetLocal|271|[E]:weak func
+PROTO Header***0x00xae0x51
+MSG Header[275]0xbabeface-14-14900426164953678281-0
+Module Header[251]0xffff0002-10-808464462-1-Data:808464462-GCMNonce[62a8a936797a286b6c7ffdfe]-299-235:*******
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x41
+0000025209|BleGattWriteReqCb|211|[I]:gatt write
+0000025210|ProcessRecvFrame|316|[I]:ble proxy msg
+PROTO Header***0x00xae0x51
+MSG Header[25]0xbabeface-14-14900426164953678282-0
+Module Header[1]0xffff0005-0-0-0-Data:0-49-1:*******
+0000025220|DeleteAuthTimeoutBySessId|1235|[I]:succ
+PROTO Header***0x00xae0x51
+MSG Header[42]0xbabeface-14-14900426164953678283-0
+Module Header[18]0xffff0005-0-0-1-Data:0-66-18:*******
+0000025222|AuthCloseAck|1301|[I]:MAGICLINK_PHONE_RELATED, MAGICLINK_AUTH_SUCC, 0
+0000025371|ConnectDispatchFunc|83|[I]:running
+0000026802|BleDisconnectedCb|178|[I]:ble disconn
+0000026803|ProcGapDisconnect|534|[I]:disconn id:0
+0000026804|ProcGapStartAdv|341|[I]:start adv:0
+0000026804|StartAdv|537|[I]:adv suc
+0000029034|BleConnectedCb|152|[I]:ble conn
+0000029035|UpdateConnParam|123|[I]:update conn param
+0000029035|ProcGapConnect|373|[I]:interval:0, addr:*:*:*:00:ae:51
+0000029917|ConnectMsgProcessFunc|2338|[I]:running
+close factory reset window
+0000030371|ConnectDispatchFunc|83|[I]:running
+0000030650|ProcGapSetMtu|558|[I]:MTU 512
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x11,length:0x2
+0000030734|BleGattWriteReqCb|211|[I]:gatt write
+0000030735|ProcessRecvFrame|286|[E]:header
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x14,length:0x2
+0000030947|BleGattWriteReqCb|211|[I]:gatt write
+0000030948|ProcessRecvFrame|286|[E]:header
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x10,length:0x39
+0000031372|BleGattWriteReqCb|211|[I]:gatt write
+0000031373|ProcessRecvFrame|305|[I]:ble conn msg
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x56
+0000031584|BleGattWriteReqCb|211|[I]:gatt write
+0000031585|ProcessRecvFrame|316|[I]:ble proxy msg
+0000031589|ParseMsgHeader|411|[E]:module:11
+0000031589|ParseMsg|2011|[E]:parse msgHeader
+0000031590|ConnectProcessMsg|2061|[E]:parse msg
+0000031590|ConnectMsgProcessFunc|2356|[E]:proc msg
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x1ee
+0000031694|BleGattWriteReqCb|211|[I]:gatt write
+0000031695|ProcessRecvFrame|316|[I]:ble proxy msg
+0000031701|ParseModuleTransHeader|682|[I]:isServer:0
+PROTO Header***0x00xae0x51
+MSG Header[454]0xbabeface-13-87-1
+Module Header[446]0x1-1-1:0-5120--1-0
+-Data:808464462-GCMNonce[5ca8ea548fe43411f4fac7cf]-478-414:*******
+0000031706|TransOpen|1333|[I]:succ trans:1
+0000031717|SendOpenAck|446|[I]:succ identity:******5f75d24d9b9e2d81fbaf4dc083
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x1fd
+0000032226|BleGattWriteReqCb|211|[I]:gatt write
+0000032227|ProcessRecvFrame|316|[I]:ble proxy msg
+ln_gatt_write_req_ind_handler conidx:0x0,handler:0x13,length:0x10a
+0000032229|BleGattWriteReqCb|211|[I]:gatt write
+0000032230|ProcessRecvFrame|316|[I]:ble proxy msg
+0000032238|ParseModuleTransHeader|682|[I]:isServer:0
+0000032238|NetworkConfigItemErrComDeal|735|[E]:ble addr:***00:ae:51
+0000032239|ParseModuleTransHeader|712|[W]:get rootKeyIdx
+0000032240|NetworkConfigItemErrComDeal|735|[E]:ble addr:***00:ae:51
+0000032241|IsValidMsg|647|[W]:get uuid
+0000032241|IsValidMsg|650|[E]:sessionKey outTime.
+0000032242|EncryptMsg|290|[I]:rootKeyIdx:0
+PROTO Header***0x00xae0x51
+MSG Header[28]0xbabeface-13-89-1
+Module Header[20]0x1-3-0:0--1-5120-0
+-Data:0-GCMNonce[000000000000000000000000]-52-20:*******
+0000032245|SendPlainResetMsg|226|[I]:send reset[401]
+0000032246|ParseMsg|2017|[E]:parse moduleHeader
+0000032246|ConnectProcessMsg|2061|[E]:parse msg
+0000032247|ConnectMsgProcessFunc|2356|[E]:proc msg
+0000033496|BleDisconnectedCb|178|[I]:ble disconn
+0000033497|ProcGapDisconnect|534|[I]:disconn id:0
+0000033498|ProcGapStartAdv|341|[I]:start adv:0
+0000033498|StartAdv|537|[I]:adv suc
+0000035371|ConnectDispatchFunc|83|[I]:running
+0000039619|ConnectMsgProcessFunc|2338|[I]:running
+0000040371|ConnectDispatchFunc|83|[I]:running
+0000045371|ConnectDispatchFunc|83|[I]:running
+0000049329|ConnectMsgProcessFunc|2338|[I]:running
+0000050371|ConnectDispatchFunc|83|[I]:running
+0000055371|ConnectDispatchFunc|83|[I]:running
+0000059049|ConnectMsgProcessFunc|2338|[I]:running
+adc raw:  780, temp_IC:   28
+Total:129788; Free:88016;
+0000060371|ConnectDispatchFunc|83|[I]:running
+0000065371|ConnectDispatchFunc|83|[I]:running
+0000068749|ConnectMsgProcessFunc|2338|[I]:running
+0000070371|ConnectDispatchFunc|83|[I]:running
+0000075371|ConnectDispatchFunc|83|[I]:running
+0000078459|ConnectMsgProcessFunc|2338|[I]:running
+0000080371|ConnectDispatchFunc|83|[I]:running
+0000085371|ConnectDispatchFunc|83|[I]:running
+0000088159|ConnectMsgProcessFunc|2338|[I]:running
+0000090371|ConnectDispatchFunc|83|[I]:running
+0000095371|ConnectDispatchFunc|83|[I]:running
+0000097879|ConnectMsgProcessFunc|2338|[I]:running

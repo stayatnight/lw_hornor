@@ -574,10 +574,13 @@ void ble_app_task_entry(void *params)
                     else
                         OS_MsDelay(1000);
                     ln_ble_conn_param_t conn_param;
-                    conn_param.intv_min = 80;
-                    conn_param.intv_max = 90;
+                    conn_param.intv_min = 20;
+                    conn_param.intv_max = 25;
                     conn_param.latency = 0;
                     conn_param.time_out = 3000;
+                    //设置高速连接模式，减少连接时间延迟
+                    ln_ble_conn_mode_set(p_param->conn_idx, LN_BLE_CONN_MODE_FAST);
+
                     ln_ble_conn_param_update(p_param->conn_idx, &conn_param);
                 }
                     break;

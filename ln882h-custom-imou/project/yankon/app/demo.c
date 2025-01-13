@@ -17,6 +17,7 @@
 #include"flash.h"
 #include "utils/ln_misc.h"
 #include "utils/system_parameter.h"
+#include"wifi.h"
 #define MY_PRDKEY    "c76c504e94ad4c34b6d0c87d5d90ac43"
 #define MY_PRDSECRET "6ece2cc39cb42c83465650af3b6ae2ae"
 
@@ -238,7 +239,15 @@ static int GetDevHardwareVersionVersionFunc(void **data, unsigned int *len)
 /* netInfo 设备网络信息相关回调 */
 static int GetNetInfoSsidFunc(void **data, unsigned int *len)
 {
-    char        *tmp    = "reading lamp";
+     char    *ssid  = NULL;
+     uint8_t *bssid = NULL;
+    wifi_get_sta_conn_info(&ssid, &bssid);
+   // char        *tmp    = "reading lamp";
+   if (ssid == NULL) {
+        printf("SSID is NULL\r\n");
+        return -1;
+    }
+    char        *tmp    = ssid;
     unsigned int tmpLen = strlen(tmp) + 1;
     *len                = tmpLen - 1;
 
@@ -291,22 +300,27 @@ static int GetNetInfoIpFunc(void **data, unsigned int *len)
 
 static int GetNetInfoBssidFunc(void **data, unsigned int *len)
 {
-    char        *tmp    = "bssid8976";
-    unsigned int tmpLen = strlen(tmp) + 1;
-    *len                = tmpLen - 1;
+    char macAddr[18] = {0}; // 足够存储MAC地址字符串，格式为XX:XX:XX:XX:XX:XX
+    if (sysparam_sta_mac_get(sg_mac) != 0) {
+        return -1;
+    }
 
-    *data = malloc(tmpLen);
+    // 使用sprintf将MAC地址以冒号分隔的形式存储到macAddr字符串中
+    sprintf(macAddr, "%02X:%02X:%02X:%02X:%02X:%02X",
+            sg_mac[5], sg_mac[4], sg_mac[3], sg_mac[2], sg_mac[1], sg_mac[0]);
+
+    *len = strlen(macAddr); // 返回的长度为字符串实际的长度，不包含结束符
+    *data = malloc(*len + 1); // 分配内存，包含字符串结束符
     if (*data == NULL) {
         printf("malloc err\r\n");
         return -1;
     }
-    (void)memset(*data, 0, tmpLen);
 
-    (void)strcpy(*data, tmp);
+    (void)memset(*data, 0, *len + 1);
+    (void)strcpy(*data, macAddr);
 
     return 0;
 }
-
 static struct MagicLinkTestLight {
     int  on;
     char color[16];
@@ -654,10 +668,12 @@ static struct TestControlFunc g_testCtrlFunc[] = {
     {"deviceInfo", "firmwareVersion", NULL, GetDevFirmwareVersionFunc},
     {"deviceInfo", "hardwareVersion", NULL, GetDevHardwareVersionVersionFunc},
     {"deviceInfo", "MCUVersion", NULL, GetMCUVersionFunc},
+//网络信息页
     {"netInfo", "ssid", NULL, GetNetInfoSsidFunc},
     {"netInfo", "rssi", NULL, GetNetInfoRssiFunc},
     {"netInfo", "ip", NULL, GetNetInfoIpFunc},
     {"netInfo", "bssid", NULL, GetNetInfoBssidFunc},
+
     {"dvService", "switch", SetLightSwitchInt, GetLightSwitchInt},
     {"dvService", "supportSinkSvc", SetLightSwitchInt, GetLightSwitchInt},
     {"dvService", "devSvcStatus", SetLightSwitchInt, GetLightSwitchInt},
