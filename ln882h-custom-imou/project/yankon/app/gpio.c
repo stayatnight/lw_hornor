@@ -68,28 +68,28 @@ case HAL_IO_MODE_IN_PULLUP :
     hal_gpio_pin_pull_set(GPIOB_BASE,pin,GPIO_PULL_UP);
     hal_gpio_pin_direction_set(GPIOB_BASE, pin, GPIO_INPUT);
     pin_sta=hal_gpio_pin_read(GPIOB_BASE, pin);
-    LOG(LOG_LVL_INFO,"GPIOB  STATUS:%d\n",pin_sta);
+    LOG(LOG_LVL_INFO,"\r\nGPIOB  STATUS:%d\r\n",pin_sta);
     break;
 case HAL_IO_MODE_IN_PULLDOWN :
     //下拉输入
     hal_gpio_pin_pull_set(GPIOB_BASE,pin,GPIO_PULL_DOWN);
     hal_gpio_pin_direction_set(GPIOB_BASE, pin, GPIO_INPUT);
     pin_sta=hal_gpio_pin_read(GPIOB_BASE, pin);
-    LOG(LOG_LVL_INFO,"GPIOB  STATUS:%d\n",pin_sta);
+    LOG(LOG_LVL_INFO,"\r\nGPIOB  STATUS:%d\n",pin_sta);
     break;
 case HAL_IO_MODE_OUT_PULLUP:
     //上拉输出
     hal_gpio_pin_pull_set(GPIOB_BASE,pin,GPIO_PULL_UP);
     hal_gpio_pin_direction_set(GPIOB_BASE, pin, GPIO_OUTPUT);
     pin_sta=hal_gpio_pin_read(GPIOB_BASE, pin);
-    LOG(LOG_LVL_INFO,"GPIOB  STATUS:%d\n",pin_sta);
+    LOG(LOG_LVL_INFO,"\r\nGPIOB  STATUS:%d\n",pin_sta);
     break;
 case HAL_IO_MODE_OUT_PULLDOWN: 
     //下拉输出
     hal_gpio_pin_pull_set(GPIOB_BASE,pin,GPIO_PULL_DOWN);
     hal_gpio_pin_direction_set(GPIOB_BASE, pin, GPIO_OUTPUT);
     pin_sta=hal_gpio_pin_read(GPIOB_BASE, pin);
-    LOG(LOG_LVL_INFO,"GPIOB  STATUS:%d\n",pin_sta);
+    LOG(LOG_LVL_INFO,"\r\nGPIOB  STATUS:%d\n",pin_sta);
     break;
 default:
     break;

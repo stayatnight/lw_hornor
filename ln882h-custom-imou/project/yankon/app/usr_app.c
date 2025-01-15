@@ -500,7 +500,7 @@ static int _rlTaskKeyInit(void)
     for (int i = 0; i < sizeof(s_a_normalKeyVal) / sizeof(uint32_t); i++) {
         myKeyboardRegisterKey(s_a_normalKeyVal[i]);
     }
-    LOG(LOG_LVL_INFO, "key init ok\r\n");
+LOG(LOG_LVL_INFO, "\r\nkey init ok\r\n");
     return 0;
 }
 static int GetStaInfo()
