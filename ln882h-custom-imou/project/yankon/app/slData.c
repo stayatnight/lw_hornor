@@ -506,7 +506,10 @@ uint8_t rlDataGetSleepDuration(void)
 void rlDataShowVersion(void)
 {
     char temp[32] = {0};
-    MagicLinkGetSDKVersion(temp, 32);
+    if (MagicLinkGetSDKVersion(temp, sizeof(temp)) != 0) {
+        // 如果获取版本失败，使用硬编码版本
+        strncpy(temp, "IoTSDK_1.1.0.344", sizeof(temp) - 1);
+    }
     LOG(LOG_LVL_INFO,"\r\n*********************** Module Info *************************\r\n");
     LOG(LOG_LVL_INFO,"PID:XXXX name %s firmware version:%s\r\n", g_stRlData.saveData.chDevName, RL_FIRMWARE_VER);
     LOG(LOG_LVL_INFO,"release: %s %s\r\n", __DATE__, __TIME__);

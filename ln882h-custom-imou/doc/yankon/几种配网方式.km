@@ -1,0 +1,50 @@
+{
+    "root": {
+        "data": {
+            "id": "d70s5mdiu4w0",
+            "created": 1736754690635,
+            "text": "comb模组的配网方式"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "d70s5u387mw0",
+                    "created": 1736754707426,
+                    "text": "蓝牙辅助配网",
+                    "layout_mind_offset": {
+                        "x": -83.99999986648572,
+                        "y": -6.99999998887381
+                    }
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "d70s607912o0",
+                    "created": 1736754720730,
+                    "text": "softap配网",
+                    "layout_mind_offset": {
+                        "x": -35.99999994277982,
+                        "y": 4.999999992052722
+                    }
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "d70s694qy6o0",
+                    "created": 1736754740170,
+                    "text": "smartconfig配网",
+                    "layout_mind_offset": {
+                        "x": 462.9999992640819,
+                        "y": -113.99999981880197
+                    }
+                },
+                "children": []
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}
