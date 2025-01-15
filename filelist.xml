@@ -2,7 +2,12 @@
 <root>
 <file>
 <spath>flashimage-ota-xz-v0.1.bin</spath>
+<<<<<<< HEAD
 <sha256>c124737db240f9316785fa6770d8bf364389bf31fd05747d3d5c296c9f427c6b</sha256>
 <size>602459</size>
+=======
+<sha256>db7170ebc61e560e834d7f00ee54cb0ef7a484ccd22a557f3a8dfae17167c573</sha256>
+<size>603096</size>
+>>>>>>> 5db498f ([version] 1.0.1.235)
 </file>
 </root>
