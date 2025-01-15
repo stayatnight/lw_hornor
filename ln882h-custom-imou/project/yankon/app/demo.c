@@ -14,10 +14,10 @@
 #include "lamptask.h"
 #include "utils/debug/log.h"
 #include "ble_arch/arch.h"
-#include"flash.h"
+#include "flash.h"
 #include "utils/ln_misc.h"
 #include "utils/system_parameter.h"
-#include"wifi.h"
+#include "wifi.h"
 #define MY_PRDKEY    "c76c504e94ad4c34b6d0c87d5d90ac43"
 #define MY_PRDSECRET "6ece2cc39cb42c83465650af3b6ae2ae"
 
@@ -53,17 +53,16 @@ static int myHalWifiGetMacAddr(char *mac, uint32_t macBufSize)
 }
 static int GetDevSnFunc(void **data, unsigned int *len)
 {
-   
-    char sn[32]={0};
-    char*tmp=sn;
+    char         sn[32] = {0};
+    char        *tmp    = sn;
     unsigned int tmpLen = 0;
     myHalWifiGetMacAddr(sn, 6);
-    printf("get sn [%02X:%02X:%02X:%02X:%02X:%02X]\r\n", sg_mac[5], sg_mac[4], sg_mac[3], sg_mac[2], sg_mac[1], sg_mac[0]);
-   // sprintf(sn, "%02X%02X%02X%02X%02X%02X", sg_mac[5], sg_mac[4], sg_mac[3], sg_mac[2], sg_mac[2], sg_mac[0]);
-   
-   
+    printf("get sn [%02X:%02X:%02X:%02X:%02X:%02X]\r\n", sg_mac[5], sg_mac[4], sg_mac[3], sg_mac[2], sg_mac[1],
+           sg_mac[0]);
+    // sprintf(sn, "%02X%02X%02X%02X%02X%02X", sg_mac[5], sg_mac[4], sg_mac[3], sg_mac[2], sg_mac[2], sg_mac[0]);
+
     tmpLen = strlen(sn) + 1;  // 实际存储字符串的空间需要使用包含结束符的长度
-    *len   = tmpLen - 1;       // 返回的长度为字符串实际的长度，不包含结束符
+    *len   = tmpLen - 1;      // 返回的长度为字符串实际的长度，不包含结束符
     *data  = malloc(tmpLen);
     if (*data == NULL) {
         printf("malloc err\r\n");
@@ -102,17 +101,19 @@ static int GetDevUdidFunc(void **data, unsigned int *len)
 
     return 0;
 }
-static void vTimerCallback(TimerHandle_t xTimer) {
+static void vTimerCallback(TimerHandle_t xTimer)
+{
     // 停止配网
     if (isNetCfgRunning == pdTRUE) {
         // 调用停止配网的函数，这里假设函数名为 StopNetCfg
-    printf("stop netcfg\r\n");
-    MagicLinkStopNetCfg();
-     ln_ble_adv_stop();
-    isNetCfgRunning = pdFALSE;
+        printf("stop netcfg\r\n");
+        MagicLinkStopNetCfg();
+        ln_ble_adv_stop();
+        isNetCfgRunning = pdFALSE;
     }
 }
-static char g_devName[64] = "博荣台灯S";
+// 设备名称
+static char g_devName[64] = "博荣台灯S MTSL2010";
 /* 设备名称的获取需从持久化保存单元获取， 全局变量g_devName仅作为示例 */
 /* 设备重置（RESET）后，设备名的存储单元内容需更新为默认设备名称 */
 static int GetDevNameFunc(void **data, unsigned int *len)
@@ -218,12 +219,36 @@ static int GetMCUVersionFunc(void **data, unsigned int *len)
     return 0;
 }
 
-static int GetDevHardwareVersionVersionFunc(void **data, unsigned int *len)
+static int GetSdkversion(void **data, unsigned int *len)
 {
-    char        *tmp    = "HW_1.0.1";
+    char sdkversion[32] = {0};
+    if (MagicLinkGetSDKVersion(sdkversion, sizeof(sdkversion)) != 0) {
+        // 如果获取版本失败，使用硬编码版本
+        strncpy(sdkversion, "IoTSDK_1.1.0.344", sizeof(sdkversion) - 1);
+    }
+    printf("Test sdkversion %s\r\n", sdkversion);
+    char        *tmp    = sdkversion;
     unsigned int tmpLen = strlen(tmp) + 1;
     *len                = tmpLen - 1;
 
+    *data = malloc(tmpLen);
+    if (*data == NULL) {
+        printf("malloc err\r\n");
+        return -1;
+    }
+    (void)memset(*data, 0, tmpLen);
+
+    (void)strcpy(*data, tmp);
+
+    return 0;
+}
+static int GetDevHardwareVersionFunc(void **data, unsigned int *len)
+{
+    char        *tmp    = RL_HARDWARE_VER;
+    unsigned int tmpLen = strlen(tmp) + 1;
+    *len                = tmpLen - 1;
+
+    printf("get hardware version %s\r\n", tmp);
     *data = malloc(tmpLen);
     if (*data == NULL) {
         printf("malloc err\r\n");
@@ -239,11 +264,11 @@ static int GetDevHardwareVersionVersionFunc(void **data, unsigned int *len)
 /* netInfo 设备网络信息相关回调 */
 static int GetNetInfoSsidFunc(void **data, unsigned int *len)
 {
-     char    *ssid  = NULL;
-     uint8_t *bssid = NULL;
+    char    *ssid  = NULL;
+    uint8_t *bssid = NULL;
     wifi_get_sta_conn_info(&ssid, &bssid);
-   // char        *tmp    = "reading lamp";
-   if (ssid == NULL) {
+    // char        *tmp    = "reading lamp";
+    if (ssid == NULL) {
         printf("SSID is NULL\r\n");
         return -1;
     }
@@ -300,17 +325,16 @@ static int GetNetInfoIpFunc(void **data, unsigned int *len)
 
 static int GetNetInfoBssidFunc(void **data, unsigned int *len)
 {
-    char macAddr[18] = {0}; // 足够存储MAC地址字符串，格式为XX:XX:XX:XX:XX:XX
+    char macAddr[18] = {0};  // 足够存储MAC地址字符串，格式为XX:XX:XX:XX:XX:XX
     if (sysparam_sta_mac_get(sg_mac) != 0) {
         return -1;
     }
 
     // 使用sprintf将MAC地址以冒号分隔的形式存储到macAddr字符串中
-    sprintf(macAddr, "%02X:%02X:%02X:%02X:%02X:%02X",
-            sg_mac[5], sg_mac[4], sg_mac[3], sg_mac[2], sg_mac[1], sg_mac[0]);
+    sprintf(macAddr, "%02X:%02X:%02X:%02X:%02X:%02X", sg_mac[5], sg_mac[4], sg_mac[3], sg_mac[2], sg_mac[1], sg_mac[0]);
 
-    *len = strlen(macAddr); // 返回的长度为字符串实际的长度，不包含结束符
-    *data = malloc(*len + 1); // 分配内存，包含字符串结束符
+    *len  = strlen(macAddr);   // 返回的长度为字符串实际的长度，不包含结束符
+    *data = malloc(*len + 1);  // 分配内存，包含字符串结束符
     if (*data == NULL) {
         printf("malloc err\r\n");
         return -1;
@@ -533,7 +557,7 @@ static int SetLightOnoff(const void *data, unsigned int len)
     stRlLiveData_t *pLiveData = &g_stRlData.liveData;
     g_light.on                = *(int *)data > 0 ? 1 : 0;
     LOG(LOG_LEVEL_INFO, "set light onoff %d\r\n", g_light.on);
-    //LampSwitchCtrl((uint8_t)g_light.on,1000 );
+    // LampSwitchCtrl((uint8_t)g_light.on,1000 );
     rlLampSwitchRevert(1000);
     return 0;
 }
@@ -587,8 +611,8 @@ static int SetBrightness(const void *data, unsigned int len)
     g_light.brightness = *(int *)data;
     LOG(LOG_LEVEL_INFO, "set light brightness %d\r\n", g_light.brightness);
     LampBriPercentCtrl((uint16_t)g_light.brightness, 1000);
- //   g_light.brightness = *(int *)data;
-  //  MagicLinkReportServiceStatus("light");
+    //   g_light.brightness = *(int *)data;
+    //  MagicLinkReportServiceStatus("light");
     return 0;
 }
 static int GetBrightness(const void **data, unsigned int *len)
@@ -641,11 +665,10 @@ static int SetMode(const void *data, unsigned int len)
         g_light.brightness = LIGHT_BRIGHT_MODE_WRITE_VAL;
     }
     if (g_light.lightMode != LIGHT_BRIGHT_MODE_READING && g_light.lightMode != LIGHT_BRIGHT_MODE_MOON &&
-        g_light.lightMode != LIGHT_BRIGHT_MODE_WRITE)
-        {
+        g_light.lightMode != LIGHT_BRIGHT_MODE_WRITE) {
         LOG(LOG_LEVEL_INFO, "erro mode  is %d\r\n", g_light.lightMode);
         LOG(LOG_LEVEL_INFO, "set light mode error\r\n");
-        }    
+    }
     g_light.lightMode = *(int *)data;
     // 上报
     MagicLinkReportServiceStatus("light");
@@ -662,13 +685,15 @@ static struct TestControlFunc g_testCtrlFunc[] = {
     {"deviceInfo", "sn", NULL, GetDevSnFunc},
     {"deviceInfo", "udid", NULL, GetDevUdidFunc},
     {"deviceInfo", "mac", NULL, GetDevMacFunc},
+    // 设备信息页
     {"deviceInfo", "devName", SetDevNameFunc, GetDevNameFunc},
     {"deviceInfo", "devModel", NULL, GetDevModelFunc},
     {"deviceInfo", "subDevType", NULL, GetDevSubDevTypeFunc},
     {"deviceInfo", "firmwareVersion", NULL, GetDevFirmwareVersionFunc},
-    {"deviceInfo", "hardwareVersion", NULL, GetDevHardwareVersionVersionFunc},
+    {"deviceInfo", "hardwareVersion", NULL, GetDevHardwareVersionFunc},
     {"deviceInfo", "MCUVersion", NULL, GetMCUVersionFunc},
-//网络信息页
+    {"deviceInfo", "sdkVersion", NULL, GetSdkversion},
+    // 网络信息页
     {"netInfo", "ssid", NULL, GetNetInfoSsidFunc},
     {"netInfo", "rssi", NULL, GetNetInfoRssiFunc},
     {"netInfo", "ip", NULL, GetNetInfoIpFunc},
@@ -677,7 +702,7 @@ static struct TestControlFunc g_testCtrlFunc[] = {
     {"dvService", "switch", SetLightSwitchInt, GetLightSwitchInt},
     {"dvService", "supportSinkSvc", SetLightSwitchInt, GetLightSwitchInt},
     {"dvService", "devSvcStatus", SetLightSwitchInt, GetLightSwitchInt},
-//基本的设备回调函数
+    // 基本的设备回调函数
     {"light", "On", SetLightOnoff, GetLightOnoff},
     {"light", "Brightness", SetBrightness, GetBrightness},
     {"light", "lightMode", SetMode, GetMode},
@@ -863,7 +888,7 @@ static int GetPin(char *pinBuf, unsigned int pinBufLen)
 void MagicLinkSDKRun()
 {
     printf("MEM enter MagicLinkSDKRun [%d]\r\n", xPortGetFreeHeapSize());
-   //更改这个感觉没什么用
+    // 更改这个感觉没什么用
     unsigned int timeout = 10;
     if (MagicLinkSetAttr(MAGICLINK_ATTR_NETCFG_TIMEOUT, &timeout, sizeof(timeout)) != 0) {
         return;
@@ -874,8 +899,8 @@ void MagicLinkSDKRun()
         printf("set cfg addr fail\r\n");
         return;
     }
-    const TickType_t x10Minutes = pdMS_TO_TICKS(10*60 * 1000);
-    TimerHandle_t x10MinutesTimer = xTimerCreate("10Minutes", x10Minutes, pdTRUE, (void *)1, vTimerCallback);
+    const TickType_t x10Minutes      = pdMS_TO_TICKS(10 * 60 * 1000);
+    TimerHandle_t    x10MinutesTimer = xTimerCreate("10Minutes", x10Minutes, pdTRUE, (void *)1, vTimerCallback);
     if (MagicLinkRegGetPin(&GetPin) != 0) {
         printf("reg pin fail\r\n");
         return;
@@ -910,8 +935,7 @@ void MagicLinkSDKRun()
             return;
         }
     }
-    if(xTimerStart(x10MinutesTimer,0)!=pdPASS)
-    {
+    if (xTimerStart(x10MinutesTimer, 0) != pdPASS) {
         printf("xTimerStart fail\r\n");
     }
 

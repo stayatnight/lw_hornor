@@ -3,7 +3,7 @@ BreakBeforeBraces: Linux
 AlignConsecutiveDeclarations: true
 AlignConsecutiveMacros: true
 AlignConsecutiveAssignments: true
-AllowShortFunctionsOnASingleLine: Inline
+AllowShortFunctionsOnASingleLine: true  # 或者 false，根据需求
 AllowShortIfStatementsOnASingleLine: false
 SortIncludes: false
 IndentWidth: 4

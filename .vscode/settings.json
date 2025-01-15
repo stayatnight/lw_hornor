@@ -18,6 +18,8 @@
     "terminal.integrated.commandsToSkipShell": [
     "error" // 将此替换为你希望高亮的命令
 ],
+"clang-format.executable": "C:/Users/Admin/.vscode/extensions/ms-vscode.cpptools-1.23.3-win32-x64/LLVM/bin/clang-format.exe",
+"clang-format.assumeFilename": "D:/code/h_test/honor_magiclink_sdk/.clang-format",
 "workbench.colorCustomizations": {
     "terminal.ansiRed": "#ff0000", // 设置ANSI红色为红色
     "terminal.foreground": "#ffffff" // 设置终端前景色（可选）
