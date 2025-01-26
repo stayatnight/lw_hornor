@@ -27,12 +27,12 @@ static const char *g_profile = "{\
 },\
 {\
 \"access\": 0,\
-\"defaultValue\": \"阳光博荣台灯S\",\
+\"defaultValue\": \"阳光博荣台灯S-MTSL2010\",\
 \"description\": \"产品名称\",\
 \"index\": 1,\
 \"type\": \"string\",\
 \"id\": \"prdName\",\
-\"value\": \"阳光博荣台灯S\"\
+\"value\": \"阳光博荣台灯S-MTSL2010\"\
 },\
 {\
 \"access\": 0,\
@@ -518,8 +518,8 @@ static const char *g_profile = "{\
 \"title\": \"灯\"\
 }\
 ],\
-\"description\": \"阳光博荣台灯S\",\
-\"title\": \"阳光博荣台灯S\"\
+\"description\": \"阳光博荣台灯S-MTSL2010\",\
+\"title\": \"阳光博荣台灯S-MTSL2010\"\
 }";
 
 

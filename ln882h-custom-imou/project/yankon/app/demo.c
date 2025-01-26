@@ -113,14 +113,14 @@ static void vTimerCallback(TimerHandle_t xTimer)
     }
 }
 // 设备名称
-static char g_devName[64] = "博荣台灯S MTSL2010";
+static char g_devName[64] = "";
 /* 设备名称的获取需从持久化保存单元获取， 全局变量g_devName仅作为示例 */
 /* 设备重置（RESET）后，设备名的存储单元内容需更新为默认设备名称 */
 static int GetDevNameFunc(void **data, unsigned int *len)
 {
     unsigned int tmpLen = strlen(g_devName) + 1;
     *len                = tmpLen - 1;
-
+    printf("devname is [%s]\r\n", g_devName);
     *data = malloc(tmpLen);
     if (*data == NULL) {
         printf("malloc err\r\n");
