@@ -53,7 +53,6 @@ target_link_libraries(${pro_executable_target}
     libregister.a
     libcontrol.a
     libcoapconnect.a
-    libblenetcfg.a
     -Wl,--no-whole-archive
     libcjson.a
     libcoap-3.a
