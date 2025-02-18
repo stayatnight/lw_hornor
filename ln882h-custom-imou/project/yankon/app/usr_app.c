@@ -690,8 +690,8 @@ static void usr_app_task_entry(void *params)
     chip_mac_gen();
     sysparam_sta_mac_update((const uint8_t *)g_chip_wifi_mac);
     sysparam_softap_mac_update((const uint8_t *)g_chip_wifi_mac);
-    ln_kv_ble_app_init();
-
+ //   ln_kv_ble_app_init();
+//蓝牙模组的初始化在softap中初始化，此处注释掉
     WifiReconn();
     MagicLinkSDKRun();
     OS_ThreadDelete(NULL);

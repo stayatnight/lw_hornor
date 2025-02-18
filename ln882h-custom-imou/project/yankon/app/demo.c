@@ -899,8 +899,8 @@ void MagicLinkSDKRun()
         printf("set cfg addr fail\r\n");
         return;
     }
-    const TickType_t x10Minutes      = pdMS_TO_TICKS(10 * 60 * 1000);
-    TimerHandle_t    x10MinutesTimer = xTimerCreate("10Minutes", x10Minutes, pdTRUE, (void *)1, vTimerCallback);
+    // const TickType_t x10Minutes      = pdMS_TO_TICKS(10 * 60 * 1000);
+    // TimerHandle_t    x10MinutesTimer = xTimerCreate("10Minutes", x10Minutes, pdTRUE, (void *)1, vTimerCallback);
     if (MagicLinkRegGetPin(&GetPin) != 0) {
         printf("reg pin fail\r\n");
         return;
@@ -935,9 +935,9 @@ void MagicLinkSDKRun()
             return;
         }
     }
-    if (xTimerStart(x10MinutesTimer, 0) != pdPASS) {
-        printf("xTimerStart fail\r\n");
-    }
+    // if (xTimerStart(x10MinutesTimer, 0) != pdPASS) {
+    //     printf("xTimerStart fail\r\n");
+    // }
 
     printf("MEM Start demo [%d]\r\n", xPortGetFreeHeapSize());
     return;

@@ -1,0 +1,101 @@
+
+02-17 17:37:53.065|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+02-17 17:37:53.227|ConnectMsgProcessFunc|2338|[I]:running
+02-17 17:37:54.388|ConnectDispatchFunc|83|[I]:running
+02-17 17:38:03.128|ConnectMsgProcessFunc|2338|[I]:running
+02-17 17:38:04.389|ConnectDispatchFunc|83|[I]:running
+02-17 17:38:13.029|ConnectMsgProcessFunc|2338|[I]:running
+02-17 17:38:14.390|ConnectDispatchFunc|83|[I]:running
+02-17 17:38:22.929|ConnectMsgProcessFunc|2338|[I]:running
+02-17 17:38:24.390|ConnectDispatchFunc|83|[I]:running
+02-17 17:38:32.829|ConnectMsgProcessFunc|2338|[I]:running
+02-17 17:38:34.390|ConnectDispatchFunc|83|[I]:running
+adc raw:  778, temp_IC:   28
+Total:140728; Free:72808;
+02-17 17:38:42.729|ConnectMsgProcessFunc|2338|[I]:running
+02-17 17:38:44.390|ConnectDispatchFunc|83|[I]:running
+02-17 17:38:52.639|ConnectMsgProcessFunc|2338|[I]:running
+02-17 17:38:53.056|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+02-17 17:38:53.061|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+02-17 17:38:54.398|ConnectDispatchFunc|83|[I]:running
+02-17 17:39:02.533|ConnectMsgProcessFunc|2338|[I]:running
+02-17 17:39:04.399|ConnectDispatchFunc|83|[I]:running
+02-17 17:39:12.433|ConnectMsgProcessFunc|2338|[I]:running
+02-17 17:39:14.399|ConnectDispatchFunc|83|[I]:running
+02-17 17:39:22.333|ConnectMsgProcessFunc|2338|[I]:running
+02-17 17:39:24.399|ConnectDispatchFunc|83|[I]:running
+02-17 17:39:32.233|ConnectMsgProcessFunc|2338|[I]:running
+02-17 17:39:34.400|ConnectDispatchFunc|83|[I]:running
+adc raw:  774, temp_IC:   26
+Total:140728; Free:72720;
+02-17 17:39:42.133|ConnectMsgProcessFunc|2338|[I]:running
+02-17 17:39:44.400|ConnectDispatchFunc|83|[I]:running
+02-17 17:39:52.033|ConnectMsgProcessFunc|2338|[I]:running
+02-17 17:39:53.056|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+02-17 17:39:53.070|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+02-17 17:39:54.400|ConnectDispatchFunc|83|[I]:running
+adc raw:  775, temp_IC:   26
+Total:140728; Free:72720;
+02-17 17:40:01.932|ConnectMsgProcessFunc|2338|[I]:running
+02-17 17:40:04.401|ConnectDispatchFunc|83|[I]:running
+02-17 17:40:11.833|ConnectMsgProcessFunc|2338|[I]:running
+02-17 17:40:14.401|ConnectDispatchFunc|83|[I]:running
+02-17 17:40:21.734|ConnectMsgProcessFunc|2338|[I]:running
+02-17 17:40:24.401|ConnectDispatchFunc|83|[I]:running
+02-17 17:40:31.644|ConnectMsgProcessFunc|2338|[I]:running
+02-17 17:40:34.401|ConnectDispatchFunc|83|[I]:running
+02-17 17:40:41.545|ConnectMsgProcessFunc|2338|[I]:running
+02-17 17:40:44.401|ConnectDispatchFunc|83|[I]:running
+02-17 17:40:51.445|ConnectMsgProcessFunc|2338|[I]:running
+02-17 17:40:53.056|HeartbeatTimeoutFunc|252|[I]:hb lost:0
+02-17 17:40:53.071|SendMqttHeartbeat|213|[I]:succ
+magiclink sdk: recv mqtt ping response
+02-17 17:40:54.401|ConnectDispatchFunc|83|[I]:running
+adc raw:  775, temp_IC:   26
+Total:140728; Free:73168;
+02-17 17:41:01.343|ConnectMsgProcessFunc|2338|[I]:running
+02-17 17:41:04.402|ConnectDispatchFunc|83|[I]:running
+02-17 17:41:11.243|ConnectMsgProcessFunc|2338|[I]:running
+02-17 17:41:14.402|ConnectDispatchFunc|83|[I]:running
+02-17 17:41:21.143|ConnectMsgProcessFunc|2338|[I]:running
+02-17 17:41:22.766|IsAutoSwitchON|3388|[I]:not ON
+02-17 17:41:22.766|TimeCheckAutoUpdate|3401|[I]:auto switch off
+02-17 17:41:24.402|ConnectDispatchFunc|83|[I]:running
+stop netcfg
+02-17 17:41:24.853|NetCfgStop|694|[I]:stop
+02-17 17:41:24.853|NetcfgGetTimeout|210|[I]:timeout:10
+02-17 17:41:24.854|GetPublishInfo|188|[I]:no pubInfo
+02-17 17:41:24.855|OnRemoveSessionServer|1169|[I]:succ rm server:hihonor.magiclinksdk,netCfg
+02-17 17:41:24.856|ModelNotifyStatus|448|[I]:status:103
+current status is 103
+[BLIB_ASSERT]:ERROR;[../components/ble/modules/ke/src/ke_mem.c:265]
+
+Firmware name: combo_mcu_basic_example, hardware version: hw, software version: sw
+Fault on thread Tmr Svc
+===== Thread stack information =====
+  addr: 2002d328    data: 00000109
+  addr: 2002d32c    data: 00000000
+  addr: 2002d330    data: 00000000
+  addr: 2002d334    data: 100341c1
+  addr: 2002d338    data: 00000109
+  addr: 2002d33c    data: 20002808
+  addr: 2002d340    data: 20026904
+  addr: 2002d344    data: 00000002
+  addr: 2002d348    data: 00000000
+  addr: 2002d34c    data: 00000006
+  addr: 2002d350    data: 0000000e
+  addr: 2002d354    data: 00000002
+  addr: 2002d358    data: a5a5a5a5
+  addr: 2002d35c    data: 00093064
+  addr: 2002d360    data: 00000002
+  addr: 2002d364    data: 00000003
+====================================
+=================== Registers information ====================
+  R0 : 00000045  R1 : 0000000a  R2 : 20015e8d  R3 : 2002d324
+  R12: 0000000a  LR : 20001177  PC : 20001176  PSR: 61000000
+==============================================================
+Debug fault is caused by BKPT instruction executed
+Show more call stack info by run: addr2line -e combo_mcu_basic_example.elf -afpiC 20001176 100341c0 100342f4 100aa82e 10015c38 1000be9a 1000e9fa
