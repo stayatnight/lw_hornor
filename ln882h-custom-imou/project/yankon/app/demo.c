@@ -47,20 +47,27 @@ static int myHalWifiGetMacAddr(char *mac, uint32_t macBufSize)
     printf("get sn1 [%02X:%02X:%02X:%02X:%02X:%02X]\r\n", buf[5], buf[4], buf[3], buf[2], buf[1], buf[0]);
 
     // 修正mac地址的赋值逻辑
-    sprintf(mac, "%02X%02X%02X%02X%02X%02X", buf[5], buf[4], buf[3], buf[2], buf[1], buf[0]);
+    sprintf(mac, "%02X%02X%02X%02X%02X%02X", buf[0], buf[1], buf[2], buf[3], buf[4], buf[5]);
 
     return 0;
 }
+static void reverseArray(char *arr, unsigned int len) {
+    for (unsigned int i = 0; i < len / 2; i++) {
+        char temp = arr[i];
+        arr[i] = arr[len - 1 - i];
+        arr[len - 1 - i] = temp;
+    }
+}
 static int GetDevSnFunc(void **data, unsigned int *len)
 {
-    char         sn[32] = {0};
+    char         sn[6] = {0};
     char        *tmp    = sn;
     unsigned int tmpLen = 0;
     myHalWifiGetMacAddr(sn, 6);
-    printf("get sn [%02X:%02X:%02X:%02X:%02X:%02X]\r\n", sg_mac[5], sg_mac[4], sg_mac[3], sg_mac[2], sg_mac[1],
-           sg_mac[0]);
     // sprintf(sn, "%02X%02X%02X%02X%02X%02X", sg_mac[5], sg_mac[4], sg_mac[3], sg_mac[2], sg_mac[2], sg_mac[0]);
 
+   // reverseArray(sn, 6);  // 反转数组，使之符合预期的格式
+    printf("sn is [%s]\r\n", sn);
     tmpLen = strlen(sn) + 1;  // 实际存储字符串的空间需要使用包含结束符的长度
     *len   = tmpLen - 1;      // 返回的长度为字符串实际的长度，不包含结束符
     *data  = malloc(tmpLen);
@@ -331,7 +338,7 @@ static int GetNetInfoBssidFunc(void **data, unsigned int *len)
     }
 
     // 使用sprintf将MAC地址以冒号分隔的形式存储到macAddr字符串中
-    sprintf(macAddr, "%02X:%02X:%02X:%02X:%02X:%02X", sg_mac[5], sg_mac[4], sg_mac[3], sg_mac[2], sg_mac[1], sg_mac[0]);
+    sprintf(macAddr, "%02X:%02X:%02X:%02X:%02X:%02X", sg_mac[0], sg_mac[1], sg_mac[2], sg_mac[3], sg_mac[4], sg_mac[5]);
 
     *len  = strlen(macAddr);   // 返回的长度为字符串实际的长度，不包含结束符
     *data = malloc(*len + 1);  // 分配内存，包含字符串结束符
