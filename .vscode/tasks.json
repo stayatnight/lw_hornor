@@ -46,17 +46,17 @@
                 "rebuild"
             ],
             "group": "build",
-    "problemMatcher": {
-  "owner": "cpp",
-  "pattern": {
-    "regexp": "^(.*):(\\d+):(\\d+):\\s+(error):\\s+(.*)$",
-    "file": 1,
-    "line": 2,
-    "column": 3,
-    "severity": 4,
-    "message": 5
-  }
-},
+            "problemMatcher": {
+                "owner": "cpp",
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            },
             "presentation": {
                 "reveal": "always",
                 "panel": "shared"
@@ -116,6 +116,32 @@
             },
             "options": {
                 "cwd": "${workspaceFolder}" // 指定工作目录
+            }
+        },
+        {
+            "label": "test",
+            "type": "shell",
+            "command": "meson",
+            "args": [
+                "test",
+                "-C",
+                "build"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/unity_test" // 指定工作目录
+            }
+        },
+        {
+            "label": "build_test",
+            "type": "shell",
+            "command": "meson",
+            "args": [
+                "compile",
+                "-C",
+                "build"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/unity_test" // 指定工作目录
             }
         }
     ]
