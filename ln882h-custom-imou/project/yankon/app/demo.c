@@ -65,9 +65,6 @@ static int GetDevSnFunc(void **data, unsigned int *len)
     char        *tmp    = sn;
     unsigned int tmpLen = 0;
     myHalWifiGetMacAddr(sn, 6);
-    // sprintf(sn, "%02X%02X%02X%02X%02X%02X", sg_mac[5], sg_mac[4], sg_mac[3], sg_mac[2], sg_mac[2], sg_mac[0]);
-
-    // reverseArray(sn, 6);  // 反转数组，使之符合预期的格式
     printf("sn is [%s]\r\n", sn);
     tmpLen = strlen(sn) + 1;  // 实际存储字符串的空间需要使用包含结束符的长度
     *len   = tmpLen - 1;      // 返回的长度为字符串实际的长度，不包含结束符

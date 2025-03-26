@@ -1,0 +1,203 @@
+{
+    "root": {
+        "data": {
+            "id": "d8ksizz8txk0",
+            "created": 1742443096554,
+            "text": "台灯需求"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "d8kso88olbs0",
+                    "created": 1742443506359,
+                    "text": "智能互联",
+                    "layout_mind_offset": {
+                        "x": -29.99999995231633,
+                        "y": -213.99999965985637
+                    }
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d8kssjj8wsg0",
+                            "created": 1742443844400,
+                            "text": "配网",
+                            "layout_right_offset": {
+                                "x": 11.999999980926532,
+                                "y": -49.99999992052716
+                            }
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d8ksveelusg0",
+                                    "created": 1742444068328,
+                                    "text": "配网方式"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d8ksyhcxots0",
+                                    "created": 1742444309849,
+                                    "text": "入网方式（什么方式鉴定权限的）"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d8ksvnk6trk0",
+                            "created": 1742444088256,
+                            "text": "设备属性的同步",
+                            "layout_right_offset": {
+                                "x": 6.99999998887381,
+                                "y": -0.9999999984105443
+                            }
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d8ksvv6uqu80",
+                            "created": 1742444104864,
+                            "text": "ota更新",
+                            "layout_right_offset": {
+                                "x": 17.999999971389798,
+                                "y": 0
+                            }
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d8ksz3kp5qw0",
+                            "created": 1742444358208,
+                            "text": "远程控制的实现",
+                            "layout_right_offset": {
+                                "x": 8.999999985694899,
+                                "y": -150.99999975999214
+                            }
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d8ksoorww680",
+                    "created": 1742443542351,
+                    "text": "基础功能",
+                    "layout_mind_offset": {
+                        "x": 378.9999993975963,
+                        "y": 73.99999988238028
+                    }
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d8ksswxmx7s0",
+                            "created": 1742443873568,
+                            "text": "开关控制",
+                            "layout_right_offset": {
+                                "x": 248.99999960422554,
+                                "y": -25.999999958674152
+                            }
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d8ksut6xzwg0",
+                                    "created": 1742444022152,
+                                    "text": "单击",
+                                    "layout_right_offset": {
+                                        "x": 219.99999965031975,
+                                        "y": -22.99999996344252
+                                    }
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d8ksv07nilc0",
+                                    "created": 1742444037432,
+                                    "text": "长按",
+                                    "layout_right_offset": {
+                                        "x": 208.99999966780376,
+                                        "y": -13.99999997774762
+                                    }
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d8ksv4byhhk0",
+                                    "created": 1742444046400,
+                                    "text": "双击",
+                                    "layout_right_offset": {
+                                        "x": 223.99999964396193,
+                                        "y": -19.999999968210886
+                                    }
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d8kstr6dm5c0",
+                            "created": 1742443939400,
+                            "text": "调光调色",
+                            "layout_right_offset": {
+                                "x": 264.99999957879425,
+                                "y": -23.999999961853135
+                            }
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d8ksue1lcv40",
+                                    "created": 1742443989176,
+                                    "text": "色温调节",
+                                    "layout_right_offset": {
+                                        "x": 229.9999996344252,
+                                        "y": -0.9999999984105443
+                                    }
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d8ksu20113s0",
+                                    "created": 1742443962960,
+                                    "text": "亮度调节",
+                                    "layout_right_offset": {
+                                        "x": 235.99999962488846,
+                                        "y": 1.9999999968210886
+                                    }
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d8ksy8bub2o0",
+                                    "created": 1742444290192,
+                                    "text": "调光模式",
+                                    "layout_right_offset": {
+                                        "x": 248.99999960422554,
+                                        "y": -1.9999999968210886
+                                    }
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

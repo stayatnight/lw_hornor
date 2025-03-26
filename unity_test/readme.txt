@@ -10,3 +10,9 @@ meson compile -C build --clean
 1 安装ninja 
 2 安转meson
 3 安装ruby
+
+
+//一些单测强烈依赖硬件环境怎么办？
+1 桩测试
+2 模拟测试
+3 
